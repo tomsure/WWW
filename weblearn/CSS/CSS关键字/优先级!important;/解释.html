@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		p{color:red   !important;}/*按照正常标准后面的设置会覆盖当前设置，但是这里使用了最高优先级属性，就不会被覆盖*/
+		.p1{color: green;}
+		#p{color:hotpink ;}
+		div p{color: #00008B;}
+		div #p{color:  #00CCFF;}
+		
+	</style>
+	<body>
+		<div id="dv">
+			<p id="p" class="p1">元素控制的越精细优先级越高,可以使用firebug调试工具查看</p>
+			<b>使用!mportant属性，可以设置元素为最高优先级</b>
+	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		function t3(greet){
+			
+			var greet="hello";  //如果这句把赋值去掉，只保留var greet；
+			
+			alert(greet);
+			
+			function greet(){
+			}
+				
+				alert(greet)
+		}
+		t3( null)
+		/*
+		 非法分析过程：
+		 0：AO={};
+		 1,分析参数:
+		   1.1, 性成熟性：AO={ greet:defined};
+		   1.2, AO={ greet:null};
+		 
+		 2,分析greet变量声明，AO已经有greet属性，因此不做任何影响；
+		 
+		 3，分析greet函数声明，AO.greet=function(){},倍覆盖成函数；
+		 
+		 执行过程：
+		 greet="hello";
+		 alert(greet);
+		 alert(greet)
+		 
+		 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */
+	</script>
+	<body>
+	</body>
+</html>

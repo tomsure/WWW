@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+			<script type="text/javascript">
+			window.onload=function(){
+				var s=document.getElementById("ul1");
+				alert(s.childNodes[1].tagName)//返回子元素数组的标签名称;
+				alert(s.lastElementChild.tagName)//返回子元素的节点元素名称，弹
+//出li
+                alert(s.lastChild)//s的子元素包含空文本节点，所以最后一个子节点是空文本弹出objectText
+			}
+		</script>
+	<body>
+		<div id="dv">
+			<ul id="ul1">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击获取定位</button>
+		<textarea name="" id="ta" rows="20" cols="20"></textarea>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		var ta=document.getElementById("ta");
+		btn.onclick=function(){
+			navigator.geolocation.getCurrentPosition(function(position){
+				ta.value=position.coords.longitude;
+			},function(){
+				alert('获取失败')
+			},{
+				timeout:10
+//				timeout属性用于设置在获取地理定位的过程中请求的时间,如果超过这个时间则就会执行getCurrentPosition()第二个参数,也就是执行请求错误函数,
+			})
+		}
+	</script>
+</html>

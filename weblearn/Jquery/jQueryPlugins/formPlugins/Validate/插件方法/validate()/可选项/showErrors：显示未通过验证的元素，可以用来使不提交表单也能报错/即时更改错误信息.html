@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post" id="form">
+			<p id="myerror"></p>
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>密码: <input type="text"  name="password" id="password" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	},
+			    	password:{
+			    		required:true
+			    	},
+			    	url:{
+			    		required:true
+			    	}
+			    },
+			    
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	},
+			    	password:{
+			    		required:"密码不得为空"
+			    	},
+			    	url:{
+			    		required:"请输入网址"
+			    	}
+			    },
+			
+			   showErrors:function(errorMap,errorList){
+        
+                 this.defaultShowErrors();//设置默认会提示错误信息
+                 
+                 var error=this.numberOfInvalids();//声明当前错误数为一个变量
+                 
+                 if(error){ //如果存在错误
+                 $('#myerror').html('你有'+error+"条错误信息")
+                 //就把$('#myerror')的内容设置为以上这样
+                 //这里的$('#myerror')是在表单的第一个位置设置一个p标签，id为这个#myerror。
+                     }else{
+                     	$('#myerror').hide()
+//                   	否则这个元素就隐藏
+                     }
+			      
+                 }
+			   
+//		使用showErrors()方法可以实现不提交表单也报错,当错误消失后报错信息消失的效果
+     
+			  
+			  
+		})
+		})
+
+	</script>
+</html>

@@ -1,0 +1,15 @@
+.style(@color){
+    color-1:@color;
+}
+.style(@width:100px){
+    width: @width;
+}
+.style(@bgcolor){
+    background-color: @bgcolor;
+}
+div{
+     height: 100px;
+    .style(red);
+   
+}
+// 在less中可以定义多个相同名称的混合，在声明了多个相同名称的混合之后，如果在元素的样式中调用这个混合的时候只传入了一个参数，则这个参数，会表示为这些同名混合参数中每个参数的相同的值，所以使用的时候要注意参数是不是符合CSS语法

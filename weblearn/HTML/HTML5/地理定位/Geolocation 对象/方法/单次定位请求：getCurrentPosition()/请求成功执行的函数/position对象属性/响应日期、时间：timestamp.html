@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击获取</button>
+		<textarea name="" id="ta" rows="20" cols="20"></textarea>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		var ta=document.getElementById("ta");
+		btn.onclick=function(){
+			
+			navigator.geolocation.getCurrentPosition(function(position){
+			ta.value='响应时间：'+new Date(position.timestamp)
+//		     获取当前获取定位的响应时间
+		
+			
+		})
+		}
+
+
+	</script>
+</html>

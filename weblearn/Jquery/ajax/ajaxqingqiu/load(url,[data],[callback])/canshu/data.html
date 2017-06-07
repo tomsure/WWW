@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击检验</button>
+		<input type="text" name="username" id="username" value="" />
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//data参数指的是要发送的表单数据，也就是表单元素的name属性值和这个input元素的value，在jqueryajax中必须使用json的格式，例如：
+		
+		
+		$('#btn').click(function(){
+			var send={'username':$('#username').val()}
+		//这里就是使用的json格式，大括号中‘username’指的是input的name属性值，冒号之后就是这个json键值对的值也就是输入框中输入的文本，也就是input的value，只不过这里使用jquery方法 表示
+		
+		//实际使用的时候需要在load()的回调函数中声明这个变量
+			$('#dv').load('index.php',send,function(data){
+	            
+			    alert(data)
+			})
+		})
+		
+		
+	</script>
+</html>

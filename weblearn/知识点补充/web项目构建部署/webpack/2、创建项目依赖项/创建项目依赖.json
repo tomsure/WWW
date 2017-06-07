@@ -1,0 +1,18 @@
+
+
+   在项目创建目录后需要创建项目配置文件pack.json,这个文件创建完成后
+ 还需要创建项目依赖也就是在项目目录下再安装一次webpack，命令如下：
+   sudo cnpm install --save-dev webpack
+
+
+   输入上面命令后后，在配置文件中会多出一段内容，如下：
+
+       "devDependencies": {
+           "webpack": "^2.5.1"
+                          }
+
+   
+    在项目目录下安装webpack后，在项目根目录会多一个node_moudle目录，里面是
+    webpack的相关文件
+   
+    

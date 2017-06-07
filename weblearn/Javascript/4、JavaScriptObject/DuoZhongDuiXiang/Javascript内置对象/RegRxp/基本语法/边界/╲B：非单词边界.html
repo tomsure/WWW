@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//非单词边界就是指reg中字符串的左边或者右边有其他字符串（不包括空格）；
+		var str='ssnd asn sne';
+		var reg=/sn\B/g;
+		var reg1=/\Bsn/g;
+		document.write(str.replace(reg,'X')+'</br>')
+		//这里就会匹配sn右边有其他字符串的单词进行替换；
+		document.write(str.replace(reg1,'Y'));
+		//这里由于要匹配sn左边是非单词边界的单词，也就是匹配sn左边有其他字符串的单词，所以sne就没有被匹配，而ssnd左边和右边都是非单词边界，所以两次匹配都会匹配到
+		
+		
+		
+	</script>
+</html>

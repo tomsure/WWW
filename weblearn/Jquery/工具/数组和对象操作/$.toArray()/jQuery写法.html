@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+		 var ss=$("li").toArray()//将DOM元素集合返回一个数组，但是这个素组是js DOM数组
+		 console.log(ss)//打印 除四个HTML DOM对象组成的数组
+		 console.log($.isArray(ss))//通过isArray判断ss此时是一个DOM数组
+         var dd=$(ss).get()
+		 console.log($(dd).index(5))
+		 
+	
+		})
+	</script>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</body>
+</html>

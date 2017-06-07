@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		   dv.addEventListener('touchstart',function(){
+		   	alert('触摸开始事件')
+		   })
+	</script>
+	   <!--toutchstart是手指触摸屏幕时候触发的事件-->
+</html>

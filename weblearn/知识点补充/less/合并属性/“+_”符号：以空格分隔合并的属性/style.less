@@ -1,0 +1,39 @@
+.style(){
+    border+_: 1px;
+    
+    
+}
+.style(){
+    border+_:solid;
+}
+
+.style(){
+    border+_:red
+}
+
+
+      
+
+
+div{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    .style()
+}
+
+  
+
+//  CSS有些复合属性，例如background（有背景颜色、背景图片等等）、border（上边框、下边框等等）等有多个属性值，代表不同的样式，简写的时候，可以以空格的形式隔开；
+//  在less中，多个同名混合或者同一个混合中设置多次元素的复合属性，可以使用+_符号表示合并的属性以空格隔开，这样就达到了简写元素属性目的
+// 
+//
+//  以上例子编译结果：
+//   
+//     div{
+//         width: 100px;
+//         height: 100px;
+//         background-color: blue;
+//         border: 1px solid red;
+//     }
+// 

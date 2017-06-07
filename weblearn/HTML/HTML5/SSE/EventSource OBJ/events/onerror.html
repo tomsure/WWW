@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>server Status</h1>
+		<div id="statusDiv">
+			
+		</div>
+		<h1>server Data</h1>
+		<div id="serverData">
+			
+		</div>
+		
+		这里设置两个div来接受服务器的响应状态和数据
+	</body>
+	<script type="text/javascript">
+		var serverData; 
+		var SERVER_URL='../header.php'; //设置服务器端url，后面作为EventSource对象构造函数的参数
+		var statusDiv;
+		
+		serverData=document.getElementById("serverData");    
+		statusDiv=document.getElementById("statusDiv")
+		
+		startListenServer()  
+		function startListenServer(){
+			statusDiv.innerHTML='正在连接服务器。。。'
+			if(typeof EventSource!=='undefined'){
+				var es=new EventSource(SERVER_URL); 
+            
+            
+			es.onopen=openHander; 
+			es.onerror=errorHander; 
+			//当发送数据发生错误的时候，就会触发此事件，可以根据需求编写响应的提时代码,例如现在是由于php的路径 不对，所以就会触发这个事件
+			es.onmessage=messageHander; 
+			
+			}
+			else{
+				
+			}
+			
+		};
+		
+		function errorHander(e){
+			statusDiv.innerHTML='Error'
+		}
+		function openHander(e){
+				statusDiv.innerHTML='server open'
+			}
+		function messageHander(e){
+			serverData.innerHTML=e.data
+		}
+	</script>
+	
+</html>

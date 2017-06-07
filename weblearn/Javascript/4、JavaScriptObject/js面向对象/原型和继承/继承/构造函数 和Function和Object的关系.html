@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	  function Person(){};//构造函数(函数)声明
+		
+	document.write(Function+'</br>')//内置构造函数
+	document.write(Object+'</br>')//内置构造函数
+	document.write(Person+'</br>')//自定义构造函数
+	
+	
+	 
+	  document.write(Person.__proto__+'</br>')//空函数
+	  document.write(Object.__proto__+'</br>')//空函数
+	  document.write(Function.__proto__+'</br>')//空函数
+//	  Person.__proto__=Object.__proto__=Function.__proto__
+
+	//所以：  
+	  document.write((Person.__proto__==Object.__proto__)+'</br>')  
+      document.write((Person.__proto__==Function.__proto__)+'</br>')
+      document.write((Function.__proto__==Object.__proto__)+'</br>')
+	  
+	  
+
+
+
+document.write((Function.__proto__==Function.prototype)+'</br>')
+document.write((Object.__proto__==Function.prototype)+'</br>');
+document.write((Person.__proto__==Function.prototype)+'</br>')
+//构造函数的原型都等于Function.prototype,Function.prototype是空函数，所以构造函数的原型都是空函数
+
+
+
+
+document.write((Person.prototype.__proto__==Object.prototype)+'</br>')
+document.write((Function.prototype.__proto__==Object.prototype)+'</br>'); document.write(Object.prototype.__proto__)//null
+     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+	</script>
+</html>

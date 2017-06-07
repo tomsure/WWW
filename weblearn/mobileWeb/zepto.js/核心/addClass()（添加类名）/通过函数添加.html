@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv{
+			width: 100px;
+			height: 100px;
+			
+		}
+		.dv1{
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv" class="aa">
+			
+		</div>
+		<button>点击添加</button>
+	</body>
+	<script type="text/javascript" src="../zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').on('click',function(){
+				$('#dv').addClass(function(index,Oc){
+					alert(Oc)//原有的类名
+					var addclass='newClass'
+					return addclass
+				})
+				
+			})
+		})
+//        通过函数添加class名称,再次过程中可以进行一些计算,也可以执行需要的一些语句
+	</script>
+</html>

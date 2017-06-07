@@ -1,0 +1,13 @@
+﻿1、 this作为全局变量
+全选复制放进笔记
+01  　var name = "The Window";
+02  　　var object = {
+03      　　　　name : "My Object",
+04      　　　　getNameFunc : function(){
+05          　　　　　　return function(){
+06              　　　　　　　　return this.name;
+07          　　　　　　};
+08      　　　　}
+09  　　};
+10  console.log(object.getNameFunc()());
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv1{
+			width:400px;
+			height: 100px;
+			background-color: red;
+			position: relative;
+			top: 30px;
+			left: 30px;
+			/*当元素设置position:realtive属性,且设置偏移量的时候,如果他有相邻的元素紧挨着,则这个元素会产生z-index属性,产生堆叠,会覆盖到相邻的元素，而且此时元素仍处于文档流中，原来的位置不会变，别的元素不会跑到它原来的位置去*/
+			
+		}
+		#dv2{
+			width: 200;
+			height: 200px;
+			background-color: blue;
+		}
+	</style>
+	<body>
+		<div id="dv1">
+			
+		</div>
+		<div id="dv2">
+			
+		</div>
+		<div id="dv3">
+			
+		</div>
+	</body>
+</html>

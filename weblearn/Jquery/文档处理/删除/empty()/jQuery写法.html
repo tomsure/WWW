@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width: auto;height: 200px;background-color: red;}
+		
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//删除元素内部所有的子节点
+		$(function(){
+			$("#btn").click(function(){
+				$("div").empty()  //点击之后div里面的子元素和子节点全部被删除
+			})
+		})
+	</script>
+	<body>
+		<div id="">
+			你好
+			<p>对对对</p>
+			<span>顶顶顶顶</span>
+			
+		</div>
+		<input type="button" name="" id="btn" value="点击删除" />
+	</body>
+</html>

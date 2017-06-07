@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击获取定位</button>
+		<textarea name="" id="ta" rows="20" cols="20"></textarea>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		var ta=document.getElementById("ta");
+		btn.onclick=function(){
+			navigator.geolocation.getCurrentPosition(function(position){
+				ta.value=position.coords.longitude;
+			},function(){
+				alert('获取失败')
+			},{
+				timeout:10,
+				maximumAge:10
+//			maximumAge用于设置获取到的地理定位信息缓存的时间,如果获取到地理信息后,会将获取到的数据存储一个时间,这个时间就是maximumAge的值,在这个时间内用户重复获取请求定位的话,就会使用缓存的定位信息,当超过这个时间后,在获取地理信息就会获取新的数据,这个属性默认值为0
+
+			})
+		}
+	</script>
+</html>

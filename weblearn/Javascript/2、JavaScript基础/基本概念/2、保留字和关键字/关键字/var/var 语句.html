@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function t1(){
+			var str=1;
+			function t2(){
+				var str=2;
+				alert(str)
+			}
+			t2()
+		}
+		t1()
+//		var 关键字用于申明局部变量,加了var的变量是局部变量,函数外部无法访问,没加的就是全局变量,在所有位置都可以访问
+		 
+		function t3(){
+			var a=3;
+			function t4(){
+				a=5;
+				var a=4
+				
+				alert(a)
+			}
+			t4()
+		}
+		t3()
+		
+		b=30
+		function q(){
+			var b=10
+			function r(){
+				b=20
+				alert(b)
+			}
+			r()
+		}
+		q()
+//		在函数内部变量如果不加var,则这个变量也是全局变量,如果在函数外部有一个相同名称的变量名,则函数内部的变量就会覆盖外面同名的变量,这就是污染全局
+	</script>
+</html>

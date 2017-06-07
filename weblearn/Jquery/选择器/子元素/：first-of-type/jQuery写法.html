@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	<script>
+		//这个选择器指的是选择属于父级元素的第一个指定子元素，不一定是父级元素的第一个子元素
+		$(function(){
+			$("a:first-of-type").css("background","red")
+			//这里表示选择的是子元素是a,而且他的是他父级元素的第一个a标签
+			//每个div里面有多个a标签，只有 每个div里的第一个a标签背景颜色标成了红色
+			
+		})
+	</script>
+	<body>
+		<div id="dv1">
+			<a href="">11111111111</a>
+			<p>333333333333</p>
+			<a href="">22222222222</a>
+			
+		</div>
+		<div id="dv2">
+			
+			<p>44444444</p>
+			<a href="">rrrrrrrrr</a>
+			<a href="">xxxxxxxx</a>
+			<p>555555555</p>
+		</div>
+		<div id="dv3">
+			<a href="">66666666666666</a>
+			<p>ffffffffff</p>
+			<a href="">77777777777</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(name,age){
+			this.name=name;
+			this.age=age
+			}
+	    Person.prototype.say=function(){
+	    	alert(this.name)
+	    }
+		 person1=new Person('tom',20);
+		person1.say();//继承原型对象
+		 person2=new Person('bom',23)
+		person2.say()//继承原型对象
+		
+		person1.__proto__.say=function(){
+			alert(this.age)
+		}
+		person2.say();//23
+		person1.say()//20
+	// 这里通过person1.__proto__改变了原型对象的say方法，由于原型对象是Perosn.prototype，它是构造函数Perosn的实例对象的所有原型，如果通过改变某一个实例对象的原型的属性或方法，那么这个 原型下面所有的实例对象继承的方法都会改变
+	
+	function A(){
+		
+	}
+	    A.prototype.sayA=function(){
+	    	alert('A')
+	    }
+	function B(){
+	  this.sayB=function(){
+	  	document.write('B')
+	  }
+	}
+	B.prototype.say=function(){
+		document.write('i am B')
+	}
+	var a=new A();
+	var aa=new A();
+	  a.sayA();
+	  aa.sayA()
+	  //此时构造函数两个实例对象都拥有了从原型对象A.prototype继承来的方法；
+	  
+	A.prototype=new B();
+	var b=new A();
+	    bb=new A()
+	 b.sayB();
+	 bb.say()
+     b.sayA();//报错
+     bb.sayA()//报错。
+//   将构造函数A的prototype属性设置为另一个构造函数B的实例化后,在实例化构造函数A,此时构造函数A已经没有了A原来的prototype上的属性,因为他已经指向了new B(),只有B里面的方法和B.prototype的方法,此时A的所有实例的方法和属性都会改变
+     
+	
+	
+		
+	</script>
+</html>

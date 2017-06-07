@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv1{
+			width: 100px;height: 100px;background-color: red;
+		}
+		.dv2{
+			width: 300px;
+			height: 300px;
+			border: 3px solid black;
+		}
+	</style>
+	<body>
+		
+		<div class="dv1" id="dv1" draggable="true">
+			
+		</div>
+		<div class="dv2" id="dv2">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv1=document.getElementById("dv1");
+		var dv2=document.getElementById("dv2")
+		dv1.ondragstart=function(){
+			this.style.background='green'
+		}
+		//开始拖动后背景颜色变成绿色
+         dv1.ondragend=function(){
+         	this.style.backgroundColor='red'
+         }//结束拖动后背景颜色又变成红色
+         dv2.ondragenter=function(){
+         	this.style.backgroundColor='blue'
+         }//拖动元素进入的时候
+          dv2.ondragleave=function(){
+         	this.style.background='white'
+         }//元素离开时候触发
+        
+         var i=0
+         dv2.ondragover=function(ev){
+           document.title=i++;
+         ev.preventDefault() //阻止默认事件
+         }//进入和出去的时候连续触发;
+         
+         
+         
+         
+   
+        dv2.ondrop=function(){
+        	alert('你松开了鼠标')
+        	
+        }
+
+//      ondrop事件表示当被拖动的元素拖动到本元素上松开鼠标的时候触发的事件，注意：要触发drop事件必须在ondragover函数中阻止默认事件。否则这个事件不会触发；
+
+//在上面的例子中当dv1被拖动到dv2上面松开鼠标的时候，就会弹出‘你松开了鼠标’，注意这个事件只能绑定在目标元素上，在这里也就只鞥绑定到dv2上，切ondragover事件函数中必须阻止默认事件,但是有一个问题，阻止的默认事件就是当元素离开dv2的时候绑定的dragleave事件不会触发
+
+// 能释放的时候鼠标的光标是不一样的
+	</script>
+	
+</html>

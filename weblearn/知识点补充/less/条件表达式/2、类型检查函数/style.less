@@ -1,0 +1,23 @@
+.style(@color)when(iscolor(@color)){
+    
+  background-color: red;
+}
+
+.style(@color)when(isnumber(@color)){
+    background-color: blue;
+}
+
+#dv{
+    width: 100px;
+    height: 100px;
+    .style(1) //参数位数字
+}
+#dv1{
+     width: 100px;
+    height: 100px;
+    .style(#ffffff) //参数为颜色
+    
+    
+}
+
+//less条件表达式中有一些可以检测参数类型的函数，例如iscolor()用于检测当参数为颜色的时候执行，isnumber()表示当参数为数字的时候执行，就是说这些类型检查函数，用来判断作为执行代码的条件，还有一些判断函数这里没有列出，在学函数库的时候，具体学习。less中混合是可以重复的，在使用条件表达式的时候，根据符合的条件，自动匹配要执行的混合

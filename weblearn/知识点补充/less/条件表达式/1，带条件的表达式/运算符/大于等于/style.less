@@ -1,0 +1,16 @@
+.style(@color)when(lightness(@color)>=50%){
+    
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    
+}
+
+
+
+div{
+    .style(#ffffff)
+}
+
+
+//>=符号用于when后面的括号里面的>=表达式，>=符号当左边的值>=右边的值则执行大括号里面的语句，这里使用了less的lightness函数，计算颜色百分比是否大于50%传入的参数确实大于等于50%，所以执行了大括号里面的样式

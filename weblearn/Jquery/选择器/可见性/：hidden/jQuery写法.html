@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	p{display: none; background: red;}
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	<script>
+	/*:hidden 选择器选取隐藏的元素。
+             以下几种情况的元素是隐藏元素：
+            设置为 display:none
+             带有 type="hidden" 的表单元素
+      width 和 height 设置为 0
+           隐藏的父元素（这也会隐藏子元素）
+           注释：该选择器对 visibility:hidden 的元素不起作用。*/
+		$(function(){
+			$(":hidden").show(8500)
+			//选择隐藏的元素设置其显示时间
+		})
+	</script>
+	<body>
+		<p>中华人民共和国</p>
+	</body>
+</html>

@@ -1,0 +1,1 @@
+这个属性规定background根据什么位置了定位背景图像，共三个值，content-box；padding-box和border-box

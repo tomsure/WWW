@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>
+				用户名: <input type="text"  name="user" id="user" value="" />
+				
+			</p>
+			
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-1.10.2/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('form').validate({
+				
+			    rules:{
+			    	user:{
+			    	minlength:4,
+
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"用户名不得少于4位",
+			    		maxlength:"输入不得超过8位"
+			    	}
+			    }
+			  
+       
+			
+		});
+
+        
+	  $('#user').rules('add',{required:true,maxlength:8})
+//		rules('add',rules)方法用于给表单元素添加规则,而不是给表单添加，添加的规则相当于是在validate()方法中的rules{}中添加的方法,同样可以再massages中添加中文自定义信息，它的参数第一个是固定的‘add’，第二个是json数据，里面就是json格式填加的规则
+//此方法可以用在函数最外层
+		})
+     
+	</script>
+</html>

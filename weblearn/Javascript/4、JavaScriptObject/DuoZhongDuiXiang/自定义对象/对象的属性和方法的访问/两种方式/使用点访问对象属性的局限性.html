@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//		  使用.访问对象属性的局限性:
+		
+	//1，只能访问字符串属性:
+          var bb={0:'a',1:"b"}
+//        alert(bb.0) //报错，使用点连接属性不能是数字，访问为数字为属性的话就必须使用[]
+      alert(bb[0])   
+     
+//   2,不能访问带空格的属性:
+     var aa={
+     	'tom mall':'hh',
+     	'bom mall':'aa'
+     }
+//   alert(aa.'tom mall') //报错
+    alert(aa['tom mall'])  //正确返回
+       
+	</script>
+</html>

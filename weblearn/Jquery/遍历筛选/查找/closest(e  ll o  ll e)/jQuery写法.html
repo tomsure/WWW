@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<style type="text/css">
+		div{ border:1px  solid red; padding: 10px;}
+		#dv1{ height:300px ;}
+		#dv2{ height:250px;}
+		#dv3{ height: 200px;}
+		#dv4{height:50px ;}
+		p{ border:1px darkcyan solid ;}
+	</style>
+	<script type="text/javascript">
+		$(function(){ 
+			/*参数	描述
+              filter	必需。规定缩小搜索祖先元素范围的选择器表达式、元素或 jQuery 对象。
+              context	可选。在其内可以找到匹配元素的 DOM 元素。*/
+		  
+		   $("#btn").click(function(){
+		   	$("p").closest("div").css("border","4px solid green")
+		   	//选择元素的父级元素第一级，不包括父元素的父元素，它可以包含它自己
+		   	
+		   })
+     		 	
+     		 	 $("#btn1").click(function(){
+		   	$("p").closest("p").css("border","4px solid green")
+		   	//它可以选择它自己
+		   	
+		   })
+     		 //它另一个与parent()的区别是这里closet()括号里必须要设置父元素的名称
+		})
+	</script>
+	<body>
+		<div id="dv1">
+			<div id="dv2">
+				<div id="dv3">
+					<p>s</p>
+					<div id="dv4"></div>
+				</div>
+			</div>
+		</div>
+		<button id="btn">点击测试</button>
+		<button id="btn1">点击测试</button>
+		<a href="http://www.cnblogs.com/ini_always/archive/2011/11/09/2243671.html">closet()与parent()和parents()的区别</a>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//如果在文档中设置了属性值，则 specified 属性返回 true，如果是 DTD/Schema 中的默认值，则返回 false。
+    window.onload=function(){
+    	var dd=document.getElementById("dv");
+    	alert(dd.attributes[0].specified)
+//  	 specified属性用于设置元素的属性是否设置了属性，设置了返回true，没设置返回false
+//       也可以使用getArrtibute()方法测试是否设置了指定属性值的属性
+    }
+	</script>
+	
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+</html>

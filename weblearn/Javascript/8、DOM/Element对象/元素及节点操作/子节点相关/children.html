@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			 s=document.getElementById("dv")
+		alert(s.children.length)//使用children属性可以获得实际的元素节点不包括空节点;这里div的子节点是dv1和dv2共两个，如果使用childNodes则获得的子节点会包含ul两端的空格，这样子节点就不止两个
+		}
+		
+		</script>
+	<body>
+		<div id="dv">
+		
+		<div id="dv1">
+			
+		</div>
+		<div id="dv2">
+			
+		</div>
+	</div>
+	</body>
+	<!--新版本浏览器都兼容，老版本浏览器有些不兼容-->
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript">
+	
+	    /********************封装兼容性函数****************************/
+		function addEvent(obj,type,fn){
+			if(obj.addEventListener){//如果是W3C浏览器
+				obj.addEventListener(type,fn,false)//
+			}else if(obj.attachEvent){//如果只IE浏览器
+				obj.attachEvent('on'+type,fn)
+			}
+		}
+		
+		/***************************使用的时候调用***********************/
+		   var btn=document.getElementById("btn");
+		   addEvent(btn,'click',function(){alert(1)})
+		     
+		
+		//兼容性封装绑定事件步骤：
+		/*1,一个普通封装函数,传递三个参数,第一个是绑定事件的对象,第二个是事件类型名称,第三个是事件函数
+		2,使用条件语句,如果绑定的对象拥有addEventListener属性,则使用addEventListener()方法,里面传递三个参数第一个是事件类型名称,第二个是事件函数,第三个是是否冒泡,封装的时候传false,默认是冒泡;
+		3,如果是绑定事件的对象拥有attechEvent方法,则就是IE浏览器,就使用attechEvent()方法,传递两个参数,第一个是绑定事件类型名称由于IE绑定事件名称需要加on,所以第一个参数就是'on'+type,第二个参数事件函数,没有第三个参数,因为IE只有事件冒泡.*/
+		
+		
+		//使用的时候只要调用addEvent()这个函数，传递相关参数即可
+		
+		
+	</script>
+</html>

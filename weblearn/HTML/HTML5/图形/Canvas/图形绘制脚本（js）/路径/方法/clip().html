@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+	//clip()方法用来剪切画布，剪切后的画布就不存在，所以画布上绘制的图形只能在剪切之外的位置显示，但是可以提前使用save()方法保存剪切的部分，在后面要用到的时候可以再调用出来，相当于是备份备份，并在以后的任意时间对其进行恢复（通过 restore() 方法）
+	
+	
+		window.onoad=function(){
+		
+  	var ss=document.getElementById("myCanvas");
+  	   var dd=ss.getContext("2d");
+  	   dd.fillRect(10,10,100,100);
+  	   /*它有四个值（x，y，width，height），分别代表：x：矩形左上角的 x 坐标。
+			                                    y:矩形左上角的 y 坐标。
+			                                    width:矩形的宽度，以像素计。
+                                                height:矩形的高度，以像素计。*/
+                                               
+                                               
+       //fillRect默认颜色是黑色,如果需要修改颜色则用fillStyle修改；                           
+                                                
+                                                
+  	
+  	
+  }
+		
+		
+	</script>
+	<body>
+	<canvas id="myCanvas" width="200" height="200"></canvas>
+	</body>
+</html>

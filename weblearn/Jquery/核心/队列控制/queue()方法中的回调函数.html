@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('div').click(function(){
+				$(this).animate({
+					width:'300px'
+				},2000)
+				$(this).queue('fx',function(next){
+					$(this).css('backgroundColor','blue')
+					$(this).dequeue()//这一句还可以写成next()
+					//next()
+				})
+				$(this).animate({
+					height:'300px'
+				},2000)
+				
+			});
+		})
+// queue()方法中的回调函数就是插入早动画队列中要执行的函数,这个函数内部需要使用dequeue()方法来将本次执行的函数(也就是队列函数)取出队列,并执行这个函数,取出并执行之后,队列中下一个动画就变成了第一个数组元素,这样就会继续执行
+
+//queue()方法中的函数有一个参数，可以任意写（除了关键字和保留字），这样在函数内部将这个参数后面加一个括号，放在函数代码块的末尾。它的作用和执行dequeue()方法是一样的效果
+	</script>
+</html>

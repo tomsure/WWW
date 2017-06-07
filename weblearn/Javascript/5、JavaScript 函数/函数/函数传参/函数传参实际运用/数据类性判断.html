@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		function fn(a){
+			if(typeof a==='number'&&a===a){//如果数据类型值数字且不为NAN,由于NAN的数据类型也属于number,所以添加a===a,避免a===NaN
+				alert(a)
+			}else if(typeof a==='string'){  //如果是字符串类型
+				alert(a)
+			}else if(typeof a==='function'){//如果是函数
+				a()//则执行函数
+			}
+			
+			
+		}
+		
+	fn(1);
+	fn('sss');
+	fn(function sd(){alert('sssccc')})
+		
+		
+	</script>
+</html>

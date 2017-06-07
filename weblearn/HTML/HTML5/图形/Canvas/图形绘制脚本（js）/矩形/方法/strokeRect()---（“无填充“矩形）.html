@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//绘制带边框的矩形(无填充)，边框默认是两像素（计算机原因导致）
+	//strokeRect() 方法绘制矩形（无填充）。笔触（边框）的默认颜色是黑色。
+	//提示：请使用 strokeStyle 属性来设置笔触的颜色、渐变或模式。
+	window.onload=function(){
+		var ss=document.getElementById("myCanvas");
+		var dd=ss.getContext("2d");
+		dd.strokeRect(10,10,200,200);  //用strokeRect()方法绘制；
+      /*四个参数的描述：		
+		x	矩形左上角的 x 坐标。
+        y	矩形左上角的 y 坐标。
+        width	矩形的宽度，以像素计。
+        height	矩形的高度，以像素计。*/
+     
+       
+       
+       
+	}
+	
+	</script>
+	<body>
+	<canvas id="myCanvas" width="300" height="300"></canvas>
+	</body>
+</html>

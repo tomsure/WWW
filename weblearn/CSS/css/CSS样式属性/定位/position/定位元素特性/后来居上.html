@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+		}
+		#dv1{
+			background-color: red;
+			position: absolute;
+		}
+		#dv2{
+			margin: 20px;
+			position: absolute;
+			background-color: blue;
+		}
+		/*由于都设置了定位,二dv2在dv1后面出现,所以显示为dv2覆盖了dv，这就是后来居上的特性*/
+	</style>
+	<body>
+		<div id="dv1">
+			
+		</div>
+		<div id="dv2">
+			
+		</div>
+	</body>
+</html>

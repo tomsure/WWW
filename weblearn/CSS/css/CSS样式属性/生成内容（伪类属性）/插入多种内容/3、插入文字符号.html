@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		h3:before{
+			content: open-quote;
+		}
+		h3:after{
+			content: close-quote;
+		}
+		
+		/*content属性用在after和open中可以用来设置元素的符号,例如引号,分号等等，默认是引号;*/
+		
+		
+		
+		
+		h4:before{
+			content: open-quote;
+		}
+		h4:after{
+			content: close-quote;
+		}
+		
+		h4{
+			quotes: "《" "》";
+		}
+		
+		/*quotes属性用来给元素设置自定义符号*/
+	  </style>
+	<body>
+		<h3>你好</h3>
+		<h4>你好</h4>
+	</body>
+</html>

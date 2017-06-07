@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击获取</button>
+		<p></p>
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('#btn').click(function(){
+			$.ajax({
+				type:"get",
+				url:"demo3.php",
+				async:true,
+				success:function(data){
+				
+					//php返回的是一个形似数组的字符串，但是需要的是一个数组，所以需要使用方法将这个字符串转换成数组，而这个数组中的每一组json数据就是一个数组元素，这里只有一组json，所以就是数组中的第一个元素，对应的数组的下标就是[0],这里如果直接打印出data的话就是[{'tltle':'国内新闻'}]，所以需要将它转换成数组，
+					var arr=eval(data);
+					$('p').html(arr[0].title+'</br>'+arr[1].type);
+					
+				}
+			});
+		})
+	</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*将行内元素元素的顶端与父元素中文本的顶端对齐*/
+		#dv{
+			width: 500px;
+			height: 500px;
+			border: 1px solid red;
+			font-size: 24px;
+		}
+		#dv1{
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			vertical-align: text-bottom;
+		}
+		span{
+			font-size: 30px;
+			margin: 0px;
+			padding: 0px;
+			border: 1px solid blue;
+		}
+		/*text-top表示元素的底部与父级元素文字内容区域的底部对齐,由于这里父级元素设置的字体是24px,span设置的字体是30px,所以这里dv里面直接没有包裹的文字的大小就是24px,当使用鼠标选择的时候就会发现文字的底部和元素dv1的底部是对齐的*/
+		</style>
+	<body>
+		<div id="dv">
+			<div id="dv1">
+				
+			</div>
+			中华任命共和国
+			<span id="">
+				美利坚合众国
+			</span>
+			
+		</div>
+	</body>
+	</html>

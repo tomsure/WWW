@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		<div class="btn-group">
+			<button class="btn btn-default">1</button>
+			<button class="btn btn-default">2</button>
+			<button class="btn btn-default">3</button>
+			<button class="btn btn-default">4</button>
+			
+<!---------------------------嵌套分组----------------------------------->
+        <div class=" btn-group"><!--第一步，将dropdown改成btn-group-->
+ <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+ 	<!--第二部，给button增加一个dropdown-toggle类名-->
+        		下拉菜单
+        		<span class="caret"></span>
+        	</button>
+        	<ul class="dropdown-menu">
+        		<li><a href="">公司简介</a></li>
+        		<li><a href="">发展历程</a></li>
+        		<li><a href="">最新动态</a></li>
+        		<li><a href="">联系方式</a></li>
+        	</ul>
+        	<!--按钮组里面嵌套一个下拉菜单需要两部，第一步将嵌套进去的下拉菜单的div类名由dropdown改为brn-group,第二部，将下拉菜单里面电机的元素（比如button）添加一个dropdown-toggle类名-->
+        </div>
+        
+        
+		</div>
+			</body>
+			<script type="text/javascript" src="../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+				
+			</script>
+			<script type="text/javascript" src="../../../bootstrap库/Bootstrap源码/dist/js/bootstrap.min.js">
+				
+			</script>
+</html>

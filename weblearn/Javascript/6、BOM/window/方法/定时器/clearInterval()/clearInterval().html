@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			function dd(){
+				a=document.getElementsByTagName("p").length
+			dd=document.write('<p>钱琼</p>'+a)
+			
+			document.write(a)
+			}
+			window.setInterval(dd,1000)
+			
+			document.onclick=function(){
+				clearInterval(dd,1000)
+			}
+		}
+			
+	</script>
+	<body>
+		<button id="btn"></button>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('#btn1').click(function(){
+				$('div').animate({width:'300px'},2000).queue(function(next){
+					alert(1)
+					next()
+				}).animate({height:'300px'},2000).animate({width:'100px'},2000).animate({height:'100px'},2000)
+			})
+			
+			$('#btn2').click(function(){
+				$('div').clearQueue()
+//				console.log($('div').queue().length) //获取队列的长度
+			})
+		})
+		
+//		clearQueue()方法用于清除队列中还没有执行的动画,也就是删除源码中队列函数产生的数组中未执行的动画数组元素
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button id="btn1">点击开始运动</button>
+		<button id="btn2">点击停止所有运动</button>
+	</body>
+</html>

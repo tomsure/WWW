@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	<script>
+	//选择指定元素的【所有】指定同级元素，指定的同级元素必须在这个元素之后
+		$(function(){
+			$("#dv~p").css("color","red")
+			//选择#dv【后面】的所有同级的p元素
+		})
+	</script>
+	<body>
+		<p>123</p>
+	<div id="dv">
+		<p>11111</p>
+		<p>22222</p>
+	</div>
+	<p>同级且后面</p>
+	<p>同级且后面
+	</p>
+	<p>同级且后面</p>
+	</body>
+</html>

@@ -1,0 +1,5 @@
+AO,this，arguments.callee
+
+1,AO：本函数AO上没有某个属性，则继续去外层函数的AO上去找，直到全局对象，叫做作用域链；
+
+2：每个函数有自己的callee，但不向外层函数接着找arguments的相关属性，即不形成链

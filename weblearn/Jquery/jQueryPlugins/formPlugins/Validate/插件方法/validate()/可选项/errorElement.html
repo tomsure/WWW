@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		em.error {
+  background:url("img/素材/失败.png") no-repeat 0px 0px;
+  padding-left: 16px;
+  /*这里设置错误信息的时候出现的图标及错误文字信息样式*/
+}
+em.success {
+  background:url("img/素材/ok.png") no-repeat 0px 0px;
+  padding-left: 16px;
+  /*这里设置当验证成功的时候的图片及文字信息的样式*/
+}
+
+	</style>
+	<body>
+		<form action="123.html" method="post">
+			<p>用户名: <input type="text" class="required" name="user" id="user" value="" />(必填)</p>
+			<p>邮箱: <input type="text" class="required"  name="e-mail" id="e-mail" value="" />(必填)</p>
+			<!--必填项后面添加上class="required"
+				
+			
+			-->
+			<p>URL: <input type="text" name="url" id="url"  value="" required  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../库文件/lib/jquery-1.9.1.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../库文件/dist/localization/messages_zh.min.js">
+  
+	</script>
+	<script type="text/javascript" >
+		$(function(){
+			$('form').validate({
+				
+			errorElement:"em",//在validate()方法中使用errorElement属性用于创建一个包裹错误提示信息标签
+		success:function(label){//验证成功后执行的回调函数success，需要传递一个参数，这个参数代表上面创建的那个em标签。
+			label.text("").addClass("success")
+			//在函数内部，将em标签的文字清空，并添加一个类名，在CSS里面做好相关样式的设置
+		   
+		 }
+
+     
+    //errorElement用于创建一个标签，错误提示信息将会显示在这个标签中，默认情况下错误信息的位置是在input的后面，所以这个标签也在input的后面，可以设置errorPlacement来设置错误信息的位置
+			})
+			
+		
+		})
+		
+	</script>
+</html>

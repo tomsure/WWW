@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//	循环自定义对象属性
+		var person=new Object();
+		person.name='tom';
+		person.age=23;
+		for(i in person){
+			document.write(person[i]+'</br>')
+		}
+	//	循环window对象属性
+		for(w in window){
+			document.write(window[w]+'</br>')
+		}
+		
+    //注意：如果遍历的变量的值是null或者undefined，由于for-in语句中在js5以前会报错，js5以后不会执行循环体，为了保持兼容性，必须设置被遍历的对象的值不是null或者undefined	
+		
+		
+	</script>
+</html>

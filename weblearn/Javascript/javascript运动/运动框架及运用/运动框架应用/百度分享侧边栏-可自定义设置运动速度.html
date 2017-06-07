@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #div1 {width: 150px; height: 200px; background: green; position: absolute; left: -150px;}
+        /*设置绝对定位,左偏移为-150px*/
+        #div1 span {width: 20px; height: 60px; background: blue; position: absolute; right: -20px; top: 70px;}
+        /*因为span是在div里面的,而div向左偏移-150,已经隐藏,所以span本身需要向右偏移-20px,达到显示的效果*/
+    </style>
+
+    <script>
+      window.onload=function(){
+        var oDiv = document.getElementById("div1");
+        oDiv.onmouseover = function ()
+        {
+            startMove(10, 0);
+            
+        };
+        oDiv.onmouseout = function ()
+        {
+            startMove(-10, -150);
+//            鼠标离开时候speed宽度-10px,-150是运动停止的条件
+        };
+       
+     }
+    var timer = null;
+
+    function startMove (speed, iTarget) 
+    {
+        var oDiv = document.getElementById("div1");
+
+        clearInterval(timer);
+        timer = setInterval(function (){
+            if(oDiv.offsetLeft == iTarget)
+            {
+                clearInterval(timer);
+            }
+            else
+            {
+            oDiv.style.left = oDiv.offsetLeft+speed+'px';
+            }
+        }, 30);
+        }
+    
+     
+       
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <span>分享到</span>
+    </div>
+</body>
+</html>

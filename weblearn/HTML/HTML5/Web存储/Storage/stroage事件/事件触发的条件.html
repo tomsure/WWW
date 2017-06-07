@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">设置</button>
+		<button id="btn1">读取</button>
+		<input type="text" id="ipt" />
+		
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+	var 	btn1=document.getElementById("btn1");
+		var ipt=document.getElementById("ipt");
+		btn.onclick=function(){
+			window.localStorage.setItem('name',ipt.value)
+		};
+		btn1.onclick=function(){
+			alert(window.localStorage.getItem('name'))
+		}
+		addEventListener('storage',function(){
+			alert(123)
+		})
+		
+//		storage事件在当前页面绑定,当设置的storage数据发生改变后就会触发,但是不会在当前这个页面触发,而是在这个页面再从新在其他地址栏打开的时候,当storage数据改变的时候才会触发,事件是由第二个页面触发，但是会在第一个页面体现效果，例如现在这个页面在chrome打开（算为A），设置了storage数据后，在用相同的url在另一个位置打开(算为B)，当在新的位置打开后（B）修改了前一个页面（A）设置的storage数据的value后，前一个页面（A）会发生效果，但是他是第二个页面（B）触发的
+
+
+//触发所以总结storage事件触发的条件:
+//	 1,事件在本页面绑定,并在浏览器打开后设置了storage数据;
+//	 2,此页面再在同一个浏览器其他位置打开了这个页面;
+//	 2,重新设置了相同key值得storage数据,也就是存储数据发生了改变
+	</script>
+</html>

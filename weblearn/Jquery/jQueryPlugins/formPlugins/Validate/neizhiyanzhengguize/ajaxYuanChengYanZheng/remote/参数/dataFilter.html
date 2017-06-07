@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<title></title>
+		<meta name="" content="" charset="utf-8"/>
+	</head>
+	
+
+<body>
+	<form name="form1" id="form1" method="post" action="">
+
+<p>
+  <label>用户名：</label>  
+  <input name="txtUserName" id="txtUserName" type="text" class="input1" />
+<p>
+<p>  
+  <label for="email">E-Mail</label>  
+  <input id="email" name="email" />  
+ </p>  
+ <p>  
+  <label for="password">Password</label>  
+  <input id="password" name="password" type="password" />  
+ </p>  
+ <p>  
+  <label for="confirm_password">确认密码</label>  
+  <input id="confirm_password" name="confirm_password" type="password" />  
+ </p>  
+
+</form>
+</body>
+<script type="text/JavaScript" src="../../../../../../jquery.js"></script>
+<script type="text/javascript" src="../../../库文件/dist/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../../../库文件/dist/localization/messages_zh.min.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+//表单验证JS
+    $("#form1").validate({
+        //出错时添加的标签
+        errorElement: "span",
+        rules: {
+            txtUserName: {          //id或者name属性的名称
+                required: true,           //validate内置标签名
+                minlength: 3,   
+                maxlength: 16,  
+                remote: {
+                    type: "post", 
+ //请求方式
+                    url: "/tools/ValidateUserName.ashx",       //发送请求的url地址
+                    data: {
+                        username: function() {
+                            return $("#txtUserName").val();     //id名为“txtUserName”中的值
+                        }
+                    },
+                    dataType: "html",        //发送的数据类型
+                    dataFilter: function(data, type) { //返回结果
+                        if (data == "true")
+                            return true;
+                        else
+                            return false;
+                    }
+                }
+            },
+
+    
+
+
+  
+        success: function(label) {
+            //正确时的样式
+            label.text(" ").addClass("success");
+        },
+        messages: {
+            txtUserName: {
+                required: "请输入用户名，3-16个字符（字母、数字、下划线），注册后不能更改", //validate内置标签名
+                minlength: "用户名长度不能小于3个字符",
+                maxlength: "用户名长度不能大于16个字符",
+                remote: "用户名不可用" 
+//用户名验证失败时显示的内容
+            },
+
+   email: {  //id或者name属性的名称
+      required: "请输入Email地址",  
+        email: "请输入正确的email地址"  
+    },  
+  password: {  //id或者name属性的名称
+    required: "请输入密码",  
+    minlength: jQuery.format("密码不能小于{0}个字符")  
+    },  
+    confirm_password: {  //id或者name属性的名称
+    required: "请输入确认密码",  
+    minlength: "确认密码不能小于5个字符",  
+    equalTo: "两次输入密码不一致不一致"  
+   }  
+}   
+})
+</script>
+</html>

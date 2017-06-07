@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+	</style>
+	<body>
+		<div id="">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../zepto库/zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('div').on('swipe',function(){
+				alert('这是滑动事件')
+			})
+		})
+		
+//		当手指在屏幕上滑动的时候触发swipe事件,不规定方向,任何方向都会触发
+	</script>
+</html>

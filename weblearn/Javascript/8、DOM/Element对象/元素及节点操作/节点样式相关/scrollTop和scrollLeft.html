@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#dv{
+			width: 300px;
+			height: 200px;	
+			background-color: red;
+			overflow: scroll;
+			margin: 100px;
+			}
+			#dv1{
+				width: 150px;
+				height: 500px;
+				background-color: blue;
+			}
+			
+		</style>
+	</head>
+	<script type="text/javascript">
+		
+	
+	</script>
+	<body >
+	</body>
+	<div id="dv">
+		<div id="dv1">
+			
+		</div>
+	
+	</div>
+	
+	<script type="text/javascript">
+	var dv1=document.getElementById("dv")
+//	dv1.scrollTop=100;
+	dv1.scrollLeft=300
+	
+	alert(dv1.scrollTop)
+	alert(dv1.scrollLeft)
+	
+//	scrollTop属性可读可写,默认值都是0，指的是当元素出现滚动条的时候，说明他的内容超过了自己的宽或者高（设置了overfllow=scroll），此时滚动条会向下滚动，这个时候如果手动或者通过其他方式拉动滚动条向下或者向右滑动后，就有一部分内容会向上或者向左去，且这一部分会看不到，这一部分的大小就是scrollTop和scrollLeft的大小
+//  scrollTop和scrollLeft指的是滚动后div的最边缘(不包括border)距离被卷起隐藏的那部分的最边缘的距离
+
+
+	
+	</script>
+</html>

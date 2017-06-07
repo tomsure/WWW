@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+	//在指定元素内部追加指定内容（包括元素或者文本）
+		$(function(){
+			$("#btn").click(function(){
+				$("p").append("呵呵")    //在p元素里面追加两个字
+				
+			})
+			$("#btn1").click(function(){
+				$("p").append(function(){
+					return "哈哈"
+				})    //在append里面已函数 作为参数的方式追加
+				
+			})
+			
+		})
+	</script>
+	<body>
+		<p>你好</p>
+		<input type="button" name="" id="btn" value="点击追加" />
+		<input type="button" name="" id="btn1" value="点击追加" />
+	</body>
+</html>

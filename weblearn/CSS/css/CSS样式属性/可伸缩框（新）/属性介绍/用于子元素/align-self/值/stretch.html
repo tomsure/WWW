@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 400px;
+			height: 400px;
+			display: flex;
+			background-color: deeppink;
+			flex-wrap: wrap;
+		}
+		#dv1{
+			width: 100px;
+			/*height: 150px;*/
+			background-color: darksalmon;
+			align-self:stretch;
+			/*如果设置为stretch,且元素没有设置高度或者高度为auto，则这个子元素的高度就会占满本行的总高度，若是只有一行，则高度就等于父元素的高度*/
+		}
+		#dv2{
+			width: 100px;
+			height: 100px;
+			background-color:seagreen;
+		}
+		#dv3{
+			width: 100px;
+			height: 100px;
+			background-color:forestgreen;
+		}
+		#dv4{
+			width: 300px;
+			height: 100px;
+			background-color:darkred;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			<div id="dv1">1</div>
+			<div id="dv2">2</div>
+			<div id="dv3">3</div>
+			<div id="dv4">4</div>
+		</div>
+	</body>
+</html>
+
+ 

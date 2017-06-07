@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body> 
+
+     <video width="" height="" id="vod" controls="controls" muted="muted" >
+     	<source src="../音视频资源文件/Intermission-Walk-in_512kb.mp4" type="video/mp4"></source>
+     	<source src="../音视频资源文件/johann_sebastian_bach_air.ogg" type="video/ogg"></source>
+     	
+     </video>
+     <button id="btn">点击静音</button>
+</body> 
+<script>
+  var vod=document.getElementById("vod");
+   
+   var btn=document.getElementById("btn");
+   btn.onclick=function(){
+   	alert(vod.controller)
+   }
+//controller 属性返回音频/视频的当前媒体控制器
+</script>  
+</html>

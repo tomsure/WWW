@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		
+var Person = function () { };
+	Person.prototype.Say = function () {
+		alert("Person say");
+	}
+	Person.prototype.Salary = 50000;
+ 
+	var Programmer = function () { };
+	Programmer.prototype = new Person();
+	Programmer.prototype.WriteCode = function () {
+		alert("programmer writes code");	};
+ 
+	Programmer.prototype.Salary = 500;
+ 
+	var p = new Programmer();
+	p.Say();
+	p.WriteCode();
+	alert(p.Salary);
+
+alert(Person.__proto__==Object.__proto__);  //  弹出true，Person与Object指向同一个原型对象
+alert(Programmer.__proto__==Object.__proto__);//弹出true，Programmer与Object指向同一个原型对象
+alert(Person.__proto__==Programmer.__proto__)//弹出true，所以Person与Object指向同一个原型对象,这样就实现继承；
+
+	</script>
+	<body>
+	</body>
+</html>

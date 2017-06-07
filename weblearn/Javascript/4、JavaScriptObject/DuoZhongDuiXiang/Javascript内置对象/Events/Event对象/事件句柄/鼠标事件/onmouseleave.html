@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	/*	定义和用法
+onmouseleave 事件在鼠标移除元素时触发。
+提示： 该事件通常与 onmouseenter 事件一起使用， 该事件在鼠标移动到元素上时触发。
+提示: onmouseleave 事件类似于 onmouseout 事件。 唯一的区别是 onmouseleave 事件不支持冒泡 。*/
+window.onload=function(){
+	var ss=document.getElementById("dv1");
+	ss.onmouseleave=function(){
+		alert("你离开了我，我不支持事件冒泡")
+	}
+}
+	</script>
+	<style type="text/css">
+		#dv1{
+			background-color: green;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+	<body>
+		<div id="dv1">
+			
+		</div>
+	</body>
+</html>

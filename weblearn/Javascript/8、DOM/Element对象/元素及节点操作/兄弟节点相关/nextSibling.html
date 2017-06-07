@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//nextSibling指的是返回节点后相邻的节点，但是空格也算节点;nextElementSibling就指的是元素节点不包含空文本节点
+	
+		window.onload=function(){
+			var d=document.getElementById("dv");
+			alert(d.nextElementSibling.tagName)//弹出dv相邻兄弟节点的标签名称;
+			alert(d.nextElementSibling.id)//弹出dv相邻下一个节点的id
+			alert(d.nextElementSibling.nextElementSibling.id)//弹出div2,因为dv1的下一个元素节点是dv2
+			alert(d.nextSibling.nextSibling.nextSibling.id)//弹出undefinded，因为nextSibling指的是节点，包含空格，这里弹出的是空文本的id，空文本不存在id所以弹出undefinded
+			
+		}
+	</script>
+	
+ <body>
+ 	<div id="dv">
+ 		
+ 	</div>
+ 	<div id="dv1">
+ 		
+ 	</div>
+ 	<div id="dv2">
+ 		
+ 	</div>
+ 	
+ </body> 
+</html>

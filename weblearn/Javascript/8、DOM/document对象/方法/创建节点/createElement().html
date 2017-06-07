@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var w=document.createElement("p");//创建新的元素节点p
+			var a=document.createTextNode("你好");//创建新的文本节点;
+			w.appendChild(a);//向新创建的元素节点p追加新创建的文本节点a
+			var z=document.getElementById("dv");//获取id为dv的div元素;
+			z.appendChild(w)//向div元素追加新创建的元素节点p
+		}
+	</script>
+	<body>
+	<div id="dv">
+		
+	</div>
+	</body>
+</html>

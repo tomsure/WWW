@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+//		这个是jquery扩展实例方法
+$.fn.extend({
+   	aaa:function(){
+   		alert(1)
+   	},
+   	bbb:function(){
+   		alert(2)
+   	}
+   });
+ $.fn.aaa() //调用
+  
+   $().bbb()//调用
+   
+//由于$.fn等于$.prototype，所以 $.fn.aaa()可以写成$.prototype.aaa()，这样的话就是在jquery对象原型上面添加的aaa方法，就是直接给元素添加方法
+	</script>
+</html>

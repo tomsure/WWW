@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	</script>
+	<body>
+		<a  id='aa' href="http://www.baidu.com">百度一下你就知道</a>
+	</body>
+	<script type="text/javascript">
+		
+		    /*************封装兼容性函数***********************/
+		   function preDef(evt){
+		   var ev=evt||window.event;
+		   if(ev.preventDefault){//如果支持此属性（方法）
+		   	ev.preventDefault() //则执行此方法
+		   }else{
+		   	ev.returnValue=false;//否则执行此属性（方法）
+		   }
+		   };
+		   
+		   /*******************使用的时候调用***************************/
+		   
+		    var aa=document.getElementById("aa");
+		      aa.onclick=function(evt){
+		      	preDef(evt)
+		      }
+		   //使用的时候只需要在事件函数中执行封装的函数即可,注意添加参数
+		   
+		   
+		   
+	</script>
+</html>
+
+

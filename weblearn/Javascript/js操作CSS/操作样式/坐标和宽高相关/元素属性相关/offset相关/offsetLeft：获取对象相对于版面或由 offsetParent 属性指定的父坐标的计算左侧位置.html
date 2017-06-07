@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	  *{
+	  	padding: 0px;
+	  	margin: 0px;
+	  }
+		#dv1{
+			width:400px;
+			height: 400px;
+			background-color: red;
+			
+		}
+		#dv2{
+			width:300px;
+			height: 300px;
+			background-color:blue;
+			float: right;
+			/*/*position: relative;*//*如果这里不注释的话,dv3获取到的距离就是101,因为此时dv3的offsetParent就是dv2*/
+		}
+		#dv3{
+			width:199px;
+			height: 200px;
+			background-color: green;
+			float: right;
+			position:absolute;/*如果子元素和父元素都设置了绝对定位，则子元素会立即对齐到父元素的左上角，要进行偏移就要设置偏移的值left或者top*/
+			/*left: 1px;*/
+		}
+	</style>
+	<script type="text/javascript">
+		
+	</script>
+	<body>
+		<div id="dv1">
+			<div id="dv2">
+				<div id="dv3">
+					
+				</div>
+			</div>
+		</div>
+	
+	</body>
+	<script type="text/javascript">
+		var dv1=document.getElementById("dv1")
+		dv2=document.getElementById("dv2")
+	  dv3=document.getElementById("dv3")
+	  alert(dv3.offsetLeft)
+	  
+	  
+	</script>
+	<!--offsetLeft属性是一个只读属性，用于获取当前元素到offsetParent元素最左边的距离，在上面知识点已经学过了offsetParent的含义，可以看一下；
+	如果当前元素的父元素没有设置定位，则offsetLeft指的就是当前元素最左边距离body最左边的距离，如果父元素设置了定位，则offsetLeft指的就是当前元素到自己父元素的左边的距离-->
+	
+	<!--在IE6/7中：
+	offsetLeft=(offsetParent的padding-left)+(当前元素的margin-left)
+	在IE8/9/10及chrome中
+	offsetLeft=(offsetParent的margin-left)+offsetParent的border宽度）+(offsetParent的padding-left)+当前元素的margin-left
+	在fireFox中：
+	offsetLeft=(offsetParent的margin-left)+(当前元素的margin-left)+(offset
+	Parent的padding-left)-->
+</html>

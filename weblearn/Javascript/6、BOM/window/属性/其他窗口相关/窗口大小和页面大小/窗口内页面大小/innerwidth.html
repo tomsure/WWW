@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	////在Chrome 中，innerWidth=outerWidth、
+	/*所有主流浏览器都支持 innerWidth 和 innerHeight 属性。
+注意：IE 8 及更早 IE版本不支持这两个属性。
+*/
+/*window.innerHeight=数值 ;功能：返回或指定浏览器窗口中文档的像素宽度，这个宽度不包括任何工具栏和 
+组成窗口的页面修饰宽度。 注：IE5.5不支持该属性。*/ 
+
+	
+	//有兼容性
+		window.onload=function(){
+			var btn=document.getElementById("btn");
+			btn.onclick=function(){				
+				alert(window.innerWidth)
+			}
+		}
+	</script>
+	<style type="text/css">
+	*{margin: 0px;}
+		#dv{
+			width: 300px;
+			height: 600px;
+			background-color: red;
+		}
+		
+	</style>
+	<body>
+		<div id="dv">
+			<input type="button" name="btn" id="btn"value="点击测试" />
+		</div>
+	</body>
+</html>

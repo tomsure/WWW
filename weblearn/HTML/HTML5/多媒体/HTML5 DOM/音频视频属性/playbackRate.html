@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body> 
+
+     <video width="" height="" id="vod" controls="controls" >
+     	<source src="../音视频资源文件/Intermission-Walk-in_512kb.mp4" type="video/mp4"></source>
+     	<source src="../音视频资源文件/johann_sebastian_bach_air.ogg" type="video/ogg"></source>
+     	
+     </video>
+      <button id="btn1">正常速度</button>
+        <button id="btn2">快速</button>
+          <button id="btn3">慢速</button>
+            
+</body> 
+<script>
+  var vod=document.getElementById("vod");
+       var btn1=document.getElementById("btn1")
+        var btn2=document.getElementById("btn2")
+         var btn3=document.getElementById("btn3");
+         btn1.onclick=function(){
+         	vod.playbackRate=1;
+         	
+         }
+         btn2.onclick=function(){
+         	vod.playbackRate=-1;
+         	
+         }
+         btn3.onclick=function(){
+         	vod.playbackRate=0.25;
+         	
+         }
+//       playbackRate属性用于设置音视频的播放速度,值是数字,正常为1.可以设置为它的倍数
+//       playbackRate 属性表示视频的固有或正常播放速率的放大器，其默认设置为 1。如果将该属性设置为 2，则会使播放速度加倍，而设置为 0.5 会使播放速度减半。 如果在 Windows Internet Explorer 9 中将 playbackRate 设置为负值，则会将其舍入为零，在实际中会暂停播放。在 Internet Explorer 10 中，playbackRate 为负值会造成反向播放视频。W3C 规范不建议设上限值，但 Internet Explorer 将 playbackRate 限制为最高 8x 速度。
+</script>  
+</html>

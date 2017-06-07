@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:200px ;height:200px ;background-color:red ;margin:10px ;}
+		span{width:100px ;height:100px ;background-color:green ;display: block}
+	</style>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		
+		$(function(){
+		$("*").bind("click",function(e){
+				alert(e.currentTarget)
+				//这里如果点击了span，则会从span到html的DOM元素依次弹出，因为这里选择的是所有元素，所以绑定的是所有元素，点击span同时也点击了div,也点击了body，也点击了html，
+				//它返回的元素是在冒泡阶段的所有元素，所以依次从span到html都会返回
+			})
+		})
+	</script>
+	<body>
+		<div id="">
+			<span id="">
+				
+			</span>
+		</div>
+	</body>
+</html>

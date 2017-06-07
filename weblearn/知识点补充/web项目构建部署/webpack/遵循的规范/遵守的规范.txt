@@ -1,0 +1,1 @@
+ webpack 对 CommonJS 、 AMD 、ES6的语法做了兼容

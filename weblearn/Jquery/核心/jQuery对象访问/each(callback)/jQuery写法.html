@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		li{border:1px solid red;}
+	</style>
+	
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<button id="btn">点击测试</button>
+		
+	</body>
+	<script type="text/javascript">
+		/*each() 方法为每个匹配元素规定要运行的函数。
+                           提示：返回 false 可用于及早停止循环。*/
+             $(function(){
+                  $('#btn').on('click',function(){
+                
+                  			$('li').each(function(){
+                  				$(this).text('你好')
+                  			   console.log($(this))
+                  			})
+                  	  
+                  	      
+                  
+                  })
+//                $(this)指的是遍历过程中每一个当前便利到的对象
+          })
+	</script>
+</html>

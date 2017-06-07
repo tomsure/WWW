@@ -1,0 +1,37 @@
+
+js原型和实例化的解释
+
+
+
+function和Object的区别
+
+
+对象：原型，实例，函数，原型链，闭包，引用类型，值类型  __prpto__Object与Function的关系，
+
+
+
+
+
+如何理解各种数据类型的关系：其中上面的四种（undefined, number, string, boolean）属于简单的值类型，不是对象。剩下
+                           的几种情况——函数、数组、对象、null、new Number都是对象。他们都是引用类型。这句话怎么理解
+						   
+						   
+						   
+	普通字符串的数据类型是string，数字是number，true/false是boolean，等，而
+	用typeof加上以下数据测试：Array 、Number，Date、Function、Object、Event、RegRxp的数据类型都是function
+     以下数据用typeof 加上关键字new测试，弹出的类型是Object：Date Number Array Object,RegRxp,
+	 以下数据用typeof 加上关键字new测试，弹出的类型会报错：Math、Event；
+	 以下数据用typeof 加上关键字new测试，弹出的类型是function：
+	 以下数据用typeof 不加关键字new测试，弹出的类型是Object：Math
+	 
+	 
+	 JavaScript中，类、对象、事件、方法、函数、实例的联系与区别（听说如果先了解一下别的编程语言比较好理解，可以去看一下别的编程语言的资料）
+	 例如java中：类是对象的抽象 
+                 对象是类的一个实例
+                 类   对象 = new  类();
+                 拿对象可以操作这个类里的方法
+				 
+				 
+     理解一下几句话的含义：		1、对象方法理解就很简单了，主要是如果类生成一个实例，那么该实例就能使用该方法
+                                2、类方法，不需要通过生成实例就可以使用的方法
+                                3、原型方法主要是用来对JS已有的系统对象进行扩展而生的，例如Array数组没有什么方法，你可以为其增加原型方法，那么创建的数组就拥有了该方法。

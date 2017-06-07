@@ -1,0 +1,1 @@
+       当你已经Checkout了一份源代码， Update一下你就可以和Repository上的源代码同步，你手上的代码就会有最新的变更 

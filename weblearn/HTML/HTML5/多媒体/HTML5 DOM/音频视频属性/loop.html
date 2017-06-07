@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<audio src="../音视频资源文件/johann_sebastian_bach_air.mp3" controls="controls" loop="loop"></audio>
+		
+	   <video  controls="controls" id="vod" >
+	   	<source src="../音视频资源文件/Intermission-Walk-in_512kb.mp4"></source>
+	   	<source src="../音视频资源文件/johann_sebastian_bach_air.ogg"></source>
+	   </video>
+	   
+	 <button id="btn">循环播放</button>
+	
+	</body>
+	<script type="text/javascript">
+
+var vod=document.getElementById("vod");
+     var btn=document.getElementById("btn");
+     btn.onclick=function(){
+     	vod.loop=true
+     }
+     //		  loop属性用于设置或者返回音视频在播放完毕后是否循环播放,值是true或者false
+    
+	</script>
+</html>

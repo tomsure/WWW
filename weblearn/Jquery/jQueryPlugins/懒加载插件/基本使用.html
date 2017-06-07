@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img  data-original="imgs/image.jpg"/>
+		              将图片的src属性改为data-original，值就是 图片的url
+	</body>
+	<script type="text/javascript" src="../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="lib/jquery.scrollstop.js"></script>
+      <!--引入插件-->
+    <script type="text/javascript">
+    	$(function(){
+    		$('img').lazyload() //懒加载
+    	})
+    </script>
+</html>
+    <!--懒加载初始化步骤：
+      1，引入图片时，将图片的src属性改为data-original，值就是 图片的url
+      2、引入jquery、jquery.lazyload.js、jquery.scrollstop.js三个插件-->
+      	<!--备注：这里必须设置图片的width和height,否则插件可能无法正常工作。-->
+      
+
+     <!--加载图片使用$('img').lazyload()方法，lazyload()方法里面参数是一个json，可以用来设置加载时候的效果-->

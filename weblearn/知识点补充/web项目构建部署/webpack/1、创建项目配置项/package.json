@@ -1,0 +1,18 @@
+{
+  "name": "demo",  //项目名称
+  "version": "1.0.0", //项目版本
+  "description": "", //项目描述
+  "main": "main.js",  //入口文件
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",   //作者
+  "license": "ISC"
+}
+
+
+
+ 在创建项目后需要进入到项目根目录中，使用 cnpm init 命令创建项目的配置文件，输入命令回车之后，会跳出
+    项目相关的信息让开发者填写，如果按回车，就是默认配置，最后形成一个包含上面内容的
+    pack.json文件

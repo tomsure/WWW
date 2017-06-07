@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	
+	   <video  controls="controls"  id="vod">
+	   	<source src="../音视频资源文件/Intermission-Walk-in_512kb.mp4"></source>
+	   	<source src="../音视频资源文件/johann_sebastian_bach_air.ogg"></source>
+	   </video>
+	   <button id="btn">点击暂停</button>
+	
+	</body>
+	<script type="text/javascript">
+		var vod=document.getElementById("vod");
+		   var btn=document.getElementById("btn");
+		   btn.onclick=function(){
+		   vod.pause()
+		   }
+		   
+//         play()方法用于暂停播放视频视频
+		  
+	</script>
+</html>

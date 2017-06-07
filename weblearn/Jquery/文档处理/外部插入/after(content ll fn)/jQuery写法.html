@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	div{margin: 10px;}
+		#dv{width: 100px;height: 100px;background-color: red;}
+		#dv1{width: 100px;height: 100px;background-color: blue;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//用来在被选元素之后插入元素，插入的元素可以是html元素，jquery元素和DOM元素，还可以插入函数；
+		$(function(){
+			$("#btn").click(function(){
+				$("#dv").after("<div id='dv1'></div>") //点击之后在#dv后插入#dv1这个div           
+				//它与insertAfter的区别是这个是在选定的元素后面插入指定内容，而insertAfter是将选定的元素插入到指定的元素，  这里$("")括号里面要写的是被选定要插入内容的元素
+			})
+		})
+	</script>
+	<body>
+		
+		<div id="dv">
+			
+		</div>
+		<input type="button" name="" id="btn" value="点击插入" />
+	</body>
+</html>

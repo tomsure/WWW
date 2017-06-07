@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv1{width: 100px;height:100px ;background-color: darkmagenta;}
+		#dv2{ width:150px;height:100px ;background-color: #8B0000;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//replaceAll() 方法把被选元素替换为新的 HTML 元素。
+		$(function(){
+			$("#btn1").click(function(){
+				$("<div id='dv2'></div>").replaceAll("#dv1")//将#dv1替换为#dv2
+				//这里$()括号里必须写完整的HTML标签，设置id为#dv2因为原本dv2这个元素原本不存在
+				//将用来做替换内容的元素放在$()括号里，被替换的元素放在replaceAll()括号里
+				//replace
+			})
+		})
+	</script>
+	<body>
+		
+		<div id="dv1">
+			
+		</div>
+		<input type="button" name="btn1" id="btn1" value="点击替换" />
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+	//在一个元素前面插入指定内容
+	$(function(){
+		$("#btn").click(function(){
+			$("p").before("姓名：")  //点击之后，p元素前面会插入指定内容
+		})
+	})
+		
+	</script>
+	<body>
+	   <p id="p1">汤旭</p>	
+	   <input type="button" name="" id="btn" value="点击插入" />
+	</body>
+</html>

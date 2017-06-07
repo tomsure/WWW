@@ -1,0 +1,17 @@
+.x(@a)when(ispixel(@a)){  //当单位是px的时候执行
+   height:@a
+}
+
+.x(@a)when not(default()){  //当不是
+width: @a;
+}
+.div1{
+    .x(100px)
+}
+
+.div2{
+    .x(100cm);
+    width:10px;
+    
+}
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">设置</button>
+		<button id="btn2">读取</button>
+		<button id="btn3">删除</button>
+		<input type="text" name="ipt" id="ipt" value="" />
+	</body>
+	<script type="text/javascript">
+		var btn1=document.getElementById("btn1");
+		var btn2=document.getElementById("btn2");
+		var btn3=document.getElementById("btn3");
+		var ip1=document.getElementById("ipt");
+		btn1.onclick=function(){
+			window.sessionStorage.setItem('name',ip1.value)
+
+		}
+		btn2.onclick=function(){
+			alert(window.sessionStorage.getItem('name'))
+//			读取storge
+		}
+		
+//	sessionStorge是临时性存储,这里设置数据后,现在点击读取可以弹出设置的storge数据,但是关闭页面后 再次点击读取按钮,就会弹出null,表示没有数据,因为sessionStorge是临时性存储,页面关闭后就会删除
+	</script>
+</html>

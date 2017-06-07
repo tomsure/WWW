@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		<!-------------------默认值或设置为true----------------------->
+		<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModdal">
+			<div class="modal-dialog ">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal">
+							<span >&times;</span>
+						</button>
+						
+					</div>
+					<div class="modal-body">
+						主体
+					</div>
+					<div class="modal-footer">
+						<button>登陆</button>
+						<button>注册</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button  class="btn btn-default" data-toggle="modal" data-target="#myModal" >点击测试</button>
+<br /><br />		
+<!-----------------------data-backdrop="false"------------------------>	
+
+      <div class="modal" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModdal">
+			<div class="modal-dialog ">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal">
+							<span >&times;</span>
+						</button>
+						
+					</div>
+					<div class="modal-body">
+						主体
+					</div>
+					<div class="modal-footer">
+						<button>登陆</button>
+						<button>注册</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button  class="btn btn-default" data-toggle="modal" data-target="#Modal" data-backdrop="false" >点击测试</button>
+
+<br /><br />
+<!-----------------------data-backdrop="static"------------------------>	
+
+      <div class="modal" id="DModal" tabindex="-1" role="dialog" aria-labelledby="myModdal">
+			<div class="modal-dialog ">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal">
+							<span >&times;</span>
+						</button>
+						
+					</div>
+					<div class="modal-body">
+						主体
+					</div>
+					<div class="modal-footer">
+						<button>登陆</button>
+						<button>注册</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button  class="btn btn-default" data-toggle="modal" data-target="#DModal" data-backdrop="static" >点击测试</button>
+
+
+
+		
+		<!--
+			设置弹窗关闭的模式属性data-backdrop
+		data-backdrop属性的值的类型是：布尔值或'static，默认值是true，
+              默认值true，表示背景存在黑灰透明遮罩，且单击空白背景可关闭弹窗；
+              如果为false，表示背景不存在黑灰透明遮罩，且点击空白背景不可关闭弹窗；
+             如果是字符串'static'，表示背景存在黑灰透明遮罩，且点击空白不可关
+闭弹窗。
+        
+			
+			
+			
+			
+		-->
+	</body>
+	
+	
+	
+	
+	<script type="text/javascript" src="../../../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+		
+	</script>
+	
+</html>

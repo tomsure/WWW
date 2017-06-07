@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		dv.ondragenter=function(){
+			this.innerHTML='可以释放鼠标了'
+		}
+		dv.ondragover=function(ev){
+			ev.preventDefault()//这里阻止默认事件，才能触发drop事件函数
+			
+		}
+		dv.ondragleave=function(ev){
+			this.innerHTML='将文件托至此区域'
+		}
+		dv.ondrop=function(ev){
+			ev.preventDefault()
+			ev.stopPropagation()
+	       var fs=ev.dataTransfer.files;
+	       var fd=new FileReader();
+	       
+	          fd.readAsText(fs[0],'UTF-8');
+               fd.onloadstart=function(){
+//               dv.innerHTML='开始读取'
+                alert('开始读取文件数据')
+         
+               }
+               fd.onprogress=function(ev){
+             	   alert(ev)
+               }
+//     在开始读取文件的时候触发  onprogress事件,这个事件中事件函数的第一个参数就是ProgressEvent事件对象,这个事件对象有三个属性,lengthComputable,loaded,total,通过这几个属性可以返回文件读取的进度,不过这几个属性返回的只是一次性读取文件的进度,如果读取大文件一次无法读取到进度的话就要使用别的方式获取进度
+         
+	          fd.onload=function(){//读取成功后触发
+	          	dv.innerHTML=this.result
+	          }
+            
+		}
+		
+	</script>
+</html>

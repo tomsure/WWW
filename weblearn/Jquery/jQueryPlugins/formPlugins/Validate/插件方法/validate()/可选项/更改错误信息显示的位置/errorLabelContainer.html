@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post" id="form">
+			<ol class="myerror"></ol>
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>密码: <input type="text"  name="email" id="email" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	},
+			    	email:{
+			    		required:true
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	},
+			    	email:{
+			    		required:"密码不得为空"
+			    	}
+			    },
+			    errorLabelContainer:"ol.myerror",
+			    wrapper:"li"
+//			errorLabelContainer作为一个放置包裹错误信息的容器,将错误信息放到一块,这里可以用一个有序列表ol放在列表头部,添加一个类名,然后使用 errorLabelContainer,设置值为ol.myerror这个选择器作为值,下面设置一下   用li包裹错误信息,这样就可以将错误信息放在一个容器里有循序的显示
+			   
+			   
+		})
+		})
+
+	</script>
+</html>

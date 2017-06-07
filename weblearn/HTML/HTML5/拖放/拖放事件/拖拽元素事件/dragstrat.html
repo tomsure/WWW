@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv1{
+			width: 100px;height: 100px;background-color: red;
+		}
+		.dv2{
+			width: 300px;
+			height: 300px;
+			border: 3px solid black;
+		}
+	</style>
+	<body>
+		<div class="dv1" id="dv1" draggable="true">
+			
+		</div>
+		<div class="dv2" id="dv2">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv1=document.getElementById("dv1");
+		dv1.ondragstart=function(){
+			this.style.background='green'
+		}
+//		ondragstart事件是当鼠标点击杯拖拽元素开始拖动的时候触发的时间,当鼠标点击元素的时候不会触发,只有进行拖动的时候才会触发
+	</script>
+	
+</html>

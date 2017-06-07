@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(name,age,job){
+			
+			this.name=name;
+			this.age=age;
+			this.job=job
+			this.sayName=function(){
+				alert(this.name)
+			}
+			
+		}
+	var person1=new Person('xiaoli',20,'worker')	//使用new关键字实例化创建的构造函数。
+		
+		console.log(person1.name)//xiaoli
+	
+	var person2=new Person('小刘',25,'Doctor')	
+		console.log(person2.age)//25
+		
+//解析:
+
+//当person1和person2通过new关键字实例化Person以后,都具有了一个constructor属性,而这个属性就指向Person函数,以下例子可以证明:
+     console.log(person1.constructor==Person)//true
+     console.log(person2.constructor==Person)//true
+
+//所以他们都会具有函数Person的属性和方法
+
+//构造函数方式的缺点是需要重新定义对象的属性,如果对象实例太多或者属性和方法太多,则要全部重新实例化或定义属性(方法)
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+	</script>
+</html>

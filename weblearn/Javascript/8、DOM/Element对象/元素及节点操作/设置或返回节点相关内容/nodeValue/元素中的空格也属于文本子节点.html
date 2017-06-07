@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			<div id="dv1">
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		alert(dv.childNodes.length)//获取dv的子节点，分别是空格-dv1-空格这个三个
+		
+		
+		alert(dv.childNodes[0].nodeName)//弹出#text
+		
+//		元素的子节点中包含空格,空格 也属于文本节点，空格的nodeName是#text
+	</script>
+</html>

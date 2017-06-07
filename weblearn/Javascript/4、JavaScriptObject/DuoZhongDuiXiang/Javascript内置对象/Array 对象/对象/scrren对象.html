@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	 <script type="text/javascript">
+	window.onload=function(){
+		/* getElementById()
+		 //document.write("aaaaa")//打印
+		var bt=document.getElementById("bt")//得到button按钮
+		bt.onclick=function(){//当点击按钮时候发生
+			var dv1=document.getElementById("dv1")//给dv1赋值给dv1
+		
+		//	document.write(dv1.innerHTML);打印dv1用innetHTML或得内容
+			dv1.innerHTML="<font color='#FF0000'>我很爱国<font>"//给变标签dv1的内容
+		}
+	*/
+	//getElementById()
+	
+	
+	var dvs=document.getElementsByTagName("div");
+
+	for(var i=0;i<dvs.length;i++){
+		 alert(dvs[i].innerHTML)
+	}
+	}
+	
+	 </script>
+	<body>
+	<input type="button" name="bt" id="bt" value="点击" />
+		<div id="dv1">
+			去去去去去去去去去
+		</div>
+		<div id="dv2">
+			啧啧啧啧啧啧
+		</div>
+	</body>
+</html>

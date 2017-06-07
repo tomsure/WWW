@@ -1,0 +1,6 @@
+
+项目使用CSS文件的时候不能直接加载CSS模块，需要使用CSS加载器，需要在
+  项目根目录下安装，命令如下：
+  
+  cnpm install --save-dev css-loader style-loader
+    注意是在项目根目录下

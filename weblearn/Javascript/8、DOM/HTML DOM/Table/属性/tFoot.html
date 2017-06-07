@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="1" width=300>
+			
+			<tfoot>
+				<tr>
+					<td>姓名</td>
+					<td>职业</td>
+				</tr>
+				<tr>
+					<td>李闯</td>
+					<td>战士</td>
+				</tr>
+			</tfoot>
+		</table>
+	</body>
+	<script type="text/javascript">
+		var tb=document.getElementsByTagName('table')[0]
+		alert(tb.tFoot)
+		//返回table中的thead元素
+		alert(tb.tFoot.children[0].children[0].innerText)
+		//可以用来设置获取thead元素的内容
+	</script>
+	
+	
+</html>

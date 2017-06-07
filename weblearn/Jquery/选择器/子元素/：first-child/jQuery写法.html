@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	<script>
+	//":first-child"选择器选择的是所有元素的第一个子元素,冒号前面指的就是要匹配的第一个子元素，注意必须是父级元素的第一个子元素。
+	$(function(){
+		$("p:first-child").css("background","red")
+		/*这里选择所有元素的第一个子元素，而且这个元素是p，但是这里三个div
+		里面没有没有第一个子元素是p的，所以背景颜色没有变化*/
+		$("li:first-child").css("color","red")
+		//第一个子元素是li的子元素
+	})
+		
+	</script>
+	<body>
+	<body>
+		<div id="dv1">
+		
+			<a href="">11111111111</a>
+			<p>333333333333</p>
+			<a href="">22222222222</a>
+			
+		</div>
+		<div id="dv2">
+			<span id="">
+				ooooooooooooo
+			</span>
+			<p>44444444</p>
+			<p>555555555</p>
+		</div>
+		<div id="dv3">
+			<a href="">66666666666666</a>
+			<p>ffffffffff</p>
+			<a href="">77777777777</a>
+		</div>
+		
+		
+		<ul>
+		
+			<li>你好</li>
+			<li>你好</li>
+			<li>你好</li>
+		</ul>
+		<ul>
+			<li>你好</li>
+			<li>你好</li>
+			<li>你好</li>
+		</ul>
+		
+	</body>
+</html>

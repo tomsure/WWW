@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function aa(a,s,f){//括号里面的参数叫做形参
+			
+			document.write(arguments.callee.length)
+			
+		}
+		aa()
+		
+		
+//		callee.length实际运用时候应该写为:arguments.callee.length,它指的是函数声明时候函数名括号里面的形参的长度,例如 :
+	   function ss(a,b){
+	   	alert(ss.arguments.callee.length) //弹出2；
+ 	   }
+	ss()
+//	这里a和b就是函数的形参,长度就是2;
+	</script>
+</html>

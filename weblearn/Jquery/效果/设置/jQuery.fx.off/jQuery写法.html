@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background: red;
+			
+		}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/老版本/jquery-2.0.3/jquery-2.0.3.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//用来设置禁用或者启用动画；
+		$(function(){
+			$("#btn1").click(function(){
+				jQuery.fx.off=true;  //设置禁用动画
+			});
+			
+			$("#btn2").click(function(){
+				jQuery.fx.off=false;  //设置启用动画
+			});
+			
+			
+			$("#btn3").click(function(){
+				$("div").toggle(1000)  //设置显示或隐藏，如果禁用动画，则点击的时候只会直接显示或隐藏，
+			})
+		})
+	</script>
+	<body>
+		<div id="">
+			
+		</div>
+		<input type="button" name="" id="btn1" value="点击禁用" />
+		<input type="button" name="" id="btn2" value="点击启用" />
+		<input type="button" name="btn3" id="btn3" value="点击开始动画" />
+		
+	</body>
+</html>

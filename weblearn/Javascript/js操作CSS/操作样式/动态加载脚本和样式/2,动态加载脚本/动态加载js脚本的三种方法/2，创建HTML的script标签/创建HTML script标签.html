@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+		
+	</script>
+	<script type="text/javascript">
+		
+		
+		  /*****************封装创建script标签的函数**********************/
+		
+		function loadScript(url){  //封装js创建script标签的函数，参数url就是动态脚本的src路径
+			var script=document.createElement('script') //创建一个js的html标签
+			script.type='text/javascript';
+			script.src=url;//设置动态js的路径；
+			document.getElementsByTagName('head')[0].appendChild(script)
+//			将script标签追加到head标签的最后面
+		}
+		
+		loadScript('../../BrowserDetect.js')
+//		执行函数
+	
+		
+		
+	</script>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+		
+	</div>
+	</body>
+	
+</html>

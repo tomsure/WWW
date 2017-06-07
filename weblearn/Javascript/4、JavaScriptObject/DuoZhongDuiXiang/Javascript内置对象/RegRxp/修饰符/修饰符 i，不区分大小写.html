@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+
+//修饰符i表示 配匹配的字符窜和正则表达式忽略大小写检测，正则表达式默认是必须大小写一致才会返回true，如果不一致则会返回flase，在匹配规则的斜杠后面加i，就表示忽略这一点
+		var str='sbchfhekdBOXkl';
+		
+		//字面量语法
+		var patt=/D/i//不区分大小写
+		//字面量语法写修饰符的时候将修饰符写在匹配字符的斜杠后面即可，如果有多个，就都写在后面即可
+		document.write(patt.test(str)+'</br>')//true，因为不区分大小写
+		var pat=/D/;//区分大小写，默认。
+		
+		 document.write(pat.test(str))//false，因为默认是区分大小写的，所以不匹配
+		
+		//new 运算符语法
+		 
+		 var reg=new RegExp('box','i');
+		 alert(reg.test(str))
+		//这里会弹出true，因为在RegExp()的参数中使用了’i‘，修饰符，忽略了大小写，而str中含有BOX和正则表达式中的box就匹配了；
+		//new运算符创建正则表达式的时候修饰符写在RegExp()匹配字符之后的第二个参数，与匹配字符串用逗号隔开，也要使用引号引起来。如果有过个修饰符就都写在匹配字符串后面，例如: var reg=new RegExp('box','ig');这就是用了两个修饰符，表示忽略大小写和全文匹配
+		
+	</script>
+</html>

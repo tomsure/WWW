@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--定义在何处打开 action URL。-->
+		<form action="" method="post" target="_blank">
+			
+			<input type="submit" value="点击提交"/>
+		</form>
+		
+		<form action="" method="post" target="_parent">
+			<!--在 HTML5 中，不再支持 frame 和 frameset，所以 _parent、_top 和 framename 值大多用于 iframe。-->
+			<input type="submit" value="点击提交"/>
+		</form>
+		
+		<form action="" method="post" target="_search">
+			
+			<input type="submit" value="点击提交"/>
+		</form>
+		
+		<form action="" method="post" target="_self">
+			
+			<input type="submit" value="点击提交"/>
+		</form>
+		<form action="" method="post" target="_top">
+			<!--在 HTML5 中，不再支持 frame 和 frameset，所以 _parent、_top 和 framename 值大多用于 iframe。-->
+			<input type="submit" value="点击提交"/>
+		</form>
+		
+		<form action="" method="post" target="framename">
+			<!--在 HTML5 中，不再支持 frame 和 frameset，所以 _parent、_top 和 framename 值大多用于 iframe。-->
+			<input type="submit" value=""/>
+		</form>
+		
+	</body>
+</html>

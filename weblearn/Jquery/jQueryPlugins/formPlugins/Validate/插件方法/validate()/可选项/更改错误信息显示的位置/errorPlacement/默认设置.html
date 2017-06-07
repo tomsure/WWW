@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		em.error {
+  background:url("img/素材/失败.png") no-repeat 0px 0px;
+  padding-left: 16px;
+  /*这里设置错误信息的时候出现的图标及错误文字信息样式*/
+}
+em.success {
+  background:url("img/素材/ok.png") no-repeat 0px 0px;
+  padding-left: 16px;
+  /*这里设置当验证成功的时候的图片及文字信息的样式*/
+}
+
+	</style>
+	<body>
+		<form action="123.html" method="post">
+			<p>用户名: <input type="text" class="required" name="user" id="user" value="" />(必填)</p>
+			<p>邮箱: <input type="text" class="required"  name="e-mail" id="e-mail" value="" />(必填)</p>
+			<!--必填项后面添加上class="required"
+				
+			
+			-->
+			<p>URL: <input type="text" name="url" id="url"  value="" required  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../库文件/lib/jquery-1.9.1.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../../../库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../../库文件/dist/localization/messages_zh.min.js">
+  
+	</script>
+	<script type="text/javascript" >
+		$(function(){
+			$('form').validate({
+				
+			      
+		      
+		          messages:{
+		          	user:"请输入用户名"
+		          }
+//		  errorPlacement 指明错误放置的位置，默认情况是：error.appendTo(element.parent());即把错误信息放在验证的元素后面。从谷歌浏览器开发者工具可以看得到这个例子：提示信息在input#user的后面，也就是这里的将error添加到element的父元素的子元素的里面最后面
+
+     
+    
+			})
+			
+		
+		})
+		
+	</script>
+</html>

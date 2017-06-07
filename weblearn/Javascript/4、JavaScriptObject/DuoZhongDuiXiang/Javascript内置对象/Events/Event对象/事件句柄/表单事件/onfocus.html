@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var sd=document.getElementById("text1");
+			sd.onfocus=function(){
+				alert("你获得了焦点");
+				sd.value="哈哈"
+			}
+		}
+	</script>
+	<body>
+		<input type="text" name="text1" id="text1" value="" />
+	</body>
+</html>

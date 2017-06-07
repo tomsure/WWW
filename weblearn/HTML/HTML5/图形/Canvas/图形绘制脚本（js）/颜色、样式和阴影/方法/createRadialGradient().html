@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+	/*createRadialGradient() 方法创建放射状/圆形渐变对象。
+            渐变可用于填充矩形、圆形、线条、文本等等。
+           提示：请使用该对象作为 strokeStyle 或 fillStyle 属性的值。
+           提示：请使用 addColorStop() 方法规定不同的颜色，以及在 gradient 对象     中的何处定位颜色。*/
+		window.onload=function(){
+			var ss=document.getElementById("myCanvas").getContext("2d");
+			var aa=ss.createRadialGradient(75,90,6,90,90,100);//创建环形渐变对象;
+	/*参数	描述
+x0	渐变的开始圆的 x 坐标
+y0	渐变的开始圆的 y 坐标
+r0	开始圆的半径
+x1	渐变的结束圆的 x 坐标
+y1	渐变的结束圆的 y 坐标
+r1	结束圆的半径
+*/		
+			aa.addColorStop(0,"red");    //渐变效果与设置的颜色有关系
+			aa.addColorStop(0.5,"blue");
+			aa.addColorStop(0.8,"black");
+			aa.addColorStop(1,"green");
+			ss.fillStyle=aa;
+			ss.fillRect(20,30,150,100)//渐变效果与绘制的图形的坐标有关系
+			
+			
+			
+			
+			
+		}
+	</script>
+	<body>
+	<canvas id="myCanvas" width="200" height="200"></canvas>
+	</body>
+</html>

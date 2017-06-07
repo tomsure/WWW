@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<style type="text/css">
+	#a{
+		width: 400px;
+		height: 400px;
+		background-color: red;
+	}
+	#dv{
+		width: 100px;
+		height: 100px;
+		background-color: blue;
+	}
+</style>
+	<body>
+		<div id="a">
+			
+		</div>
+		<button>点击追加</button>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').on('click',function(){
+				$('#a').append("<div id='dv'></div>")
+			})
+		})
+		
+//		append()方法用于在当前选定元素内部的最末尾追加数据,可以追加htm字符串,DOM节点或节点数组
+	</script>
+</html>

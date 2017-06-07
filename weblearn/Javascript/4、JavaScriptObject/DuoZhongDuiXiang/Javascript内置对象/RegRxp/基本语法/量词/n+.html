@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		n+表示至少匹配一个n才返回true；并且匹配的字符串可以为大于一的任意多个
+
+     var str='sjfncmruncks';
+     var reg=/n+/g
+     document.write(reg.test(str)+'</br>');//true,只要有一个以上匹配就返回true
+     var reg1=/a/;
+     document.write(reg1.test(str)+'</br>')//false，没有匹配的a
+
+     document.write(str.match(reg))//返回匹配的字符串数组
+	</script>
+</html>

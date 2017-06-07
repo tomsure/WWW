@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击添加</button>
+		<button id="btn1">点击删除</button>
+	</body>
+	<script type="text/javascript">
+	      function aa(){
+	      	alert(1)
+	      }
+	
+	
+	
+	   //绑定事件
+	    function addEvent(obj,type,fn){
+			if(obj.addEventListener){//如果是W3C浏览器
+				obj.addEventListener(type,fn,false)//
+			}else if(obj.attachEvent){//如果只IE浏览器
+				obj.attachEvent('on'+type,fn)
+			}
+		}
+		
+		
+		   var btn=document.getElementById("btn");
+		   //调用
+		   addEvent(btn,'click',aa)
+	
+	
+	
+	
+	
+	
+	   /****************封装移出事件兼容性函数**************/
+		function removeEvent(obj,type,fn){
+			if(obj.removeEventListener){
+				obj.removeEventListener(type,fn,false)
+			}else if(obj.detachEvent){
+				obj.detachEvent('on'+type,fn)
+			}
+		}
+		
+		
+		     /***************调用*******************/
+		    var btn1=document.getElementById("btn1");
+		     btn1.onclick=function(){
+		     	
+		     	 removeEvent(btn,'click',aa)//调用移出事件函数
+		     }
+		  
+		 /*兼容性移出事件函数封装步骤：
+		 
+		 1,封装函数removeEvent,并添加三个参数,obj,type,fn分别代表绑定事件的DOM对象,事件类型,事件函数;
+		 2,使用条件语句判断,如果绑定事件的DOM对象支持removeEventListener方法,则使用removeEventListener()方法 传递三个参数,事件类型,事件函数和false;
+		 3,如果绑定绑定事件的对象支持detachEvent方法,则使用detachEvent()方法;传递两个参数type和fn,注意type前面需要用'on'拼接*/
+		 
+		 
+		 
+		 
+		    
+		
+	</script>
+</html>

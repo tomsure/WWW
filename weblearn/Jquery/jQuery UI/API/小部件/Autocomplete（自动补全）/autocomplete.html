@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		
+	</style>
+	<body>
+	<lable>
+		输入：
+	</lable>
+	<input type="" name="" id="aa" value="" />
+		
+		
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			var autotags=['中','中国','中间','美','美利','美国']
+			$('#aa').autocomplete({
+				source:autotags //这里不能有分号。
+			})
+		})
+	</script>
+	<!--自动补全功能是在用户输入的时候，根据用户输入给出相应类似的文本，选择后可以自动补全，
+	自动补全功能实现步骤：
+	1，创建一个input元素，添加id；
+	2，在js中声明一个数组，数组里面填写可以自动补全的内容；
+	3，给input元素添加autocomplele（）方法，方法内部添加参数source，参数的值就是声明的变量名称；-->
+	
+</html>

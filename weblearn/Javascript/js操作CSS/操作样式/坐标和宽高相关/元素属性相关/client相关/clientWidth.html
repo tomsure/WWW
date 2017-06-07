@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	  *{
+	  	padding: 0px;
+	  	margin: 0px;
+	  }
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			
+		}
+		#dv1{
+			width: 100px;
+			height: 100px;
+			padding: 10px;
+			margin: 10px;
+			background-color: blue;
+			border: 1px solid red;
+			overflow: scroll;
+		}
+	
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button id="btn">获取dv的clientWidth</button>
+		<div id="dv1">
+			少时诵诗书所所所所所所所所所所所所所所所所所少时诵诗书所所所所所所所所所所所
+		</div>
+		<button id="btn1">获取dv1的clientWidth</button>
+		
+		
+		
+		
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		var dv1=document.getElementById("dv1")
+		 var btn=document.getElementById("btn")
+		 var btn1=document.getElementById("btn1")
+		 btn.onclick=function(){
+		 	alert(dv.clientWidth)
+		 	
+		 }
+		 btn1.onclick=function(){
+		 	alert(dv1.clientWidth)
+		 }
+//		  clientWidth指的是元素可视区域的宽度：
+//   如果元素无padding无滚动轴,则clientwidth=style.width;
+//   如果元素有padding无滚动轴,则clientwidth=style.width+padding*2
+//   如果元素有padding有滚动轴,则clientwidth=style.width+padding*2-滚动轴的宽度     
+          
+
+    
+	</script>
+</html>

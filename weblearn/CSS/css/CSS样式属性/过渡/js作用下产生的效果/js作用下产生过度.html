@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		
+		div{width: 100px;height: 100px;background-color: aquamarine;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var dd=document.getElementById("dv");
+			dd.onclick=function(){
+				dd.style.transitionProperty="width;color";
+				dd.style.transitionDuration="5s";
+				dd.style.width="200px"
+				dd.style.backgroundColor="#ff0000"
+				
+				
+			}
+		}
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+</html>

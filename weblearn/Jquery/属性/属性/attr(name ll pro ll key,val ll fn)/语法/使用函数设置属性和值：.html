@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{ width:100px;height:100px ;background-color: red;}
+		.dv1{ border:#8B008B 10px solid; }
+	</style>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.1/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$("#btn").click(function(){
+				$("div").attr( "class",function(){
+					return "dv1"  //通过函数设置属性值
+				})
+			})
+			
+		})
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button id="btn">点击设置</button>
+	</body>
+</html>

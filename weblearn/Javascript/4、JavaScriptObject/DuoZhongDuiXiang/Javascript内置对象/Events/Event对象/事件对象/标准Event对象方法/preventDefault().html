@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	</script>
+	<body>
+		<a  id='aa' href="http://www.baidu.com">百度一下你就知道</a>
+	</body>
+	<script type="text/javascript">
+		//preventDefault()方法用于阻止浏览器默认行为，浏览器默认行为指的是html页面或者浏览器自带的一些行为，例如点击a标签会跳转，点击submit按钮会提交表单，等等；
+		var aa=document.getElementById("aa");
+		aa.onclick=function(ev){
+			ev.preventDefault();
+			alert(1)
+		}
+		//正常情况下点击a标签会跳转到设置的页面，但是这里使用 preventDefault()阻止了默认行为，所以点击的时候就不会跳转。
+	</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin: 10px;
+		}
+	</style>
+	<body>
+		<div class="dv">
+			
+		</div>
+		<div id="" class="q">
+			
+		</div>
+		<button>点击设置</button>
+	</body>
+	<script type="text/javascript" src="../../zepto库/zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').on('click',function(){
+				$('div').eq(1).attr('class',function(index,a){
+					
+					alert(index); //0
+//					参数中的index指的是用来计算的那个元素的index下标值;
+
+					alert(a)  //q
+					//			a指的是当前要设置或修改的这个属性的现有的值
+				return $('div').eq(0).attr('class')
+//				返回第一个div的class属性作为当前要设置的div的class属性值
+              })  
+			})
+			})
+
+
+
+    //			attr()方法可以通过使用函数计算的方式来设置或修改当前元素的属性值,这个方法第一个参数是要设置的属性名称,第二个参数是用于计算的函数,这个函数会自动执行,返回的结果就是当前要设置属性的元素的属性值,格式如下:
+//			attr('attrName',function(index,attrOldValue){
+//		})
+		
+//		其中,要设置的attrName指的是元素的属性名称,函数中两个参数第一个参数是,第二个参数attrOldValue是要设置属性的这个元素的属性的当前值(如果有,以为如果是设置新属性原来就没有这个属性）
+	</script>
+</html>

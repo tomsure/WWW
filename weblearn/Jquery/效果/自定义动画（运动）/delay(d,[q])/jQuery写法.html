@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px ;height:100px ;background-color:red ;}
+	</style>
+	
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button>点击测试</button>
+	</body>
+	<script type="text/javascript" src="../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('button').click(function(){
+			$('#dv').delay(2000).animate({
+				width:'300px',
+				
+			},2000).delay(2000).animate({
+				height:'300px'
+			}).delay(2000).fadeOut()
+		})
+//		delay()方法用于设置每个动画之间延迟的时间。
+//      一个参数是延迟的毫秒数/slow/fast，例如一个元素要执行两个动画，第一个完成后需要停止两秒再完成第二个动画，则就在第一个动画和第二个动画之间加一个这个方法。
+//      另一个参数是
+	</script>
+</html>

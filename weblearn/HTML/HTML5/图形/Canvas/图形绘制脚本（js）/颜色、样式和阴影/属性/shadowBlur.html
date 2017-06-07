@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+	//shadowBlur 属性设置或返回阴影的模糊级数。  参数是数字
+		window.onload=function(){
+			var ss=document.getElementById("myCanvas").getContext("2d");
+			ss.fillStyle="#006400";
+			ss.shadowBlur=30;//设置阴影的模糊级别
+			ss.shadowColor="#000000"  //设置阴影模糊颜色
+			
+			ss.fillRect(20,20,150,60);
+			
+			
+			    
+			
+			
+			
+			
+		}
+	</script>
+	<body>
+	<canvas id="myCanvas" width="200" height="200"></canvas>
+	</body>
+</html>

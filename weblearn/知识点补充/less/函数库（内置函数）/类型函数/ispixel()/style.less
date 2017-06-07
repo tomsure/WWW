@@ -1,0 +1,15 @@
+
+
+.style(@a)when(ispixel(@a)){
+    width: @a;
+    height: @a;
+    background-color: blue;
+}
+
+
+div{
+    .style(100px)
+}
+
+
+// ispixel()函数，当传入的参数值得单位是px的时候，返回true

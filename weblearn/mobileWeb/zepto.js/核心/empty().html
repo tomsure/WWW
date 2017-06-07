@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	  <style type="text/css">
+	  	#dv{
+	  		width: 200px;
+	  		height: 200px;
+	  		background-color: red;
+	  	}
+	  	#dv1{
+	  		width: 50px;
+	  		height: 50px;
+	  		background-color: blue;
+	  	}
+	  </style>
+	<body>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<div id="dv">
+			<div id="dv1">
+				div
+			</div>
+		</div>
+		<button >点击清空</button>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').on('click',function(){
+				$('li').empty()
+				$('div').empty()
+			})
+		})
+		
+//		empty()方法用于清空所选择的元素中的DOM内容
+	
+	</script>
+</html>

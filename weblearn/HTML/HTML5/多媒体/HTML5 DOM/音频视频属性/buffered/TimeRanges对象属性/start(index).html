@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body> 
+
+     <video width="" height="" id="vod" controls="controls" muted="muted" >
+     	<source src="../../../音视频资源文件/Intermission-Walk-in_512kb.mp4" type="video/mp4"></source>
+     	<source src="../../../音视频资源文件/johann_sebastian_bach_air.ogg" type="video/ogg"></source>
+     	
+     </video>
+     <button id="btn">点击获取TimeRanges对象属性length</button>
+</body> 
+<script>
+  var vod=document.getElementById("vod");
+   
+   var btn=document.getElementById("btn");
+   btn.onclick=function(){
+   	alert(vod.buffered.start(0))
+   }
+    
+//  start()属性返回某一个缓冲范围开始的位置，括号里的参数表示需要设置的第几个范围的在所有范围这个集合中的下标，第一个就是0
+
+
+</script>  
+</html>

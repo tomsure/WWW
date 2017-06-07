@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	<script>
+		//选择除某些元素之外的所有元素，配合其他选择器使用,选择的元素必须在选择的范围之内
+		
+		$(function(){
+			$("p:not(#p1)").css("color","red")
+			//这里选择所有p元素里面除非p1的元素
+			
+		})
+	</script>
+	<body>
+		<div>
+		<p id="p1">1</p>
+		<p id="p2">2</p>
+		<p id="p3">3</p>
+		</div>
+	</body>
+</html>

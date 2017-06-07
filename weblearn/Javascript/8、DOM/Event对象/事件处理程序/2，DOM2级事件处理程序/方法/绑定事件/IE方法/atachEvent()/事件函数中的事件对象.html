@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		btn.attachEvent('onclick',function(ev){
+			alert(ev)//ev
+		})
+		//IE浏览器中attachEvent()方法中事件函数的事件对象可以是事件函数的第一个参数，这一点和W3C标准相同，DOM0级则是window.event
+		
+	</script>
+</html>

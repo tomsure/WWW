@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="style.css" media="only screen and (max-width:640px)"/>
+	<!--引入外部css文件，并且设置设备为屏幕，最大宽度为640，所以css里面的样式设置只有在满足这个条件的时候效果才会生效-->
+	<style type="text/css">
+		@media only screen and (min-width:640px ) {
+			body{background-color: #122B40;}
+		}
+/*这里使用内嵌的方式使用CSS，这里设置当屏幕最小宽度为640的时候背景颜色为#122B40*/
+/*设置分辨率需要@edia标签，并且内部 如果设置背景颜色需要设置body选择器，如果是外联引入的话就不用*/
+/*这里同时设置两种CSS引入样式设置*/
+	</style>
+	<body>
+	</body>
+</html>

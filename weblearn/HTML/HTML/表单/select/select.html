@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>select通常与option配合使用</p>
+		<form action="" method="get">
+			<select name="aa">
+			<option value="中国">中国</option>
+			<option value="美国">美国</option>
+			
+			<input type="submit" name="" id="" value="点击提交" />
+		</select>
+			<!--select标签是一个下拉菜单标签，通常与option同时使用，option是选项内容，每个option代表一个选项值，用户通过点击向下的箭头可以进行选择，点击的时候，所有的option就会向下显示，然后鼠标点击选中的那个就会停在选项框，此时这个option就被选种，当提交表单的时候，向服务器发送的数据就是选中的这个option项的value值，由于select也是表单元素，所以select必须设置name属性，这样发送表单的时候形成的键值对就会以【select的name】=【选中的option的value值】发送-->
+		</form>
+	</body>
+</html>

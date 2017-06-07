@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//onmouseout 事件会在鼠标指针移出指定的对象时发生。
+		window.onload=function(){
+			var dd=document.getElementById("dv");
+			dd.onmouseout=function(){
+				alert("你离开了div")
+			}
+		}
+	</script>
+	<style type="text/css">
+		#dv{  background-color: red;height: 200px;width: 200px;}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+</html>

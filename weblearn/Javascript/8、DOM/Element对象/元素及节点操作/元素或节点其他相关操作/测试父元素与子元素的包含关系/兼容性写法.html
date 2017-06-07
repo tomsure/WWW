@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="dv">
+			<p id="p1">中国</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv = document.getElementById("dv")
+		var p1 = document.getElementById("dv1")
+
+		function contains(refNode, otherNode) {
+			if(typeof refNode.contains !== 'undefined'&&
+			!(BrowserDetect.browser == 'Safari' && BrowserDetect.version < 3)) {
+				return refNode.contains(otherNode)
+				//判断支持 compareDocumentPosition 的浏览器，大于 16 就是包含
+			} else if(typeof refNode.compareDocumentPosition == 'function') {
+				return !!(refNode.compareBoundaryPoints(otherNode) > 16
+			} else{
+				//更低的浏览器兼容，通过递归一个个获取他的父节点是否存在
+				var node = otherNode.parentNode;
+				do {
+				if(node === refNode) {
+					return true;
+				} else {
+					node = node.parentNode;
+				}
+			} while (node != null);
+		}
+		return false;
+		}
+		
+	
+			
+		
+	</script>
+
+</html>

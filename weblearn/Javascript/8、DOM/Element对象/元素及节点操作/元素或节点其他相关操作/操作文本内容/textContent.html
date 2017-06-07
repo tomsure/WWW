@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	
+	</script>
+	<body><button onclick="w()">点击变化</button>
+		<div id="dv">
+			
+		<strong>你好</strong>
+		<p>你好</p>
+		
+			
+		</div>
+		<div id="dv1">
+			
+		</div>
+		<button id="btn">点击测试TextContent</button>
+		<button id="btn1">点击测试innetHTML</button>
+	</body>
+	<script type="text/javascript">
+		
+		var dv=document.getElementById("dv")
+		var dv1=document.getElementById("dv1")
+		var  btn=document.getElementById("btn")
+		var  btn1=document.getElementById("btn1")
+		  function w(){
+		    alert("textContent:"+dv.textContent)
+		  	alert("innerHTML:"+dv.innerHTML)
+		  }
+		 
+		 
+//		 textContext会把元素中包含文本的标签过滤掉直接输出文本
+//innerHTML则会将元素中包含文本的标签和文本统一以文本的形式输出，则标签就被解析成了符号
+
+       btn.onclick=function(){
+       	    dv.textContent='<strong>火狐</strong>'
+       	   
+       	
+       }
+          
+          
+          
+       btn1.onclick=function(){
+       	    
+       	    dv.innerHTML='<strong>火狐</strong>'
+       	
+       	
+       }
+//     如果是设置文本内容的话textContent会 将设置的内容全部显示在页面,包括html格式的符号,而不会解析成html标签;
+//  innerHTML会把设置的包含HTML标签格式的符号解析成HTML标签   
+        
+        
+	</script>
+</html>

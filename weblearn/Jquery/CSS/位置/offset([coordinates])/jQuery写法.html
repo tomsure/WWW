@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0px; padding: 0px;
+		}
+		div{width:100px ;height:100px ;background-color: red;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*offset() 方法设置或返回被选元素相对于文档顶部和左边的偏移坐标。
+                     当用于返回偏移时： 
+                     该方法返回第一个匹配元素的偏移坐标。它返回一个带有两个属性（以像素为单位的 top 和 left 位置）的对象。
+                      当用于设置偏移时： 
+                      该方法设置所有匹配元素的偏移坐标。*/
+                     
+/*******************返回偏移********************/
+$(function(){
+	$("#btn1").click(function(){
+		alert($("div").offset().left)  //返回偏移时候返回的是一个带有top和left的对象
+		
+	})
+})
+/*********************设置偏移***************/
+$(function(){
+	$("#btn2").click(function(){
+		$("div").offset({top:20 ,left:30})  //设置偏移，注意格式，用大括号隔开，值直接写数字，两个值用逗号隔开，还有一种写法，
+	})
+})
+	</script>
+	<body>
+		<div id="">
+			
+		</div>
+<input type="button" name="" id="btn1" value="点击测试" />	
+<input type="button" name="" id="btn2" value="点击测试" />	
+	</body>
+</html>

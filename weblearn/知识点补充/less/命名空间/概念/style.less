@@ -1,0 +1,24 @@
+.bgcolor(){
+    width: 200px;
+    height: 200px;
+    background-color: #2DE6FF;
+    .dv1bgcolor(){
+        width: 150px;
+        height: 150px;
+        background-color: deeppink;
+        
+         .p(){
+        width: 200px;
+        height: 50px;
+        background-color: blueviolet;
+        
+        
+         }
+    
+        
+    }
+   
+}
+
+   //命名空间用来将各种混合设置为类似html格式一样形成层级关系的混合，比如上面，设置为一个混合.bgcolor,他里面又可以设置新的混合.dv1bgcolor, .dv1bgcolor又可以设置新的混合.p ,
+// 当在使用这些混合的时候，就可以按照这些层级关系，为每个样式调用所需要的混合，例如要设置#dv的样式且要使用.a 混合的样式，就在#dv的样式里调用.a混合。如果只需要使用 .a和.b下面的混合，则需要在#dv中调用.a，表示使用混合.a的样式，再调用.a下面的.b表示使用.b的样式，以此类推

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//函数的执行顺序遵循js的执行顺序
+		  a=1;
+		function ss(){
+			e=2
+			alert(a)
+			function  dd( ){
+				alert(e)
+			}
+			dd()
+		}
+		ss()
+		//这里先执行ss(),再执行dd(),所以先弹出1，再弹出2。
+	</script>
+	<body>
+		<p>函数的执行顺序遵循js的执行顺序</p>
+		
+	</body>
+</html>

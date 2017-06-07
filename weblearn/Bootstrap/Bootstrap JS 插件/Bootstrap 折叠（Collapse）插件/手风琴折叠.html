@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<link rel="stylesheet" type="text/css" href="../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		
+		<div class="panel-group" id="aa" >
+<!--------------------------第一个框------------------------>			
+			<div class="panel panel-default">
+				<div class=" panel-heading">
+					<h4 class="panel-title"><a href="#one" data-toggle="collapse" data-parent="#aa">第一部分</a></h4>
+				</div>
+				<div class="panel-collapse collapse in" id="one">
+					<!--collpase是设置默认隐藏-->
+					<div class="panel-body">
+						第一部分内容
+					</div>
+				</div>
+			</div>
+		</div>
+		
+<!---------------------------第二个框-------------------------->	
+   <div class="panel panel-default">
+				<div class=" panel-heading">
+					<h4 class="panel-title"><a href="#two" data-toggle="collapse" data-parent="#aa">第一部分</a></h4>
+				</div>
+				<div class="panel-collapse collapse in" id="two">
+					<div class="panel-body">
+						第二部分内容
+					</div>
+				</div>
+			</div>
+		</div>
+		<!---------------------------第三个框----------------------->	
+   <div class="panel panel-default">
+				<div class=" panel-heading">
+					<h4 class="panel-title"><a href="#three" data-toggle="collapse" data-parent="#aa">第一部分</a></h4>
+				</div>
+				<div class="panel-collapse collapse in" id="three">
+					<div class="panel-body">
+						第三部分内容
+					</div>
+				</div>
+			</div>
+		</div>
+<!---------------------------第四个框-------------------------->	
+   <div class="panel panel-default">
+				<div class=" panel-heading">
+					<h4 class="panel-title"><a href="#four" data-toggle="collapse" data-parent="#aa">第一部分</a></h4>
+				</div>
+				<div class="panel-collapse collapse in" id="four">
+					<div class="panel-body">
+						第四部分内容
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</body>
+	
+	<script type="text/javascript" src="../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+		
+	</script>
+	<!--手风琴折叠效果制作步骤：
+		
+-------------第一步：创建只有一个内容栏的手风琴折叠------------------		
+
+		1，创建一个大的div，添加类名collapse-group；
+		2，创建折叠的内容：
+		   2.1:创建一个div添加类名panel panel-default；
+		   2.2:再在panel-default这个div里面创建一个div，类名panel-heading,在这个div里面创建折叠标题：创建一个h4标签，添加类名:panel-title;h4里面创建一个a标签，a标签的内容就是折叠框最上面的内容:标题。
+		   
+		3，3.1创建在panel-default后面创建 一个div，添加名panel-collpase collpase in,并添加id号；给a标签添加toggle=“collpase”属性；
+		   3.2，将panel-colloase的id号绑定至panel-heading中 a标签的href属性，也就是href="panel-collpase的id号"
+		   3.3,在panel-colloase里面创建一个div,添加类名panel-body,里面可以直接写内容；
+		   
+--------------- --第二步，创建多个折叠框----------------------------		
+		4，再创建一个或多个div，添加类名panel panel-default，里面 创建和上部分同样内容的div，设置相同绑定关系；
+		
+		
+		
+	--------------设置点击其中一个其他全部隐藏---------------------	
+		5，给最外层的div panel-group添加一个id，再给每个a标签，添加一个data-parent属性，值就是绑定panel-group的id号
+	-->
+</html>

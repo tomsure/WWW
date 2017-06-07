@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	
+		function t(age){
+			alert(age)
+			
+			
+		}
+		t(5); //弹出5
+		t(); //弹出undefined；
+	/*此例词法分析过程：
+  0，    生成AO: 	AO { };  ===》生成活动对象AO，
+     
+  1，  1.1: 分析参数： 将参数化作AO的 属性AO={age：undefined}；
+      1.2: 接收参数：age值为5,则 AO={age：5}；
+      
+	
+2	运行过程：
+	t(5)----->AO.age=5 ; alert(AO.age); 因为这里给 age属性赋值为5，所以，弹出5 
+	t()--->AO.age=undefined;因为这里没有赋值所以，AO.age没变，还是undefined，所以 弹出undefined	
+		*/
+		
+	
+		
+		
+		
+		
+	</script>
+	<body>
+	</body>
+</html>

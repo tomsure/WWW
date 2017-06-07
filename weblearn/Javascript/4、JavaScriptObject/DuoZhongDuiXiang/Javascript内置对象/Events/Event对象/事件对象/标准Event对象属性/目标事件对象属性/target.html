@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+	<body style="border: 1px solid blue;">
+		<div class="dv" id="dv">
+			
+		</div>
+	</body>
+		
+	
+	
+	<script type="text/javascript">
+	   var dv=document.getElementById("dv");
+	      document.onclick=function(ev){
+	      	alert(ev.target.nodeName)
+	      }
+		//ev.target属性指的是触发事件的元素  ，当某个元素触发一个事件后，事件对象的target属性就指的是触发该事件的元素,比如这里我点击空白区域的时候，弹出是HTML，点击div的时候，弹出是div，点击div旁边的位置的时候，弹出是body
+	//此属性是W3C标准，IE浏览器起作用的属性指的是event.srcElement
+	</script>
+</html>

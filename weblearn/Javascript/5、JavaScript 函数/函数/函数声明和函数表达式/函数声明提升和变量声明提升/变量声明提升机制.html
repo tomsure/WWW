@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		只要变量在代码中进行了声明，无论它在哪个位置上进行声明， js引擎都会将它的声明放在范围作用域的顶部
+    var a=1;
+    function aa(){
+    	
+    	alert(a)
+    	
+    	
+    }
+     aa()
+     
+     var b=2
+    function bb(){
+    	
+    	alert(b)//按照上面的写法，应该会弹出2，但是这里他已经被后面提前声明的变量给挡住了
+    	var b=3
+    	alert(b)
+    	
+    	
+    }
+     bb()
+
+//函数执行的时候,里面遇到有var声明的变量,就会把声明变量语句方法哦函数最前面一句,但是不会把 赋值放到最前面,所以函数bb()最前面一句就变成了var b;
+//当执行24行的时候,前面已经声明了var b,但是为负值,所以弹出undefined;
+//执行26句的时候,前面已经声明了var b=3,所以弹出3
+//
+  
+	</script>
+</html>

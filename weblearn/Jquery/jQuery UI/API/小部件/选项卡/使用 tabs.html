@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<body>
+		<div class="tabs">
+			<ul>
+				<li><a href="#dv1"><span id="">
+					选项一
+				</span></a></li>
+				<li><a href="#dv2"><span id="">
+					选项二
+				</span></a></li>
+				<li><a href="#dv3"><span id="">
+					选项三
+				</span></a></li>
+			</ul>
+			<div id="dv1">内容一</div>
+			<div id="dv2">内容二</div>
+			<div id="dv3">内容三</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../../Bootstrap/bootstrap库/Bootstrap源码/js/tests/vendor/jquery.min.js"> 
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('.tabs').tabs();
+	</script>
+	<!--选项卡创建步骤：
+		1，创建一个最外层div；
+		2，最外层div内部创建一个ul里面多个li；
+		3，li里面的li包含一个a标签，a标签内部包含一个span元素；span里面写选项文字；
+		4，在ul下面创建多个div，设置id，div数量和ul里面的li数量一致；
+		5，给ul里面的每个a标签的href属性值填写为ul下面div的id号；
+		6，在js里面执给最外层div执行tabs()方法；
+		
+		
+	-->
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	/*这个元素一般用在js中控制，用于控制的动画是暂停还是运动*/
+		#dv{
+		width: 100px;
+		height: 100px;
+		background-color: chartreuse;
+		border-radius: 100px;
+		animation: divC 5s 5 alternate-reverse;
+		-webkit-animation: divC 5s 5 alternate-reverse;
+		-moz-animation: divC 5s 5 alternate-reverse;
+		position: absolute;
+		
+		
+		
+	
+		}
+		@keyframes divC{
+			from{left: 0px;background:chartreuse ;}
+			to{left: 800px;background: #8B008B;}
+		}
+		@-webkit-keyframes divC{
+			from{left: 0px;background:chartreuse ;}
+			to{left: 800px;background: #8B008B;}
+			}
+		@-moz-keyframes divC{
+			from{left: 0px;background:chartreuse ;}
+			to{left: 800px;background: #8B008B;}
+		}
+		@-ms-keyframes divC{
+			from{left: 0px;background:chartreuse ;}
+			to{left: 800px;background: #8B008B;}
+		}
+		 
+		#dv:hover{
+		    /*设置当鼠标移动到div上面的时候暂停*/
+		animation-play-state: paused;
+		-webkit-animation-play-state: paused;
+		}
+		}
+	</style>
+	
+	<body>
+		<div id="dv">
+			  
+		</div>
+		<div id="dv1">
+			
+		</div>
+		
+	</body>
+</html>

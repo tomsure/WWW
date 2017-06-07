@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>meter 标签定义已知范围或分数值内的标量测量。也被称为 gauge（尺度）。
+例子：磁盘用量、查询结果的相关性，等等。
+注释：meter 标签不应用于指示进度（在进度条中）。如果标记进度条，请使用 progress标签。</p>
+
+
+<!--max和min属性定义和用法
+max 属性规定度量的上限。
+max 属性值必须大于 min 属性值。
+如果未规定，则默认值是 1。如果未规定，则默认值是 0。
+提示：max 属性，与 min 属性一起，规定度量的完整范围。-->
+<p>meter元素的max属性：<meter min="10"  max="100" value="80"></meter></p>
+
+
+
+
+<!--value属性：必需的 value 属性规定测量范围的当前的或“测量过”的值。
+value 属性必须介于 min 与 max 属性值之间。-->
+<p><meter value="0.3"></meter></p><!--这里未规定max和min，他们就是默认值所以只能取0到1的值-->
+
+
+<p>high 属性规定的范围是被视为高值的度量值。
+high 属性必须小于 max 属性值，且必须大于 low 和 min 属性值。</p>
+<p><meter high="10"   low="5" min="1" max="100" value="80"></meter></p>
+
+
+
+<p>low 属性规定的范围是被视为低值的度量值。
+low 属性必须大于 min 属性值，且必须小于 high 和 max 属性值。</p>
+<p>meter元素low属性：<meter low="10"  high="20"   min="1"  max="100" value="60"></meter></p>
+
+
+<p>optimum 属性规定的范围是被视为最佳值的度量值。</p>
+<p><meter optimum="0.2" value="0.5"></meter></p>
+
+
+
+
+
+
+<p>form属性所有浏览器不支持</p>
+<p><meter form></meter></p>
+
+
+
+	</body>
+</html>

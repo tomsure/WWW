@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//函数有或没有用var声明的变量都是全局变量；函数函数内部使用的没有用var声明的是全局变量；
+	//全局变量在整个 js内部都可以访问；任意位置都可以访问 ；
+	
+	 var    a=2;
+		function ss(){
+		
+			function  dd( ){
+				alert(a)
+			}
+			dd()
+		}
+		ss()
+	</script>
+	
+	<body>
+	</body>
+</html>

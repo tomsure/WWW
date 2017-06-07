@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//每创建一个函数（或者对象），该函数就会自动创建一个arguments对象,包含传入参数的信息
+		//一般用来做测试，需要理解,在面向对象中可以用来测试
+		
+		function aa(a,b ){
+			alert(arguments.callee)
+			
+			
+		}
+		
+		var  obj=new aa(1,2) 
+	</script>
+	<body>
+	</body>
+</html>

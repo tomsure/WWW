@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		
+		#dv1{display: block; width: 100px;height: 100px;background-color: red;}
+		#dv2{
+			display: none;width: 100px;height: 100px;background-color: blue;
+		}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-1.7.2/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	/*toggle() 方法切换元素的可见状态。如果被选元素可见，则隐藏这些元素，如果被选元素隐藏，则显示这些元素。*/
+	//如果设置了speed或者callback则无法设置这个switch
+	//如果设置了switch，则无法设置speed或者callback、
+	
+	
+	
+		$(function(){
+			$("#btn1").click(function(){
+				$("#dv1").toggle(false)//只能点击将显示的元素隐藏
+				
+			})
+			
+			$("#btn2").click(function(){
+				$("#dv2").toggle()  //点击将显示隐藏元素，再点击显示的隐藏元素将再隐藏
+			})
+		})
+	</script>
+	<body>
+		<div id="dv1">
+			
+		</div>
+		<button id="btn1">点击测试</button>
+		
+		<div id="dv2">
+			
+			
+		</div><br />
+		<button id="btn2">点击测试</button>
+	</body>
+</html>

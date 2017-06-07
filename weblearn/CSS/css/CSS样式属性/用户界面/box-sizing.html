@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	
+	
+		<style type="text/css">
+		/*box-sizing属性可以为两个值之一：content-box（default），border-box
+
+content-box，border和padding不计算入width之内
+border-box，border和padding计算入width之内，其实就是怪异模式了~*/
+    #dv1{
+        box-sizing:content-box;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing:content-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #E6A43F;
+        background: blue;
+    }
+   
+       #dv3{
+        box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing: border-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #3DA3EF;
+        background: yellow;
+    }
+</style>
+	</style>
+	<body>
+		<div id="dv1">
+			1
+		</div>
+		<br />
+	
+		<br />
+		
+		<div id="dv3">
+			3
+		</div>
+	</body>
+</html>

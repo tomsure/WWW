@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>server Status</h1>
+		<div id="statusDiv">
+			
+		</div>
+		<h1>server Data</h1>
+		<div id="serverData">
+			
+		</div>
+		
+		这里设置两个div来接受服务器的响应状态和数据
+	</body>
+	<script type="text/javascript">
+		var serverData; 
+		var SERVER_URL='header.php'; //设置服务器端url，后面作为EventSource对象构造函数的参数
+		var statusDiv;
+		
+		serverData=document.getElementById("serverData");    
+		statusDiv=document.getElementById("statusDiv")
+		
+		startListenServer()  //这里由于页面需要持续更新，所以要在页面打开的状态下执行这个方法
+		function startListenServer(){
+			statusDiv.innerHTML='正在连接服务器。。。' //当页面打开的时候，状态显示为正在连接服务器
+			var es=new EventSource(SERVER_URL); //实例化EventSource对象，他的参数就是远程服务器php的url
+			es.onopen=openHander; //当打开服务器连接的时候执行
+			es.onerror=errorHander; //当发生错误的时候执行
+			es.onmessage=messageHander; //当收到服务器数据信息的时候执行
+			
+			
+		};
+		
+		function errorHander(e){
+			statusDiv.innerHTML='Error'
+		}
+		function openHander(e){
+				statusDiv.innerHTML='server open'
+			}
+		function messageHander(e){
+			serverData.innerHTML=e.data
+		}
+	</script>
+	<!--服务器发送事件是网页不想服务器发送请求就可以接受服务器数据的事件-->
+	
+	服务器发送事件共两方面知识点：
+	  1，EventSource对象，如果是在页面打开的情况下接受服务器数据，则就在startListenServer()这个函数里面实例化 EventSourse对象，参数是服务器端PHP的url，不需要引号；
+	  2，三个事件，用于检测服务器发送数据时候的状态，可以根据这三个状态来编写前端页面需要显示的信息；
+</html>

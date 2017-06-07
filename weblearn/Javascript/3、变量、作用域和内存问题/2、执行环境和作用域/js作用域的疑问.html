@@ -1,0 +1,24 @@
+<meta name="" content="" charset="utf-8"/>
+我赢职场里面说js 变量的多种写法    显示声明和隐式声明
+                         
+                               var a=1；//显示声明；
+            
+                               a=1；//隐式声明；
+
+          说  a=1也是全局变量；
+
+
+布尔教育里面说：    a=1只是 赋值操作，并不理解为全局变量
+          
+                function ss(){
+			var d
+			function dd(){
+				d=5;
+				
+			}
+			dd()
+		}
+		ss()
+		alert(d)   //报错  a is not defined
+
+

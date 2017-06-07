@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src=""/>
+		<button id="btn">点击加载</button>
+		<button id="btn1">点击停止</button>
+		
+	</body>
+	<script type="text/javascript">
+		//当请求成功完成时触发，此时xhr.readystate=4
+	var btn=document.getElementById("btn");
+	var btn1=document.getElementById("btn1");
+	var img=document.getElementsByTagName('img')[0]    	
+		var xhr=new XMLHttpRequest();
+		xhr.onloadstart=function(){
+			//alert(xhr.readyState+','+xhr.status);
+		
+		img.src='http://tuyiyi.qiniudn.com/images/2013/1-130G00P4440-L.gif'
+		}//当开始加载的时候
+		
+		
+		xhr.open('GET','timeout.php',true);
+		
+	btn.onclick=function(){	
+		xhr.send();
+	}//点击的时候发送请求
+btn1.onclick=function(){
+		xhr.abort()
+	}//点击的时候终止请求
+	xhr.onabort=function(){
+			img.src=''
+		
+	       alert('请求终止')
+		}//当调用xhr.abort()放发的时候触发的事件函数
+	
+		
+//onbaort事件表示调用abort()方法的时候触发的事件，此时调用onboart事件的时候也会终止请求，注意onbaort事件和xhr.baort()方法必须同时使用才会终止请求
+	</script>
+</html>

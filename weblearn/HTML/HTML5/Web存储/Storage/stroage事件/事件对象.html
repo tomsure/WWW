@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">点击设置</button>
+		<button id="btn2">点击获取</button>
+		<input type="text" name="" id="t1" value="" />
+	</body>
+	<script type="text/javascript">
+	var btn1=document.getElementById("btn1");
+	var btn2=document.getElementById("btn2");
+	var ipt=document.getElementById("t1")
+	btn1.onclick=function(){
+		window.localStorage.setItem('userName',ipt.value)
+	}
+		
+	btn2.onclick=function(){
+		alert(window.localStorage.getItem('userName'))
+	}
+		window.addEventListener('storage',function(e){
+			alert(e);
+			
+		})
+//	Storage事件需要在一个页面设置数据后再在另一个页面打开,然后设置同一个名称的storage或者删除storage的时候触发,并且这个事件需要在addEventListener()方法中绑定,当事件出发后,事件函数里面的第一个参数就是storage事件对象,这个事件对象包含多个属性
+	</script>
+</html>

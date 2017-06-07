@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{ width:200px ;height:200px ;background-color:red ;}
+		#dv1{ width:100px ;height:100px ;background-color: green;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//当鼠标指针离开被选元素或被选元素的子元素时候发生的事件
+		/*注意：与 mouseleave 事件不同，mouseout 事件在鼠标指针离开被选元素或任意子元素时都会被触发，mouseleave 事件只有在鼠标指针离开被选元素时被触发。参见页面底部演示实例。
+提示：该事件通常与 mouseover 事件一起使用。*/
+     $(function(){
+     	$("#dv").mouseout(function(){
+     		alert("鼠标指针离开了元素或子元素")
+     	})
+     })
+	</script>
+	<body>
+		<div id="dv">
+			<div id="dv1">
+				
+			</div>
+		</div>
+	</body>
+</html>

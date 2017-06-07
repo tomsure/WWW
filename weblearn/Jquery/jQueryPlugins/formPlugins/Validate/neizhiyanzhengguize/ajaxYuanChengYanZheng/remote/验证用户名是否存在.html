@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" name="infos" id="infos">
+    <p>用户名：<input type="text" name="user" id="username" /></p>
+    <p>密码：<input type="text"name="pass" id="pass" /></p>
+    <p><input type="submit" name="sub" /></p>
+</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../Validate/../库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../Validate/库文件/dist/localization/messages_zh.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+    $('#infos').validate({
+
+        rules:{
+            user:{
+                required:true, 
+                remote:{
+                    type:"GET",
+                    url:"check.php", //请求地址
+                  
+                }
+            }
+        },
+        messages:{
+            user:{
+                required:"用户名必填",
+                remote:"用户名已存在"
+                //php可以设置验证到数据库中的值和用户输入的值相同的时候就返回false，这里设置后用户就会看到用户名已存在，
+            }
+        },
+        submitHandler:function(form){
+            alert("验证通过，准备提交");
+            //这里会阻止默认的提交，除非在里面设置其他提交方式
+        }
+    });
+});
+
+//验证用户名是否存在需要学习一下数据库，在这里可以尝试使用admin作为用户名来输入，就会提示用户名已存在
+</script>
+	
+</html>

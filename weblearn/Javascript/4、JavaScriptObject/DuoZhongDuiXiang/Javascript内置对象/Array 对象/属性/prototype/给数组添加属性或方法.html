@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+
+      var arr=new Array()
+console.log(arr.__proto__==Array.prototype)
+//函数有一个prototype属性,函数实例化的对象有一个__proto__属性,他们共同指向一个 原型对象
+
+
+
+//prototype指的是函数(或构造函数)创建的对象的一个原型对象		
+		
+		
+//		prototype的概念弄清楚之后,可以用来给数组或其他内置对象及自定义对象添加自定义属性或方法
+//		
+
+       Array.prototype.play=function(){
+      	alert('play ball')
+      }
+       //给数组的原型添加一个方法
+       arr.play()//实例化的数组对象就会有一个方法
+
+
+	</script>
+</html>

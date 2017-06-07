@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var str='(wx)2xwed we8';
+		var reg=/w\w/g;
+		
+		//test()方法
+		document.write(reg.test(str)+'</br>')
+		document.write(RegExp.lastParen)
+		//lastParen属性是返回字符串str中的分组圆括号内的字符串与正则表达式进行匹配的结果，如果是test()方法则返回true或者false，如果是exec()方法则返回匹配的字符串
+		
+		//exec()方法：
+		var str1='aff aimjf mixa za';
+		var reg1=/a\d/g
+		document.write(reg1.exec(str1))
+	</script>
+</html>

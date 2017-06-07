@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	/*animation指的是要设置的动画的属性的简写，例如动画名称，动画完成的时间、动画播放次数等等*/
+	#myDIV{
+		width: 200px ;
+		height: 200px;
+		background-color: darkmagenta;
+		animation: divChange 5s;/*简写设置名称属性和事件属性*/
+		-webkit-animation: divChange 5s;/*兼容性设置*/
+		-moz-animation: divChange 5s;/*兼容性设置*/
+		 
+	}
+	@-moz-keyframes divChange{
+		from{ background-color:darkmagenta ;}
+		to{ background-color: yellow;}
+	}
+	@-ms-keyframes divChange{
+		from{ background-color:darkmagenta ;}
+		to{ background-color: yellow;}
+	}
+	@-webkit-keyframes divChange{
+		from{ background-color:darkmagenta ;}
+		to{ background-color: yellow;}
+	}
+	@keyframes divChange{
+		from{ background-color:darkmagenta ;}
+		to{ background-color: yellow;}
+	}
+	</style>
+	<body>
+		<div id="myDIV">
+			
+		</div>
+	</body>
+</html>

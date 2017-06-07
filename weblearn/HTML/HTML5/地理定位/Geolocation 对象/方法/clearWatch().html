@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#ta{
+			width: 200px;
+			height: 200px;
+			border: 1px solidred;
+		}
+	</style>
+	<body>
+		
+		<button id="btn">点击获取</button>
+		<button id="btn1">点击停止</button>
+		<textarea name="" rows="200" cols="200" id="ta"></textarea>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		var ta=document.getElementById("ta");
+		var timer=null;
+		btn.onclick=function(){
+		timer=navigator.geolocation.watchPosition(function(position){
+				ta.value='经度：'+position.coords.longitude+'\n'+
+				  '海拔：'+position.coords.altitude+'\n'+
+			      '海拔精度：'+position.coords.altitudeAccuracy+'\n'+
+				   '速度：'+position.coords.speed+'\n'+
+				     '纬度：'+position.coords.latitude+'\n'+
+				     '位置精度：'+position.coords.accuracy+'\n'+
+				      '响应时间：'+new Date(position.timestamp)+'\n'
+			
+			},function(err){//请求失败后执行的函数，有一个参数
+				alert(err.code)//读取失败的参数
+				
+			},{
+				enableHighAccuracy:true,//设置更精确的查找
+				maximumAge:10000,//设置最大缓存时间，毫秒记
+				 //设置允许请求的最长时间，超过时间没请求到则执行失败函数
+				frequency:100 //一百毫秒
+			})
+		}
+		 btn1.onclick=function(){
+		 	navigator.geolocation.clearWatch(timer)
+		 	
+//		 	clearWatch()方法用于清除连续请求获取地理信息,watchPosition()方法是连续请求获取,就像是js里面的setinterval,这个方法就像是clearInterval()方法,就用来清除连续的请求
+//  这个例子中是当点击按钮的时候清除请求,也可以在其他情况下设置清除请求,具体看实际情况 ,例如如果检测到长时间连续请求失败,就可以在请求失败的函数中执行这个方法
+		 	
+		 	
+//		 执行这个方法的步骤:
+//		 1,设置一个变量为null;
+//		 2,将这个变量的值设为执行多次请求执行方法的那一段步骤,也就是上面例子中btn.click()里面执行的那一段;
+//		 3,如果是请求失败后执行这个方法就在请求失败的函数里卖弄执行本方法,或者根据其他需要执行本方法
+		 }
+
+	</script>
+</html>

@@ -1,0 +1,8 @@
+top
+top-outside   
+ bottom
+ bottom-ouside
+right
+
+left
+

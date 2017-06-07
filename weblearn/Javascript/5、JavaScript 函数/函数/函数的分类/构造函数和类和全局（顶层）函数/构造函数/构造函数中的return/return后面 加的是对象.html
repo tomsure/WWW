@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var a={
+			name:'tom'
+		}//创建一个对象；
+		function Person(name,age){
+		   this.name=name;
+		   this.age=age;
+		   return a;  //返回对象a
+		}
+		var person1=new Person('tomsure',34);
+		document.write(person1.name+'</br>');
+		document.write(person1 instanceof Person); //false
+//在构造函数中如果return后面加了另一个对象名,使用new 操作符
+//	实例化构造函数以后(var person1=new Person('tomsure',34);),这个实例化对象已经不是构造函数的实例对象，此时该对象就等于return后面那个对象，也会引用他的属性和方法；
+         document.write(person1===a)//true
+         
+
+
+	</script>
+</html>

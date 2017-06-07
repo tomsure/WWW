@@ -1,0 +1,6 @@
+我们还可以把函数的返回值赋给一个变量，然后通过变量进行操作。
+function box(num1, num2) {					
+	return num1 * num2;
+}
+var num = box(10, 5);						//函数得到的返回值赋给变量
+alert(num);

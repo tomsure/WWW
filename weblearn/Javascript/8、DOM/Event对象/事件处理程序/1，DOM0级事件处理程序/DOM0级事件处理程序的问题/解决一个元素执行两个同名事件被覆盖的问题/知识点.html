@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	   alert(document.onclick)
+	   alert(typeof document.onclick)
+	   //当元素事件句柄未绑定函数的时候，他的值是unll或者undefined，在不同浏览器中不同，它的类型是object
+		document.onclick=function(){
+			alert(1)
+		}
+		alert(typeof document.onclick)//如果执行过一次后，它是一个函数，类型是function
+		document.onclick=function(){
+			alert(2)
+		}
+	</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	/*media媒介查询功能可以使css样式在一定规则下才会生效，例如以下例子： 这里设置为最小宽度为400px的时候才会生效*/
+	
+	div{ width: 200px;height: 200px;}/*不在@media规则内的元素样式会适用于所有页面*/
+	
+		@media screen and ( min-width:400px){/*注意写法，注意空格*/
+			body{ background-color: red;}
+			div{ background-color: darkblue;}  /*只有屏幕宽度大于等于400px的时候才会显示*/
+		}
+		@media only screen and (min-width: 100px) and (max-width: 640px) {
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				
+			}
+		}
+		/*每一个@media代表一个规则,当页面宽度在达到@media的规则的宽度的时候就会呈现里面设置的样式*/
+	</style>
+	<body>
+	<div id="">
+		
+	</div>
+	</body>
+</html>

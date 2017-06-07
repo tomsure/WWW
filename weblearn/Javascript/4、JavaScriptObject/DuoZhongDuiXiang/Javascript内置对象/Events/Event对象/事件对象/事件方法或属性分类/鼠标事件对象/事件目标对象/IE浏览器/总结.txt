@@ -1,0 +1,1 @@
+onmouseover和mouseout都可以绑定这两个属性，但是要对应的绑定，例如onmouseover绑定后 使用fromElement才对，如果绑定了toElement就没有意义，因为toElement指的就是 移入到的那个节点元素，本来就知道是绑定事件的那个元素，又绑定返回那个元素就没有必要

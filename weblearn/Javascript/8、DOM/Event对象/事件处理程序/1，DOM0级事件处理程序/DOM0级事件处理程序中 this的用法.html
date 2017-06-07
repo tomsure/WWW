@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{width: 200px;height: 200px;background-color: red;}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+		<script type="text/javascript">
+	
+			
+			var dv=document.getElementById("div1");
+			dv.onclick=function(){
+				alert(this.tagName)
+			}
+			document.getElementById("div1").onclick=function(){
+			//this在这里可以用来引用事件触发的元素，这里的this指的就是div1
+				this.style.background="#ff00ff"//这里要注意js中css的用法并不是与直接写CSS一样，这里的background就是背景颜色的意思，这样写必须用16进制的写法，也可以写成bgColor，但是它的值必须使眼色的名称，例如红色就是bgColor="red"
+			
+			}
+			
+//	在事件函数中的this指的就是当前绑定事件函数的那个DOM对象，普通全局函数中的this指的就是 window。
+			
+		</script>
+	</body>
+</html>

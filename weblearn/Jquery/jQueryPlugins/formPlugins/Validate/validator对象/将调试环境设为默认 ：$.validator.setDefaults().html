@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>邮箱: <input type="text"  name="email" id="email" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$.validator.setDefaults({
+				debug:true
+			})
+		/*	在一个页面中如果有多个表单的时候要设置debug:true,不提交表单,则可以将
+			debug:true放在$.validator.setDefaults()方法中,用大括号包围.*/
+			//所有默认行为都可以在这里设置
+			$('form').validate({
+				
+			    rules:{
+			    	user:{
+			    		minlength:4
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		minlength:"输入不得少于4位"
+			    	}
+			    }
+			   
+		})
+		})
+
+	</script>
+</html>

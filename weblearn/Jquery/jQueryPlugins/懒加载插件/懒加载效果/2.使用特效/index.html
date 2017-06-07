@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		img{
+			width: 300px;
+			height: 400px;
+			margin-top:800px ;
+		}
+	</style>
+	<body>
+		<img  data-original="../../imgs/image.jpg"/>
+		              <!--将图片的src属性改为data-original，值就是 图片的url-->
+	</body>
+	<script type="text/javascript" src="../../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../../lib/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="../../lib/jquery.scrollstop.js"></script>
+      <!--引入插件-->
+    <script type="text/javascript">
+    	$(function(){
+    		$('img').lazyload({
+    			threshold : 100,
+    			effect:'fadeIn'
+    		})
+    	})
+    	
+//  	effect选项可以设置图片在加载显示的时候产生特效,特效使用的是jquery的动画特效
+    </script>
+</html>
+   

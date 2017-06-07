@@ -1,0 +1,16 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.box{
+width: 595px;	
+float: right;
+}
+.top_radius{
+	background: url(../慕课网-CSS圆角进化论/round_corner/images/t_radius_595.gif) no-repeat;
+	height: 3px
+}
+.content{
+	background: #EBF3FF;
+	border: 1px solid #EBF3FF;
+}

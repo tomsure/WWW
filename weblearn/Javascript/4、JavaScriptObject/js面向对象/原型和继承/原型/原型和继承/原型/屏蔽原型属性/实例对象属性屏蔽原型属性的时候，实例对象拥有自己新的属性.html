@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(){};
+		Person.prototype.name='tom';
+		var person1=new Person();
+		document.write(person1.name+'</br>')//tom
+		document.write(person1.hasOwnProperty('name')+'</br>')//false
+		//此时person1自己本身没有name属性
+		person1.name='bom';
+		document.write(person1.hasOwnProperty('name')+'</br>')//true
+		//给实例对象添加同名属性屏蔽原型对象属性时候，实例对象就有了name属性；
+		delete person1.name//删除person1的name属性
+		document.write(person1.hasOwnProperty('name'))//false
+		//删除给person1添加的name属性后，在测试就已经没有了name属性
+		
+		
+		
+	</script>
+</html>

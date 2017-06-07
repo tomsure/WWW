@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	
+		</head>
+		<script type="text/javascript">
+		/*oncanplay 事件在用户可以开始播放视频/音频（audio/video）时触发。
+在视频/音频（audio/video）加载过程中，事件的触发顺序如下：
+1  onloadstart
+2  ondurationchange
+3  onloadedmetadata
+4  onloadeddata
+5  onprogress
+6  oncanplay
+7  oncanplaythrough*/
+			window.onload=function(){
+				var dv=document.getElementById("vid");
+				
+				
+				dv.oncanplay=function(){
+					alert("视频可以播放了")
+				}
+			}
+		</script>
+		<body>
+			<video width="300px" height="300px" controls="controls" id="vid">
+			<source src="../../../../html/video/mov_bbb.mp4"></source>
+			</video>
+			
+		</body>
+	</html>

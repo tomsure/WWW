@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+	<body>
+		<p>帅哥</p><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#sp1{ width: 150px;height: 70px;background-color: blueviolet;display: block; float: left;}
+		#sp2{width: 20px;height: 70px;display: block;background-color: #A52A2A; float: left;}
+		#dv{width:100px ;height:100px ;background-color:#228B22;float: left;}
+		 
+	</style>
+	
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	/*insertBefore() 方法在被选元素之前插入 HTML 标记或已有的元素。
+注释：如果该方法用于已有元素，这些元素会被从当前位置移走，然后被添加到被选元素之后。*/
+   $(function(){
+   	
+   	          /*******************用于插入元素*******************/
+   	$("#btn").click(function(){
+   		$("<span id='sp2'>s</span>").insertBefore("#sp1")
+   		
+   	})
+   	      /*******************用于插入已有元素*************************/
+   	     
+   	     $("#btn1").click(function(){
+   	     	$("#sp1").insertBefore("#dv")
+   	     	
+   	     })
+   	     
+   	     
+   })
+		//insterBefore()括号中是被选元素，也就是那个插入到它之前，用来插入的那个元素写在insterBefore()方法之前用.来连接，例如上面的例子，在sp1前面要插入一个新元素，就写成$("<span id='sp2'>s</span>").insertBefore("#sp1")意思就是 把新创建的sp2插入到so1，
+		//第二个例子就是把现有的元素sp1插入到#dv中，就是上面那种写法
+	</script>
+	<body>
+		 <span id="sp1">
+		 	1
+		 </span>
+		 <input type="button" name="" id="btn" value="点击测试" />
+		 <br />
+		 <br />
+		 <br />
+		 <br />
+		 <br />
+		 <br />
+		 <br />
+		 <br />
+		 <br />
+		 <br />
+		 <div id="dv">
+		 	
+		 </div>
+		
+		 
+		 <input type="button" name="btn1" id="btn1" value="点击测试" />
+	</body>
+</html>
+
+		<button id="#btn">点击测试</button>
+	</body>
+</html>

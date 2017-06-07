@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		//触发被选元素的click事件，意思是元素已经设置了click，当遇到这个函数的时候触发click事件
+		$(function(){
+			$("#btn").click(function(){//这里是button按钮的点击事件
+				$("p").click() //这里触发了p元素的点击事件，即使没有去点击p元素
+			})
+		})
+	</script>
+	<body>
+		<p onclick="alert('p元素click事件被触发')">中国</p>
+		<button id="btn">点击触发</button>
+	</body>
+</html>

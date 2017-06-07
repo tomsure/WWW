@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击测试</button>
+		<div id="dv">
+			<p>你好</p>
+		</div>
+		<button id="btn1">点击测试</button>
+	</body>
+	<script type="text/javascript">
+		
+		var dv=document.getElementById("dv")
+		   var btn=document.getElementById("btn")
+		   btn.onclick=function(){
+		   	alert(dv.innerHTML)
+		   }
+		  
+		  var btn1=document.getElementById("btn1")
+		  btn1.onclick=function(){
+		  	dv.innerHTML='<strong>火狐</strong>'
+		  }
+		  
+//		  innerHTML在输出的时候,会返回当前元素内的文本和html标签,html标签当做符号一同返回;
+//		  innerHTML设置文本内容的话,则会将设置的html格式的文本解析成html标签
+	</script>
+	
+	
+</html>

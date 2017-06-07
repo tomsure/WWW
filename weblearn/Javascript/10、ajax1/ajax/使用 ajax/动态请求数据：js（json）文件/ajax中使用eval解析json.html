@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击显示</button>
+		<ul id="ul1">
+			
+		</ul>
+	</body>
+	<script type="text/javascript">
+	    var btn=document.getElementById("btn");
+	    var ul1=document.getElementById("ul1")
+	    btn.onclick=function(){
+	    	var xhr;
+		if(window.XMLHttpRequest){
+			xhr=new XMLHttpRequest()
+		}else{
+			xhr=new ActiveXObject('Microsoft.XMLHTTP')
+		}
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4){
+				if(xhr.status==200){
+			     alert(xhr.responseText)
+				}
+			}
+		}
+		xhr.open('GET','动态读取数据.txt',true)
+		xhr.send(null)
+	    }
+		
+		
+//		eval()方法可以读取服务器返回的响应数据,将相应数据解析成数组,json等等数据
+	</script>
+</html>

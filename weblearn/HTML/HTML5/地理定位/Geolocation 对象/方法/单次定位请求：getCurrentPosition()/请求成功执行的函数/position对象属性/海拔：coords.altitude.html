@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击获取</button>
+		<textarea name="" id="ta" rows="20" cols="20"></textarea>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		var ta=document.getElementById("ta");
+		btn.onclick=function(){
+			
+			navigator.geolocation.getCurrentPosition(function(position){
+			ta.value='海拔：'+position.coords.altitude;
+//		     获取当前设备的海拔高度（距离海平面以上的高度）
+		
+			
+		})
+		}
+
+
+	</script>
+</html>

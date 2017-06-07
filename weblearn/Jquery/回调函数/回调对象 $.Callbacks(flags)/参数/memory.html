@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			var cal=$.Callbacks('memory');//添加‘memory参数
+			function aa(){
+				alert(1)
+			}
+			function bb(){
+				alert(2)
+			}
+			cal.add(aa)
+			
+			cal.fire()  //这里fire()方法在cal.add()之前执行，最后还是会执行bb函数
+			cal.add(bb)
+	
+	
+//	'memory'参数可以使fire()方法在执行的时候自动查找作用域内所有add()方法添加的函数,不管是在fire()之前使用add()添加还是在fire()之后添加的函数,都会执行,
+//	如果$.Callbacks()没有添加memory参数,则只会按照代码先后顺序执行,fire()后面add()添加的函数就不会执行
+	
+	
+		})
+	</script>
+	<body>
+		
+	</body>
+</html>

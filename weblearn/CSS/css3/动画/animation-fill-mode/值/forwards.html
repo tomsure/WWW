@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<style type="text/css">
+	#dv{
+		margin-bottom: 20px;
+		width: 100px;
+		height: 100px;
+		background-color:red;
+		position: relative;
+		left: 0px;
+		border-radius: 100px;
+		animation: divC 5s ;
+		-webkit-animation: divC 5s;
+		-webkit-animation-delay: 3s;
+		-webkit-animation-fill-mode:backwards ;
+		/*取值为backwards的时候，在动画开始前等待的那个时间段，样式会变成动画开始的时候第一帧的样式，设置这个属性值必须设置animation-delay属性，因为设置backwards的时候，意思就是动画开始前等待的那段时间的样式，而如果要有等待时间，就必须设置animation-delay属性*/
+	}
+	
+	@-webkit-keyframes divC{
+		from{left: 0px;background:blue;}
+		to{left: 800px;background: #FFFF00;}
+	}
+</style>
+<script type="text/javascript">
+	
+</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<input type="button"   id="btn" value="点击测试" />
+	</body>
+</html>

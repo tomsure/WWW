@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function s(){this.me="sd"}
+
+a=new s();
+alert(a.me)
+alert(a.__proto__.__proto__==Object.prototype) 
+alert(Object.prototype==s.prototype.__proto__);
+alert(Object.__proto__==Function.prototype);//Object的原型指针指的是构造函数Function的prototype，意思就是说Object的原型对象就是Function.prototype
+alert(Function.__proto__==Function.prototype)//Function作为对象的原型指向他自己作为构造函数的原型对象
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

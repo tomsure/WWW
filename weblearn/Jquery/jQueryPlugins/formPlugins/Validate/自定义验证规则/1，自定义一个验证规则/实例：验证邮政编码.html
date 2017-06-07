@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>输入号码: <input type="text"  name="num" id="num" value="" />(必填)</p>
+			<p>邮箱: <input type="text"  name="email" id="email" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../Validate/库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$.validator.addMethod('#url',function fn(value,input,form){
+				var number=/^[0-9]{6}$/;
+				return this.optional(element)||(number.test(value))
+				
+			},'请注意输入的内容长度')
+			$('form').validate({
+				
+						
+			rules:{
+				num:{//input元素
+				
+					range:[5,10]
+					//必须输入大于等于5，小于等于10的数字
+				},
+				
+				  email:{
+			     	email:true
+			       },
+			    url:true   
+			   
+			        },
+			        
+			 messages:{
+			 	num:{
+			 		range:"必须输入大于等于5小于等于10的数字"
+			 		},
+			 	
+			 	email:{
+			 		email:"请输入正确的邮箱格式！"
+			 	},
+			 	
+			 }
+				
+			})//加载validate.js插件；
+			
+		})
+     
+/*jQuery.validator.methond(name，method，[messags])方法用于自定义创建验证规则
+ * 此方法有三个参数，第一个参数表示的是自定义规则的名称；
+ * 第二个参数表示的是一个函数：method:function(value,element,params)，这个函数又有三个参数，第一个参数指的是用户输入表单的值，第二个参数指的是这个表单元素，第三个参数
+
+* 
+* 第三个参数指的是提示的信息*/
+      
+	</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		var lev=function(){  
+
+   return "啊打";  
+};  
+function Parent(){  
+        
+     
+};  
+  Parent.prototype.name="李小龙";  
+  Parent.prototype.age="30";  
+ Parent.prototype.lev=lev;  
+  
+var  x =new  Parent();  
+alert(x.name);  
+alert(x.lev());  
+/*
+ 1.函数中不对属性进行定义
+
+2.利用prototype属性对属性进行定义
+
+3.同样的，不推荐使用这样方式创建对象
+
+ 
+ */
+	</script>
+	<body>
+	</body>
+</html>

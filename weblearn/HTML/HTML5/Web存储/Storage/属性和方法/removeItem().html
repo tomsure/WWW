@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">设置</button>
+		<button id="btn2">读取</button>
+		<button id="btn3">删除</button>
+		<input type="text" name="ipt" id="ipt" value="" />
+	</body>
+	<script type="text/javascript">
+		var btn1=document.getElementById("btn1");
+		var btn2=document.getElementById("btn2");
+		var btn3=document.getElementById("btn3");
+		var ip1=document.getElementById("ipt");
+		btn1.onclick=function(){
+			window.localStorage.setItem('name',ip1.value)
+            //设置
+		}
+		btn2.onclick=function(){
+			alert(window.localStorage.getItem('name'))
+//			读取storge
+		}
+		btn3.onclick=function(){
+			window.localStorage.removeItem('name')
+//			removeItem()方法用于Storge数据,当设置storge数据后,可以使用此方法删除,参数就是要删除的storge的名称,也就是setItem()的第一个参数
+		}
+	</script>
+</html>

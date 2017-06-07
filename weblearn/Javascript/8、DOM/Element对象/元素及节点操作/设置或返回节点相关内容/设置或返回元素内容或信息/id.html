@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//设置或返回元素的id
+		window.onload=function(){
+			var d=document.getElementById("dv");
+			alert(d.childNodes[1].tagName);//弹出dv1的标签名称;
+			
+			alert(d.childNodes[1].id);//弹出 dv1的id，弹出为空因为未设置;
+	        var e=d.childNodes[1].id="div1";
+			alert(e)//弹出设置后的id--->>div1
+			
+		}
+	</script>ipt
+	
+	<body>
+		<div id="dv">
+			<div class="dv1">
+				
+			</div>
+		</div>
+	</body>
+</html>

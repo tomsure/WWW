@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//当请求成功完成时触发，此时xhr.readystate=4
+		var xhr=new XMLHttpRequest();
+		xhr.open('GET','timeout.php',true);
+		xhr.onreadystatechange=function(){
+			
+		}
+		xhr.send();
+		xhr.onload=function(){
+			alert(xhr.readyState+','+xhr.status);
+			
+			alert('请求完成')
+			
+		}
+//		xhr.onload事件表示请求完成的时候触发的事件
+	</script>
+</html>

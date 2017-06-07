@@ -1,0 +1,11 @@
+Attr 对象
+
+在 HTML DOM 中, Attr 对象 代表一个 HTML 属性。
+
+HTML属性总是属于HTML元素。
+
+NamedNodeMap 对象
+
+在 HTML DOM 中,  NamedNodeMap 对象 表示一个无顺序的节点列表。
+
+我们可通过节点名称来访问 NamedNodeMap 中的节点。

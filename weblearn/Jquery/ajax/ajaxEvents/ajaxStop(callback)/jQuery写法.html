@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<button id="btn">点击测试</button>
+		<div id="">
+			
+		</div>
+		<img src="ajax-loader.gif" style="display: none;"/>
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//ajaxStart()方法表示执行ajax请求开始的时候执行的函数，这个方法必须绑定在document上
+		$('#btn').click(function(){
+		$.ajax({
+			url:'loadinga.php?'+Math.random(),
+			success:function(data){
+				$('div').html(data)
+			}
+			
+		})
+		})
+			$(document).ajaxStart(function(){
+				$('img').show()
+			}).ajaxStop(function(){
+				$('img').hide()
+			})
+//		ajaxStart()方法用来给用户一个反馈信息,表示加载已经开始,在开发中可以设置一个加载的图片表示正在加载,再配合ajaxStop()方法当加载完成之后图片隐藏,这样用户体验就会比较好
+	</script>
+</html>

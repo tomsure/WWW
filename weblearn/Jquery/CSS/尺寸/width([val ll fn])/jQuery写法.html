@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		 $(function(){
+		 	/*width() 方法设置或返回被选元素的宽度。
+                                    当该方法用于返回宽度时， 则返回第一个匹配元素的宽度。
+                                   当该方法用于设置宽度时，则设置所有匹配元素的宽度。
+                                    如下面的图像所示，该方法不包含 padding、border 或 margin。*/
+                           	$("div").height(100); //设置元素高度，
+                           	$("div").width(100); //设置元素宽度
+                           	$("div").css("background","red") //设置元素背景
+                           	
+                           	$("#btn").click(function(){
+                           		alert($("div").width()) //返回元素的高度
+                           	})
+                           })
+	</script>
+	<body>
+		<div id="">
+			
+		</div>
+		<input type="button" name="" id="btn" value="点击测试" />
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	span{
+		width: 200px;
+		height: 80px;
+		background-color: red;
+		text-align: center;
+	}
+	/*span是内联元素,内联元素的特性是无法设置元素的宽高,当将内联元素设置了float属性后,这个元素就会变成块级元素,所以这里点击给元素设置float的时候,span的宽高发生了变化,因为他变成了块级元素*/
+	</style>
+	<body>
+		<span id="sp">
+			你好，请点击
+		</span>
+	</body>
+    <script type="text/javascript">
+    	var sp=document.getElementById("sp")
+    	   sp.onclick=function(){
+    	   	this.style.float='left'
+    	   }
+    	   
+    	   
+    </script>
+</html>

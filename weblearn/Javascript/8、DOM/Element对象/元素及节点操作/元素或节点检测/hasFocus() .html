@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p id="demo">点击文档任意一处获取焦点，如果点击文档外则会失去焦点。</p>
+
+</body>
+<script>
+
+setInterval('myfunction()',1)
+     function myfunction(){
+    var x = document.getElementById("demo");
+    if(document.hasFocus()) {
+        x.innerHTML = "文档已获取焦点。";
+//      alert(document.hasFocus())//返回是否获取焦点
+    } else {
+        x.innerHTML = "文档失去焦点。";
+        
+    }
+}
+     
+//    hasFocus()方法返回元素是否获取焦点,返回值为布尔值
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+	/*nextUntil() 方法返回 selector 与 stop 之间的每个元素之后的所有同级元素。
+同级元素是共享相同父元素的元素。
+DOM 树：该方法沿着 DOM 元素的同级元素向前遍历。
+注意：如果两个参数都为空，该方法将返回元素之后的所有同级元素（与 nextAll() 方法相同）。
+相关方法：*/
+		$(function(){
+			$("#p2").nextUntil("#p5").css("color","red")
+			//被选元素是#p2之后#p5在这个之前这个范围
+			/***************缩小范围***********************/
+			$("#btn").click(function(){
+				$("#p1").nextUntil("#p6",".pa").css("color","blue")
+				
+				//查找p1至p6之间class=pa的元素
+			})
+		})
+	</script>
+	<body>
+		<p id="p1">11111</p>
+		<p id="p2" class="pa">22222</p>
+		<p id="p3">33333</p>
+		<p id="p4">44444</p>
+		<p id="p5" class="pa">55555</p>
+		<p id="p6">66666</p>
+		<button id="btn">点击查找</button>
+	</body>
+</html>

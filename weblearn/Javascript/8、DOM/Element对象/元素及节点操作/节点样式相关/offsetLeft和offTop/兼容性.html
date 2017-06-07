@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		alert(dv.offsetParent)
+	</script>
+	<!--在IE6/7中：
+	offsetLeft=(offsetParent的padding-left)+(当前元素的margin-left)
+	在IE8/9/10及chrome中
+	offsetLeft=(offsetParent的margin-left)+offsetParent的border宽度）+(offsetParent的padding-left)+当前元素的margin-left
+	在fireFox中：
+	offsetLeft=(offsetParent的margin-left)+(当前元素的margin-left)+(offset
+	Parent的padding-left)-->
+</html>

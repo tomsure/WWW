@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		
+		<br />
+		<br />
+		<br />
+		<button title="aaaa" data-trigger="hover" >顶顶顶顶</button>
+		<!--当鼠标移到元素上的时候触发提示工具-->
+		<button title="aaaa" data-trigger="focus" >顶顶顶顶</button>
+		<!--当元素获取焦点的时候触发提示工具-->
+		<button title="aaaa" data-trigger="click" >顶顶顶顶</button>
+		<!--当点击元素的时候触发提示工具-->
+		<button title="aaaa" data-trigger="	manual	" >顶顶顶顶</button>
+		<!--手动自定义，当元素获取焦点或者被点击的时候触发提示工具，不能同其他值同时设置-->
+		
+	</body>
+	<script type="text/javascript" src="../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('button').tooltip()
+	</script>
+	<!--data-trigger用来设置提示信息触发的方式，值hover foucs，表示怎么触发tooltip，其
+他值为：click、manual。多个值用空格隔开，manual手动不能和其他同时设置。-->
+</html>

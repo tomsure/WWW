@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//注意：属性有兼容性问题，IE6-8使用正常，可以正常获得节点的子节点，不包含空格，而高版本的IE也是包含空格作为一个节点的;例如：
+		window.onload=function(){
+			var w=document.getElementsByName("ul");
+			alert(w.firstChild)
+		}
+		
+	</script>
+	<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var  d=document.getElementById("btn")
+			d.onfocus=function(){
+				alert("我已获取焦点")
+			}
+		}
+	</script>
+	<body>
+		<button id="btn" autofocus="autofocus">看这里</button>
+		<p>这里只设置了button按钮获取焦点时候弹出，但是设置了autofocus属性，所以当页面加载完毕的时候就会执行获取焦点函数</p>
+	</body>
+</html>

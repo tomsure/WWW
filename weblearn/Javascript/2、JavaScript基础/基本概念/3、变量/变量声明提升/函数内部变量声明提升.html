@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//1,js的执行顺序是从上到下执行的；
+	//1，函数内的变量js是根据作用域从内到外开始查询；
+	//2，js词法分析时候检测到带有var 的变量声明后；会将变量声明放到 作用域的最顶端，也就是函数内的最顶端；但是不会把赋值也放到那里；
+	    
+		function ss(){
+			 
+			 alert(a);//这里会弹出undefined；
+			  var  a=2;   
+			
+			alert(a); //这里会弹出2；
+			
+		 }
+		ss()  //第一次弹出undefined是因为变量声明提升的时候，将 var a=2分成了两部分：变量声明和变量赋值；而变量赋值会被提前到函数的最顶端，而变量声明提前后第一个alert（a）前面只有变量声明；却没有赋值，所以会弹出undefined；而第二个alert(a)前面有变量声明和变量赋值，所以会弹出2；
+		
+		
+		
+/********************以上案例可以理解为这样(也可以这样写)*********************/	
+    //js解析器是这样 解析的，所以一下写法以上面是相同效果；
+		function ss(){
+			 var a;    //最前面变量声明
+			 alert(a);//这里会弹出undefined；
+			   a=2;   //变量赋值
+			
+			alert(a); //这里会弹出2；
+			
+		 }
+		ss()
+		
+		
+/***********************覆盖外部的全局变量***********************************/
+      var  a=1;
+      function  s(){
+      	
+      	alert(a);
+      	var a=2;
+      	alert(a)
+      	
+       }
+      s()
+	//以上案例解析：
+	//js在执行的时候,将变量var a=2的变量声明提前了,所以以上表达式可以理解成这样子:
+	var  a=1;
+      function  s(){
+      	var a;
+      	alert(a);//undefined
+      	 a=2;
+      	alert(a)//2
+      	
+       }
+      s();
+      //而js解析器在词法分析过程中第三部是分析变量声明， 会在作用域内部开始向外部查找符合条件的变量声明，如果作用域内找到了符合条件的变量声明则查找 终止，这里第一个alert（a）在查找过成中查找找到了var a这个变量，但是它 未定义，所以弹出undefined，由于已经查找到符合的变量声明，所以不会再向外查找，所以 就不会是弹出1.
+		
+	</script>
+	<body>
+	<p><a href="http://www.bootcss.com/article/variable-and-function-hoisting-in-javascript/">点击查看js变量声明提升的解释</a></p>
+	</body>
+</html>

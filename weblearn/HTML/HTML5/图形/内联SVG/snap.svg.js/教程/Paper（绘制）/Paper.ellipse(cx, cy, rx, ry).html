@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#svg{
+			width: 500px;
+			height: 500px;
+			background: grey;
+		}
+	</style>
+	<body>
+		<svg id="svg"></svg>
+	</body>
+	<script type="text/javascript" src="../../dist/snap.svg.js">
+		
+	</script>
+	<script type="text/javascript">
+		var s=Snap('#svg')
+		s.ellipse(100,200,50,100)
+		
+//		ellipse(x,y,rx,ry)方法用于绘制椭圆,四个参数分别是:
+//		  x:椭圆圆心的x坐标;
+//		  y:椭圆圆心的y坐标;
+//		  rx:椭圆的水平半径;
+//		  ry:椭圆的垂直半径
+	</script>
+</html>

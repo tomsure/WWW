@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv1{
+			width: 400px;
+			background-color: red;
+			height: 200px;
+			position: absolute;
+			left: 30px;
+		}
+		#dv2{
+			width: 150px;
+			height: 150px;
+			background-color: dodgerblue;
+			top: 10px;
+			position: absolute;
+		}
+		/*绝对定位的元素偏移的参照物是他设置了绝对定位的父级元素,例子中dv2设置绝对定位并设置顶部偏移 10px后发现元素距离dv1的顶部偏移了10px,它可以这样设置的前提是dv1也设置了绝对定位,如果元素的父级元素没有设置绝对定位,则元素会继续向上查找明知道找到有绝对定位的元素位置,依次为偏移参照物,如父级元素都没有设置绝对定位,则,元素就会以html作为参照物进行偏移*/
+	</style>
+	<body>
+		<div id="dv1">
+			<div id="dv2">
+			
+		    </div>
+		</div>
+		
+	</body>
+</html>

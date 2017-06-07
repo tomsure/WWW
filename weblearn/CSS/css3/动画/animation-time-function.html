@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			position: absolute;
+			left: 0px;
+		      /*以下是设置动画的名称，动画播放时间，及速度*/
+			animation: divC 5s ease-out;
+			-webkit-animation: divC 5s ease-out;
+			-moz-animation: divC 5s ease-out;
+			
+			
+		}
+		@-moz-keyframes divC{
+			
+			from{ left: 0px;}
+				
+				
+			to{left: 800px;}
+				}
+		@-webkit-keyframes divC{
+			
+			from{left: 0px;}
+				
+				
+			to{left: 800px;}
+				}
+		@keyframes divC{
+			
+			from{left: 0px;}
+				
+				
+			to{left: 800px;}
+				}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+</html>

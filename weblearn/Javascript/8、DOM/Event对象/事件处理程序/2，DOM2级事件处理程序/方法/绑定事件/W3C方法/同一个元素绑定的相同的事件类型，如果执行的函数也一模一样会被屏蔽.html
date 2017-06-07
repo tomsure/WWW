@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<input type="button" name="" id="btn" value="点击弹出" />
+		<script type="text/javascript">
+		
+	var dg=document.getElementById("btn");
+	    function aa(){
+	    	alert('你好')
+	    }
+		
+		dg.addEventListener("click",aa,false)
+		
+        dg.addEventListener('click',aa,false
+        )
+//     addEventListener()方法添加函数的时候可以将已经声明好的函数名称作为第二个参数，这样也会添加上函数，但是如果是同一个元素绑定相同的事件函数传入的是函数名的话就会屏蔽掉重复的语句，例如上面两个事件处理程序都绑定了click事件，且都传入了函数aa，第二个相同的就会被忽略，
+//但是如果传递的是两个相同的匿名函数的话就不会被屏蔽，因为在函数里面匿名函数写的完全相同也代表两个函数
+        
+	</script>
+	</body>
+</html>

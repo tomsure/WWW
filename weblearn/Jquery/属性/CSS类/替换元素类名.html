@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.p1{ color:red;}
+		 .p2{font-weight: 900; }
+		
+		
+	</style>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.1/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$("#btn").click(function(){
+				$("p").removeClass("p1");
+				$("p").addClass("p2")
+				
+			})
+			
+		})
+	</script>
+	<body>
+		<p class="p1">替换元素类名的方法是删除一个类名在添加另外一个类名</p>
+		<button id="btn">点击测试</button>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			border-radius: 100px;
+			position: absolute;/*设置绝对定位*/
+			left: 0px;/*原始位置0px*/
+			background-color: red;
+			animation: divC 5s;
+			-webkit-animation: divC 5s;
+			text-align: center;
+			
+		}
+		#p1{position: relative;top: 150px;}
+		/*开始设置动画*/
+		@keyframes divC{
+			from{left: 0px;}
+			to{left: 500px;}
+		}
+		@-webkit-keyframes divC{
+			from{left:0px ;}
+			to{left: 500px;}
+		}
+		@-moz-keyframes name{
+			from{}
+			to{}
+		}
+	</style>
+	<script type="text/javascript">
+	/*这里用DOM2级事件处理程序绑定事件     这里这个事件是动画开始播放时候的事件*/
+	window.onload=function(){
+	var 	dd=document.getElementById("dv")
+	var     p1=document.getElementById("p1")
+	
+	     /*以下是动画开始*/
+	var fnStart=function(){p1.innerHTML="动画开始播放了"}
+		dd.addEventListener("animationstart",fnStart);
+	    dd.addEventListener("webkitAnimationStart",fnStart)
+	    
+	     /*以下是动画结束*/
+  var fnEnd=function (){ p1.innerHTML="动画播放结束了" }
+		dd.addEventListener("animationend",fnEnd)
+	    dd.addEventListener("webkitAnimationEnd",fnEnd)
+		
+		
+		
+	}
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<p id="p1"></p>
+	</body>
+</html>

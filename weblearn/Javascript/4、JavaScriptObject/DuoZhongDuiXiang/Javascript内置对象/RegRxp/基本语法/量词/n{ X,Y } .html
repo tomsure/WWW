@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//n{X,Y}表示最少匹配X个n，最多匹配Y个n；
+		var str='s1d1h1 c1m1sd1f x1s1h11n1f';
+		var reg=/[a-z]{2,3}/;
+		document.write(reg.test(str)+'</br>')
+		
+	//正则表达式中的模式字符串是与被匹配的整条字符串进行匹配的，量词n{X,Y}，就表示某个字符串在str中出现最少X次，最多Y次，是在整条字符串中匹配对比的，例如这里，正则规定是小写字母出现两到三次，是指连续的字母出现两到三次，这里字符串最开始和结束都没有连续的，而只有中间有，这样也就符合要求，test()方法测试就返回true；
+	
+	//注意：需要连续出现
+	
+	
+	
+//	在使用这种去区间量词的时后str中如果超过的话也会是true,因为没有限定结尾 ，没有设置结尾的话他可以匹配其中的一段
+    var str1='googleeeeeeeeeee';
+    var reg1=/google{4,8}///这里没有设置结尾就会返回true；
+    var reg2=/google{4,8}$/
+    document.write(reg1.test(str1)+'</br>')
+    document.write(reg2.test(str1))//这样的话e超过8次就会返回false，因为e字符串超过了8次；
+
+	
+	
+	
+	
+	
+	
+       
+	</script>
+</html>

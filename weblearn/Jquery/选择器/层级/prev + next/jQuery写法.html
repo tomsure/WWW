@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	<script>
+	//相邻兄弟选择器，选取一个元素后紧接着的下【一个】元素
+	//prev:任何有效选择器；
+	//+next紧接着前面的选择器的一个选择器
+		$(function(){
+			$("#dv+div").css("color","red")
+			//这里#dv后面紧接着的第一个div元素内的文字是iiiiii所以这个div内的文字变为红色
+			
+		})
+	</script>
+	<body>
+		<div id="dv">
+			hhhhhh
+		</div>
+		<div id="">
+			iiiiiiii
+		</div>
+		<div id="">
+			kkkkkkkkkk
+		</div>
+	</body>
+</html>

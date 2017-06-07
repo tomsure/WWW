@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击获取</button>
+		<div id="dv">
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js"> 
+		
+	</script>
+	<script type="text/javascript">
+		$('#btn').click(function(){
+			$.ajax({
+				url:'demo4.php?'+Math.random(),
+				type:'get',
+				success:function(data){
+					var result=eval(data);//将返回的数据解析成数组
+					//解析成数组后由于是数组内含有json格式的数据，且每个json有相同的tile和相同的time，如果想获取到数组中的某一个值，则输入这个数组+下标.键值对的键，如
+					//result[0].tltle,这样就获取到第一组json中的title，
+					
+					/*result[0].title;
+					result[1].tltle;
+					result[2].title*/
+					
+				//每一组中都有title和time，所以可以通过遍历的方式，获取所有的值，在数据量很大的时候必须使用循环遍历才能获取，，否则数据量太大，无法一一直接列出	
+				
+				for(var i=0;i<result.length;i++){
+					$('ul').append('<li>'+result[i].title+'<em>'+result[i].time+'</em>'+'</li>')
+				}
+				//这里使用for循环每一个返回的通过转换成数组的data数据，在循环中获取每一数组元素的title属性值，并且使用jquery的append()方法追加一个li，并将tltle的属性值也追加到li里面，这样一来ul元素就会多出子元素li，每个li里面包含一条title的值，同样的方法，再循环中再追加一个result[i].time,就可以同时获取到时间；
+				//这里讲time和title同时追加到ul中就会同时显示在 页面上
+				}
+			})
+		})
+		
+		//获取新闻列表步骤：
+//		1,获取远程返回的数据,并解析成数组;
+//		2,通过for循环将新闻列表的title和time同时追加到ul列表中。
+		
+	</script>
+</html>

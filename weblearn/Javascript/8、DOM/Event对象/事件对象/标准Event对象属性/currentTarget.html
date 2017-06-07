@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	  
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		   dv.onclick=function(e){
+		   	  alert(e.currentTarget.id)
+		   }
+		
+		
+		
+		
+		
+		
+//		event.currentTarget指的是绑定事件的元素,这个属性和target的区别是currentTarget指的是绑定事件的元素,而target指的是触发事件的元素,如果在事件委托中就可以看出区别，事件委托中，触发事件的元素不一定是绑定事件的元素
+	</script>
+</html>

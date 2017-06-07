@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			<p>你好</p>
+			<p>还好</p>
+			<p>嗯</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		
+		
+		/********************封装删除空白文本节点的函数******************/
+		  function removeNoNode(node){
+		  
+		  	for(var i=0;i<node.length;i++){
+		  	if(node[i].nodeType===3&&/^\s+$/.test(node[i].nodeValue)){
+		  	    node[i].parentNode.removeChild(node[i])
+		  	    //用符合上面条件的空文本节点的父节点删除这些子节点 
+		  	                                      }
+		  	
+                                     }
+		  	
+		               return node;  //最后返回子节点数组
+		                            }
+		 alert(removeNoNode(dv.childNodes).length)
+		 
+		 
+//		这里的用法是先判断出空文本节点，然后让这些空文本节点的父节点删除掉这些空文本子节点，最后返回子节点，就得到没有空文本的子节点
+		 
+		 
+	</script>
+</html>

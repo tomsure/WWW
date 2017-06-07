@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+	document.onclick=function(){
+	$("p").add(document.getElementsByTagName("span")[0]).css("background-color","yellow");
+	}
+	
+});
+</script>
+
+</head>
+<body>
+<h1>欢迎</h1>
+<p>一个P元素。</p>
+<p>另一个P元素。</p>
+<span>一个span元素。</span>
+<span>一个span元素。</span><br><br>
+<div>本示例为第一个span元素（下标0），添加与现有的P元素相同的CSS样式。</div>
+
+</body>
+</html>

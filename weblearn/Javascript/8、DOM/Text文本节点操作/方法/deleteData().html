@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+			<div id="dv">中华人民共和国</div>
+		<button id="btn">点击插入</button>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		  var btn=document.getElementById("btn");
+		  btn.onclick=function(){
+		  	dv.childNodes[0].deleteData(1,5)
+		  }
+//		  deleteData()方法用于删除文本节点的字符,两个参数代表删除的字符起始下标位置
+	</script>
+</html>

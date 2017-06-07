@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//改变函数中this的指向
+		$(function(){
+			function show(){
+				alert(this)
+			}
+			show()
+			//当前的this指的是window
+		/****************改变this指向***********************/	
+			function ss(){
+				alert(this)
+			}
+			$.proxy(ss,document)()
+			//这里将this指向改变为指向document，注意书写方法$.proxy()括号里面写函数名和要指向的DOM对象，括号后面再写一对括号表示函数执行
+			
+			/*************传参**********************/
+			  function dd(n1,n2){
+			  	alert(this)
+			  	alert(n1);
+			  	alert(n2);
+
+			  }
+			     $.proxy(dd,document)(3,4)
+			     
+			     function dd(n1,n2){
+			  	alert(this)
+			  	alert(n1);
+			  	alert(n2);
+
+			  }
+			     $.proxy(dd,$("body"),3,4)()
+			     //可以将参数写在proxy()括号里面自后边，还可以前面括号传一个后面括号传一个			  
+			     //有时候只需要调用函数不需要执行，所以这个时候参数要写在第一个括号里面
+		})
+	</script>
+	<body>
+		
+	</body>
+</html>

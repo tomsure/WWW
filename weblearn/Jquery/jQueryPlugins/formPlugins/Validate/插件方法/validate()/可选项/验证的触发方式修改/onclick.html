@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.myerror{
+			color:red
+		}
+	</style>
+	<body>
+		<form action="123.html" method="post" id="form">
+			<fieldset>
+				<p id="info"></p>
+			<p>用户名: <input type="text"  name="user" id="user" value="" />*</p>      
+			<p>密码: <input type="text"  name="password" id="password" value="" />*</p>      
+			<p>确认密码: <input type="text"  name="confirm_password" id="confirm_password" value="" />*</p>      
+			
+			
+			<input type="submit" value="点击提交"/>
+			</fieldset>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../../Validate/库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	},
+			    	
+			    	confirm_password:{
+			    		required:true,
+			    		 equalTo:"#password"
+			    
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	},
+			    	
+			    
+                    confirm_password:{
+                    	required:"请再次输入密码",
+                    	equalTo:"两次密码不一致"
+                    }
+			    	
+			    },
+                focusInvalid:false
+                //插件focusInvalid用于设置当验证失败错误提示信息出现后，第一个错误元素是否获取焦点，默认是true，就是第一个错误元素会获取焦点，设置为false
+//              的话就不会获取焦点
+
+		})
+		})
+
+	</script>
+</html>

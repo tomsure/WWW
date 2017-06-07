@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	
+	var a=new Object();
+	   a.name=21;
+	   function fn(b){
+	   	b.name=20;//这里添加了同名属性，实际上是修改了和 外部对象共同所引用对象属性值的修改
+	   	b.ww=30
+	   	
+	   }
+	  fn(a)
+	  alert(a.name)//20
+	  alert(a.ww)//30
+//	当把对象传递给函数之后,函数参数和对象共同指向一个对象,此时给函数参数添加一个属性,外部的对象也会被添加相同的属性;
+//	 当给函数参数添加了和对象同名的属性的时候,实际是对他们共同指向的对象同名属性值的修改,所以,外部的对象的该属性值也会被修改
+</script>
+</html>

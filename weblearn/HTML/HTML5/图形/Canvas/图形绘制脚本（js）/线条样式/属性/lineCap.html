@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	
+		Canvas{ border: 1px solid red;}
+		
+	</style>
+	<script type="text/javascript">
+	/*lineCap 属性设置或返回线条末端线帽的样式。注意："round" 和 "square" 值会使线条略微变长。*/
+		window.onload=function(){
+			var ss=document.getElementById("myCanvas").getContext("2d");
+			ss.strokeStyle="#006400";
+			ss.lineWidth=80
+			ss.moveTo(60,50);
+			ss.lineTo(60,150);
+			ss.lineCap="square" //设置线条起始和结束两端的样式
+			ss.stroke();
+		var s=document.getElementById("Canvas").getContext("2d");
+			s.strokeStyle="#006400";
+			s.lineWidth=80
+			s.moveTo(60,60);
+			s.lineTo(60,150);
+			s.lineCap="butt" //设置线条起始和结束两端的样式
+			s.stroke();
+		var s1=document.getElementById("Canvasa").getContext("2d");
+			s1.strokeStyle="#006400";
+			s1.lineWidth=80
+			s1.moveTo(60,60);
+			s1.lineTo(60,150);
+			s1.lineCap="round" //设置线条起始和结束两端的样式
+			s1.stroke();
+						
+			
+			
+		}
+	</script>
+	<body>
+	<canvas id="myCanvas" width="300" height="300"></canvas>
+	<canvas id="Canvas" width="300" height="300"></canvas>
+	<canvas id="Canvasa" width="300" height="300"></canvas>
+	</body>
+</html>

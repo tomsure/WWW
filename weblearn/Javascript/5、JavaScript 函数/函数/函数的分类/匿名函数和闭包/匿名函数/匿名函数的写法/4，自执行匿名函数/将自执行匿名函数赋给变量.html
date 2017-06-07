@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var a=(function(){
+			console.log(2)
+		})()
+		
+		  console.log(a)  //undefined
+		  
+		  var b=(function(){
+		  	console.log(3)
+		  	return 44
+		  })()
+		   console.log(b) //44
+		   
+		   
+//		   如果将立即执行的匿名函数赋给变量,如果在函数体内有return返回值,在这个函数执行完毕后,获取变量名,返回的变量的值就是匿名函数内return
+//返回的值,如果匿名函数里面没有return返回值,则获取变量名返回的是undefined
+	</script>
+</html>

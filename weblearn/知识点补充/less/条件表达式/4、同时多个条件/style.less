@@ -1,0 +1,24 @@
+.style(@width)when(@width>10px){
+    
+    width: 100px;
+    height: 100px;
+    
+    
+}
+
+.style(@width)when(@width<10px){
+    background-color: red;
+}
+
+.style(@width){
+    background-color: blue;
+}
+
+
+div{
+    .style(20px)
+}
+
+//less的条件语句可以同时匹配多个条件，如果多个条件匹配，则这些匹配的条件下的样式都会生效
+
+

@@ -1,0 +1,11 @@
+@a:rgb(255,200,255);
+@b:rgb(100,255,200);
+div{
+    width: 100px;
+    height: 100px;
+    background:@a;
+}
+
+div:hover{
+    background-color: screen(@a,@b); 
+}

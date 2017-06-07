@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<div id="dv">
+		<p id="p1">段落1</p>
+		<p id="p2">段落2</p>
+		</div>
+		<script type="text/javascript">
+		var q=document.getElementById("dv");//获取元素（父节点）
+		var w=document.getElementById("p1");//获取子节点
+		q.removeChild(w)//删除子节点
+		alert(dv.children.length)//弹出1，说明子节点p1已经被删除
+	</script>
+	</body>
+</html>

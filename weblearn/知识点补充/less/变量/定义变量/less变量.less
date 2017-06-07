@@ -1,0 +1,67 @@
+//#dv1{
+//  width: 100px;
+//  height: 100px;
+//  background-color: blueviolet;
+//  float: left;
+//  margin: 10px;
+//
+//}
+//#dv2{
+//  width: 100px;
+//  height: 100px;
+//  background-color: red;
+//  float: left;
+//  margin: 10px;
+//
+//}
+//#dv3{
+//  width: 100px;
+//  height: 100px;
+//  background-color: green;
+//  float: left;
+//  margin: 10px;
+//
+//}
+
+
+@width:100px;
+@height:100px;
+@margin:10px;
+
+
+
+#dv1{
+    width: @width;
+    background-color: red;
+    height: @height;
+    margin: @margin;
+}
+#dv2{
+    width: @width;
+    height: @height;
+    background: blue;
+}
+#dv3{
+    width: @width;
+    height: @height;
+    background-color:salmon;
+}
+
+//less的变量可以用来重复使用，在要设置多个元素的共同样式对的时候，可以声明一变量，变量名使用"@"符号开头，然后在元素中如果要用到这个样式的时候，就可以直接调用这个变量名就可以了
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//在css中，不同元素会遇到一些公用的样式，但这些元素又会有不同的样式，如果全部使用CSS选择器的话就会达不到效果，所以可以将所需要的样式声明成为变量，在变量中设置样式，然后在CSS样式中引入这个变量即可

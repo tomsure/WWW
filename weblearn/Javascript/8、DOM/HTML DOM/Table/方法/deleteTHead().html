@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="1" id="tb">
+			<caption>人员表</caption>
+			<thead>
+				<tr>
+					<td>名称</td>
+					<td>年龄</td>
+				</tr>
+				
+			</thead>
+			<tbody>
+				<tr><td>你好</td><td>Data</td></tr>
+			<tr><td>Data</td><td>Data</td></tr>
+			</tbody>
+			 <button id="btn">点击删除表头</button>
+		</table>
+	</body>
+	<script type="text/javascript">
+		var tb=document.getElementById("tb")
+	   var btn=document.getElementById("btn")
+	   btn.onclick=function(){
+	   	  tb.deleteTHead()
+	   }
+//   deleteTHead()方法用于删除table表格中的thead元素	    
+  
+
+	  
+	</script>
+</html>

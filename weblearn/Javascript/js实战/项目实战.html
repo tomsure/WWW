@@ -1,0 +1,30 @@
+<html>
+	<meta name="" content="" charset="utf-8"/>
+<head>
+<title>return验证测试</title>
+<script language="javascript">
+function Login_Click()
+{
+if(document.form1.UsName.value=="")
+{
+alert('用户名为空');
+
+}
+return;//这里需确认return用法是否正确
+
+if(document.form1.UsPwd.value!="")
+{
+alert('密码为空');
+}
+alert('登陆成功');
+}
+</script>
+</head>
+<body>
+<form name="form1">
+<input type="text" name="UsName" >用户名
+<input type="password" name="UsPwd">密码
+<input type="button" name="Login" onClick="Login_Click();" >登陆
+</form>
+</body>
+</html>

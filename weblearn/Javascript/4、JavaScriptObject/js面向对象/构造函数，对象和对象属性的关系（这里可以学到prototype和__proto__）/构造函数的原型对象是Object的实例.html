@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		function Cat(){}
+		var bosi=new Cat();
+		document.write(Cat.prototype)//构造函数Cat的原型对象
+		document.write(Cat.prototype.__proto__==Object.prototype);//true
+		//构造函数的原型对象也是一个实例对象，他是Object的实例对象
+		//构造函数的原型对象也有一个指针属性__proto__，指向Object.prototype，Object是构造函数原型对象的原型对象的构造函数，例如：
+		alert(Cat.prototype.__proto__.constructor==Object)
+		
+		
+		
+		
+		document.write(Cat.prototype instanceof Object)//true
+		
+		//这里也可以证明
+		
+		
+	</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+//只有IE浏览器支持
+function show_popup()
+{
+var p=window.createPopup();
+var pbody=p.document.body;
+pbody.style.backgroundColor="lime";
+pbody.style.border="solid black 1px";
+pbody.innerHTML="This is a pop-up! Click outside the pop-up to close.";
+p.show(150,150,200,50,document.body);
+}
+</script>
+</head>
+
+<body>
+<button onclick="show_popup()">Show pop-up!</button>
+<p><b>Note:</b> The createPopup() method only works in IE!</p>
+</body>
+
+</html>

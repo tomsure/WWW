@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<li id="li1">1</li>
+		<li id="li2">2</li>
+		<li id="li3">3</li>
+		<li id="li4">4</li>
+		<li id="li5">5</li>
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript" src="../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		   $(function(){
+		   	$('#btn').on('click',function(){
+		   		$('li').each(function(index ,ele){
+		   		     
+		   			if(index==2){
+		   				return false
+		   			}  //当index的值为2的时候终止循环遍历
+		   			console.log(index)  //打印出当前下标
+		   			console.log(ele.id)  //打印出当前的元素id
+		   			$(this).text('你好') 	//只会打印到index==1的元素
+		   		})
+		   	})
+       })
+//		   each()方法用于遍历数组或者对象，类似原生js里的for...in,里面的参数是一个函数,函数有两个参数,第一个参数是循环的对象的当前index下标,第二个参数就只的是当前被遍历到的对象,例如DOM对象或者数组元素
+//      当在each()方法中使用return true表示循环继续,如果使用return false,则会终止整个循环
+	</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	*{border:1px solid red;height:auto ;width:auto ;}
+		div{width:200px ;height:200px ;background-color:red ;margin:10px ;}
+		span{width:100px ;height:100px ;background-color:green ;display: block;}
+	</style>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		//event.relatedTarget 属性返回当鼠标移动时哪个元素进入或退出。
+		//
+		$(function(){
+			$("div").bind("mouseout",function(e){
+				alert(e.relatedTarget)
+				//它返回的是移出到或者进入到的元素例如这里绑定的是mouseout事件，当鼠标从div上移动到span的时候，返回的是span，因为他移出到了span，当从div移动到div外面的时候，返回的是html，因为他移出到了html
+				//注意，要看绑定的元素，因为这里绑定的是div的鼠标事件，所以只有鼠标指针放到div的时候才会生效，当鼠标指针从div开始移出的时候才会触发事件，所以刚开始鼠标从别的地方移动到div是不会出发事件
+				
+			})
+		})
+	</script>
+	<body>
+		<div id="">
+			<span id="">
+				
+			</span>
+		</div>
+	</body>
+</html>

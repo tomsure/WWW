@@ -1,0 +1,6 @@
+
+
+root@tomsure:/home/tomsure# sudo passwd root   //开通命令
+Enter new UNIX password:   //设置root密码
+Retype new UNIX password:     //再次输入
+passwd: password updated successfully   //设置成功

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var a='[1,2,3,4]';
+		document.write((typeof a)+'</br>');//a现在是一个字符串
+		var b=eval(a);//使用eval()方法转换
+		document.write((typeof  b)+'</br>');//b现在是一个对象
+		document.write((b instanceof Array) +'</br>');//b现在是一个数组对象
+		document.write(b[0])//可以获取到数组的元素
+		//可以使用全局函数eval()方法将字符串转换成数组
+		//eval()函数还有其他用途,它可以将字符串解析成js代码，例如可以将数组格式的字符串转换成数组，将其他和js格式相关的字符串，转换成js的语句
+	</script>
+</html>

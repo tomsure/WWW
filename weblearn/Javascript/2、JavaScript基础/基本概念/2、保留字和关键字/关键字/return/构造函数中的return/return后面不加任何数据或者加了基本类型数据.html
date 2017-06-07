@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	//在构造函数中，如果出现return，后面没有加任何数据，表示返回该构造函数创建的对象实例,例如：	
+	
+		function Perosn(name,age){
+			this.name=name;
+			this.age=age;
+			return //返回的是new Peerson(name,age)
+		}
+		var person1=new Perosn('tom');
+		alert(person1.name)
+	
+	//如果构造函数中的return返回的是基本数据类型,则会被忽略,这些基本类型的数据会被略,仍然会返回新实例对象,例如:
+	function Dog(name,age){
+		this.name=name;
+		this.age=age;
+		return 123;
+	}
+	 var dog=new Dog()
+	 document.write(dog instanceof Dog)//true;
+	 //返回true，说明new Dog()这个新实例是构造函数中的return返回的，而没有返回这个基本类型数据，如果返回基本类型数据的话，dog的值应该是123，这一点跟在普通函数中是不一样的，例如：
+	    function aa(){
+	    	return 345;
+	    }
+	       var bb=aa();
+	       alert(bb)//此时函数返回的就是这个基本数据345；
+	 
+	 
+	 
+	 
+	
+	
+	
+	
+	
+		
+	</script>
+</html>

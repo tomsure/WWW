@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body> 
+
+     <video width="" height="" id="vod" controls="controls">
+     	<source src="../音视频资源文件/Intermission-Walk-in_512kb.mp4" type="video/mp4"></source>
+     	<source src="../音视频资源文件/johann_sebastian_bach_air.ogg" type="video/ogg"></source>
+     	
+     </video>
+     <button id="btn">测试加载状态</button>
+     <button id="btn1">检测视频总时长</button>
+</body> 
+<script>
+  var vod=document.getElementById("vod");
+     var btn=document.getElementById("btn");
+     var btn1=document.getElementById("btn1")
+     btn.onclick=function(){
+     	alert(vod.readyState)
+     } //获取加载状态
+    btn1.onclick=function(){
+    	alert(vod.duration)
+    }  //获取总时长
+    
+    //duration属性用于返回视频的总时长，由于视频在页面打开的时候需要加载，所以不能够立即返回这个属性，可以利用readyState属性测试加载状态，当加载到readyState的值为1开始（当等于1或者大于1）的时候，就可以获取到总时长了
+</script>  
+</html>

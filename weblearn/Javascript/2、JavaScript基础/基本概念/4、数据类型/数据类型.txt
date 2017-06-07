@@ -1,0 +1,7 @@
+1，数组型：例如var a=[1,2,3,4,5，]；输出时候下标从零开始，0-5....l例如输出 document.write(a[2]);则浏览器显示的是3.因为前面的var声明变量中1-5这几个数字是下标0-4开始的。例子
+  例1 var a =[1,2,3,4,5,];
+       document.write(a[2]);
+	   浏览器显示为3.
+ 例2  var a =["xiaoming"，"xiaoli","xiaohuang","xiaozhong"];
+       document.write(a[2]);
+	   浏览器显示的是：xiaohuang。

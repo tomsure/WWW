@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//把窗口的左上角移动到一个指定的坐标。
+	//功能：将窗口移动到指定的指定坐标(x,y)处。 
+	Oopen=function(){
+  de=window.open( 'http://www.baidu.com','_bank','width=200px,height=200px')
+
+	}
+	function mm(){
+		de.moveTo(300,300)//移动窗口，注意里面直接写数字
+		de.focus()//获取焦点，这样点击移动的时候，可以看得到窗口
+	}
+	</script>
+	<body>
+		
+	
+	<div id="" style="width: 200px;height: 200px;">
+		
+	</div>
+			
+	<button onclick="Oopen()">点击打开窗口</button>
+		<button onclick="mm()">点击移动窗口</button>
+	</body>
+</html>

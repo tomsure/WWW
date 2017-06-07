@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		function aa(){
+			alert(1)
+		}
+		btn.attachEvent('onclick',aa);
+		btn.attachEvent('onclick',aa)
+//		attachEvent()方法不论是匿名函数还是有名的函数,都无法屏蔽,如果同一个同时绑定两次相同的事件就会执行两次,不会屏蔽
+	</script>
+	
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	  *{
+	  	padding: 0px;
+	  	margin: 0px;
+	  }
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			
+		}
+		#dv1{
+			width: 100px;
+			height: 100px;
+			padding: 10px;
+			background-color: blue;
+			border: 1px solid red;
+		}
+	
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button id="btn">获取dv的clientWidth</button>
+		<div id="dv1">
+			
+		</div>
+		<button id="btn1">获取dv1的clientWidth</button>
+		
+		
+		
+		
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		var dv1=document.getElementById("dv1")
+		 var btn=document.getElementById("btn")
+		 var btn1=document.getElementById("btn1")
+		 btn.onclick=function(){
+		 	alert(dv.clientWidth)
+		 	
+		 }
+		 btn1.onclick=function(){
+		 	alert(dv1.clientWidth)
+		 }
+//		  clientWidth指的是元素可视区域的宽度,也就是:样式宽+padding宽的和，这里dv1设置了100px的宽度，左右各10px的padding，和各1px的边框，这里点击按钮的时候，得到的值是120，说明clientWidth就是width+padding的值，不包含border，margin和垂直滚动条（如果有）的宽度，如果padding没有设置，则clientWidth就等于width的值
+
+
+    
+	</script>
+</html>

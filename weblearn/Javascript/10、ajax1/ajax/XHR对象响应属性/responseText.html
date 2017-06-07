@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var XHR;
+		if(window.XMLHttpRequest){
+			XHR=new XMLHttpRequest()//如果浏览器支持XMLHttpRequest对则创建XMLHttpRequest
+		}else{
+			XHR=new ActiveXObject('Microsoft.XMLHTTP')//如果不支持则创建ActiveXObject对象
+		}
+		XHR.open('GET','../liziURL/四号线需求.txt',false);
+         XHR.send()
+		alert(XHR.responseText)
+		//responseText表示响应的主体文本
+	</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	
+	   <video  controls="controls"  id="vod">
+	   	<source src="../音视频资源文件/Intermission-Walk-in_512kb.mp4"></source>
+	   	<source src="../音视频资源文件/johann_sebastian_bach_air.ogg"></source>
+	   </video>
+	   <button id="btn">获取媒体地址</button>
+	
+	</body>
+	<script type="text/javascript">
+		var vod=document.getElementById("vod");
+		   var btn=document.getElementById("btn");
+		   btn.onclick=function(){
+		   	alert(vod.currentSrc)
+		   }
+		   
+//		  currentSrc属性已字符串形式返回媒体的地址
+		  
+	</script>
+</html>

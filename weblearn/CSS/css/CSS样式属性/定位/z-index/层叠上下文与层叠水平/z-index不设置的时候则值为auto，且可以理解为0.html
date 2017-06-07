@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width:150px;
+			height: 150px;
+			
+			
+		}
+		#dv{
+			background-color: red;
+			position: relative;
+		}
+		#dv1{
+			background-color: blue;
+			position: absolute;
+			top: 60px;
+			left: 40px;
+			z-index: -30;
+		}
+		/*上面例子可以看到,dv1设置了z-index,而dv没有设置,此时dv1的z-index为负值,但是dv覆盖了dv1,这是因为当元素设置了定位后,如果不设置z-index的话,则就是z-index=auto,也就会z-index=0,而0大于-30所以他的值大于dv1的z-index的值,所以 dv1被覆盖*/
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<div id="dv1">
+			
+		</div>
+	</body>
+</html>

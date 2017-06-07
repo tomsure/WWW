@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		.aa { width: 100px;height: 100px;background-color: red;}
+		.bb { width: 200px;height: 200px;background: darkmagenta;border-radius: 100px;}
+	</style>
+	 
+	<body>
+		<div class="aa">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(document ).click(function(){
+			$('div').switchClass('aa','bb',1000)
+//			这里给div删除aa类名,添加bb类名,并执行动画时间为1000ms
+		})
+		
+		
+//		当动画样式改变时，为匹配的元素集合内的每个元素添加和移除指定的 Class。意思就是当方法执行的时候删除指定的class名称，并添加另一个class名称
+   
+//     switchClass()方法的参数:
+//     1,removeClass:  要删除的class名,
+//     2,addClass:要添加的class名,
+//     3,options:只的是特效方法中通用的值,详细可查看菜鸟教程介绍
+//     
+       
+       
+
+
+
+	</script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv1{
+			width: 100px;height: 100px;background-color: red;
+		}
+		.dv2{
+			width: 300px;
+			height: 300px;
+			border: 3px solid black;
+		}
+	</style>
+	<body>
+			<input type="text" name="t1" id="t1" value="" />
+		<div class="dv1" id="dv1" draggable="true">
+			
+		</div>
+		<div class="dv2" id="dv2">
+			
+		</div>
+	
+	</body>
+	<script type="text/javascript">
+		var dv1=document.getElementById("dv1");
+		var dv2=document.getElementById("dv2")
+		var t1=document.getElementById("t1")
+		dv1.ondragstart=function(ev){
+			var ev=ev||window.event;
+			
+			ev.dataTransfer.setData('name','hello');
+            
+            ev.dataTransfer.effectAllowed='all'
+//          effectAllowed属性用于设置元素拖动的时候鼠标光标的形状
+			this.style.background='green'
+		}
+		//开始拖动后背景颜色变成绿色
+         dv1.ondragend=function(ev){;
+         	var ev=ev||window.event;
+         	
+         	this.style.backgroundColor='red'
+         	
+         }
+         
+        var i=0;
+         dv1.ondrag=function(){
+         	t1.value=i++;
+        
+         };
+         dv2.ondragenter=function(){
+         	this.style.background='blue'
+         }
+         dv2.ondragover=function(ev){
+         	ev.preventDefault()
+         	ev.dataTransfer.dropEffect='copy'
+         }
+        dv2.ondrop=function(ev){
+        	this.style.background='white';
+        	alert(ev.dataTransfer.getData('name'))
+        }
+        
+//    当effectAllowed的值设为all的时候,dropEffect可以设置设置任意值，drop都会触发，只不过设置标准中dropEffect中几个值的话，就会显示相应的图标，如果随便设置一个字符串的话，就只会显示一个虚线方块
+	</script>
+	
+</html>

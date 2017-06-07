@@ -1,0 +1,14 @@
+@Odiv:#dv;   //这里的Odiv只是一个变量名称，不表示其他意思
+@{Odiv}{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+
+//变量作为选择器就是声明一个变量，变量的值就是CSS选择器，在使用的时候，使用@{变量名称}的方式，再在后面使用大括号，和CSS一样设置CSS样，上面的设置编译后的结果如下：
+//    #dv{
+//         width: 100px;
+//         height: 100px;
+//         background-color: red;
+//         }

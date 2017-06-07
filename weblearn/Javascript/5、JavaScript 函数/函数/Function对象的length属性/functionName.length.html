@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function a(f,r,u,o){
+			
+			document.write(a.length);
+			alert(a.length===a.arguments.callee.length)
+			
+			
+		}
+		
+		a()//弹出true；
+		
+		//1，a是一个Function对象；
+		//2，a.length指的是函数声明的时候传递的参数的长度，也就是形参的长度；
+		//3，a.length与函数内的arguments.length相同，
+	</script>
+</html>

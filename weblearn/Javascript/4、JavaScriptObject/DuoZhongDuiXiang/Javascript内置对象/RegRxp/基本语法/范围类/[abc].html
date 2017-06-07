@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		[abc]表示方括号里面任意一个字符串可以与str进行匹配就返回true
+
+    var str='xmwhfx iehrgcm semirg ermcje ejrg'
+   
+     var reg=/m[wic]/g;
+     document.write(reg.test(str)+'</br>');//true
+     document.write(str.match(reg)+'</br>')//mw,mi,mc都与之匹配
+     
+     var str1='1abc 2adc 3dec 4wegdc 5defc 6adadc';
+     var reg1=/[adf]c/g
+     var  str1=document.write(str1.match(reg1))
+     //这里str1里6段字符串都与c连着，而正则表达式里面规定需要a、d、f三个中任意一个都可以匹配。使用全局匹配后就能匹配到所有的字符串，分别为2开头、4开头、5开头、6开头额字符串
+     
+     
+     
+
+	</script>
+</html>

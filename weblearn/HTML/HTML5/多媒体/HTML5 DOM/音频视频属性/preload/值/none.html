@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+	   <video  controls="controls" id="vod" >
+	     <source src="../../../音视频资源文件/mov_bbb.mp4"></source>
+	   
+	   </video>
+	   
+	 <button id="btn">循环播放</button>
+	
+	</body>
+	<script type="text/javascript">
+
+var vod=document.getElementById("vod");
+     vod.preload='none'
+//   none属性表示页面加载的时候不加载视频相关内容，用狐火浏览器可以测试到，当设置为none的时候，页面只会显示视屏界面不会显示视频内容和播放的静止画面
+	</script> 
+</html>

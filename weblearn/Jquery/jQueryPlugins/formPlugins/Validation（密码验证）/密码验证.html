@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post" id="form">
+			<ol class="myerror"></ol>
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>密码: <input type="text"  name="password" id="password" value="" />(必填)</p>
+			<div class="password-meter">
+		<div class="password-meter-message"> </div>
+		<div class="password-meter-bg">
+			<div class="password-meter-bar"></div>
+		</div>
+	</div>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../Validate/库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	},
+			    	email:{
+			    		required:true
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	},
+			    	email:{
+			    		required:"密码不得为空"
+			    	}
+			    },
+			    errorLabelContainer:"ol.myerror",
+			    wrapper:"li"
+
+			   
+			   
+		})
+		})
+
+	</script>
+</html>

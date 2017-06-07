@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function (){
+			function aa(){
+				alert(1) 
+			}
+			function bb(){
+				alert(2)
+			}
+			$.queue(document,'q1',[aa,bb])  //添加队列函数 
+			$.dequeue(document,'q1')  //清除队列函数；
+			
+//			$.dequeue()方法用于将$.queue()方法添加的队列函数中的第一个函数删除,并执行这个函数,删除队列函数相当于是数组中的shift()方法,将数组中的第一个元素删除(因为$.queue()方法就是添加队列函数,形成一个数组)；
+ //         $.dequeue方法每执行一次就删除队列中的第一个函数，并执行删除的这个函数上面例子中执行了一次，则就会删除aa这个函数并执行aa，所以就会弹出1；
+            $.dequeue(document,'q1')
+          // 函数aa删除后bb就变成了第一个函数，所以在执行的时候，就会删除bb，并执行它。  
+			
+		})
+	</script>
+	<body>
+		
+	</body>
+</html>

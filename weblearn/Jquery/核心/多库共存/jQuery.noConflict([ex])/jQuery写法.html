@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{ width:100px ;height:100px ;background-color: red;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+	   var jQ=$.noConflict();  //声明一个变量，使用别的符号代替$符号
+		jQ(function(){
+			jQ("#btn").click(function(){
+				jQ("div").css({width:"200px",height:"200px"})
+				
+			})
+		})
+	</script>
+	<body>
+		<div id="">
+			
+		</div>
+		<button id="btn">点击测试</button>
+	</body>
+</html>

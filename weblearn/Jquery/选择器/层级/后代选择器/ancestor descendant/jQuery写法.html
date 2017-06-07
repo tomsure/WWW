@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.1/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	//后代选择器，选择的是父级元素下所有的子选择器，包括第一代第二代......第N代
+		$(function(){
+			$("#dv p").css("color","red")
+			//这里选择了#dv这个div下面素有的p元素，但是#dv这个div下面还有div，里面包含p元素，用这个后代选择器，则可以选择#dv里面包括他的div子元素里面的p元素
+		}
+		)
+	</script>
+	<body>
+	<div id="dv">
+		<p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<div id="">
+				<p>5</p>
+					<p>6</p>
+					<p>7</p>
+			</div>
+	</div>
+	</body>
+</html>

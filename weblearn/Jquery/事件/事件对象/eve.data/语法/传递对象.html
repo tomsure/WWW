@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+	  //传的对象，此时用键值对的形式
+		$(function(){
+			$("#btn").on("click",{age:"小明",age:25},function(e){
+				alert(e.data)
+				//此时弹出的是一个对象object
+			})
+			
+			$("#btn1").on("click",{height:180,color:"black"},function(a){
+			  alert(a.data.height)	
+			  //由于可以传递对象，所以这里也可以获取对象的属性
+			})
+		})
+	</script>
+		
+	<body>
+		<button id="btn">点击测试</button>	
+		<button id="btn1">点击测试</button>	
+		
+	</body>
+</html>

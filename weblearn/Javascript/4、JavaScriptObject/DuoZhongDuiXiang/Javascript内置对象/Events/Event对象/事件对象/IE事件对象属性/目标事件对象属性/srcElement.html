@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		
+	</style>
+	<body>
+	<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		btn.onclick=function(ev){
+			var ev=ev||window.event;
+			alert(ev.srcElement.nodeName);
+//			srcElement属性指的是触发当前事件的元素
+		}
+	</script>
+</html>

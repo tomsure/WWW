@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		1、配置ssh格式的远程仓库地址；
+		 在github上创建仓库选择ssh登陆形式的；
+		 <img src="../../截图/github上创建仓库.png"/>
+		 把远程仓库地址改为一个简易的名称，和普通登陆那里原理是一样的，也是设置一个代替远程地址的名称，但是格式有点区别，命令如下：
+		    git remote add origin git@github.com:tomsure/sshprj.git
+                     <!--这里github地址和自己账户之间是用冒号连接的-->
+		 <img src="../../截图/git ssh仓库改名.png"/>
+		2、创建ssh key；
+		输入命令： ssh-keygen -t rsa -C "github注册邮箱"
+		    <img src="../../截图/生成秘钥.png"/>
+		     命令行会提示生成秘钥的位置以及提示输入确认密码等等；
+		     <img src="../../截图/生成秘钥-设置.png"/>
+                可以一直按回车，秘钥文件就保存在电脑的默认位置，可以在默认位置发现 一个.ssh目录，里面打开后会有一个id_rsa和id_rsa.pub两个文件，id.rsa是私钥文件、id_rsa.pub是公钥文件                           
+                <img src="../../截图/.ssh目录.png"/>
+                打开后：
+                    <img src="../../截图/公钥和私钥.png"/>
+		3、把公钥放在服务器；
+		   
+		   打开github，setting中的左侧 最后一个选项是设置公钥的，将保存在本地的公钥文件用记事本软件打开后将文本内容针贴到页面上保存；
+		   
+		4、免密码把文件push到远程仓库，使用以下命令：
+		     git push 仓库名 +master
+		       <img src="../../截图/将文件推送到远程仓库.png"/>
+		        
+	</body>
+</html>

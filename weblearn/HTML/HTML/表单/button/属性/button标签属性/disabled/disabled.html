@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var  dd=document.getElementById("btn")
+			dd.onclick=function(){
+				alert("你好")
+			}
+		}
+		
+	</script>
+	<body>
+		<button  id="btn" disabled="disabled" >点击测试</button>
+		这里设置了disabled属性，所以即使绑定了onclick事件也不会有效果
+		
+	</body>
+</html>

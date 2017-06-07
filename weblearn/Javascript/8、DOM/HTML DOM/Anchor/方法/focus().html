@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="http://www.baidu.com">百度</a>
+		<button id="btn">点击获取焦点</button>
+	</body>
+	<script type="text/javascript">
+	var aa=document.getElementsByTagName('a')[0]
+	  var btn=document.getElementById("btn")
+          btn.onclick=function(){
+          	aa.focus()
+          }
+//        focus()方法是用于使a标签获取焦点
+	</script>
+	
+</html>

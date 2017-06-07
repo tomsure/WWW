@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function outer(){ //函数outer
+			
+			inner() //函数outer内部调用inner
+		}
+		
+		outer()
+		
+		function inner(){//函数inner
+			alert(inner.caller)
+		}
+		
+		
+		
+    //函数的caller属性指的是一个函数被其他函数在内部调用的时候的那个函数，例如上面的例子有一个函数inner，它被另一个函数outer在内部调用，此时，inner内部执行的caller属性指的就是调用他的outer函数
+		
+	//	但是如果在全局作用域中调用当前函数,这个函数的caller就是null,例如:
+		
+		inner() //null，因为此时inner是在全局作用域执行；
+		alert(inner.caller)//null，此时也是在全局作用域执行。
+		
+		
+		
+		
+		
+	</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	//字符串对象有一个match()方法，用于返回字符串与正则表达式匹配的字符形成的一个数组;
+	//返回的值就是数组的元素，如果使用了g修饰符，则返回所有匹配的字符串的值，作为整个数组，如果没有使用g则只返回一个匹配的元素，如果没有匹配的值，则返回null
+		
+		//使用g
+		var str='thfskcasdfasdse';
+		var reg=new RegExp('d','ig')
+		alert(str.match(reg));
+		document.write(str.match(reg).length+'</br>')//返回2，说明数组的长度是2，且有两个字符串匹配
+		
+	//注意：由于match()是字符串对象的方法，所以match()要写在str.后面，正则表达式则是match的一个参数	
+		
+		
+		
+		//不使用g
+		var str1='dzasemkxkafa';
+		   var reg1=new RegExp('a')
+		   document.write(str1.match(reg1)==str1.match(reg1)[0])
+		   document.write(str1.match(reg1).length)//获取数组的长度
+		//不使用g的时候返回匹配的那个字符串，且这个字符串是match()方法返回的数组中的第一个元素，
+		
+		var reg2=/erd/
+		   document.write(str1.match(reg2))
+		//如果没有匹配的字符串则返回null
+		
+	</script>
+</html>

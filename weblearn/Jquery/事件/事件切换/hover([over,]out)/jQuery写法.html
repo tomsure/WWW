@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px;height:100px ;background-color:red ;}
+	</style>
+	<script type="text/javascript" src="../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*hover() 方法规定当鼠标指针悬停在被选元素上时要运行的两个函数。
+jQuery 1.7 版本前该方法触发 mouseenter 和 mouseleave 事件。
+jQuery 1.8 版本后该方法触发 mouseover 和 mouseout 事件。*/
+     /*参数	描述
+inFunction	必需。规定 mouseover 事件发生时运行的函数。
+outFunction	可选。规定 mouseout 事件发生时运行的函数。*/
+$(function(){
+	$("div").hover(function(){//里面传入两个函数，分别是鼠标移入和鼠标移出时候执行的函数
+		$(this).css("background-color","green")
+		//鼠标移入的时候颜色变话
+	},function(){		
+		$(this).css("background-color","#8B4513")
+		//鼠标移出的时候颜色变化
+	})
+})
+	</script>
+	<body>
+		<div id="">
+			
+		</div>
+	</body>
+</html>

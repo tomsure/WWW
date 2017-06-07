@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta name="" content="" charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+  </head>
+   <link rel="stylesheet" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+  
+   </script>
+<style type="text/css">
+#dd{width:300px ;height:300px ;border:1px solid red;}
+div{margin:10px ;}
+#dvv{width:300px ;height:300px ;border:1px solid red;}
+	.dv{width:200px ;height: 50px;background-color: #1B6D85;}
+	.dv1{width:200px ;height: 50px;background-color: #1B6D85;}
+</style>
+  <body>
+ <div id="dd">
+ 	<div class="dv"style="float: left;" >
+ 	1
+ </div>
+ <div class="dv">
+ 	2
+ </div>
+ 由于元素设置了浮动，所以后面的元素会受到影响，div元素会浮动，但是文字不会浮动
+ </div>
+<div id="dvv">
+	 
+ <div class="dv1"style="float: left;">
+ 	3
+ </div>
+ <div class="clearfix">
+ 	
+ </div>
+ <div class="dv1">
+ 	4
+ </div>
+ ，可以给元素之间加上一个空元素设置类名为clearfix的元素，这样后面的元素就会正常显示
+</div>
+  </body>
+
+</html>

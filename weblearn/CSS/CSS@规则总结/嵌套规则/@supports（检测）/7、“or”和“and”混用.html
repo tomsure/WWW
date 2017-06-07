@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		@supports ((transition-property: color) or (animation-name: foo)) and (transform: rotate(10deg)) {
+  
+}
+@supports (transition-property: color) or ((animation-name: foo) and (transform: rotate(10deg))) {
+  
+}	
+   /*and和or混用的时候,需要注意优先级的问题*/
+	</style>
+	<body>
+	</body>
+</html>

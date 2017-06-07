@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>
+				用户名: <input type="text"  name="user" id="user" value="" />
+				
+			</p>
+			
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-1.10.2/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('form').validate({
+				
+			    rules:{
+			    	user:{
+			    	minlength:4,
+
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"用户名不得少于4位",
+			    		maxlength:"输入不得超过8位"
+			    	}
+			    }
+			  
+       
+			
+		});
+
+        
+	 alert( $('#user').rules());
+	 alert( $('#user').rules().minlength)
+//	 $('').rules()方法返回获取表单元素的规则的一个对象,这个对象的属性就是设置的这个表单元素的规则,通过console.log可以看到,如果直接输出的话就会返回oject,然而可以通过返回他的属性,也就是每个规则的名称,从而获得这个规则的内容值
+
+		})
+     
+	</script>
+</html>

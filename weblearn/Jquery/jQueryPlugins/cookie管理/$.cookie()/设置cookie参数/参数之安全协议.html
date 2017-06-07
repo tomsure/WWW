@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../插件/carhartl-jquery-cookie-92b7715/jquery.cookie.js">
+		
+	</script>
+	<script type="text/javascript">
+		$.cookie('xingming','汤旭',{
+			secure:true
+//			在cookie的参数里面设置secure为true的时候就表示使用https的传输协议,是比较安全的,这样的话用户无法直接在客户端读取cookie的值，避免数据泄露，所以这一点必须使用
+		});
+		alert($.cookie('xingming'))
+	</script>
+</html>

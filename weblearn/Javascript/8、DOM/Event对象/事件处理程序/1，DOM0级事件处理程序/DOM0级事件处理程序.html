@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//DOM0级事件处理程序就是 把函数赋值给一个事件的处理程序属性
+		window.onload=function(){
+			var dd=document.getElementById("btn");
+			dd.onclick=function(){  //这里讲函数赋值给dd的onclick属性，这里的参数e
+				//就是事件对象
+				alert("你好")
+				
+				
+			}
+			//dd.onclick=null //这里就是删除事件，这样再点击就不会弹出了
+		}
+		
+	</script>
+	<body>
+		
+			
+		<input type="button" name="btn" id="btn" value="点击弹出" />
+	</body>
+</html>

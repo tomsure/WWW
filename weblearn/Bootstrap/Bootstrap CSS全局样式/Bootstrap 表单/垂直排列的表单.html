@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<!--垂直或基本表单
+基本的表单结构是 Bootstrap 自带的，个别的表单控件自动接收一些全局样式。下面列出了创建基本表单的步骤：
+向父 <form> 元素添加 role="form"。
+把标签和控件放在一个带有 class .form-group 的 <div> 中。这是获取最佳间距所必需的。
+向所有的文本元素 <input>、<textarea> 和 <select> 添加 class .form-control。-->
+	<body>
+	<form action=""  role="form"><!--向父 <form> 元素添加 role="form"。-->
+		<div class="form-group">
+			<input type="" name="" id="" value="" class="form-control" placeholder="请输入邮箱"/>
+			<!--向所有的文本元素 <input>、<textarea> 和 <select> 添加 class .form-control。-->
+		</div>
+		<div class="form-group">
+			<textarea name="" rows="" cols=""  class="form-control"></textarea>
+			<!--向所有的文本元素 <input>、<textarea> 和 <select> 添加 class .form-control。-->
+		</div>
+		<div class="form-group">
+			<input type="password" name="" id="" value="" class="form-control" placeholder="请输入密码"/>
+			<!--向所有的文本元素 <input>、<textarea> 和 <select> 添加 class .form-control。-->
+		</div>
+		<button type="submit" class="btn">点击提交</button>
+	</form>	
+	</body>
+	<!--注：只有正确设置了输入框的type 类型，才能被赋予正确的样式。支持的输入框控件
+包括：text、password、datetime、datetime-local、date、month、time、week、
+number、email、url、search、tel 和color。-->
+</html>

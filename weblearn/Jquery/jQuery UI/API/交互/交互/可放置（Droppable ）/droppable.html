@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		.dv1 { width: 100px;
+		       height: 100px;
+		       background-color: red;
+		
+		}
+		.dv2 { width: 300px;
+		       height: 300px;
+		       border: 1px solid black;
+		}
+	</style>
+	<body>
+		<div class="dv1">
+			
+		</div>
+		<div class="dv2">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../../jquery.js">
+	
+	</script>
+	<script type="text/javascript" src="../../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('.dv1').draggable()//设置可拖拽元素
+		$('.dv2').droppable()
+			//使用droppable（）方法可以使元素内部可以放置其他元素；
+		$('.dv2').on('drop',function(event, ui){
+			alert('触发放置事件')
+		})
+		})
+//		这里使用drop事件可以测试元素是否放置,当元素被放置了其他元素后,触发drop事件
+	</script>
+</html>

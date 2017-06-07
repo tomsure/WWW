@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table id="table1" border="1" width="200">
+			<tr>
+				<td>姓名</td>
+				<td>年龄</td>
+				<td>性别</td>
+			</tr>
+			<tr>
+				<td>张三</td>
+				<td>22</td>
+				<td>男</td>
+			</tr>
+			<tr>
+				<td>李四</td>
+				<td>22</td>
+				<td>男</td>
+			</tr>
+			
+		</table>
+		<button id="btn">点击设置</button>
+	</body>
+	<script type="text/javascript">
+		var tb=document.getElementById("table1")
+		btn=document.getElementById("btn")
+		btn.onclick=function(){
+			tb.rows[0].deleteCell(1)
+		}
+		    
+//		  deleteCell()方法用于删除行中的一个单元格,参数是单元格的下标,如果不写参数,则删除第一个
+	</script>
+</html>

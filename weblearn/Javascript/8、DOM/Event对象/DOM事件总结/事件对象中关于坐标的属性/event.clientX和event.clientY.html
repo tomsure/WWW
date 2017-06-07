@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			padding: 10px;
+			margin: 210px;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		   dv.onclick=function(e){
+		   	alert(e.clientX)
+		   	alert(e.clientY)
+		   }
+//     clientX和clientY表示鼠标指针在可视范围内距离文档最左边和最上边的距离
+	</script>
+</html>

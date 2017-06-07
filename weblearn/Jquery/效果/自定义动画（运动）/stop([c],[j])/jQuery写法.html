@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div {
+			width: 30px;
+			height: 30px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript" src="../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+	</script>
+	<script type="text/javascript">
+		$(function() {
+			$(":button").click(function() {
+				$("div").animate({
+					width: "300px"
+				}, 2000).animate({
+					height: "300px"
+				}, 1000);
+			})
+			$('#btn').click(function() {
+				$('div').stop(true)
+			})
+		})
+//		stop()方法用于停止当前在执行的运动,这个方法最新jquery有三个参数,
+//		第一个用于设置被停止的动画队列的名称,
+//		第二参数个如果设置为true,则停止动画到当前的位置,不再运动,如果点击执行运动的按钮,则继续运动;
+//		第三个参数可以立即完成动画
+	</script>
+
+	<body>
+		<div id="">
+
+		</div>
+		<input type="button" name="" id="" value="点击开始" />
+		<button id="btn">点击停止</button>
+
+	</body>
+
+</html>

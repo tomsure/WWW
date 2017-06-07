@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		
+	</style>
+	
+	<body>
+	
+		<div class="dv1">
+		
+		</div>
+		<button>点击弹出</button>
+	</body>
+	
+		
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+	<script>
+	
+		$(function(){
+			$('button').on('click',function(){
+				$('.dv1').dialog()
+			})
+		})
+	</script>
+
+<!--创建对话框只需在js里面给div元素绑定dislog元素即可，但是是运用中，对话框通常是在事件中触发执行的，所以这里案例是在点击按钮的时候执行，注意：如果使用a标签做按钮，则需要设置不跳转或者href="#"-->
+
+
+		
+			
+</html>

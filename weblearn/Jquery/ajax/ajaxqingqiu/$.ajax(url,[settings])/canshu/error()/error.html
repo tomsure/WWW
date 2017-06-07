@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击测试</button>
+		<div></div>
+	</body>
+	<script type="text/javascript" src="../../../../../jQuery库/jquery-2.1.4/jquery.min.js"> 
+		
+	</script>
+	<script type="text/javascript">
+		$('#btn').click(function(){
+			$.ajax({
+				type:"get",
+				url:"error.php?"+Math.random(),
+				async:true,
+				timeout:2000,//请求的最长时间，毫秒为单位，这里表示两秒
+				success:function(data){
+					$('div').html(data)
+				},
+				error:function(jqXHR,textStatus,errorThown){
+				if(errorThown=='Not Found'){//注意大小写!
+					$('div').html('你请求的地址不存在')
+				}
+				if(textStatus=='timeout'){
+					$('div').html('请求超时，请刷新或重新打开页面')
+				}//这里在PHP里面设置了sleep来模拟网络加载延时
+				}
+			});
+		})
+		
+//用户在请求页面的时候如果请求失败，则在$.ajax()中使用error函数，这和函数表示请求失败的时候执行的函数，他有三个参数，jqXHR，textStatus、errorThown，每个参数代表不同的含义，可以用if语句通过这三个参数的返回值来做出相应的动作		
+	</script>
+</html>

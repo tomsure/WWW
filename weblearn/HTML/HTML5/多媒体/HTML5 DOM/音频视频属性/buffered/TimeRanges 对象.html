@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body> 
+
+     <video width="" height="" id="vod" controls="controls" muted="muted" >
+     	<source src="../../音视频资源文件/Intermission-Walk-in_512kb.mp4" type="video/mp4"></source>
+     	<source src="../../音视频资源文件/johann_sebastian_bach_air.ogg" type="video/ogg"></source>
+     	
+     </video>
+     <button id="btn">点击获取TimeRanges对象</button>
+</body> 
+<script>
+  var vod=document.getElementById("vod");
+   
+   var btn=document.getElementById("btn");
+   btn.onclick=function(){
+   	alert(vod.buffered)
+   }
+//   buffered属性用于返回TimeRanges 对象.TimeRanges 对象表示用户的音频/视频缓冲范围。
+//   缓冲范围指的是已缓冲音频/视频的时间范围。如果用户在音频/视频中跳跃播放，会得到多个缓冲范围。
+
+</script>  
+</html>

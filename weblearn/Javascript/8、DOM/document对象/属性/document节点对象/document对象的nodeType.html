@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		alert(document.nodeType)//9
+//		弹出document.nodeType为9,而9表示的是DOCUMENT_NODE指的是文档根节点;
+		alert(document.nodeName)//弹出document的节点名称
+		//弹出#document表示document标签，而页面上没有显示这个标签，所以这是相当于一个隐藏的标签，就是一个根节点相当于是页面 最外层报了一个<document></document>元素，不过他是不显示的
+		alert(document.tagName)//获取document的标签名，弹出undefined，因为这个标签是隐藏的不显示的；
+		
+		alert(document.childNodes[0])//弹出object DocumentType
+		alert(document.childNodes[0].nodeType)
+		//弹出10，通过查看常量表得出document的第一个子节点是文档申明——DOCUMENT_TYPE_NODE，也就是页面的<!DOCTYPE html>这一个标签。
+	//IE浏览器中把这个文档生命理解为注释节点，所以弹出8	
+		alert(document.childNodes[0].nodeName)
+		//火狐为HTML 谷歌为html 、IE为#comment，新版本火狐为html
+	</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*white-space属性指定元素内的空白怎样处理。*/
+		div{ width: 300px;height: 300px; border: 1px solid red; margin: 10px;}
+		#dv1{ white-space: normal;}/*默认值，空白被忽略*/
+		#dv2{ white-space: nowrap;}/*文本不换行，在一行显示，只有遇到<br/>标签才会换行*/
+		#dv3{white-space: pre;}
+		#dv4{ white-space: pre-line;}
+		#dv5{ white-space: pre-wrap;} 
+	</style>
+	<body>
+		<div id="dv1">1
+			This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+		</div>
+		<div id="dv2">2
+			This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+		</div>
+		<div id="dv3">3
+			This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+		</div>
+		<div id="dv4">4
+			This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+		</div>
+		<div id="dv5">5
+			This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+		</div>
+	</body>
+</html>

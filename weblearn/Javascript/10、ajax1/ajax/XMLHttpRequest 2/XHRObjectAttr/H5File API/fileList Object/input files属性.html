@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="file"  name="input" id="aa" value="" />
+		
+	</body>
+	<script type="text/javascript">
+	
+   var dd=document.getElementById("aa");
+
+     alert(dd.files)
+   //files属性是fileAPI中的文件列表对象，当input file创建的时候，这个input file会有一个files属性，这个属性对应的是一个filelist对象，该对象表示上传文件时候选择要上传的文件列表，是一个数组，如果要得到具体的某一个文件只需要加上下标即可，如files[1]
+		
+	</script>
+</html>

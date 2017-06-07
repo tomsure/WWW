@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">点击加载</button>
+		<button id="btn2">点击加载</button>
+		<p></p>
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('#btn1').click(function(){
+			$.ajax({
+				url:'UTF-8格式.txt',
+				success:function(data){
+					$('p').html(data)
+				}
+			})
+		})
+		
+		$('#btn2').click(function(){
+			$.ajax({
+				url:'其他格式.txt',
+				success:function(data){
+					$('p').html(data)
+				}
+			})
+		})
+		//第二个按钮点击的时候会显示乱码，这是因为文件保存的格式和文档的格式不一致导致，所以，需要设置远程数据文本格式个页面的字符编码一致
+	</script>
+</html>

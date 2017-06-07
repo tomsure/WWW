@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+	//textBaseline 属性设置或返回在绘制文本时的当前文本基线。
+	
+	/*共六个值，解释为：
+	 * alphabetic	默认。文本基线是普通的字母基线。
+      top	文本基线是 em 方框的顶端。
+      hanging	文本基线是悬挂基线。
+      middle	文本基线是 em 方框的正中。
+      ideographic	文本基线是表意基线。
+      bottom	文本基线是 em 方框的底端。*/
+		window.onload=function(){
+			var  ss=document.getElementById("myCanvas");
+			var dd=ss.getContext("2d");
+		
+			dd.strokeStyle="blue";  //strokeStyle 属性设置或返回用于笔触(各种图形)的颜色、渐变或模式。
+			dd.moveTo(0,200);//设置路径 移动的起始坐标，
+			dd.lineTo(1200,200);//相当于一条划线的结束坐标
+            dd.stroke(); //结束绘图，
+            
+ /***************************设置基线*************************************/    
+
+             dd.font="30px 宋体";//设置 文本字体；
+             
+            dd.textBaseline="top";//基线在文字的顶部
+            dd.fillText("top",0,200);
+            dd.textBaseline="bottom";//基线在文字的底部；
+            dd.fillText("bottom",100,200)
+            dd.textBaseline="alphabetic";//默认值，基线是普通子母基线
+            dd.fillText("alphabetic",300,200);
+            dd.textBaseline="middle	";//基线在文字中线穿过；
+            dd.fillText("middle	",500,200);
+            dd.textBaseline="hanging"; //文本基线是悬挂基线
+            dd.fillText("bhanging",700,200)
+            dd.textBaseline="ideographic";//文本基线是表意基线。
+            dd.fillText("ideographic",900,200);
+           
+		 
+            
+		}
+		 
+	</script>
+	<body>
+		<canvas id="myCanvas" width="1200" height="500"></canvas>
+	</body>
+</html>

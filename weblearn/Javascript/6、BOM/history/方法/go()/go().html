@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//加载 history 列表中的某个具体页面，跳转到历史记录中的一个具体页面,例如历史记录中有十个页面，要跳转到第九个，就写成go(9)
+		//例如，页面上的分页符，可以选择跳转到具体的某一页就是这样实现的
+		window.onload=function(){
+			var dd=document.getElementById("btn1");
+			dd.onclick=function(){
+			 history.back()
+			}
+		}
+	</script>
+	<body>
+		<a href="index1.html">点击跳转</a>
+		<button id="btn1">点击跳转</button>
+		
+		<p>我是go()页面</p>
+	</body>
+</html>

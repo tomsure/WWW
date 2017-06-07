@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#a,#b,#c,#d{float: left;margin: 100px !important;}
+		#e{margin: 0px !important;}
+	</style>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		<button id="a" class="btn btn-danger btn-lg" data-toggle="popover" title="bootstrap" data-content="aaaaaaaaaaaa" >顶部显示</button>
+		
+	
+		<button id="b" class="btn btn-danger btn-lg" data-toggle="popover" title="bootstrap"  data-content="aaaaaaaaaaaa" >底部显示</button>
+		
+		
+		<button id="c" class="btn btn-danger btn-lg" data-toggle="popover" title="bootstrap" data-placement="left" data-content="aaaaaaaaaaaa" >左边显示</button>
+		
+		
+		<button id="d" class="btn btn-danger btn-lg" data-toggle="popover" title="bootstrap"  data-content="aaaaaaaaaaaa" >右边显示</button>
+		
+		<button id="e" class="btn btn-danger btn-lg" data-toggle="popover" title="bootstrap"  data-content="aaaaaaaaaaaa" >自动</button>
+		
+		
+		
+<!--placement属性用来设置弹出框显示的位置，左右上下和自动，auto自动的时候，如果左边位置不够则在右边显示，或者下边显示不够在上边等这样-->		
+<!--使用placement属性设置弹出框的位置，必须在js中设置$().popover()-->
+		
+		
+	</body>
+	<script type="text/javascript" src="../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../bootstrap库/Bootstrap源码/dist/js/bootstrap.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	
+	
+     $('#a').popover(
+     	{
+     		'placement':'top' 
+     	}
+     )
+       $('#b').popover({
+       	'placement':'bottom' 
+       })
+         $('#c').popover({
+         	'placement':'left' 
+         })
+           $('#d').popover({
+           	'placement':'right' 
+           })
+             $('#e').popover({
+             	'placement':'auto' 
+             })
+	</script>
+	
+		
+		
+		
+		
+		
+
+</html>

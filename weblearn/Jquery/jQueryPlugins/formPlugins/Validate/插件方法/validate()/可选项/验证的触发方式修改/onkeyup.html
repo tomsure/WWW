@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.myerror{
+			color:red
+		}
+	</style>
+	<body>
+		<form action="123.html" method="post" id="form">
+			<fieldset>
+				<p id="info"></p>
+			<p>用户名: <input type="text"  name="user" id="user" value="" />*</p>      
+			<p>密码: <input type="text"  name="password" id="password" value="" />*</p>      
+			<p>确认密码: <input type="text"  name="confirm_password" id="confirm_password" value="" />*</p>      
+			
+			
+			<input type="submit" value="点击提交"/>
+			</fieldset>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../../Validate/库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	},
+			    	
+			    	confirm_password:{
+			    		required:true,
+			    		 equalTo:"#password"
+			    
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	},
+			    	
+			    
+                    confirm_password:{
+                    	required:"请再次输入密码",
+                    	equalTo:"两次密码不一致"
+                    }
+			    	
+			    },
+//               onkeyup:false
+//            onkeyup指的是是否设置键盘按下并弹起后开始验证,默认是true,表示是,如果设置为否的话,当键盘按下并弹起后就不会验证;
+//            例如这里,用户名有两个验证规则,第一个规则是必填,,第二个规则是字数不得少于4位,当提交表达的时候就会提示表单必填,当输入数据还未 输入正确的时候第一个错误信息消失,每次手松开键盘就会提示错误:输入不得少于4位.
+            //默认值true不用设置也不能设置，设置后会报错
+
+		})
+		})
+
+	</script>
+</html>

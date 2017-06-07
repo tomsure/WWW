@@ -1,0 +1,9 @@
+    使用require()方法加载内置模块http就可以创建http服务器：
+        
+    require('http');
+    
+    通常会将这个方法赋给一个变量，如：
+       var http=require('http');
+        
+    
+     这个reuqire('http')方法返回的就是http模块对象

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		var ss=new Object();
+		   ss.name=12;
+		   function ee(cc){
+		   	    cc=new Object()
+		   	    cc.name=13;
+		   	    alert(cc.name)
+		   }
+		   ee(ss)
+		   alert(ss.name)
+		//如果函数的参数在函数内创建了对象，对象的属性和外部对象的属性同名，则不会影响到外部函数属性值的变化，两个属性值不同，因为此时参数和外部对象引用的不是同一个对象；  而且这个对象只是一个局部变量对象，函数运行完就会销毁
+		
+		
+		
+		
+	</script>
+</html>

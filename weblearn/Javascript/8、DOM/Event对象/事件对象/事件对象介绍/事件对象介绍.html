@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击测试</button>
+		<button>按钮</button>
+		
+	</body>
+	<script type="text/javascript">
+	var btn=document.getElementById("btn")
+		btn.onclick=function(){
+			alert(arguments[0])//弹出第一个参数
+		}
+	   
+	//事件函数中，事件函数的第一个参数就是事件对象，浏览器会自动的添加一个参数作为函数的第一个参数，代表当前的事件对象
+//	由于上面一种方式获取事件对象比较麻烦,所以通常会 手动给事件函数写一个参数,放在第一个位置,这个参数就是事件对象,例如:
+ 
+   var btn1=document.getElementsByTagName('button')[1];
+       btn1.onclick=function(e){
+       	alert(e)
+       }
+        //弹出一个 object MouseEvent，说明这个e就是当前的事件对象
+    
+
+		
+	</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=0.3333333333333333333333333333333333333333333333333333333333333333333333333333333333,user-scalable=no" />
+		<title></title>
+	</head>
+	<style type="text/css">
+	    *{
+	    	padding: 0px;
+			margin: 0px;
+	    }
+		.dv{
+			
+			width: 640px;
+			height: 1136px;
+			background-color: red;
+			border: 3px solid blue;
+		}
+		/*iphone5:苹果公司官方宣称 iphone5 屏幕分辨率为 640 X 1136;
+		页面模拟情况:使用电脑浏览器模拟iphone5的时候,模拟器显示的是320px X 568px;
+		解释: 这里官网说的640 X 1136指的就是设备像素,根据设备像素比来计算由于iphone5的dpr dpr=2;这里的640 X 1136就是 640dp X 1136dp;
+		
+		由于设备的分辨率就是设备像素，他是设备厂商生产出来的屏幕的物理参数，是实际存在的，为了达到高清的效果，每个厂商会为产品生产不同的分辨率的产品，而硬件分辨率要想在PC端模拟器正常显示的话就需要通过换算，通过分辨率、设备缩放比来计算出页面在模拟器上面的CSS像素。
+		
+		
+	每个设备的缩放比不相同，但是我们可以知道他的缩放比和分辨率，所以只需要准确设置分辨率，然后在meta标签的viewport中设置缩放比率，就会自动在设备或者模拟器上显示出准确的宽度，由于设备缩放比是dpr	
+		
+		
+	</style>
+	<body>
+		<div class="dv">
+			
+		</div>
+	</body>
+</html>

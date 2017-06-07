@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button>点击获取</button>
+		<button>点击设置</button>
+		<button>点击设置</button>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').eq(0).on('click',function(){
+				alert($('#dv').width())
+			})
+			$('button').eq(1).on('click',function(){
+				$('#dv').width('200px')
+			})
+           $('button').eq(1).on('click',function(){
+				$('#dv').width(function(index,olddata){
+//					通过函数方式返回或者设置元素的width
+				})
+			})			
+		})
+//		  width方法用于设置或者后返回元素的宽度
+	</script>
+</html>

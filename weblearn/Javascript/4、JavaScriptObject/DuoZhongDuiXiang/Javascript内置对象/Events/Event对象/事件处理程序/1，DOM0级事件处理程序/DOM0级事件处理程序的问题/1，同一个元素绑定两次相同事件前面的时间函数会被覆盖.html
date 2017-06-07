@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{ width: 100px;height: 100px;background-color: red;}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		dv.onclick=function(){
+			alert(1)
+		}
+		dv.onclick=function(){
+			alert(2)
+		}
+//	当同一个元素绑定两次相同的事件的时候,后面的事件函数会覆盖前面的事件函数,所以这是一个弊端	
+	</script>
+</html>

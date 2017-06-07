@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			<ul></ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		for(var i=0;i<dv.childNodes.length;i++){
+			
+			if(dv.childNodes[i].nodeType===1){
+				alert(dv.childNodes[i].nodeName)
+			}else if(dv.childNodes[i].nodeType===3){
+				alert(dv.childNodes[i].nodeValue)//第一次弹出为空，因为第一个是空文本节点，第三个也是空所以也弹出空
+			}
+		}
+	</script>
+</html>

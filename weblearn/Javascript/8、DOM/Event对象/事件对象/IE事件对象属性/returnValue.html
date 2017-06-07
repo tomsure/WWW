@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	</script>
+	<body>
+		<a  id='aa' href="http://www.baidu.com">百度一下你就知道</a>
+	</body>
+	<script type="text/javascript">
+		//returnValue属性用于设置是否阻止浏览器默认行为，浏览器默认行为指的是html页面或者浏览器自带的一些行为，例如点击a标签会跳转，点击submit按钮会提交表单，等等；
+		var aa=document.getElementById("aa");
+		aa.onclick=function(ev){
+			ev.returnValue=false
+			alert('你阻止了默认跳转')
+		}
+//		在IE浏览器下如果要阻止浏览器默认行为就设置事件对象的属性returnValue=false
+// 此方式阻止的时候,谷歌浏览器也支持
+	</script>
+</html>
+
+</html>

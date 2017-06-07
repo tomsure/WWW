@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<div id="dv">
+			<p id="p1">1</p>
+			<p id="p2">2</p>
+			<p id="p3">3</p>
+			<li>你好</li>
+			<a href="">百度</a>
+		</div>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('div').find('p,a').css('background','red')
+		})
+		
+//		find()方法用于筛选$()方法用于筛选匹配的元素集合的子元素,参数是选择器,集合或者DOM元素,可以设置多个
+// 例如这里就是要获取div下面的p元素和a元素
+	</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{width:200px ;height:200px ;background-color:red ;margin:10px ;}
+		span{width:100px ;height:100px ;background-color:green ;display: block;}
+	</style>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//event.currentTarget 属性是在事件冒泡阶段内的当前 DOM 元素，通常等于 this。
+		//绑定的谁，返回的就是谁，
+		$(function(){
+			$("div").bind("click",function(e){
+				alert(e.currentTarget)
+				//这里不管点击span还是点击div都会弹出div这个DOM元素，因为这里绑定的是div
+				//如果这里绑定给$(this),则点击任何元素都弹出的是doucment这个 dom元素
+				
+				alert(this==e.currentTarget)
+				//这里会弹出true，因为这里的this指的就是当前元素
+			})
+			
+			
+		})
+	</script>
+	<body>
+		
+		<div id="dv">
+			<span id="sp1">
+				
+			</span>
+		</div>
+		
+	</body>
+</html>

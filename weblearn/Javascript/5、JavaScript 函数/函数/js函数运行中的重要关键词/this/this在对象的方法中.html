@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var obj={
+			name:'tom',
+			sayName:function(){
+				alert(this.name)
+				document.write((this==obj)+'</br>')//true
+			}
+			
+		}
+		obj.sayName()//tom
+	//这是一个对象，sayName是obj的方法此时，这个方法函数内部的this指的就是这个方法所属的对象obj，通过上面例子document.write(this==obj)//true也可以看出；
+	
+	
+	function Person(name,age,play){
+		this.name=name;
+		this.age=age;
+		this.play=function(){
+			alert(this.age)//23
+			document.write((this==person1||this==person2
+			)+'</br>')//true  //this等于person1或者this等于person2。谁调用的时候就等于谁
+		}
+		}
+	var person1=new Person('tom',23);
+	var person2=new Person('bom',24)
+	person1.play()//23;
+	person2.play()//24
+	//在这里先不看 构造函数Person中的this(如：this.name=name,this.age=age,先不看这几个this)，这里play是构造函数创建的对象的方法，play这个函数中的this（如this.age）.这里指的就是构造函数创建的对象person1
+	//person2调用的时候，方法play内的this就指向对象person2
+	
+	
+	var oo={
+		a:20,b:30,c:function(){
+			document.write(this.a +'</br>')
+		}
+	}
+	
+	oo.c()
+	var obj={a:40};
+	obj.c=oo.c;
+	obj.c()//打印40；
+//这里打印出40，因为44行将对象oo的方法赋给了对象obj，obj仅仅引用它的方法，执行打印，执行obj.c()调用的时候方法c已经属于obj，而obj里面定义的a的值是40，a此时，是obj的属性，所以此时this指向的是对象obj，如果obj没有设定a属性，则会打印出undefined，因为这样的话对象obj没有属性a
+
+	
+	//综上所述，不论用何种方法创造对象，对象的方法中的this，指的就是当前调用该方法的(实例)对象，this.后面的属性是调用该方法的对象的属性，如果该对象的属性不存在，则返回undefined
+	
+	
+	
+	
+//在函数被调用的时候，不管他是方法还是普通函数，函数内的this都指的是调用它的对象；
+//再例如:
+   
+        var aa={
+          	name:'dom'
+        }
+          var fn=function(){
+          	alert(this.name)
+          }
+          fn()//此时调用函数，里面的this指的是window
+          aa.dd=fn;//将函数fn赋给对象aa的属性dd
+        aa.dd() //dom
+     //此时普通函数被赋给对象aa的对象属性dd后，fn里面的this指的就是对象aa
+   
+	
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

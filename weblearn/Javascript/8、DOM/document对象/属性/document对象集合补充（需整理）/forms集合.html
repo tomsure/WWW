@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			alert(document.forms.length)//这里会弹出2，因为使用了两个form标签
+		  alert(document.forms[1].id) //这里弹出form2，因为已经设置好第2个form的id叫form2
+		}
+	</script>
+	<body>
+		<form action="activeElement.html" method="post" id="form1">
+			
+		</form>
+		<form action="" id="form2"></form>
+	</body>
+</html>

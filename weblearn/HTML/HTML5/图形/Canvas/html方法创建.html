@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var ss=document.getElementById("myCanvas");// document.getElementById() 方法来为 <canvas> 元素得到DOM对象
+		if(ss.getContext){ 
+			var dd=ss.getContext("2d")  //通过canvas的 这个DOM方法访问绘画上下文
+		
+			
+		}
+		
+	}
+	</script>
+	
+	<body>
+		<p>这种方式是在body区域创建canvas标签，再用js脚本绘制图形</p>
+		<canvas id="myCanvas" width="200" height="200" style="border: 1px solid blue;"></canvas>
+	</body>
+</html>

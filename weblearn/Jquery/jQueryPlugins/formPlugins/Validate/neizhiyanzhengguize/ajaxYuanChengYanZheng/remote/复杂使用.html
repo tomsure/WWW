@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="check.php" method="post">
+			<p>输入密码: <input type="password"  name="num" id="num" value="" />(必填)</p>
+			<p>确认密码: <input type="password"  name="repassword" id="" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../Validate/库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('form').validate({
+				
+						
+			rules:{
+				num:{//input元素
+				    minlength:4,
+					remote:{
+						url:"check.php",//服务器验证的后台程序
+						type:"post",//remote是向服务器发送异步请求，默认的时候是get方法，在这里可以设置为post方法发送
+						data:{
+							//这里可以向服务器发送其他数据，例如发送表单的时间，其他元素的值等等
+						loginTime:function(){
+								return +new Date
+							                }//这里发送的是一个表单提交的时间，注意格式。                           
+						  },//注意：发送数据的时候data里面的参数也是json格式，但是他的值必须是一个函数，在函数内部return一个数据如上面loginTime中是return一个new Date
+						
+					}
+			
+				}
+			},
+			messages:{
+				num:{
+					minlength:"请输入不少于四位的用户名",
+					remote:"请输入正确的密码"
+				}
+			}
+				
+			})
+			
+		})
+     
+     
+      
+	</script>
+</html>

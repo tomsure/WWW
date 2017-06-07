@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Foo(){
+			
+		}
+		var  foo=new Foo();
+		console.log(foo.__proto__==Foo.prototype)//true
+		console.log(Foo.prototype.constructor==Foo)//true
+console.log(Foo.prototype.__proto__==Object.prototype)//true
+
+       console.log(Object.prototype.__proto__)//null
+      console.log(Foo.__proto__==Function.prototype)//true
+      console.log(Function.prototype.__proto__==Object.prototype)//true
+	</script>
+</html>

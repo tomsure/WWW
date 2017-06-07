@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		
+		<div id="dv">
+			<button title="aaaa"   data-toggle="tooltip">顶顶顶顶</button>
+		<br /><br />
+		<button title="xxx" rel="ss">新消息</button>
+		<!--默认false，可以选择绑定指定的选择器。-->
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('#dv').tooltip({
+				selector:'button[rel=ss]'
+		});
+		//这种方法需要在被选元素的父级元素上绑定tooltip（）方法，再在括号内部绑定需使用提示工具的元素的选择器
+	</script>
+</html>

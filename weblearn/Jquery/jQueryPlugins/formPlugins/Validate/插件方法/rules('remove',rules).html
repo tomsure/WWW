@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>
+				用户名: <input type="text"  name="user" id="user" value="" />
+				
+			</p>
+			
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-1.10.2/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('form').validate({
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    	minlength:4,
+                   maxlength:8
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"用户名不得少于4位",
+			    		maxlength:"输入不得超过8位"
+			    	}
+			    }
+			  
+       
+			
+		});
+
+         $('#user').rules('remove',"required")//删除验证规则
+         //rules('remoove',rules)方法用于删除已添加的验证规则，它也是删除某一个input表单元素的方法，参数：第一个是固定的remove，第二个是要删除的规则名称，注意使用引号，删除之后就不会再有这条验证规则，例如这里删除必填项验证规则后，点击后表单就会提交。
+         //删除多个规则的时候只需在括号里面第二个参数开始填写多个规则名称用空格隔开即可，如果杉树所有规则的话rule括号里面只写remove即可
+         
+	
+		})
+     
+	</script>
+</html>

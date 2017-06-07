@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			function aa(){
+			alert(1)	
+			}
+			function bb(){
+				alert(2)
+			}
+			function cc(){
+				alert(3)
+			}
+		var a=$.Callbacks() //把方法赋给变量；
+		    a.add(aa); //使用add()方法添加函数到回调对象a
+		    a.add(bb);
+		    
+		    a.add(cc)
+		    
+            a.remove(bb)//删除添加的函数
+            
+//       remove()方法用于删除使用add()方法添加到回调函数列表(数组)中的函数,这个方法使用的是原生js中的splice()方法 删除数组中指定的元素来实现的,因为add()方法是将函数添加到回调列表,形成一个数组,而remore()就是删除添加到数组中函数   
+		    a.fire() //执行fire()方法的时候，之弹出1和3，不弹出2
+
+		})
+	</script>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	window.onload=function(){
+				var dv=document.getElementById("vid");
+				
+				
+				dv.oncanplaythrough=function(){
+					alert("视频无需停顿就可以播放了")
+				}
+			}
+		</script>
+		<body>
+			<video width="300px" height="300px" controls="controls" id="vid">
+			<source src="../../../../html/video/mov_bbb.mp4"></source>
+			</video>
+			
+		</body>
+	</html>

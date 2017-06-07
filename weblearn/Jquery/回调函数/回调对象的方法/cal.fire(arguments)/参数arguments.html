@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+		  function aa(val){
+		  	alert(val)
+		  }
+		  function bb(value){
+		  	alert(value)
+		  }
+		  var cal=$.Callbacks();
+		  cal.add(aa);
+		  cal.add(bb)
+		  cal.fire('hello')
+//     fire()方法用于统一执行使用add()方法添加到回调列表中的函数,这个方法可以写一个参数,这个参数就是用来传给使用add()方法添加的函数的参数,
+// 例如上面的例子中,函数aa和bb都有参数,当使用add()方法添加到cal后使用fire()执行的时候,fire()的括号里写了'hello'字符串,当执行fire()的时候,页面先后弹出了'hello'字符串,因为函数aa和 bb都有一个参数,fire()中的字符串就是传给aa和bb的参数,当然,参数不一定都是用字符串，由于fire()是统一执行被添加的函数，所以穿进去的参数就是每个函数的参数
+		})
+	</script>
+	<body>
+		
+	</body>
+</html>

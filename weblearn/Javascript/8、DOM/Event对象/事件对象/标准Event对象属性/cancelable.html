@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	
+	</script>
+	<body>
+		<a href="bubbles.html" id="aa">百度</a>
+		
+	</body>
+	<script type="text/javascript">
+		var aa=document.getElementById("aa")
+		  aa.onclick=function(e){
+//		  	e.preventDefault()
+		  	alert(e.cancelable)
+		  }
+		  
+//		  cancelable属性用于表示当前事件是否可以使用preventDefault()方法来取消，可以则返回true，否则返回false,preventDefault()方法指的是取消默认事件方法
+	</script>
+</html>

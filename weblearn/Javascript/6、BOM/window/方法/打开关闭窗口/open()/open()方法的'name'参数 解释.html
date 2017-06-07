@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var bn1=document.getElementById("btn1");
+			var bn2=document.getElementById("btn2");
+			var bn3=document.getElementById("btn3")
+			bn1.onclick=function(){
+				open('http://www.baidu.com');
+			//如果不添加一个名称，则每打开一次窗口都会在新窗口打开;
+			//设置了name属性后打开一个页面后，如果后面再次打开，则会在原来打开的位置打开新页面
+			//在实际开发中
+		   //例如：
+			}
+			bn2.onclick=function(){
+				open("http://www.baidu.com",'baidu');
+			//这里绑定一个点击事件打开窗口设置名称为百度
+			}
+			bn3.onclick=function(){
+				open('http://www.jd.com','baidu')
+				//这里绑定另外一个点击事件打开另为一个网址，设置同样的名称
+			}
+			//最后发现bn3打开的页面还是在bn2打开页面的位置，没有新打开窗口
+		}
+	</script>
+	<body>
+		<button id="btn1">点击打开</button>
+		<button id="btn2">点击打开</button>
+		<button id="btn3">点击打开</button>
+	</body>
+</html>

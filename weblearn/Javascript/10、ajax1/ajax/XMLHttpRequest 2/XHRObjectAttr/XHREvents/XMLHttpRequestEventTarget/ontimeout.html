@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">发送请求</button>
+	</body>
+	<script type="text/javascript">
+	var btn=document.getElementById("btn");
+	btn.onclick=function(){
+		var xhr=new XMLHttpRequest();
+		xhr.open('GET','timeout.php',true);
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4){
+				if(xhr.status==200){
+					alert(xhr.responseText)
+				}
+			}
+		}
+		xhr.timeout=3000;//设置请求超时时间timeout值为3000，超过这个时间就会终止请求
+	//timeout属性用来设置xhr发送请求超时的时间，单位为微秒，如果超过这个时间请求不成功，则会主动终止请求，并触发onntimeout事件	
+		xhr.ontimeout=function(){
+			alert('请求超时')
+		}
+	//ontimeout事件是在发送请求超过设置的timeout的时间后触发的事件，可以绑定函数执行一些语句	
+		xhr.send()
+	}
+	
+	
+//注意:
+// 1,可以在 send()之后再设置此xhr.timeout，但计时起始点仍为调用xhr.send()方法的时刻。
+// 2,当xhr为一个sync同步请求时，xhr.timeout必须置为0，否则会抛错。
+	</script>
+</html>

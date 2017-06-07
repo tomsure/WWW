@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 300px;
+			height: 400px;
+			background-color: darkgrey;
+			display: flex;
+			flex-flow: row nowrap; /*水平排列,不换行*/
+		}
+		#dv1{
+			width: 200px;
+			height: 200px;
+			background-color: darksalmon;
+			
+		}
+		#dv2{
+			width: 200px;
+			height: 200px;
+			background-color: darkslateblue;
+			
+		}
+		#dv3{
+			width: 200px;
+			height: 200px;
+			background-color: darkolivegreen;
+			
+		}
+	</style>
+	<body>
+		<div id="dv">
+			<div id="dv1">
+				1
+			</div>
+			<div id="dv2">
+				2
+			</div>
+			<div id="dv3">
+			3	
+			</div>
+		</div>
+	</body>
+	<!--flex-flow属性用于同时设置元素的fiex-direction和flex-wrap的值，所以他有两个值,
+	上面例子中设置三个元素宽度都为200px,则他们的总宽度超过了父元素，则他们就会等比划分，且不换行-->
+	
+	<!--这个 属性的值就是fiex-direction和flex-wrap的值组合同时填写-->
+</html>

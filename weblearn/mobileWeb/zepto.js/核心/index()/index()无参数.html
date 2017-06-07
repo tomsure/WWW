@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		
+	</style>
+	<body>
+		  <div id="dv">
+		  	 <p>1</p>
+		  	 <span id="sp">
+		  	 	2
+		  	 </span>
+		  	 <a>3</a>
+		  </div>
+		 
+		  <button>无参数</button>
+		  
+		
+	</body>
+	<script type="text/javascript" src="../zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+		     $('button').on('click',function(){
+		     	alert($('#sp').index())
+		     })
+		})
+//		  index()方法无参数的时候表示返回当前元素在它的父元素下相对与这个父元素所有同级子元素的位置,例如上面例子中,span元素的父元素是div,div下有三个元素,p,span和a,此时这个例子中返回的就是span在div下的下标,也就是1
+	</script>
+</html>

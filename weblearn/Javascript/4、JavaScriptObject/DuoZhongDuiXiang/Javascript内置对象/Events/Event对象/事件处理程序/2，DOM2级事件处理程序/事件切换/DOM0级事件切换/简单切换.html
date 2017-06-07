@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	 div {  width: 100px;height: 100px;}
+	.blue { background:blue ;}
+	.red {background: red;}
+	</style>
+	<body>
+		<div id="dv" class="blue">
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		   dv.onclick=toRed//这里首先将dv的onclick绑定toRed函数，当点击的时候，就会执行toRed函数；
+		   
+		  function toRed(){
+		  
+		   	this.className='red';//函数已经绑定给事件函数，所以这里的this子的就是绑定事件的DOM元素
+		 	this.onclick=toBlue;
+		   }//而函数内部当执行函数的时候会将className设置为red，而red这个cass名的css属性中的background是红色，所以点击的时候就会变成红色，后面接着执行，就是再将dv的onclick事件绑定到toBlue函数，当点击的时候就会执行toBlue函数；
+		   
+		   function toBlue(){
+		   	
+		   	this.className='blue';
+		   	this.onclick=toRed;
+		   }//上面 已经绑定了toRed函数，当执行的时候又会吧onclick事件绑定 roBlue函数，所以在点击的时候就会执行toBlue函数，而toBlue函数内部也会设置clss名称，从而改变颜色，接着又将事件函数绑定到toRed；
+		   //这样的话没吃点击dv的时候一是会触发onclick的事件函数，改变颜色（执行语句），二是将事件再绑定到其他函数上，这样就达到了来回切换的效果
+		   
+		 
+		
+	</script>
+</html>

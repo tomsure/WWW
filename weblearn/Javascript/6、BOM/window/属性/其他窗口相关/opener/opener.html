@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+/*语法格式： 
+      window.opener 
+      window.opener.方法 
+      window.opener.属性  
+                 功能：opener属性与打开该窗口的父窗口相联系，当访问子窗口中operer属性时 ，返回的是父窗口。通过该      属性，可以使用父窗口对象中的方法和属性。*/
+                window.onload=function(){
+                	var dd=document.getElementById("btn");
+                	dd.onclick=function(){
+                		open("index.html") //绑定事件设置 打开页面
+                	}
+                }
+	</script>
+	<body>
+		<button id="btn" >点击打开</button>
+	</body>
+</html>

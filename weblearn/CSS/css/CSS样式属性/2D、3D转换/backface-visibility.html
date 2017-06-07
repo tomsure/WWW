@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*定义当元素背面面对屏幕的时候是否显示值分别为hidden和visible*/
+		#dv{ 
+			width: 100px;
+			height: 100px;
+			 background-color: brown;
+			  -webkit-transform: rotate(160deg);
+			  -webkit-transform:rotateY(110deg) ;      /*旋转180度相当于背对屏幕*/
+			  -webkit-backface-visibility: hidden;/*设置为隐藏*/
+			 
+			  
+			  
+			  }
+			  
+			  
+			  
+			  
+			  
+			  #dv1{ 
+			width: 100px;
+			height: 100px;
+			 background-color: brown;
+			  -webkit-transform: rotate(180deg);
+			  -webkit-transform:rotateY(180deg) ;      /*旋转180度相当于背对屏幕*/
+			  -webkit-backface-visibility: visible;/*设置为显示*/
+			 
+			  
+			  
+			  }
+	</style>
+	<body>
+		<div id="dv">
+			中国人
+		</div>
+		
+		<div id="dv1">
+			美国人
+		</div>
+	</body>
+</html>

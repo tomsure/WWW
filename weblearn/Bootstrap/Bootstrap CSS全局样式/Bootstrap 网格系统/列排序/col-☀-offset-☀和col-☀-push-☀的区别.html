@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.css"/>
+	<style type="text/css">
+		.a{border:1px solid red;background: gray;}
+		.s{border:1px solid blue ;margin:10px ;}
+		.ss{border:1px solid green ;}
+	</style>
+	<body>
+		
+		<div class="s">
+			<div class="container">
+			<div class="row">
+				<div class="col-md-4 a ">
+					偏移前
+				</div>
+				<div class="col-md-4 a">
+				偏移前	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 a ">
+					偏移前
+				</div>
+				<div class="col-md-4 a">
+					偏移前
+				</div>
+			</div>
+			
+		</div>
+		</div>
+		<div class="ss">
+			<div class="container">
+			<div class="row">
+				<div class="col-md-4 a col-md-offset-3">
+					col-md-offset-3
+				</div>
+				<div class="col-md-4 a">
+				col-md-offset-3	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 a col-md-push-3">
+					col-md-push-3
+				</div>
+				<div class="col-md-4 a">
+					col-md-push-3
+				</div>
+			</div>
+		<!--col-md-offset-3向右偏移 ，会将它右边的列挤着也向右偏移-->	
+		<!--col-md-push-3向右偏移，它右边的元素不会动，偏移的列会穿过自己右边的列-->
+		</div>
+		</div>
+	</body>
+</html>

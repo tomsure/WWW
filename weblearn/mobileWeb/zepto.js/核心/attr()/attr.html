@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	  <style type="text/css">
+	  	#dv{
+	  		width: 100px;
+	  		height: 100px;
+	  		border: 1px solid darksalmon;
+	  	}
+	  	
+	  	
+	  	#dv1{
+	  		width: 100px;
+	  		height: 100px;
+	  		background-color: red;
+	  	}
+	   
+	  </style>
+	<body>
+		<div >
+			
+		</div>
+		<div >
+			
+		</div>
+		<button id="btn1">点击设置1</button><br />
+		<button id="btn2">点击设置2</button><br />
+		<button id="btn3">点击设置3</button>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('#btn1').on('click',function(){
+				$('div').eq(0).attr('id','dv')
+				
+			});
+			
+//			设置一个属性
+			$('#btn2').on('click',function(){
+				$('div').eq(1).attr({
+					'id':'dv1',
+					'title':'这是一个div'
+				})
+				//设置多个属性，使用json格式
+			});
+			$('#btn3').on('click',function(){
+				$('div').eq(1).attr('id',null)
+				
+//				设置value值为null,相当于删除属性
+                 alert($('div').eq(1).attr('title'))
+//               一个参数的时候,是获取属性值
+			})
+		})
+		
+//		attr()方法的用法:
+//		 1,参数为 两个的时候，用于设置属性，属性值为null的时候，相当于是删除属性；
+//       2,一个参数的时候,用于获取属性值
+//       3,设置多个属性的时候,可以使用json格式的参数
+//       4,使用函数计算的返回值作为属性的值
+
+	</script>
+</html>

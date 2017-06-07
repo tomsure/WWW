@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	<script>
+	/*prop() 方法设置或返回被选元素的属性和值。它
+当该方法用于返回属性值时，则返回第一个匹配元素的值。
+当该方法用于设置属性值时，则为匹配元素集合设置一个或多个属性/值对。
+注意：prop() 方法应该用于检索属性值，例如 DOM 属性（如 selectedIndex, tagName, nodeName, nodeType, ownerDocument, defaultChecked, 和 defaultSelected）。
+提示：如需检索 HTML 属性，请使用 attr() 方法代替。
+提示：如需移除属性，请使用 removeProp() 方法。*/
+		$(function(){
+			$("#btn").click(function(){
+			alert($("a").attr("href")) 
+			alert($("a").prop("href"))  //返回的是HTMLDOM Anchor 对象中的URL
+			
+			//prop()方法用于获取或者设置【HTMLDOM】对象的属性
+		})
+		})
+	</script>
+	<body>
+		<a href="http:www.baidu.com">百度</a>
+		<button id="btn">点击设置</button>
+	</body>
+</html>

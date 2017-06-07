@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击绑定</button>
+		<button id="btn1">取消绑定</button>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		var btn1=document.getElementById("btn1");
+		btn.onclick=function(){
+			alert(1)
+		}//给btn绑定点击事件
+		
+		btn1.onclick=function(){
+			btn.onclick=null;
+		}//给btn删除事件
+		
+//	给元素绑定事件后删除事件秩序将这个事件处理程序的事件句柄设置为null即可,但是还需要其他事件的驱动，例如这里点击了btn1之后才能删除btn的事件函数，不然如果直接绑定为null的话，它btn的事件函数就不会执行，因为已绑定就被取消了。
+		
+	</script>
+</html>

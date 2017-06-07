@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//relatedTarget 事件属性返回与事件的目标节点相关的节点。
+	//这个属性是能用在onmouseover和onmouseout上面，其他都用不了
+	window.onload=function(){
+		var dv=document.getElementById("dv");
+		dv.onmouseover=function(ev){//对于 mouseover 事件来说，该属性是鼠标指针移到目标节点上时所离开的那个节点。
+			var ss=ev.relatedTarget||event.relatedTarget;
+			var de=document.getElementById("demo");
+		
+			de.innerHTML= "你是从"+ss.id+"上移到这里来的"
+			/*这个例子要注意的是：从哪里来的那个节点如果该节点有属性才能绑定它的属性，如果没有属性，则不能绑定那个属性，否则会报错，例如现在dv1有id属性，可以给ss绑定id属性，但是如果是从body上移过去，body没有id属性，则后台就会报错，这里指的是从哪个节点移动，如果是元素则可以使用元素有的那个属性，*/
+		}
+		
+		dv.onmouseout=function(ev){//对于 mouseout 事件来说，该属性是离开目标时，鼠标指针进入的节点。
+			var ss=ev.relatedTarget||event.relatedTarget;
+			var de=document.getElementById("demo");
+		
+			de.innerHTML=ss//这里就会表示离开目标后鼠标进入的那个节点
+			
+		}
+	}
+	</script>
+	<style type="text/css">
+		#dv{
+			width: 200px;
+			height: 200px;
+			background-color: darkmagenta;
+			
+		}
+		#dv1{
+			width: 150px;
+			height: 150px;
+			background-color: #0000FF;
+			margin: 10px;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<div id="dv1">
+			
+		</div>
+		
+		<p id="demo"></p>
+	</body>
+</html>

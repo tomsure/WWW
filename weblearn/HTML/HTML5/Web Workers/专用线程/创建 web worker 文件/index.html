@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			0
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		var Odiv;
+	
+			Odiv=document.getElementById("dv");
+		var work=new Worker('worker.js');
+		//创建worker对象，构造函数有一个参数，参数就是创建的worker文件，也是一个js文件
+		work.onmessage=function(e){
+			Odiv.innerHTML=e.data
+		}
+//		通过onmessage事件设置页面来显示后台js发送过来的消息
+	
+	
+	
+//	Worker是运行在服务器端运行的独立脚本,不会影响前端页面的性能,特是一个独立的js文件,通过html的js和这个js文件配合使页面可以收到来自服务器的消息
+		
+	</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="http://www.baidu.com">百度</a>
+		<button id="btn">点击获取焦点</button>
+		<button id="btn1">点击失去焦点</button>
+	</body>
+	<script type="text/javascript">
+	var aa=document.getElementsByTagName('a')[0]
+	  var btn=document.getElementById("btn")
+          btn.onclick=function(){
+          	aa.focus()
+          }
+      var  btn1=document.getElementById("btn1")  
+        btn1.onclick=function(){
+       	   aa.blur()
+       }
+	</script>
+</html>

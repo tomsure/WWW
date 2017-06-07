@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var ss=document.getElementById("myCanvas").getContext("2d");
+			
+/****************** 1,以指定的尺寸（以像素计）创建新的 ImageData 对象：***************/			
+			var dd=ss.createImageData(100,100);
+			   dd.date[0]=255;
+			   dd.date[1]=0;
+			   dd.date[2]=0;
+			   dd.date[3]=255
+			
+/***2,创建与指定的另一个 ImageData 对象尺寸相同的新 ImageData 对象（不会复制图像数据）*/			
+	    //     var aa=ss.createImageData(ImageData)		
+			
+		}
+	</script>
+	<body>
+	<canvas id="myCanvas" width="200" height="200"></canvas>
+	</body>
+</html>

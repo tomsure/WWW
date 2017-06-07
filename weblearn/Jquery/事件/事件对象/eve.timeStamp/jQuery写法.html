@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		//返回事件发生距离1970年1月一日的毫秒数
+		$(function(){
+			$("button").on("click",function(w){
+				alert("距离1970年1月1日到现在的时间毫秒数是："+w.timeStamp)
+			})
+		})
+	</script>
+	<body>
+		<button>点击测试</button>
+	</body>
+</html>

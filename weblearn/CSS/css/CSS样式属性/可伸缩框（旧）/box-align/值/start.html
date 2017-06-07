@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	/*对于正常方向的框，每个子元素的上边缘沿着框的顶边放置。
+对于反方向的框，每个子元素的下边缘沿着框的底边放置。*/
+		#dv{ width: 100px;
+		height: 100px;
+		 border: 1px solid #008000;
+		  display: -webkit-box;
+		  -webkit-box-align: start;/*默认值*/
+		  }
+		#dv1{
+			 width: 100px;
+			 height: 100px;
+			  border: 1px solid #008000;
+			   display: -webkit-box;}
+	</style>
+	<body>
+		
+		
+		<div id="dv">
+			中国梦
+		</div>
+		<div id="dv1">
+			中国梦
+		</div>
+	</body>
+</html>

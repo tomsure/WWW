@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		.a  { width: 100px;
+		     height: 100px;
+		     background-color: deeppink;
+		}
+		.b { width: 200px;
+		     height:200px;
+		     background-color: darkgreen;
+		     border-radius: 100px;
+		     
+		 
+		 
+		 }
+	</style>
+	
+	<body>
+		<button>点击测试</button>
+		<div class="a">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('button').click(function(){
+			$('div').toggleClass('b',2000)
+
+		})
+//		toggleClass()方发在jquery toggleClass()原有的方法上（切换添加或删除某个类名）添加可设置参数功能,可以设置动画的时间,和动画完毕执行函数等等，使用方法就是在括号里面添加参数
+	</script>
+</html>

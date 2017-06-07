@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	*{margin: 0;}/*清楚默认margin值*/
+	
+	/*该属性值会对元素的高度设置一个最低限制。因此，元素可以比指定值高，但不能比其矮。不允许指定负值。*/
+	
+	
+		
+		
+		
+		
+		/*使用像素设置元素的最小高度：*/
+		#p1{min-height: 100px;/*这里设置了最小高度是100px就是说p元素的高度不会小于这个高度，如果不设置的话就是0，没有最小高度的限制*/
+		border: 1px solid red;/*这里设置一个border是为了看出p元素的实际高度*/
+		
+		}
+		#dv{
+			background-color: red;
+			width: 400px;
+			height: 400px;
+		}
+		
+		
+		
+		
+		
+		/*使用百分比表示元素的最小高度:*/
+		#p2{
+			/*使用百分比表示元素的最小高度，必须是基于包含它的块级元素的相对百分比，这里例子的意思就是div是包含p2，而且div是块级元素，这里设置的40%是相对于div的高度的百分之40%*/
+			min-height: 40%;
+			border: 1px solid black;/*这里设置一个border是为了看出p元素的实际高度*/
+		}
+		
+	</style>
+	<body>
+		<p id="p1">你好顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶是是是是是是是是是是是是是是是是</p>
+		<div id="dv">
+			<p id="p2">中国</p>
+		</div>
+		
+	</body>
+</html>

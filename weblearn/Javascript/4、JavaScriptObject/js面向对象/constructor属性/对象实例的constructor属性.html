@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(){};
+		Person.prototype.name='tom';
+		var person1=new Person();
+		document.write(person1.constructor==Person)//true
+		//上面返回true，由于构造函数的原型对象的constructor属性就是构造函数本身；
+//		而实例对象的__proto__属性就是原型对象,所以实例对象的构造函数就是这个构造函数;可以通过推算得出
+
+      //由于
+      document.write(person1.__proto__==Person.prototype)//true
+      //而且  
+      document.write(Person.prototype.constructor==Person)//teue;
+      
+      //所以
+ document.write(person1.__proto__.constructor==Person.prototype.constructor)//true;
+      //所以
+      document.write(person1.constructor==Person)//true
+      
+      
+    
+		
+		
+		    
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

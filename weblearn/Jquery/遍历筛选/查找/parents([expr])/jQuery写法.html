@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//返回被选元素的所有父级元素
+		$(function(){
+			$("p").parents().css("border","1px solid green")//如果不设置参数，则包含它自己
+			
+			
+		})
+	</script>
+	<body>
+		<div id="">
+		111
+		<span id="">
+			222<p>333</p>
+		</span>
+		</div>
+	</body>
+</html>

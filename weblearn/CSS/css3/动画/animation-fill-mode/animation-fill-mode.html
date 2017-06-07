@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<style type="text/css">
+	#dv{
+		margin-bottom: 20px;
+		width: 100px;
+		height: 100px;
+		background-color: coral;
+		position: relative;
+		left: 0px;
+		border-radius: 100px;
+		animation: divC 5s ;
+		-webkit-animation: divC 5s;
+		-webkit-animation-fill-mode:forwards ;
+		/*animation-fill-mode属性用于设置元素在动画开始前和结束后的样式，在正常的动画中，动画结束后，会回到原始位置，感觉不太好设置这个属性的时候，就可以改变这种状态*/
+	}
+	
+	@-webkit-keyframes divC{
+		from{left: 0px;background: coral;}
+		to{left: 800px;background: #FFFF00;}
+	}
+</style>
+<script type="text/javascript">
+	
+</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<input type="button"   id="btn" value="点击测试" />
+	</body>
+</html>

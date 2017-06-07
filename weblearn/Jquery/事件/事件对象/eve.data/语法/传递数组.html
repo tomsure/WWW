@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$("button").on("click",[1,2,'wew',5],function(e){
+				alert(e.data)
+				//此时e.data的值是一个数组
+				alert(e.data[2])
+				//获取数组中一个值
+			})
+		})
+	</script>
+	<body>
+		<button>点击测试</button>
+		
+	</body>
+</html>

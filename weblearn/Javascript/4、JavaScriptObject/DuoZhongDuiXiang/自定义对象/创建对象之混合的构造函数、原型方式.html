@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		function Parent(){  
+  this.name="李小龙";  
+ this.age=32;  
+     
+};   
+Parent.prototype.lev=function(){  
+  
+   return this.name;  
+};;  
+  
+var  x =new  Parent();  
+  
+alert(x.lev());
+/*
+ 1.该模式是指混合搭配使用构造函数方式和原型方式
+
+2.将所有属性(不是方法的属性)定义在函数中（构造函数方式）
+
+将所有属性值为方法的属性利用prototype在函数之外定义（原型方式）
+
+3.推荐使用这样方式创建对象,这样做有好处和为什么不单独使用构造函数方式和原型方式，由于篇幅问题这里不予讨论
+
+ * */
+
+	</script>
+	<body>
+	</body>
+</html>

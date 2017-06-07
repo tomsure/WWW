@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var xhr;
+		if(window.XMLHttpRequest){
+			xhr=new XMLHttpRequest()
+		}else{
+			xhr=new ActiveXObject('Microsoft.XMLHTTP')
+		}
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4){
+				if(xhr.status==200){
+					alert(xhr.responseText)
+				}
+			}
+		}
+		xhr.open('GET','../缓存/缓存.txt',true)
+		xhr.send(null)
+	</script>
+</html>

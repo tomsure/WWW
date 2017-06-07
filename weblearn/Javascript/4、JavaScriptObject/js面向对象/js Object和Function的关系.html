@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			alert(Function.prototype);//function;
+alert(Object.prototype);
+alert(Object.__proto__);
+alert(Function.prototype==Object.__proto__);
+alert(Object.__proto__==Function.prototype);
+function s(){}
+var a=new s()  
+alert(a.__proto__==s.prototype)//null;;
+alert(s.__proto__==Object.__proto__);
+alert(Object.__proto__==Function.prototype);
+alert(Object.prototype.__proto__);
+alert(s.__proto__!=Object.prototype);
+alert(Object instanceof Function);
+alert(Function instanceof Function)
+alert(Object instanceof Object)
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

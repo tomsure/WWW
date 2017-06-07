@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#div1{width: 200px;height: 200px;background-color: #FF0000;margin: 80px;}/*div1无定位*/
+		#div2{width: 100px;height: 100px;background-color: #00FFFF;position: absolute;left: 40px;top: 30px;}/*有定位，是绝对定位，它是相对于body作为标准来定位的，因为他的父级元素div1未定位*/
+	</style>
+	<script type="text/javascript">
+	//	offsetParent指的是找到元素的实际位置(实际父级元素);
+		window.onload=function(){
+			var s=document.getElementById("div2");
+			alert(s.offsetParent.tagName)//弹出div2的实际定位的父级元素的标签名称；
+		}
+	</script>
+	<body>
+		<div id="div1">
+			<div id="div2">
+				
+			</div>
+		</div>
+		
+		
+		在CSS中如果一个元素div2设置了绝对定位，他的父元素div1没有设置定位，那么这个div2就会向上一层查找，直到找到了设置了定位的元素，那个元素就根据那个作为定位标准，如果每一层父元素都没有设置定位，则会根据默认设置了定位的body的位置来作为定位标准，如果直接父元素div1设置了定位，那么div2就是根据div1来定位；
+		在JS中如果元素div2的直接父元素没有设置CSS position定位（例如这里），这样的话div2的offsetParent就是body，所以元素的offsetParent指的就是这个元素设置了定位的父及元素，而不是直接的父元素。
+	
+	</body>
+</html>

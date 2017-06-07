@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width:100px;
+			height: 100px;
+			background-color: darksalmon;
+			position: absolute;
+			
+		}
+		
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('#btn1').click(function(){
+				$('div').animate({
+				'top':'400px',
+				},2000).animate({
+					'left':'500px'
+				},2000).animate({
+					'top':'30px'
+				},2000).animate({
+					
+					'left':'10px'
+				},2000)
+			})
+			$('#btn2').click(function(){
+				$('div').dequeue()
+			})
+		})
+	</script>
+	<body>
+		<button id='btn1'>开始运动</button>
+		<button id="btn2">执行dequeue()</button>
+		<div></div>
+		
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	//js没有类的概念，所以js对象是从原型实现继承的	
+		function tiger(){
+			this.say=function(){
+				alert('我是老虎')
+			}
+		}  //创建构造函数Tiger
+		
+		function cat(){
+			this.sayPlay=function(){
+				alert('我会爬树')
+			}
+		}//创建构造函数Cat；
+		
+		var BosiCat=new cat();//实例化构造函数，创建实例对象；
+		BosiCat.sayPlay()//调用Cat的原型方法；
+		
+		tiger.prototype=new cat();//将构造函数Tigger的原型对象赋给猫的实例new Cat()
+		var dongbeihu=new tiger()//实例化构造函数Tiger，创建实例对象
+		dongbeihu.sayPlay() //调用方法，可以弹出sayPlay()的内容
+	    dongbeihu.say()	//调用自己本身的方法
+//	实现原型继承步骤:	
+//   1,创建一个构造函数Tiger,内部添加所需的属性或方法;暂不实例化;
+//   2,创造另一个构造函数Cat;现在有两个构造函数;
+//   3,将构造函数Cat的实例对象new Cat()赋值给构造函数Tiger的原型对象Tiger.prototype;
+//   4,实例化构造函数Tiger,并赋值给变量(实例对象的名称);
+//   5,可以调用继承自实例对象new Cat()的属性或方法.
+     
+
+
+
+//原型继承解析:
+  // 1,创造构造函数tiger之后tiger的原型是tiger.prototype,它原型的原型指针是
+//tiger.prototype.__proto__,指的就是Object.prototype，它的原型指向一个空对象null;
+    console.log(tiger.prototype.__proto__==Object.prototype)//由于将tiger.prototype设置为new cat()，所以这里为false；设置这个之前应该为true
+    //由于构造函数tiger原型的constructor属性指的就是构造函数本身，即：
+    console.log(tiger.prototype.constructor)//这里本来应该输出为function tiger(){...}，
+    //由于将tiger.prototype设置为new cat()，而new cat()的constructor指的就是     function cat(){.....}
+   
+   //所以现在tiger.prototype.constructor的结果如下：
+    console.log(tiger.prototype.constructor)//cat(){.....}；
+    console.log(tiger.prototype.constructor==cat)//true，跟上面一个意思
+    
+    //由于：
+      console.log((new cat()).__proto__==cat.prototype)//true
+    //所以：
+    
+    console.log(tiger.prototype.__proto__==cat.prototype)//true
+    //所以当设置tiger.prototype=new cat();的时候，就是把tiger的原型的原型设置为cat构造函数的实例对象new cat()的原型；
+//   当调用tiger的sayPlay()方法的时候,由于自没有这个方法,就在自己的原型上找,自己原型上没找到,再在原型的原型上找,这里原型的原型就是cat的原型,它有sayPlay()这个方法,所以tiger也就有了这个方法,所以tiger可以调用到这个方法,这就是通过原型实现继承的原理。
+    
+    
+    
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
+	</script>
+</html>

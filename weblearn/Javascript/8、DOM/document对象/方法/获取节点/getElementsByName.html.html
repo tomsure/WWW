@@ -1,0 +1,19 @@
+<!DOCTYPE html>；
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var d=document.getElementsByName("tomsure");
+				//getElementsByName()方法返回的是一个集合，是一个数组，不是单个元素，即使只有html元素，它返回的也是一个数组:例如：
+				alert(d.tagName);//弹出undefined;因为d是一个数组;
+				alert(d[0].tagName)
+	//弹出标签名称input，因为dody里面有一个input元素,就是数组的第0个。
+			}
+		</script>
+	</head>
+	<body>
+		<input type="" name="tomsure" id="" value="点击跳转" />
+	</body>
+</html>

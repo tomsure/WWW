@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<script type="text/javascript">
+         var work;
+         var dv;
+         
+        window.onload=function(){
+        	dv=document.getElementById("dv")
+        	var start=document.getElementById("start");
+        	 var stop=document.getElementById("stop");
+        	 
+         start.onclick=function(){
+         	
+         	if(work){
+         		return 
+         	}//如果已经在运行，则就不再重复运行，return就是不运行
+         	work=new Worker('worker.js');
+            
+            work.onmessage=function(e){
+            	alert(e.data)
+            }
+         	 work.postMessage(1)
+         }
+        }
+        
+		 </script>
+	<body>
+		<div id="dv">
+			1
+		</div>
+			<button id="start">开始</button>
+		<button id="stop">结束</button>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	/*注意：1，nodeName是只读的：
+	      2，节点的nodeName与标签名相同；
+	      3，属性节点的nodeName与属性名相同；
+	      4，文本节点的nodeName始终是#text；
+	      5，文档节点的nodeName始终是#document；
+	      nodeName始终包含HTML元素的大小写标签名*/
+	
+		window.onload=function(){
+			var w=document.getElementById("dv")
+			alert(w.nodeName);
+			alert(w.childNodes.length);//弹出3，代表w的子节点有三个其中两个空格，一个ul
+			 alert(w.childNodes[0].nodeName)//弹出text，代表dv的第一个子节点的节点名称是text，因为他是空格
+			
+		}
+	</script>
+	<body>
+		<div  id="dv">
+			<ul id="ul1">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+</html>

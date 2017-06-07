@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		div { width: 100px;height: 100px;background-color: red;}
+	</style>
+	
+	<body>
+		<div id="">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(document).click(function(){
+			$('div').toggle('fade',1000)
+		})
+	</script>
+	
+	<!--toggle()方法用来切换元素显示或隐藏，在jquery toggle()方法基础上增加了可以添加参数的来增加特效的功能-->
+	<!--参数：
+		effect
+类型：String
+描述：一个字符串，指示要使用哪一种特效。
+easing（默认值："swing"）
+类型：String
+描述：一个字符串，指示要使用的 easing 函数。
+duration（默认值：400）
+类型：Number 或 String
+描述：一个字符串或一个数字，指定动画将运行多久。
+complete
+类型：Function()
+描述：一旦动画完成时要调用的函数。
+queue（默认值：true）
+类型：Boolean 或 String
+描述：一个布尔值，指示是否将动画放在特效队列中。如果是 false，动画将立即开始。自 jQuery 1.7 起，queue 选项也接受一个字符串，在这种情况下，动画添加到由字符串表示的队列中。
+		
+		
+		
+	-->
+</html>

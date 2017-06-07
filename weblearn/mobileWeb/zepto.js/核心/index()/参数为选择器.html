@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		
+	</style>
+	<body> 
+		  <div class="dv1">1</div>
+		  <div class="dv">2</div>
+		    <div class="dv">33</div>
+		  <div class="dv" id="box">3</div>
+		  <div class="dv" >4</div>
+		  <div class="dv5">5</div>
+		 
+		  
+		  <button>有多个元素符合条件</button>
+		  <button>只有一个符合条件</button>
+	</body>
+	<script type="text/javascript" src="../zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+		    
+
+             $('button').eq(1).on('click',function(){
+		     	alert($('.dv').index('#box'))
+		     })
+             
+             
+//           如果index()方法的参数是一个id选择器或者指定的一个元素,则表示这个元素在当前zepto集合对象中的索引值,例如,这里就是求出在class=dv里面id=box这个元素的下标
+             
+              $('button').eq(0).on('click',function(){
+		     	alert($('div').index('.dv'))
+		     })
+		  
+//		 如果index()方法的参数包含多个元素,如果匹配当前zepto集合对象,则返回匹配的第一个元素在集合中的下标,例如,这里要匹配所有div下面class为.dv的元素的下标,但是class=.dv的元素有多个,所以返回的就是内容为2的这个div,因为他是匹配的所有元素中的第一个,它位于div中的第2个,所以返回的下标就是1
+           })
+	</script>
+</html>

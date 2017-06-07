@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	*{margin:0;}
+	.di{width: 100px;height: 100px;background: red;}
+		.di::after{content:"哈哈";position: absolute;left: 100px; width: 70px;height: 70px;background-color: green;display: block;border-radius: 100px;}
+	/*::after伪元素指的是在某个元素的后面添加内容，但是它不是真正的DOM元素，所以不会影响html整体结构，例如这里给第一个div后面添加一个元素，将后面的元素浮动以后，后面的元素并没有跟在添加的元素后面，而是还是在第一个div的后面*/
+		ss{width: 100px;height: 100px;background-color: darkblue;float: left;}	
+
+/*************************************************************/
+p{font-size: xx-large;height: 60px; border: 1px solid #00FF00;}
+
+	p::after{content: "ssss";width: 100px;height: 200px;background-color: brown;margin: 10px;}
+	/*::after伪元素添加的内容设置的样式必须符合被添加元素所能添加的内容或者元素，例如p元素，后面只能添加文本，
+	/*使用：：after伪元素必须使用content属性，可以设为空。*/
+	/*而且添加的元素是行内元素（inline），可以使用display来改变,如果想给div添加div修饰，要设置width，height，就必须设置display为block*/
+	
+	/**********************************************************/
+	h3{color: darkolivegreen;}
+	h3::after{content: "s"; width: 100px;height: 100px;background-color: darkred;}
+	
+	</style>
+	<body>
+		<div class="di">
+			
+		</div>
+		<div id="ss">
+			
+		</div>
+		
+	<!----------------------------------------------------------------->	
+		<p>中国</p>
+		<p>美国</p>
+		<!--------------------------------------------------------------->
+		<h3>日本人</h3>
+		
+	</body>
+</html>

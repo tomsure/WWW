@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	
+		<button id="btn">点击获取</button>
+	
+	</body>
+	<script type="text/javascript">
+	
+	
+		var btn=document.getElementById("btn")
+		
+			
+		btn.onclick=function(){
+		
+		var work=new Worker('postMessage().js')
+			work.onmessage=function(e){
+				alert(e.data)
+			}
+		}
+//		postMessage()方法用于发送数据,可以在前端向后端worker发送,Worker也可以向前端发送,都执行这个方法
+	</script>
+</html>

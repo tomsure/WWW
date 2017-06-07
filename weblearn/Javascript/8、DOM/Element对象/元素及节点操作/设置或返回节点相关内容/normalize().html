@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		
+		
+			
+			
+			function dd(){
+				var sd=document.getElementById("dv");
+         
+			var df=document.createTextNode("你好");
+			
+			sd.appendChild(df)		//追加新创建的文本节点
+			
+			var rr=document.getElementById("sp");
+		      rr.innerHTML=sd.childNodes.length//将span的内容设为与div的子节点个数相同
+		      
+			
+			}
+			function ee(){
+				var ds=document.getElementById("dv");
+         ds.normalize()  //合并节点
+			
+			
+		
+			
+			var qq=document.getElementById("sp");
+		      qq.innerHTML=ds.childNodes.length
+		      
+			
+			}
+		
+	</script>
+	<body>
+		<div id="dv">
+			
+			
+		</div>
+		<p> div有 <span id="sp">1</span>个子节点</p>
+		<button onclick="dd()">点击添加 </button>
+		<button onclick="ee()">点击合并</button>
+	</body>
+</html>

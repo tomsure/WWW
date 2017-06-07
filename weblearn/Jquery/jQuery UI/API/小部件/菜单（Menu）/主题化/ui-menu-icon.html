@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<!-- <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">-->
+	 <!--不同版本的ui css文件菜单的样式会有区别-->
+	<style type="text/css">
+		.ui-menu { width: 300px;}
+		
+		
+	</style>
+	<body>
+		<ul id="menu">
+			<li>手机</li>
+			<li>电脑</li>
+			<li>厨卫
+				<ul>
+					<li>冰箱</li>
+					<li>洗衣机</li>
+					<li>手油烟机</li>
+				</ul>
+			</li>
+			<li>相机</li>
+		</ul>
+	</body>
+	<script type="text/javascript" src="../../../../../../Bootstrap/bootstrap库/Bootstrap源码/js/tests/vendor/jquery.min.js"> 
+		
+	</script>
+	<script type="text/javascript" src="../../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('#menu').menu()
+		
+//		菜单部件使用方法:
+//		1,创建一个ul,里面多个li;
+//		2,给ui里面的li内部再创建包含li的ui;
+//		3,在js里给最外层ul添加menu（)方法
+	</script>
+</html>

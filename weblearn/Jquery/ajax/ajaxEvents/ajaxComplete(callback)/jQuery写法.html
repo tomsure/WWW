@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<button id="btn">点击加载</button>
+		
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//此方法只能绑定在document元素上，表示当完成ajax请求的时候执行的函数不管是否成功只是只是表示请求完成，都会执行该函数；
+		$('#btn').click(function(){
+			$.ajax({
+				type:"get",
+				url:"load.php",
+				async:true,
+				success:function(data){
+					alert(data)
+				}
+			});
+		})
+		$(document).ajaxComplete(function(){
+			alert('请求成功')
+		})
+		
+		/*ajaxComplete和ajax方法（）的success函数的区别的就是 --- 
+success：当请求成功时调用函数，即status==200;
+complete：当请求完成时调用函数，即status==404、403、302...不管请求是否成功。*/
+
+	</script>
+</html>

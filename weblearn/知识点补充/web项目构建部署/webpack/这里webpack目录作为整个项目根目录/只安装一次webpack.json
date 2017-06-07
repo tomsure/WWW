@@ -1,0 +1,10 @@
+
+现在学的是webpack知识点，最外层目录名叫webpack，在项目构建中，
+webpack除了要全局安装外， 还需要在项目目录下安装webpack，使用以下命令：
+ 
+ cnpm install  --save-dev webpack；
+ 
+ 
+ 每个页面引入的文件是通过webpack打包后的js文件，每个文件写好之后使用以
+  下命令打包：
+  webpack 入口文件名  打包后的js文件名

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="p1"></p>
+		<p id="p2">你好</p>
+	</body>
+	<script type="text/javascript">
+		var p1=document.getElementById("p1");
+		   var p2=document.getElementById("p2")
+        
+          alert(p2.childNodes.length)
+//          在DOM中,如果元素内的文本内容是直接写进去的例如P2中的内容,这样这个元素就只有一个文本子节点,再多字数都是 一个文本子节点,空文本会和文字算一个  
+          
+          t1=document.createTextNode('你');
+          t2=document.createTextNode('好');
+          p1.appendChild(t1);
+          p1.appendChild(t2)
+          alert(p1.childNodes.length)
+//      如果元素的文本内容是通过创建后追加到父元素中的,那么创建追加一次就算父元素的一个文本子节点,创建追加多次就算多个文本子节点
+//      所以同样的标签元素,文本内容创建的方式不同,子节点的数量也就不同
+	</script>
+</html>

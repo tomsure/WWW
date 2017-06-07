@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{background-color:red ;margin:10px ;width:40px ;height:40px ;border-radius:100px ;text-align: center;line-height: 40px;display: none;}
+	</style>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.1/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	//使用回调函数的方法实现动画队列显示或隐藏
+		$(function(){
+			$("#btn").click(function(){//绑定事件
+				
+				$("#dv1").show("fast",function(){//绑定下一个元素的显示
+					$("#dv2").show("fast",function(){//绑定下一个元素的显示
+					$("#dv3").show("fast",function(){//绑定下一个元素的显示
+						$("#dv4").show("fast",function(){//绑定下一个元素的显示
+							$("#dv5").show("fast")//到头
+						})
+					})
+					})
+				})
+			})
+		})
+		//实现方法：当第一个元素显示或隐藏执行show()或者hide()方法的时候这两个方法里面除了设置速度参数（可选），再设置一个函数，函数里面绑定执行下一个元素显示显示或者隐藏的方法，以此类推
+		//缺点：这种方法只能对比较少的元素执行，当元素数量多的时候会耗费大量的代码量，最好的方式是使用递归方法
+	</script>
+	
+	<body>
+		<div id="dv1">1</div>
+		<div id="dv2">2</div>
+		<div id="dv3">3</div>
+		<div id="dv4">4</div>
+		<div id="dv5">5</div>
+		<button id="btn">点击显示</button>
+	</body>
+</html>

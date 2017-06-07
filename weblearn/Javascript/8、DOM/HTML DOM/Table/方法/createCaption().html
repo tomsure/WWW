@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="1" width="300" id="tb">
+			<tr>
+				<td>姓名</td>
+				<td>年龄</td>
+				<td>电话</td>
+			</tr>
+			<tr>
+				<td>张三</td>
+				<td>23</td>
+				<td>133</td>
+			</tr>
+			<tr>
+				<td>李四</td>
+				<td>22</td>
+				<td>111</td>
+			</tr>
+		</table>
+		<button id="btn">点击创建标题</button>
+	</body>
+	<script type="text/javascript">
+		var tb=document.getElementById("tb")
+		var btn=document.getElementById("btn")
+		btn.onclick=function(){
+			tb.createCaption()
+			tb.caption.innerHTML='人员表'
+		}
+		
+//		createCaption()方法用于创建表格的标题
+	</script>
+</html>

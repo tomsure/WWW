@@ -1,0 +1,6 @@
+设置或检索伸缩盒对象的子元素的对齐方式。查看其兄弟属性box-pack，两者的效果正好（相反）互补
+效果等同于过渡版本的flex-align属性和新版本的align-items属性；
+box-align的对齐方式受box-orient影响；
+默认情况下（即box-orient设置为horizontal）start和end所呈现的效果等同于顶部对齐和底部对齐；
+当box-orient设置为vertical时，start和end所呈现的效果等同于左对齐和右对齐；
+对应的脚本特性为boxAlign。

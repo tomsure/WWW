@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var sd=document.getElementById("text1");
+			var p1=document.getElementById("p1");
+			sd.onmousedown=function(ev){
+				var evt=ev||event;
+				if(evt.altKey==1){
+					alert("你按下了alt按键")//如果按下alt按键则就弹出这里
+				}else{
+					alert("你没有按下alt按键")//如果按下alt按键则弹出这里
+				}
+			}
+		}
+	</script>
+	<body>
+		<input type="text" name="text1" id="text1" value="" />
+		<p id="p1"></p>
+	</body>
+</html>

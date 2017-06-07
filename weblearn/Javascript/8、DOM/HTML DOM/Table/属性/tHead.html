@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="1" width=300>
+			<thead>
+				<tr><td>年龄</td><td>性别</td></tr>
+			</thead>
+			<tr><td>你好</td><td>你好</td>
+			</tr>
+			<tr><td>你好</td><td>你好</td>
+			</tr>
+		</table>
+	</body>
+	<script type="text/javascript">
+		var tb=document.getElementsByTagName('table')[0]
+		alert(tb.tHead)
+		//返回table中的thead元素
+		alert(tb.tHead.children[0].children[0].innerText)
+		//可以用来设置获取thead元素的内容
+	</script>
+	
+	
+</html>

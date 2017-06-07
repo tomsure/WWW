@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('div').click(function(){
+				$(this).animate({width:'300px'},2000
+				).queue('fx',function(){
+					$('div').css('background','gray')
+					alert(1)
+					$(this).dequeue()//出队操作
+				}).animate({
+					height:'300px'
+				},3000)
+			})
+		})
+		
+		
+		
+//	queue()方法可以用于在动画队列中插入需要执行的函数,由于多个animate()方法执行的动画是按顺序执行的,在一个animate()方法执行完毕后,会执行下一个animate()方法的动画,在执行这个动画之前还可以在两个animate()之间使用queue()方法插入一段函数,实际上是插入一个队列函数到默认的队列fx的数组中,进一步解释就是：
+    //例如上面的代码,当点击div的时候,原本是要执行以下代码:
+       /* $('div').click(function(){
+				$(this).animate({width:'300px'},2000
+				).animate({
+					height:'300px'
+				},3000)
+			}) */
+         
+//		但是如果还有其他需求,需要在第一个animate()方法动画执行后第二个animate()方法动画执行前插入一段函数,执行其他操作,就可以在这两个方法之间插入queue()方法来执行一段代码,这个方法就是入队的意思,就是将一段要执行的函数代码加入队列,要执行插入的函数就还必须使用dequeue()方法进行出队操作,上一段动画执行完之后,dequeue()就把queue()方法中的函数拿出队列并且执行这个函数,只有这样才会执行后面的动画
+	</script>
+</html>

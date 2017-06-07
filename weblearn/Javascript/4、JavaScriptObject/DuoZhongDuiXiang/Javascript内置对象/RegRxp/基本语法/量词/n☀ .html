@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		'n*'表示匹配0个一个或者多个n，要符合匹配条件首先，
+    
+      var str='ggle';
+      var reg=/go*gle/;
+      document.write(reg.test(str)+'</br>') //0个 o，返回true；
+      
+      var str1='gogle';
+      var reg1=/go*gle/;
+      document.write(reg1.test(str1)+'</br>') //1个 o，返回true；
+    
+ 
+     var str2='gooooooooooogle';
+      var reg2=/go*gle/;
+      document.write(reg2.test(str2)+'</br>') //多个个 o，返回true；
+ 
+    
+       var str='gjgle';
+      var reg=/go*gle/;
+      document.write(reg.test(str)+'</br>')//false，str中与o*匹配的字符串要么是一个或多个o，要么没有,但是如果是其他字符串的话就会返回false
+    
+    
+    
+   
+	</script>
+</html>

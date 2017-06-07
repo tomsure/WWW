@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	 div {  width: 100px;height: 100px;}
+	.blue { background:blue ;}
+	.red {background: red;}
+	</style>
+	<body>
+		<div id="dv" class="blue">
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		function addEvent(obj,type,fn){
+		//添加事件函数，obj就是绑定的DOM对象，type就是事件类型名称，fn就是事件函数      
+		var saved=null; //用于保存上一个事件
+		if(typeof obj['on'+type]=='function'){//判断事件是否存在
+			saved=obj['on'+type];//如果这个对象存在这个事件，就保存上一个事件
+		}
+		
+		obj['on'+type]=function(){//执行事件
+			
+			if(saved){
+				saved()
+			}//如果保存的上一个事件存在，则执行上一个事件函数
+			fn.call(this)
+		}
+		
+		}
+		
+	/*	addEvent(document,'click',function(){
+			alert(1)
+		})
+		addEvent(document,'click',function(){
+			alert(1)
+		})
+		//这样就解决了被覆盖的问题
+		*/
+		
+//	使用以上知识点再来解决以下问题	
+		
+		var dv=document.getElementById("dv")
+		 
+		   addEvent(dv,'click',toBlue)
+	
+		  
+		  
+		   
+		  function toRed(){//切换器函数
+		   
+		   	this.className='red';
+		 	addEvent(dv,'click',toBlue)
+		   }
+		   
+		   function toBlue(){//切换器函数
+		   	
+		   	this.className='blue';
+		   	addEvent(dv,'click',toRed)
+		   }
+	//在事件切换器事件处理函数前面添加一个同样的onclick事件函数，执行的时候，发现添加在 前面的事件函数不会执行，因为他被后面的事件函数覆盖了； 
+		 
+//		解决办法:
+//		  使用前面DOM0级事件处理函数知识点中解决覆盖问题的方法解决,但是比较麻烦
+		
+//		新问题:在点击很多次切换之后会报错Maximum call stack size exceede,意思 是说递归太多造成计算机故障，因为每点击一次计算机都要添加一次事件，计算机需要进行一次处理，添加的事件都会保存到计算机堆/栈中，会造成故障，解决办法是每执行一次，执行完毕后需要吧绑定的事件删除，所以还要写一个移出事件函数
+		
+		
+		
+	</script>
+</html>

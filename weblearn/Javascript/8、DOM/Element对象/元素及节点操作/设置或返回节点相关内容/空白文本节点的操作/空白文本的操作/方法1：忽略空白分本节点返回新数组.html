@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			<p>你好</p>
+			<p>还好</p>
+			<p>嗯</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		
+		
+		/********************封装过滤空白文本节点的函数******************/
+		  function filterNoNode(node){
+		  	var ret=[];//先声明一个数组；
+		  	for(var i=0;i<dv.childNodes.length;i++){
+		  	if(node[i].nodeType===3&&/^\s+/.test(node[i].nodeValue)){
+		  		//如果节点类型为文本节点且内容为空，也就是空文本（这里后面半句使用的是正则表达式），则跳过这次循环，继续执行循环；
+		  	/*这里的条件解释：nodeType===3表示文本节点，/^\s+/.test（）是用正则表达式表示值为空的元素；
+		  	 所以这里的条件表示空文本；
+		  	*/
+		  		continue
+		  	}else {
+		  		ret.push(node[i])
+//		  		否则（不为空文本）把节点追加到ret数组中去；
+		  	}
+		  	
+		  }
+		  	return ret  //最后返回数组
+		  	
+		  }
+		 
+		 
+		 alert(filterNoNode(dv.childNodes ).length)
+		 
+		 
+//		 在获取节点长度的时候就执行封装的函数filterNoNode就可以了,他返回了一个过滤掉空文本的数组
+		 
+		 
+	</script>
+</html>

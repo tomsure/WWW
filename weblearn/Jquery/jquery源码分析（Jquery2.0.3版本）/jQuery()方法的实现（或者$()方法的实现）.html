@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	 function Person(){};//创建构造函数
+	 Person.prototype.play=function(){
+	 	alert(1)
+	 }//添加原型方法
+	 Person.prototype.age=23//添加原型属性；
+	 var tom=new Person()//实例化构造函数
+	  tom.play();
+	  alert(tom.age)
+	/*****************以上是普通构造函数创建对象的方式***********/
+//	如果按上面的理解,jquery对象是以下这样创建的：
+// function Jquery(){};//创建构造函数
+//    Jquery.prototype.init=function(){};//添加原型方法
+//    Jquery.prototype.css=function(){} //添加原型方法
+// var jQuery=new Jquery() //实例化
+   
+   
+   
+	//但是jquery实际上不是这样创建的，而是按照下面的方法来创建的：
+	 	  function Jquery(){
+	  	return new Jquery.prototype.init() //下面添加的原型方法又是函数，可以当做构造函数创建对象，所以这里 new Jquery.prototype.init() 的时候就创建了一个对象
+	  }
+	   Jquery.prototype.init=function(){}  //添加原型方法
+	   
+	   Jquery.prototype.css=function(){}
+	   
+//	   Jquery.fn=Jquery.prototype//源码96行
+//	   Jquery.fn.init.prototype = Jquery.fn;//源码283行
+	    Jquery.prototype.init.prototype=Jquery.prototype//上面两行也可以写成这样 
+	    
+	    
+	   Jquery().css()
+	   /*
+	    上面Jquery().css()是怎样实现的呢？
+	    当执行函数Jquery()的时候，实际上也就是用构造函数init创建了一个实例对象；
+	   如果直接执行Jquery().css()这句话就会报错，因为执行Jquery()函数的时候，仅仅是创建了init这个对象，在16行中css()方法是添加在Jquery这个函数的原型上的，应该和init是平级的，init也是添加在Jquery的原型上的；
+	在jquery源码96行中：已经设置Jquery.fn等于Jquery.prototype；
+        在jquery源码283行中：已经设置Jquery.fn.init.prototype = Jquery.fn，所以此时：
+	  Jquery.fn.init.prototype = Jquery.fn也就可以写成：
+	  Jquery.prototype.init.prototype=Jquery.prototype；
+	  
+	  
+	  这样的话：
+	    Jquery.prototype上面添加的方法就和Jquery.prototype.init.prototype添加的方法相等，这样init这个对象的原型方法就有了css()方法；
+	    所以Jquery().css()就可以实现了
+	   
+	     
+	 */
+	 
+	//以上例子说明jquery的对象方法也可以在也可以在jquery实例对象上使用例如：
+	    
+	</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			
+		}
+	</style>
+	<body>
+		<div class="dv" id="dv">
+			
+		</div>
+		<button id="btn">点击删除</button>
+	</body>
+	<script type="text/javascript">
+	  function alert(){
+	    	alert(1)
+	    }
+		var dv=document.getElementById("dv")
+	    dv.attachEvent('onclick',alert)
+//	    var btn=document.getElementById("btn");
+//	    btn.attachEvent('onclick',function(){
+//	    	dv.detachEvent('onclick',alert
+//	    	)
+//	    })
+	</script>
+</html>

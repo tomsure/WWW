@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function Parent(){  
+ this.name="李小龙";  
+ this.age=32;  
+;  
+ if(typeof Parent._lev=="undefined"){  
+            
+       
+     Parent.prototype.lev=function(){  
+  
+               return this.name;  
+     }  
+     Parent._lev=true;  
+ }  
+     
+};   
+  
+  
+var  x =new  Parent();  
+  
+alert(x.lev());  
+/*
+ 
+ 说明：
+
+1.动态原型方式可以理解为混合构造函数，原型方式的一个特例
+
+2.该模式中,属性为方法的属性直接在函数中进行了定义，但是因为
+
+if(typeof Parent._lev=="undefined"){  
+            
+       
+          Parent._lev=true;}  
+
+ 
+从而保证创建该对象的实例时，属性的方法不会被重复创建
+
+3.，推荐使用这种模式
+
+ * 
+ * */
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

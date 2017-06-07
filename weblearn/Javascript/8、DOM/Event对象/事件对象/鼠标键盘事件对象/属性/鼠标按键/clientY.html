@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	/*clientX 事件属性返回当事件被触发时鼠标指针向对于浏览器页面（或客户区）的水平坐标。
+客户区指的是当前窗口。*/
+		window.onload=function(){
+			var wd=document.getElementById("dv");
+			wd.onmousedown=function(ev){
+         var qq=ev.clientY||event.clientX;
+           alert("你点击的时候鼠标指针距离浏览器的Y轴距离为："+qq) 
+		}
+		}
+	</script>
+	<style type="text/css">
+		#dv{
+			margin: 0;
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+</html>

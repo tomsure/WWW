@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+	/*globalCompositeOperation 属性设置或返回如何将一个源（新的）图像绘制到目标（已有的）的图像上。
+            源图像 = 您打算放置到画布上的绘图。
+            目标图像 = 您已经放置在画布上的绘图。*/
+		window.onload=function(){
+			var ss=document.getElementById("myCanvas").getContext("2d");
+			ss.fillStyle="#008000";
+			ss.fillRect(10,10,100,50);
+			
+			
+			ss.fillStyle="#8B008B";
+			ss.globalCompositeOperation="copy";
+			ss.fillRect(20,20,150,50)
+			
+			
+			ss.fillStyle="red";
+			ss.globalCompositeOperation="destination-atop";
+			ss.fillRect(30,30,150,50)
+			
+			
+			ss.fillStyle="green";
+			ss.globalCompositeOperation="destination-in";
+			ss.fillRect(40,40,150,50)
+			
+			
+			ss.fillStyle="blue";
+			ss.globalCompositeOperation="destination-out";
+			ss.fillRect(50,50,150,50)
+			
+			
+			ss.fillStyle="yellow";
+			ss.globalCompositeOperation="destination-over";
+			ss.fillRect(60,60,150,50)
+			
+			
+			ss.fillStyle="#00FF7F";
+			ss.globalCompositeOperation="lighter";
+			ss.fillRect(70,70,150,50)
+			
+			
+			ss.fillStyle="#8B008B";
+			ss.globalCompositeOperation="source-atop";
+			ss.fillRect(80,80,150,50)
+			
+			
+			ss.fillStyle="#A52A2A";
+			ss.globalCompositeOperation="source-in";
+			ss.fillRect(90,90,150,50)
+			
+			
+			ss.fillStyle="#C71585";
+			ss.globalCompositeOperation="source-out";
+			ss.fillRect(100,100,150,50)
+			
+			
+			ss.fillStyle="#6A5ACD";
+			ss.globalCompositeOperation="source-over";
+			ss.fillRect(110,110,150,50)
+			
+			
+			ss.fillStyle="#008B8B";
+			ss.globalCompositeOperation="xor";
+			ss.fillRect(120,120,150,50)
+			
+			
+			
+			
+			
+		}
+	</script>
+	<body>
+	<canvas id="myCanvas" width="800" height="800"></canvas>
+	</body>
+</html>

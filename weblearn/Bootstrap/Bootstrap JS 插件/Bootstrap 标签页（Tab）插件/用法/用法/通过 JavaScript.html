@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<style type="text/css">
+		body{margin: 200px;}
+	</style>
+	<body>
+		<ul class="nav nav-tabs" id="nav">
+			<li class="active " ><a href="#html5" >HTML5</a></li>
+			<li><a href="#css3" >CSS3</a></li>
+			<li><a href="#bootstrap" >Bootstrap</a></li>
+			<li><a href="#jquery" >jQuery</a></li>
+		</ul>
+		<div class="tab-content" style="padding: 10px;">
+			<div id="html5" class="tab-pane active" >A</div>
+			<div id="css3" class="tab-pane">
+				B
+				</div>
+			<div id="bootstrap" class="tab-pane">
+				C</div>
+			<div id="jquery" class="tab-pane">
+				D
+			</div>
+		</div>
+		
+		
+	</body>
+	<script type="text/javascript" src="../../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$("#nav a").on("click",function(e){
+			e.preventDefault()//阻止默认行为
+			$(this).tab('show')
+		})
+	</script>
+	<!--
+		通过javscript调用布局与data属性时候布局一模一样，操作步骤：
+		1，将 ul里面li中a标签 的data-toggle="tab",属性去掉;
+		2,给ul 添加一个id=“nav”,在script标签里面输入js代码
+     
+	   $("#nav a").on("click",function(e){
+	   	    e.preventDefault()
+			$(this).tab('show')
+		})	 
+		
+		
+		
+		
+		
+		
+		
+		
+	-->
+</html>

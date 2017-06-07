@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		 
+		  <div id="">
+		  	
+		  </div>
+		   <div id="dv">
+		  	
+		  </div>
+		  <button>点击测试</button>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+		   $('button').on('click',function(){
+		   	 alert($('div').is('#dv'))
+		   })
+		})
+		
+//		  is()方法用于检测zepto集合对像中的第一个元素是否符合参数选择器的条件,返回值是布尔值,参数是元素选择器，例如这里的第一个div的id是dv，所以返回true，如果把id为dv的div放到所有div的其他位置，则就会返回false
+	</script>
+</html>

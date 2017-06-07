@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+		<li>这是第1条公告</li>
+		<li>这是第2条公告</li>
+		<li>这是第3条公告</li>
+		<li>这是第4条公告</li>
+		<li>这是第5条公告</li>
+		<li>这是第6条公告</li>
+		<li>这是第7条公告</li>
+		<li>这是第8条公告</li>
+		<li>这是第9条公告</li>
+		<li>这是第10条公告</li>
+		<li>这是第11条公告</li>
+		</ul>
+	</body>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		setInterval(function(){
+			var newLI=$('ul>:first').clone(true);
+		    $('ul').append(newLI);
+		    $('ul>:first').remove()
+		},1000 )
+		   //滚动公告案例解析：
+		   /*
+		    1，将第一个li使用clone(true)克隆；
+		    2，再讲这个克隆的li追加到所有li的最后一个li；
+		    3，在使用li的remove()方法删除最后一个li；
+		    4，将上面三行放到一个定时器的函数里面。
+		    注意：这种事频繁的操作DOM的方式，不建议使用这种方式。
+		    * 
+		    * 
+		    * */
+	 </script>
+</html>

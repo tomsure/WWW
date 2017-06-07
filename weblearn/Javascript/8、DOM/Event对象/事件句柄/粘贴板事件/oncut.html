@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var sd=document.getElementById("text1");
+			sd.oncut=function(){
+				alert("你选择了剪切文本")//这个需要用外置浏览器测试
+			}
+		}
+	</script>
+	<body>
+		<input type="text" name="text1" id="text1" value="" />
+	</body>
+</html>

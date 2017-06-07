@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	
+	/****************推荐的阻止表单提交的方式******************/
+		$(function(){
+			$("form").submit(function(e){
+				e.preventDefault()
+			})
+		})
+	</script>
+	<body>
+	<form action="javascript写法.html" method="post">
+		
+		<input type="submit" value="点击提交"/>
+	</form>
+	</body>
+</html>

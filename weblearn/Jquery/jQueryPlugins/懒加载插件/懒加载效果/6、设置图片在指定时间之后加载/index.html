@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		img{
+			width: 300px;
+			height: 400px;
+		
+		}
+		img:first{
+		margin-top: 800px;
+		}
+	</style>
+	<body>
+		<img  data-original="../../imgs/image.jpg" width="765" height="574"/><br />
+		              <!--将图片的src属性改为data-original，值就是 图片的url-->
+		<img  data-original="../../imgs/image.jpg" width="765" height="574"/><br />
+		<img  data-original="../../imgs/image.jpg" width="765" height="574"/><br />
+		<img  data-original="../../imgs/image.jpg" width="765" height="574"/><br />
+	</body>
+	<script type="text/javascript" src="../../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../../lib/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="../../lib/jquery.scrollstop.js"></script>
+      <!--引入插件-->
+    <script type="text/javascript">
+    	$(function() {
+    $("img").lazyload({
+    	threshold : 50,
+        event : "aa" //自定义事件
+    });
+});
+
+$(window).bind("load", function() {
+    var timeout = setTimeout(function() { $("img").trigger("aa") }, 2000);
+});      
+// 可以通过设置一个时间,让图片在达到指定条件后(如触发了事件,达到了设置的临界点位置等等)并在指定的时间后开始加载,这一点运用很广泛,可以提升用户体验
+    </script>
+</html>
+   

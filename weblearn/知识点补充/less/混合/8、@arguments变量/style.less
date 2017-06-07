@@ -1,0 +1,18 @@
+.style(@s;@c){  //这里也可以设置默认值
+//  border: 1px @s @c;  less普通写法
+       border: 1px @arguments;
+    
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    .style(solid;red)
+}
+
+//在CSS中有些元素属性可以简写，当简写的时候，CSS写法就是按顺序写每个属性，用空格隔开，在less中如果使用混合来设置这种方式，就可以定义混合的时候，混合里面的内容，也就是混合里面设置的属性值使用@arguments代替更多个需要写的参数，例如上面例子中普通写法就应该是：
+//    border：1px @s @c;
+//    而使用@arguments变量就可以代替这些参数；
+//在调用的时候需要按照顺序传入实际参数      
+
+

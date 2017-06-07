@@ -1,0 +1,9 @@
+1，进入项目所在目录  e:\svncangku\svnDb\subject1 进入目录不用cd命令
+
+2，svnadmin create +项目存放目录的上一级目录（版本库共分为3层目录，第三层是具体项目的目录，每个项目在这一层放一个目录）
+
+
+linux环境下：
+   创建一个目录repository，
+   再在这个目录创建一个目录svnwork，
+  进入repository/svnwork目录中执行svnadmin create +项目目录名称，例如   svn create project1，则repository/svnwork目录会多出一个project目录，打开里面有conf db format等几个文件或目录

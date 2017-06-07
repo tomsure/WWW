@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+	<body style="border: 1px solid blue;">
+		<div class="dv" id="dv">
+			
+		</div>
+	</body>
+		
+	
+	
+	<script type="text/javascript">
+	   var dv=document.getElementById("dv");
+	      document.onclick=function(ev){
+	      	alert(ev.currentTarget.nodeName);
+	      	ev.stopPropagation()
+	      	alert(ev.target.nodeName)
+	      }
+//	 	currentTarget属性指的是绑定当前事件函数的那个节点对象,它与target有一定的区别,target指的是触发事件的那个节点对象，在这里事件函数绑定在document上，当点击div的时候，弹出的currentTarget是document，弹出的target是div
+	</script>
+</html>

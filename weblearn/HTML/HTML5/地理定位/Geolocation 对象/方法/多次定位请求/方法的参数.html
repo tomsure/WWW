@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#ta{
+			width: 200px;
+			height: 200px;
+			border: 1px solidred;
+		}
+	</style>
+	<body>
+		
+		<button id="btn">点击获取</button>
+		<textarea name="" rows="200" cols="200" id="ta"></textarea>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		var ta=document.getElementById("ta");
+		btn.onclick=function(){
+			navigator.geolocation.watchPosition(function(position){
+				ta.value='经度：'+position.coords.longitude+'\n'+
+				  '海拔：'+position.coords.altitude+'\n'+
+			      '海拔精度：'+position.coords.altitudeAccuracy+'\n'+
+				   '速度：'+position.coords.speed+'\n'+
+				     '纬度：'+position.coords.latitude+'\n'+
+				     '位置精度：'+position.coords.accuracy+'\n'+
+				      '响应时间：'+new Date(position.timestamp)+'\n'
+			
+			},function(err){//请求失败后执行的函数，有一个参数
+				alert(err.code)//读取失败的参数
+			},{
+				enableHighAccuracy:true,//设置更精确的查找
+				maximumAge:10000,//设置最大缓存时间，毫秒记
+				 //设置允许请求的最长时间，超过时间没请求到则执行失败函数
+				frequency:100 //一百毫秒
+			})
+		}
+		
+//这个方法有四个参数，前三个参数和单次请求相同，第一个请求成功的函数，第二个请求失败的函数，第三个请求的设置（json格式），
+//		第四个参数： 用于设置多次请求的时候的平率，就是隔多久重复请求
+	</script>
+</html>

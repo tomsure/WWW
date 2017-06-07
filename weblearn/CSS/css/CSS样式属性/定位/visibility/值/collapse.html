@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*当在表格元素中使用时，此值可删除一行或一列，但是它不会影响表格的布局。被行或列占据的空间会留给其他内容使用。如果此值被用在其他的元素上，会呈现为 "hidden"。*/
+		
+		
+		
+		/*以下这个例子表示不是在表格中使用的时候他的效果与hidden相同，都是隐藏*/
+		#dv{width: 100px;height: 100px; background-color: #2E8B57;visibility: collapse;}
+		#dv1{width: 100px;height: 100px;background-color: darkgreen;}
+		
+		
+		/*以下案例使用在表格中可以用来删除一行或者一列*/
+		#th1{ visibility: collapse;}
+		
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		
+		<div id="dv1">
+			
+		</div>
+		<br />
+		<table border="" cellspacing="" cellpadding="">
+			<tr id="tr1"><th id="th1"> 中国</th><th>中国<th></tr>
+			<tr><th>中国</th><th>中国<th></tr>
+		</table>
+	
+	</body>
+</html>

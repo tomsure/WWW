@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>邮箱: <input type="text"  name="e-mail" id="e-mail" value="" />(必填)</p>
+			<!--必填项后面添加上class="required"-->
+			<p>URL: <input type="text" name="url" id="url" value="" /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$.validator.addMethod('postcode',function(value,element,param){
+				var regCode=/^[0-9]{6}$/;//声明一个正则表达式，验证正则表达式的规则，这里是0-9的连续6位的数字
+				return this.optional(element)||regCode.test(value);
+				
+//             返回上面这句话,this.optional(element)的解释:如果输入框为空的时候,则他会返回true,如果不为空，则使用正则验证，如果表单元素是非必填的只验证规则的话,就可以省略这一段,只输入后面一段正则的验证就可以,如果是必填项则就要输入
+         //提示：所有的自定义规则里这一句话是一样的，后面正则的语句只需改当时的正则名称即可      
+//     regCode.test(value)指的是regCode这个正则表达式的验证,如果返回true表示验证通过
+			},"请填写正确的邮政编码")
+			$('form').validate({
+				rules:{
+					user:{
+						postcode:true,
+						required:true
+					}
+				}
+			})
+		
+			
+		})
+//		$.validator.addMethod(name,method,message)方法用于设置自定义规则,设置出来的是规则,和required,minlength.min等等定义出来的是规则,和这些规则使用方法相同;
+//		addMethod(name,method,message)方法用于validate()方法外面是validator对象的一个方法,他有三个参数,分别是:
+//		name:代表这个规则的名称,在参数中使用引号包裹,
+//		method:代表一个函数,是对这个规则的定义过程,他有三个参数,第一个参数:
+//		     value:代表用户输入的表单的值;
+//		     element:代表当前这个验证的表单元素;
+//		     form:
+//		message:代表设置的错误 提示信息.    
+	</script>
+</html>

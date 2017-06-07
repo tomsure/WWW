@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 300px;
+			height: 200px;
+			background-color: red;
+          position: absolute;
+          left: 50px;
+          top: 50px;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		alert(dv.getBoundingClientRect())
+	//	console.log(dv.getBoundingClientRect())
+//		  getBoundingClientRect()方法返回一个矩形对象ClientRect,这个对象包含元素的width，height，元素左边距离父元素的左边的距离left，元素上边距离父元素上边的距离，top，以及元素最底部距离父元素的顶部距离bottom和元素最右边距离父元素左边的距离right
+		
+		alert(dv.getBoundingClientRect().top)
+//		top返回dv上边距离父元素body的顶部距离,
+		
+		
+		alert(dv.getBoundingClientRect().left)
+//		left返回dv左边距离父元素body的左边的距离
+		alert(dv.getBoundingClientRect().right)
+//		right返回的是dv右边距离body的左边的距离
+		
+		
+		alert(dv.getBoundingClientRect().bottom)
+//		bottom返回的是dv底部距离父元素body顶部的距离
+    
+         alert(dv.getBoundingClientRect().width+','+dv.getBoundingClientRect().height)
+         //返回元素的宽高
+
+	</script>
+</html>

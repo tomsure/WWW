@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(){
+			
+			}
+			Person.prototype.play=function(){
+				alert('hh')
+		}
+		function man(){
+			this.say=function(){
+				alert('haha')
+			}
+		}
+		
+
+		  Person.prototype=man.prototype
+		 person1=new Person()
+		person1.say();
+		person1.play() //这里会报错，
+//	将构造函数的prototype属性A设置为另一个构造函数的prototype属性B后,他的实例的原型就变成了B,此时构造函数A的实例a就不会继承自己原来的原型A了,就没有了上面的方法和属性	，只有新的原型上的属性和方法
+
+		
+		
+	</script>
+</html>

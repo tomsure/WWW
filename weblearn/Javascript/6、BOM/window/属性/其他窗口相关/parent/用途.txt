@@ -1,0 +1,8 @@
+parent用于在iframe,frame中生成的子页面中访问父页面的对象。例如：A页面中有一个iframe或frame，那么iframe
+或frame中的页面就可以通过parent对象来引用A页面中的对象。这样就可以获取或返回值到A页面中。
+
+parent指父窗口，在FRAMESET中，FRAME的PARENT就是FRAMESET窗口。
+
+附：Window对象、Parent对象、Frame对象、Document对象和Form对象的阶层关系 
+Window对象→Parent对象→Frame对象→Document对象→Form对象，
+如下： parent.frame1.document.forms[0].elements[0].value; 

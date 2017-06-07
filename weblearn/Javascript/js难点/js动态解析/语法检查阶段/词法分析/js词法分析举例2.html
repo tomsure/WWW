@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+			function t2(age){
+			var age=99;
+			alert(age);
+			
+		}
+		t2()
+		/*
+		 词法分析过程：
+		 0，生成活动对象A0 {};
+		 1，将参数化作活动对象的属性 AO{ age=undefined}；
+		 2，分析变量声明 这里遇到了var age；就不做任何影响；
+		 
+		 运行过程：
+		 1，AO.age=99 ；
+		 alert（age）；
+		 
+		  
+		  
+		  
+		  */
+	</script>
+	<body>
+	</body>
+</html>

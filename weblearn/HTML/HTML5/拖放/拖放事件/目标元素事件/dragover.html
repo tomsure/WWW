@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv1{
+			width: 100px;height: 100px;background-color: red;
+		}
+		.dv2{
+			width: 300px;
+			height: 300px;
+			border: 3px solid black;
+		}
+	</style>
+	<body>
+		
+		<div class="dv1" id="dv1" draggable="true">
+			
+		</div>
+		<div class="dv2" id="dv2">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv1=document.getElementById("dv1");
+		var dv2=document.getElementById("dv2")
+		dv1.ondragstart=function(){
+			this.style.background='green'
+		}
+		//开始拖动后背景颜色变成绿色
+         dv1.ondragend=function(){
+         	this.style.backgroundColor='red'
+         }//结束拖动后背景颜色又变成红色
+         dv2.ondragenter=function(){
+         	this.style.backgroundColor='blue'
+         }//拖动元素进入的时候
+         
+         dv2.ondragleave=function(){
+         	this.style.background='white'
+         }//元素离开时候触发
+         
+         var i=0
+         dv2.ondragover=function(){
+           document.title=i++
+         }
+//       ondragover事件是当拖动的元素从进入本元素到离开本元素这个过程之间连续触发的事件,注意也是连续触发;
+//       就像上面的例子,设置页面的title属性初始值为0,在函数中设置页面的title值为i++,当dv1被拖动进入dv2再到从dv2离开这段过程之间页面的title属性实在连续增加的,所以可以证明这个事件是连续出触发的；
+
+    
+
+
+	</script>
+	
+</html>

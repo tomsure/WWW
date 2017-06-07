@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		html{
+			border: 1px solid red;
+		}
+		
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		#sp1{
+			background-color: red;
+			margin-left:10px ;
+			margin-top:20px; /*无效*/
+			padding-bottom:20px ;
+		}
+	   /*左外边距10px*/
+		#sp2{
+			background-color: blue;
+			margin-right:120px ;
+			padding-bottom:120px ;
+			margin-bottom: 20px;  /*/无效/*/
+		}
+		/*右外边距10px*/
+		#sp3{
+			background-color: darksalmon;
+		}
+		
+		/*上面的设置可以看出,设置了内联元素垂直的方向外边距设置无效*/
+	</style>
+	<body>
+		<span id="sp1">你好</span><span id="sp2">你好</span>
+		<span id="sp3">
+			哈哈哈哈
+		</span>
+	</body>
+</html>

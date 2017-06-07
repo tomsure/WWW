@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(){
+			
+		}//创建空的构造函数
+		Person.prototype.name='tom';//为构造函数原型对象添加属性
+		Person.prototype.age=26;
+		Person.prototype.sayName=function(){
+			alert(this.name)
+		}
+		var person1=new Person();//实例化构造函数
+		alert(person1.name);//返回Person对象（从Person继承）的属性
+		person1.sayName()
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

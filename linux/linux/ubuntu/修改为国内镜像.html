@@ -1,0 +1,23 @@
+
+  1、备份系统默认源
+     sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+     
+  2,打开软件源文件
+    sudo vim /etc/apt/sources.list
+    
+  3、sudo vim /etc/apt/sources.list
+     进行编辑：
+      将以下内容替换到源文件（注意在清华大学网站上选择合适自己系统的版本）：
+      deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+      deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+      deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+      deb http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+      deb http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+      deb-src http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
+      deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
+      deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
+      deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
+      deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+      上面是使用的淘宝镜像源，也可以更换为其他公司的镜像源，方法相同
+      
+           

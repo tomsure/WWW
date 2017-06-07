@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button>点击测试</button>
+	</body>
+	
+	<!--语法二是将styles属性值作为第一个一个json格式的参数，里面设置动画完成后的样式；将其他的几个属性作为一个json格式作为第二个参数-->
+	
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('button').click(function(){
+		   $('#dv').animate({
+			width:'300px',
+			height:'300px'
+	        	},{
+                 duration:1000,
+                 callback:function(){
+                 	alert('ok')
+                 },
+                 easing: "linear"
+		       })
+		})
+	</script>
+	
+</html>

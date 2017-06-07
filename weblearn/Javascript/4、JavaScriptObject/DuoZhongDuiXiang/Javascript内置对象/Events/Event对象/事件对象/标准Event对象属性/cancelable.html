@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	
+	</script>
+	<body>
+		<a href="http://www.baidu.com" id='a1'>百度一下</a>
+		
+	</body>
+	<script type="text/javascript">
+		var a1=document.getElementById("a1");
+		a1.onclick=function(ev){
+		  alert(ev.cancelable)
+		}
+//		cancelable属性用于检测当前事件是否可以组织默认事件
+	</script>
+</html>

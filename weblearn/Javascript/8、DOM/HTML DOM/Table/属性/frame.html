@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table id="table1" border="0" width="200">
+			<tr>
+				<td>姓名</td>
+				<td>年龄</td>
+				<td>性别</td>
+			</tr>
+			<tr>
+				<td>张三</td>
+				<td>22</td>
+				<td>男</td>
+			</tr>
+			<tr>
+				<td>李四</td>
+				<td>22</td>
+				<td>男</td>
+			</tr>
+			
+		</table>
+		<br />
+		<br />
+		<br />
+		<button id="btn">点击设置为void</button>
+		<button id="btn1">点击设置为above</button>
+		<button id="btn2">点击设置为below</button>
+		<button id="btn3">点击设置为hsides</button>
+		<button id="btn4">点击设置为vsides</button>
+		<button id="btn5">点击设置为lhs</button>
+		<button id="btn6">点击设置为rhs</button>
+		<button id="btn7">点击设置为box</button>
+		<button id="btn8">点击设置为border</button>
+	</body>
+	<script type="text/javascript">
+		var tb=document.getElementById("table1"),
+         btn=document.getElementById("btn"),
+         btn1=document.getElementById("btn1"),
+         btn2=document.getElementById("btn2"),
+         btn3=document.getElementById("btn3"),
+         btn4=document.getElementById("btn4"),
+         btn5=document.getElementById("btn5"),
+         btn6=document.getElementById("btn6"),
+         btn7=document.getElementById("btn7"),
+         btn8=document.getElementById("btn8")
+       btn.onclick=function(){
+       	  tb.frame='void'
+       }
+       //不显示边框
+       
+       btn1.onclick=function(){
+       	  tb.frame='above'
+       }
+        //显示上边框
+        
+       btn2.onclick=function(){
+       	  tb.frame='below'
+       }//显示下边框
+       
+       btn3.onclick=function(){
+       	  tb.frame='hsides'
+       }//显示上下边框
+       
+       btn4.onclick=function(){
+       	tb.frame='vsides'
+       }//显示左右边框
+       
+       btn5.onclick=function(){
+       	  tb.frame='lhs'
+       }//显示左边框
+       
+       btn6.onclick=function(){
+       	  tb.frame='rhs'
+       }
+       //显示右边框
+       
+       btn7.onclick=function(){
+       	  tb.frame='box'
+     }//同时显示4条边框
+
+       btn8.onclick=function(){
+       	  tb.frame='border'
+       }//同时显示4条边框
+
+     
+	</script>
+</html>

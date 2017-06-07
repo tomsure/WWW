@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<style type="text/css">
+		.a{margin: 100px;}
+		
+	</style>
+	<body>
+	<br />
+	<br />
+	<br />
+	<button class="btn btn-default" id="a" data-loading-text='loading' autocomplete="off">开始上传 </button>
+	<button class="btn btn-danger" id="b">点击测试</button>
+	</body>
+	<script type="text/javascript" src="../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+		
+	</script>
+	
+	<script type="text/javascript">
+		$(function(){
+		$("#a").on("click",function(){  //点击a的时候处于加载状态
+			$(this).button("loading")
+		})
+   		$("#b").on("click",function(){  //点击b的时候a重置到初始化
+   			$(a).button("reset")
+   		})
+		})
+			
+
+	</script>
+		
+		
+		
+	
+	
+</html>

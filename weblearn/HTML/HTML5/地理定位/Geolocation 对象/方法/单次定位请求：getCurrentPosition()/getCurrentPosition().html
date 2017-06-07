@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#ta{
+			width: 200px;
+			height: 200px;
+			border: 1px solidred;
+		}
+	</style>
+	<body>
+		
+		<button id="btn">点击获取</button>
+		<textarea name="" rows="200" cols="200" id="ta"></textarea>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		var ta=document.getElementById("ta");
+		btn.onclick=function(){
+			navigator.geolocation.getCurrentPosition(function(position){
+				ta.value='经度：'+position.coords.longitude+'\n'+
+				  '海拔：'+position.coords.altitude+'\n'+
+			      '海拔精度：'+position.coords.altitudeAccuracy+'\n'+
+				   '速度：'+position.coords.speed+'\n'+
+				     '纬度：'+position.coords.latitude+'\n'+
+				     '位置精度：'+position.coords.accuracy+'\n'+
+				      '响应时间：'+new Date(position.timestamp)+'\n'
+			
+			},function(err){//请求失败后执行的函数，有一个参数
+				alert(err.code)//读取失败的参数
+			},{
+				enableHighAccuracy:true,//设置更精确的查找
+				maximumAge:10,//设置最大缓存时间
+				 //设置允许请求的最长时间，超过时间没请求到则执行失败函数
+			})
+		}
+		
+		
+//		navigator.geolocation.getCurrentPosition()方法是navigator.geolocation对象单次获取地理位置信息的方法,这个函数有三个参数:
+//		第一个参数是请求成功后执行的函数,
+//		第二个参数是请求失败后执行的函数,
+//		第三个参数是一个json格式的数据,共可以设置三个参数:
+//		   1,enableHighAccuracy:是否精确查找,默认值是false,可以设置为true;
+//		   2,maximumAge: 设置最大缓存时间
+//		   3，timeout ：设置允许请求的最长时间，超过时间没请求到则执行失败函数
+	</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="" cellspacing="" cellpadding="">
+			<caption>th标签用来定义表格的第一行的信息栏</caption>
+			<colgroup>
+				<col span="2" style="background-color: red;" />              <col style="background-color: blue;"/>
+			</colgroup>
+			<!--span属性用于设置当前的col控制的列的数量，例如有四列表格，需要设置两列表格统一的样式，则可以设置span=2，由于col是和表格对应的，所以顺序不能错，col元素应该和colgroup组合使用-->
+			<tr><th>姓名</th><th>年龄</th><th>姓名</th><th>年龄</th></tr>
+			<tr><td>小明</td><td>13</td><td>小明</td><td>13</td></tr>
+			<tr><td>大明</td><td>14</td><td>小明</td><td>13</td></tr>
+			<tr><td>老明</td><td>14</td><td>小明</td><td>13</td></tr>
+		</table>
+	</body>
+</html>

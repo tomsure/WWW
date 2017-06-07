@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post" id="form">
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>邮箱: <input type="text"  name="email" id="email" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				submitHandler:function(form){
+					form.submit()
+					
+				},
+				invalidHandler:function(event,validator){
+					alert("错误数:"+validator.numberOfInvalids())
+				//	invalidHandler表示验证失败后执行的函数，他有两个参数，第一个是event，是这里的特殊的一个事件，可以通过console.log在控制台看到它的类型第二个参数指的是validator对象，可以在这个函数中获得这个对象，用来执行他的方法或其他属性，例如这里可以读取到错误表单元素的数量，这里用来返回错误的数量
+				},
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	},
+			    	email:{
+			    		required:true
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	},
+			    	email:"请输入邮箱"
+			    }
+			   
+		})
+		})
+
+	</script>
+</html>

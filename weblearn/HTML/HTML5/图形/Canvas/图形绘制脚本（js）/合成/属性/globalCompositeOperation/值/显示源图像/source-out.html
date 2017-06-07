@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var ss=document.getElementById("myCanvas").getContext("2d");
+			ss.fillStyle="#00008B";
+			ss.fillRect(10,10,150,60);
+			
+			ss.fillStyle='#006400';
+			ss.globalCompositeOperation="source-out";//在目标图像之外显示源图像。只有目标图像之外的源图像部分会显示，目标图像是透明的。
+			/*
+			 源图像 = 您打算放置到画布上的绘图。
+                         目标图像 = 您已经放置在画布上的绘图。
+			 
+			  */
+			ss.fillRect(20,20,150,60);
+			
+			
+			
+		}
+	</script>
+	<body>
+		<canvas id="myCanvas" width="300" height="300"></canvas>
+	</body>
+</html>

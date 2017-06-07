@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px ;height:100px ;background-color:red ;position:relative;}
+		button{margin-top: 100px;}
+	</style>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.1/jquery.min.js">
+		
+		
+	</script>
+	<script type="text/javascript">
+		//可以把属性的动画值设置为 "show"、"hide" 或 "toggle"：
+		$(function(){
+			$("button").click(function(){
+				$("div").animate({
+					width:'toggle',  //使宽度滑动切换隐藏或显示
+					height:'show'   //使高度动画显示，此时效果会与上面的方法width:toggle重叠
+					
+					
+				})
+			})
+		})
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button>点击测试</button>
+	</body>
+</html>

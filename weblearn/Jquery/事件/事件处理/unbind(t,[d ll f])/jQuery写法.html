@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px ;height:100px ;background-color:red ;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*unbind() 方法移除被选元素的事件处理程序。
+该方法能够移除所有的或被选的事件处理程序，或者当事件发生时终止指定函数的运行。
+该方法也可以通过 event 对象取消绑定的事件处理程序。该方法也用于对自身内部的事件取消绑定（比如当事件已被触发一定次数之后，删除事件处理程序）。
+注意：如果未规定参数，则 unbind() 方法会删除指定元素的所有事件处理程序。
+注意：unbind() 方法适用于任意由 jQuery 添加的事件处理程序。
+自 jQuery 版本 1.7 起，on() 和 off() 方法是在元素上添加和移除事件处理程序的首选方法。*/
+      $(function(){
+      	$("#btn").click(function(){
+      		$("div").bind("click",function(){
+      			$(this).css("background-color","#006400")
+      			//添加点击事件，点击之后div变色
+      		})
+      		})
+      	
+      	$("#btn1").click(function(){
+      		$("div").unbind("click")
+      		//移出事件之后点击div不会变颜色
+      	})
+      })
+    
+	</script>
+	<body>
+		<div id="">
+			
+		</div>
+		<button id="btn">添加事件</button>
+		<button id="btn1">移除事件</button>
+	</body>
+</html>

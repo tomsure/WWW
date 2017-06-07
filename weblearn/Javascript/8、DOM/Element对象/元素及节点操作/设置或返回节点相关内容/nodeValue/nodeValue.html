@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	/*注意：
+	     1，元素节点的nodeVaule是undefinded或null；
+	     2，文本节点的nodeVaule是文本本身；
+	     3，属性节点的nodeVaule是属性值。*/
+		
+		window.onload=function(){
+		/*nodeValue 属性根据节点的类型设置或返回节点的值。
+注意： 如果你想返回元素的文本，记住文本通常是插入到文本节点中，所以返回的是文本节点的节点值(element.childNodes[0].nodeValue)。
+提示： 另一种获取节点值的属性 textContent 属性.*/
+			//表示的是节点的值.可以用textContent代替
+			var sw=document.getElementById("dv");
+			alert(sw.tagName);
+			alert(sw.childNodes[1].childNodes[1].childNodes[0].nodeName)//弹出  text 因为这里表示sw的第2个子元素(就是ul)的第二个子元素(li)的第一个子元素也就是”你好“这两个字他的节点名称就是text
+			alert(sw.childNodes[1].childNodes[1].childNodes[0].nodeValue)
+//弹出  你好  因为这里表示sw的第2个子元素(就是ul)的第二个子元素(li)的第一个子元素也就是”你好“这两个字他的Nodename就是"你好" 
+alert(sw.children[1].nodeName)
+			
+		
+		}
+	</script>
+	<body>
+		<div id="dv" >
+			<ul>
+				<li>你好</li>
+				<li></li>
+				<li></li>
+			</ul>
+			<input type="" name="" id="" value="哈哈 " />
+			<!--nodeValue指的是获取到元素的文本节点之后这个文本节点的值，例如获取div内的文本，就是div.chlidNodes[0].nodeValue,需要先获取到文本节点，在获取他的值-->
+		</div>
+	</body>
+</html>

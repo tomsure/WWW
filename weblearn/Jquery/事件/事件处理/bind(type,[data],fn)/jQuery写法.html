@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		
+		div{width:100px ;height:100px ;background-color:red ;}
+		
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*bind() 方法向被选元素添加一个或多个事件处理程序，以及当事件发生时运行的函数。
+自 jQuery 版本 1.7 起，on() 方法是向被选元素添加事件处理程序的首选方法。*/
+        /*参数	描述
+          event	必需。规定添加到元素的一个或多个事件。
+
+                             由空格分隔多个事件值。必须是有效的事件。
+         data	可选。规定传递到函数的额外数据。
+         function	必需。规定当事件发生时运行的函数。
+         map	规定事件映射 ({event:function, event:function, ...})，包含要添加到元素的一个或多个事件，以及当事件发生时运行的函数。
+*/   
+         $(function(){
+         	   //bind()属于DOM2级事件
+         		$("div").bind("click",function(){alert('给div添加了点击事件')})
+         	})
+         
+	</script>
+	<body>
+		<div id="btn">
+			
+		</div>
+		
+	</body>
+</html>

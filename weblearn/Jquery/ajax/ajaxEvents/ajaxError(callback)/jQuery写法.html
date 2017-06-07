@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<button id="btn"> 点击测试</button>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//ajaxError()方法表示ajax请求发生错误的时候执行的函数，这个和$.ajax()方法中的error事件函数类似，但是功能比较少，只能执行函数，不能分条件执行；
+		
+		$('#btn').click(function(){
+			$.ajax({
+				type:"get",
+				url:"err1or.php",
+				async:true
+			});
+			
+			$(document).ajaxError(function(){
+				$('div').html('ajax请求错误')
+			})
+		})
+	/*注意事项：
+
+在jQuery1.9中，jQuery全局AJAX事件的所有处理程序， 包括哪些.ajaxError()添加的方法，必须 附加到 document上。
+如果 $.ajax() 或 $.ajaxSetup()调用时， global 选项设置为 false， .ajaxError()将不会触发。*/
+	
+	
+	//这个方法中的函数只有ajax发生错误的时候才会触发，例如url地址错误，请求超时等等，都会执行他的里面的函数
+	
+	
+//	ajaxError()方法是全局事件函数,如果和error函数都存在,则会覆盖error函数
+	</script>
+</html>

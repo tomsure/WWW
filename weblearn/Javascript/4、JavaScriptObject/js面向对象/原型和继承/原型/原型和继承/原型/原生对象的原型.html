@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		js原生对象如Array/String/RegExp等都有自己的原型对象,这些对象的方法都是在原型对象上定义的,所以还可以通过自定义的方法给原生对象添加属性和方法,例如:
+      
+          document.write(Array.prototype.sort)//函数，原型对象的方法；
+          Array.prototype.ddd=function(){
+          	alert('哈哈')
+          }//Array的原型添加方法
+
+          var arr=new Array();//实例化数组对象
+          arr.ddd()//调用自定义的方法
+
+  //这种方式可以实现，但是不建议使用
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

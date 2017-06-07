@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-1.7.2/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*slice() 方法选取基于索引的元素的子集。
+子集是一个属于大的集合中的一部分的集合。
+该方法用于通过开始点和结束点来限制组合中元素的选择：start 参数是创建子集的开始索引（从 0 开始），stop 参数是一个可选的结束点。*/
+       /*参数  	描述
+        start	必需。规定开始选取元素的位置。索引号从 0 开始。
+                        注意：如果是负数，则指示从被选元素的末端开始选取元素，而不是从头开始。
+        stop	可选。规定结束选取元素的位置。如果省略，则选取范围会在集合末端结束。索引号从 0 开始。
+                       注意：如果是负数，则指示从被选元素的末端开始选取元素，而不是从头开始。*/
+             $(function(){
+             	$("p").slice(1,5).css("color","red") 
+             	//选择从start的索引号为0和stop索引号为1的元素
+             	//这里选start择索引号为1就是第二个，stop索引号为5就是第五个
+             })
+	</script>
+	<body>
+		<p id="p1">1</p>
+		<p id="p2">2</p>
+		<p id="p3">3</p>
+		<p id="p4">4</p>
+		<p id="p5">5</p>
+	</body>
+</html>

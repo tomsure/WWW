@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		a();  //这里函数声明被放在了函数主题的前面，而不是放在后面
+		function a(){
+			alert("你好")
+			
+		}
+		//这样同样正常运行弹出
+		
+		
+		
+//这是因为JavaScript 解释器允许你在函数声明之前使用，也就是说，函数声明并不仅仅是函数名“被提前”了，整个函数的定义也“被提前”了！所以上述代码能够正确执行。		
+	</script>
+	<body>
+	</body>
+</html>

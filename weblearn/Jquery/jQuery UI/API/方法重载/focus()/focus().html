@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	
+	<body>
+		<input type="text" name="" id="" value="" />
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('input').focus(1000,function(){
+			$(this).css('background','red')
+		})
+//		当input获取焦点后,过一秒后,背景颜色变成红色
+	</script>
+	
+	<!--当元素获取焦点后并设置的时间之后执行指定的函数，达到异步加载的效果-->
+	
+<!--	
+	focus()方法参数：
+	1，delay：获取焦点后等待的毫秒数；
+	2，callback：获取焦点并等待时间过后执行的函数-->
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//forward()方法表示前进,加载 history 列表中的下一个 URL
+		//forward()方法相当于go(1),也就是go()方法得到的历史记录的第一个URL
+		window.onload=function(){
+			var bn=document.getElementById("btn");
+			bn.onclick=function(){
+				history.forward()//点击后会跳转到历史记录的下一个URL
+			}
+		}
+	</script>
+	<body>
+		<a href="index.html">点击跳转</a>
+		<p>我是第一个页面</p>
+		<button id="btn">点击前进</button>
+	</body>
+</html>

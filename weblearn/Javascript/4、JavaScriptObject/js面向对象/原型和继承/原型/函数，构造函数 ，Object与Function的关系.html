@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+/*普通函数，构造函数(类)是Function的实例，例如js内部的构造函数(例如 Array)或者Object或者自定义的构造函数作为对象看的时候都是Function的实例，他们的_proto_属性指向Function的prototype*/		
+			var arr1 = new Array(1, 56, 34, 12);
+        // 但是，我们更倾向于如下的语法定义：
+        var arr2 = [1, 56, 34, 12];
+        alert(arr1.__proto__==Array.prototype);//这里弹出true
+        alert(Array.__proto__==Function.prototype);//这里弹出true
+        alert(Object instanceof Function);//这里弹出true
+
+        alert(Array instanceof Function);//这里弹出true
+        function a(){  //定义一个普通函数
+        	alert("ss")
+        }
+        alert(a.__proto__==Function.prototype);//函数对象a的原型指针_proto_指向Function的prototype属性
+        </script>
+	</head>
+	<body>
+	</body>
+</html>

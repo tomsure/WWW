@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击获取定位</button>
+		<textarea name="" id="ta" rows="20" cols="20"></textarea>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		var ta=document.getElementById("ta");
+		btn.onclick=function(){
+			navigator.geolocation.getCurrentPosition(function(position){
+				ta.value=position.coords.longitude;
+			},function(){
+				alert('获取失败')
+			},{
+				timeout:10,
+				maximumAge:10,
+				enableHighAccuracy:true
+//				enableHighAccuracy用于设置是否设置更精确的查找获取定位信息,默认值为false就是不精确查找,可以设置true,进行精确查找
+
+
+			})
+		}
+	</script>
+</html>

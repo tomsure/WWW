@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="1" width="300">
+			<caption>人员表</caption>
+			<thead>
+				<tr>
+					<td>姓名</td>
+					<td>年龄</td>
+				</tr>
+			</thead>
+			
+		</table>
+		<button id="btn">点击修改</button>
+	</body>
+	<script type="text/javascript">
+		var tb=document.getElementsByTagName('table')[0]
+         alert(tb.caption.innerHTML)
+//       caption属性用于返回table元素内部的caption标签，也是一个HTML DOM对象
+         var btn=document.getElementById("btn")
+         btn.onclick=function(){
+         	tb.caption.innerHTML='统计表'
+         }
+         //还可以对caption进行设置
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	//ajax的特点就是不刷新页面就可以向服务器发送请求，所以在执行发送请求的时候通常是使用事件函数来驱动执行发送	
+		var xhr;
+		if(window.XMLHttpRequest){//兼容性初始化XHR对象
+			xhr=new XMLHttpRequest()
+		}else{
+			xhr=new ActiveXObject('Microsoft.XMLHTTP')
+		}
+		document.onclick=function(){//绑定点击事件
+			xhr.open('GET','../liziURL/四号线需求.txt',false)//同步请求
+			xhr.send();
+			alert(xhr.responseText)
+		}
+		
+		//这里是当点击页面的时候向服务器发送请求，并获取响应数据
+		
+		
+		
+		
+	</script>
+</html>

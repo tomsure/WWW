@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//getAttribute() 方法返回指定属性名的属性值。
+//提示：如果您希望以 Attr 对象返回属性，请使用 getAttributeNode。
+		window.onload=function(){
+			var Myul=document.getElementsByTagName("ul")[0]
+			alert(Myul.getAttribute("id"));//弹出ul1，因为设置的ul的id是ul1
+			alert(Myul.getAttribute("onclick"))//弹出 好啊好啊。因为设置的属性onclick的值是 好啊好啊
+	 		
+		}
+	</script>
+	<body>
+		<ul id="ul1"class="ull" onclick="好啊好啊">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html>

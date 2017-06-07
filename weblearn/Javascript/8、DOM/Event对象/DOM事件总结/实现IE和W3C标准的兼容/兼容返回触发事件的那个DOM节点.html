@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	
+	<style type="text/css">
+		#dv{
+			width: 200px;
+			height: 200px;
+			background-color: darkmagenta;
+			
+		}
+		#dv1{
+			width: 150px;
+			height: 150px;
+			background-color: #0000FF;
+			
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<div id="dv1">
+			
+		</div>
+		
+		<p id="demo"></p>
+	</body>
+	<script type="text/javascript">
+	    var dv=document.getElementById("dv");
+	      var  dv1=document.getElementById("dv1");
+	      dv.onclick=function(e){
+	      	var ev=e||window.event;
+	      	var get_target=ev.target||ev.srcElement
+		   alert(get_target)
+		}
+	</script>
+</html>

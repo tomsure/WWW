@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		/*referrer 属性返回载入当前文档的来源文档的URL。
+如果当前文档不是通过超级链接访问的，则为 null。这个属性允许客户端 JavaScript 访问 HTTP 引用头部。
+*/
+
+</script>
+	<body>
+		新页面
+	</body>
+	<script type="text/javascript">
+		document.write(document.referrer)
+		//refferrer属性返回从上一个页面跳转到本页面的时候，上一个页面的url地址
+//		比如demo.html中一个a标签,点击后跳转到这个页面referrer.html,此时这个页面获取的document.referrer就是demo.html的url
+//    只有从上一个页面跳转到这个页面才会获取到,如果直接打印就获取不到
+
+//这个也是要在服务器端测试
+	</script>
+</html>

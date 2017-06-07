@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html id="ht">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*绝对定位指的是元素相对于父级元素进行定位，如果父级元素没有设置绝对定位，则往上级父级元素查找，如果都没有则按照html定位，因为html是绝对定位*/
+		*{margin: 0;}
+		html{border: 1px solid mediumvioletred;}
+		#dv{ width: 200px;height: 200px;background-color: darkorange;position: absolute;}
+		#dv1{width: 100px;height: 100px; background-color: red;position: absolute;left: 20px;}
+		
+		/*如果子元素和父元素都设置了绝对定位，则子元素会立即对齐到父元素的左上角，要进行偏移就要设置偏移的值left或者top，因为初始偏移量就是0*/
+		
+		
+	</style>
+	<body>
+		<div id="dv">
+			<div id="dv1">
+				
+			</div>
+		</div>
+	</body>
+	
+</html>

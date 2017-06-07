@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function ArgTest(){
+   var s = "";//s1
+// 这里为了便于理解，注释里面给每个s加一个标记，例如 s1，s2..s4  ,
+ s =s+"The individual arguments are: "  //s2  这里s2变成这段英文+空格，目的是为了与后面语句连接有空格；
+ for (n=0; n< arguments.length; n++){
+    s =s+ ArgTest.arguments[n];  //s3
+    s =s+" ";// s4 这里是为了给输出的参数添加空格，可以尝试注释和不注释对比语句。这里的s4是在s3基础上加了空格''。
+       }
+ //这个里对grgumrnts的属性做了遍历,次数是n,就是函数执行的时候,传了多少个就执行多少次	
+ 
+ //   s=ArgTest.arguments[2] 
+ //如果不进行遍历的话则argumrnts[n]传的具体值只会返回传进来的某一个参数（返回的是哪一个参数具体看n的值，例如这里传2，则返回'hello',因为argumrnts对象相当于一个数组，0...n属性则对应传进函的数参数的每个下标（函数的参数是一个数组），n的值必须小于函数的个数，如果大于函数的个数则返回undefined），所以这里还可以这样一行实验；
+ return(s);
+     
+		}
+  
+		
+	
+document.write(ArgTest(1, 2, "hello", new Date()));
+
+   
+
+
+	</script>
+	<!--必选项。0 到 n 范围内的非负整数，其中 0 代表第一个参数而 n 代表最后一个参数。最后参数 n 的值为 arguments.length-1。-->
+
+
+</html>

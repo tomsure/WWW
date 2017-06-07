@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		document.onclick=function(){
+			alert(window.event.type)
+		}
+		//把事件函数的第一个参数作为事件对象的方式只是W3C的方式，IE浏览器并不是这样做，而是固定的将window.event作为事件对象，上面例子中，没有传递参数，也可以弹出事件对象，因为这里是IE浏览器的方式
+	</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px ;height:100px ;background-color:red ;}
+	</style>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$("button").click(function(){
+				$("div").hide(function(){
+					alert("div隐藏了")
+					//div隐藏后弹出这个语句，是因为执行了callback函数
+					
+				})
+			})
+		})
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button>点击测试</button>
+	</body>
+</html>

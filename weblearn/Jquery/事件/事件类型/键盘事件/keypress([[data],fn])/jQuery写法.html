@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+	/*与 keypress 事件相关的事件顺序：
+keydown - 键按下的过程
+keypress - 键被按下
+keyup - 键被松开
+keypress() 方法触发 keypress 事件，或规定当发生 keypress 事件时运行的函数。
+keypress 事件与 keydown 事件类似。当按钮被按下时发生该事件。
+然而，keypress 事件不会触发所有的键（比如 ALT、CTRL、SHIFT、ESC）。请使用 keydown() 方法来检查这些键。*/
+		$(function(){
+			$(":text").keypress(function(){
+				alert("你按下了键盘")
+				//keypress触发按下键盘完成后会输入内容，keydown触发按下完成后不会输入内容吗，必须触发keypress之后才会输入
+			})
+		})
+	</script>
+	<body>
+		<input type="text" name="" id="" value="" />
+	</body>
+</html>

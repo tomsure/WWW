@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$.extend({
+			aa:function(){
+				alert(1)
+				alert(this==$)//true
+			}
+		})
+		$.aa()
+		//在实际使用的时候使用extend()都是使用$.extend()或者$.fn.extend()调用;
+		
+		/*我们在写$.extend({...})的时候,实际上是调用源码中创建的$.extend这个方法函数,由于此时源码中的extend函数中的this指的就是当前对象$(对象的方法中的this指的就是当前对象),在使用$.extend()方法的时候,里面添加的方法,例如这里的aa,实际上就是添加到源码中的this上面的,所以也就是添加在$上面的,所以最后调用添加的方法aa的时候就可以用$.aa()，此时创建的方法是创建给$对象的
+		*/
+		
+		
+		
+		
+		$.fn.extend({
+			aa:function(){
+				alert(2)
+			}
+		})
+		$().aa()
+		/*
+		在使用 $.fn.extend()的时候实际上是在执行调用源码中$.fn的extend方法函数，而$.fn的extend()方法中的this指的就是$.fn这个对象，也就是jquery.prototype也就是jquery的原型，
+		 $.fn.extend()也就是$.prototype.extend()，这样的话也就是在$的原型上面添加了extend()方法，而在jquery-2.0.3源码的96行和283行中已经写到要调用在$(就是jquery)对象上添加的方法就要先调用jquery函数[就是jquery()]，这也就是创建jquery的实例对象，而调用这个实例对象的方法就要执行添加在这个jquery对象实例上的函数，所以同时创建jquery实例对象并调用他的方法的时候就应该写为：
+		  jquery().方法名称()   
+		  所以，执行$.fn.extend()方法实际上是给jquery实例对象添加方法。
+		
+		
+		 */
+	</script>
+</html>

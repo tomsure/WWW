@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			<p>你好</p>
+			<p>还好</p>
+			<p>嗯</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		  alert(dv.firstChild.nodeValue)//获取dv的第一个子节点值，弹出空内容，是个空文本节点             
+		  
+		  /*********************封装 函数**************************/
+		   function removeNoNode(node){
+		  	
+		  	for(var i=0;i<node.childNodes.length;i++){
+if(node.childNodes[i].nodeType===3&&/^\s+$/.test(node.childNodes[i].nodeValue)){
+		  	node.childNodes[i].parentNode.removeChild(node.childNodes[i])
+//函数的参数就是要获取节点的父节，所以这里就用子节点的父节点删除空节点  	
+		        }
+		  	return node
+		  }
+		  	}
+		   alert(removeNoNode(dv).firstChild.nodeName)//弹出一个p，说明第一个子元素就是p元素，空文本被删除
+		   alert(removeNoNode(dv).firstChild.nextElementSibling.innerHTML)
+		   //这里获取的是dv的第一个子节点的下一个兄弟节点的innerHTML
+	</script>
+</html>

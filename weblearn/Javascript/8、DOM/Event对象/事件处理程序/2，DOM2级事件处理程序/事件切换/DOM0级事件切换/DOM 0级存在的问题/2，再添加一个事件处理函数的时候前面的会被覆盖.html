@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	 div {  width: 100px;height: 100px;}
+	.blue { background:blue ;}
+	.red {background: red;}
+	</style>
+	<body>
+		<div id="dv" class="blue">
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		   dv.onclick=function(){
+		   	alert(1)
+		   }//在前面添加一个事件处理函数
+		   dv.onclick=toRed
+		   
+		  function toRed(){//切换器函数
+		  
+		   	this.className='red';
+		 	this.onclick=toBlue;
+		   }
+		   
+		   function toBlue(){//切换器函数
+		   	
+		   	this.className='blue';
+		   	this.onclick=toRed;
+		   }
+	//在事件切换器事件处理函数前面添加一个同样的onclick事件函数，执行的时候，发现添加在 前面的事件函数不会执行，因为他被后面的事件函数覆盖了； 
+		 
+//		解决办法:
+//		  使用前面DOM0级事件处理函数知识点中解决覆盖问题的方法解决,但是比较麻烦
+		
+	</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px ;height:100px ;background-color:red ;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*one() 方法为被选元素添加一个或多个事件处理程序，并规定当事件发生时运行的函数。
+当使用 one() 方法时，每个元素只能运行一次事件处理程序函数。*/
+            /*
+                       参数	描述
+       event	必需。规定添加到元素的一个或多个事件。
+
+                     由空格分隔多个事件值。必须是有效的事件。
+       data	可选。规定传递到函数的额外数据。
+       function	必需。规定当事件发生时运行的函数。*/
+      
+      $(function(){
+      	$("button").one("click", function(){
+      		$("div").css("width","+=10px")
+          //点击button按钮div宽度增加10px，但是这里只会执行一次
+      	})
+      })
+	</script>
+	<body>
+		<div id="">
+			
+		</div>
+		<button>点击测试</button>
+	</body>
+</html>

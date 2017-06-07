@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width: auto;height: 50px;background-color: #8A2BE2;margin: 10px;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+	//删除被选元素的父级元素
+	$(function(){
+		$(":button").click(function(){
+			$("p").unwrap()  //使用unwrap()方法是p元素的父级元素删除，达到解除包裹的作用
+			
+		})
+		
+	})
+		
+	</script>
+	<body>
+	<div id="">
+		<p>中国</p>
+	</div>	
+	<div id="">
+		<p>美国</p>
+	</div>
+	<input type="button" name="" id="" value="点击删除" />
+	</body>
+</html>

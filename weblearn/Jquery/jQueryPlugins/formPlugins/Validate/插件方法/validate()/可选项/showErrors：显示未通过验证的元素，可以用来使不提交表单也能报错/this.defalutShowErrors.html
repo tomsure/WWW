@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post" id="form">
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>密码: <input type="text"  name="password" id="password" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	},
+			    	password:{
+			    		required:true
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	},
+			    	password:{
+			    		required:"密码不得为空"
+			    	}
+			    },
+			
+			   showErrors:function(errorMap,errorList){
+//               当执行了showErrors方法后,直到输入的信息全部正确后可以提交表单,但是表单不会提示错误信息,即使是这个函数中是空的也不会提示错误信息;
+//               除非使用了这个方法:
+                 this.defaultShowErrors()
+			     //执行了这个方法后才会提示错误信息   
+			     //由于这里没有弹出errorMap和errorList所以没有弹出错误信息
+                 }
+			   
+			   
+			  
+			  
+		})
+		})
+
+	</script>
+</html>

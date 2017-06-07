@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{ position: absolute; border:1px solid red ;width: 500px;}
+		.dv1{height:200px ;padding: 10px;}
+		.dv2{height:100px ;padding: 10px;}
+		.dv3{ height:50px ;padding: 10px;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	
+	<script type="text/javascript">
+	//offsetParent() 方法返回第一个被定位的父元素。
+//提示：元素可通过 jQuery 或 CSS 的 position 属性（relative、absolute 或 fixed）来定位。
+		$(function(){
+			$("p").offsetParent().css("background","green")
+			//p的所有祖先元素全部由position定位，这里选择的是第一个父级元素，也就是最直接的父元素，就是.dv3
+		})
+	</script>
+	<body>
+	<div class="dv1">
+		<div class="dv2">
+			<div class="dv3">
+				dv3
+				<p>是是是</p>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

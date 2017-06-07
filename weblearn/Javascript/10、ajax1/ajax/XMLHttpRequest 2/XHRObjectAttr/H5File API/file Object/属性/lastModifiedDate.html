@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="file"  name="input" id="aa" value="" />
+		
+	</body>
+	<script type="text/javascript">
+	
+   var dd=document.getElementById("aa");
+
+     dd.onchange=function(){
+     	alert(dd.files[0].lastModifiedDate)
+     }
+  
+//	lastModifiedDate属性返回选择的这个文件最后的修改日期,其实这个日期和平时在文件夹里看一个文件的时候,后面显示'修改时间'是一样的
+	</script>
+</html>

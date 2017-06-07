@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var w=document.getElementById("ul1");
+			alert(w.lastElementChild.tagName)//弹出li ,返回最后一个子元素的标签名称
+	        alert(w.lastChild.tagName)//弹出undefinded,因为他的最后一个元素是空文本节点	
+		}
+	</script>
+	<body>
+		<ul id="ul1">
+			<li></li>
+		</ul>
+	</body>
+</html>

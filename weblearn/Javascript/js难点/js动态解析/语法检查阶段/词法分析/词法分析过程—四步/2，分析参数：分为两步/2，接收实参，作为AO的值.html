@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	 //这一步接着上一步将实参赋值给形参
+		function t1(age){
+			
+			alert(age);
+		}
+		
+	
+		t1();    //undefined;
+		t1(5)//5
+	/*	词法分析过程：
+	 *  AO={};  生成活动对象；
+	 * AO={age:undefined};   形成属性，值为undefined；
+	 * age=5，所以形成AO={age:5} 这一步AO对象接受实参，age变成了5
+	 
+	 * 运行过程：
+		
+		
+		t1(); //-----AO没有得到赋值，所以还是AO={ age：undefined }； // undefined 
+		t1(5);  //---->AO={ age:5 };alert(AO.age); //5;
+		*/
+	</script>
+	<body>
+	</body>
+</html>

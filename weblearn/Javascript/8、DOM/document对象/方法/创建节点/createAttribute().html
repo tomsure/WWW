@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//createAttribute()方法用于创建一个指定名称的属性，并返回Attr 对象属性。
+		window.onload=function(){
+			
+			var dd=document.getElementsByTagName("div")[0];//获取div
+			var ds=document.getElementById("btn");
+			ds.onclick=function(){//绑定事件函数
+				var att=document.createAttribute("id");//给div创建一个id属性
+				att.value="dv";//设置属性的值，相当于div属性里面的：id=“dv”；
+				dd.setAttributeNode(att)//给div添加设个属性
+				//这里设置了事件。当点击按钮的时候，使div具有这个属性，从而使div的样式添加。
+				
+				
+			}
+			
+			
+		
+		
+		
+		
+		}
+	</script>
+	<style type="text/css">
+		#dv{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			
+		}
+	</style>
+	<body>
+		<button id="btn">点击查看</button>
+		<div >
+		
+		</div>
+	</body>
+</html>

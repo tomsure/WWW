@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post" id="form">
+			<div class="container">
+			<h4>在你提交表单时出现了以下错误，详情如下：</h4>
+			<ol>
+				<li>
+					<label for="email" class="error">请输入邮箱地址。</label>
+				</li>
+				<li>
+					<label for="phone" class="error">请输入电话号码 ( 2 到 8 个字母)</label>
+				</li>
+				<li>
+					<label for="address" class="error">请输入地址 (至少三个字母)</label>
+				</li>
+				<li>
+					<label for="avatar" class="error">请选择图片 (png, jpg, jpeg, gif)</label>
+				</li>
+				<li>
+					<label for="cv" class="error">请选择文档 (doc, docx, txt, pdf)</label>
+				</li>
+			</ol>
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>密码: <input type="text"  name="email" id="email" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	},
+			    	email:{
+			    		required:true
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	},
+			    	email:{
+			    		required:"密码不得为空"
+			    	}
+			    },
+			    errorContainer:"ol.myerror",
+			    errorLabelContainer:"ol.myerror",
+			    wrapper:"li"
+
+			   
+			   
+		})
+		})
+
+	</script>
+</html>

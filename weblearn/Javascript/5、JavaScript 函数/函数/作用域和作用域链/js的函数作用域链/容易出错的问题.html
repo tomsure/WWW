@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	
+	<script type="text/javascript">
+		
+		var str1=1;
+		function fn(){
+			console.log(str1)
+			console.log(str2)
+			var str2=2
+		}
+		fn()
+//分析:
+//   函数执行前,函数内部有console.log(str1)和console.log(str2)动作
+//   函数执行到14行后,解析器现在函数内寻找,有没有str1,函数内没有,则向外层作用域寻找,就是window作用域中找,全局作用域中有str1=1,所以输出1
+// 函数执行到15行,解析器在函数内寻找,因为js代码是自上往下执行的,所以,执行到15行的是不会发现下面的str2,就是说在函数内没有发现str2,则继续向函数外寻找,发现全局作用域中也没有,所以输出undefined
+	</script>
+</html>

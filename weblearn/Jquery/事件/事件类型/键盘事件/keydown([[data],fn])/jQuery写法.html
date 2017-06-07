@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$(":text").keydown(function(){
+				$(this).css("background","red")
+				//当键盘按下的时候所选元素背景变成红色
+			})
+			$("body").keydown(function(){
+				alert("你你按下了键盘")
+				//keydown触发按下完成后不会输入内容吗，必须触发keypress之后才会输入，这里按下了键盘，却没有显示输入的内容，因为没有触发keypress事件
+			})
+		})
+	</script>
+	<body>
+		 <input type="text" name="" id="" value="" />
+	</body>
+</html>

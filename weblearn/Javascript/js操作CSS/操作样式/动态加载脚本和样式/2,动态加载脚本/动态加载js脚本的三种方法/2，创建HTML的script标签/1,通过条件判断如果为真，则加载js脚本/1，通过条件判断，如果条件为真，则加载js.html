@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	</script>
+
+	<style type="text/css">
+		#dv {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+
+	<body>
+		<div id="dv">
+
+		</div>
+		<button id="btn">点击测试</button>
+		<button id="btn1">点击测试1</button>
+	</body>
+	<script type="text/javascript">
+		var btn = document.getElementById("btn")
+		btn.onclick = function() {
+
+		 /*****************封装创建script标签的函数*******************/
+				function loadScript(url) { 
+					var script = document.createElement('script') 
+					script.type = 'text/javascript';
+					script.src = url; 
+					document.getElementsByTagName('head')[0].appendChild(script)  
+					
+						
+					  alert(1)
+				    }
+
+
+       	var flag =true;//设置条件
+			if(flag) {   //如果flag为真，这里使用这种判断变量的方法还没弄清楚，暂时可以直接使用这种方式
+                
+	     	    loadScript('../../../BrowserDetect.js')//执行创建script标签的函数，并设置参数为js文件的src路径
+	     	    
+	     	    alert(BrowserDetect)//如果弹出object，则说明js加载成功
+			}
+
+		}
+       
+
+
+
+//   注意:加载js脚本的时候,外部js路径不要弄错，测试时候，多点击几次，由于js文件太大，系统运行太慢导致读取js文件太慢，有时候路径正常也会报错
+   
+   
+	</script>
+
+</html>

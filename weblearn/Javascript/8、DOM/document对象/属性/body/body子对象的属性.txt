@@ -1,0 +1,20 @@
+document.body //指定文档主体的开始和结束等价于body>/body> 
+document.body.bgColor //设置或获取对象后面的背景颜色 
+document.body.link //未点击过的链接颜色 
+document.body.alink //激活链接(焦点在此链接上)的颜色 
+document.body.vlink //已点击过的链接颜色 
+document.body.text //文本色 
+document.body.innerText //设置body>…/body>之间的文本 
+document.body.innerHTML //设置body>…/body>之间的HTML代码 
+document.body.topMargin //页面上边距 
+document.body.leftMargin //页面左边距 
+document.body.rightMargin //页面右边距 
+document.body.bottomMargin //页面下边距 
+document.body.background //背景图片 
+document.body.appendChild(oTag) //动态生成一个HTML对象 
+
+常用对象事件 
+
+document.body.onclick=”func()” //鼠标指针单击对象是触发 
+document.body.onmouseover=”func()” //鼠标指针移到对象时触发 
+document.body.onmouseout=”func()” //鼠标指针移出对象时触发 

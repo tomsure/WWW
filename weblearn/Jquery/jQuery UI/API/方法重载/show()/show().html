@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		.dv { 
+			display: none;
+		    width: 100px;
+		    height: 100px;
+		    background-color: red;
+		     
+		}
+	</style>
+	
+	<body>
+		<button>点击显示</button>
+		<div class="dv">
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('button').click(function(){
+			$('div').show('fold',1000)
+		})
+	</script>
+	<!--show（）方法在原本jquery的show（）方法上 做了扩展，当给一个display为none的元素添加show（）方法的时候元素会显示，在jqueryUI中可以添加选项例如特效，特效动画执行的时间等等选项，这里设置元素显示的时候的特效是折叠，时间是1000ms-->
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{ width: 100px;height:100px ;background-color: red;}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		dv.attachEvent('onclick',function(){alert('dv')});
+		//IE浏老版本览器中DOM2级事件处理程序使用attachEvent()方法，参数只有两个，一个是事件名称，注意事件名称需要加‘on’，第二个是事件函数
+	</script>
+</html>

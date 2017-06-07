@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		<div class="carousel slide" id="myCarousel" style="width:600px ;" data-ride="carousel">
+<!--如果需要图片自动轮播，需要设置data-ride="carousel"属性，默认时间间隔是5秒-->
+
+
+<!------------------设置图片播放时候的原点图标------------------->			
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0"></li>
+			    <li data-target="#myCarousel" data-slide-to="1"></li>
+			    <li data-target="#myCarousel" data-slide-to="2"></li>
+			    <li data-target="#myCarousel" data-slide-to="3"></li>
+			</ol>
+<!-------------------设置图片放置区域------------------------------>			
+			<div class="carousel-inner">
+				<div class="item active"><img src="图片/1.jpg"/> <div class="carousel-caption">标题 1</div></div>
+				<div class="item"> <img src="图片/2.jpg"/>
+				 <div class="carousel-caption">标题 2</div></div>
+				<div class="item"><img src="图片/3.jpg"/> <div class="carousel-caption">标题 3</div></div>
+				<div class="item"><img src="图片/4.jpg"/> <div class="carousel-caption">标题 4</div></div>
+			</div>
+<!----------------------设置图片切换按钮---------------------------->			
+<a href="#myCarousel" data-slide="prev" class="carousel-control left">上一张</a>
+<a href="#myCarousel" data-slide="next"class="carousel-control right">下一张</a>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+		
+	</script>
+</html>
+
+	
+	<!--轮播途中给每张图片添加标题，只需要在放置img标签的同级div下创建一个div添加类名carousel-caption，div内些名称，即可添加标题-->
+	
+	
+	
+	

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//grep()方法用于数组元素过滤筛选
+		
+		$(function(){
+	//$.grep()方法里面两个参数，一个是要筛选的数组名称，第二个是函数，函数里面两个参数，第一个参数是要筛选的数组元素，可以用各种条件进行筛选，返回的也是一个数组，是筛选过后的数组第二个参数是数组的下标，可以对下标设定一个范围进行筛选，返回的值是按照数组下标筛选过的数组
+	//如果函数内部不设置返回任何内容则不会有任何输出
+			var arr=[2,4,5,6,7,8];
+	var	ss=$.grep(arr,function(element,index){//将筛选赋值给一个变量
+			return  element<3
+			//这里设定一个小于3的数组 内容
+		})//返回的内容就是小于3的内容
+		alert(ss)//输出筛选后的数组弹出一个2，因为数组里面只有2小于3
+		
+		var arr1=[2,4,6,7,9,10];
+		var dd=$.grep(arr1,function(element,index){
+			return index>2
+			//设置下标大于2
+		})//返回的就是数组中下标大于2的内容，有7,9,10
+		alert(dd)//所以弹出7,9,10
+		})
+		
+		var aa=[2,33,54,12,67]
+	var ee=$.grep(aa,function(e,i){
+			return e>30&&i<3
+			//同时设置两个条件 ，数组 内容大于30，且下标小于3
+			
+		})
+		document.write(ee)//返回的内容只有33,54，因为只有这两个数符合条件
+	</script>
+	<body>
+		
+	</body>
+</html>

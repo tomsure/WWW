@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		/*匿名函数就是没有名字的函数，闭包是可访问一个函数作用域里变量的函数。声明：本
+节内容需要有面向对象和少量设计模式基础，否则无法听懂.(所需基础15 章的时候已经声明过了)。*/
+		
+		//普通函数
+function box() { //函数名是box
+return 'Lee';
+}
+//匿名函数
+/*function () { //单独的匿名函数，会报错
+return 'Lee';
+}*/
+
+
+
+
+//通过表达式自我执行
+(function box() { //封装成表达式
+alert('Lee');
+})(); //()表示执行函数，并且传参
+
+
+
+
+
+//把匿名函数赋值给变量
+var box = function () { //将匿名函数赋给变量
+return 'Lee';
+};
+alert(box()); //调用方式和函数调用相似
+
+
+
+//函数里的匿名函数
+function box1 () {
+return function () { //函数里的匿名函数，产生闭包
+return 'Lee';
+}
+}
+//alert(box()()); //调用匿名函数
+
+	</script>
+	<body>
+	</body>
+</html>

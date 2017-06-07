@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//表示匹配str中正好连续出现X个 n；
+		var str='wiuifnwinfinoqownf ';
+		var str1='iwnfxnonfcoo'
+		var reg=/o{2}/g;
+		document.write(reg.test(str)+'</br>')
+			document.write(reg.test(str1))//str1有两个连续的o所以返回true
+	</script>
+</html>

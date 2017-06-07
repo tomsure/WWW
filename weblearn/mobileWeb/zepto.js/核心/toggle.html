@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button>点击测试</button>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').on('click',function(){
+				$('#dv').toggle(1<0)
+			})
+		})
+		
+//		toggle()方法用于切换元素显示和隐藏，toggle()方法可以添加参数，参数是一个表达式，如果表达式返回true，则元素会一直显示无法隐藏，如果返回的是false，则隐藏的元素一直隐藏无法显示
+	</script>
+</html>

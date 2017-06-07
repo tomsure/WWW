@@ -1,0 +1,31 @@
+.style(){
+    font+:"微软雅黑";
+     font+:x-large;
+     
+}
+
+ .style(){
+      font+: inherit;
+}
+
+
+div{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    .style()
+}
+
+  //  CSS有些复合属性，例如font（font-size、font-stretch等）等有多个属性值，代表不同的样式，简写的时候，可以以逗号的形式隔开；
+//  在less中，多个同名混合或者同一个混合中设置多次元素的复合属性，可以使用+符号表示合并的属性以逗号隔开，这样就达到了简写元素属性目的
+//
+//以上例子编译后结果：
+//
+//  div {
+//width: 100px;
+//height: 100px;
+//background-color: blue;
+//font: "微软雅黑", x-large, inherit;
+//}
+//
+

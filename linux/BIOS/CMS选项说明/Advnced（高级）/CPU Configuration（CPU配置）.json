@@ -1,0 +1,19 @@
+状态信息：
+
+
+
+
+配置：
+ Hyper-Theading      [enable/disable]
+intel的超线程技术的意思,可以使cpu的每个核心在特定的情况下运行两个线程,需要系统和软件的特殊优化
+
+Execute Disable Bit  [enable/disable]
+此技术即是硬件防病毒技术，有助于防护某此利用缓冲溢位进行攻击的病毒和病
+虫,因而增强系统的整体安全性
+
+Limit CPUID Maximum(处理器ID最大值)   [enable/disable]
+这项设置可开启支持较旧的操作系统的处理器ID的最大值限制设定，建议保持默认值。 
+此项目设为 [Enabled](启用)时,会限制CPUID的最大值为3,CPUID是较早期的作业系统需设定的参数,例如Windows NT4.0. 
+使用Windows XP时,请将此设定保留为预设值 [Disabled](停用).
+
+   

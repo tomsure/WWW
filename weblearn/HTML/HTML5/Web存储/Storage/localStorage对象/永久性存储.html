@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">设置</button>
+		<button id="btn2">读取</button>
+		<button id="btn3">删除</button>
+		<input type="text" name="ipt" id="ipt" value="" />
+	</body>
+	<script type="text/javascript">
+		var btn1=document.getElementById("btn1");
+		var btn2=document.getElementById("btn2");
+		var btn3=document.getElementById("btn3");
+		var ip1=document.getElementById("ipt");
+		btn1.onclick=function(){
+			window.localStorage.setItem('name',ip1.value)
+
+		}
+		btn2.onclick=function(){
+			alert(window.localStorage.getItem('name'))
+//			读取storge
+		}
+		
+//		localStorage是永久性存储,设置后的数据不会过期,需要手动删除,这里设置了storge后将页面关闭,再次打开,使用chrome控制台还可以看到设置的storge数据
+	</script>
+</html>

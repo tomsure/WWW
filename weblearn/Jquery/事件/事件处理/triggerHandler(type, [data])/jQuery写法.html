@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//触发元素绑定的事件，他与triger()类似，但是它不会执行选中的元素事件的默认行为
+		$(function(){
+			$('input').select(function(){
+				$(this).after("hhhhhhhhhhhh ")
+				//绑定事件，当文本被选中的时候执行函数：尾部插入文本hhhhhhhhh这一段内容
+			})
+			$("button").click(function(){
+				$("input").triggerHandler("select")
+				//当点击时间的时候它会执行select事件绑定的函数，但是不会执行select这个事件的默认行为就是不会选中文本
+				//相当于是触发指定事件绑定的函数，却不执行事件本身的功能
+			})
+		})
+	</script>
+	<body>
+		<input type="text"  value="的点点滴滴"/>
+		<button>点击测试</button>
+		
+	</body>
+</html>

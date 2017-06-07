@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*设置元素3D转换后的透视效果,值是一个数字*/
+		/*perspective 属性定义 3D 元素距视图的距离，以像素计。该属性允许您改变 3D 元素查看 3D    元素的视图。
+当为元素定义 perspective 属性时，其子元素会获得透视效果，而不是元素本身。
+注释：perspective 属性只影响 3D 转换元素。
+提示：请与 perspective-origin 属性一同使用该属性，这样您就能够改变 3D 元素的底部位置。*/
+		
+		#dv{ width: 200px;height:200px ;
+		border: 1px solid darkcyan;
+		 padding: 25px;
+		 -webkit-perspective-origin:  10% 60%  ;
+		  -webkit-perspective: 100;
+		   position: relative;}
+		#dv1{ width: 100px;
+		height: 180px;
+		background-color: darkgreen;
+		 -webkit-transform: rotateX(80deg);
+		 position: absolute; }
+	</style>
+	<body>
+		<div id="dv">
+			<div id="dv1">
+				中华人民共和国
+			</div>
+		</div>
+	</body>
+</html>

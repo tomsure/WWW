@@ -1,0 +1,13 @@
+
+
+1，使用管理员模式进入命令行
+   
+   
+2，进入到安装包错在目录：
+ 例如：cd C:\Users\Administrator\Downloads
+
+3，使用 >msiexec /package +安装包的名称 （可以补全）进行安装
+  例如：msiexec /package "node-v4.4.3-x64 (1).msi"
+
+
+

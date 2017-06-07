@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{height:100px ;height:100px ;border: 1px solid red; }
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		/**当元素（或在其内的任意元素）获得焦点时发生 focusin 事件。
+                          当在元素或在其内的任意元素上发生 focus 事件时，focusin() 方法添加要运行的函数。
+                         与 focus() 方法不同的是，focusin() 方法在任意子元素获得焦点时也会触发。
+                         提示：当通过鼠标点击选中元素或通过 tab 键定位到元素时，该元素就会获得焦点。
+                         提示：该方法通常与 focusout() 方法一起使用。*/
+             $(function(){
+             	$("div").focusin(function(){
+             		$(this).css("background-color","red")
+             		//获取焦点的时候
+             		//这里是他的子元素获取了焦点
+             		
+             	})
+                 $("div").focusout(function(){
+                 	$(this).css("background-color","blue")
+                 	//失去焦点的时候
+                 	//这里是他的子元素失去了焦点
+                 })
+             	
+             })
+	</script>
+	<body>
+		<div id="dv">
+			<input type="text" name="t1" id="t1" value="" />
+			<input type="text" name="t2" id="t2" value="" />
+		</div>
+		
+	</body>
+</html>

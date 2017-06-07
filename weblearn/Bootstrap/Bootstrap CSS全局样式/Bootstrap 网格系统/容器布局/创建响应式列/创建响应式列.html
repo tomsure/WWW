@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<style type="text/css">
+		.col-md-1{border:1px solid grey ;}
+		.col-md-4,.col-md-8{border: 1px solid grey;}
+		.col-md-6{border: 1px solid grey;}
+	</style>
+	<link rel="stylesheet" type="text/css" href="../../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		<div class="container"><!--创建容器,使用container类名-->
+			<div class="row"><!--创建行，使用row类，这里使用行来放置列的，不能放其他他内容，-->
+  <div class="col-md-1">.col-md-1</div>				
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <!--<!--创建列，使用 类名col-*-之类的类名，只有这个元素才能作为.row的直接子元素，每行最多放置12列-->
+			</div>
+			
+			<div class="row">
+  <div class="col-md-8">.col-md-8</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+<div class="row">
+  <div class="col-md-6">.col-md-6</div>
+  <div class="col-md-6">.col-md-6</div>
+</div>
+<!--栅格系统一行最多同放置12列，每个列有大小。从col-*-1到col-*-12..就是容器里的一行被分成12个单位的响应式宽度，row行中放置这些列是根据设置的列的大小来显示，例如：一行最多可以显示12个col-md-1，最多放3个col-md-4,最多放两个col-md-6,如果放置的列大于12，则多余的列就会另起一行显示->
+		</div>
+	</body>
+</html>

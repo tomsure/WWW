@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script language="javascript">  
+
+function Lakers() {  
+       this.name = "kobe bryant";  
+       this.age = "28";  
+       this.gender = "boy";  
+}  
+var people=new Lakers();  
+with(people)  
+{  
+       var str = "姓名: " + name + "<br>";  
+       str += "年龄：" + age + "<br>";  
+       str += "性别：" + gender;  
+       document.write(str);  
+}  
+//     with用于应用对象或者变量,但是代码运行缓慢,所以应该避免使用
+</script>  
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//	在创建对象的时候,如果调用了Object.definePrototy()方法,而不设置[configurable]和[weiteable]和[Enumerable]属性的话,这几个值会默认为false,例如:
+	
+	var obj={};
+	  Object.defineProperty(obj,'name',{value:'tom'})//不设置那三个数据属性
+	
+	obj.name='tomsure';
+	alert(obj.name)//弹出tom，说明对象属性没有被修改；
+	delete obj.name;
+	alert(obj.name)//仍然弹出tom，说明并没有被删除；
+	
+	
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

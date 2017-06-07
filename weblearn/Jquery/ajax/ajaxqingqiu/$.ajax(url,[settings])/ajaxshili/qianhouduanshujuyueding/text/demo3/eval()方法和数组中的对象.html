@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var str='[{"title":"新闻","name":"news"}]';
+		var dd=eval(str);
+		document.write((dd instanceof Array)+'</br>');
+		document.write(dd[0].name+'</br>');
+		document.write(dd[0].title);
+		//json格式的数据在数组中就表示的是一个对象，每组{}就可以理解为一个对象，{}中的键值对就是对象的属性和值，其中键就是对象属性，值就是对象属性的值，
+		//如果有多组{}就表示有多个对象，而每组{}就是数组的一个元素，第一组{}就代表这个数组的第一个元素，也就是[0];
+		//所以例如这里要获取到这里的‘新闻’，就需要获取数组dd的第一个元素的title属性
+		//如果是将字符串转换成数组，就是用eval()方法
+		
+		//注意：json内的键值对需要使用双引号
+		
+	</script>
+</html>

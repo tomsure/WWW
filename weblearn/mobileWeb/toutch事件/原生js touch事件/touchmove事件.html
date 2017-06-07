@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		   dv.addEventListener('touchmove',function(){
+		   	alert('屏幕滑动事件')
+		   })
+	</script>
+	    <!--当手指在屏幕上滑动的时候就会触发-->
+</html>

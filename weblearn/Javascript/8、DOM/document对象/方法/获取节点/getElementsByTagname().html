@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//getElementsByTagName() 方法可返回带有指定标签名的对象的集合。
+		//返回的是一个数组并且指的是文档内部所有与标签名相匹配的标签。
+		
+		window.onload=function(){
+			var s=document.getElementsByTagName("div");
+			alert(s.length)//弹出3，因为这里面有三个div，不管是不是父节点与子节点的关系，还是兄弟节点的关系
+			
+			
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<div id="dv1">
+				<ul>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		<div id="dv3">
+			
+		</div>
+	</body>
+</html>

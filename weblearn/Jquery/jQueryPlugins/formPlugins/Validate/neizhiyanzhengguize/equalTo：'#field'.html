@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>输入密码: <input type="password"  name="num" id="num" value="" />(必填)</p>
+			<p>确认密码: <input type="password"  name="repassword" id="" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../Validate/库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('form').validate({
+				
+						
+			rules:{
+				repassword:{//input元素
+				
+					equalTo:"#num"
+					//必须输入和#num这个元素相同的字符，这个规则用于验证密码确认。
+				}
+			},
+			messages:{
+				repassword:{
+					equalTo:"两次密码不一致"
+				}
+			}
+				
+			})//加载validate.js插件；
+			
+		})
+     
+     //equalTo多数用于密码验证，他的值是填写某个选择器代表某一个元素，使这个表单元素的值验证时候必须和选择器那个元素的值相同，否则报错，在message中可以自定义设置中文报错 信息。
+      
+	</script>
+</html>

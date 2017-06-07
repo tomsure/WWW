@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		
+	
+<br /><br />
+<a id="a" class="btn btn-danger btn-lg" data-toggle="popover" title="bootstrap" data-content="1111111<br/>2222222<br/>3333333<br/>1111111<br/>2222222<br/>3333333<br/"  >点击弹出或隐藏</a>
+<br />
+<br />
+<br />
+<br />
+<br />
+<a id="c" class="btn btn-danger btn-lg" data-toggle="popover" title="bootstrap" data-content="1111111<br/>2222222<br/>3333333<br/>1111111<br/>2222222<br/>3333333<br/"  >点击弹出或隐藏</a>
+<button id="b">点击设置</button>
+	</body>
+	<script type="text/javascript" src="../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../bootstrap库/Bootstrap源码/dist/js/bootstrap.min.js">
+		
+	</script>
+	<script type="text/javascript">
+$('#a').popover(  
+	)
+$('#b').on('click',function(){
+	
+	$('#c').popover({
+		'html':true//这里设置为true，显示的时候会换行
+     
+	})
+	$("#c").popover("show")
+	})
+
+	</script>
+	
+		
+h<!--tml属性可以设置弹出框是否启用html格式，值是布尔值，默认为false	，设置为true的时候可以按html格式显示-->
+		
+		
+		
+
+</html>

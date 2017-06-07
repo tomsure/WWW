@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<style type="text/css">
+	#dv{
+		margin-bottom: 20px;
+		width: 100px;
+		height: 100px;
+		background-color: coral;
+		position: relative;
+		left: 0px;
+		border-radius: 100px;
+		animation: divC 5s ;
+		-webkit-animation: divC 5s;
+		
+	}
+	@keyframes divC{
+		from{left: 0px;background: coral;}
+		to{left: 800px;background: #FFFF00;}
+		
+	}
+	@-webkit-keyframes divC{
+		from{left: 0px;background: coral;}
+		to{left: 800px;background: #FFFF00;}
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var de=document.getElementById("btn");
+		btn.onclick=function(){
+			/*以下是火狐浏览器的写法*/
+	document.getElementById("dv").style.animationFillMode="forwards";
+	          /* 针对 Chrome、Safari 和 Opera 的代码 */
+	document.getElementById("dv").style.webkitAnimationFillMode="forwards"
+			
+		}
+	}
+</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<input type="button"   id="btn" value="点击测试" />
+	</body>
+</html>

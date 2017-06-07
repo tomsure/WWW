@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+			function setCookie(cookieName,cookieValue, iDay){
+			 var oDate=new Date();
+			 oDate.setDate(oDate.setDate()+iDay);
+			 document.cookie=cookieName+'='+cookieValue+';expires='+oDate;
+		    }
+			
+			setCookie('myName','tom',1)
+     //  console.log(document.cookie)//多条cookie之间使用cookie隔开的
+       
+       /***********************封装读取cookie的函数*******************************/
+          function getCookie(name){
+          	var arr=document.cookie.split(';')//由于每个cookie之间是字符串，是键值对，又用分号可开的，所以可以使用字符串的split()方法将字符串使用;隔开，这时候就会形成每组键值对的cookie组成的数组（split()方法返回数组）；
+          	for (var i=0;i<arr.length;i++) { //为了读取每一个cookie，所以需要进行一次遍历
+          		var arr2=arr[i].split('=');//由于cookie是键值对，这个键值对是有等号隔开的，所以可以使用split()方法将这个键值对使用等号分割，这样的话一组cookie的name和value就成了一个数组，name就是数组的下标0，value就是数组的下标1；
+//        		由于是遍历,所以每一对cookie都会被这样分割
+          		if(arr2[0]==name){
+          			return arr2[1]
+          		}//使用if语句，所要获取的cookie的name和存储的cookie中已有的cookie的name（也就是第二次分割的数组的下标0）相等的时候，就返回已存储的cookie这个name所对应的value（也就是第二次分割数组的下标1）
+          	}
+          	return ''; //如果需要获取的cookie的name在已存的cookie中没有,就返回空字符串，也就是用户第一次登陆的时候没有存储cookie的时候
+          }
+          alert(document.cookie)
+		  alert(getCookie('myName'))
+	</script>
+</html>

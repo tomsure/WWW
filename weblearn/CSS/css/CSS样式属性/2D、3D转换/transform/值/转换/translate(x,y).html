@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*定义2D转换，单位是像素*/
+		div{width: 100px;height: 100px; background-color: red; -webkit-transform: translate(1px,1px);}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+		var	de=document.getElementById("dv")
+		
+		
+		var dd=document.getElementById("btn1")
+		dd.onclick=function(){
+			de.style.webkitTransform="translate(10px,20px)"
+		}
+		
+		
+		var d1=document.getElementById("btn2")
+		d1.onclick=function(){
+			de.style.webkitTransform="translate(20px,30px)"
+		}
+		
+		var d2=document.getElementById("btn3")
+		d2.onclick=function(){
+			de.style.webkitTransform="translate(30px,40px)"
+		}
+		
+		
+		var d3=document.getElementById("btn4")
+		d3.onclick=function(){
+			de.style.webkitTransform="translate(40px,50px)"
+		}
+		
+		
+		
+		
+		}
+		
+		
+	</script>
+	<body>
+	<button id="btn1" >translate(20px,20px)</button>
+	<button id="btn2">translate(20px,20px)</button>
+	<button id="btn3">translate(20px,20px)</button>
+	<button id="btn4">translate(20px,20px)</button>
+		<div id="dv">
+			
+		</div>
+	</body>
+</html>

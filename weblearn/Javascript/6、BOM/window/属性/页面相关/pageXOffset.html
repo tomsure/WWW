@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+//表示浏览器X轴（水平）、Y轴（垂直）滚动条的偏移距离。  滚动距离，
+//兼容：ie9/10、chrome、firefox。
+/*所有主流浏览器都支持 pageXOffset 和 pageYOffset 属性。
+注意： IE 8 及 更早 IE 版本不支持该属性,但可以使用 "document.body.scrollLeft" 和 "document.body.scrollTop" 属性 。
+*/
+/*功能：指定浏览器窗口中文档左上角在窗口中的当前水平像素位置。在利用 moveTo移动之前，可以通过该属性来决定是否需要移动窗口。因为该属性返回了 可见文档相对整个页面的当前位置。 
+*/
+	document.onclick=function(){
+	alert(window.pageXOffset);//火狐浏览器指的是水平滚动条最左边距离浏览器左边的滚动距离
+	// chrome=>200
+	// firefox=>200
+	// ie9/10=>200
+	// ie6/7/8=>undefined
+	alert(window.pageYOffset);//火狐浏览器指的是垂直滚动条最左边距离浏览器左边的滚动距离
+	// chrome=>200
+	// firefox=>200
+	// ie9/10=>200
+	// ie6/7/8=>undefined
+};
+	</script>
+	<body>
+	<div style="width: 8000px;height: 800px;">
+		
+	</div>
+	</body>
+</html>

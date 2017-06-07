@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form id="fm" action="##" method="post">
+			<input type="text" name="input1" id="" value="" />
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript">
+		var fm=document.getElementById("fm");
+//		elelemts[]属性指的是form表单元素中所有的子元素组成的一个数组
+		alert(fm[1].type)//可以通过数组下标的方式获取form中的input元素
+		
+		
+		alert(fm.input1.type)
+		//form元素中的input元素如果设置了id或者name属性，那么这个input元素的id或者name就是属于这个form对象（html称为form元素）的属性，可以通过这种方式获取form的子元素对象
+	</script>
+</html>

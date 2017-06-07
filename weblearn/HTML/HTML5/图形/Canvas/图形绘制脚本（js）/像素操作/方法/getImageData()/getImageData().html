@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+	//getImageData() 方法返回 ImageData 对象，该对象拷贝了画布指定矩形的像素数据。
+	/*对象中的每个像素保存着四方面的信息：
+	                                 R:红色(0-255)
+	                                 G:绿色(0-255)
+	                                 B:蓝色(0-255)
+	                                 A:透明度(0-255,0是完全透明,255是完全可见)
+	    所有图形的每个像素都保存着这四个信息组成的数据，每个不同的值代表不同的颜色和透明度                             
+	                                 
+	                                  
+	                                  */
+		window.onload=function(){
+			var ss=document.getElementById("myCanvas").getContext("2d");
+			ss.fillStyle="#8B008B";
+			ss.fillRect(10,10,150,60);
+		var dd=ss.getImageData(10,10,90,80);//通过这个方法返回一个指定数据的ImageDate对象
+		    alert(dd.width) //弹出90，表示的是上一步获取的ImageData的宽度，也就是一行中像素的个数；
+		  alert(dd.height)//弹出80，表示上一步获取的 ImageData对象的高度，也就是一列中像素的个数；
+		
+			
+			
+			
+			
+		}
+	</script>
+	<body>
+	<canvas id="myCanvas" width="200" height="200"></canvas>
+	</body>
+</html>

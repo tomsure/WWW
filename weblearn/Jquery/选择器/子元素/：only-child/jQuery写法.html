@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	<script>
+	//选择是父级元素的唯一子元素的指定元素；而且选定的元素是父级元素的唯一子元素
+	
+	$(function(){
+		
+		$("li:only-child").css("background","red")
+		//只有内容为3的这个li才是父级元素的唯一子元素
+		
+	})
+	
+		
+	</script>
+	<body>
+		<ul>
+			<a href="">1</a>
+			<li>2</li>
+		</ul>
+		<ul>
+			
+			<li>3</li>
+		</ul>
+		<ul>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</body>
+</html>

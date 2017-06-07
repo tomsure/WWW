@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	/*这个事件是在动画重复播放的时候触发*/
+	
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: #228B22;
+			animation: divC 5;
+			position: relative;
+			top: 0px;
+			-webkit-animation: divC 5S 3;/*注意：如果播放次数设置为1，则不会重复播放，也不会也不会触发重播事件*/
+			
+		}
+		@-webkit-keyframes divC{
+			from{top:0px			}
+			to{top: 500px;}
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var sd=document.getElementById("dv");
+		var p1=document.getElementById("p1");
+		var fnCounts=function(){p1.innerHTML="动画正在重复播放"}
+		/*绑定重复播放时候的事件*/
+		sd.addEventListener("animationiteration",fnCounts)
+		sd.addEventListener("webkitAnimationIteration",fnCounts)
+		/*绑定动画播放结束时候等等事件*/
+		var fneEnd=function(){p1.innerHTML="动画播放结束"};
+		sd.addEventListener("animationend",fneEnd);
+		sd.addEventListener("webkitAnimationEnd",fneEnd)
+		
+	}
+	</script>
+	<div id="dv">
+		
+	</div>
+	<p id="p1"></p>
+	<body>
+	</body>
+</html>

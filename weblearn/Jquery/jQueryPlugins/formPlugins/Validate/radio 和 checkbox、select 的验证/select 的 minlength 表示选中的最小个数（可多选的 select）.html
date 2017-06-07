@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>
+				用户名: <input type="text"  name="user" id="user" value="" />
+				
+			</p>
+			<p>
+				密码: <input type="password"  name="pass" id="pass" value="" />
+			</p>
+				<select id="fruit" name="fruit" title="Please select at least two fruits" multiple="multiple"><!--select如果要多选就需要设置multiple="multiple"属性，选择的时候使用选择文本一样的方式选择-->
+    <option value="b">Banana</option>
+    <option value="a">Apple</option>
+    <option value="p">Peach</option>
+    <option value="t">Turtle</option>
+</select>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript"  src="../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+		var validator=$('form').validate({
+		
+			    rules:{
+			    	user:{
+			    	minlength:4,
+
+			    	},
+			    	pass:{
+			    		minlength:5
+			    	},
+			    	run_type:{
+			    		required:true
+			    	},
+			    	fruit:{
+			    		required:true,//required：表示是select是必选项
+			    		minlength:2//mminlength表示选择的个数最少是多少
+			    	},
+			    	
+			 
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"用户名不得少于4位",
+			    		maxlength:"输入不得超过8位"
+			    	},
+			    	pass:{
+			    		minlength:"密码不得少于5位"
+			    	},
+			    	run_type:{
+			    		required:"请点击同意"
+
+			    	},
+			    	fruit:{
+			    		required:"必选项",
+			    		minlength:"至少选择两个"
+			    	}
+			    	
+			    }
+			    
+			  
+       
+			
+		});
+
+        
+	  $('#user').rules('add',{required:true,maxlength:8})
+       
+       
+       
+        
+		})
+     
+	</script>
+</html>

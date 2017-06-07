@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="test.php" method="post">
+			<p>用户名: <input type="text"  name="user" id="user" value="" /></p>       
+			<p>密码: <input type="password"  name="password" id="password" value="" /></p>
+			<p>确认密码: <input type="password"  name="confirm_password" id="" value="" /></p>
+			
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../Validate/库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('form').validate({
+				
+						
+			rules:{
+               user:{//input元素
+               	    required:true,
+				    minlength:4,
+					
+			
+				},
+			   password:{
+			   	  required:true,
+			   	  remote:{
+			   	  	url:"test.php",
+			   	  	type:"post",
+			   	  	data:{
+			   	  		user:function(){
+			   	  			return $('#user').val()
+			   	  		}
+			   	  	}
+			   	  }
+			   },
+			   confirm_password:{
+			   	equalTo:"#password"
+			   }
+			},
+			
+			messages:{
+				user:{
+					minlength:"请输入不少于四位的用户名",
+					required:"请输入用户名"
+					
+				},
+				password:{
+					required:"请输入密码",
+					remote:"账号或密码不正确"
+				},
+				confirm_password:"两次密码不一致"
+			}
+				
+			})
+			
+		})
+     
+    //这里用来同时验证用户名和密码，因为在实际开发中或者使用中，需要这样验证，例如用户在输入用户名正确后密码不正确，或者密码正确但是用户名不正确，所以在验证密码的时候还同时要验证用户名，这样提示的时候，提示信息就会在密码输入框后面，用户体验比较好 ；
+    
+    //注意：同时验证用户名和密码的时候由于验证密码还需要获取到用户名的值，所以rules中password的data属性里面需要填写用户名的数据，remote()方法异步的将数据发送到服务器后进行验证，验证是否通过在这里还可以再设置提示信息。具体看上面代码
+      
+	</script>
+</html>

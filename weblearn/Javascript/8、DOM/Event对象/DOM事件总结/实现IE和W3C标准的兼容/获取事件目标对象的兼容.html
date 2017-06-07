@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript">
+	
+	            /************封装兼容性函数**************/
+		function getTarget(evt){
+			
+			if(evt.target){//如果事件对象有target属性
+				return evt.target
+			}else if(evt.srcElement){//如果事件IE事件对象对象有srcElement方法
+				return window.event.srcElement
+			
+			}
+		}
+		
+		/************调用**************/
+		   var  btn=document.getElementById("btn");
+		      btn.onclick=function(evt){
+		      	  alert(getTarget(evt).id)
+		      }
+		
+		/*事件目标对象解释:事件目标对象指的是触发事件的那个DOM对象,而这个对象是作为事件对象的一个属性来 返回的,IE浏览器指的是window.event.srcElement,W3C浏览器指的是事件函数第一个参数evt.target
+	
+	   调用封装的兼容性获取事件目标对象的函数方法只需在事件函数中执行此函数即可返回，当然要弹出当然要用alert(getTarget(evt))
+		
+		
+		
+		
+		
+		
+		
+		
+		* */
+	</script>
+</html>

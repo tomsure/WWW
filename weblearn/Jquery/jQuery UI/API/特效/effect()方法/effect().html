@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		div { width: 100px;height: 100px ;background-color: red;}
+	</style>
+	
+	<body>
+		<div id="">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('div').on('click',function(){
+			$(this).effect('bounce',1000)
+		})
+	</script>
+	<!--特效方法可以理解为其他特效方法的基础方法，其他特效可以通过effect（）方法达到特效，
+		在显示和隐藏类的特效中还可以使用show()、hide()、toggle()等方法
+		
+		effect（）使用方法就是将特效名称作为参数写入effect()中
+	-->
+</html>

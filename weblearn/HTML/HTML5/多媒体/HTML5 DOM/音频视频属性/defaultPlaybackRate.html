@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body> 
+
+     <video width="" height="" id="vod" controls="controls" >
+     	<source src="../音视频资源文件/Intermission-Walk-in_512kb.mp4" type="video/mp4"></source>
+     	<source src="../音视频资源文件/johann_sebastian_bach_air.ogg" type="video/ogg"></source>
+     	
+     </video>
+      
+      <button id="btn1">正常速度</button>
+        <button id="btn2">快速</button>
+          <button id="btn3">慢速</button>
+            
+</body> 
+<script>
+  var vod=document.getElementById("vod");
+       vod.defaultPlaybackRate=5
+       var btn1=document.getElementById("btn1")
+        var btn2=document.getElementById("btn2")
+         var btn3=document.getElementById("btn3");
+         btn1.onclick=function(){
+         	vod.playbackRate=1;
+         	
+         }
+         btn2.onclick=function(){
+         	vod.playbackRate=3;
+         	
+         }
+         btn3.onclick=function(){
+         	vod.playbackRate=0.55;
+         	
+         }
+        
+</script>  
+</html>

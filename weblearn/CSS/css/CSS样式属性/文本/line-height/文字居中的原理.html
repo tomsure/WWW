@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 300px;
+			height: 300px;
+			border: 1px solid red;
+			line-height: 300px;
+			/*line-height设置文字居中需要设置直接包裹文字的标签元素,它的原理是:文字在元素中是按照标准文档流从上往下排列的,在元素中的文字也是一行一行的往下排列,默认的一行文字只会有一行文字的高度空间,此时这行文字在这个空间的位置更好位于这个空间的垂直的中间部分,当手动设置line-height的时候就相当于设置了这段文字所在的空间的高度,当把line-height的高度设置为你和包裹元素的高度一样的时候,这个文字的占位空间就变成了和包裹它的元素一样高了,此时,文字自然就在父元素中居中了*/
+			
+		}
+		
+		
+	</style>
+	<body>
+		<div id="dv">
+			中华人民共和国
+		</div>
+	</body>
+</html>

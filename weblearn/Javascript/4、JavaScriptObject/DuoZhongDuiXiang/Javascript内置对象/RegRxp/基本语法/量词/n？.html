@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//	n?表示字符串中有一个或0个n与正则表达式的n匹配,可以用n{0,1}表示
+var reg=/[A-Z]{3}\d{2}[a-z]{1}\d{2}[a-z]/g//匹配连续出现3个大写字母
+	var str='ADD92i90j';
+	document.write(reg.test(str))
+	</script>
+</html>

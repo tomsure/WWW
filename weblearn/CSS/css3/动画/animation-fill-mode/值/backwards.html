@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<style type="text/css">
+	#dv{
+		margin-bottom: 20px;
+		width: 100px;
+		height: 100px;
+		background-color: coral;
+		position: relative;
+		left: 0px;
+		border-radius: 100px;
+		animation: divC 5s ;
+		-webkit-animation: divC 5s;
+		-webkit-animation-fill-mode:forwards ;
+		/*取值为forwards的时候，在动画结束后，会保持动画最后一帧的样式作为元素 的样式，例如这里，元素dv在动画在最后的时候，位置和背景都变了，如果正常的话，则会一下子跳到最初的样式，用户体验不很好，所以可以取这个值，使动画结束后就保持这个样式*/
+	}
+	
+	@-webkit-keyframes divC{
+		from{left: 0px;background: coral;}
+		to{left: 800px;background: #FFFF00;}
+	}
+</style>
+<script type="text/javascript">
+	
+</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<input type="button"   id="btn" value="点击测试" />
+	</body>
+</html>

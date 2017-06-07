@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../animate.css"/>
+	<style type="text/css">
+		#dv{
+			width: 200px;
+			height: 50px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript" >
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var btn=document.getElementById("btn")
+			var btn1=document.getElementById("btn1")
+		
+			var dv=document.getElementById("dv")
+			btn.onclick=function(){
+				dv.setAttribute('class', ' animated fadeOutLeftBig')
+			}
+			btn1.onclick=function(){
+				dv.removeAttribute('class')
+			}
+			
+			
+		}
+	</script>
+	<body>
+		<button id="btn">点击添加</button>
+		<button id="btn1">点击删除</button>
+		
+		<div id="dv" >
+			
+		</div>
+	</body>
+</html>

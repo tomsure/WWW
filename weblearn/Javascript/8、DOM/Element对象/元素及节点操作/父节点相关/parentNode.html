@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<!--parentNode必须在文档或者相关操作的节点加载完成后才会生效，所以使用的时候应该放在window.onload=function(){}里面或者放在body的最下边位置-->
+	
+	<body>
+		<div id="">
+			<p id="p1"></p>
+		</div>
+		<script type="text/javascript">
+			var s=document.getElementById("p1");
+			alert(s.parentNode.tagName)
+		</script>
+	</body>
+</html>

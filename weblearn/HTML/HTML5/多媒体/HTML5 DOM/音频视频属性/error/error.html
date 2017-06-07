@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	
+	   <video  controls="controls"  id="vod">
+	   	<source src="../../音视频资源文件/mov_bbb.mp4"></source>
+	   
+	   </video>
+	   <button id="btn">返回错误代码</button>
+	
+	</body>
+	<script type="text/javascript">
+		var vod=document.getElementById("vod");
+		   var btn=document.getElementById("btn");
+		   btn.onclick=function(){
+		     console.log(vod.error)
+		   }
+		   
+//		   error属性在播放发生错误的时候返回错误代码,如果没有的话,则返回null
+		  
+	</script>
+</html>

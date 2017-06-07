@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function fn(){
+			var name='tom';
+	    return	function (){
+				return name
+		    	} 
+			
+			
+		}
+       //alert(fn()())
+	var fn1=fn();
+	    alert(fn1())//由于函数内部只是返回，所以要弹出的话还要用alert()
+	//也可以使用这种方式：
+   //  alert(fn()());因为要想访问函数内部的局部变量，就必须现调用最外部函数fn，也就是fn(),当fn执行的时候，返回了匿名函数，所以匿名函数也要执行才会返回局部变量，所以就会有两个括号，就是fn()();
+  //一半会将执行最外层函数赋值给变量，通过这个变量再加两个括号执行，就返回了里面的局部变量(执行匿名函数里的代码)，当然如果匿名函数里面只是return，在外面可以按需引用，例如alert，或者在用于其他； 
+		
+		
+	</script>
+	
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	
+		</head>
+		
+		<body>
+			<video width="" height="" controls="" id="vid">
+				<source src="../音视频资源文件/movie.mp4"></source>
+				<source src="../音视频资源文件/johann_sebastian_bach_air.ogg"></source>
+				<source src="../音视频资源文件/mov_bbb.mp4"></source>
+				
+			</video>
+			<input type="text" id="ipt"/>
+		</body>
+		<script>
+
+	var vod=document.getElementById("vid");
+	 
+		
+       vod.ontimeupdate=function(){
+       	    var ipt=document.getElementById("ipt")
+       	     ipt.value=vod.currentTime
+       }
+//     ontimeupdate是当视频的播放位置发生变化的时候触发,可以使用这个事件做播放进度条等应用，播放的位置变化其实就是播放时间也会变化，他们的比例是一样的
+		</script>
+	</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	
+		</head>
+		
+		<body>
+			<video width="" height="" controls="" id="vid">
+				<source src="../音视频资源文件/movie.mp4"></source>
+				<source src="../音视频资源文件/johann_sebastian_bach_air.ogg"></source>
+				<source src="../音视频资源文件/mov_bbb.mp4"></source>
+				
+			</video>
+			<input type="button" name="btn" id="btn" value="" />
+		</body>
+		<script>
+
+	var vod=document.getElementById("vid");
+	var btn=document.getElementById("btn")
+	   vid.onseeking=function(){
+	     btn.value='开始调整播放进度'
+	   }
+		
+//		当手动调整播放进度的时候触发onseeking事件
+		</script>
+	</html>

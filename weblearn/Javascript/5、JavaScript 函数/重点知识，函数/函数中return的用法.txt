@@ -1,0 +1,28 @@
+
+function box(name, age) {
+	alert('你的姓名是：' + name + '，年龄为：' + age);
+}
+
+box('李炎恢', 28);
+function box() {
+	return '我只有被调用才可以执行！';			//return表示把这句话字符串返回回来
+}
+
+
+//打印出函数调用返回过来的结果
+alert(box());																//调用，相当于box() ='我只有被调用才可以执行！'
+
+function box(name, age) {
+	return '你的姓名是：' + name + '，年龄为：' + age;
+}
+
+
+var strInfo = box('马云',40);
+alert(strInfo);
+function box(num) {
+	if (num < 5) return num;							//当一个函数遇到第一个return，就会终止函数继续往下执行
+	return 100;
+}
+
+
+alert(box(6));

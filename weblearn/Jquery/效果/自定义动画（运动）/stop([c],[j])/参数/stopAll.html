@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div {
+			width: 30px;
+			height: 30px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-1.7.2/jquery.min.js">
+	</script>
+	<script type="text/javascript">
+		$(function() {
+			$("#btn1").click(function() {
+				$("div").animate({
+					width: "300px"
+				}, 2000).animate({
+					height: "300px"
+				}, 1000);
+			})
+			$('#btn').click(function() {
+				$('div').stop(true)
+			})
+		})
+
+	</script>
+
+	<body>
+		<div id="">
+
+		</div>
+		<input type="button" name="" id="btn1" value="点击开始" />
+		<button id="btn">点击停止</button>
+
+	</body>
+<!--stop()第一个参数true用于设置停止当前及后面所有的运动，运动到那里就停止到那个位置，而且后面的运动也会被阻止，不加参数true的话就是只阻止正在运动的那个animate（）-->
+  <!--默认值为false-->
+</html>

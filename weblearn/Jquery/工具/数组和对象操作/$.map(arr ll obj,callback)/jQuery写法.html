@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+	//map()方法可以对数组进行修改再返回一个新的数组，如果不设置则返回原数组
+	var arr=[2,4,6,8,10]
+var sss=$.map(arr,function(e,i){
+		return e
+	})
+	console.log(sss)//这里只返回了原数组没有进行修改所以弹出原数组一样的内容
+	//如果函数内部不设置任何内容则返回为空
+	
+	var aa=[2,3,4,5,6,7,8,9]
+	var dd=$.map(aa,function(e,i){
+		return e+1//将元素的内容加1
+	})
+	console.log(dd)
+	
+	var xs=[3,5,7,8,11,43,56]
+	var sw=$.map(xs,function(e,i){
+		return i+2
+		//将数组的下标都加上2，则这里数组的下标是2,3,4,5,6,7,8
+	})
+	document.write(sw)
+	
+	var qq=[3,5,6,7,8,4,1]
+	var qw=$.map(qq,function(e,i){
+		return i+1 ,e+1
+		//同时设定两个，但是只会返回第二个
+	})
+	console.log(qw)//这里只打印了e+1的内容
+	
+	
+	var sa=[1,2,3,4,5,6]
+	var sd=$.map(sa,function(e,i){
+		if(i<3){
+			return e+1
+		}
+		//按照条件筛选
+		//还可以按照条件筛选后再修改
+	})
+	console.log(sd);//这里设置如果下标小于3的时候再返回e+1的内容
+	
+	
+	
+	</script>
+	<body>
+		
+	</body>
+</html>

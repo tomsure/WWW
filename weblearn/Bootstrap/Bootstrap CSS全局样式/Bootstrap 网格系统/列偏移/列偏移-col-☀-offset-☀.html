@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<style type="text/css">
+		.a{border:1px solid red;background-color:gray ;}
+		.row{border:1px solid blue ;}
+	</style>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 a ">
+				偏移前
+				</div>
+				<div class="col-md-6 a">
+					偏移前
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-md-offset-3 a"><!--偏移3个列的宽度-->
+				1111	
+				</div>
+				<div class="col-md-6 a">
+					2222
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 a">
+				1111	
+				</div>
+				<div class="col-md-6  col-sm-offset-4 a"><!--偏移4个列的宽度-->
+					2222
+				</div>
+			</div>
+		</div>
+		<!--当列元素需要向右偏移的时候，使用col-*-offfset-*来调整 偏移宽度，设置后列元素会向右移动所设定的宽度，如果后面的宽度不够，则后面的元素会被挤到下一行-->
+		<!--注意偏移的类名需要配个当前布局情况使用-->
+	</body>
+</html>

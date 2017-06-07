@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function add(a,b){//函数a（也是对象）
+			alert(a+b)
+		}
+	//	add(3,1)  //4
+		
+		function sum(m,n){  //函数sum（也是对象）
+			alert(m-n)
+		}
+		// sum(3,4)
+		
+		add.call(sum,4,5)
+		sum.call(add,4,5)
+	
+	//在js中可以将一个函数a绑定call()方法，将a作为方法绑定到对象b上面执行，是对象b拥有函数a的方法，由于函数也是对象（是Function的实例），所以使用call()方法也可以实现继承；
+	
+//	上面的例子实际上是把a看做一个函数,把b看做一个对象,使用call()方法将函数a绑定为b的方法来执行
+	
+	
+	
+	
+	
+	
+		document.write(add instanceof Function)//true
+		
+	//当把call方法绑定到一个函数后，call括号里面写第一个参数写另一个函数，第二个和后面更多参数就写的是传给绑定call方法的那个函数的参数，此时执行的时候会执行绑定call方法的那个函数里面的代码，如果是把一个函数绑定call方法，call括号里面第一个参数写一个对象，绑定call的函数里面的this指的就是call括号里面的第一个参数这个对象，实际上就是改变了作用域，将一个函数的作用域改变到另一个函数或对象上	
+		
+		
+		
+		
+	</script>
+</html>

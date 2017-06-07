@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html manifest="CACHEMANIFEST.appcache">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<body>
+		<h1>hello html5</h1>
+	</body>
+	<script type="text/javascript" src="index.js"></script>
+</html>
+
+缓存文件是一个.appcache后缀的文件，里面可以设置需要缓存的文件，例如这里在服务器打开的时候缓存了index.html style.css index.js 当服务器关闭的时候，页面还可以正常访问
+
+注意CACHEMANIFEST.appcache内容的书写格式
+
+
+CACHEMANIFEST 类型的manifest文件配置后，在页面打开后就会进行缓存
+
+可以通过浏览器IDE查看cache内容

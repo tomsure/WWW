@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var str='qiwdi 8wiednqinw8';
+		var reg=/8(.*)8/
+		document.write(reg.test(str)+'</br>')
+		//使用分组中的(.*)符号，放在两个字符之间，就可以匹配这两个字符中间的任意字符，
+//		例如这里:str中有88,reg中有88,在reg的88中添加(.*)就可以匹配到str中88之间的任意字符
+        document.write(str.match(reg))
+		
+		
+		
+		
+	</script>
+</html>

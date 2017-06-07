@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			-webkit-animation: dv 3s alternate;
+			position: absolute;
+			
+		}
+		@-webkit-keyframes dv{
+			0%{
+				left: 0;
+				top: 0;
+			}
+			10%{
+				left: 100px;
+				top: 0px;
+				background-color:blue;
+			}
+			60%{
+				left: 100px;
+				top: 100px;
+				
+			}
+			80%{
+				left: 200px;
+				top: 100px;
+				
+			}
+			100%{
+				left: 200px;
+				top: 200px;
+				
+			}
+			
+		
+		}
+		
+		/*设置百分比就可以设置动画在多个阶段的样式,每个阶段到下个阶段进行执行动画*/
+	</style>
+	<body>
+		<div id="">
+			
+		</div>
+	</body>
+</html>

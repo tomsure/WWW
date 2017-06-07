@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>
+				用户名: <input type="text"  name="user" id="user" value="" />
+				
+			</p>
+			<p>
+				密码: <input type="password"  name="pass" id="pass" value="" />
+			</p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../jQuery库/jquery-1.10.2/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+		var validator=$('form').validate({
+		//由于validate()方法返回的是一个validator对象，只有调用这个方法之后才会返回	validator对象
+		//这里可以声明一个变量作为validator对象
+			    rules:{
+			    	user:{
+			    	minlength:4,
+
+			    	},
+			    	pass:{
+			    		minlength:5
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"用户名不得少于4位",
+			    		maxlength:"输入不得超过8位"
+			    	},
+			    	pass:{
+			    		minlength:"密码不得少于5位"
+			    	}
+			    }
+			  
+       
+			
+		});
+
+        
+	  $('#user').rules('add',{required:true,maxlength:8})
+       
+       
+       $('form').on('submit',function(){
+       	alert(validator.element('#user'))
+       })
+           
+           $('input:blank').css("background","red");
+           $('input[type=text]:filled').css('background','blue')
+		})
+     
+	</script>
+</html>

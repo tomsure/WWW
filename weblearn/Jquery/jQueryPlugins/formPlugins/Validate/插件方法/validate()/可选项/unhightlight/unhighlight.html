@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.myerror{
+			color:red
+		}
+	</style>
+	<body>
+		<form action="123.html" method="post" id="form">
+			<fieldset>
+				<p id="info"></p>
+			<p>用户名: <input type="text"  name="user" id="user" value="" />*</p>      
+			<p>密码: <input type="text"  name="password" id="password" value="" />*</p>      
+			<p>确认密码: <input type="text"  name="confirm_password" id="confirm_password" value="" />*</p>      
+			
+			
+			<input type="submit" value="点击提交"/>
+			</fieldset>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	},
+			    	
+			    	confirm_password:{
+			    		required:true,
+			    		 equalTo:"#password"
+			    
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	},
+			    	
+			    
+                    confirm_password:{
+                    	required:"请再次输入密码",
+                    	equalTo:"两次密码不一致"
+                    }
+			    	
+			    },
+			   highlight:function(element,errorClass,validClass){
+			   	   $(element).addClass(errorClass).removeClass(validClass);
+			   	   	$(element).fadeOut().fadeIn()
+			   	   	//使input淡入淡出，呈现闪烁效果
+			   },
+			   //hightlight方法用于设置错误信息的样式，函数的三个个参数element指的是错误的表单元素的class，errorClass指的是错误元素的类名；validClass指验证通过后的元素的clss
+			   
+			   unhighlight:function(element,errorClass,validClass){
+			   	$(element).addClass(validClass).removeClass(errorClass)
+			   	$(element).fadein().fadeOut()
+			   }
+//			   highlight通常和unhighlight配合使用当发生错误后错误信息所属的那个变单元素样式改变,当错误消失后,样式可以自定义再设置
+		})
+		})
+//       hightlight和unhighlight针对的是input元元素,success针对的是错误信息
+	</script>
+</html>

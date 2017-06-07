@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv"></div>
+	</body>
+	<script type="text/javascript" src="../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+	   $(function(){
+	   	alert($('#dv').css('width'))
+	   	 alert($('#dv').css(['width','height','backgroundColor']))
+	   	 //获取多个CSS属性的话需要使用数组的方式，返回的是一个对象，然后再通过遍历的方式遍历出来，或者使用$ecah来遍历
+	   })
+	   
+//	   css()方法可以用来获取元素的样式属性,格式是将参数里面填写需要获取的属性名称
+	</script>
+</html>

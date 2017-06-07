@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		 var ss=4;    //函数外部有全局变量ss；
+	  function aa(){
+				
+				//外一层函数也没有函数ss
+				function bb(){
+					//最内层函数没有变量ss
+					alert(ss);
+					
+				}
+				bb()
+				
+				
+			}
+			aa()  
+			//这里函数内部没有变量ss，只有函数外部有全局变量ss  所以这里弹出4；
+	</script>
+	<body>
+	</body>
+</html>

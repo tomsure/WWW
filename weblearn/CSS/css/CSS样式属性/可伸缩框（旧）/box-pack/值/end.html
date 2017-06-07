@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*对于正常方向的框，最后子元素的右边缘被放在右侧（首个子元素前是所有剩余的空间）。
+对于相反方向的框，首个子元素的左边缘被放在左侧（最后子元素后是所有剩余的空间）。*/
+
+
+
+
+#dv{ width: 500px;height: 500px;background-color: #E9967A;display: -webkit-box;-webkit-box-pack: end;}
+#dv1{width: 100px;height: 100px;background-color: #8A2BE2;}
+#dv2{width: 100px;height: 100px;background-color: seagreen;}
+#dv3{width: 100px;height: 100px;background-color: #D2691E;}
+	</style>
+	<body>
+		<div id="dv">
+			<div id="dv1">
+				1
+			</div>
+			<div id="dv2">
+				2
+			</div>
+			<div id="dv3">
+				3
+			</div>
+		</div>
+	</body>
+</html>

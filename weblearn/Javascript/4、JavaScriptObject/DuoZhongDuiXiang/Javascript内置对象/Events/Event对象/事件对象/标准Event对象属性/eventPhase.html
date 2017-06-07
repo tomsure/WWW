@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<title>效果测试</title>
+
+		<style type="text/css">
+		#dv{
+			width: 300px;
+			height: 300px;
+			background-color: red;
+		}
+		#dv1{
+			height: 200px;
+			background-color: black;
+			width: 200px;
+		}
+		#dv2{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+		</style>
+	</head>
+
+	<body>
+    <div id="dv">
+    	<div id="dv1">
+    		<div id="dv2">
+    			
+    		</div>
+    	</div>
+    </div> 
+     </body>
+　　<script type="text/javascript">
+        var dv=document.getElementById("dv");
+              dv.addEventListener('click',function(ev){
+        	alert('dv')
+        	alert(ev.eventPhase)
+        	
+        },false)
+         dv1.addEventListener('click',function(ev){
+        	alert('dv1')
+        	alert(ev.eventPhase)
+        },false)
+          dv2.addEventListener('click',function(ev){
+        	alert('dv2')
+        	alert(ev.eventPhase)
+        },false)
+           dv.addEventListener('click',function(ev){
+        	alert('dv')
+        	alert(ev.eventPhase)
+        	
+        },true)
+         dv1.addEventListener('click',function(ev){
+        	alert('dv1')
+        	alert(ev.eventPhase)
+        },true)
+          dv2.addEventListener('click',function(ev){
+        	alert('dv2')
+        	
+        	alert(ev.eventPhase)
+        },true)
+       
+//   eventPhase属性用于检测当前触发的事件在事件流中处于哪个阶段,在DOM标准事件流中,事件流处于三个阶段:事件捕获,处于目标阶段(也就是触发事件的这个元素触发的事件),事件冒泡,如果层层包裹的元素都绑定了事件,且都设置了事件捕获和事件冒泡的事件,这样可以看出事件触发的一个过程,这个例子就可以看出  
+
+//这个属性又是三个值:
+// 1:表示事件捕获阶段;
+// 2:表示事件发生阶段(有元素直接触发的);
+// 3:事件冒泡阶段
+        
+    </script>
+
+</html>

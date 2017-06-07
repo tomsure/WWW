@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		div{
+			width:100px;
+			height: 100px;
+			
+			
+		}
+		#dv1{
+			background-color: red;
+			position: absolute;
+			margin:10px;
+		}
+		#dv2{
+			background-color: green;
+			position: fixed;
+			margin: 20px;
+		}
+		#dv3{
+			background-color: blue;
+			z-index: 30px;
+			
+		}
+		/*这里设置了dv3的z-index的值最大,但是它没有设置定位,所以他的设置无效，因为这个元素值对绝对定位、相对定位和fiexd元素起作用*/
+	</style>
+	<body>
+		<div id="dv1"></div>
+		<div id="dv2"></div>
+		<div id="dv3"></div>
+	</body>
+</html>

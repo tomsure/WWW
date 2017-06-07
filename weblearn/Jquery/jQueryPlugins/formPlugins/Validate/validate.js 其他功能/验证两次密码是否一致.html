@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post" id="form">
+			<p id="info"></p>
+			<p>用户名: <input type="text"  name="user" id="user" value="" />*</p>
+			<p>密码: <input type="password"  name="password" id="password" value="" />*</p>
+			<p>确认密码: <input type="password" name="confirm_password" id="confirm-password"  value=""  />*</p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	},
+			    	password:{
+			    		required:true,
+			    		email:true
+			    	},
+			    	confirm_password:{
+			    		required:true
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	},
+			    	password:{
+			    		required:"密码不得为空",
+			    		email:"邮箱格式不正确"
+			    	},
+			    	confirm_password:"请再次输入密码"
+			    },
+			    
+			   
+		})
+		})
+//group用户吧多个表单元素的错误信息放到一个位置依次显示
+	</script>
+</html>

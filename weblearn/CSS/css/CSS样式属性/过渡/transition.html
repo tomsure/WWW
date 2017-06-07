@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			-webkit-transition:all,2s,ease,3s
+			/*同时设置四个属性*/;
+			/*由于transition有兼容性,所以需要加CSS前缀*/
+			
+		}
+		#dv:hover{
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+		}
+	</style>
+	<style type="text/css">
+		/*设置过四个渡属性的缩写，可以同时设置四个属性*/
+		
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button id="btn">点击测试</button>
+		
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		 var btn=document.getElementById("btn")
+		 btn.onclick=function(){
+		 	dv.style.width='200px'
+		 	dv.style.height='200px'
+		 	dv.style.backgroundColor='blue'
+		 }
+	</script>
+</html>

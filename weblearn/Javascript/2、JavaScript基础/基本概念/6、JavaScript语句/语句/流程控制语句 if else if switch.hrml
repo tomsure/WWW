@@ -1,0 +1,29 @@
+<html>
+	<meta name="" content="" charset="utf-8"/>
+	<head>
+		<title></title>
+	</head>
+	
+<script type="text/javascript">
+	var a="晴天";
+	if(a=="晴天"){alert("户外运动")}
+	else if(a=="下雨"){alert("不出门")}
+	else {alert("约会")}
+	var b="晴天";
+	switch(b){ 
+case "雨天": document.write("跑步");break;
+case "雾天": document.write("打雪仗");break;
+    case "昨天" :document.write("钓鱼");break;
+    case "晴天" :alert("今天");break;
+    default :document.write("坐禅");break;}
+	
+	
+	
+</script>
+	
+	
+
+	<body>
+	
+			</body>
+</html>

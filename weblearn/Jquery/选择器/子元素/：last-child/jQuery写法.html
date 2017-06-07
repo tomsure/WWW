@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	<script>
+	//这个选择器选择的是元素的最后一个子元素，冒号前面匹配的是指定的最后一个子元素
+		$(function(){
+			$("div:last-child").css("background","red")
+			//这里选择了最后一个div元素，这里有三个div元素，他们的父级元素的最后一个子元素是#div3,所以#div3里面的子元素背景颜色全部变红
+			
+			
+			$("a:last-child").css("color","red");
+			//这里选择了 一个a标签，而且a标签是他父级元素的最后一个子元素，所以只有内容全是3的a标签变成了红色
+			
+			
+		})
+	</script>
+	<body>
+		<div id="dv1">
+			<p>111111</p>
+			<p>2222222222</p>
+			<a href="">333333333</a>
+		</div>
+		<div id="dv2">
+			<p>44444444</p>
+			<p>5555555555</p>
+			<p>666666666</p>
+			
+		</div>
+		<div id="dv3">
+			<p>777777</p>
+			<p>888888888</p>
+			<span id="">
+				999999999999
+			</span>
+		</div>
+	</body>
+</html>

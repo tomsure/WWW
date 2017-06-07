@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form id="iform" action="" method="post">
+			
+			用户名：<input type="text" name="username" value=""/></br>
+			年龄：<input type="text" name="age" value=""/></br>
+			工作：<input type="text" name="job" value=""/></br>
+			e-mail:<input type="text" name="e-mail" value=""/></br>
+			<input type="button" name="" id="" value="ajax发送" onclick="fmSend()" />
+		</form>
+		<div id="dv">
+			<!--存放服务器读取到的表单数据-->
+		</div>
+	</body>
+	<script type="text/javascript">
+	
+		
+		function fmSend(){
+			var fm=document.getElementById("iform");//获取表单DOM对象
+			var fd=new FormData(fm);//创建FormDate对象,也可以无参数空数据
+			//或者var fd=new FormData()，这样通过append()追加数据到的时候，发送的数据就全部是通过append()添加的
+			var xhr=new XMLHttpRequest()
+			  xhr.open('POST','../formdata.php',true)
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4){
+					if(xhr.status==200){
+					document.getElementById("dv").innerHTML=xhr.responseText
+					}
+				}
+					
+			}
+			fd.append('aa','123')//页面显示php返回的一个php格式的数据；
+			//这说明FormDate对象可以通过append()方法追加(生成)表单数据
+//			 FormData还有一个方法就是可以通过append()方法追加(生成)表单数据
+			xhr.send(fd)
+		}
+		    //FormDate对象还可以读取文件，此特性可以用来做文件上传
+	</script>
+</html>

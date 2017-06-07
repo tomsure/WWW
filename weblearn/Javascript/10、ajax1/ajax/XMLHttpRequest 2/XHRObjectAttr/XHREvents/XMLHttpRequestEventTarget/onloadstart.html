@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src=""/>
+		<button id="btn">点击加载</button>
+	</body>
+	<script type="text/javascript">
+		//当请求成功完成时触发，此时xhr.readystate=4
+	var btn=document.getElementById("btn");
+	var img=document.getElementsByTagName('img')[0]    	
+		var xhr=new XMLHttpRequest();
+		
+		
+		xhr.onload=function(){
+			img.src=''
+			alert('加载完成！')
+		}//当加载完成的时候
+		xhr.open('GET','timeout.php',true);
+		
+	btn.onclick=function(){	
+		xhr.send();
+	}
+		xhr.onloadstart=function(){
+			//alert(xhr.readyState+','+xhr.status);
+		
+		img.src='http://tuyiyi.qiniudn.com/images/2013/1-130G00P4440-L.gif'
+		}//当send()方法执行后开始加载的时候
+		
+//		xhr.onload	事件表示请求完成的时候触发的事件，此方法需要放在open()之前执行
+	</script>
+</html>

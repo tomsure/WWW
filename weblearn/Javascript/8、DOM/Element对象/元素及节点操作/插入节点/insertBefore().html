@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//insertBefore() 方法可在已有的子节点前插入一个新的子节点。
+		window.onload=function(){
+			var  s=document.getElementById("dv");//获取父节点
+			alert(s.childNodes[1].id);//这里弹出添加新节点前的第一个元素节点dv2
+			
+			var d=document.getElementById("dv2");
+			 var e=document.createElement("div")//创建节点
+			 e.setAttribute("id","dv1");//设置节点的id属性
+			 
+			 s.insertBefore(e,d);//将新创建的s的子节点dv1添加在dv2的前面，注意格式，括号里面第一个写新的节点，逗号后面写原来的子节点
+			 
+			 alert(s.childNodes[1].id)//这里再弹出s的第一个元素子节点就变成了dv1
+			 
+		}
+	</script>
+	<body>
+	<div id="dv">
+		<div id="dv2">
+		
+			
+		</div>
+	</div>
+		
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		function aa(w,d){ // 函数aa()的参数
+			w.onload=function(){//相当于window.onload=....
+		    d.write('hhahah')//相当于document.write('...')
+		     }
+			}
+		
+		aa(window,document)//aa执行的时候传递两个对象window和document
+		
+//  函数执行的时候传参,可以传递对象作为参数,然后可以在函数内部执行		
+		
+		
+		
+
+   
+        function Clobber(param) 
+{  
+   param = new Object();
+    param.message = "This will not work";
+    
+}
+var obj = new Object();
+obj.message = "This is the original";
+
+Clobber(obj);
+alert(obj.message); 
+
+//		如果被传递参数的函数内部创建了一个对象，且有和这个函数有相同的属性（message），函数执行后，输出函数外对象的属性（obj.message），这个属性值是自己本身的属性值
+
+	</script>
+</html>

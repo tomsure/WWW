@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="username" id="username" value="" />
+		<button id="btn">检测</button>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+//		callback回调函数是load()方法的第三个参数,这个回调函数有三个参数:
+		//
+		$('#btn').click(function(){
+			var send={'username':$('#username').val()}
+			//data参数必须是json格式
+			$('#dv').load('index.php',send,function(data){
+				alert(data)
+			})
+		})
+	//callback这个参数是一个函数，指的是请求出发送成功之后执行的函数，这个函数有三个参数，第一个参数data就是php中响应的字符串，相当于原生ajax中的responseText，第二个参数是状态码文本，第三个参数是xhr对象，这里用不上后两个参数	
+		
+	</script>
+</html>

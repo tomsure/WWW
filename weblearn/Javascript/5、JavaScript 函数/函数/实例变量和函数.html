@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//在面向对象编程中除了一些库函数我们还是希望在对象定义的时候同时定义一些属性和方法，实例化后可以访问，js也能做到这样
+          function Box(){
+                this.a=[]; //实例变量
+                this.fn=function(){ //实例方法
+                    
+                }
+            }
+            
+            console.log(typeof Box.a); //undefined
+            console.log(typeof Box.fn); //undefined
+            
+            var box=new Box();
+            console.log(typeof box.a); //object
+            console.log(typeof box.fn); //function
+           
+</script>
+
+	<body>
+	</body>
+</html>

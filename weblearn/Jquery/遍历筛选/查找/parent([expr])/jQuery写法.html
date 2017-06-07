@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div,ul,li{border:1px solid red ;}
+        div{ height:100px ;}
+        ul{ height:60px ;display: block;}
+        li{height:30px ;display: block;} 
+ 	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//返回被选元素的直接父级元素
+		$(function(){
+			$("li").parent().css("background","#006400")
+			//li的直接父级元素是ul
+		})
+	</script>
+	<body>
+		<div>
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+		
+	</body>
+</html>

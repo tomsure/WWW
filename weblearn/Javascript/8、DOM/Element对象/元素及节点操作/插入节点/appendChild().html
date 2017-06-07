@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//在指定节点的最后一个子节点列表之后添加一个新的子节点。
+		window.onload=function(){
+			var d=document.getElementById("dv");//获取父节点dv
+			var e=document.createElement("div");//创建子节点
+			e.setAttribute("id","dv2");//设置属性
+			d.appendChild(e);//追加新创建的子节点
+			alert(d.lastElementChild.id)//弹出dv的最后一个元素节点id
+			alert(d.firstElementChild.id)//弹出dv的第一个元素节点id
+			var r=document.createElement("p");//创建新节点
+			var f=document.createTextNode("哈哈");//创建新节点
+			e.appendChild(r);//追加节点
+			r.appendChild(f);//追加节点
+			
+		}
+		
+	</script>
+	<body>
+		<div id="dv">
+			<div id="dv1">
+				
+			</div>
+		</div>
+	</body>
+</html>

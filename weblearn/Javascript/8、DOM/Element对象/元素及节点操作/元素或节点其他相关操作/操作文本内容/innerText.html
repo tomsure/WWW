@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			中国
+			<strong>中国</strong>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		  alert(dv.innerText)
+		  document.write(dv.innerText)
+		  //打印出的中国没有加粗，说明输出的文本过滤掉了strong标签
+		  
+//		innerText属性用于输出元素的文本内容并过滤里面的html标签,
+//		也可以设置元素的文本内容,如果是设置文本内容的话,设置的html格式的文本则不会转义成html标签
+      
+          dv.innerText='<b>123</b>'
+		
+		
+//         火狐不支持这个属性,火狐使用textContent属性		
+	</script>
+</html>

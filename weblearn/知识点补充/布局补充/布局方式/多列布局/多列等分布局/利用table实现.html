@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.parent{
+	margin-left: -20px;
+		 display: table;
+		 table-layout: fixed;	
+		 width: 100%;
+		}
+		.column{
+			
+			display: table-cell;
+			height: 100px;
+			padding-left: 20px;
+			
+		}
+		#dv1{background-color: red;}
+		#dv2{background-color: rosybrown;}
+		#dv3{background-color: seagreen;}
+		#dv4{background-color: sienna;}
+		
+		
+	</style>
+	<body>
+		<div class="parent parent-fix">
+	<div class="column" id="dv1">1</div>
+	<div class="column"  id="dv2">2</div>
+	<div class="column" id="dv3">3</div>
+	<div class="column" id="dv4">4</div>
+       </div>
+
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	 div {  width: 100px;height: 100px;}
+	.blue { background:blue ;}
+	.red {background: red;}
+	</style>
+	<body>
+		<div id="dv" class="blue">
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		 
+		   dv.onclick=function(){
+		   		alert(1)
+		   	toRed.call(this);
+		   
+		   }
+		//为了解决再添加一个函数 后前面的函数被覆盖的问题可以将两个相同的事件函数合并为一个，但是此时，涵数内部如果要执行事件切换器的话，必须给时间切换器函数toRed名添加括号表示执行，但是此时外部事件 切换器的事件函数中的this就指向的是window，但是又出现新的问题，只能执行一次，只有第一次点击的时候才会执行alert()。 
+		  
+		  
+		  
+		  function toRed(){//切换器函数
+		  
+		   	this.className='red';
+		 	this.onclick=toBlue;
+		   }
+		   
+		   function toBlue(){//切换器函数
+		   	
+		   	this.className='blue';
+		   	this.onclick=toRed;
+		   }
+	//在事件切换器事件处理函数前面添加一个同样的onclick事件函数，执行的时候，发现添加在 前面的事件函数不会执行，因为他被后面的事件函数覆盖了； 
+		 
+//		解决办法:
+//		  使用前面DOM0级事件处理函数知识点中解决覆盖问题的方法解决,但是比较麻烦
+		
+	</script>
+</html>
+
+</html>

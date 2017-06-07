@@ -1,0 +1,15 @@
+CACHE MANIFEST
+
+CACHE:
+说明：（CACHEMANIFEST 类型的manifest文件配置后，在页面打开后就会进行缓存）
+index.html
+style.css
+index.js
+
+NETWORK:
+NETWORK下面设置的内容是表示任何时候都不会缓存的内容，如果设置为*则表示所有的都不缓存
+
+FALLBACK:
+fallback.html
+FALLBACK表示打不开服务器页面的时候显示的本地页面
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px ;height:100px ;background-color:red ;}
+	</style>
+
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button id="btn1">点击按豪秒速速度测试</button>
+		<button id="btn2">点击按slow速度测试</button>
+		<button id="btn3">点击按normal速度测试</button>
+		<button id="btn4">点击按fast速度测试</button>
+	</body>
+		<script type="text/javascript" src="../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	$(function(){
+			$('#btn1').click(function(){
+				$('div').animate({
+					width:'300px',
+					height:'300px',
+					
+				},2000)
+				
+			}) //按豪秒数设置速度
+		/******************/
+		$('#btn2').click(function(){
+				$('div').animate({
+					width:'300px',
+					height:'300px',
+					
+				},'slow')
+				
+			}) // 按固定值slow设置速度
+			/*************************/
+			$('#btn3').click(function(){
+				$('div').animate({
+					width:'300px',
+					height:'300px',
+					
+				},'nomal')
+				
+			})//按固定值nomal设置速度
+		/***************************/
+			$('#btn4').click(function(){
+				$('div').animate({
+					width:'300px',
+					height:'300px',
+					
+				},'fast')
+				
+			})//按固定值fast设置速度
+			
+	})
+// speed用于设置运动的速度，有三个固定值slow、fase、nomal，还有一个就是时间，是一个毫秒数
+	</script>
+</html>

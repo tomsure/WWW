@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<style type="text/css">
+		#dv{border: 3px solid red;}
+		#dv1{border: 3px solid green;margin:20px ;}
+		#dv2{border: 3px solid blue;}
+	</style>
+	<body>
+		<div id="dv"><form action="">
+			<div class="form-group">
+				电邮箱地址 <input type="text" class="form-control"/>
+			</div>
+			<div class="form-group">
+				密码 <input type="" name="" id="" value="" class="form-control"/>
+			</div>
+		</form></div>
+<!--------------------内联表单----------------------->
+<!--可以给form标签加上一个form-inline类名，使表单变成内联元素，里面的内容会变成一排显示，且当需要在移动端显示的时候，屏幕宽度小于768px的时候会自动变成纵排显示-->
+		<div id="dv1"><form action="" class="form-inline">
+			<div class="form-group">
+				电邮箱地址 <input type="text" class="form-control"/>
+			</div>
+			<div class="form-group">
+				密码 <input type="text" name="" id="" value="" class="form-control"/>
+			</div>
+		</form></div>
+		<br/>
+		<br />
+		<!--默认情况下，Bootstrap 中的 input、select 和 textarea 有 100% 宽度。在使用内联表单时，您需要在表单控件上设置一个宽度。-->
+		<div id="dv2">
+			<form action="" class="form-inline" >
+			<div class="form-group">
+				电邮箱地址 <input type="text" class="form-control" style="width:200px ;"/>
+			</div>
+			<div class="form-group">
+				密码 <input type="text" name="" id="" value="" class="form-control"/>
+				<!--从这里可以看出当内联控件input没有设置宽度的时候如果横排显示一行，则宽度是固定的不是完全占满页面，但是当页面小于768的时候，没设置宽度的元素就沾满了页面宽度，影响页面美观-->
+			</div>
+		</form>
+		</div>
+	</body>
+</html>

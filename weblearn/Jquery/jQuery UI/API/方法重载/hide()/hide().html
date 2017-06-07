@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		.dv { width: 100px;
+		      height: 100px;
+		      background-color: red;
+		}
+	</style>
+	
+	<body>
+		<button>点击消失</button>
+		<div class="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('button').click(function(){
+			$('.dv').hide('drop',{direction:'right'},1000,'slow')
+			
+//		hide()方法用来自定义 不同效果来隐藏元素	
+    
+//    hide()参数:
+//    1,effect:一个字符串，指示要使用哪一种特效。
+//    2,特效具体的设置和 easing(easeing函数)。
+//    3,duration:一个字符串或一个数字，指定动画将运行多久;
+//    4,complete:一旦动画完成时要调用的函数
+			
+			
+		})
+	</script>
+</html>

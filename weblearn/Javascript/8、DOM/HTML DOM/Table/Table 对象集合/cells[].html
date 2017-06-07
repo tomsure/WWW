@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="1" id="tb">
+			
+			<tbody>
+				<tr><td>你好</td></tr>
+			<tr><td>Data</td></tr>
+			</tbody>
+				<tbody>
+				<tr><th>Header</th></tr>
+			<tr><td>Data</td></tr>
+			</tbody>
+		</table>
+	</body>
+	<script type="text/javascript">
+		var tb=document.getElementById("tb")
+		alert(tb.rows[1].cells[0].innerHTML)
+	  
+//	     cell返回table表格中某一行中的单元格的集合
+	  
+	</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*height() 方法设置或返回被选元素的高度。
+                            当该方法用于返回高度时， 则返回第一个匹配元素的高度。
+                             当该方法用于设置高度时，则设置所有匹配元素的高度。
+                            下面的图像所示，该方法不包含 padding、border 或 margin。*/
+                           $(function(){
+                           	$("div").height('50px'); //设置元素高度，
+                           	$("div").width(100); //设置元素宽度
+                           	$("div").css("background","red") //设置元素背景
+                           	
+                           	$("#btn1").click(function(){
+                           		alert($("div").height())  //返回元素高度 
+                           	})  
+                           	
+                           })
+                           
+                           
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		
+		<input type="button" name="btn1" id="btn1" value="点击测试" />
+	</body>
+</html>

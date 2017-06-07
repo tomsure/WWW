@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		.符号表示匹配除了换行符以外的任意字符，一个点只匹配一个字符
+
+   
+   
+   var  str="qaxfm**76<0";
+       var reg=/q./;
+          document.write(str.match(reg)+'</br>') //qa
+        
+        var str1='go!gle';
+        var reg1=/go.gle/;
+           document.write(reg1.test(str1)+'</br>') //true,因为str1=go！gle中！不是换行符，'.'符号与之匹配，其他的字符都是匹配的，所以整体都匹配，所以返回true。
+           
+           var str2='google';
+           var reg2=/g..le/;
+           document.write(reg2.test(str2))//false,正则中的字符串与str中的字符串进行匹配，这里数量都对不上，所以一一对应的时候就不匹配了，所以返回false
+           
+           
+           
+        
+        
+	</script>
+</html>

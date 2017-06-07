@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var s=document.getElementById("dv").childNodes[1]
+			var d=document.getElementById("dv1");
+			alert(s.isSameNode(d))//弹出true，说明这两个节点是同一个节点
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<div id="dv1">
+				
+			</div>
+			<div id="dv2">
+				
+			</div>
+		</div>
+	</body>
+</html>

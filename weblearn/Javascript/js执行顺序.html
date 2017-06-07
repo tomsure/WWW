@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			 //js的执行顺序是从上向下执行的；
+	  var a=1;
+	  function ss(){
+	  	var a=2;
+	  	alert(2)
+	  	function dd(){
+	  		var a=3;
+	  		alert(a)
+	  	}
+	       dd() 	
+	  }
+	  ss()  //这个函数执行后会先弹出2，再弹出3，因为js的执行顺序是从上往下执行的；
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

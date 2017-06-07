@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	/*@keyframes规则内指定一个CSS样式和动画将逐步从目前的样式更改为新的样式。
+	
+	 * */
+	#dv{
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	animation: bian 1s;/*设置动画属性animation,这里是简写,也可以分开写*/
+	-moz-animation: bian 1s;
+	-webkit-animation: bian 1s;
+	
+	}	
+	/*以下是指定动画规则，及浏览器兼容性配置*/
+	@-moz-keyframes bian{
+		from{background-color: red;}
+		to{background-color: green;}
+	}
+	@-ms-keyframes bian{
+		from{background-color: red;}
+		to{background-color: green;}
+	}
+	
+	@keyframes bian{
+		from{background-color: red;}
+		to{background-color: green;}
+	}	
+		
+	@-ms-keyframes bian{
+		from{background-color: red;}
+		to{background-color: green;}
+	}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+</html>

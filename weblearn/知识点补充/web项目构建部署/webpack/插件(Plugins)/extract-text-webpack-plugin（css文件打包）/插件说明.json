@@ -1,0 +1,13 @@
+
+
+1，这个插件可以在使用CSS模块的时候，使用webpack打包后生成独立的CSS文件；
+
+2，安装插件：
+   在项目目录下输入命令：npm install --save-dev extract-text-webpack-plugin
+   
+   
+   这个插件可以将加载的多个css文件打包成一个CSS文件，在html页面只需会用link引入打包后的一个
+CSS文件即可      
+
+   步骤：
+    

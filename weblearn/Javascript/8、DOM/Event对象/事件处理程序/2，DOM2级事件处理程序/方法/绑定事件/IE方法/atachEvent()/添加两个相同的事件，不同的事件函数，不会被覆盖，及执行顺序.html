@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		btn.attachEvent('onclick',function(){alert(1)});
+		btn.attachEvent('onclick',function(){alert(2)})
+		//IE5/7浏览器使用attachEvent()方法的时候事件执行的顺序与W3C相反。W3C标准绑定事件是先绑定先执行，后绑定后执行而IE这个方法是先绑定后执行，后绑定先执行；
+	//IE浏览器attachEvent()绑定相同事件事件不同函数不会被覆盖
+	</script>
+</html>

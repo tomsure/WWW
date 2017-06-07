@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width:100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('div').click(function(){
+			$(this).animate({width:'300px'},2000)
+			$(this).queue('fx',function(){
+				$(this).css('backgroundColor','green')
+				$(this).dequeue()//在queue()方法的函数内部清除队列
+			})
+			$(this).animate({height:'300px'},2000)
+		})
+		
+//		如果在一段动画之间使用queue()插入某一段函数来执行,在queue()方法的函数内部,需要执行dequeue()来执行出队操作,因为使用queue()方法执行插入一段队列后,插入的函数就是队列数组中的第一个数组元素,而队列的执行是按顺序从第一个到最后一个按顺序执行的,所以,需要把第一个数组元素,也就是第一个队列取出来执行,执行之后队列数组中下一个动画才会变成第一个队列数组元素,这样后面的动画才会执行
+
+//  queue()方法的第一个参数是一个队列名称,这个参数默认是'fx',也可以自定义队列名称，使用字符串自定义，如果不写参数，则就会是默认的fx
+
+
+ 
+	</script>
+</html>

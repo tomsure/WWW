@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModdal">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal">
+							<span >&times;</span>
+						</button>
+						
+					</div>
+					<div class="modal-body">
+						主体
+					</div>
+					<div class="modal-footer">
+						<button>登陆</button>
+						<button>注册</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button  class="btn btn-default" data-toggle="modal" data-target="#myModal">点击测试</button>
+	</body>
+	
+	
+	
+	
+	<!--创建模态框步骤：
+		第一步：创建div 类名modal，添加id为myModal用来调用js插件,为了增加可访问性，需要添加属性：role="dialog"，aria-labelledby="..."（引号为模态框  添加描述性信息。）和 tabindex="-1"（取消焦点）
+		第二部，在modal下面创建div，类名modal-dialog;添加属性： aria-hidden="true"
+		第三部，在modal-dialog下面创建div,类名modal-content;
+		第四部，在modal-content下面创建三个同级div类名分别是modal-header（头部）,modal-body（主体）,modal-footer（脚部）
+		第五步，在modal-header里面创建button按钮，类名close 添加属性:data-dismiss="modal"
+		第六步，在这个button按钮中添加关闭图标<span>&times;</span>
+		
+		第七步：点击触发模态框显示：<button class="btn btn-primary "
+                                   data-toggle="modal" data-target="#myModal">
+                                                              点击弹窗
+                                   </button>
+		        注意，实际开发中可能不是点击按钮触发模态框显示，这里只是示例，实际开发中将data-toggle="modal" data-target="#myModal"两个属性添加到触发模态框显示的元素中
+		
+		
+		
+		
+	-->
+	<script type="text/javascript" src="../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+		
+	</script>
+</html>

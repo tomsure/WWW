@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{width:100px ;height:100px ;background-color:red ;}
+		#dv1{width:100px ;height:100px ;background-color:blue ;}
+	</style>
+
+	<body>
+		<div id="dv">
+			匀速运动linear
+		</div>
+		<div id="dv1">
+			慢快慢swing
+		</div>
+		<button id="btn1">点击测试</button>
+		
+		
+	</body>
+		<script type="text/javascript" src="../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	$(function(){
+			$('#btn1').click(function(){
+				$('#dv').animate({
+					width:'300px',
+					height:'300px',
+					
+				},2000,'linear')
+				
+			}) 
+		/******************/
+		$('#btn1').click(function(){
+				$('#dv1').animate({
+					width:'300px',
+					height:'300px',
+					
+				},'slow','swing')
+				
+			})
+			})
+     //第三个参数是用来设置运动的形式，有两种形式，swing（慢快慢）和linear（匀速）
+	</script>
+</html>

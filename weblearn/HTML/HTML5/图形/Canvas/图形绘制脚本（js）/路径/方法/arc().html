@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	
+		canvas{
+			border: 1px solid red;
+		}
+	</style>
+	<script type="text/javascript">
+	//arc()方法用来创建圆形后者圆弧，起始点是圆的三点钟位置，起始点弧度的弧度度是0，结束弧度2*Math.PI。
+	
+	  
+	
+	//arc()有六个参数需要填写：
+	/*参数	描述
+       x	圆的中心的 x 坐标。
+       y	圆的中心的 y 坐标。
+       r	圆的半径。
+       sAngle	起始角，以弧度计（弧的圆形的三点钟位置是 0 度）。
+       eAngle	结束角，以弧度计。
+       counterclockwise	可选。规定应该逆时针还是顺时针绘图。False = 顺时针，true = 逆时针。*/
+
+	window.onload=function(){
+		
+/********************************绘制空心圆***************************/		
+	  var  ss=document.getElementById("myCanvas");
+	        dd=ss.getContext("2d");
+	        dd.beginPath();
+	        dd.strokeStyle="#008000"  //定义空心元素(“未填充”）的边框的颜色
+	        
+	        dd.arc(100,100,100,0,2*Math.PI,true); 
+	        //圆心坐标是（100,100），半径是100；
+	        //起始弧度是0度，结束弧度是2*Math.PI,Math.PI是弧度单位。
+	        //圆这个是以逆时针方向绘制的；
+	        dd.stroke() //结束绘制未填充元素（空心）
+	        
+/********************************绘制实心圆**************************************/		
+ var  s=document.getElementById("Canvas");
+	        d=s.getContext("2d");
+	        d.beginPath();
+	        d.fillStyle="#8B008B"  //定义实心元素(“已填充”）的颜色
+	        
+	        d.arc(100,100,100,0,2*Math.PI,true); 
+	        //圆心坐标是（100,100），半径是100；
+	        //起始弧度是0度，结束弧度是2*Math.PI,Math.PI是弧度单位。
+	        //圆这个是以逆时针方向绘制的；
+	        d.fill() //结束绘制未填充元素（实心）	
+		
+		
+		
+	}
+		
+		
+	</script>
+	<body>
+		<canvas id="myCanvas" width="200" height="200"></canvas>
+		<canvas id="Canvas" width="200" height="200"></canvas>
+	</body>
+</html>

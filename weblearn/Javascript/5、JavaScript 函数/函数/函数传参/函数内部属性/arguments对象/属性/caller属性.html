@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		作为arguments的属性,caller的值始终都是undefined
+
+
+      function demo(){
+      	
+      	document.write(arguments.caller)
+      }
+		demo()
+		
+	//这个caller属性是为了分清arguments.caller和函数的caller属性，函数的caller属性指的是调用当前函数的函数的引用	
+		
+		
+	</script>
+</html>

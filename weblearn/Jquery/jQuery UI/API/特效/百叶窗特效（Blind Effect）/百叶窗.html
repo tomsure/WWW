@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		div {
+			width: 200px;
+			height: 100px;
+			background-color: red;
+			margin-top: 20px;
+		}
+	</style>
+	<body>
+		<button id="btn">默认</button>
+		<div id="dv">
+			
+		</div>
+		<button id="aa">up</button>
+		<div id="a">
+			up
+		</div>
+		<button id="bb">down</button>
+		<div id="b">
+			down
+		</div>
+		<button id="cc">left</button>
+		<div id="c">
+			left
+		</div>
+		<button id="dd">right</button>
+		<div id="d">
+		right	
+		</div>
+		<button id="ee">vertical</button>
+		<div id="e">
+			vertical
+		</div>
+		<button id="ff">horizontal</button>
+		<div id="f">
+			horizontal
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	     $('#btn').click('blind',function(){
+	     	$('#dv').effect('blind')  //默认direction值是up
+	     })
+		$('#aa').click(function(){
+			$('#a').effect('blind',{direction:'up'})  //点击向上收起
+		})
+		$('#bb').click(function(){
+			$("#b").effect('blind',{direction:'down'})//点击向下收起
+		})
+		$('#cc').click(function(){
+			$('#c').effect('blind',{direction:'left'})//点击向左收起
+		})
+		$('#dd').click(function(){
+			$('#d').effect('blind',{direction:'right'})//点击向右收起
+		})
+		$('#ee').click(function(){
+			$('#e').effect('blind',{direction:'vertical'})//点击垂直切换
+		})
+		$('#ff').click(function(){
+			$('#f').effect('blind',{direction:'horizontal'})//点击水平切换
+		})
+		
+		//百叶窗效果就是给元素添加一个effect('blind'{direction:})方法，也可以使用显示、隐藏、切换方法
+		/*
+		 参数：direction，，
+		 描述：隐藏元素时拉动百叶窗的方向，显示元素时拉动百叶窗的方向。
+		 值：up（向上隐藏-默认）、down（向下隐藏）、left（向左边隐藏）、right（向右边隐藏）、vertical（左右同时垂直隐藏）、horizontal（两边同时水平隐藏）。
+		 dieection的值是切换的方向，设置的方向是点击隐藏时候的方向，再次点击则以相反方向显示
+		 * 
+		 * */
+	</script>
+</html>

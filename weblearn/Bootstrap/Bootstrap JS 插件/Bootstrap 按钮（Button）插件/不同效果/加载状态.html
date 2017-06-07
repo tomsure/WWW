@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<style type="text/css">
+		.a{margin: 100px;}
+		
+	</style>
+	<body>
+	<br />
+	<br />
+	<br />
+	<button class="btn btn-default" data-loading-text='loading' autocomplete="off">开始上传 </button>
+	<!--给button按钮添加data-"..."-text="loading"属性和autocomplete属性
+		data-"..."-text="loadiing"是调用js加载状态插件，data-data-"..."-text="loading"中间的省略号可以写自定义文本，“loading“文本也可以自定义，加载的时候会加载自定义的文本，autocomplete="off"是为了兼容火狐浏览器，必须写这个属性。
+	-->
+	</body>
+	<script type="text/javascript" src="../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+		
+	</script>
+	
+	<script type="text/javascript">
+		$(function(){
+		$('button').on("click",function(){  //绑定点击事件事件
+			var btn=$(this).button('loading');  //当点击的时候按钮显示加载状态
+			setTimeout(function(){     // 添加定时器,一秒钟后执行按钮回复初始状态
+				btn.button("reset")
+			},1000)
+		})
+		
+		})
+			
+//	加载状态按钮创建步骤：
+//  1,给button按钮添加data-'...'-text="..."属性,中间省略号自定义内容和autocomplete="off"属性（解决兼容性问题）;
+//  2,js中给button绑定点击事件;
+//  3,在绑定的事件执行的函数中给按钮添加方法:button('loading');
+//  4,设置定时器,绑定定时器执行函数内容为给按钮添加button("reset")方法,意思是,时间到之后按钮重置
+		
+	</script>
+		
+		
+		
+	
+	
+</html>

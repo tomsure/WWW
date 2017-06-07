@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//previousElementSibling指的是当前节点前面相邻的元素节点，不包含空文本;
+		window.onload=function(){
+			var w=document.getElementById("dv2");
+			alert(w.previousElementSibling.id)//弹出div1，因为dv2的前面一个相邻元素节点是dv1
+			alert(w.nextElementSibling.id)//弹出dv3
+		}
+	</script>
+	<body>
+		<div id="dv1">
+			
+		</div>
+		<div id="dv2">
+			
+		</div>
+		<div id="dv3">
+			
+		</div>
+	</body>
+</html>

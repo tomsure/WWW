@@ -1,0 +1,1 @@
+注释：step、max 以及 min 属性适用于以下 <input> 类型：number, range, date, datetime, datetime-local, month, time 以及 week。

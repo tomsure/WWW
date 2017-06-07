@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">中华人民共和国</div>
+		<button id="btn">点击插入</button>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		 alert(dv.childNodes[0].nodeValue)
+		var btn=document.getElementById("btn");
+		btn.onclick=function(){
+			dv.childNodes[0].insertData(2,'你好')
+		}
+		
+//		insertData()方法用于向子节点插入内容，两个参数，第一个表示插入字符的位置，表示从第几个下标插入，第二个参数是插入的 字符
+		
+	</script>
+</html>

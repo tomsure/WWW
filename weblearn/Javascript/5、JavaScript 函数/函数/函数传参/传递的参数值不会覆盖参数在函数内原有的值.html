@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+
+function Clobber(param) 
+{  alert(param.message)//这里因为 参数param没有定义message属性，所以引用obj.message的值，如果在他前面定义了message则会引用param.message的值
+   param = new Object();
+    param.message = "This will not work";
+alert(param.message)    //这里在函数内部修改了属性，所以会改变
+}
+var obj = new Object();
+obj.message = "This is the original";
+
+Clobber(obj);
+alert(obj.message); 	
+
+	</script>
+	
+	
+	<!--对象作为参数的时候，这个对象的属性和被传递的函数参数的属性共同引用同一个对象，也就是被传递参数的函数这个对象，此时他们的属性值指的都是被传递参这个函数的属性值,
+		例如：-->
+		<script type="text/javascript">
+			function aa(b){
+			 b.num=1 //这里不需要再用var
+			}
+		var bb=new Object()
+		    bb.num=2
+		    aa(bb)
+		alert(bb.num)
+		</script>
+		<!--如果函数没有相关属性，而传递的对象obj有这个属性，则引用obj的值
+	如果被传递参数的函数param内部创建了一个对象，且有和这个函数有相同的属性（message），函数执行后，函数外对象的属性（obj.message），这个属性值是obj复制给param参数的属性值（与obj.message相同）；-->
+	
+</html>

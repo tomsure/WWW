@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//anchors集合返回了当前页面的所有超级链接数组 。也就是说，这个属性返回的是一个数组，一个集合了多个超链接的数组	
+	window.onload=function(){
+	    
+		alert(document.anchors.length)//这里会弹出2，只有给a标签设置了name属性才会返回anchors属性
+	}
+	</script>
+	<body>
+		
+			<a name="s"></a>
+			<a name="d"></a>
+			<a href="anchors.html"></a>
+	
+	</body>
+	
+</html>

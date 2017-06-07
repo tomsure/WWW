@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	div{width: 100px;height: 100px;border: 1px solid #0000FF;}
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	<script>
+		//选择所有可见的元素
+		/*:visible 选择器选取当前可见的每个元素。
+                   除以下几种情况之外的元素即是可见元素：
+                   设置为 display:none
+                   带有 type="hidden" 的表单元素
+          width 和 height 设置为 0
+                   隐藏的父元素（这也会隐藏子元素）*/
+                  $(function(){
+                  	$("div:visible").css("background","red")
+                  	//选取可见的div元素
+                  })
+	</script>
+	<body>
+		
+		<div id="">
+			
+		</div>
+	</body>
+</html>
