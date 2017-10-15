@@ -1,5 +1,0 @@
-值	                 描述
-up，
-down，
-left，
-right

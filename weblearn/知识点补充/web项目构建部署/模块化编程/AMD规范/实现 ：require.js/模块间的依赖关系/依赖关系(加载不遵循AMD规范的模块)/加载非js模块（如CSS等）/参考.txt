@@ -1,1 +1,0 @@
-http://qtdebug.com/fe-requirejs/

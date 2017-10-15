@@ -1,3 +1,0 @@
-就是js自带的函数：
-
-例如：typeof Number() String()  等等 
