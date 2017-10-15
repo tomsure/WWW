@@ -1,1 +1,0 @@
-ubuntu系统使用命令：svn --version 来查看svn版本。
