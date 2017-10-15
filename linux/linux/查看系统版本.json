@@ -1,0 +1,9 @@
+1、uname -a；
+
+2、cd /proc/version 
+
+
+sudo uname --s  显示内核名字s
+sudo uname --r 显示内核版本
+sudo uname --n 显示网络主机名
+sudo uname --p 显示cpu 

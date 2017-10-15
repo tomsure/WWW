@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		#dv1{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button>点击插入</button>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').on('click',function(){
+				$('#dv').after("<div id='dv1'></div>")
+			})
+		})
+//		after()方法用于在备选元素之后插入数据，内容可以为html字符串，dom节点，或者节点组成的数组。
+	</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{ border :1px solid red;padding:10px ;}
+		#dv1{height:300px ;}
+			#dv2{height:200px ;}
+				#dv3{height:100px ;}
+					#dv4{height:50px ;}
+					p{ border:1px solid green; height:20px ;}
+	</style>
+		
+	</style>
+	
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*find() 方法返回被选元素的后代元素。
+                            后代是子、孙、曾孙，依此类推。
+         DOM 树：该方法沿着 DOM 元素的后代向下遍历，直至最后一个后代的所有路径（<html>）。如只需向下遍历 DOM 树中的单一层级（返回直接子元素），请使用 children() 方法。
+                        注意：filter 参数在 find() 方法中是必需的，这与其他树遍历方法不同。
+                         提示：如需返回所有的后代元素，请使用 "*" 选择器。*/
+            $(function(){
+            	$("#btn").click(function(){
+            		$("#dv1").find("*").css("border","4px solid black")
+            		//选择自定元素的所有后代元素
+            	})
+            })
+	</script>
+	<body>
+		 <div id="dv1">1
+		 	<div id="dv2">
+		 		2
+		 			<div id="dv3">3
+		 				<div id="dv4">
+		 					4
+		 					<p></p>
+		 				</div>
+		 			</div>
+		 		
+		 	</div>
+		 </div>
+		 <button id="btn">点击测试</button>
+	</body>
+</html>

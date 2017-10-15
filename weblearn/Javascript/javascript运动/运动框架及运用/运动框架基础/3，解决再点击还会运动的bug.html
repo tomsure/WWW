@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+	/*#dv{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: absolute;
+		left:0px;
+		
+	}*/
+	 #dv{width: 200px; height: 200px; background: red; position: absolute; top: 50px; left: 0;}
+	</style>
+	<script type="text/javascript" >
+		
+	</script>
+	<script type="text/javascript">
+		
+		
+		var timer=null
+		function startMove(){
+			
+		var dv=document.getElementById("dv")
+		  
+		    var speed=5;
+		    timer=setInterval(function(){
+		         if(dv.offsetLeft >= 300)
+		         {
+		         	clearInterval(timer)
+		         }else{
+		         dv.style.left=dv.offsetLeft + speed + 'px'
+//		         把这句话放到else语句里面即可
+		         }
+		    }, 30)
+	
+		}
+       
+
+	</script>
+	<body>
+		<button id="btn" onclick="startMove()">点击测试</button>
+		<div id="dv">
+			11
+		</div>
+	</body>
+	<!--在让运动的元素在指定位置停下来以及解决offsetLeft大于等于三百还会运动的问题后，又出来新的问题，就是在指定位置停下来后，再点击按钮一次，元素又会动一次，因为每点一次，还会起一次定时器，虽然里面已经说》=300的时候清除了定时器，但是清除定时器是在执行函数里面定时器之后才会清除，所以启动定时器在前面，清除定时器在后面，所以点一次还会动一次再停下来-->
+	
+	
+	<!--解决办法：
+	把 dv.style.left=dv.offsetLeft + speed + 'px'这里放到放到else{}语句里面即可，解析：
+	这样if{}语句里面只有offsetLeft大于指定宽度的时候只清除定时器，else里面的语句就是如果没有》=指定宽度才会执行 dv.style.left=dv.offsetLeft + speed + 'px'这句话，所以就可以停下来，点击也不会再动-->
+	
+	
+	 <!--又存在的问题：
+	  在将速度（也就是speed的值）调小之后发现，如果重复多次点击按钮，div元素会越动越快，这也是需要解决的问题-->
+	 
+	
+	
+</html>

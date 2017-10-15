@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js"> //引入jquery
+		
+	</script>
+	<script type="text/javascript" src="../../库文件/jquery-ui-1.12.1.custom/jquery-ui.min.js">//引入jqueryUI.js
+		
+	</script>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.min.css"/> <!--引入jqueryUI.css-->
+	<script type="text/javascript">
+		  $(function(){
+		  	$("#btn").on("click",function(){
+		  	  
+		  	 $("#dv").dialog()
+		  	
+		  })
+		  	
+		  })
+	</script>
+	<body>
+		 <button id="btn">点击测试</button>  <!--设置一个按钮来触发弹窗-->
+		<div id="dv">
+			<p>这是一个对话框</p>
+		</div>
+	</body>
+	   <!--实现步骤：
+	     1、引入所需文件；
+	     <!--2、设置一个div，在js中直接调用这个元素的dialog()房法即可弹窗，由于这个弹窗只是一个单一效果，所以需要放在实践中去执行，例如这里的点击事件的时候才弹出来，不然直接调用dialog()方法的话则会打开页面就会显示。-->
+	      
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(){};//创建构造函数
+		Person.prototype.name='tom';//给原型对象添加属性;
+		var person1=new Person();//实例对象；
+		person1.name='bom';
+		document.write(person1.name+'</br>')//bom;
+		document.write((person1.hasOwnProperty('name'))+'</br>')//true
+		//返回true，因为person1自己已经有了name属性；
+		
+		/**************************************************************/
+		document.write(('name' in person1)+'</br>')//true
+		//这里返回true。这个name属性是person1自己的name属性‘bom’；
+		document.write(('name' in Person.prototype)+'</br>')//true
+		//这里也返回true，因为name属性是原型对象的属性；
+		
+		/**************************************************************/
+		   delete person1.name;
+		   document.write(person1.hasOwnProperty('name')+'</br>')//false
+		//返回false，因为person1自己本身没有name属性了，上一步已经被删除；
+		
+		   document.write(('name' in person1)+'</br>')//true
+		//这里还是返回true   
+		   
+	    
+	    
+	 //总结:由于实例对象可以访问原型对象的属性，所以 in操作符 可以确定实例原型对象的属性也能够使用在 实例对象上，只要原型对象有相关         属性，使用in 操作符判断的时候就会返回true；   
+		
+		
+	</script>
+</html>

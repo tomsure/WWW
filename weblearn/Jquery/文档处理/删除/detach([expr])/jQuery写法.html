@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width: auto;height: 100px;background-color: red;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//删除指定的元素包括里面所有的元素和子节点
+		//但是它会保留jquery对象中匹配的元素，因而可以在将来再使用这些匹配的元素。
+		//detach() 会保留所有绑定的事件、附加的数据，这一点与 remove() 不同。
+		$(function(){
+			var x;
+			$("#btn1").click(function(){
+			x=$("div").detach() //删除div元素 ,但是这里它保留了$("div") 
+			})
+			
+			$("#btn2").click(function(){
+			$("body").prepend(x) //删除div元素,
+			})
+			
+		})
+	</script>
+	<body>
+		<div id="">
+			<p>你好</p>
+				
+		</div>
+		<input type="button" name="btn1" id="btn1" value="点击删除" />
+		<input type="button" name="btn2" id="btn2" value="点击恢复" />
+	</body>
+</html>

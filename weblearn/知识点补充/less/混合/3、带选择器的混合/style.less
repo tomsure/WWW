@@ -1,0 +1,23 @@
+.hover{
+    &:hover{//伪类选择器，当划入鼠标的时候改变样式
+        width: 120px;
+        height: 120px;
+        background-color: blue;
+           border-radius: 10px;
+    }
+      #dv1{
+        width: 50px;
+        height: 50px;
+        background-color: yellow;
+    }
+}
+
+div{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+ 
+   .hover;   
+}
+
+//可以在混合中设置各种选择器,在需要的元素样式中调用这个混合类名，这时候就会产生相应的效果，如果将子元素的样式设置在混合中，然后在当前元素样式中调用，就相当于是设置了当前元素子元素的样式，如果不输出混合内容，则调用的时候可以在类名后+()符号

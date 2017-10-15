@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//	关闭用 document.open() 方法打开的输出流，并显示选定的数据。
+function createNewDoc()
+  {
+  var newDoc=document.open("text/html","replace");
+  var txt="<html><body>Learning about the DOM is FUN!</body></html>";
+  newDoc.write(txt);
+  newDoc.close();
+  }
+</script>
+
+<body>
+
+<input type="button" value="Write to a new document"
+onclick="createNewDoc()">
+
+</body>
+</html>

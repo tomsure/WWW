@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="input" value="" />
+		<input type="file" name="" id="inp1" value="" />
+	</body>
+	<script type="text/javascript">
+//	onchange事件是当 form表单控件的内容被改变的时候触发的事件,但是此事件不是所有浏览器都支持,所以需要做兼容性封装	
+      var df=document.getElementById("input"),
+          dd=document.getElementById("inp1");
+          
+      df.onchange=function(){
+      	alert('input发生了变化')
+      }
+   
+      dd.onchange=function(){
+      	alert(this.files)
+      }
+   //onchange事件表示元素的内容发生改变的时候触发的事件，例如input text 中当文本发生改变，当鼠标离开的时候就会触发，如果是input file元素，当选取了文件的时候，也会触发onchange事件
+	</script>
+</html>

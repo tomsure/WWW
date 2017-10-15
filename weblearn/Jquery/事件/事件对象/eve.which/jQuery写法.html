@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		//返回鼠标或者键盘哪个按键被按下，返回的是键盘 的代码
+		$(function(){
+			$("#t1").on("mousedown",function(e){
+			  alert(e.which)
+			  //返回鼠标按键
+			 })
+			$("#t2").on("keydown",function(e){
+			  alert(e.which)
+			  //返回键盘按键
+			})
+		})
+	</script>
+	<body>
+		
+		<input type="text" name="" id="t1" value="" />
+		<input type="text" name="" id="t2" value="" />
+		
+	</body>
+</html>

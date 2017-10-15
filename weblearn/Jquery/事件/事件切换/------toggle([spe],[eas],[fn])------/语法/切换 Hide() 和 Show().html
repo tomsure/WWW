@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{ width:100px;height:100px ;background-color:red ;}
+	</style>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-1.11.1/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$("#btn").click(function(){
+				$("div").toggle(1000)
+				//点击在显示或隐藏元素之间切换，它的值还可以是fast，slow。nomal，默认是0
+			})
+			$("#btn1").click(function(){
+				$("div").toggle(false);
+				//点击隐藏
+			})
+		})
+	</script>
+	<body>
+		<div id="">
+			
+		</div>
+		<button id="btn">点击测试</button>
+		<button id="btn1">点击测试</button>
+	</body>
+</html>

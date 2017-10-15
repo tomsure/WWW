@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+	</style>
+	<body>
+		<div id="">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../zepto库/zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('div').on('swipeDown',function(){
+				alert('这是向下滑动事件')
+			})
+		})
+// 当在屏幕上向下滑动的时候会触发swipeDown事件
+	</script>
+</html>

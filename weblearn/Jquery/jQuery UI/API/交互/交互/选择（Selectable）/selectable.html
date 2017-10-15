@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		.ui-selected { background-color: #0059B2;
+		               }
+	</style>
+	<body>
+		<p>问：哪个国家的人最多?</p>
+		请选择:<ul>
+			<li>中国</li>
+			<li>日本</li>
+			<li>美国</li>
+			<li>加拿大</li>
+			
+		</ul>
+		<a href="">提交</a>
+	</body>
+	<script type="text/javascript" src="../../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('ul ').selectable()
+			$('a').button()
+		})
+		
+//		使用列表元素,当给ul添加方法selectable()方法时候,ul内的每个元素会添加一个ui-selectable类名,列表子元素会自动添加一个类名：selectee当点击列表元素的时候,点击选中的元素就会自动添加一个ui-selected类名,这样就可以在css里面给这些类名添加样式或者做其他操作
+	</script>
+</html>

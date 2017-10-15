@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>
+				用户名: <input type="text"  name="user" class="text" value="" />
+				
+			</p>
+			<p>
+				密码: <input type="password"  name="pass" id="pass" value=""  class="text"/>
+			</p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../jQuery库/jquery-1.10.2/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+		var validator=$('form').validate({
+		//由于validate()方法返回的是一个validator对象，只有调用这个方法之后才会返回	validator对象
+		//这里可以声明一个变量作为validator对象
+			    rules:{
+			    	user:{
+			    	minlength:4,
+
+			    	},
+			    	pass:{
+			    		minlength:5
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"用户名不得少于4位",
+			    		maxlength:"输入不得超过8位"
+			    	},
+			    	pass:{
+			    		minlength:"密码不得少于5位",
+			    		required:"请输入密码"
+			    	}
+			    }
+			  
+       
+			
+		});
+
+        
+	  $.validator.addClassRules({
+	  	text:{
+	  		required:true
+	  	}
+	  	
+	  	
+	  })
+     //addClassRules()方法用于给指定class名称的表单元素添加指定的验证规则，例如这里两个输入框，一个是用户名，一个是密码，前面没有必填选项的验证规则，可以在这里一次性设置必填选项规则，这样的话两个拥有相同class名称的表单元素就都添加上了这个规则。
+//   如果多个类名的话就在方法里面写多个类名,然后添加规则
+  
+		})
+     
+	</script>
+</html>

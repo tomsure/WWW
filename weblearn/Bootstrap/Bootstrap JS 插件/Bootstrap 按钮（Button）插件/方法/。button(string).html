@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<style type="text/css">
+		.a{margin: 100px;}
+		
+	</style>
+	<body>
+	<br />
+	<br />
+	<br />
+	<button class="btn btn-default" data-aaa-text='加载完成' autocomplete="off">开始上传 </button>
+	<button></button>
+
+	</body>
+	<script type="text/javascript" src="../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+		
+	</script>
+	
+	<script type="text/javascript">
+		  $(function() { 
+      $("button").click(function(){
+         $(this).button('loading')
+        setTimeout(function(){
+        	$("button").button("aaa")
+        },1000)
+      });
+     
+   }); 
+//使用自定义字符串方法首先给button按钮添加data-“...”-text='...'属性，
+//再在js中添加定时器，定时器里面实行的函数就是给button 按钮绑定一个button("string")方法，string必须写data-“...”-text='...'属性中data-后面相同的字符串
+	</script>
+		
+		
+		
+	
+	
+</html>

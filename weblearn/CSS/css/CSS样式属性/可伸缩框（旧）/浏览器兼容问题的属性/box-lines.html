@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*box-lines 属性规定如果列超出了父框中的空间，是否要换行显示。
+提示：默认地，水平框会在单独的行中排列其子元素，而垂直框会在单独的列中排列其子元素。*/
+
+
+/*值	        描述
+single	所有子元素会被放置在单独的行或列中。（无法匹配的元素会被视为溢出）。
+multiple	允许框扩展为多行，以容纳其所有子元素。*/
+
+
+/*注意，使用这两个值是要看子元素的宽度和是否会大于父级元素，
+ 
+single：  当子元素的宽度和大于父级元素的时候，会溢出会水平排列，小于父级元素的时候不会溢出，会水平排列；
+
+
+multiple： 当子元素的宽度和大于父级元素的时候会垂直排列子元素为多行，小于父级元素的时候不会溢出，会水平排列为一行
+*/
+
+
+
+
+
+#dv{ width: 300px;height: 300px;background-color: darkgrey; -webkit-box-lines:multiple;display: -webkit-box;}
+#dv1{ width: 90px;height: 90px;background-color: darkcyan;}
+#dv2{width: 90px;height: 90px;background-color: darkgreen;}
+#dv3{ width: 90px;height: 90px;background-color: darkmagenta;}
+	</style>
+	<body>
+		<div id="dv">
+			<div id="dv1">
+				
+			</div>
+			<div id="dv2">
+				
+			</div>
+			<div id="dv3">
+				
+			</div>
+		</div>
+	</body>
+</html>

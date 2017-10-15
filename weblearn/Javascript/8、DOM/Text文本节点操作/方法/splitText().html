@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="p1"></p>
+		<p id="p2">你好吗中国</p>
+	</body>
+	<script type="text/javascript">
+		
+          var p2=document.getElementById("p2");
+          alert(p2.childNodes.length)
+          //分离之前子节点长度为1
+          alert(p2.childNodes[0].nodeValue)
+          //唯一子节点分离之前为五个字
+           p2.childNodes[0].splitText(2);
+           //把文本内容从第2个开始分离
+             alert(p2.childNodes[0].nodeValue)//分离后第一个子节点变成两个字
+          alert(p2.childNodes.length)
+//          子节点集合长度为2
+	</script>
+	
+	<!--splitText()方法用于将元素的一个子节点分离成两个子节点，参数是从第几个字符开始分离-->
+</html>

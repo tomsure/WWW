@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p></p>
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		var arr=['张三','李四','王五','马六'];
+	/*	$.each(arr,function(index,value){
+			$('p').html(index+":"+value)
+		})*/
+		//在上面的写法中，在函数function()执行的代码块里面，将p的内容遍历设置为数组的每个元素，但是这里数组有多个元素，每次执行遍历一次，后面的元素就会把前面的元素覆盖掉，所以最后只能得到最后一个数组元素的index和值。
+		//为了解决这个问题，只需将上一次遍历的时候p元素的html()加进来，加到当前遍历后的html()中即可。
+		
+		$.each(arr,function(index,value){
+			$('p').html($('p').html()+index+":"+value+'</br>')
+		})
+		
+	</script>
+</html>

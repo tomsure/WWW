@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width:100px;
+			height: 100px;
+			background-color: red;
+			padding: 10px;
+ 			border: 2px solid blue;
+ 			
+		}
+		
+	</style>
+	
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		    dv.onclick=function(){
+		    	alert(dv.offsetWidth)
+		    }//得到的dv的offsetWidth的值是124；
+		    
+//		  offsetWidth指的是元素宽度+padding宽度+border宽度的和,这里div宽度为100px,padding左右各10px,左右各2px的border边框,所以和就是124px 
+
+/*      无padding无滚动无border:
+      offsetWidth=clientWidth=style.width
+      有padding无滚动有border:
+     offsetWidth=style.width+style.padding*2+border宽度*2
+     offsetWidth=clientWidth+border宽度*2
+     
+     有padding有滚动,有border:
+      offsetWidth=style.width+style.padding*2+border宽度*2
+      offsetWidth=clientWidth+滚动宽度+border宽度*2
+
+
+*/
+	</script>
+</html>

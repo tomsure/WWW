@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	
+	<script type="text/javascript">
+		
+		var person=function(){}
+		var person1=new person()
+		console.log(person1 instanceof person)//true
+	//person1是person的实例化对象，person是person1对象的构造函数
+	
+	console.log(person1.__proto__==person.prototype)//true
+	
+//此时对象的构造函数的prptotype属性就是对象实例的原型，而实例对象的原型指针是用__proto__表示的，所以此时：
+     //person1.__proto__==person.prototype
+	
+	
+		
+		
+		
+		
+	</script>
+	
+	
+	
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px ;height:100px ;background-color:red ;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+	/*当鼠标指针离开被选元素时，会发生 mouseleave 事件。
+mouseleave() 方法触发 mouseleave 事件，或添加当发生 mouseleave 事件时运行的函数。
+注意：与 mouseout 事件不同，mouseleave 事件只有在鼠标指针离开被选元素时被触发，mouseout 事件在鼠标指针离开任意子元素时也会被触发。参见页面底部演示实例。
+提示：该事件通常与 mouseenter 事件一起使用。*/
+		$(function(){
+			$("div").mouseleave(function(){
+				alert("你的鼠标从div上移开了")
+			})
+		})
+	</script>
+	<body>
+		<div id="">
+			
+		</div>
+	</body>
+</html>

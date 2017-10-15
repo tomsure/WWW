@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript" src="../../../../.././../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//data指的是前端表单数据发送到服务器后服务器返回的数据，这个参数是在$.get()的回调函数中参数的第一个参数例如：
+		$.get(url,send,function(data){
+			//这里的data指的就是服务器返回的数据；
+//			前端需要通过服务器返回的数据来输出给用户看的信息
+       if(data=='true'){
+       	$('div').html('提交注册信息正常')
+       }else{
+       	$('div').html('输入信息有误')
+       }
+		})
+		
+		//在实际开发中后台程序员不会直接输出提示信息，而是和前端约定返回固定的一个data数据，例如输入错误的时候返回false，正确的时候返回true，而前端再通过后端的data数据通过if语句判断data数据是tute或者false或者约定的其他data数据来输出给用户看的信息
+	
+	//通过返回的data数据来判断应该输出什么信息给用户，然后将要返回给用户的数据添加到一个元素上，这里是将信息添加设置到一个p元素中，将p元素的内容设置为通过判断data而返回的信息
+	</script>
+</html>

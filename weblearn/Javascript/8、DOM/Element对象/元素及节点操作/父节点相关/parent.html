@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var s=document.getElementsByTagName("li");
+			alert(s[0].parentNode.tagName)//弹出UL li的父元素是ul
+			alert(s[0].parentElement.tagName)//弹出ul li的父节点是ul
+			alert(s[0].parent.tagName)//报错
+		}
+	</script>
+	<body>
+	<h1></h1>
+		<div id="dv">
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+	
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var str='qiwdi 8wiednqinw8';
+		var reg=/8(.*)8/
+		document.write(reg.test(str)+'</br>')
+		
+        document.write(RegExp.$1)
+		
+		//RegExp静态属性$1表示返回（.*）匹配到的字符，也就是两个字符串之间的字符
+//	    这里返回了匹配到的88之间的字符	wiednqinw
+       //由于是静态属性，所以必须先执行以下RegExp对象的实例方法
+		
+	</script>
+</html>

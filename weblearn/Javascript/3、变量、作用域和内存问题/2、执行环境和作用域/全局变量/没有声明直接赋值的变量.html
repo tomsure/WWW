@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<script type="text/javascript">
+  
+
+	/********************函数内部直接赋值没有声明的变量**************************/
+	           function ss(){
+	           	a=2;  //这里没有声明，直接赋值，它也是全局变量，但是要注意js词法分析过程
+	           	
+	           }
+	           ss();
+	           alert(a)  
+	           
+	           
+	        function dd(){
+	        	alert(a)
+	        	
+	        }
+	        dd()  //这里也可以访问到变量a的值
+</script>	
+	<body>
+		
+	</body>
+</html>

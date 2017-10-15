@@ -1,0 +1,10 @@
+
+
+
+进入到版本库上一级目录后输入一下命令来启动svn服务：
+ sudo svnserve -d -r /home/tomsure/svnwork/repository/project1
+  这里的/home/tomsure/svnwork/repository/project1是版本库所在的目录
+
+
+可以通过ps -ef命令查看svnserve进程，启动正常启动如下：
+root       1863      1  0 12:35 ?        00:00:00 svnserve -d -r /home/tomsure/svnwork/repository/project1

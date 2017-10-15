@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+		/*fillText() 方法在画布上绘制填色的文本,也就是实心文本。文本的默认颜色是黑色。
+		 
+                  提示：请使用 font 属性来定义字体和字号，并使用 fillStyle 属性以另一种颜色/渐变来渲染文本。*/
+        /*参数值:
+             text	规定在画布上输出的文本。
+             x	开始绘制文本的 x 坐标位置（相对于画布）。
+             y	开始绘制文本的 y 坐标位置（相对于画布）。
+             maxWidth	可选。允许的最大文本宽度，以像素计。 
+       */
+      window.onload=function(){
+      	var ss=document.getElementById("myCanvas");
+      	var dd=ss.getContext("2d");
+      	    dd.font="30px 宋体";
+      	    dd.fillText("你好",50,100);//创建文字距离x轴50px,距离y轴100px,这里没有设置最大文本宽度
+      	
+      	
+      	
+      }
+      
+      
+      
+      
+	</script>
+	<body>
+		
+		<canvas id="myCanvas" width="200" height="200"></canvas>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	function Person(){}
+	Person.prototype.name='tom';
+	Person.prototype.play=function(){
+		alert('hh')
+	}
+		var person1=new Person();
+		var person2=new Person();
+       document.write(person1.name+'</br>')
+       person2.play()//继承的方法
+       document.write(person2.name+'</br>')//继承的属性
+       delete person1.__proto__.name
+       document.write(person2.name)//undefined
+       //这里返回 undefined，因为person1和person2是同一个原型对象，继承相同的属性，如果将其中一个实例对象的原型的属性删除，另一个实例对象也无法访问
+       
+		
+		
+		
+		
+		
+		
+		</script>
+</html>

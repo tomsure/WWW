@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			//这里表示当按键按下字符键的时候发生的事件，但是这时候还会触发onkeydown和onkeyup事件，注意必须是按下的是字符键才会触发此事件，例如TAB shift等都不是字符键，所以不会触发keypress事件
+		var s=document.getElementById("tText");
+		s.onkeypress=function(){
+			alert("你在输入框按了一个键松开了")
+		}
+		}
+	</script>
+	<body>
+		<input type="text" name="" id="tText" value="" />
+	</body>
+</html>

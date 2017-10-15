@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击获取</button>
+		<textarea name="" id="ta" rows="20" cols="20"></textarea>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		var ta=document.getElementById("ta");
+		btn.onclick=function(){
+			
+			navigator.geolocation.getCurrentPosition(function(position){
+			ta.value='响应时间：'+new Date(position.timestamp)
+//		     获取当前获取定位的响应时间
+		
+			
+		},function(err){
+			alert(err.code)
+		})
+		}
+//       0  :  不包括其他错误编号中的错误
+//       1  :  用户拒绝浏览器获取位置信息,在请求获取定位信息的时候,浏览器会出现是否允许定位提示,如果用户选择拒绝定位的话,则就会返回这个值;
+//       2  :  尝试获取用户信息，但失败了,在请求过程中,如果出现一些异常则会返回这个值
+//       3  :   设置了timeout值，获取位置超时了,getCurrentPosition()方法的第三个参数中如果设置了timeout值，当请求 超过这个时间还没有获取到定位信息的时候就会返回 这个值，类似于ajax的timeout
+//  getCurrentPosition()方法的第二个参数是请求定位信息失败后执行的函数,这个函数有一个参数,这个参数在执行失败函数的时候返回的是一个positionError对象,这个对象有一个code属性,工四个值,值是数字,每个值代表不同的错误信息
+        
+
+	</script>
+</html>

@@ -1,0 +1,8 @@
+
+windos中启动版本库：
+
+ 输入命令 svnserve -d -r E:\svncangku\svnDb\subject1(从E：开始这路径是版本库的根目录)
+
+输入命令后鼠标光标会闪烁不停
+
+

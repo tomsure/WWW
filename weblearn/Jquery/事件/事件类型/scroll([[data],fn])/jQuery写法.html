@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px ;height:100px ;border:1px solid red;overflow: auto;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*当用户滚动指定的元素时，会发生 scroll 事件。
+scroll 事件适用于所有可滚动的元素和 window 对象（浏览器窗口）。
+scroll() 方法触发 scroll 事件，或规定当发生 scroll 事件时运行的函数。*/
+           $(function(){
+           	var x=0
+           	$("div").scroll(function(){
+           		
+           		$("span").text(x+=1)
+           		//获取元素滚动的次数
+           	})
+           })
+	</script>
+	<body>
+		<div id="">
+			想嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻嘻
+		</div>
+		<p>div滚动了：<span>0</span>次</p>
+	</body>
+</html>

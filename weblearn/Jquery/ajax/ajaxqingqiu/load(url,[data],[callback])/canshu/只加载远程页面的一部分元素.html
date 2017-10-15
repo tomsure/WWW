@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv2{width: 100px;height: 100px;background-color: blue;}
+	</style>
+	<body>
+		<button id="btn">点击加载</button>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.0.3/jquery-2.0.3.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//1，url是指要加载远程文件的路径；
+		//2，可以之加载远程文件中的一部分：
+		$('#btn').click(function(){
+			$('#dv').load('../远程数据.html?date='+Math.random()+' #dv2')//这里的添加随机字符串和加载整个页面的时候有点不一样。
+		})
+		
+	//	可以远程加载远程文件中的一部分片段，方法是在url的文件路径后面一个空格之后填写远程文件中的选择器，即可只获取远程中的一部分
+		
+		//为了防止IE浏览器缓存产生问题，所以url里面需要加上随机字符串符串，这里和远程加载整个页面添加随机字符串有点区别，加载部分元素添加随机字符串是在url的引号中url的问号后面使用拼接符号，这点和
+		
+	
+	
+	</script>
+</html>

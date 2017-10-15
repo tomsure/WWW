@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="1" width="300">
+			
+			<tr><td>姓名</td><td>年龄</td><td>性别</td></tr>
+		
+		
+		</table>
+		<button id="btn">点击增加厚度</button>
+	</body>
+	<script>
+		var bd=document.getElementsByTagName('table')[0]
+		alert(bd.border) //返回表框厚度
+		var btn=document.getElementById("btn")
+		btn.onclick=function(){
+			bd.border=3  //设置边框厚度
+		}
+	</script>
+	 <!--border属性用于返回或者返回table表格边框的厚度-->
+	
+</html>

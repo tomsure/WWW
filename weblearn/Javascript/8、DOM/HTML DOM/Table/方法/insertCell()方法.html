@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="1" width="300px">
+			
+			<tr>
+				<td>姓名</td>
+				<td>年龄</td>
+			</tr>
+			
+		</table>
+		<button id='btn'>点击插入一行</button>
+	</body>
+	<script type="text/javascript">
+		var tb=document.getElementsByTagName('table')[0]
+	     var btn=document.getElementById("btn")
+	     btn.onclick=function(){
+	     	tb.rows[0].insertCell()
+	     }
+//   insertCell(1)方法用于在一行中插入一列,如果不加参数就是在当前行的最左边插入一列，如果加了参数，则就会在第几列后面插入一列
+	</script>
+</html>

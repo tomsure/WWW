@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="js中DOM的文档节点.js">
+	alert("aaa")
+		window.onload=function(){
+			
+			var qq=document.getElementById("a")
+			alert(qq.nodeType)
+			var ww=document.getElementById("div1")
+			
+			
+		}
+	</script>
+	<style type="text/css">
+	#a{
+		width:400px;
+		border:1px solid #F08080;
+		background-color: aqua;
+	}	
+	.two{
+		width: 200px;
+		border: 120px;
+		background-color: #7FFF00;
+		margin:20px
+	}
+	</style>
+	<body>
+		<div id="a" class="one">
+			我是最外边的标签
+			<p class="two">我是段落标记</p>
+			<div id="div1" class="two">
+				<span id="">
+				我是里面的div	
+				</span>
+			</div>
+            <h1 class="two">我是标记4</h1>
+		</div>
+		<input type="button" name="ss" id="ss" value="点击" />
+	</body>
+</html>

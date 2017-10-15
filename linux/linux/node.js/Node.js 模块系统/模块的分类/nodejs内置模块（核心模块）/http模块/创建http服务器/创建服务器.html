@@ -1,0 +1,27 @@
+var http = require('http');
+
+http.createServer(function (request, response) {
+
+	// 发送 HTTP 头部 
+	// HTTP 状态值: 200 : OK
+	// 内容类型: text/plain
+	response.writeHead(200, {'Content-Type': 'text/plain'});
+
+	// 发送响应数据 "Hello World"
+	response.end('Hello World\n');
+}).listen(8888);
+
+// 终端打印如下信息
+console.log('Server running at http://127.0.0.1:8888/');
+
+
+
+1，在服务中创建一个js文件，声明变量引入http模块；
+2，使用http模块的createServer()方法创建服务器
+
+使用ttp.createServer()方法上面使用的是链式执行，就是在ttp.createServer()方法后面加上.listen(),也可以使用普通的方式来执行，将ttp.createServer()方法赋值给一个变量：
+   var server=http.createServer(..., ...);
+   
+   再设置监听端口：
+       server.listen(端口号)
+   

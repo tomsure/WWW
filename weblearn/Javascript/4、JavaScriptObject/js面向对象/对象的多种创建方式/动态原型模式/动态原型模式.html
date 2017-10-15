@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		
+		
+		function Person(name,age,job){
+			this.name=name;
+			this.age=age;
+			this.job=job;
+			if(typeof this.sayName !='function'){
+				Person.prototype.sayName=function(){
+					alert(this.name)
+				}
+			}
+		}
+		
+		var person1=new Person('tom','33','worker');
+		person1.sayName()//tom;
+		document.write(person1.name);
+		var person2=new Person('bom');
+        		
+//这种创建对象的方式叫做动态原型模式这种方式创建对象if语句是为了避免，使用这种方式，不能够使用对象字面量重写原型，因为会切断实例和原型之间的联系，创建的对象字面量的原型就指向了Object.prototype
+         
+         function pp(){}
+         pp.prototype=new Person();
+         var ss=new pp('a','b','c');
+         ss.sayName()
+         
+         
+         
+         
+		
+	</script>
+</html>

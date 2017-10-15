@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.clearRect(0,0,c.width,c.height); 
+var img=document.getElementById("imga")
+var pat=ctx.createPattern(img,direction);
+ctx.rect(0,0,150,100);
+ctx.fillStyle=pat;
+ctx.fill();
+			
+			
+			
+			
+			
+		}
+	</script>
+	<body>
+	<canvas id="myCanvas" width="200" height="200"></canvas>
+	<img id="imga" src="../../../../../素材/img/img_lamp.jpg"/>
+	</body>
+</html>

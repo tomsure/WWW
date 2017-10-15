@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+    var xx=2;
+    function test(){
+    	alert(this.xx)
+    	alert(this==window)
+    	
+    }
+    
+    test()//2，true
+//  从上面的例子中可以看出，在普通函数中的this,指的是window,xx是全局变量，全局变量是window对象的属性，而this在这指向window，所以this.xx就是2；
+
+   var mm=4;
+   function person(){
+   	var mm=5;
+   	
+   	alert(this.mm)//4
+   	//这里弹出4，因为这里this出现在函数中，则this指的是window，而函数外边已经声明了全局变量mm=4，所以这里弹出4；
+   	document.write(mm)//5
+   	//这里因为mm在函数内部声明了局部变量，函数内的局部变量的优先级要高于全局变量，所以这里弹出5，如果函数内注释掉var mm=5，则会弹出4
+  }
+     person();
+     
+ 
+
+
+  
+
+
+    
+    
+    
+		
+	</script>
+</html>

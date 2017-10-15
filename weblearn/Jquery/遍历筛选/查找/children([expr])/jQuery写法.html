@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	div{border:1px solid green ;height: 250px;}
+	p{border:1px solid darkgoldenrod ;height:80px ;}
+	span{ display: block;border:2px solid  black;height:20px ;}
+		
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+		 $("div").children().css("border","4px solid #00ff00")
+		 //选择的是div的直接子元素p，这里p元素的子元素不会生效，但是这个方法对文本内容无效，如果span里面有文本内容，也会和p元素一样有效果
+           $(":button").click(function(){
+           	$("div").children("#p2").css("background","#8A2BE2")
+           	//可以在children()括号内部填写指定的元素
+           })
+		})
+	</script>
+	<body>
+		<div id="">
+			<p>
+			
+			<span></span>
+			</p>
+			<p id="p2"></p>
+				</div>
+					<input type="button" name="" id="" value="点击测试" />
+
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			var cal=$.Callbacks();
+			function aa(){
+				alert(1)
+			}
+			cal.add(aa);
+			cal.add(aa)
+			cal.add(aa) //添加三次重复函数
+			cal.fire()//执行的时候函数aa会执行三次；
+			
+			var cal2=$.Callbacks('unique');
+			function bb(){
+				alert(2)
+			}
+			cal2.add(bb);
+			cal2.add(bb);
+			cal2.add(bb) //添加三次重复函数
+			cal2.fire()  //执行的时候只会执行一次bb
+		})
+		
+//		$.Callbacks()方法添加'unique'参数的时候,如果使用add()方法多次添加相同的函数,则使用fire()方法执行的时候只会执行一次相同的函数
+	</script>
+	<body>
+		
+	</body>
+</html>

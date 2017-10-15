@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../../../jQuery库/jquery-1.11.1/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			//hide()的speed参数可以设置隐藏过程的速度
+			//参数：毫秒 （比如 1500）、“slow”、“normal”、“fast”
+
+
+
+			/*在设置速度的情况下，元素从可见到隐藏的过程中，会逐渐地改变其高度、宽度、外边距、内边距和透明度。*/
+			$("div").css({width:"100px",height:"100px",background:"red"})
+			$("#default").click(function(){
+				$("div").hide()
+				//不加参数，默认值为0，无动画过程，直接隐藏
+				
+			})
+			
+			$("#slow").click(function(){
+				$("div").hide("slow")
+				//慢速隐藏
+			})
+			$("#fast").click(function(){
+				$("div").hide("fast")
+				//快速隐藏
+			})
+			
+			
+			$("#nomal").click(function(){
+				$("div").hide("nomal")
+			})
+			
+		    $("#haomiao").click(function(){
+		    	$("div").hide(2000)
+		    	//动画时间经过两秒钟隐藏
+		    })
+		})
+	</script>
+	<body>
+		
+		<div id="dv">
+			
+		</div>
+		<button id="default">默认</button>
+		<button id="slow">慢速</button>
+		<button id="fast">快速</button>
+		<button id="nomal">正常</button>
+		<button id="haomiao">自定义时间</button>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		可以直接在replace()方法匹配替换的时候使用$n;
+//$1表示 字符串第一个分组中的内容，$2表示第二个分组中的内容，所以如果使用了()分组功能就可以使用$n符号在replace()方法中使用
+
+
+
+		var str='this is a 8google8';
+		var reg=/8(.*)8/;
+		document.write(str.replace(reg,'<strong>$1</strong>')+'</br>')
+		//$1表示读一个分组中.*符号匹配到的字符串内容，这里是在replace（）方法中使用的
+		
+		var str1='我的电话 是：13798525640';
+		var reg1=/(13)(\d{9})/g;
+		document.write(str1.replace(reg1,'$1*********'))
+		//这里reg将匹配两个分组，13是一组，另外一组是9个数字，刚和和str匹配，这样的话在replace()中$1就表示（13）中的13，$2就表示(\d{9})中的那9位数字。
+		
+		
+		
+		
+	</script>
+</html>

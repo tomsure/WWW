@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+	/*当元素失去焦点时发生 blur 事件。
+blur() 方法触发 blur 事件，或规定当发生 blur 事件时运行的函数。
+提示：该方法常与 focus() 方法一起使用。*/
+		$(function(){
+		
+		/*******************当元素失去焦点触发的函数*****************************/
+			$("#t1").blur(function(){
+				alert("失去了焦点")
+			})
+		/*************为元素添加失去焦点函数--需与focus()同时使用*************/
+		     $("#btn").click(function(){
+		     	$("#t2").focus()
+		     	alert("我获得了 焦点")
+		     })
+		     $("#btn1").click(function(){
+		     	$("#t2").blur();
+		     	alert("我又失去了焦点")
+		     })
+		})
+	</script>
+	<body>
+		<input type="text" name="" id="t1" value="1" />
+		<input type="text" name="" id="t2" value="2" />
+		<button id="btn">点击添加</button>
+		<button id="btn1">点击失去</button>
+	</body>
+</html>

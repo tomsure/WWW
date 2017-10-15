@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//back()方法表示后退页面;加载 history 列表中的前一个 URL
+	window.onload=function(){
+	var bn1=document.getElementById("btn1");
+	bn1.onclick=function(){
+		history.back()//点击这里退回到前面的那个页面
+		
+	}
+	}
+	</script>
+	<body>
+		
+		<button id="btn1">点击后退</button>
+		<p>我是第二个页面</p>
+	</body>
+</html>

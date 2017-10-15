@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$("div").on("click","p",function(){
+				$(this).css("background-color","red")
+				//为div的子元素p元素绑定点击事件
+			})
+			
+			$("button").click(function(){
+				$("div").off("click")
+				//点击按钮之后删除div的p元素绑定的事件
+			})
+		})
+	</script>
+	<body>
+		<div id="">
+			<p>sss</p>
+		</div>
+		<button >点击测试</button>
+	</body>
+</html>

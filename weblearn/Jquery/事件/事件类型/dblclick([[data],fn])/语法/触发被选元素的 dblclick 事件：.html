@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$("#btn").click(function(){ //这里单机button按钮触发p元素的双击事件
+				$("p").dblclick() //当单击击按钮的时候会弹出相关内容，是button单击事件触发了p元素的双击事件
+			})
+		})
+	</script>
+	<body>
+	     <p ondblclick="alert('触发了双击事件')">点击测试</p>
+	     
+		<button id="btn">点击测试</button>
+		
+	</body>
+</html>

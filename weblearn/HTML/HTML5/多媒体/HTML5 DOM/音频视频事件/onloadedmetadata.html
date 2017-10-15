@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	
+		</head>
+		
+		<body>
+			<video width="" height="" controls="" id="vid">
+				<source src="../音视频资源文件/movie.mp4"></source>
+				<source src="../音视频资源文件/johann_sebastian_bach_air.ogg"></source>
+				<source src="../音视频资源文件/mov_bbb.mp4"></source>
+				
+			</video>
+			<input type="text" id="ipt"/>
+		</body>
+		<script>
+
+	var vod=document.getElementById("vid");
+	 var t1=document.getElementById("ipt")
+		vod.onloadedmetadata=function(){
+			t1.value='正在加载元数据'
+		}
+     //当视频正在加载元数据的时候开始触发，音频/视频的元数据包括：时长、尺寸（仅视频）以及文本轨道。
+		</script>
+	</html>

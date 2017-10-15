@@ -1,0 +1,8 @@
+div {
+  width: 100px;
+  height: 100px;
+  background-color: #fccfcf;
+}
+div:hover {
+  background: #300303;
+}

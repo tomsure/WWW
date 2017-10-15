@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		function t1(){
+			
+		}  
+		
+	t2=function(){
+		
+	} 
+	//这两种方式效果是不同的；
+	//t1是函数声明，虽然全局内也得到一个t1变量，值是function；
+	//而t2只是一个赋值过程---值是右侧的表达式的返回结果，即函数；
+	//就是说function(){}在js看来就和3*2,6/3一样，返回一个结果；
+	//因此t1、t2两种方式，在 词法分析时候，有着本质区别；
+	//前者在词法分析阶段就发挥作用；
+	//而后者在运行阶段在发挥作用；
+	(function(window,undefined){
+		
+	})(window);//这是jquery的最外层代码；
+	
+	(function(window,undefined){})//内层表达式，返回值是函数，包在小括号里，当成表达式来执行
+	(function(window,undefined){})(window)//立即调用
+	//而内层函数内有取名字，所以叫匿名函数；
+	//这种手法，匿名函数，立即执行，不污染全局，称为立即执行匿名函数表达式
+	
+//	思路:为什么传window进去，而又不会传undefined？
+/*答：传windows是为了速度
+       function(){
+       	function（）{
+       		function(){
+       			function(){
+       				function(){
+       					document.getElementByTd....//这个将会上作用域层层查找，知道最外层
+       				}
+       			}
+       		}
+       	}
+       }
+       //jquery就是为了加快内部查找全局变量的速度，而直接把window以参数的形式传进来，window就在jquery内部的AO上；
+       不传undefined是为了安全，因为在IE,FF低版本中，undefined竟然可以重新赋值，如：undefined=3；
+  声明undefined局部变量（名字是undefined而已），同时，又不传参，值自然是undefined;防止了外界对undefined的污染
+ *   
+ * 
+ * 
+ * */
+	
+	</script>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="1" id="tb">
+			<caption>人员表</caption>
+			<tbody>
+				<tr><td>你好</td><td>Data</td></tr>
+			<tr><td>Data</td><td>Data</td></tr>
+			</tbody>
+			 <button id="btn">点击删除标题</button>
+		</table>
+	</body>
+	<script type="text/javascript">
+		var tb=document.getElementById("tb")
+	   var btn=document.getElementById("btn")
+	   btn.onclick=function(){
+	   	  tb.deleteCaption()
+	   }
+//	    deleteCaption()方法用于删除表格的标题caption元素
+
+	  
+	</script>
+</html>

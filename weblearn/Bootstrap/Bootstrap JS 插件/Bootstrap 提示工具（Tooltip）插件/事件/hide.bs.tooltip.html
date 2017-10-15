@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		
+		<br />
+		<br />
+		<br />
+		
+		<a title="aaaa" data-trigger="click" >顶顶顶顶</a>
+		<!--当点击元素的时候触发提示工具-->
+		<br />
+		<br />
+		<br />
+		<button class="btn btn-default">按钮</button>
+		
+		
+	</body>
+	<script type="text/javascript" src="../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	  $('a').tooltip()
+		$('a').on('hide.bs.tooltip',function(){ //hide.bs.tooltip是提示语隐藏前触发的事件，可以绑定函数
+			alert('触发了hide.bs.tooltip事件')
+		})
+	</script>
+	
+</html>

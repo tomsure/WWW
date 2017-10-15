@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-1.10.2/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*unload() 方法在 jQuery 版本 1.8 中【被废弃。】
+		 * 当用户离开页面时，会发生 unload 事件。
+当发生以下情况下，会触发 unload 事件：
+点击某个离开页面的链接
+在地址栏中键入了新的 URL
+使用前进或后退按钮
+关闭浏览器窗口
+重新加载页面
+unload() 方法规定当 unload 事件发生时会发生什么。
+unload() 方法只应用于 window 对象。
+注意：unload 事件在不同浏览器中效果不一样，请确保使用前在所有浏览器测试该方法。*/
+           $(function(){
+           	$(window).unload(function(){
+           	  alert("你要离开吗")	
+           	})
+           })
+	</script>
+	<body>
+		<p>sss</p>
+	</body>
+</html>

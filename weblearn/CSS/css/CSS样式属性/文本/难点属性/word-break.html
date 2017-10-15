@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*设置中日韩三国脚本的换行规则*/
+		div{ width: 100px; height: 100px; border: 1px solid red; }
+		#dv{ word-break: break-all;}/*允许在单词内换行*/
+		
+		#dv2{ word-break: keep-all;}/*只有ie和火狐支持，只能在半角或者连字符处换行*/
+		#dv3{ word-break: normal;}/*默认*/
+	</style>
+	<body>
+		<div id="dv">
+			ssssss ssssssss dddddddddddddddddddddddddddddd
+		</div>
+		<br />
+		
+		<div id="dv1">
+			ssss dxxxxx xxxxx-sssssssssss  ddddddd
+		</div>
+	</body>
+</html>

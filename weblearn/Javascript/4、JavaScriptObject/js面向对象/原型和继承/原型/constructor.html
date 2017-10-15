@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//constructor 属性返回对创建此对象的数组函数的引用。这个词也是一个指针，指向对象所对应的构造函数
+	function employee(name,job,born)
+{
+this.name=name;
+this.job=job;
+this.born=born;
+}
+
+var bill=new employee("Bill Gates","Engineer",1985);
+
+document.write(bill.constructor);/*输出:function employee(name, jobtitle, born)
+{this.name = name; this.jobtitle = job; this.born = born;}*/
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

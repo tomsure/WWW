@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<body>	
+<input type="text"  id="te" value="尝试在此处粘贴文本" size="40">
+
+<p id="demo"></p>
+
+<script>
+var sd=document.getElementById("demo");
+    var sw=document.getElementById("te");
+        sw.onpaste=function () {  //添加事件函数
+    alert("你粘贴了文本")
+    
+}
+</script>
+
+</body>
+</html>

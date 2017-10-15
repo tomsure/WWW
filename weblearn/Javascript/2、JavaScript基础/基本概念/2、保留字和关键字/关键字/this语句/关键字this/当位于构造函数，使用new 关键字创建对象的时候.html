@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	
+	   var x=2;
+		function Person(){
+		  this.x=1
+		}
+		new Person()//创造实例化对象
+		var person1=new Person();//将实例化对象赋给变量
+		document.write(person1.x)//1
+		//这里返回了1，说明这里的this是属于这个构造函数生成的对象
+		
+		document.write(x)//2
+		//这里返回了2，说明这个x是全局变量，也说明构造函数中的this不是全局变量
+		
+		
+	</script>
+</html>

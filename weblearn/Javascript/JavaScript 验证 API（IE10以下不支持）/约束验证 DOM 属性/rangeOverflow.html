@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<input type="number" name="num" id="num" max="100" value="" />
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript" >
+		var num=document.getElementById("num");
+		btn=document.getElementById("btn")
+		btn.onclick=function(){
+		if(num.validity.rangeOverflow){ //此时num.validity.rangeOverflow的值为true
+				alert("你输入的值太大，请重新输入")
+			}
+		}
+		 
+//		 rangeOverflow指的是是当输入的值大于input的max的值得时候,rangeOverflow的值就为true,否则为false
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+</html>

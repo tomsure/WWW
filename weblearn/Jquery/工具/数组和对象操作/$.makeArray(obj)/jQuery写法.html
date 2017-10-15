@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-1.7.2/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			alert($("li").length)
+		//    alert($("li").shift()); //这使用这个方法会报错，因为这里的li不是真数组
+		var ss=$.makeArray($("li"))
+		//将类数组转换为数组
+		alert(ss.shift().innerHTML)
+		//转换之后就拥有了数组的方法
+		alert($("li").eq(1).text())
+		//使用jquery下标的方法获取元素
+		
+		})
+	</script>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		
+	</body>
+</html>

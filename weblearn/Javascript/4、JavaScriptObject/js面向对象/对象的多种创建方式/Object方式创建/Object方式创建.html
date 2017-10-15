@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var obj=new Object();//这里可以使用var obj={},和new Object()是相同效果
+         
+		obj.name='tom';
+		obj.age=22;
+		obj.sayName=function(){
+			alert(this.name)
+		}
+		obj.sayName()
+		alert(obj.age)
+		
+//	使用Object方式创建对象步骤:
+//	  1,使用new关键字实例化Object()构造函数,或者使用大括号的方式;均赋值给变量;
+//	  2,给已经赋值的变量名添加属性和方法
+		
+		
+		
+	</script>
+</html>

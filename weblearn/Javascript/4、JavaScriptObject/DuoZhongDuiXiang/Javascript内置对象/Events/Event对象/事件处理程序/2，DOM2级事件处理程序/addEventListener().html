@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<input type="button" name="" id="btn" value="点击弹出" />
+		<script type="text/javascript">
+		//this在这里可以用来引用事件触发的元素，这里的this指的就是div1
+	var dg=document.getElementById("btn");
+		
+		dg.addEventListener("click",function(){
+			alert("你好")
+		},false)
+		
+//	addEventListener()是DOM2级事件处理函数的方法,	它有三个参数，第一个是事件类型名称，第二个是事件函数，第三个是属于冒泡还是捕获，true表示捕获，false表示冒泡；
+//false可写可不写,不写的话,默认就是冒泡
+	</script>
+	</body>
+</html>

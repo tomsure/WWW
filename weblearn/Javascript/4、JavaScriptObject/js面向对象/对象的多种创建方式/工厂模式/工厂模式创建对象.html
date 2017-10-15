@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function person(name,age,height){
+			var oo=new Object();
+			oo.name=name;
+			oo.age=age;
+			oo.height=height;
+			return oo
+		}
+		var person1=person('tom',23,170)
+		alert(person1.name)
+		
+		var person2=person( 'tomsure',26,179)
+		alert(person2.height
+	)
+//	工厂模式创建对象步骤:
+//	1,创建一个函数,添加多个参数,作为要创建对象的属性(或方法);
+//	2,在函数内的第一行使用new 关键字创建Object的实例化对象oo,下面设置oo的属性等于创建的函数括号内的参数;
+//	3,函数内部最后使用return 返回这个实例化对象;
+//	4,使用 var关键字声明一个变量,把最上面创建的函数赋给变量,参数是所创建对象的实际属性;
+//	5,后面就可以使用这个对象的属性;
+	
+//工厂模式创建对象特点:使用工厂模式能够创建一个包含所有信息的对象，可以无数次的调用的这个函数,虽然其解决了创建多个相似对象的问题，但却没有解决对象识别的问题(即如何得知一个对象的类型)
+	
+		
+		
+		
+		
+		
+	</script>
+</html>

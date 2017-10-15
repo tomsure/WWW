@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//event.isDefaultPrevented() 方法检查指定的事件上是否调用了 preventDefault() 方法。
+		$(function(){
+			$("a").bind("click",function(e){
+				e.preventDefault();
+				//调用阻止元素默认行为的方法
+				alert(e.isDefaultPrevented())
+				//检查是否调用了preventDefault()，返回一个布尔值，这里弹出true，说明是调用了preventDefault()方法
+			})
+		})
+	</script>
+	<body>
+		<a href="javascript写法.html">点击测试</a>
+	</body>
+</html>

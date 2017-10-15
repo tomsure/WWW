@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv1{
+			width: 100px;height: 100px;background-color: red;
+		}
+		.dv2{
+			width: 300px;
+			height: 300px;
+			border: 3px solid black;
+		}
+	</style>
+	<body>
+			<input type="text" name="t1" id="t1" value="" />
+		<div class="dv1" id="dv1" draggable="true">
+			
+		</div>
+		<div class="dv2" id="dv2">
+			
+		</div>
+	
+	</body>
+	<script type="text/javascript">
+		var dv1=document.getElementById("dv1");
+		var dv2=document.getElementById("dv2")
+		var t1=document.getElementById("t1")
+		dv1.ondragstart=function(ev){
+			var ev=ev||window.event;
+			
+			ev.dataTransfer.setData('name','hello');
+            
+            ev.dataTransfer.effectAllowed='copyMove'
+//          effectAllowed属性用于设置元素拖动的时候鼠标光标的形状
+			this.style.background='green'
+		}
+		//开始拖动后背景颜色变成绿色
+         dv1.ondragend=function(ev){;
+         	var ev=ev||window.event;
+         	
+         	this.style.backgroundColor='red'
+         	
+         }
+         
+        var i=0;
+         dv1.ondrag=function(){
+         	t1.value=i++;
+        
+         };
+         dv2.ondragenter=function(){
+         	this.style.background='blue'
+         }
+         dv2.ondragover=function(ev){
+         	ev.preventDefault()
+         	ev.dataTransfer.dropEffect='copy'
+         }
+        dv2.ondrop=function(ev){
+        	this.style.background='white';
+        	alert(ev.dataTransfer.getData('name'))
+        }
+        
+      /* effectAllowed属性用于允许设置对应的dropEffect属性的值在被拖动的元素拖动到目标元素的时候显示的光标效果,当允许设置的时候,就会显示相应的鼠标光标,如果设置错误的话,则被拖动元素拖动到目标元素的时候鼠标光标就会显示为禁止图标,此时drop事件无法触发;
+       effectAllowed每个属性值设置后再设置相应的dropEffect属性值的时候的效果如下:
+           copy ，限定dropEffect的属性值为copy，否则会鼠标指针为禁止样式
+
+　   　       link ，限定dropEffect的属性值为link，否则会鼠标指针为禁止样式
+
+            move ，限定dropEffect的属性值为move，否则会鼠标指针为禁止样式
+
+            copyLink ，限定dropEffect的属性值为copy和link，否则会鼠标指针为禁止样式
+
+            copyMove ，限定dropEffect的属性值为copy和move，否则会鼠标指针为禁止样式
+
+            linkMove ，限定dropEffect的属性值为link和move，否则会鼠标指针为禁止样式
+
+　　           all ，允许dropEffect的属性值为任意值
+
+            none ，鼠标指针一直为禁止样式，不管dropEffect的属性值是什么
+
+            uninitialized ，没有限定dropEffect属性的值，效果和 all 一样。
+            
+         如果  effectAllowed属性以上的值设置后,dropEffect没有设置相应可以设置的值的话,鼠标光标就会显示禁止状态,无法触发drop事件 */
+        
+//      特别注意:effectAllowed属性只能在ondropstrat事件中设置
+	</script>
+	
+</html>

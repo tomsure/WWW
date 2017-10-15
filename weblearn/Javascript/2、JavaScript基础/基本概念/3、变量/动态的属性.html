@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	
+	<!--创建基本类型值和引用类型值的方法大致相同，都可以通过创建变量，将值赋给变量。-->
+	
+	<script type="text/javascript">
+//		引用类型的值可以为其添加属性和方法，也可以删除属性和方法，例如：
+     var person=new Object();
+     person.name='ss';
+     alert(person.name) //弹出ss
+     
+//   这里给引用类型值new object()对象赋给变量person,添加了name属性
+//   但是基本类型值就不能添加属性或方法,例如:
+     var name='ssa';
+     name.age=22;
+     alert(name.age)//这样会弹出undefined，因为这样的写法是错误的，基本类型值不能添加属性；
+	</script>
+	
+</html>

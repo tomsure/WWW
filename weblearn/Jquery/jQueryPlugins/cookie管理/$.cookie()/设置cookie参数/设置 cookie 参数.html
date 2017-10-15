@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../插件/carhartl-jquery-cookie-92b7715/jquery.cookie.js">
+		
+	</script>
+	<script type="text/javascript">
+		$.cookie('user','tom',{
+			expires:7, //设置cookie的期限，这里设置为7天过期
+			path:'/', //设置cookie的路径
+			domain:'127.0.0.1', //设置cookie所属的主机域名
+			secure:true //设置是否需要使用安全协议，默认为false，默认为不使用，这里设置使用
+		})
+/*		$.cookie()方法有三个参数,每个参数用逗号隔开,第一个和第二个是cookie的名和值,第三个参数是一个json格式的数据，包括以下几项：
+          expires: 用于设置cookie的期限;
+          path:用于设置cookie的路径，每次都要设置，
+          domain:  用于设置cookie所属的主机域名
+			secure: 用于设置是否需要使用安全协议，默认为false，默认为不使用，这里设置使用
+  */   
+     alert(document.cookie)
+     $.cookie('userName','bom');
+     alert(document.cookie)
+	</script>
+</html>

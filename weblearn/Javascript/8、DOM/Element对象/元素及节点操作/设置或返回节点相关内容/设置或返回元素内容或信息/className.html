@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var s=document.getElementById("dv1");
+			alert(s.parentNode.className)//返回了dv1这个元素的父级元素的classname；
+		 s.className="tom";//设置div1的claccName
+			var f=document.getElementById("dv");
+			alert(f.children[0].className)//返回div1的classname
+		}
+	</script>
+	<body>
+		<div id="dv" class="tomsure">
+		<div id="dv1">
+			
+		</div>	
+		</div>
+	</body>
+</html>

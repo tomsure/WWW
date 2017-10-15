@@ -1,0 +1,6 @@
+return语句还有一个功能就是退出当前函数，注意和break的区别。PS：break用在循环和switch分支语句里。
+function box(num) {	
+	if (num < 5)  return num;				//满足条件，就返回num
+	return 100;							//返回之后，就不执行下面的语句了
+}
+alert(box(10));

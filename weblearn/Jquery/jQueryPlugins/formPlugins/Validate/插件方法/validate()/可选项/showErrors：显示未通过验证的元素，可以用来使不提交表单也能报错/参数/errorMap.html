@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post" id="form">
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>密码: <input type="text"  name="password" id="password" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	},
+			    	password:{
+			    		required:true
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	},
+			    	password:{
+			    		required:"密码不得为空"
+			    	}
+			    },
+			
+			   showErrors:function(errorMap,errorList){
+			   	
+//			   	errorMap是showError方法中的第一个参数,它指的是showErrors方法返回的一个对象,这个对象包含所有有错误的input元素和对应的错误信息
+			   	$.each(errorMap, function(index,value) {
+			   		alert(index+":"+value)
+//			   		由于errorMap返回的是一个对象,包含多条一信息,所以这里采用$.each()的方式,可以遍历返回出所有的错误元素和错误信息
+			   	});
+			   	alert(errorMap.user)
+			   	//它里面的元素和对应的错误信息就组成了json键值对，所以可以通过这种方式获取对应的错误信息
+			   
+			   }
+			  
+			  
+		})
+		})
+
+	</script>
+</html>

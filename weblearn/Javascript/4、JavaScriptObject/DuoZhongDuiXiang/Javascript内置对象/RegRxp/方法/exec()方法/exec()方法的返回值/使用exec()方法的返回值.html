@@ -1,0 +1,37 @@
+
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+			
+	var regx=/user\d/g;// 这里的user\d只的是正则表达式匹配字符串,\d是指0到9的数字
+	var str='user18duser2duser3sc';
+var rs=regx.exec(str);//此时rs的值为{user1} 
+alert(rs);
+ var rs1=regx.exec(str);//此时rs的值为{user2} 
+ alert(rs1);
+ var rs2=regx.exec(str);//此时rs的值为{user3} 
+ alert(rs2)
+
+ document.write(rs.index)//0,在数组的0下标
+ document.write(rs1.index)//7，在数组的7下标
+  document.write(rs2.index)//13，在数组的13下标
+    //document.write(regx.exec(str).index)//报错没有找到，因为只有三个匹配的值
+ 
+    
+//  exec()方法返回的时候,如果没有匹配值则返回null,如果有返回,则同一个str每执行一次
+// exec()方法,就按顺序返回一次匹配的那个字符串,例如上面例子中有三个匹配的字符串,第一次执行exec()方法的时候返回user1,第二次执行时候返回user2,第三次执行的时候返回user3   
+//直到没有匹配的字符串的时候返回null  
+    //这样每次返回的匹配的字符串就形成一个数组，有两个属性，index，input
+	</script>
+</html>
+
+		
+		
+	</script>
+</html>

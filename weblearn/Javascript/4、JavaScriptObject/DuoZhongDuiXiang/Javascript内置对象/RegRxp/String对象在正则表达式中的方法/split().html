@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	//字符串对象的split()方法使用正则表达式就是使用正则表达式作为参数与字符串进行匹配，然后使用匹配的字符串将字符串str进行分割成一个数组；
+			var str='this is a box! that is a box !';
+	var reg=/!/
+		   document.write(str.split(reg));
+		   document.write(str.split(reg).length+'</br>')//返回的是一个数组
+		   
+	//正则表达式使用匹配的字符串对被匹配的字符串进行分割，返回一个数组且返回的分割后的数组不包含匹配的字符串，例如：
+	      var reg1=/a/;
+	       document.write(str.split(reg1)+'</br>')
+	      //在上面例子中匹配的字符串是a，而在页面 中显示出被分割的数组不包含a这个字符串，因为整个str就是以a来进行分割，且不包含a
+	
+	       document.write(str.split(reg1,2))
+		   //如果使用split()的第二个参数，则只显示分割后的数组的两个元素
+	</script>
+	
+</html>

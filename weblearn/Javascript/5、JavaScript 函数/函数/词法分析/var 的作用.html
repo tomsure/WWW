@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		alert(window.d);//undefined
+		alert(window.e)//undefined
+		function aa(){
+			d=5;//d仅仅是一个赋值操作
+		var	e=6;
+		
+		}
+		aa()
+	alert(window.d)//5
+	alert(window.e)//undefined
+//	分析:全局变量是window对象的属性,11行中执行的动作由于对象的变量初始值都是undefined,所以输出undefined	
+		
+		
+	</script>
+	
+	
+</html>

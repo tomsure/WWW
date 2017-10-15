@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	function box(){
+		var arr=[];
+		for(var i=0;i<5;i++){
+			arr[i]=function(){
+				return (i)
+			}
+		 }
+		return arr
+		}
+	   document.write(box())//此时执行后的box就是数组arr，所以可以打印数组的下表元素：
+//	   document.write(box()[0])；
+   //上一步打印出的是整个函数内循环后的数组，所以会有五个匿名函数
+	   document.write(box().length)
+	   var b=box()
+	   alert(b.length)
+		
+		
+	</script>
+</html>

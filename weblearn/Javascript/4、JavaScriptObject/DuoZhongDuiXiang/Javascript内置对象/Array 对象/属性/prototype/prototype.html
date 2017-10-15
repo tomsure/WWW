@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	
+	
+	<script type="text/javascript">
+	var arr=new Array();
+	   
+	    //console.log(arr.__proto__==Array.prototype);
+//	实例化后的数组对象arr的__proto__指向他的构造函数Array的prototype属性
+//	由于Array是一个构造函数,也是函数,所以他具有prototype属性
+		
+	 Array.prototype.sayHi=function(){
+			alert("hi")
+		}
+	arr.sayHi()
+	var dd=new Array()
+	dd.sayHi()
+		
+		
+		
+	</script>
+</html>

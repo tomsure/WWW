@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p>
+			用户名：<input type="text" name="" id="ipt" value="" />
+		</p>
+		<p>
+			性别：<input type="radio" name="sex" id="sex1" value="男" />男
+			<input type="radio" name="sex" id="sex2" value="女" />女
+		</p>
+
+		<p>个人介绍：<textarea name="" rows="" cols="" id="t1"></textarea></p>
+	</body>
+	<script type="text/javascript">
+		var ipt = document.getElementsByTagName('input');
+		var t1 = document.getElementById("t1");
+		
+		
+		
+		
+		/*******************获取storge数据，***************/
+		if(window.localStorage.getItem('name')) {
+			ipt[0].value = window.localStorage.getItem('name')
+		};
+		if(window.localStorage.getItem('sex')) { //如果存在这个stroge
+			for(var i = 1; i < ipt.length; i++) {
+				if(ipt[i].value == window.localStorage.getItem('sex')) {
+
+					ipt[i].checked = true
+						//如果打开的页面时候这个radio的value属性值和存储的stroge相等，则设置这个radio标签被选中，也就是设置checked=true
+				}
+
+			}
+		}
+		if(window.localStorage.getItem('text')) {
+			t1.value = window.localStorage.getItem('text')
+		}
+		//以上是读取storge数据，当页面打开的时候就会读取storge的值，如果存在输入框或者文本框的stroge数据，就将此stroge的value设置为当前输入框或者文本框的内容，性别的话还需要进行循环。
+
+
+
+
+		/*********************设置localStorge数据******************/
+		window.onunload = function() { //当页面关闭的时候 设置localStorage
+			if(ipt[0].value) { //如果用户名输入框有值，则执行下面所有的语句设置stroge：
+				window.localStorage.setItem('name', ipt[0].value)
+
+			} //设置用户名的storge
+			
+			for(var i = 1; i < ipt.length; i++) { //因为有两个radio，所以要先循环，使他们都可以设置stroge，这里循环从1开始，是因为ipt[0]已经设置stroge
+				if(ipt[i].checked == true) { //如果有radio被选中，则之心一下语句：
+					window.localStorage.setItem('sex', ipt[i].value)
+						//					设置stroge的value值为当前checked==true(也就是已被选中)的这个radio的value
+				};
+			}; //设置性别的storge
+			
+			if(t1.value) { //如果文本框存在内容，则：
+				window.localStorage.setItem('text', t1.value)
+			} //设置文本框的storge
+		}
+	</script>
+
+</html>

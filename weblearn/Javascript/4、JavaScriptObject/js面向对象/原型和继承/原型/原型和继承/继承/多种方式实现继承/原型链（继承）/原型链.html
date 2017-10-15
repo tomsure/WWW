@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		function laohu(){
+			
+			this.bark=function(){
+				alert('我是老虎')
+			}
+		}//构造函数
+		var dongbeihu=new laohu();//实例化对象,这个实例对象继承构造函数的方法和属性；
+		dongbeihu.bark();//这个实例对象有了laohu的方法；
+		
+		function cat(){
+			this.say=function(){
+				alert('我会爬树')
+			}
+		}//创建构造函数cat
+		 
+		laohu.prototype=new cat();//设置laohu的原型对象为new cat()，此时他的原型对象就有了cat的方法
+		
+		var huananhu=new laohu();//再实例化一次laohu
+		huananhu.say();
+		huananhu.bark()
+		//此时huananhu会同时拥有laohu和cat的方法，而dongbeihu只有laohu的方法bark；
+		
+		
+//原型链：构造函数A创建以后，他的实例化对象a会有他的原型对象的属性和方法		
+//	 a自己的方法就是构造函数A中声明的方法和属性,如果声明了另一个构造函数B,且将A的prototype设置为B的实例化对象new B(),此时重新实例化对象A(例如aa=new A()),那么新的实例化对象aa就会拥有构造函数A和构造函数B里面的方法,这就是原型链继承
+    function A(){
+    	this.sayA=function(){
+    		document.write('我有A的方法'+'</br>')
+    	}
+    }
+    
+    function B(){
+    	this.sayB=function(){
+    		document.write("我有B的方法"+'</br>')
+    	}
+    }
+    
+    B.prototype=new A()
+    
+    function C(){
+    	this.sayC=function(){
+    		document.write('我有C的方法'+'</br>')
+    	}
+    }
+
+    C.prototype=new B();
+    var abc=new C();
+    abc.sayA();
+    abc.sayB();
+    abc.sayC()
+   //abc同时拥有了函数 A/B/C中的方法 ，
+  
+
+
+
+		
+		
+		
+		
+		
+	</script>
+</html>

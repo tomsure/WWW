@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		 #myCanvas{ border: 1px solid red;} 
+	</style>
+	<script type="text/javascript">
+	
+		window.onload=function(){
+			var  ss=document.getElementById("myCanvas");
+			var dd=ss.getContext("2d");
+		
+			dd.strokeStyle="#006400";  //strokeStyle 属性设置或返回用于笔触(目前理解为边框)的颜色、渐变或模式。
+			dd.moveTo(100,0);//设置路径 移动的起始坐标，就是线条的起始位置坐标；
+			/*两个值： x	路径的目标位置的 x 坐标。
+                      y	路径的目标位置的 y 坐标。*/
+			
+			dd.lineTo(100,200);//创建指定为这个坐标的线条，基于stroke()路径的moveTo()的坐标
+			//相当于一条划线的结束坐标
+			
+			dd.lineTo(200,200)//创建第二个结束点，lineTo可以在一次会途中多次连续出现
+			dd.lineTo(200,300)
+			
+			/*两个值： x	路径的目标位置的 x 坐标。
+                      y	路径的目标位置的 y 坐标。*/
+			
+			dd.stroke(); //结束绘图
+		}
+	</script>
+	<body>
+		<canvas id="myCanvas" width="300" height="300"></canvas>
+	</body>
+</html>

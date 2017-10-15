@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<style type="text/css">
+		body{margin: 200px;}
+	</style>
+	<body>
+		<ul class="nav nav-tabs">
+			<li  class="active"><a href="#html5"  data-toggle="tab">HTML5</a></li>
+			<li><a href="#css3" data-toggle="tab">CSS3</a></li>
+			<li><a href="#bootstrap" data-toggle="tab">Bootstrap</a></li>
+			<li><a href="#jquery" data-toggle="tab">jQuery</a></li>
+		</ul>
+		<div class="tab-content" style="padding: 10px;">
+			<div id="html5" class="tab-pane active" >A</div>
+			<div id="css3" class="tab-pane">
+				B
+				</div>
+			<div id="bootstrap" class="tab-pane">
+				C</div>
+			<div id="jquery" class="tab-pane">
+				D
+			</div>
+		</div>
+		
+		
+	</body>
+	<script type="text/javascript" src="../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+		
+	</script>
+	<!--创建选项卡步骤：
+		1，创建两个元素：
+		   a:一个ul，类名为nav nav-tabs,里面包含多个li，每个li包含一个a标签；
+		   b：一个div，类名为nav-content,里面包含多个div；
+		   nav-tabs里面的li数量要与nav-content里面子元素div的数量相同
+		2，给ul nav-tabs下面的每一个li里面的a标签添加属性data-toggle="tab"；
+		3，将每个ul li里面的a标签的href属性，按照先后顺序填写div 下面每个div的id;
+		
+		
+		4， 给div nav-content下面的每一个div子元素添加 一个类名class="tab-pane"，一个id号，第一个div添加一个active类；
+		5,设置默认显示选项；将ul里面的第一个li和它对应的div各加一个类名active，如果不要第一个默认显示可以不设 ，或者设置 其他的默认显示，就给其他的li和div添加active类名
+		
+		
+		
+		
+		
+		
+	-->
+</html>

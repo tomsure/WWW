@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			-webkit-animation: dv 2s alternate;
+			
+		}
+		@-webkit-keyframes dv{
+			to{
+				width:150px;
+				height:150px;
+				background-color:green;
+			}
+			/*to方式就是在@-webkit-keyframes开面设置from,在to里面设置样式,然后动画开始的时候动画由原本设置的样式变成元素这个to里面设置的样式，例如这里div原本是红色背景，to里面是绿色背景，设置后就是从红色变成绿色*/ 
+			
+			
+		}
+	</style>
+	<body>
+		<div id="">
+			
+		</div>
+	</body>
+</html>

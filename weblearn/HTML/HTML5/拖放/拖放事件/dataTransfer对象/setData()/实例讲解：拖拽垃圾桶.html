@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		li{
+			background-color: yellow;
+			margin-bottom: 10px;
+			width: 200px;
+		}
+		div{
+			width: 300px;
+			height: 200px;
+			background-color: grey;
+		}
+	</style>
+	
+	<body>
+		<ul id="Oul">
+			<li draggable="true">1</li>
+			<li draggable="true">2</li>
+			<li draggable="true">3</li>
+			<li draggable="true">4</li>
+		</ul>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		var Oli=document.getElementsByTagName("li")
+		var Oul=document.getElementsByTagName('ul')[0]
+		 for(var i=0;i<Oli.length;i++){//注意这里i是小于Oli.length而不是小于等于            
+		 	  Oli[i].index=i //在这里将循环中每一个li的下表设置为i,这样可以在39行中把这个下标保存在setData()设置的数据中
+		      Oli[i].ondragstart=function(ev){
+		       ev.dataTransfer.setData('user',this.index)
+		       //这里setData()方法中第二个参数的解释：由于前面已经设置了当前循环到的li的下标i就是i，所以在这里this.index就表示现在循环到的下标，也就是i，例如循环到Oli[1](也就是第二个li)的时候，这个li的index就是1,在这里把他保存在数据中供后面读取
+		        
+		        this.style.background='green';
+		        
+		      }
+		      Oli[i].ondragend=function(ev){
+		        	this.style.background='yellow'
+		        }
+		      dv.ondragover=function(ev){
+		      	ev.preventDefault()
+		      };
+		      dv.ondrop=function(ev){
+		      //	alert(Oli[ev.dataTransfer.getData('user')])
+//		        在这个事件函数中可以读取到前面设置的数据，由于前面设置的数据是当前拖拽的li的下标，所以在这里就可以读取到当前拖拽的元素的下标
+		      	Oul.removeChild(Oli[ev.dataTransfer.getData('user')])
+		      	/*在ondrop事件函数中删除Oul的子元素节，由于在这里可以通过getData()方法读取到获取到的当前拖拽的元素的下标，所以将这个下标设置为要删除的元素的下标，这样就可以删除掉当前拖拽的元素
+		      	 */
+		      	
+		      	
+		      	
+//		      	注意:在执行这一步之后,已经有删除的效果了,但是从上面开始拖拽删除的时候页面上显示的li出现顺序错乱,第二个li一直显示在那里不消失，到了最后一次拖拽删除的时候就报错，这是因为li索引的问题，当删除一个之后，每一个剩下的li的下标位置发生了变化，所以需要在这里进行重新索引循环一下li的下标，如下：
+		      	for(var i=0;i<Oli.length;i++){//第二次循环
+		      		Oli[i].index=i
+		      	}
+		      }
+		      
+		 }
+	</script>
+</html>

@@ -1,0 +1,21 @@
+.truth(@a)when(@a){//调用的时候传入的参数必须为true，才会执行代码
+    
+     width: 100px;
+     background-color: red;
+}
+//.truth(@a)when(@a = true){ //调用的时候传入的参数必须为true，才会执行代码
+//   height: 100px;
+//   }
+     
+div{
+    .truth(true)
+}
+
+
+//true关键字表示真，类似js中的存在某一个变量，会写变量=true，这里when里面写一个变量名，或者变量名=true，表示在调用混合的时候，输入的参数必须是true的时候才会执行大括号里面的样式,其他参数值都不会执行
+
+//  when(@a)等同于when(@a=true)
+
+
+
+

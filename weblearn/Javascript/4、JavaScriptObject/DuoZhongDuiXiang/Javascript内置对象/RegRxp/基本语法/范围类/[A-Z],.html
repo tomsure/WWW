@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		[a-z]表示匹配所有的a-z的小写英文字母；
+     var str='xmaiw85ccqWZwm984xmoqjxQmq93uxJRWJXxiowmxj';
+     var reg=/[A-Z]/g;
+     document.write(reg.exec(str)+'</br>');//第一次执行 返回第一个匹配字符串
+     document.write(reg.exec(str)+'</br>')//第二次执行返回第二个，以此类推；
+     document.write(str.match(reg)+'</br>')//返回所有的大写英文字母；
+     
+     document.write(reg.test(str))//true
+     
+ 
+		
+	</script>
+</html>

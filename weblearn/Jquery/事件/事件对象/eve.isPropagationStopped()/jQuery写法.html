@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		
+		div{width:200px;height:200px ;background-color:yellow ;margin:10px ;}
+		span{width:100px ;height:100px ;background-color:green ;display: block;}
+	</style>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*event.isPropagationStopped() 方法检查指定的事件上是否调用了 event.stopPropagation()。
+如果 event.stopPropagation() 被调用则该方法返回 true，否则返回 false。*/
+     $(function(){
+     	$("#dv").on("click",function(){
+     		alert("div的点击事件")
+     		//点击div的时候弹出“div的点击事件”
+     	})
+     	$("#sp").bind("click",function(){
+     		alert("span的点击事件")
+     		//点击span的时候，弹出“span”的点击事件，这个时候会弹出div的点击事件和span的点击事件，因为这里存在事件冒泡 
+     	})
+     	$("#sp1").on("click",function(e){
+     		e.stopPropagation();
+     		alert("span的点击事件")
+     		alert(e.isPropagationStopped())
+     		//这里弹出true，说明前面调用了当前事件对象的stopPropagation()方法，如果前面没有调用则弹出false
+     	})
+     	
+     })
+	</script>
+	<body>
+		<div id="dv">
+			<span id="sp">
+				
+			</span>
+		</div>
+		<div id="dv1">
+			<span id="sp1">
+				
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>邮箱: <input type="text"  name="e-mail" id="e-mail" value="" />(必填)</p>
+			<!--必填项后面添加上class="required"-->
+			<p>URL: <input type="text" name="url" id="url" value="" /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$.validator.addMethod('postcode',function(value,element,param){
+//		   method:代表一个函数,是对这个规则的定义过程,他有三个参数,第一个参数:
+//		     value:代表用户输入的表单的值;
+//		     element:代表当前这个验证的表单元素;
+//		     param:
+				var regCode=/^[0-9]{6}$/;
+				return this.optional(element)||regCode.test(value);
+
+			},"请填写正确的邮政编码")
+		
+			$('form').validate({
+				rules:{
+					user:{
+						postcode:true,
+						required:true
+					}
+				}
+			})
+		
+			
+		})
+ 
+	</script>
+</html>

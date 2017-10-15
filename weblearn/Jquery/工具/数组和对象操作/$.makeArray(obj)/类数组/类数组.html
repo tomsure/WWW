@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-1.11.1/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*将类数组对象转换为数组对象。
+类数组对象有 length 属性，其成员索引为 0 至 length - 1。实际中此函数在 jQuery 中将自动使用而无需特意转换。*/
+ 
+       /****************类数组定义**********************/
+        //对象的集合属于类数组，但不是真正 的数组，只是类似与数组的集合
+        $(function(){
+        var  ss=document.getElementsByTagName("div");
+            alert($("div")[1].id)
+            //弹出div的id。这里div这个元素集合可以用过下表的方式获得其id。类似于数组，但是它不是真正的数组，只是类数组，所以无法使用数组的方法
+            //如果要让这种类数组使用数组的方法，则用该使用makeArray()方法将类数组转化成数组；
+               var ed=$.makeArray(ss)
+               //将ss这个类数组转换成数组
+                 alert(ed.push("div"))
+                //转换之后就可以使用数组的方法
+        })
+        
+	</script>
+	<body>
+		<div id="dv">
+			1
+		</div>
+		<div id="dv1">
+			2
+		</div>
+		<div id="dv2">
+			3
+		</div>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+//		(function(){
+//			alert(1)
+//		})() //会弹出1
+
+     var module1=(function(){
+      	    var a=1;
+      	    var b=function(){
+      	    	alert(2)
+      	    };
+      	    var c=function(){
+      	    	alert(3)
+      	    };
+      	    return {
+      	    	
+      	    	b:b,
+      	    	c:c
+      	    	      	    }
+      })()
+      
+      module1.b(); //2
+      module1.c() //3
+      
+      alert(module1.a) //undefined
+      
+ 
+//    立即执行函数的方法就是使用闭包 return返回内部数据的形式封装，当函数内部如果返回了声明的数据，则调用的时候会返回，如果函数内部没有使用return返回内部数据，则调用的时候就会是undefined，这种形式避免了外部代码修改函数内部数据的缺陷
+	</script>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var str='25235fdfdggfhyyuyi'
+		 var reg=new RegExp('\\d')//这里括号里的参数\d代表需要匹配的字符串，前面一个斜杠是转义，由于这种带反斜杠的有各种含义属于转义后的字符串，如：\d就代表0-9的数字，\w就代表a-z的字母，所以在使用new运算符构造函数创建的正则表达式的时候，需要在前面再加一个\
+		 document.write(reg.test(str))
+		
+	</script>
+</html>

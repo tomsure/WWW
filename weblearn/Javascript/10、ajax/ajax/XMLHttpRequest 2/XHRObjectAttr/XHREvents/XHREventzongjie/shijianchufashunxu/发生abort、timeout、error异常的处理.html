@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		在请求的过程中，有可能发生 abort/timeout/error这3种异常。那么一旦发生这些异常，xhr后续会进行哪些处理呢？后续处理如下：
+//
+//一旦发生abort或timeout或error异常，先立即中止当前请求
+//将 readystate 置为4，并触发 xhr.onreadystatechange事件
+//如果上传阶段还没有结束，则依次触发以下事件：
+//xhr.upload.onprogress
+//xhr.upload.[onabort或ontimeout或onerror]
+//xhr.upload.onloadend
+//触发 xhr.onprogress事件
+//触发 xhr.[onabort或ontimeout或onerror]事件
+//触发xhr.onloadend 事件
+	</script>
+</html>

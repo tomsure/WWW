@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		 
+		 
+		 
+	</script>
+	
+	<body>
+		<p><a href="http://www.codes51.com/article/detail_139258.html">蚂蚁之家解释</a></p>
+			<img src="词法分析截图/1.png"/>
+			<p>js发词法分析，分析三样东西：
+			第一步：先分析参数；
+			第二部：分析变量声明；
+			第三部:分析函数声明；
+			一个函数能使用的局部变量就从这三步而来；
+			
+			具体步骤：
+			0：函数运行的一瞬间生成Active Object（活动对象），下称AO;
+			1:
+			   1.1，函数声明时候的参数，形成AO的属性，值全是undefined；
+			   1.2，接收实参，形成AO属性相应的属性的值；
+			2：分析变量声明！注意是分析变量声明！而不是变量赋值，例如：var a; 而不是a=1；
+			   如果AO上还没有age属性，则添加AO属性，值是undefined！
+			   如果AO上已经有age属性， 则不作任何影响；
+			3：分析函数声明，如function
+			
+			
+			
+			
+			</p>
+	</body>
+</html>

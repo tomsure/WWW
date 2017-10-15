@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	 div {  width: 100px;height: 100px;}
+	.blue { background:blue ;}
+	.red {background: red;}
+		
+	</style>
+	<body>
+		<div id="dv" class="blue">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+	//兼容性事件绑定
+	function addEvent(obj,type,fn){
+			if(obj.addEventListener){//如果是W3C浏览器
+				obj.addEventListener(type,fn,false)//
+			}else if(obj.attachEvent){//如果只IE浏览器
+				obj.attachEvent('on'+type,fn)
+			}
+		}
+//	兼容性事件删除
+	function removeEvent(obj,type,fn){
+			if(obj.removeEventListener){
+				obj.removeEventListener(type,fn,false)
+			}else if(obj.detachEvent){
+				obj.detachEvent('on'+type,fn)
+			}
+		}
+	
+	//兼容性获取目标事件对象
+	function getTarget(evt){
+			
+			if(evt.target){//如果事件对象有target属性
+				return evt.target
+			}else if(window.event.srcElement){//如果事件IE事件对象对象有srcElement方法
+				return window.event.srcElement
+			
+			}
+		}
+	
+	
+	
+	  var dv=document.getElementById('dv')
+	     addEvent(dv,'click',toRed);
+	    
+	
+	  	function toRed(evt){
+	  	    
+	  		var that=getTarget(evt);
+	  		that.className='red';
+	  		
+	  		removeEvent(that,'click',toRed)
+	  		addEvent(that,'click',toBlue)
+	  		
+	  	};
+		function toBlue(evt){
+			
+			var that=getTarget(evt);
+			
+			that.className='blue';
+			
+			removeEvent(that,'click',toBlue);
+			addEvent(that,'click',toRed)
+			
+			}
+	  
+	
+	
+	
+		
+		
+		
+	</script>
+</html>

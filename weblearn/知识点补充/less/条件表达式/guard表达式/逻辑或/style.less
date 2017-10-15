@@ -1,0 +1,15 @@
+.style(@color)when(lightness(@color)<50%),(@color=#ffffff){
+    
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    
+}
+
+
+
+div{
+    .style(#ffffff)
+}
+
+//when()后面还可以设置条件，用逗号隔开，再写一个小括号，里面可以设置条件，这样的写法表示或的意思，意思是传入的参数满足when()里面的条件和逗号后面的条件其中一个就可以

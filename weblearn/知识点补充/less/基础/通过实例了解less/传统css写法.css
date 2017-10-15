@@ -1,0 +1,29 @@
+
+
+
+div {
+	width: 300px;
+	height: 300px;
+	border: 1px solid red;
+	margin: 20px;
+}
+ul {
+	margin: 10px;
+}
+
+  /*ul的样式*/
+
+ ul li{
+	list-style: none;
+}
+
+   /*ul下面的li的样式*/
+
+ul li a{
+      text-decoration: none; 
+       /*去掉下划线*/
+	    
+}
+  /*ul下面的li里的a的样式*/
+
+/*这是传统写法*/

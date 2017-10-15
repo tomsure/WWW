@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="drawing">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../dist/snap.svg.js">
+		
+	</script>
+	<script type="text/javascript">
+		var draw = SVG('drawing').size(300, 300)
+//         创建svg标签步骤:
+//         1,在html里创建一个div,设置一个id属性;
+//         2,在js里面使用SVG()方法创建svg,参数就是html里面设置的div的id,并使用size()方法设置svg的width和height；并将这个方法执行过程赋给一个变量；
+  console.log( typeof draw) //返回的是一个svg对象
+	</script>
+</html>

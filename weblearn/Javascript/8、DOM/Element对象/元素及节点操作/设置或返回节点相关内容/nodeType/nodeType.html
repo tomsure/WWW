@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			 s=document.getElementById("dv")
+		alert( s.nodeType)//弹出1，代表div的节点类型是元素;
+		alert(s.childNodes.length)//弹出3，表示div有三个节点（包括空格）
+		
+		alert(s.childNodes[1].childNodes[0].nodeType)//弹出3，代表ul的第一个（下标为0）子节点的节点类型 是文本节点---->>>这里是空格
+		
+		}
+		
+		</script>
+	<body>
+	<div id="dv">
+		<ul>
+			<li>哪年啊</li>
+		</ul>
+	</div>
+	</body>
+	js DOM节点类型：
+</html>

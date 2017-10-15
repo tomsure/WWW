@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>
+				用户名: <input type="text"  name="user" id="user" value="" />
+				
+			</p>
+			<p>
+				密码: <input type="password"  name="pass" id="pass" value="" />
+			</p>
+				<p><input type="checkbox" name="run_type" id="" value="" />
+				<input type="checkbox" name="run_type" id="" value="" />
+				<input type="checkbox" name="run_type" id="" value="" />
+				</p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript"  src="../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+		var validator=$('form').validate({
+		
+			    rules:{
+			    	user:{
+			    	minlength:4,
+
+			    	},
+			    	pass:{
+			    		minlength:5
+			    	},
+			    	run_type:{
+			    		required:true,
+			    		minlength:2
+			    		
+			    	}
+			   
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"用户名不得少于4位",
+			    		maxlength:"输入不得超过8位"
+			    	},
+			    	pass:{
+			    		minlength:"密码不得少于5位"
+			    	},
+			    	run_type:{
+			    		required:"请选择",
+			    		minlength:"最少选择两个"
+
+			    	}
+			    	
+			    }
+			    
+			  
+       
+			
+		});
+
+        
+	  $('#user').rules('add',{required:true,maxlength:8})
+       
+       
+       
+        
+		})
+     
+	</script>
+</html>

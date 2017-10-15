@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta name="" content="" charset="utf-8"/>
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width: 200px;
+		height: 200px;
+		background-color: red;}
+		
+		
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/老版本/jquery-2.0.3/jquery-2.0.3.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			//设置动画的时间间隔，动画不会连续变化，而是设定的时间隔一次动一次
+			$("#btn1").click(function(){
+				$.fx.interval=200;   //设定为200微秒动一次，点击这个按钮看不出效果
+				
+			})
+			$("#btn2").click(function(){
+				$("div").toggle(2000) //设置动画显示和隐藏的动画时间为两秒
+			})
+		})
+	</script>
+	<body>
+		<div id="">
+			
+		</div>
+		<button id="btn1">点击测试</button>
+		<button id="btn2">点击测试</button>
+	</body>
+</html>

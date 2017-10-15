@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#myCanvas{ border: 3px dashed red;}
+		</style>
+	</head>
+	<script type="text/javascript">
+	/*strokeText() 方法在画布上绘制文本（无填充色）。文本的默认颜色是黑色。
+提示：请使用 font 属性来定义字体和字号，并使用 strokeStyle 属性以另一种颜色/渐变来渲染文本。*/
+      //strokeText()绘制的是空心字
+		window.onload=function(){
+			var  ss=document.getElementById("myCanvas").getContext("2d");
+			ss.font="100px 楷体";
+			ss.strokeText("你好",100,100)
+			
+			
+			
+			
+		}
+		
+		
+	</script>
+	
+	<body>
+		<canvas id="myCanvas" width="400" height="400"></canvas>
+	</body>
+</html>

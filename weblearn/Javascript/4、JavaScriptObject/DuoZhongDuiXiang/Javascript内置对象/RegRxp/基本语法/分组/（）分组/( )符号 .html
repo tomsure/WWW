@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		()符号表示将一个单词或者一串字符串进行分组匹配；
+     var str='abcde fg';
+     var reg=/(ef)/g;
+     document.write(reg.test(str)+'<br/>')//false,这里不匹配，因为str中ef之间有空格
+     
+     var str1='efff1233333354';
+     var reg1=/(\d){5}/g//匹配6个数字
+     document.write(reg1.test(str1)+'</br>')
+     //这里匹配str1中的6个字符所以只会匹配到
+     
+     
+     
+     var str2='google';
+     var  str3='google4444';
+     var reg2=/google{4,8}/g;
+     var reg2=/(google){4,8}/;
+     document.write(reg2.test(str2)+'</br>');
+     document.write(reg2.test(str3)+'</br>')
+     document.write(reg2.test(str2))//google没有达到4次所以返回false，这里匹配的是google，google被括号包起来了，就表示分组了
+     
+	</script>
+</html>

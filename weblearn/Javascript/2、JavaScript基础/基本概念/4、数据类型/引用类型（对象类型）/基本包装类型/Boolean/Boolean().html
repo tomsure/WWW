@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//Boolean()方法用于把任意值转换成布尔值，例如：
+
+//他是一种方法*************
+
+/**************************构造函数**********************************/
+        document.write(typeof Boolean+'1</br>')// function  原本是构造函数
+        document.write( Boolean(Boolean)+'</br>') //true
+        
+        document.write(typeof Array+'2</br>') //funton
+        document.write(Boolean(Array)+'00</br>')
+        
+        document.write(typeof Date+'3</br>')//function
+        
+         document.write(Boolean(Date)+'4</br>')
+         
+        document.write(typeof RegExp+'5</br>')
+         
+          document.write(Boolean(RegExp)+'6</br>')
+          
+        document.write(typeof Object+'7</br>')
+          
+           document.write(Boolean(Object)+'8</br>')
+        document.write(typeof Function+'9</br>')
+           
+            document.write(Boolean(Function)+'10</br>')
+        document.write(typeof Number+'11</br>')
+            
+             document.write(Boolean(Number)+'12</br>')
+        document.write(typeof String+'13</br>')
+             
+              document.write(Boolean(String)+'14</br>')
+              
+//          转换构造函数后都是true  
+              
+              
+              
+   /************************特殊值************************/
+   document.write(typeof undefined+'15</br>')//undefined
+              
+               document.write(Boolean(undefined)+'16</br>')//false
+//             转换undefined的值为false
+        document.write(typeof null+'17</br>')//object,语言开发bug
+               
+         document.write(Boolean(null)+'18</br>')//false
+         //转换null值后为false
+         
+         document.write(typeof NaN +'199</br>')
+         document.write(Boolean(NaN)+'</br>')//false
+         
+         
+         
+    /***********************数值和字符串****************************/     
+        document.write(typeof 1234+'19</br>')
+            document.write(Boolean(1234)+'20</br>')//true
+         document.write(Boolean(0)+'21</br>') //false
+         document.write(Boolean('asxd')+'22</br>') //true
+         document.write(Boolean('')+'23</br>')  //false
+         document.write(Boolean(1)+'24</br>') //true
+        //布尔值转换不为空的字符串和不为零的数值的值是true，空值和0是false 
+         
+         
+         
+         /******************对象************************/
+         
+         document.write(typeof new Object()+'26</br>')
+         document.write(Boolean(new Object())+'25</br>')//
+         document.write(typeof new String+'26</br>')
+         document.write(Boolean(new String())+'25</br>')//
+         document.write(typeof new Number()+'26</br>')
+         document.write(Boolean(new String())+'25</br>')//
+         document.write(typeof new Boolean()+'26</br>')
+         document.write(Boolean(new Boolean())+'25</br>')//
+         
+         
+         function aa(){}
+         var bb=new aa()
+         document.write(typeof aa+'</br>')
+         document.write(Boolean(bb))//true
+        //布尔值转换对象，都会成为true
+        
+        
+        
+
+
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

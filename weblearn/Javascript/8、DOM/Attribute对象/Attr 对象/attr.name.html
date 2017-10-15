@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//返回属性名称
+	window.onload=function(){
+	var dd=document.getElementById("dv");
+	alert(dd.attributes[0].name)//这里dd.attributes表示节点集合NameNodeMap，dd[0]代表具体的属性节点,这里返回了节点的名称
+	//与nodeName 的值相同
+	}
+	</script>
+	<body>
+	<div id="dv">
+		
+	</div>
+	</body>
+</html>

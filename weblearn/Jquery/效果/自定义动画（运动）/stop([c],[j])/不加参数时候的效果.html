@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div {
+			width: 30px;
+			height: 30px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-1.7.2/jquery.min.js">
+	</script>
+	<script type="text/javascript">
+		$(function() {
+			$("#btn1").click(function() {
+				$("div").animate({
+					width: "300px"
+				}, 2000).animate({
+					height: "300px"
+				}, 1000);
+			})
+			$('#btn').click(function() {
+				$('div').stop()
+			})
+		})
+
+	</script>
+
+	<body>
+		<div id="">
+
+		</div>
+		<input type="button" name="" id="btn1" value="点击开始" />
+		<button id="btn">点击停止</button>
+
+	</body>
+<!--stop()如果没有设置参数，执行这个方法的时候，当前的运动会停止，但是，其他的运动就会开始执行，当再次执行animate()方法的时候，停止运动的元素就继续运动;但是如果是在第一个运动里面的回调函数里面有其他运动，则里面的运动也会停止，因为前面的运动没有完成-->
+</html>

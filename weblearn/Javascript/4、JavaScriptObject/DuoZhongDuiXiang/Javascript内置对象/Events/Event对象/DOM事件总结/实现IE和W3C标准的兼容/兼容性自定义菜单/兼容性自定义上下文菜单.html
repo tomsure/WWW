@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		ul li{ 
+			list-style: none;
+			border: 1px solid red;
+			width: 150px;
+		}
+		ul { display: none;
+		 position: absolute;
+		 background: blue;
+		}/*菜单选项默认必须是隐藏的，暂时不设置top和left值,在js中设置*/
+		textarea {width: 200px;height:200px;}
+	</style>
+	<body>
+		<ul id="menu">
+			<li>选项1</li>
+			<li>选项2</li>
+			<li>选项3</li>
+		</ul>
+		<textarea  id="text" rows="" cols=""></textarea>
+		
+		
+	</body>
+	<script type="text/javascript">
+	       function preDef(evt){
+		   var ev=evt||window.event;
+		   if(ev.preventDefault){//如果支持此属性（方法）
+		   	ev.preventDefault() //则执行此方法
+		   }else{
+		   	ev.returnValue=false;//否则执行此属性（方法）
+		   }
+		   };
+		   //阻止默认事件函数封装
+	
+	
+//	    事件绑定兼容:
+	
+	
+	
+		var t1=document.getElementById("text");
+		t1.addEventListener('contextmenu',function(evt){
+			preDef(evt)//阻止默认事件，这里是调用兼容性函数
+			var menu=document.getElementById("menu");
+			var ev=evt||window.event;
+		
+			menu.style.left=ev.clientX+'px';
+//			alert(menu.style.left)
+			menu.style.top=ev.clientY+'px';
+			menu.style.display='block';//  当点击鼠标右键的时候,ul模拟的菜单显示
+			
+			document.addEventListener('click',function(){
+				menu.style.display='none';
+			})//当点击文档页面的时候，菜单选项不显示；
+		})
+		
+		
+		
+	/*创建	自定义兼容性上下文菜单步骤:
+	
+	1,创建上下文菜单元素:ul+li;
+	2,设置ul的css postion属性为absoulate,绝对定位;display为none,必须默认隐藏;暂时不设置top和left值,在js中设置
+	3,给需要使用上下文菜单的元素绑定oncontexmenu事件,事件函数中执行以下步骤:
+	A,阻止浏览器默认事件,用来阻止默认的菜单显示;
+	B,获取自定义的菜单元素ul;
+	C,设置事件对象兼容性;
+	D:设置自定义的菜单元素ul的top和left属性分别为事件对象的clientY和clientX(将菜单的位置设置为鼠标指针的坐标)+'px',因为是设置元素的CSS样式,所以必须加上'px'
+	F:当点击文档他位置的时候需要自定义菜单不显示,所以设置其display属性为"none";
+	
+	*/
+		
+//未完,必须需要使用兼容性的事件处理程序.
+		
+		
+	</script>
+</html>

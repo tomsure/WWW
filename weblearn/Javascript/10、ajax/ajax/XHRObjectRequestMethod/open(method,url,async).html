@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var XHR;
+		if(window.XMLHttpRequest){
+			XHR=new XMLHttpRequest()//如果浏览器支持XMLHttpRequest对则创建XMLHttpRequest
+		}else{
+			XHR=new ActiveXObject('Microsoft.XMLHTTP')//如果不支持则创建ActiveXObject对象
+		}
+		XHR.open('GET','../liziURL/demo.php',false);//使用同步方式请求
+         XHR.send()//发送请求
+		alert(XHR.status)
+//		open()方法是打开客户端与服务器的连接,并且设置好发情请求的方法/URL/同步还是异步发送
+		
+	</script>
+</html>

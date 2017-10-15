@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+//		start:截取数组开始的位置，如果是负数，则从数组的最后一个元素开始截取，例如:
+
+    var arr=['a','b','c','d','f','g']
+      var a=arr.slice(-3,-1)
+
+    document.write(a)//d，f从倒数第三个开始截取
+
+
+
+//		end:截取数组结束的位置,但是不包括这个数组,如果没有写end参数，则会截取从截取开始的下标到数组的最后一个元素，例如：
+
+   var brr=['ss','cc','ww','dc'];
+      var aa=brr.slice(1)
+       console.log(aa) //cc,ww,dc全部被截取
+
+
+//注意:截取数组是按顺序从前往后截取,开始值和结束值为负数也如此		
+		//例如
+		var arr=['a','b','c','d','f','g']
+      var a=arr.slice(-3,-1)//d,f这是从前往后的，只不过是把下标用负数表示而已，所以结束的元素一定是在数组中开始元素的后面
+      
+	</script>
+</html>

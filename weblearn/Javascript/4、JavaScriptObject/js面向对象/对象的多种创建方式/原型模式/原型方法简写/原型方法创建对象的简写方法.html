@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(){};
+		Person.prototype.name='tom';
+		Person.prototype.job='worker';
+		Person.prototype.sayName=function(){
+			alert(this.name)
+		}//原型方式创建对象
+		var person1=new Person()//实例化对象
+		document.write(person1.name+'</br>')
+		
+     /************************************************************/		
+	//以上方法每给原型添加一次方法都要写一次Person.prototype.属性名。这样比较繁琐，所以可以使用字面量（json）的形式写原型对象的属性，例如：
+	
+	    function Person(){}
+	    Person.prototype={
+	    	name1:'ooo',
+	    	job1:'nnn',
+	    	sayName:function(){
+	    		alert(this.name1)
+	    	}
+	    }
+	    var person2=new Person()
+	    document.write(person2.name1+'</br>') //ooo
+	    
+	//这样写的话比较简单，但是此时原型对象的constructor就不是构造函数Person了而是Object，例如：
+	      document.write((person2.constructor==Person)+'</br>')//false
+	     //返回false，说明Person不是person2的构造函数；
+	     document.write((person2.constructor==Object)+'</br>')//true
+	    //这里返回true，说明他的构造函数是Object
+	
+//	只不过使用instanceof方法返回时候还是正确（true）
+	 document.write((person2 instanceof Person)+'</br>') //true,这里还是返回true，实际上Person已经不是person2的构造函数；
+	     document.write((person2 instanceof Object)+'</br>')//true
+	
+	/*********************************************************/
+//	可以指定所需要的constructor属性:
+
+//   按照以上方法实例对象的constructor属性变成了Object,但是如果一定需要原来的构造函数作为constructor的话,可以使用以下方法:
+
+        function Person1(){}
+        Person1.prototype={
+        	constructor:Person1,
+        	name:'tom',
+        	job:'worker'
+        	
+        }
+        var personA=new Person1();
+        document.write(personA.constructor==Person1)//true
+     //现在可以看到实例对象的constructor属性已经变成了指定的constructor：创建对象的构造函数；
+     
+     //注意：  使用上面这种方式重设constructor属性的话会将constructor的[Enumerable]的特性变为true，因为默认情况下原生对象的constructor属性是不可枚举的，意思就是[Enumerable]为false，如果需要兼容ECMA5的话就要重设构造函数，使用defineProperty()方法,例如：
+     
+     
+         
+     
+     
+   
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+		
+		
+		
+	</script>
+</html>

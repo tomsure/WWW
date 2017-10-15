@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			left: 0px;
+			position: absolute;
+		
+			-webkit-animation: divC 7s 5;
+			        /*以下是animation-direction 属性定义是否循环交替反向播放动画*/
+			animation-direction: alternate ;/*定义为按播放次数来确定循环播放的方式*/
+			-webkit-animation-direction:alternate;/*还有好几种其他的循环方式*/
+		}
+		@keyframes divC
+		{
+			from{background-color: green;
+			    left: 0px;
+			}
+			to{background-color: #FF0000;
+			  left: 800px;
+			}
+		}
+		@-moz-keyframes divC
+		{
+			from{background-color: green;
+			    left: 0px;
+			}
+			to{background-color: #FF0000;
+			  left: 800px;
+			}
+		}
+		@-webkit-keyframes divC
+		{
+			from{background-color: green;
+			    left: 0px;
+			}
+			to{background-color: #FF0000;
+			  left: 800px;
+			}
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+</html>

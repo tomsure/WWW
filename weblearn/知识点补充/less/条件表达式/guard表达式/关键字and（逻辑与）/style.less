@@ -1,0 +1,14 @@
+.style(@color)when(lightness(@color)>=50%) and (@color=#ffffff){
+    
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    
+}
+
+
+
+div{
+    .style(#ffffff)
+}
+//关键字and可以用来设置除了when()括号里面的条件之外的其他条件，表示并且的意思，如果用了and()，则传入的参数必须满足when()里面的条件，还要满足and()里面的条件才会执行大括号里的代码

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var str='2016-9-17';
+	var 	reg=/[0-9]/g;
+	        reg1=/[0-9-]/g  
+		document.write(str.replace(reg,'A')+'</br>')//将str中的数字替换成"A";
+		document.write(str.replace(reg1,'A'))//将str中的数字和横线全部替换
+		
+	//被替换的字符串中如果有横线，而正则表达式的范围类也有横线，只需在方括号里范围字符的后面再写一个横线即可匹配到str中的 横线	
+		
+		
+	</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{ width:100px;
+		     height:  100px; background-color: #00FF7F;
+		}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$("#btn").click(function(){
+				$("#dv").replaceWith("哈哈，变化了")  //将div替换为一段文本
+				//这里将要被替换的元素放在前面$()括号里面 ，用来替换的内容放在replaceWith()括号里面，里面可以放函数
+				//这里用来做替换的内容可以是HTML标签，可以是jquery元素，也可以是DOM元素（包括文本）
+			})
+			
+		})
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		  <input type="button" name="btn" id="btn" value="点击替换" />
+		
+	</body>
+</html>

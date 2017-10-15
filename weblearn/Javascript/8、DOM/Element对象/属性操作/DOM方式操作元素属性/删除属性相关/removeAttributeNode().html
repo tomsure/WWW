@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//removeAttributeNode() 方法删除指定的属性，并以 Attr Node 对象返回被删除的属性。
+//此方法与 removeAttribute() 方法的差异是，removeAttribute() 方法返回具有指定名称的属性，而此方法删除指定的 Attr 对象。结果是相同的。同时，removeAttribute() 方法没有返回值，而此方法返回被删除的属性，以 Attr 对象的形式。
+
+		window.onload=function(){
+			var d=document.getElementById("dv");
+			alert(d.className)//弹出dv的class名称
+			var e=d.getAttributeNode("class");//获取div的class属性节点
+			alert(e)//弹出的是一个Attr对象
+			d.removeAttributeNode(e);//删除div的class节点属性
+			alert(d.className);//弹出kong，因为class已经被删除
+			alert(d.getAttributeNode("class"))//弹出null已经被删除，返回的是一个null对象,删除属性节点之前必须先获取节点属性,并且获取的时候要用var声明
+			
+			 
+			
+			
+		}
+	</script>
+	<body>
+		<div id="dv" class="div1">
+			
+		</div>
+	</body>
+</html>

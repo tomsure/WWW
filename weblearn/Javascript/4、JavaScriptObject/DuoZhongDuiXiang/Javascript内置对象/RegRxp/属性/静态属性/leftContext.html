@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var str='is dwxxwedwxew dd w';
+		var reg=/w/;
+		//document.write(reg.test(str)+'</br>')
+		//document.write(RegExp.leftContext+'</br>')
+	     document.write(reg.exec(str)+'</br>')
+	      
+	     document.write(RegExp.leftContext)
+		
+		
+		
+		//leftContext属性返回第一个匹配的字符串在str中以前的字符串
+		//这里第一个w前面的字符串是is d
+	</script>
+</html>

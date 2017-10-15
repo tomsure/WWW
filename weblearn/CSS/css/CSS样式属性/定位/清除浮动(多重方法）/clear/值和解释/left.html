@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			/*float: left;*/
+			clear: left;  /*左侧不允许浮动*/
+		}
+		#dv2{
+			width: 150px;
+			height: 150px;
+			background-color: blue;
+			float: left;
+		}
+		#dv3{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			
+		}
+		
+		/*cleat:left表示不允许元素float:left,设置此属性的时候,他后面的元素如果设置了float:left元素,不会跑到当前设置了clear:left的上方*/
+	  /*正常情况下,如果一个元素A设置了float:left,则这个元素会脱离文档流像飘起来一样跑到另一个左边,会跑到正常文档流的上方,如果设置了clear:left,则不允许A跑到自己上方*/
+	</style>
+	<body>
+		<div id="dv1">
+			1
+		</div>
+		<div id="dv2">
+			2
+		</div>
+		<div id="dv3">
+			3
+		</div>
+	</body>
+</html>

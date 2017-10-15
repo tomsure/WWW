@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.myerror{
+			color:red
+		};
+		.error{
+			color: red;
+		}
+	</style>
+	<body>
+		<form action="#" method="post" id="form">
+			<fieldset>
+				<p id="info"></p>
+			<p>用户名: <input type="text"  name="user" id="user" value="" />*</p>      
+			<p>密码: <input type="text"  name="password" id="password" value="" />*</p>      
+			<p>确认密码: <input type="text"  name="confirm_password" id="confirm_password" value="" />*</p>      
+			
+			
+			<input type="submit" value="点击提交"/>
+			</fieldset>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	},
+			    	password:{
+			    		required:true
+			    	},
+			    	confirm_password:{
+			    		
+			    		 equalTo:"#password"
+			    
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	},
+			    	
+			       password:"请输入密码",
+                    confirm_password:{
+                    	
+                    	equalTo:"两次密码不一致"
+                    }
+			    	
+			    },
+			    groups:{
+			    	login:"user password confirm_password"
+			    	},
+
+			    errorPlacement:function(error,element){
+                	error.insertBefore("#info");
+                	//alert(element[0].id)
+                }
+//	errorPlacement方法用于设置错误信息放置的位置,这个函数有两个参数,第一个参数error是所有的错误信息元素的集合,element指的是所有错误元素的集合，从上面例子中可以看到   element[0].id就是user也就是第一个element。
+//errorPlacement和groups同时使用就可以将所有的错误信息一起放在指定的一个位置。
+			   
+			   
+			   
+		})
+		})
+
+	</script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+			/*************不使用once参数********************/
+			
+			function AA(){
+			var cal=$.Callbacks();
+				function aa(){
+				alert(1)
+			}
+			function bb(){
+				alert(2)
+			}
+			cal.add(aa)
+			cal.add(bb)
+			cal.fire()  //弹出1，弹出2
+			cal.fire()  //弹出1，弹出2
+			}
+			AA()
+		 /***************使用once参数**************************/
+		
+		    function BB(){
+		    	var cal2=$.Callbacks('once'); //添加字符串参数 ‘once’
+		    	function cc(){
+		    		alert(3)
+		    	}
+		    	function dd(){
+		    		alert(4)
+		    	}
+		    	cal2.add(cc)
+		    	cal2.add(dd)
+		    	cal2.fire() //弹出3，弹出4
+		    	cal2.fire() //不弹出3，和4
+		    }
+			
+			BB()
+		})
+		
+//		注释: 这里为了不混淆冲突,所以使用两个函数AA和BB将两种情况封装起来展示
+
+//  $.Callbacks()中填写参数'once'是为了避免相同的方法重复执行,如果add()添加方法以后,已经使用fire()方法执行了,再次使用fire()的话,如果没有'once'参数的话还会执行一次,如果填写参数'once'就不会在执行了
+
+	</script>
+	<body>
+		
+	</body>
+</html>

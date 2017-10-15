@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//返回被选元素后的所有同级元素
+		$(function(){
+			$("#p1").nextAll().css("color","red")
+			//#p1后所有的元素文字全部变成红色
+		})
+	</script>
+	<body>
+		<p id="p1">qqq</p>
+		<p>sss</p>
+		<p>aaa</p>
+		<p>顶顶顶顶</p>
+	</body>
+</html>

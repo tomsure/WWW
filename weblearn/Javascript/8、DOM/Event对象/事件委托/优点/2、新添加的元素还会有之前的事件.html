@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	window.onload=function(){
+		
+			var oul=document.getElementById("oul")
+		var li=document.getElementsByTagName("li")
+		 
+		  oul.onmouseover=function(ev){
+		  	 var ev=ev||window.event;
+		  var target=ev.target||ev.srcElement;
+		  	if(target.nodeName=="LI"){
+		  		target.style.background="red";
+		  	}
+		  }
+		  
+		  
+		  oul.onmouseout=function(ev){
+		  	 var ev=ev||window.event;
+		  var target=ev.target||ev.srcElement;
+		  	if(target.nodeName=="LI"){
+		  		target.style.background="white";
+		  		
+		  	}
+		  }
+		  
+		  
+		  
+		  var btn=document.getElementById("btn")
+		    btn.onclick=function(){   //点击按钮，创建一个新的li并追加到ul
+		    	var Oli=document.createElement("li");
+		    	  Oli.innerHTML="555555555555555555"
+		    	  oul.appendChild(Oli)
+		    }
+		
+//		    通过上面点击按钮创建元素并追加到ul里里面发现,追加的元素,当鼠标已入后样式也会变化,所以说明也被绑定了事件,这说明新增的元素还会有之前添加的事件
+	}
+	</script>
+	<body>
+		<button id="btn">点击添加</button>
+		<ul id="oul">
+			<li>11111111111111</li>
+			<li>22222222222222</li>
+			<li>333333333333333</li>
+			<li>44444444444444</li>
+		</ul>
+	</body>
+	
+</html>

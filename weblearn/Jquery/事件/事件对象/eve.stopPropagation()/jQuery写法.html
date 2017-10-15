@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		
+		
+		div{width:200px ;height:200px ;background-color:red ;}
+		span{width:100px ;height:100px ;background-color:green ;display: block;}
+	</style>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//event.stopPropagation() 方法阻止事件冒泡到父元素，阻止任何父事件处理程序被执行。
+		
+			$(function(){
+		  	$("span").click(function(e){
+		  		e.stopPropagation()
+		  		//stopPropagation()是事件对象的属性，这个属性可以用来阻止事件冒泡，但是它只阻止当前元素的事件冒泡，所以这点击span的时候只会弹出span的click事件，但是点击div的时候还会弹出div和document的事件，所以如果要阻止div的冒泡行为，还要给div的事件对象添加阻止冒泡属性
+		  		
+		  		alert("input点击事件")
+		  	})
+		  	$("div").click(function(e){
+		  		e.stopPropagation()
+		  		//这里阻止冒泡之后再点击div就不会弹出document的事件内容
+		  		alert("div点击事件")
+		  	})
+		  	$(document).click(function(e){
+		  		alert("document点击事件")
+		  	})
+		})
+	</script>
+	<body>
+		<div id="#btn">
+			<span id="">
+				
+			</span>
+		</div>
+	</body>
+</html>

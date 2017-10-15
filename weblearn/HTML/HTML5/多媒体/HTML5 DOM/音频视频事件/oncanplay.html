@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	
+		</head>
+		
+		<body>
+			<video width="" height="" controls="" id="vid">
+				<source src="../音视频资源文件/movie.mp4"></source>
+				<source src="../音视频资源文件/johann_sebastian_bach_air.ogg"></source>
+				<source src="../音视频资源文件/mov_bbb.mp4"></source>
+				
+			</video>
+			<input type="text" id="t1"/>
+			
+		</body>
+		<script>
+		/*oncanplay 事件在用户可以开始播放视频/音频（audio/video）时触发。但是还需要缓冲一些数据，此时readState的属性值为 3
+在视频/音频（audio/video）加载过程中，事件的触发顺序如下：
+1  onloadstart
+2  ondurationchange
+3  onloadedmetadata
+4  onloadeddata
+5  onprogress
+6  oncanplay
+7  oncanplaythrough*/
+	var vod=document.getElementById("vid");
+	var t1=document.getElementById("t1")
+ 	   vid.oncanplay=function(){
+           t1.value='准备播放'	   	
+	   }
+		
+		
+		</script>
+	</html>

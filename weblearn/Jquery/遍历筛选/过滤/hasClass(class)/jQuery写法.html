@@ -1,0 +1,28 @@
+<!DOCTYPE htm l>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv{width:100px ;}
+		.dv1{ height:100px ;}
+		.dv2{ background-color: red;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//用于检测元素是否含有一个指定类，返回布尔值
+		$(function(){
+			alert($("div").hasClass("dv"))  //弹出true  它含有这个类
+			alert($("div").hasClass("ss"))  //弹出false  它不含有这个类
+			
+		})
+	</script>
+	<body>
+		<div id="" class="dv dv1 dv2">
+			
+		</div>
+	</body>
+</html>

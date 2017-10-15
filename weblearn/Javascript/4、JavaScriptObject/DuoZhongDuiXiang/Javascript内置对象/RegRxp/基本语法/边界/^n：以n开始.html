@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//^n匹配任何以n开头的字符串;通常表示字符串的开头；
+		var str='asacsae'
+		var str1='12345w';
+		var str2='WERCWEC';
+		var reg=/^a/g;
+		
+		document.write(str.match(reg)+'</br>')//
+//		^n使用说明:
+//		1,^n表示匹配以n开头的字符串
+//		2,如果正则中只包含^a符号,在match()方法中则只匹配它符合条件的那个语句的a；
+//      
+		
+		document.write(reg.test(str)+'</br>')//判断str是否是以a开头；返回true
+	    
+		
+		
+	</script>
+</html>

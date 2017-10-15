@@ -1,0 +1,4 @@
+注释：Firefox 版本 10 停止对此方法的支持，因为 DOM version 4 中已弃用该方法。作为替代，您应该使用 === 来比较两节点是否相同。
+
+注释：Internet Explorer 8 以及更早的版本不支持该方法。
+   以上指的是isSameNode()方法

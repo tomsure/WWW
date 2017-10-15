@@ -1,0 +1,7 @@
+用css3的animation完成一个动画，当只有这个动画完成时才执行令一个事件，比如让动画保持在终止的状态或其他一些事件。我们该怎么办呢。 
+第一种方法： 
+用计时器，设定一个和动画时长一样的time，过time事件去执行这个函数。 
+setTimeout(function(){ },time); 
+第二种方法： 
+当-webkit-animation动画结束时有一个webkitAnimationEnd事件，只要监听这个事件就可以了。 
+不同浏览器的AnimationEnd写法 (webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend)

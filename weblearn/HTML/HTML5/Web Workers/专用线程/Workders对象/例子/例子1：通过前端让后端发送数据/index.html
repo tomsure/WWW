@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var work=new Worker('worker.js')
+		work.postMessage('1') //首先向后台发送一个数字1
+		work.onmessage=function(e){
+			alert(e.data)
+		} //当前端收到后台的数据后就弹出后台发送的数据
+		
+	</script>
+</html>

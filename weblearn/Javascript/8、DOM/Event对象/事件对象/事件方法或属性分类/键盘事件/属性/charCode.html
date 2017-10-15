@@ -1,0 +1,27 @@
+	<!DOCTYPE HTML>
+	<html>
+		<head>
+		
+	<title></title>
+	<meta name="" content="" charset="utf-8"/>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var tInput=document.getElementById("text");
+			var pp=document.getElementById("p1");
+			/* 在实例中，我们使用了支持多浏览器的方法，因为 keyCode 属性无法再 Firefox 浏览器中工作。但是 which 属性可以。
+
+如果浏览器支持 event.which 则使用 event.which，否则使用 event.keyCode */
+			tInput.onkeypress=function(ev){
+				
+				 var x = event.charCode || ev.charcode//设置兼容性
+				 pp.innerHTML="你按下的按键的Unicode的值为"+x
+			}
+		}
+	</script>
+	<body>
+		<input type="text" name="text" id="text" value="" />
+		<p id="p1"></p>
+		
+	</body>
+</html>

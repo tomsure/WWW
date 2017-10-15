@@ -1,0 +1,11 @@
+.style(@width;@height;@bgcolor){
+    width:@width;
+    height:@height ;
+    background-color: @bgcolor;
+}
+ div{
+     .style(100px;100px;red)     
+ }
+
+
+//带有多个参数的混合就是在定义混合的时候，在类名后面的括号里写多个参数，参数使用@符号，多个参数使用分号隔开，在元素样式里面调用的时候，传入的参数也是用分号隔开，不推荐使用逗号隔开；

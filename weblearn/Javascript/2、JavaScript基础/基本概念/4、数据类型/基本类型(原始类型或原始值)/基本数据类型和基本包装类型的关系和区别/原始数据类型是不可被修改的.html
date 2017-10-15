@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var str='abc';//原始字符串值str；
+		var str1=str.toLocaleUpperCase()
+		document.write(str1+'</br>') //ABC
+		document.write(str+'</br>')//abc,自己没变
+		
+		
+		
+		var num=123;//原始数值；
+		var num1=num.toString()//转换为字符串
+		document.write(typeof num1+'</br>')//string
+		document.write(typeof num+'</br>')//number
+		
+		var bol=true;//原始布尔值；
+		document.write(typeof bol+'</br>')//boolean
+		var bol1=Number(bol)
+		document.write(bol1)//1
+		document.write(typeof bol1+'</br>')
+		document.write(bol+'</br>')//true
+		document.write(typeof bol+'</br>')//boolean,没变；
+		
+//	上面例子说明,js的基本数据类型是不会改变的,是固定不变的	
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

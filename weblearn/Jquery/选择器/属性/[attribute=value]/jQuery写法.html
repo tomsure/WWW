@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	
+	
+		<script>
+		//选择属性完全相等的元素
+		$(function(){
+			$("[title='div元素']").css("width","100px").css("height","100px").css("background","red").css("margin","10px")
+			//选择属性值完全匹配的元素
+			//注意写法，属性写在[]括号里面
+		})
+	</script>
+	<body>
+		<div title="div元素">
+			
+		</div>
+		<div></div>
+		<div id="" title="div元素">
+			
+		</div>
+	</body>
+</html>

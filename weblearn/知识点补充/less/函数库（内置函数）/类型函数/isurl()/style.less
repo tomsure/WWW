@@ -1,0 +1,12 @@
+
+
+.style(@url)when(isurl(@url)){
+    x:@url
+}
+
+div{
+    .style(url(./../img))
+}
+
+
+// isurl()函数用于检测传入的参数是否是url，如果是则返回true

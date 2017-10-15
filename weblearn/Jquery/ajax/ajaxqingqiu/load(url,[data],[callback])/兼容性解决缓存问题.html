@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击加载</button>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">		
+	</script>
+	<script type="text/javascript">
+		//在加载远程文件的时候，每一次加载，浏览器可能会产生缓存,例如IE浏览器，当修改远程文件 内容后，在加载远程文件，会发现加载到的远程文件的内容没变，解决办法是在远程文件添加一点后缀：例如url这样写：“url？data=”+Math.random()这样就能解决这个问题：
+		$('#btn').click(function(){
+			$('#dv').load('远程数据.html?data='+Math.random())
+		})
+		
+		
+		
+		
+		
+	</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	//	total指的是上传文件的时候文件的总大小
+	
+	</script>
+</html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{width: 500px;height: 30px;border: 1px solid gray;border-radius: 100px;}
+		#dv1{width: 0%;height: 100%;background-color: green;border-radius: 100px; text-align: right;}
+	</style>
+	<body>
+		<input type="file" name="nfile" id="nfile" value="" />
+		<div id="dv">
+			<div id="dv1">
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var nfile=document.getElementById("nfile");
+		nfile.onchange=function(){
+			var ftp=nfile.files[0];//获取文件对象
+			
+			var fd=new FormData()//创建FormData
+			fd.append('nfile',ftp)//追加
+			var xhr=new XMLHttpRequest();
+			xhr.open('POST','upload.php',true)
+//			xhr.onreadystatechange=function(){
+//				if(xhr.readyState==4&&xhr.status==200){
+//					document.getElementById("dv1").innerHTML=xhr.responseText
+//				}
+//				
+//			}
+			
+			xhr.upload.onprogress=function(ev){
+				var dv=document.getElementById("dv");
+				var dv1=document.getElementById("dv1")
+				if(ev.lengthComputable){//如果进度可用
+					var percent=100*(ev.loaded/ev.total)
+				//使用loaded（已上传大小）属性除以total（文件总大小）属性就达到进度百分比
+				alert(ev.total)
+			dv1.style.width=percent+'%'
+			//将上传进度百分比设置为dv1的宽度，注意加上%符号
+		    dv1.innerHTML=parseInt(percent+'%')+'%';
+		
+		     
+				}
+			}
+			xhr.send(fd)
+		}
+	//upload对象是xhr对象的一个属性，在文件开始上传的时候就会触发他的onprogress事件，这个事件函数可以记录文件上传的过程，此时onproogress事件有几个事件属性lengthComputable、loaded（已上传的大小）和total（总大小），所以可以通过使用ev.loaded/ev.total得到一个百分比，再乘以一百，就是百分之多少了，然后再通过js拼接就可以让用户看到上传的进度是百分之多少（通常可以省略小于一的数字，就可以用parserInt方法()去掉小数点和后面的数字就可以了），然后在用一个div嵌套一个div，将子div的宽度设置为这个parserint()后的百分比就可以了，当然还要设置子div的颜色
+	</script>
+</html>

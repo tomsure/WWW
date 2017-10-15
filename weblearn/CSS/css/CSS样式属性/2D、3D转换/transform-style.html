@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*规定被嵌套元素如何在 3D 空间中显示。这个元素多与transform属性同时使用*/
+		/*   值         说明
+		    flat	子元素将不保留其 3D 位置。
+            preserve-3d	子元素将保留其 3D 位置。
+		 * 
+		 * 
+		 * */
+		#div1
+{
+position: relative;
+height: 200px;
+width: 200px;
+margin: 100px;
+padding:10px;
+border: 1px solid black;
+}
+
+#div2
+{
+padding:50px;
+position: absolute;
+border: 1px solid black;
+background-color: red;
+transform: rotateY(60deg);
+transform-style: preserve-3d;
+-webkit-transform: rotateY(60deg); /* Safari and Chrome */
+-webkit-transform-style: preserve-3d; /* Safari and Chrome */
+}
+
+#div3
+{
+padding:40px;
+position: absolute;
+border: 1px solid black;
+background-color: yellow;
+transform: rotateY(80deg);
+-webkit-transform: rotateY(-60deg); /* Safari and Chrome */
+
+}
+</style>
+</head>
+
+<body>
+
+<div id="div1">
+  <div id="div2">HELLO
+  	<div id="div3">YELLOW</div>
+  </div>
+</div>
+
+</body>
+</html>
+
+

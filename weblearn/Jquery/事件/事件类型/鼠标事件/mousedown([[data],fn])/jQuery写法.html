@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px ;height:100px ; background-color:red ;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*当鼠标指针移动到元素上方，并按下鼠标左键时，会发生 mousedown 事件。
+mousedown() 方法触发 mousedown 事件，或添加当发生 mousedown 事件时运行的函数。
+提示：该方法通常与 mouseup() 方法一起使用。*/
+     $(function(){
+     	$("div").mousedown(function(){
+     		alert("你在div上按下了鼠标左键")
+     	})
+     	
+     })
+	</script>
+	<body>
+		
+		<div id="">
+			
+		</div>
+	</body>
+</html>

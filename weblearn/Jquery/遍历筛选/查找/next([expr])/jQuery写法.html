@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*next() 方法返回被选元素的后一个同级元素。
+                           同级元素是共享相同父元素的元素。
+                          注意：该方法只返回一个元素。
+        DOM 树：该方法沿着 DOM 元素的后一个同级元素向前遍历。*/
+       $(function(){
+       	/******************返回后一个同级元素**********************/
+       	$("#dv").next().css("color","red")
+       /*******************缩小范围******************************/	
+       	$("#btn").click(function(){
+       		$(".dv").next("p").css("color","red")
+       		//返回.dv的下一个紧接着的元素，且是p元素
+       	})
+       })
+       
+	</script>
+	<body>
+		<div id="">
+			<div class="dv">
+				中国
+			</div>
+			<p>日本</p>
+			<div id="dv1">
+				美国
+			</div>
+			
+			<div class="dv">
+				是是是
+			</div>
+			<div id="">
+				啊啊啊
+			</div>
+			<p>对对对</p>
+		</div>
+		<button id="btn">点击测试</button>
+	</body>
+</html>

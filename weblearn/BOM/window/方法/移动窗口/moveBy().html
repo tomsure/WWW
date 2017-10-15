@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//moveBy()方法可以根据窗口的当前坐标把他移动指定的像素，就是窗口打开的时候有一个坐标，相对打开的坐标移动到设置的坐标上
+    //功能：按照给定像素参数移动指定窗口。第一个参数是窗口水平移动的像素，第 二个参数是窗口垂直移动的像素。 
+		
+	Oopen=function(){
+  de=window.open( 'http://www.baidu.com','_bank','width=200px,height=200px')
+
+	}
+	function mm(){
+		de.moveBy(500,0)//移动窗口，这里指的是相对自己当前的坐标横向移动500px，纵向移动为0
+		de.focus()//获取焦点，这样点击移动的时候，可以看得到窗口
+	}
+	</script>
+	<body>
+		
+	
+	<div id="" style="width: 200px;height: 200px;">
+		
+	</div>
+			
+	<button onclick="Oopen()">点击打开窗口</button>
+		<button onclick="mm()">点击移动窗口</button>
+	</body>
+</html>

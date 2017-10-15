@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<input type="text" name="num" id="num" maxLength="5" value="" />
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript" >
+		var num=document.getElementById("num");
+		btn=document.getElementById("btn")
+		btn.onclick=function(){
+		if(num.validity.tooLong){ //此时num.validity.tooLong的值为true
+				alert("你输入的内容太长，请重新输入")
+			}
+		}
+		 
+         
+//    tooLong值的是如果输入的字符串数量大于于input maxLength属性的值的话,tooLong的值就为true,否则为false
+  //注意，在chrome浏览器测试中，maxLength的值设置后当达到这个之后，input无法输入，所以还需进行进一步测试
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+</html>

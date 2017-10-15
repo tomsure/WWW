@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+		//设置或返回文本内容的当前对齐方式。
+		/*textAlign 属性根据锚点，设置或返回文本内容的当前对齐方式。通常，文本会从指定位置开始，不过，如果您设置为 textAlign="right" 并将文本放置到位置 150，那么会在位置 150 结束。
+提示：请使用 fillText() 或 strokeText() 方法在画布上实际地绘制并定位文本。*/
+		window.onload=function(){
+			var  ss=document.getElementById("myCanvas");
+			var  dd=ss.getContext("2d");
+			dd.font="30px 楷体";   //设置字体属性；
+			 
+			 dd.strokeStyle="#A52A2A";
+			 dd.moveTo(200,0);
+			 dd.lineTo(200,500);
+			 dd.stroke();
+			 
+			 
+/****************************************textAlign="right"******************************************************/			 
+			dd.fillText("right" ,200,50);//设置文本内容；
+			dd.textAlign="right"//设置文本对齐方式；
+			                    //这里对齐方式的位置跟fillText设置的文字坐标有关系，例如这里设置为right，则文字会对齐在水平坐标为200的位置，因为前面fillText已经设置了位置
+			/*textAlgin属性值：start	默认。文本在指定的位置开始。
+                               end	文本在指定的位置结束。
+                               center	文本的中心被放置在指定的位置。
+                               left	文本在指定的位置开始。
+                               right	文本在指定的位置结束。*/
+                              
+/*********************************[textAlign="left]"******************************************/			
+			dd.fillText("left" ,200,100);//设置文本内容；
+			dd.textAlign="left"//设置文本对齐方式；
+			
+			
+			
+/*********************************[textAlign="left]"******************************************/				
+				dd.fillText("center" ,200,150);//设置文本内容；
+			dd.textAlign="center"//设置文本对齐方式；
+			
+			
+			
+/********************************[textAlign="left]"***********************************/	
+				dd.fillText("start" ,200,200);//设置文本内容；
+			dd.textAlign="start"//设置文本对齐方式；
+/*********************************[textAlign="left]"******************************************/	
+				dd.fillText("end" ,200,250);//设置文本内容；
+			dd.textAlign="end"//设置文本对齐方式；
+			
+			
+			
+			
+/*********************************说明"******************************************/	
+		//  这几个对齐方式的位置会根据文字的位置来具体定位，但是，是根据文字的水平坐标(x坐标)来确定的
+		//  他们五个对齐方式将文字的水瓶坐标看做一个基准点，分别以五中不同的方式对齐文字；
+		//  分别在文字水瓶坐标点的左边(left) 右边(right)，中间靠右（center） 穿过这个点（start）结束靠右边（end）
+			
+			
+			
+			
+			
+			
+		}
+		
+	</script>
+	<body>
+		<canvas id="myCanvas" width="400" height="400"></canvas>
+	</body>
+</html>

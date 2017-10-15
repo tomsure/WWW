@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	window.onload=function(){
+		var sd=document.getElementById("dv");
+		dv.onmousedown=function(ev){
+          alert(ev.screenX);//鼠标指针离屏幕X轴的距离
+          alert(ev.screenY)//鼠标指针离屏幕X轴的距离
+          alert(ev)//鼠标事件对象
+          
+	}
+		}
+	</script>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+</html>

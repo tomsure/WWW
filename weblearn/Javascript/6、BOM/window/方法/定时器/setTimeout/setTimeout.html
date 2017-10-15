@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <script type="text/javascript">
+	
+
+function timedMsg()//定义一个函数
+{
+var t=setTimeout("alert('5秒后执行的哦!')",5000);//setTimeout后面的 括号里面写两个参数，第一个是要执行的代码，第二个是执行等待的时间，就是多长时间之后执行，以毫秒为单位
+}
+</script>
+</head>
+
+<body>
+<form>
+<input type="button" value="显示计时的消息框！" onClick = "timedMsg()">;<!--给button按钮绑定事件，执行js函数timedMsg()-->
+                                                              
+</form>
+<p>点击上面的按钮。5 秒后会显示一个消息框。</p>
+	
+	<body>
+	</body>
+</html>

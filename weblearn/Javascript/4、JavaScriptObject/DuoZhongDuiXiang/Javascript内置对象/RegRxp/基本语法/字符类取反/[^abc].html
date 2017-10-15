@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	//[^abc]表示匹配除了abc之外的所有字符串，这里的abc只是举例，可以是其他字符：
+	//例如：
+	   var str='jrxm93m93mc34mxwi'
+       var reg=/[^m0-9]/g; //排除m和数字，其他都匹配
+       document.write(str.match(reg)+'</br>')
+	 
+	    var str1='hoe hoha hohuo'
+	 	var reg1=/[^ho]/g //排除ho,其他都匹配；
+	 	 document.write(str1.match(reg1));
+	 	 
+//	 	方括号内使用^符号可以排除某一个或多个字符串,也可以排除一定的范围进行匹配
+	 	 
+	 	 
+	</script>
+</html>

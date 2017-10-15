@@ -1,0 +1,14 @@
+/*
+
+   *通配符用于匹配0或者多个字符，例如要将/var/eadv/data/ads目录下面所有
+   的文件移动到/ads.bak下面，则可以使用以下命令：
+       mv /var/eadv/data/ads/* /ads.bak
+  
+       查找文件：
+          输入 ls /var/eadv/pcf*
+          
+          则可以返回 /var/eadv下所有包含pcf的文件
+       
+       
+       
+  */     

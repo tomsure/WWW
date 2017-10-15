@@ -1,0 +1,22 @@
+js对象的分类：
+
+1，内置对象：golbal对象
+             Math对象
+			
+2，本地对象：Aarray；
+
+            number；
+  
+             date
+ 
+
+            regexp
+
+            function
+ 
+
+            Boolean 
+			
+			
+特殊对象：DOM;
+          BOM			

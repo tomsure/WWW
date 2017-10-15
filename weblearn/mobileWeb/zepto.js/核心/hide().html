@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	  <style type="text/css">
+	  	#dv{
+	  		width:100px;
+	  		height: 100px;
+	  		background-color: red;
+	  		
+	  	}
+	  </style>
+	<body>
+		  <div id="dv">
+		  	
+		  </div>
+		  <button>点击隐藏</button>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+		     $('button').on('click',function(){
+		     	$('#dv').hide()
+		     })
+		})
+		
+//	   hide()方法用于隐藏元素
+	</script>
+</html>

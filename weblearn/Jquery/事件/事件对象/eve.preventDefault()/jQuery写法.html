@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	/*event.preventDefault() 方法阻止元素发生默认的行为。
+例如：
+当点击提交按钮时阻止对表单的提交
+阻止以下 URL 的链接*/
+		$(function(){
+			$("a").click(function(e){
+				e.preventDefault()//设置了这个方法此时不会跳转到百度页面，因为跳转到相关页面是a标签的默认行为，这里阻止了他的默认行为
+				alert("百度页面")
+				//所以这里只会弹出“百度页面”，而不会跳转到百度
+			})
+			$("input").on("click",function(a){
+				a.preventDefault();
+				alert("提交按钮点击事件")
+				//这里只会弹出submit的click事件绑定的内容，而不会提交表单，因为提交表单是submit的默认行为，上一步已经给他阻止了
+				//阻止表单提交一般讲阻止提交方法放在form元素里面
+			})
+		})
+	</script>
+	<body>
+		<a href="http://www.baidu.com">点击一下，你就知道</a>
+		<input type="submit" name="" id="" value="点击提交" />
+	</body>
+</html>

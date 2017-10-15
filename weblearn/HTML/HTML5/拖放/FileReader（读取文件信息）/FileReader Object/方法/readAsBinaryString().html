@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		dv.ondragenter=function(){
+			this.innerHTML='可以释放鼠标了'
+		}
+		dv.ondragover=function(ev){
+			ev.preventDefault()//这里阻止默认事件，才能触发drop事件函数
+			
+		}
+		dv.ondragleave=function(ev){
+			this.innerHTML='将文件托至此区域'
+		}
+		dv.ondrop=function(ev){
+			ev.preventDefault()
+			ev.stopPropagation()
+	       var fs=ev.dataTransfer.files;
+	       var fd=new FileReader();
+	       
+	          fd.readAsBinaryString(fs[0]);
+//	    这个方法是使用二进制的数据的形式来读取文件      
+	          
+               fd.onloadstart=function(){
+//               dv.innerHTML='开始读取'
+                alert('开始读取文件数据')
+         
+               }
+               fd.onprogress=function(ev){
+               	dv.innerHTML=(ev.loaded/ev.total)*100+'%'
+
+               }
+
+         
+	          fd.onload=function(){//读取成功后触发
+	          	dv.innerHTML=this.result
+	          }
+            
+		}
+		
+	</script>
+</html>

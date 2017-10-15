@@ -1,0 +1,13 @@
+
+@import (reference) "style1.less";  //这里的@import后面是可以加()的，里面如果不加载参数的话，这里引入的style1文件里面多余的代码也会在编译后输出到CSS中
+div{
+    width:@width;
+    height:@height;
+    background-color: red;
+    .style  //虽然使用了reference参数，但是还是可以在样式中调用
+    
+    
+ }
+// reference参数用于屏蔽引用的外部less中的多余的代码，多余的代码指的就是在本地less文件中没有调用的代码，防止多的代码编译后输出到CSS，但是变量除了可以调用外，也可以在元素样式中直接调用混合
+ 
+

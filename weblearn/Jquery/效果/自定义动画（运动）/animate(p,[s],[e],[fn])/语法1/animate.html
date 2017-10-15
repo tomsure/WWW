@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width:30px;
+			height:30px ;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-1.7.2/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	/*animate() 方法执行 CSS 属性集的自定义动画，里面使用json格式。
+该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+只有数字值可创建动画（比如 "margin:30px"）。字符串值无法创建动画（比如 "background-color:red"）。
+注释：使用 "+=" 或 "-=" 来创建相对动画（relative animations）。*/
+		$(function(){
+			$(":button").click(function(){
+				$("div").animate({width:"300px"},{
+					duration:500,
+					queue:false
+				});
+				$("div").animate({height:"300px"},2000)
+				$("div").animate({width:"30px"},2000);
+				$("div").animate({height:"30px"},1000)
+				
+				
+			})
+		})
+	</script>
+	<body>
+		<div id="">
+		
+	</div>
+	<input type="button" name="" id="" value="点击开始" />
+	</body>
+	
+</html>

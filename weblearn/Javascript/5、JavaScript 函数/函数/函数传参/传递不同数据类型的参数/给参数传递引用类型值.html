@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	
+	
+	<script type="text/javascript">
+	
+//	给函数参数传递引用类型值的时候也是把变量的值复制一份给参数,这个时候，函数的参数和传递引用类型值的变量都指向同一对象，例如;
+		function ss(obj){
+			obj.name='qws';
+		};
+		
+	var de=new Object();
+	    de.name=22
+	ss(de);
+	document.write(de.name);//qws
+//	这里声明了函数ss,有参数obj,有一个全局变量de=new Object();
+//	函数执行的时候,de的值会复制一份一模一样的值,这里也就是new Obj(),赋值给函数aa的obj;所以函数内部的obj.name属性就变成了new Object()也的属性;
+//	这个时候obj和de引用的是同一个对象，所以函数内部name属性做了修改，所以就是修改了共同对象属性的值；所以对象属性的值也会被改变
+
+		
+		
+		
+	</script>
+</html>

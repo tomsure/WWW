@@ -1,0 +1,16 @@
+ PCI latency Timer [...]
+  选项是设置PCI总线延迟的。延迟时间以PCI总线的时钟周期为计算单位。可以
+ 设置的延迟有32/64/96/128/160/192/224/248 PCI Bus Clocks。
+ 默认是32，如果PCI卡存在兼容问题，可以调整PCI延迟试试
+ 
+   VGA Palette Snoop  [Disable/Enabled]  
+      开启或关闭显卡颜色校正
+      
+   PERR# Generation  [Disable/Enabled] 
+     PERR#奇偶校验出错，在PCI系统中，导致一个致命的错误中断报告给系统，系统产生SERR#信号，大部分情况下会死机；
+ PCI-X系统中，PERR#产生后通过中断通知设备驱动程序，设备驱动程序调用错误恢复例程，如果可回复则继续正常工作，
+ 反之，产生一个错误中断给系统，产生SERR#信号，也可导致死机；另外，如果设备驱动程序不存在错误恢复例程则直接产生错
+ 误中断报告系统，产生SERR#信号，可能死机。
+   SERR# Generation  [Disable/Enabled] 
+      
+     

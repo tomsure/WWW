@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	#dv{
+	  width: 200px;
+	  height: 100px;
+	  background-color: red;
+	  float: right;
+	  
+	}
+	#dv1{
+		
+		height: 200px;
+		background-color: blue;
+		/*clear:right;*/
+	}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<div id="dv1">
+				点击测试
+			</div>
+		<!--当元素设置了clear：right的时候，表示自己上方不允许出现设置了float：right的元素出现-->
+	</body>
+	<script type="text/javascript">
+		var dv1=document.getElementById("dv1")
+		dv1.onclick=function(){
+			this.style.clear='right'
+		}
+//		由于dv1在dv的后面出现,所以设置dv1的clear:right的时候,清除了浮动,dv1会跑到后面去
+	</script>
+</html>

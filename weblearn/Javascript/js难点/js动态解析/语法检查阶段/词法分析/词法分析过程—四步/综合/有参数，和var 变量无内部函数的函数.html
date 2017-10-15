@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function t(age){
+			//	var age=1
+				alert(age)
+			}
+			t()
+			t()
+		/*
+ 分析过程：1，形成AO对象 AO={};
+		2，把函数的参数作为AO的属性，值是undefined，AO={age:undefined}
+       3，分析变量声明，如果变量里面有声明var age=1,则 AO={age:1}
+                     如果变量里没有声明   var age=1，则AO={age:undefined}不变
+                   如果没有声明age，参数里面也没有age则会报错
+                  如果函数执行的时候没有实参，函数内部也没有声明变量var age=1,则会输出undefined;
+              如果函数运行的时候传递参数，而函数内部没有声明变量var age=1,则输出的是函数执行的时候传递的那个参数
+           如果t(3)  则输出3，如果函数内有声明var age=1,而函数执行又有传参，则会去函数内部声明var age=1的值 ，输出的是1，而不是3
+* 
+* * */
+		</script>
+	</body>
+</html>

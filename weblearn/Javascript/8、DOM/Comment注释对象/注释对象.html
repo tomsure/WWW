@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	   <div id="dv"><!--我是注释内容--></div>
+	   
+	</body>
+	<script type="text/javascript">
+   var dv=document.getElementById("dv");
+       alert(dv.childNodes[0].nodeName)//弹出#comment表示是注释标签
+       alert(dv.childNodes[0].nodeValue)//注释里面的内容
+       var cc=document.getElementsByTagName('!');
+       //在IE浏览器中可以通过感叹号获取注释元素，因为IE会识别注释内容中的感叹号，其他浏览器不支持；
+       alert(cc.length)
+//     IE浏览器会弹出2,因为IE浏览器把文档声明中的感叹号也识别了出来,所以如果要在IE中获取第一条注释内容,就可以获取第2个也就是下标为1的感叹号获取的节点
+	</script>
+</html>

@@ -1,0 +1,22 @@
+带回值的函数，用return来完成.
+
+return的返回值可以传值给调用者，用来做其他操作；
+例如1： function demo(){
+      var  a=1;
+	  var  b=2;
+	  c=a+b;
+	  return c;//这里返回c给调用者
+}
+var s=demo()；//这里调用者是s,则return返回c给他，则s=c;
+alert(s);//这里得到的是3.
+      例2：function demo(){
+	  return "你好"
+	  
+	  }
+	  var w=demo()+"妹子"
+	  alert(w);//这里将会弹出“你好，妹子”.
+	  
+	  
+注意：函数内部使用了return语句之后 ，该函数内部return后面的语句不会有任何效果；
+     
+      在函数内部使用return的时候，可以在return后面添加需要返回的内容，也可以直接添加要执行的动作；在调用的时候就不用再执行动作，但是在return后面直接添加执行动作不建议使用	 

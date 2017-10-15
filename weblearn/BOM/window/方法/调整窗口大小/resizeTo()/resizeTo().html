@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+ //调整浏览器的宽度和高度，每个浏览器的效果不同
+ //window.resizeTo(水平宽度,垂直宽度) 功能：将当前窗口改变成(x,y)大小，x、y分别为宽度和高度。
+			
+		var w;
+function openwindow()
+{
+w=window.open('','', 'width=100,height=100');//打开这样一个窗口
+w.focus();
+
+}
+
+function myFunction()
+{
+w.resizeTo(500,500);//点击后窗口的高度和宽度变成这样
+w.focus();
+}
+
+</script>
+</head>
+<body>
+
+<button onclick="openwindow()">Create window</button>
+<button onclick="myFunction()">Resize window</button>
+
+</body>
+</html>

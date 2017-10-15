@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">    
+       //获得cookie函数    
+       console.log(document.cookie);    
+       function getCookie($name){    
+            var data=document.cookie;    
+            var dataArray=data.split("; ");    
+          for(var i=0;i<dataArray.length;i++){    
+              var varName=dataArray[i].split("=");    
+                if(varName[0]==$name){    
+                     return decodeURI(varName[1]);    
+                }                    
+            return ''
+         }    
+      }    
+       //删除cookie中指定变量函数    
+       function delCookie($name){    
+            var myDate=new Date();    
+            myDate.setTime(-1000);//设置时间    
+            document.cookie=$name+"=''; expires="+myDate.toGMTString();                
+      }          
+      alert(getCookie("wangsan"));    
+      alert(getCookie("lisi"));    
+      delCookie("wangsan")    
+      alert(getCookie("wangsan"));    
+      alert(getCookie("lisi"));    
+</script>
+</html>

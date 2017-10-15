@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	   点击测试浏览器能否播放指定格式视频
+	   <video src="../../音视频资源文件/Intermission-Walk-in_512kb.mp4"  id="vid" ></video>
+	 <button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript">
+		   var vid=document.getElementById("vid")
+		   var btn=document.getElementById("btn");
+		   btn.onclick=function(){
+		    alert(vid.canPlayType("video/ogg;codecs='theora, vorbis'"))
+		   }
+//		注意:  如果加编解码器的话,视屏格式和编解码器是一组参数,在一对双引号里面,而codecs的值又需要用引号包起来,所以用单引号   
+//        canPlayType()方法用于检测浏览器是否支持指定的格式,用这些格式作为参数来检测;常用的测试格式有:
+//        video/ogg
+//        video/mp4
+//        video/webm
+//        audio/mpeg
+//        audio/ogg
+//        audio/mp4
+//        
+//   还可以加上编解码器进行检测,包含的有:
+//       video/ogg; codecs="theora, vorbis"
+//       video/mp4; codecs="avc1.4D401E, mp4a.40.2"
+//       video/webm; codecs="vp8.0, vorbis"
+//       audio/ogg; codecs="vorbis"
+//       audio/mp4; codecs="mp4a.40.5"
+//       如果包含编解码器进行检测的话则只返回
+//       
+//  返回值(类型是一个字符串):
+//      表示支持的级别。可能的值：
+//   "probably" - 最有可能支持
+//      "maybe" - 可能支持
+//           "" - （空字符串）不支持 
+	</script>
+</html>

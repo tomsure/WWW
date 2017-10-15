@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	 	
+   <svg width='500px' height='500px' style="border: 2px solid red; margin: 20px;" viewBox='1 1 50 50'>
+   	<rect width='1' height='1' x='1' y='10' fill='blue'>
+   		
+   	</rect>		
+   		
+   	
+   </svg>
+	</body>
+	
+	
+	  <!--svg设置了viewBox属性后表示里面的元素的宽和高要配合viewBox的属性值来设置-->
+	viewBox参数：
+	   他的参数是用于设置图形内元素显示的宽高和坐标的比例
+	  第三和第四各参数： 
+	   第三个参数和svg自己的width对应；则比例就是500px/50=10/1
+	   第四个参数和svg自己的height对应；则比例就是500px/50=10/1
+	   当在svg内部设置图形的时候，图形的宽高就乘以这个比例产生实际的宽高
+	   例如上面产生的比例是：宽和高都是10/1;
+	   则rect设置width的宽度就要乘以这个比例就是recr宽度*10/1=10倍的rect宽度，所以设置1个单位的rect宽或者高就显示10倍的实际效果
+	   
+	   第一和第二个参数：
+	   viewBox的第一个和第二个参数表示的是svg内部的元素在这个svg中的坐标表示元素显示的距离svg最左上角的水平和垂直坐标：
+	   这两个参数也受到
+	   
+	      
+	   
+	   
+	   
+	   
+	   
+	   
+	
+</html>

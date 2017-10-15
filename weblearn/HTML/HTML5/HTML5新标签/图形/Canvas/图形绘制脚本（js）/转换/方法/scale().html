@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+	//scale() 方法缩放当前绘图至更大或更小。
+/*注意：如果您对绘图进行缩放，所有之后的绘图也会被缩放。定位也会被缩放。如果您 scale(2,2)，那么绘图将定位于距离画布左上角两倍远的位置。*/
+		window.onload=function(){
+			var ss=document.getElementById("myCanvas").getContext("2d");
+			ss.fillStyle="#A52A2A"
+			
+			ss.scale(1,1); //这里设置一个放大比例这里是一比一放大
+			ss.fillRect(10,10,150,50)//这里是放大后 创建的新的矩形
+			//如果ss.scale前面已经绘制了一个图形，放大之后再绘制一个图形，则初始大小是根据第一个图形再乘以ss.sscale这个宽高放大比例绘制的的，当然如果手动修改第二个绘制的图形，显示的形状以后来手动绘制的为准
+			
+			
+			
+			
+			
+			
+			
+		}
+	</script>
+	<body>
+	<canvas id="myCanvas" width="400" height="400"></canvas>
+	</body>
+</html>

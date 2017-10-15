@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//	在向函数参数传递基本类型的值的时候,被传递变量的值会赋给局部变量(也就是函数的参数)，函数调用的时候，变量作为实参传递给函数，这时候，变量会将自己的值复制一份再赋给函数的参数
+        	var  a=1;
+		function aa(s){//s是函数aa里面的一个局部变量
+			 
+			alert(s)
+		}
+	
+		aa(a)
+//这里函数aa()有一个参数s，这个s实际上是函数aa内部的一个局部变量;
+//函数执行的时候，变量a它的值作为实参传递给函数，再将自己的值复制一份变成形参s的值；
+      var b=1;
+      function bb(q){
+      	alert(q) //1  变量b的值已经传给q，所以会使用q的值；
+      	q=2
+      	alert(q) //2  q自己声明了值，所以引用自己的值；
+      }
+        bb(b)
+        
+     
+
+
+
+
+	</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+	#dv{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: absolute;
+		
+	}
+	</style>
+	<script type="text/javascript" >
+		
+	</script>
+	
+	<body>
+		<button id="btn" onclick="startMove()">点击测试</button>
+		<div id="dv">
+			11
+		</div>
+	</body>
+	<script type="text/javascript">
+		
+		var timer=null
+		var dv=document.getElementById("dv")
+		
+		function startMove(){
+			
+		   var speed=1
+		    timer=setInterval(function(){
+		       		 if(dv.offsetLeft==300){
+		       	       clearInterval(timer)
+		             } //当元素的左偏移等于300的时候清除清时期，运动就会停止  
+		
+//		   上面设置的是speed=1,如果speed等于7的话,则不会停下来,因为等于7的话,定时器是每次+7,到300的时候会跳过,300不是7的整数，所以可以使用以下方式：
+//		    var speed=7;
+//		    timer=setInterval(function(){
+//		    	if(dv.offsetLeft>=300){
+//		    		clearInterval(timer)
+//		    	};
+//		    })
+      
+		             
+		       dv.style.left=dv.offsetLeft+speed+'px'
+		    	}
+		    ,30)
+	
+		}
+       
+//     让元素在指定位置停下来需要设置一个条件当偏移量大于或等于指定值的时候清除定时器即可
+
+//   这里还有一个问题:
+//    就是停止之后,在点击按钮还会继续运动
+	</script>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<ul id="ul1">
+			
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		var ul1=document.getElementById("ul1")
+		dv.ondragenter=function(){
+			this.innerHTML='可以释放鼠标了'
+		}
+		dv.ondragover=function(ev){
+			ev.preventDefault()//这里阻止默认事件，才能触发drop事件函数
+			
+		}
+		dv.ondragleave=function(ev){
+			this.innerHTML='将文件托至此区域'
+		}
+		dv.ondrop=function(ev){
+			ev.preventDefault()
+			ev.stopPropagation()
+	       var fs=ev.dataTransfer.files;
+	       
+/***************************判断文件格式开始*******************/
+ /*   if(fs[0].type.indexOf('image')!=-1){    //if开始
+  	由于上传的文件是image图片,所以需要判断他的格式是不是image格式，因为files[0]的type属性就是判断文件的格式，是一个字符串，所以这里使用indexOF()方法，判断files[0]的type这个字符串中包含"imaga"字符串，则证明文件就是image格式（！=-1的意思就是type大于0，就表示包含某个字符窜的意思，具体了解一下indexOf()方法）
+	       var fd=new FileReader();//实例化对象
+	          fd.readAsDataURL(fs[0]);//文件列表中的文件对象作为参数
+
+	          fd.onload=function(){
+	          	var li1=document.createElement('li');//创建一个li
+	          	var img1=document.createElement('img');//创建一个img标签
+	          	img1.src=this.result//将读取到的result属性设置为图片的url
+	          	li1.appendChild(img1);//将图片追加到li
+	          	ul1.appendChild(li1);//再将li追加到ul
+	          	
+	          }
+	         } if结束
+	         else{//如果文件格式不是"image"格式则执行以下语句
+	         	alert("请上传image格式的图片")
+	         }
+/********************************判断文件格式结束***************/
+   
+   
+          /*************同时拖动多张图片***************************/
+           for(var i=0;i<fs.length;i++){//同时拖动多张图，这里要对拖动的图片进行循环，将下fs[]中的下标改成i即可，表示当前拖动的图片下标就是i
+           	if(fs[i].type.indexOf('image')!=-1){  
+  
+	       var fd=new FileReader();
+	          fd.readAsDataURL(fs[i]);
+
+	          fd.onload=function(){
+	          	var li1=document.createElement('li');
+	          	var img1=document.createElement('img');
+	          	img1.src=this.result
+	          	li1.appendChild(img1);i
+	          	ul1.appendChild(li1);
+	          	
+	          }
+	         } 
+	         else{
+	         	alert("请上传image格式的图片")
+	         }
+           }
+           /*************同时拖动多张图片*******************/   
+
+
+		}
+		
+		
+/*		图片预览功能总结:
+		 1,在获取files文件列表后实例化FileReader对象;
+		 2,使用readAsDataURL()方法对图片进行读取;
+		 3,给FileReader对象绑定onload事件,表示当文件读取成功后执行的函数,在这个函数中可以创建一个li标签,一个img标签,将创建的img表签的url设置为读取到的文件的信息,也就是this.result,再将创建的标签进行追加(实际开发要注意样式,所以创建的li或着其它标签,还可以设置样式);
+		 4,由于是上传的是图片预览,所以要进行图片格式判断,使用字符串的indexOf()方法判断files[0]的type属性有没有包含"image",如果包含,则将上面三个步骤执行的语句放进这个if语句的大括号里执行,否则就在else的大括号里执行相关语句;
+		 5,如果是一次性拖拽多张图片进行预览,则还需要将上面四个步骤的语句放在for循环语句中,将flies[0]改为files[i],表示当前每一个被拖拽的图片*/
+		 
+		
+		
+		
+	</script>
+</html>

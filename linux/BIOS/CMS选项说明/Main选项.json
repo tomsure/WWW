@@ -1,0 +1,25 @@
+    BOIS Information:
+    	基本的BIOS信息
+
+	BIOS Vendor: American Megatremds
+	   表示BIOS的生产商，全球三大BIOS生产商之一；
+	Core Version 4.6.5.3
+	    指的是BIOS的核心版本
+	Compliancy: UEFI 1.01 X64
+	    
+	UBuild Date and Time 01/10/2015 22:10:20
+	
+	Inter RC version
+	  intel cedarvew  
+	  intel MRC 1.12
+	  这条信息指的是内存控制器参考代码，有些设备需要修改内存参数（大部分不用修改），这条信息用于参考内存参数     
+	System Language [English]
+    
+    System Date
+    系统日期，可直接输入数字修改
+    
+    System Time
+     系统时间，可直接输入数字修改
+     
+    Access Level  Administrator
+    在BIOS登录后的权限状态，一般显示Administrator或者User，具体相关设置在后面有详述。

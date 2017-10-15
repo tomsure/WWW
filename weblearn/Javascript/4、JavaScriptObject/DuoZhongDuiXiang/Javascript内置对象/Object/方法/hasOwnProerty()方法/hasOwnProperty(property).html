@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//	hasOwnProperty()方法用来检测对象是否拥有某个属性,参数是属性名称,用引号包裹;
+		var obj=new Object();
+		   obj.name='tom';
+		   obj.sayName=function(){
+		   	alert(this.name)
+		   }//创建一个对象
+		document.write(obj.name+'</br>');
+		obj.sayName()//调用对象的方法
+		document.write(obj.hasOwnProperty('name'))//true
+		//返回true，说明对象obj有name这个属性。
+		
+		
+		
+	</script>
+</html>

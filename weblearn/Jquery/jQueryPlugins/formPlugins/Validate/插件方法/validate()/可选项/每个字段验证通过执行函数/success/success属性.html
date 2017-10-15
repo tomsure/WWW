@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.valid{
+			background: url(../img/素材/ok.png) no-repeat right;
+		}/*设置验证成功时候这个类名的样式*/
+		
+	</style>
+	<body>
+		<form action="#" method="post" id="form">
+			<fieldset>
+				<p id="info"></p>
+			<p>用户名: <input type="text"  name="user" id="user" value="" />*</p>      
+			<p>密码: <input type="text"  name="password" id="password" value="" />*</p>      
+			<p>确认密码: <input type="text"  name="confirm_password" id="confirm_password" value="" />*</p>      
+			
+			
+			<input type="submit" value="点击提交"/>
+			</fieldset>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	},
+			    	password:{
+			    		required:true
+			    	},
+			    	confirm_password:{
+			    		required:true,
+			    		 equalTo:"#password"
+			    
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	},
+			    	
+			       password:"请输入密码",
+                    confirm_password:{
+                    	required:"",
+                    	equalTo:"两次密码不一致"
+                    }
+			    	
+			    },
+			   
+			   success:"valid",
+//			success作为属性的时候,可以设置一个值作为一个类名,当验证成功的时候这个类名会添加到元素上,然后可以 在CSS中设置他的样式,一般可以设置为一个绿色的勾,代表验证成功
+  //注意：由于验证成功的时候验证成功的提示信息会自动添加一个类名valid，也可以自定义的设置一个类名，就是在success后面写一个类名就算是设置了一个类名，当验证成功后，会自动的添加到验证成功的那个label上			   
+			   
+			   
+			   
+		})
+		})
+
+	</script>
+</html>

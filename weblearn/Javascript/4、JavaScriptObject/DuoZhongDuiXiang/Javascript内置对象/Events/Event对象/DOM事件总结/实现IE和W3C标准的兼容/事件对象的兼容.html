@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		document.onclick=function(ev){
+			var ev=ev||window.event;
+			alert(ev)
+		}
+		
+//	由于W3C和IE的事件对象是不同方式获取的,所以需要兼容,通常在事件函数中传递一个参数,作为W3C事件对象,而且由于window.event是IE事件对象,所以可以在事件函数中声明一个变量等于第一个参数或者等于window.event这样就可以实现事件对象的兼容	
+		
+	</script>
+</html>

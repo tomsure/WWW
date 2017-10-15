@@ -1,0 +1,29 @@
+.style(){
+    background+:red ;   //background-color；
+    background+: left;
+     
+    
+    
+}
+.style(){
+    background+_:top ;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    .style()
+}
+
+
+//当+_和+同时出现的时候，以出现此类符号的先后顺序，从上往下最后出现的属性值使用空格或者逗号，例如如果最后是设置的+_的属性，则这个属性与前面的属性值以空格隔开，如果最后设置的属性加了+符号，则这个符号以逗号隔开
+
+
+//以上例子编译结果：
+// div {
+//width: 100px;
+//height: 100px;
+//background: red , left top ;  //这里可能不符合CSS语法，但是有相关属性是符合的
+//}
+//
+// 

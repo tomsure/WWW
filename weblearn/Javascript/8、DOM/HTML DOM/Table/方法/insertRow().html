@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="1" width="300px">
+			
+			<tr>
+				<td>姓名</td>
+				<td>年龄</td>
+			</tr>
+			<tr>
+				<td>李萌</td>
+				<td>23</td>
+			</tr>
+			<tr>
+				<td>王莽</td>
+				<td>22</td>
+			</tr>
+		</table>
+		<button id='btn'>点击插入一行</button>
+	</body>
+	<script type="text/javascript">
+		var tb=document.getElementsByTagName('table')[0]
+	     var btn=document.getElementById("btn")
+	     btn.onclick=function(){
+	     	tb.insertRow(2)
+	     }
+//		insertRow()方法用于在table中插入一行,如果不添加参数,就是在表格最顶部插入一行作为第一行，如果加了参数，则就是在第几行后面插入一行
+	</script>
+</html>

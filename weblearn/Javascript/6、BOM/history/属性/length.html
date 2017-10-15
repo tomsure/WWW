@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+		
+		<script type="text/javascript">
+	/*length 属性声明了浏览器历史列表中的元素总数量。
+注意：Internet Explorer和Opera从0开始，而Firefox、Chrome和Safari从1开始。*/
+	window.onload=function(){
+		alert(window.frames.length)//尝试获取框架的数量
+	}
+		</script>
+	
+	<frameset rows="20%,*">
+		<frame src="top.html">
+        	<frameset cols="20%,70%">
+		         <frame  src="left.html"/>
+		         <frame  src="right.html"/>
+	        </frameset>
+	</frameset>
+	
+	
+	<body>
+	</body>
+</html>

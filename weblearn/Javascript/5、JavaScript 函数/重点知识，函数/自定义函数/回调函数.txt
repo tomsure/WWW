@@ -1,0 +1,37 @@
+回调函数：
+A,通过指针来调用，当页面中，需要前面相同的函数时候可以调用前面的函数
+
+例子 
+	 function aa(n1,n2){
+		 
+		 document.write(n1*n2)
+		 
+		 }aa(10,2)
+		 
+		 
+	function bb(n3,n4)	{
+		
+		alert(n3+n4)
+		
+		
+		} bb(8,9)
+		
+		
+		function cc(n5,n6,fun){
+			fun(n5,n6)
+			
+			
+		} cc(4,9 ,aa)
+		这里fun 执行的就是函数aa
+B匿名回调函数（不建议使用）
+
+
+递归函数：  自己调用自己，可以替换循环		
+
+
+内置函数：
+escape编码。unescape 解码
+eval  将字符串转换成js命令 输出后执行js的命令   注意：  这里字符串必须符合js命令的格式
+   例如：     var  a1="alert('哈哈')"
+              window.eval(a1)    这里会出现弹窗，因为eval把“alert（‘哈哈’）”解析成了弹窗；
+

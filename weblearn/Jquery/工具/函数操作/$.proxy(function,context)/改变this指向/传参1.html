@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+		    function ss(n1,n2){
+		    	alert(n1)
+		    	alert(n2)
+		    	
+		    }
+		    //暂时不执行，后面用到的时候再执行
+		    
+		    $(document).click($.proxy(ss,window)(2,3))
+		    //js中谁调用，this就指向谁，这里是点击document所以是document调用所以就是document调用，则会弹出docuent的DOM名称，但是这里将this改为指向window所以弹出的是window
+		    //注意这里改变指向之后不能使用$.proxy(ss,window)(2,3),因为这样的话就是执行函数，没去点击就会执行
+		})
+	</script>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv1{
+			width: 100px;height: 100px;background-color: red;
+		}
+		.dv2{
+			width: 300px;
+			height: 300px;
+			border: 3px solid black;
+		}
+	</style>
+	<body>
+			<input type="text" name="t1" id="t1" value="" />
+		<div class="dv1" id="dv1" draggable="true">
+			
+		</div>
+		<div class="dv2" id="dv2">
+			
+		</div>
+	  <img src="../../../../../Bootstrap/bootstrap库/Bootstrap源码/docs/favicon.ico" id="myImage"/>
+	</body>
+	<script type="text/javascript">
+	    
+		var dv1=document.getElementById("dv1");
+		var dv2=document.getElementById("dv2")
+		var t1=document.getElementById("t1")
+		var myImage=document.getElementById("myImage")
+		dv1.ondragstart=function(ev){
+			var ev=ev||window.event;
+			
+			ev.dataTransfer.setData('name','hello');
+
+             ev.dataTransfer.setDragImage(myImage,50,50)
+//           setDragImage()方法用于设置正在拖拽的时候被拖拽的元素显示的图标样式,所以被拖拽的元素的样式不一定是被拖拽的原本的样式；参数介绍：
+//     1,第一个参数表示有拖拽的时候显示的那个图片,可以在body中提前设置一个img标签,然后获取DOM对象写在这里(用变量比较方便);
+//     2,第二个参数和第三个参数是用来设置元素拖动的时候显示的这个图片左上角的坐标离鼠标指针的距离，例如这里射成50，50，则图片的位置就会根据鼠标指针的位置显示
+//     PS: 还可以设置img标签为隐藏或者动态创建这个标签
+//         这个属性也是在ondragstart事件函数设置
+    
+    
+			this.style.background='green'
+		}
+		//开始拖动后背景颜色变成绿色
+         dv1.ondragend=function(ev){;
+         	var ev=ev||window.event;
+         	
+         	this.style.backgroundColor='red'
+         	
+         }
+         
+        var i=0;
+         dv1.ondrag=function(){
+         	t1.value=i++;
+        
+         };
+         dv2.ondragenter=function(){
+         	this.style.background='blue'
+         }
+         dv2.ondragover=function(ev){
+         	ev.preventDefault()
+         }
+        dv2.ondrop=function(ev){
+        	this.style.background='white';
+        	alert(ev.dataTransfer.getData('name'))
+        }
+	</script>
+	
+</html>

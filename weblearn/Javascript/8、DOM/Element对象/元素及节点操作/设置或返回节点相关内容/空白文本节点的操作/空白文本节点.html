@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			<p>你好</p>
+			<p>还好</p>
+			<p>嗯</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		alert(dv.childNodes.length) //W3C标准浏览器弹出长度为7，IE老版本浏览器弹出为5，因为W3C标准认为空格也是节点，而IE则会自动忽略空文本弹出3
+	</script>
+</html>

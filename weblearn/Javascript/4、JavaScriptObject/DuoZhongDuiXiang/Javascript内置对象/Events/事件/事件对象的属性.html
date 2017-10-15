@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		
+		window.onload=function(){
+			var evObj=event||window.event;
+			var div1=document.getElementById("div1")
+		document.onmousemove=function(){
+			var ev=event||window.event;
+			var cx=event.clientX;
+			var cy=ev.clientY;
+			div1.innerHTML="cx="+cx+" --"+"cy"+"cy+"
+		}
+		}
+		
+	</script>
+	<body>
+		<div id="div1" style="width:200px;background-color:aqua;height:200px; border:1px solid #FF0000">
+			
+		</div>
+	</body>
+</html>

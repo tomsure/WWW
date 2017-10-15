@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			border: 1px solid red;
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+		}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-1.9.1/jquery.js">
+		</script>
+		<script type="text/javascript">
+		//.class选择器，可以选择class属性相同的元素；
+		//写法是$("")里面写.class名称
+			$(
+				function(){
+					
+					
+					$(".mydiv").css("background-color","red")
+					
+				}
+				
+				
+				
+			)
+		</script>
+	<body>
+		<div>0</div>
+		<div class="mydiv">
+			1
+		</div>
+		<div id="">
+			2
+		</div>
+		<div class="mydiv">
+			3
+		</div>
+	</body>
+</html>

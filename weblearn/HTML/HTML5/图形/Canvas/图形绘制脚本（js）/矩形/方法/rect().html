@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//rect()用来创建矩形；
+		window.onload=function(){
+			var ss=document.getElementById("myCanvas");
+		var dd=ss.getContext("2d");
+			dd.rect(20,20,300,40);//这里的宽度设置比canvas宽度要大所以无法完全显示；
+			/*它有四个值（x，y，width，height），分别代表：x：矩形左上角的 x 坐标。
+			                                    y:矩形左上角的 y 坐标。
+			                                    width:矩形的宽度，以像素计。
+                                                height:矩形的高度，以像素计。*/
+			dd.stroke() //路径
+			
+			
+		}
+	</script>
+	<body>
+		<canvas id="myCanvas" width="200" height="200"></canvas>
+	</body>
+</html>

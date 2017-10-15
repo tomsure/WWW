@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<input type="button" id="btn" value="点击跳转" />
+		<button>点击删除事件</button>
+	</body>
+		<script>
+			var s=document.getElementById("btn");
+			var btn=document.getElementsByTagName('button')[0]
+			function dd(){
+				alert("哈哈")}
+			
+			s.addEventListener("click",dd,false);//注意这的写法函数名称不要括号，事件名称不加on
+			
+			
+		//这样点击 后就会弹出函数内的内容
+			btn.addEventListener('click',function(){
+				s.removeEventListener("click",dd,false);//添加这个方法后就会删除绑定的click事件，现在是弹不出来的，注意，使用addEventListener()添加的事件，必须使用removeEventListener删除，且参数必须一致。
+			
+			
+				
+				
+			},false)
+			
+			
+			
+		</script>
+</html>

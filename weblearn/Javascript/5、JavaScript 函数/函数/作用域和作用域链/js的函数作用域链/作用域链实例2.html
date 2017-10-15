@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		 var ss=4;    //全局变量；
+	  function aa(){
+				var ss=1; //局部变量
+				
+				function bb(){
+					
+					alert(ss);
+					
+				}
+				bb()
+				
+				
+			}
+			aa()  
+			//最内层函数bb()内部 没有变量ss则向外查找，这里函数aa()内部有符合条件的变量ss；
+			//则取值ss=1,弹出1.
+	</script>
+	<body>
+	</body>
+</html>

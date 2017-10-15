@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="1" id="tb">
+			<tbody>
+				<tr><th>Header</th></tr>
+			<tr><td>Data</td></tr>
+			</tbody>
+				<tbody>
+				<tr><th>Header</th></tr>
+			<tr><td>Data</td></tr>
+			</tbody>
+		</table>
+	</body>
+	<script type="text/javascript">
+		var tb=document.getElementById("tb")
+		alert(tb.tBodies)
+		alert(tb.tBodies.length)
+		
+//		tBodies属性返回一个tbody元素数组,因为table元素内可以有多个tbody元素
+	</script>
+</html>

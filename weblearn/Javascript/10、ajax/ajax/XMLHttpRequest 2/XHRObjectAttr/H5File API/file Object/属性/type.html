@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="file"  name="input" id="aa" value="" />
+		
+	</body>
+	<script type="text/javascript">
+	
+   var dd=document.getElementById("aa");
+
+     dd.onchange=function(){
+     	alert(dd.files[0].type)
+     }
+  
+	//file对象的type属性可以返回选择要上传文件的类型，例如选择图片文件，则返回图片文件的格式名称	
+	</script>
+</html>

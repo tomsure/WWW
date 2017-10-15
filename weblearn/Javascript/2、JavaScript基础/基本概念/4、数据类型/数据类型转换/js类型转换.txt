@@ -1,0 +1,42 @@
+一  javascript数据的类型转换
+    undefined
+	null 
+	string
+	number
+	boolean
+	object...
+
+	1 强制类型转换
+		格式: 变量类型(变量名称);
+		1>转换成数值型	
+				Number(变量),把任何类型的 数据转换为数值类型
+				布尔型--》数值型   Number(变量) true-->1 false -->0
+				null-->数值型      0
+				undefined-->数值型	NaN
+				string-->数值型
+						如果字符串只有数字，转换是数字本身
+						空字符串转换为0
+						其他字符串结果 NaN
+				支持字符串转换成数值型
+				parseInt(var1，var2) 将字符串转换为 整形
+							var1 要转换 的字符串
+							var2 进制    10进制       0x 或0X -->16
+				parseFloat(var1 )将字符串转换为浮点型
+		2>转换为字符串型
+			String(参数)
+				null  undefined 控制符  ==》 字符串   "null"  "undefined"   String(null )==> "null"
+				boolean				true false   ==> "true"  "false" 
+				number			123  ==>   "123"
+			toString(); 
+				格式：对象.toString();  对象转换成字符串。
+						array.toString();
+						Boolean.toString();
+						Number.toString();		
+			补充:
+				转换为 boolean	 true  false
+					boolean(参数)    ""  0  NaN undefined false 都是假值  其他值 都是真值。
+					
+	2 隐式类型转换:系统会帮助我们自动进行数据转换。
+		isNaN() 该函数会对参数进行隐式的Number 。true  false
+		注意：
+			隐式对于用户来说是透明的，不需要特别关注。

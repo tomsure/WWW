@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$("button").click(function(){
+				var e=$.Event("myevent");
+				$("button").trigger(e)
+				})
+				
+				$("body").bind("myevent",function(){
+					alert(e)
+				})
+			})
+		
+	</script>
+	<body>
+		<button>点击测试</button>
+	</body>
+</html>

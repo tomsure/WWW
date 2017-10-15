@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+$("div").css("width","100px").css("height","100px").css("background","red").css("display","none")
+			$("#btn").click(function(){
+				$("div").show(1000) //设置隐藏的元素显示，动画时间为1秒钟。
+			})
+		})
+	</script>
+	<body>
+		<div></div>
+		<button id="btn">点击测试</button>
+	</body>
+</html>

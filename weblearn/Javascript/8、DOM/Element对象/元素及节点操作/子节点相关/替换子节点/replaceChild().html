@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//替换节点：replaceChild() 方法用新节点替换某个子节点。并且用来作为新内容的原来的节点属性会被删除
+//这个新节点可以是文档中某个已存在的节点，或者您也可创建新的节点。
+//以下例子需要将ul的第一个li节点的内容更换为第二个节点的内容
+		
+function dd(){
+	    var s=document.getElementById("li1")
+		
+		var d=document.getElementById("li2");
+		s.replaceChild(d.childNodes[0],s.childNodes[0])//将li2的内容更换成为li1的内容
+		alert(s.childNodes[0].nodeValue);//弹出美国，而不是中国
+        alert(d.childNodes[0].nodeValue)//报错，因为d的文本内容已经被删掉
+}
+
+	</script>
+	<body>
+<div id="dv">
+	<ul>
+		<li id="li1">中国</li>
+		<li id="li2">美国</li>
+	</ul>
+	<input type="button" name="" id="" value="点击更换" onclick="dd()"/>
+</div>
+	</body>
+	</html>

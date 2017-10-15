@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//从节点列表中返回的指定属性节点
+		window.onload=function(){
+			var dd=document.getElementById("dv");
+			alert(dv.attributes.getNamedItem('class'))
+		}
+		
+//		getNamedItem()方法返回元素属性集合中指定名称的属性
+
+//      一个DOM元素会有一个attributes属性集合,他包含了这个元素所有的属性,getNamedItem()方法就是这个集合的方法,而不是具体的属性的方法,
+//这个方法返回的就是属性集合中指定属性名称的属性对象,所以可以通过他获取到具体属性的其他信息
+
+
+//例如这里要获取的就是div属性集合中属性名称为"class"的属性值
+
+	</script>
+	<body>
+		<div id="dv" class="div1">
+			
+		</div>
+	</body>
+</html>

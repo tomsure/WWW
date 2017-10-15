@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<li></li>
+		<li id="li1"></li>
+		<li></li>
+		<li></li>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('li').not('#li1').text('你好')
+		})
+//		not()方法是一个排除法,用于选择除not里面设置的元素之外的所有元素，
+//      括号里的参数是元素的选择器,
+//      例如这里,选择了not('#li1'),就表示除#li1之外的其他元素
+	</script>
+</html>

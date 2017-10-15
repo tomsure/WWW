@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	/*screenX 事件属性返回当事件被触发时鼠标指针向对于屏幕的垂直坐标，也就是鼠标距离屏幕顶部的距离。*/
+		window.onload=function(){
+			var wd=document.getElementById("dv");
+			wd.onmousedown=function(ev){
+         var qq=ev.screenY||window.event.screenY;
+           alert("你点击的时候鼠标指针距离屏幕的Y轴距离为："+qq) 
+		}
+		}
+	</script>
+	<style type="text/css">
+		#dv{
+			margin: 0;
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 200px;
+			height: 200px;
+			background-color:gray;
+		}
+		#dv1{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			float: left;
+		}
+		#dv2{
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			float: left;
+		}
+		#dv3{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			float: left;
+		}
+		#dv4{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			float: left;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			<div id="dv1">
+				
+			</div>
+			<div id="dv2">
+				
+			</div>
+			<div id="dv3">
+				
+			</div>
+			<div id="dv4">
+				
+			</div>
+		</div>
+	</body>
+	 由点线面的思维里理解CSS逻辑像素（单位px）和物理像素（单位dp）
+	 这里用DIV来表示图片，整个大的图像里四个小的图像，大的就是1px，每个小的图像就是dp
+	 CSS像素和物理像素换算公式是   1px=（dpr）^2*dp
+	     由于iphone5的设备缩放比是2，所以iphone5的计算就是   1px=（2）^2*dp,也就是1px=4dp
+	     计算出1px=4dp这是在平面上看的，每个dp就是1px上面的一个点，1px上面有4个dp点；
+	     如果从“线”的角度来看，横向和纵向1px上面都有两个dp，也就是1px=2dp；
+	     
+	    由于iphone5的官方说的屏幕分辨率 是640*1136，他是屏幕分辨率也就是设备分辨率，所以单位就是dp，所以加上单位后就应该是 640dp*1136dp
+	    再根据上面的公式“线”的角度  1px=2dp，所以 640dp*1136dp计算为CSS像素就应该是：
+	         320px*568px
+	    
+	     
+	     
+	     
+	
+	
+	
+</html>

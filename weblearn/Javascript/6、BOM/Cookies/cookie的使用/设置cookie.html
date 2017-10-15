@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		var dt=new Date();
+		dt.setDate(dt.getDate()+10)//设置获取十天后的日期
+		document.cookie='name=tomsure;expires='+dt;
+		//使用这样一个表达式，可以再不手动删除cookie的情况下保存到设置的日期天数之后,expires=指的就是期限的意思,后面的等号不能丢，是连在一起的
+		alert(document.cookie)
+		
+		
+		//调试技巧：火狐浏览器可以查看本地存储的cookie通过本软件用火狐打开页面点击右键查看页面信息就可以看到当前保存的cookie
+	</script>
+	<body>
+	</body>
+</html>

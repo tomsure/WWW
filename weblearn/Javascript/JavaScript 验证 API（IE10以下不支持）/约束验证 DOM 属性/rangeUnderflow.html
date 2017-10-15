@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<input type="number" name="num" id="num" max="100" min="20" value="" />
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript" >
+		var num=document.getElementById("num");
+		btn=document.getElementById("btn")
+		btn.onclick=function(){
+		if(num.validity.rangeUnderflow){ //此时num.validity.rangeUnderflow的值为true
+				alert("你输入的值太小，请重新输入")
+			}
+		}
+		 
+         
+//        rangeUnderflow值的是如果输入的值小于input min属性的值的话,rangeUnderflow的值就为true,否则为false
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+</html>

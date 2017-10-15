@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+	#dv{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: absolute;
+		
+	}
+	</style>
+	<script type="text/javascript" >
+		
+	</script>
+	
+	<body>
+		<button id="btn" >点击测试</button>
+		<div id="dv">
+			11
+		</div>
+	</body>
+	<script type="text/javascript">
+		
+			var dv=document.getElementById("dv")
+		btn=document.getElementById("btn")
+		btn.onclick=function(){
+			var speed=1 //设置速度等于1，为一个变量，还可以自定义设置速度
+			setInterval(function(){
+				dv.style.left=dv.offsetLeft+speed+'px'
+		    },30)
+		}
+			
+		
+	
+ // 让元素动起来这里实现的步骤要点是:
+//	  1,设置元素为绝对定位,
+//    2,通过事件触发定时器,定时器中执行的函数设置当前元素的绝对定位的左偏移等于当前元素左边距离body的距离+1px;
+//    3,由于是定时器,所以每隔一段时间就会执行一次,所以元素的左偏移就会+1px
+//    4,由于速度设置的是变量,所以还可以动态设置速度
+//    这里的问题是:
+//     1,定时器会不停的执行下去,不会停止,所以不能再指定的位置停下来;
+       
+	</script>
+</html>

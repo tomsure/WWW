@@ -1,0 +1,20 @@
+@div:#dv;  //选择器变量
+@dvWidth:width;  //属性名变量
+
+@{div}{
+  @{dvWidth}:100px;
+  height:100px;
+  background-color: red;  
+    
+    
+}
+
+
+//属性名称变量就是使用变量来表示元素的属性名称，具体用法是使用@{属性名称}的格式，在使用的时候，在选择器之后的大括号里面和普通css样式属性放在一块，注意属性名称要放在大括号里，上面的例子编译结果如下：
+// #{
+//     width: 100px;
+//     height: 100px;
+//     background-color: red;
+// } 
+
+

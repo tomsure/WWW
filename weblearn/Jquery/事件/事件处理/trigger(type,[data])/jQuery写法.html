@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src='../../../../Jquery/jquery.js'>
+		
+	</script>
+	<script type="text/javascript">
+		/*trigger() 方法触发被选元素上指定的事件以及事件的默认行为（比如表单提交）。
+该方法与 triggerHandler() 方法类似，不同的是 triggerHandler() 不触发事件的默认行为。*/
+
+     /****************触发元素上指定的事件*********************/
+                 $(function(){
+                 	$("input").select(function(){
+                 		$(this).after("sss")
+                 	})
+                 	//当元素选中的时候，尾部插入字符串sss
+                 	$("button").click(function(){
+                 		$("input").trigger("select")
+                 		//当点击button的时候执行input绑定的事件并执行使事件绑定的函数
+                 	})
+                 })
+	</script>
+	<body>
+		<input type="text" name="" id="" value="是是是是是是" />
+		<button >点击测试</button>
+	</body>
+</html>

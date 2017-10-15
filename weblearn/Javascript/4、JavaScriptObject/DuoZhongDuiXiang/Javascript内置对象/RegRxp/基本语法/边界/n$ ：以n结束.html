@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		n$表示匹配以n结尾的字符;
+    var str='123aqwed@24X';
+    var reg=/[A-Z]$/g//匹配以&符号结尾的字符
+    document.write(str.match(reg))//匹配到A-Z结尾的字符是X；
+    var reg1=/\d@$/g; //匹配一个数字和一个@结尾的字符
+    var str1='dmw38459m98@';
+    document.write(str1.match(reg1))
+   
+    </script>
+</html>

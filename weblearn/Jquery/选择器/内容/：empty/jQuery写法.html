@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	p{border: 1px solid red; height: 20px;;}
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	<script>
+	//所有不包含子元素或者文本的空元素
+		$(function(){
+			$("td:empty").css("background","red")
+			//这里选择的是不包含文本的td元素。将背景设置为红色
+			$("p:empty").css("background","red")
+			//选择空的P元素
+		})
+	</script>
+	<body>
+		<div id="">
+			<table border="1px" width="100px" height="100px">
+				<tr>
+					<td>1</td>
+					<td></td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td></td>
+					<td>4</td>
+				</tr>
+			</table>
+		</div>
+		<div id="">
+			<p>11</p>
+			
+			<p></p>
+		</div>
+	</body>
+</html>

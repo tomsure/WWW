@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//get() 方法获取由选择器指定的 DOM 元素。可以将Jquery转换成js原生对象
+		//正常情况下jq对象不能与js方法混用，可以使用get()方法转换
+		/*参数	描述
+        index	可选。规定要获取哪个匹配的元素（通过 index 编号）*/
+		$(function(){
+	    var dv=document.getElementById("dv1")
+	    alert(dv1.innerHTML)
+	    //innerHTML是jsDOM对象的方法，纯js必须使用DOM对象
+     alert($("#dv1").innerHTML)
+     //用于jquery则会报错或者提示未定义
+     alert($("#dv1").get(0).innerHTML)
+     //使用jquery对象使用get()可以将jquery对象转换成js对象，这时候可以使用js DOM对象属性或方法，注意get()括号里面需要写元素的索引，否则提示未定义，如果不写下标就属于元素的集合
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+		})
+	</script>
+	<body>
+		
+		<div id="dv1">
+			水水水水
+		</div>
+		<div id="dv2">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<input type="text" name="num" id="num" maxLength="5" value="" />
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript" >
+		var num=document.getElementById("num");
+		btn=document.getElementById("btn")
+		btn.onclick=function(){
+		if(num.validity.typeMismatch){ //此时num.validity.tooLong的值为true
+				alert("你输入的数据类型不对，请输入数字")
+			}
+		}
+		 
+         
+
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(){
+			
+		}
+		Person.prototype.name='tom';
+		var person1=new Person();
+		person1.age=29
+		document.write(person1.hasOwnProperty('age')+'</br>');//返回true，因为age是person1自己有的属性；
+		document.write(person1.hasOwnProperty('name')+'</br>')//返回false，因为name是原型对象Person.prototype的属性，不是person1的属性
+		document.write(Person.prototype.hasOwnProperty('name')+'</br>')//
+//返回true,因为name是原型对象Person.prototype的属性
+		
+		
+//	hasOwnProperty()方法检测对象是否拥有某个属性，只有被检测的属性是对象本身的才会返回true，如果	检测的属性是对象的原型的属性，而将方法绑定给实例对象，或者如果检测的属性是实例对象的属性，而将方法绑定到原型对象都会返回false
+		
+		
+		
+	</script>
+</html>

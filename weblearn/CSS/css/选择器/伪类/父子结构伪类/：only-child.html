@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<style type="text/css">
+		:only-child{
+		
+			color: red;
+			font-size: x-large;
+		}
+		/*这个属性指的是选择父级元素只有一个子元素的指定元素他的父级元素没有其他元素*/
+		p:only-child{color: green;}/*这里指的是选择只有一个子元素的父级元素，而且这个子元素是p元素，这里会覆盖上面的设置*/
+		/*唯一子元素*/
+		
+	</style>
+	<body>
+		<div id="dv1">
+			<a>美国</a>
+		</div>
+		<div id="dv2">
+			<p>ddddd </p>
+			<p>dddd</p>
+		</div>
+		
+		<a href=""> 
+			<span id="">
+			
+		</span>
+		<div id="">
+			<p>中国</p>
+		</div>
+		</a>
+	</body>
+</html>

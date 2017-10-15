@@ -1,0 +1,16 @@
+.class(@width;@height;@bgcolor){
+    width: @width;
+    height: @height;
+    background-color: @bgcolor;
+    
+}
+
+div{
+    .class(@height:100px;200px;red)
+    
+    
+}
+
+//在调用混合的时候，如果传入参数的时候使用@参数名：实际参数这种格式的时候，就可以改变参数的顺序，例如这里，在定义混合的时候，@height是排在第二位的，通过调用的时候使用键值对的形式，就可以使参数@height跑到第一位，第二位就自动变成了@width的参数，而如果不使用这种方式，全部传入实参，则就必须按顺序传入实际需要的参数；
+// 这里的意思就是可以使用键值对的参数优先使参数靠前传入
+  

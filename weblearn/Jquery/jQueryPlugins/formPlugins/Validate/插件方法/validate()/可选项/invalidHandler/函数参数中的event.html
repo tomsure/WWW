@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post" id="form">
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>邮箱: <input type="text"  name="email" id="email" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				submitHandler:function(form){
+					form.submit()
+					
+				},
+				
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	}
+			    }
+			   
+		});
+		$('form').on('invalid-form',function(event,validator){
+			alert("错误数:"+validator.numberOfInvalids())
+			console.log(event)
+		})
+		//invalidHandler中的第一个参数event是一个invalid-form事件，表单元素可以通过这个事件在验证失败的时候触发
+		})
+ 
+	</script>
+</html>

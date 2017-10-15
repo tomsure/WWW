@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	#dv{
+		width:100px ;height:100px ; background-color: chartreuse;
+	} 
+	
+	  .dv1{ border: 8px solid brown;}
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	<script>
+		/*removeProp() 方法移除由 prop() 方法设置的属性。
+注意：不要使用该方法来移除诸如 style、id 或 checked 之类的 HTML 属性。请使用 removeAttr() 方法代替。*/
+      $(function(){
+      	$("#btn").click(function(){
+      		$("div").prop("class","dv1")  
+      	})
+      	
+      	$("#btn1").click(function(){
+      		$("div").removeProp("class","dv1")  
+      	})
+      	
+      	$("#btn2").click(function(){
+      		$("div").removeAttr("class","dv1")   //删除HTML自带属性必须使用removeAttr()方法，无论是用哪种方法添加的这个属性
+      	})
+      	
+      })
+
+	</script>
+	<body>
+		
+		<div id="dv">
+			
+		</div>
+		<button id="btn">点击测试</button>
+		<button id="btn1">点击测试</button>
+		<button id="btn2">点击测试</button>
+	</body>
+</html>

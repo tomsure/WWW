@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击获取</button>
+		<textarea name="" id="ta" rows="20" cols="20"></textarea>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		var ta=document.getElementById("ta");
+		btn.onclick=function(){
+			
+			navigator.geolocation.getCurrentPosition(function(position){
+			ta.value='响应时间：'+new Date(position.timestamp)
+
+		
+			
+		},function(err){//请求失败后执行的函数
+			alert(err)
+//			当请求获取地理定位信息失败的时候会执行一个函数,这个函数是getCurrentPosition()方法的第二个参数,这个函数有一个参数,这个参数指的是一个错误对象positionError,可以在执行请求失败函数的时候弹出测试,这个错误对象有一个code属性,有四个值是0,1,2,3这四个数字,当执行失败函数的时候可以获取code属性的值,这个四个值代表失败的原因代码
+//			
+		})
+		}
+
+
+	</script>
+</html>

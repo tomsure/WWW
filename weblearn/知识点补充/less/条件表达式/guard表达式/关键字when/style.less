@@ -1,0 +1,17 @@
+.style(@color)when(lightness(@color)>=50%){
+    
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    
+}
+
+
+
+div{
+    .style(#ffffff)
+}
+//less的guard表达式类似于js中的条件语句，但是guard表达式使用的时when关键字，这个关键字紧跟在混合类名称后面，when后面的括号里面写的是设置的条件，如果条件成立，则在执行大括号里面的语句
+
+//在上面的例子中，when里面的参数lightness()是less中的一个函数，（less有很多个函数），这个函数，用于计算颜色值，将颜色计算成百分比返回，所以上面的例子的意思是传入的参数会用lightness计算，如果计算结果》=50%，（这里的50%，就是255*50%）则执行括号里面的语句，由于计算结果确实》=50%，所以div的样式就是大括号里面的样式
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		
+		function ss(a){  //参数a
+			
+			a=5   //这里的a=5不是全局变量，而是局部变量的赋值；
+			
+		document.write(a)	
+				}
+		
+		ss()
+//在局部变量和全局变量知识点中有说,在函数内部,没有加 var的变量是全局变量,加了var的变量是局部变量,但是,如果函数内的这个变量是函数的参数,则,这个 变量是局部变量,因为 ,函数的参数实际是函数内变量的声明,例如上面例子中 ss(a) 相当于是  函数内部的 var a;
+//    所以下面在访问a就会报错:
+    
+//       alert(a)  //报错
+	</script>
+	
+</html>

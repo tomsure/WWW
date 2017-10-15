@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		div { width: 100px;height: 100px;background-color: red;margin-top: 50px;}
+		.dv1 { width: 200px;height: 100px;}
+		.dv2 { width: 100px;height: 200px;background-color: deeppink ;}
+	</style>
+	
+	<body>
+		<button id="btn1">点击测试</button>
+		<div class="dv1">
+			从左往右
+		</div>
+			<button id="btn2">点击测试</button>
+		<div class="dv2">
+			从右往左sss
+		</div>
+		<button id="btn3">点击测试</button>
+		<div class="dv3">
+			从上往下
+		</div>
+			<button id="btn4">点击测试</button>
+		<div class="dv4">
+			从下往上
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		$('#btn1').click(function(){
+			$('.dv1').effect('slide',{direction:'left', distance:90},'slow' )
+			
+		})
+		$('#btn2').click(function(){
+			$('.dv2').effect('slide',{direction:'right',distance:80},'slow','width')
+		})
+		$('#btn3').click(function(){
+			$('.dv3').effect('slide',{direction:'up',distance:80},'slow')
+		})
+		$('#btn4').click(function(){
+			$('.dv4').effect('slide',{direction:'down'},'slow')
+		})
+//	滑动特效只在js中给元素的特效方法添加 值:'slide'即可，还可以设置滑动方向和滑动的距离
+
+//    参数:
+//    direction:特效的方向。可能的值："left"、"right"、"up"、"down"。	默认："both"
+//    distance:特效的距离。默认为元素的高度（height）还是宽度（width）取决于 direction 参数。可以设置为小于元素的宽度（width）/高度（height）的任意整数。
+	</script>
+</html>

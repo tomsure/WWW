@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var un=document.getElementById("un")//首先获得对象un
+			un.onfocus=function(){//当鼠标移入输入框的时候输入框的时候执行onfocus命令
+					this.value=""//执行onfocus命令的时候得到un的值为空
+				}
+			var form=document.getElementById("form");
+			form.onsubmit=function(){//当点击submit按钮的时候执行
+				var un=document.getElementById("un").value
+				
+			}
+		};
+	</script>
+	
+	<body>
+		<form action="#" method="post" id="form">
+			<input type="text " name="" id="un" value="请输入用户名" />
+			
+			<input type="submit" style="color:#FF0000;background: blue; background-attachment: initial;" value="提交"/>
+		</form>
+	</body>
+</html>

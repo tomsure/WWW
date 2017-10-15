@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-1.9.1/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+	//将每一个选择器匹配到的元素合并后一起返回。意思是可以同时设置多种选择器的元素同时进行设置；
+
+		$(function(){
+			$("#dv,.p1,h4").css("color","red")
+			//同时选择多个选择器对元素进行统一设置；
+			//方法是$("")里面写上对应的选择器名称用逗号隔开
+			
+			
+			
+		})
+	</script>
+	<body>
+		<div id="dv">
+			你好
+		</div>
+		<p class="p1">哈哈</p>
+		<h4 >呵呵</h4>
+	</body>
+</html>

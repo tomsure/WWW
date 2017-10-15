@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function (){
+			function aa(){
+				alert(1)
+			}
+			function bb(){alert(2)}
+			$.queue(document,'q1',aa)
+			$.queue(document,'q1',bb);
+			console.log($.queue(document,'q1')) //$.queue()如果前面已经执行了添加队列方法后可以再使用这个方法只添加元素和队列名来返回当前队列函数形成的数组
+		})
+		
+	</script>
+</html>

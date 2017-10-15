@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 400px;
+			height: 400px;
+			display: flex;
+			background-color: deeppink;
+		}
+		#dv1{
+			width: 100px;
+			height: 100px;
+			background-color: darksalmon;
+			align-self: center;
+			order: 4;
+		}
+		#dv2{
+			width: 100px;
+			height: 100px;
+			background-color:seagreen;
+			order: 3;
+		}
+		#dv3{
+			width: 100px;
+			height: 100px;
+			background-color:forestgreen;
+			order: 2;
+		}
+		#dv4{
+			width: 100px;
+			height: 100px;
+			background-color:darkred;
+			order: 1;
+		}
+		
+		/*order属性用于设置flex中的子元素的 显示顺序,这个属性的值是数字,数字越小,月越靠前显示*/
+	</style>
+	<body>
+		<div id="dv">
+			<div id="dv1">1</div>
+			<div id="dv2">2</div>
+			<div id="dv3">3</div>
+			<div id="dv4">4</div>
+		</div>
+	</body>
+	
+</html>

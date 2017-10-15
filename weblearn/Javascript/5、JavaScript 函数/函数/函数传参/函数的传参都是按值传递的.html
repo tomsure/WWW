@@ -1,0 +1,68 @@
+
+
+	
+		
+		
+	
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+			
+	
+	
+//		函数的传参是按值传递的，也就是把函数外部的变量的值，传递给函数的参数，这就是函数的传参
+		var ss=1;
+		function aa(cc){
+			alert(cc)
+			
+			
+		}
+		aa(ss)  // 1
+		
+//		这里,声明了一个函数aa()有参数cc,函数前面声明了一个变量ss,当函数执行的时候会将ss的值复制一份,再赋给函数的参数cc，所以这里会弹出1；
+
+        function dd(a){
+        	a.name='abc'
+        	
+        }
+        
+        var ee=new Object();
+            ee.name='ddd';
+            
+            dd(ee)
+        document.write(ee.name)
+//当把一个函数a作为参数传给另一个函数b的时候,函数a作为函数b的参数,函数b的  参数和函数a(此时也是参数)将会引用同一个对象
+      
+      function sss(a){
+      	a.name='qqq';
+      	a=new Object();
+      	a.name='fff'
+      	
+      }
+      var ddd=new Object();
+          ddd.name=222;
+    //     alert(ddd.name)//函数执行之前，引用的是他自己的值
+        sss(ddd)
+           alert(ddd.name)//函数执行之后，ddd和sss引用的是同一个对象，且引用的属性值是sss内的属性，所以弹出的是sss函数内的属性值；
+//这里函数sss里面又新建了一个对象,重新添加了属性值a.name,但是执行的时候没有改变,是因为,js传参是按值传递的,意思是说   如果是按引用传递地,创建对象之后 ,对象的属性会覆盖前面设置的相同名称属性值,所以函数外边属性和函数共同引用的那个对象,的值也会改变,但是实际不会改变,按值引用就是这个意思   ；
+
+//函数内部创建的对象实际是一个局部变量运行完毕后立即销毁
+//         
+           
+           
+           
+
+
+        
+	</script>
+</html>
+
+		
+	
+

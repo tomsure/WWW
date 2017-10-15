@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		 var ss=4;    //全局变量；
+	  function aa(){
+				var ss=1; //局部变量
+				
+				function bb(){
+					var ss=2;   //函数bb()内的局部变量
+					alert(ss);
+					
+				}
+				bb()
+				
+				
+			}
+			aa()  
+			//最内层函数内部有复合条件的变量ss则会取值 ss=2；
+	</script>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		span{
+			display: block;
+     background-color: green;
+		}
+	</style>
+	<body>
+		  <div id="dv">
+		  	
+		  </div>
+		  <button>点击测试</button>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+		     $('button').on('click',function(){
+		     	$('#dv').html('<span>呵呵</span>')
+		     	 alert($('#dv').html())
+		     })
+		})
+		
+		
+//		  html()方法用于设置或者返回元素内部的innerHtml,也就是解析html代码的；
+//     如果没有参数就是返回,如果有参数就是设置,如果参数是函数,就可以使用函数计算的方式返回或设置元素的html内容
+	</script>
+</html>

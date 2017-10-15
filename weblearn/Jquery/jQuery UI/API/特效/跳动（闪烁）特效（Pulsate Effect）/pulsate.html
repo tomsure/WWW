@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		div { width: 100px;height: 100px ;background-color: red;}
+	</style>
+	
+	<body>
+		<button>点击测试</button>
+		<div id="">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('button').on('click',function(){
+			$('div').toggle('pulsate',{times:10})
+		})
+//		跳动特效是元素在显示或消失前闪烁的效果,给特效方法添加值:'pulsate'即可,可选参数times:设置闪烁的次数
+	</script>
+</html>

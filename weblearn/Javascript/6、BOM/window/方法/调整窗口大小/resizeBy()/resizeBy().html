@@ -1,0 +1,20 @@
+<html>
+<head>
+	<meta name="" content="" charset="utf-8"/>
+<script type="text/javascript">
+ //window.resizeBy(水平,垂直) 功能：将当前窗口改变指定的大小(x,y)，当x、y的值大于0时为扩大，小于0时 为缩小。 
+function resizeWindow()
+{
+top.resizeBy(-100,-100)
+}
+</script>
+</head>
+
+<body>
+<form>
+<input type="button" onclick="resizeWindow()" value="调整窗口大小">
+</form>
+<p><b>注释：</b>我们使用的是 <b>top</b> 元素而不是 <b>window</b> 元素来表示顶级框架。如果您没有使用框架，请使用 <b>window</b> 元素。</p>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+1，转换为数值型；将所有类型的变量转换为数值型：
+               布尔型转换为数值型;var a=true; document.write(a);浏览器显示的是 1；
+			   字符串转换为数值型： var a="qwe"; document.write(a);浏览器显示的是NAN;
+			   数值的字符串转换为数值型：var a="123"; document.write(a); 浏览器显示的是123；
+			   变量 值null的 转换为数值型：var a=null，document.write(a); 浏览器显示的是0；
+              undefind转换为数值型：var a； document.write(a);浏览器显示的是NAN; 由于未定义类型变量的值就是undefind，所以声明的时候不用写a=udefind；	
+              空字符串，转换后的值是0； 例如：var a="";     document.write(a);浏览器显示的是0；
+ 2，转换为布尔型：所有变量中0，null，undefind，“”，false，这中转换为布尔型都为false，其他都为true。
+3，转换为字符串型：
+4，隐式转换；  计算机会自动 例如 var a=“2”;
+                                 var b=1;
+								 var c=a*b;
+                                document.write(c);   浏览器显示的是2；
+                            注意：加号的时候只会拼接不会相加，其他减乘，除都可以使用；
+
+if ，else if语句  例 var q="晴天";
+                     if(q=="雨天"){document.write("吃火锅")}
+                     else if(q=="雾天"){document.write("做运动")}
+                     else if(q=="艳阳天"){document.write("约会")}
+                     else{document.write("吹牛逼")}
+	switch 语句  例如：   				
+    var a=晴天"；
+	switch（a）{ 
+	case "雨天": document.write("跑步");break;
+                   case "雾天": document.write("打雪仗");break;
+    case "昨天" :document.write("钓鱼");break;
+    case "晴天" :document.write("今天");break;
+    default :document.write("坐禅");break;}
+	

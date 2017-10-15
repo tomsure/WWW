@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<style type="text/css">
+		.a{border:1px solid red;background: gray;}
+		.s{border:1px solid green ;margin-top: 10px;}
+		
+	</style>
+	<body>
+		<div class="s">
+			<div class="container"><div class="row">
+			
+			</div>
+<div class="col-md-5 a " style="height:30px ;background: chartreuse;">
+			向右偏移前
+			</div>
+			<div class="col-md-4 a">
+				水水水水
+			
+		</div></div>
+		</div>
+		
+		
+		
+		
+		<div class="s">
+			<div class="container"><div class="row">
+			
+			</div>
+			<div class="col-md-5 a col-md-push-1 " style="height:30px ;background: chartreuse;">
+			向右偏移后
+			</div>
+			<div class="col-md-4 a">
+				水水水水
+			<!--col-*-push用来偏移列的位置，是向右偏移 -->
+				
+			<!--当设定的列向右偏移之后，如果它的右边有列，则设置偏移的列会穿过右边的列，右边列的位置不变-->
+		</div></div>
+		</div>
+		
+		
+		<div class="s">
+			<div class="container"><div class="row">
+			
+			</div>
+			<div class="col-md-5 a " style="height:30px ;background: chartreuse;">
+			水水水水
+			</div>
+			<div class="col-md-4 a col-md-push-1 ">
+				向右偏移后
+			
+		</div></div>
+		</div>
+		<!--<!--当设定的列向右偏移之后，如果它的左边有列，左边列的位置不变-->
+		
+	</body>
+</html>

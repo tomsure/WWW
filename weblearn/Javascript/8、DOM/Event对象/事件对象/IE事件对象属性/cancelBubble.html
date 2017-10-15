@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body onclick="alert('body');">
+
+    <input id="Button1" type="button" value="button" onclick="clickBtn(event)" />
+    <script language="javascript" type="text/javascript">
+        function clickBtn(event)
+        {
+            event=event?event:window.event;
+            event.cancelBubble=true;
+            
+        }
+    </script>
+</body>
+   <!--cancelBubbl属性用于阻止事件冒泡，W3C标准则使用stopPoption()方法-->
+</html>

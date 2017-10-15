@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv{
+			width: 300px;
+			height: 200px;
+			background-color: red;
+		    position: relative; /*父元素定位设置为relation*/
+		}
+		#dv1{
+			width: 100px;
+			height: 100px;
+		     background-color:saddlebrown ;
+		     position: absolute;  /*子元素为绝对定位*/
+		     left: 50%;  /* 子元素向左偏移50%,此时子元素的左边距离父元素左边150px,他的百分比是基于父元素的宽度计算的*/
+		     -webkit-transform: translate(-50%);
+		     /*子元素 的x轴需要向水平方向向左偏移-50%*/
+		}
+		
+	
+	
+	   /*提示：或者实用margin-left的负值为盒子宽度的一半也可以实现，不过这样就必须知道盒子的宽度，但兼容性好*/
+
+	</style>
+	<body>
+		<div class="dv">
+			<div id="dv1">
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		
+			<p>你好</p>
+		
+		<button>点击删除父元素</button>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').on('click',function(){
+				$('p').wrap("<div id='dv'></div>")
+			})
+		})
+		
+//		wrap()方法用于将被选元素用一个指定的元素包裹起来
+//		 可能的值:
+//HTML 代码 - 比如 ("<div></div>")
+//新元素 - 比如 (document.createElement("div"))
+//已存在的元素 - 比如 ($(".div1"))
+////已存在的元素不会被移动，只会被复制，并包裹被选元素。
+		
+
+	</script>
+</html>

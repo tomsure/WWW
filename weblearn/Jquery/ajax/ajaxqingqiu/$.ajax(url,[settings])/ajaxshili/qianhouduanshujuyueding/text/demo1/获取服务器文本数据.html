@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击获取</button>
+		<p></p>
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('#btn').click(function(){
+			$.ajax({
+				url:'demo1.php?data='+Math.random(),//注意获取纯文本需要添加随机数
+				success:function(data){
+					$('p').html(data)
+				}
+			})
+		})
+		
+		//获取服务器文本数据只需在事件函数中执行$.ajax()方法或者$.get()方法
+		//参数使用url和success，将页面的一个元素的内容设置为服务器返回的data数据即可
+	</script>
+</html>

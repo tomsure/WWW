@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var ss=document.getElementById("text1");
+			var de=document.getElementById("form")
+			ss.onfocus=function(){
+				ss.value="你好"
+			}
+			de.onreset=function(){
+			 alert("你的表单被重置了")   //会弹出这几个字，但是只要form标签里面有reset标签ss就会被重置。这里只是一个与reset绑定的另外一个弹出事件而已
+			}
+			
+		}
+	</script>
+	<body>
+		<form id="form">
+		<input type="text" name="text1" id="text1" value="" />
+		<input type="reset" name="" id="" value="点击重置" />
+		</form>
+		
+	</body>
+</html>

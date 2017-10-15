@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width:100px;
+			height: 100px;
+			background-color: blue;
+			position:relative;
+			margin: 20px;
+		}</style>
+	<body>
+		<div id="dv1">
+			1
+		</div>
+		<div id="dv2" style="background-color: green;">
+			2
+		</div>
+		<div id="dv3" style="background-color: red;">
+			3
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+//			相同点:
+			$('#dv1').click(function(){
+				$(this).animate({width:'300px'},2000,function(){
+					$(this).css('backgroundColor','red')
+				})
+				$(this).animate({height:'300px'},2000)
+				$(this).animate({left:'300px'},2000)
+				
+			})
+		//animate()中的回调函数是在自己的动画执行完毕后执行函数中的内容，queue（）方法也是等上一个动画完成后执行里面的函数；	
+			
+			
+			
+                 /****************************不同点*******************************/
+			$('#dv2').click(function() {
+					$(this).animate({
+						width: '300px'
+					}, 2000)
+					$(this).queue('fx', function(next) {
+						var This = this
+						var timer = setInterval(function() {
+
+							This.style.height = This.offsetHeight + 1 + 'px'; //高度不断加1
+							if(This.offsetHeight == 200) {
+								
+								clearInterval(timer) //当高度等于200的时候清除定时器                               
+
+							}
+						}, 30)
+						next()  //清除队列函数并执行
+//						这里设置的是当offsetHeight等于200的时候清除定时器，由于定时器是异步进行的函数,，在offsetHeight等于200之前，定时器是在持续进行的，而且queue()中已经清除了队列，但是此时高度还没走完的时候后面的animate()动画就开始进行了，所以会产生高度和left都会同时进行
+					})
+					$(this).animate({
+						left: '300px'
+					}, 2000)
+
+				})
+			
+			
+			       /****************************不同点*******************************/
+			$('#dv3').click(function() {
+					$(this).animate({
+						width: '300px'
+					}, 2000)
+					$(this).queue('fx', function(next) {
+						var This = this
+						var timer = setInterval(function() {
+
+							This.style.height = This.offsetHeight + 1 + 'px'; //高度不断加1
+							if(This.offsetHeight == 200) {
+								next()  //等offsetHeight等于200的时候才清除队列函数并执行
+								clearInterval(timer) //当高度等于200的时候清除定时器                               
+
+							}
+						}, 30)
+						
+					})
+					$(this).animate({
+						left: '300px'
+					}, 2000)
+
+				})
+				//		将queue()方法的next(),也就是清除队列方法放在if语句中执行，设置成当高度等于两百的时候才清除队列，这样的话，只有等高度走完了才会走下一个动画left，这就说明queue()方法中可以控制清除队列的dequeue()执行的顺序，达到控制动画的效果，这样就会比animate()方法中的回调函数更方便，如果animate()中的回调函数也是用定时器的话，就达不到这个效果
+
+			})</script>
+</html>

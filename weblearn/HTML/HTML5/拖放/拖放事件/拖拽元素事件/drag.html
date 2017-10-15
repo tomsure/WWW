@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv1{
+			width: 100px;height: 100px;background-color: red;
+		}
+		.dv2{
+			width: 300px;
+			height: 300px;
+			border: 3px solid black;
+		}
+	</style>
+	<body>
+			<input type="text" name="t1" id="t1" value="" />
+		<div class="dv1" id="dv1" draggable="true">
+			
+		</div>
+		<div class="dv2" id="dv2">
+			
+		</div>
+	
+	</body>
+	<script type="text/javascript">
+		var dv1=document.getElementById("dv1");
+		var t1=document.getElementById("t1")
+		dv1.ondragstart=function(){
+			this.style.background='green'
+		}
+		//开始拖动后背景颜色变成绿色
+         dv1.ondragend=function(){
+         	this.style.backgroundColor='red'
+         }//结束拖动后背景颜色又变成红色
+         
+        var i=0;
+         dv1.ondrag=function(){
+         	t1.value=i++;
+        //  设置t1的值为i++,i++表示本身加1;
+         }
+//  ondrag事件表示当进行拖拽后,结束拖拽前触发的事件,这个 事件是连续触发的,例如上面的例子中,当触发onddrag事件的时候,在事件函数中设置t1这个input的值为i++,在对元素进行拖拽的时候,t1的值就会已1累加不停的变大,这样就说明这drag事件实在连续触发的
+    
+	</script>
+	
+</html>

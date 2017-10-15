@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		function Person(){};
+		Person.prototype.name='tom';
+		Person.prototype.job='doctor';
+		Person.sayName=function(){
+			alert('my name is：'+this.name)
+		}//创建对象
+		
+		var person1=new Person();
+		
+		document.write((person1.name+'tom')+'</br>');
+		 person1.name='bom';//给实例对象重新设置name属性
+		 document.write(person1.name+'</br>')//bom
+		document.write(Person.prototype.name+'</br>')//tom
+	//此时发现实例对象的属性值和原型对象上的不一样；
+	
+	    delete person1.name;//删除person1的属性值
+	    document.write(person1.name)//tom
+		//再打印person1的值，显示又恢复了和原型对象一样的值，
+		
+	//使用delete操作符，可以删除实例对象屏蔽的原型对象上的同名属性值，从而恢复使用原型对象上的属性值；	
+		
+		
+		
+	</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+   <form action="demo.php" method="post" id="form">
+   姓名	：	<input type="text" name="username" id="username"/>
+年龄	：	<input type="text"  name="age"/>
+住址	：	<input type="text"  name="address"/>
+身高	：	<input type="text" name="height"/>
+籍贯	：	<input type="text" name="oldaddress"/>
+  	<input type="button" name="btn" id="btn" value="点击发送" />
+  
+   </form>
+   <div id="">
+   	
+   </div>
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		//serialize()方法可以进行表单序列化；
+		//如果想要一个表单元素的值被序列化成字符串，这个元素必须含有 name 属性。此外，复选框（checkbox）和单选按钮（radio）(input 类型为 "radio" 或 "checkbox")的值只有在被选中时才会被序列化。另外，文件选择元素的数据也不会被序列化。
+		
+		//在学习的时候，我们可以通过一下方式获取表单元素的值来发送：
+      var sendData={"username":$('#username').val()};
+//    可以这样获取到,但是在实际开发中的数据量是非常大的,可能无法一条一条这样获取,所以jquery的serialize()方法就可以解决这一问题,他可以将表单进行序列化,将所有的表单元素要发送的数据进行收集同意发送到服务器
+
+    $('#btn').click(function(){
+    	var sendData=$('#form').serialize();
+    	//表单序列化，这个方法可以一次性将所有表单数据打包。
+    	$.ajax({
+    		type:"post",
+    		url:"demo.php",
+    		data:sendData,
+    		async:true,
+    		success:function(data){
+    			$('div').html(data)
+    		}
+    	});
+    })
+
+
+
+//注意serialize()方法需要表单元素需要使用form元素包裹,
+//这个方法方便了很多
+	</script>
+	
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	
+		</head>
+		
+		<body>
+			<video width="" height="" controls="" id="vid">
+				<source src="../音视频资源文件/movie.mp4"></source>
+				<source src="../音视频资源文件/johann_sebastian_bach_air.ogg"></source>
+				<source src="../音视频资源文件/mov_bbb.mp4"></source>
+				
+			</video>
+			<button id="btn">快速</button>
+		</body>
+		<script>
+
+	var vod=document.getElementById("vid");
+	 var btn=document.getElementById("btn");
+	   btn.onclick=function(){
+	   	  vod.playbackRate=3
+	   }
+	   vid.onratechange=function(){
+	   	alert('播放速度变块了')
+	   }
+		
+// onratechange事件在播放速度发生变化的时候触发
+		</script>
+	</html>

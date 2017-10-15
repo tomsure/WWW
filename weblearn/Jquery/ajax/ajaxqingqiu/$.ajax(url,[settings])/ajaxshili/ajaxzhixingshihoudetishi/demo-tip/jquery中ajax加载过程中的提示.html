@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击加载</button>
+		<img src="ajax-loader.gif" style="display: none"/>
+		<p></p>
+	</body>
+	<script type="text/javascript" src="../../../../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>;
+	<script type="text/javascript">
+		$('#btn').click(function(){
+			$.ajax({
+				type:"get",
+				url:"tip.php?"+Math.random(),
+				async:true,
+				success:function(data){
+					$('p').html(data)
+					
+				}
+			});
+		})
+		$(document).ajaxStart(function(){
+			$('img').css('display','block')
+		}).ajaxStop(function(){
+			$('img').css('display','none')
+		})
+		
+	//jqueryAjax可以在加载远程数据过程中给用户提供信息，告知当前状态，例如正在加载，等等
+	//执行加载状态的步骤：
+//	1,body中设置一张gif加载图片,设置好路径,设置display属性值为none；
+  //  2,执行ajaxStart()方法,里面写一个函数,函数中写这个gif的display属性值为block.表示发起请求后图片开始显示;
+   // 3,再没使用ajaxStop()方法在函数中执行gif图片的显示为none,表示远程加载完毕,此时图片隐藏;
+    //注意ajaxStart()和ajaxStop()方法是添加在document上面的，两个方法可以连起来写如：$(document).ajaxStart().ajaxStop()
+	
+	</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		var lev=function(){  
+  
+   return "啊打";  
+};  
+function Parent(){  
+        
+       this.name="李小龙";  
+       this.age="30";  
+       this.lev=lev;  
+     
+};  
+  var  x =new  Parent();  
+alert(x.name);  
+alert(x.lev());  
+/*
+ 说明：1.与工厂方式相比，使用构造函数方式创建对象，无需再函数内部重建创建对象，而使用this指代，并而函数无需明确return
+
+2.同工厂模式一样，虽然属性的值可以为方法，扔建议将该方法定义在函数之外
+
+3..同样的，不推荐使用这种方式创建对象，但仍需要了解
+
+  */
+
+	</script>
+	<body>
+	</body>
+</html>

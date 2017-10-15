@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		shell中的关系运算符只支持数字，不支持字符串，除非字符串的值是数字，关系运算符类似于js中的比较运算符；
+		<br />
+		在使用关系运算符的时候，需要将比较的变量放在中括号[]里面，例如：<br />
+		<code>
+		a=1 <br /> 
+		b=2 <br />
+		if [ $a -eq $b ] <br />
+		   <!--注意：变量和[]符号中间需要有空格-->
+		then <br />
+		echo "a和b相等" <br />
+		else  <br />
+		 echo "a和b不相等" <br />
+		</code>
+		  
+	</body>
+</html>

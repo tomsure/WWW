@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+//		var cal=$.Callbacks();
+//		function aa(){
+//			alert(1)
+//			cal.fire() //在回调函数里面再执行函数，这样会变成死循环
+//		}
+//		function bb(){
+//			alert(2)
+//		}
+//		
+//		cal.add(aa); //这里添加了aa函数，当执行aa的时候，又会执行cal.fire()方法，所以在执行cal.fire()的时候又开始执行aa这个函数，所以永远都不会执行到函数bb，这样就变成了死循环
+//	
+//		cal.add(bb);
+//		cal.fire()
+	
+		var bBtn=true  //声明一个布尔值变量
+		var cal=$.Callbacks();
+		function aa(){
+			alert(1)
+			if(bBtn){//只有bBtn=true的时候才执行cal.fire()方法，并且设置bBtn=false，这样的话，就会执行后面的bb，当执行过之后就不会再重复执行了，就避免了死循环
+				cal.fire();
+				bBtn=false
+			}
+		}
+		function bb(){
+			alert(2)
+		}
+		
+		cal.add(aa); 
+	
+		cal.add(bb);
+		cal.fire()
+		
+	</script>
+	
+</html>

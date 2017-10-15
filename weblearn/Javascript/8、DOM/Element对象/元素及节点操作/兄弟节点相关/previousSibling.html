@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var s=document.getElementById("dv2");
+			alert(s.previousSibling.id)//弹出undefinded因为dv2的前面一个相邻节点是一个空文本节点
+			alert(s.nextSibling)//弹出ObjectText：这里空文本节点，也就是空格
+			alert(s.nextElementSibling.id)//弹出dv3，因为dv2相邻的元素节点是dv3
+			alert(s.previousElementSibling.id)//弹出dv1，前面一个相邻的元素节点是dv1
+		}
+	</script>
+	<body>
+		<div id="dv1">
+			
+		</div>
+		<div id="dv2">
+			
+		</div>
+		<div id="dv3">
+			
+		</div>
+	</body>
+</html>

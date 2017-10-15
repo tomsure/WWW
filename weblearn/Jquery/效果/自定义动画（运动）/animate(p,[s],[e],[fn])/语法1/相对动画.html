@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px ;height:100px ;background-color:red ; position: relative;}
+	</style>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*相对动画只的是，元素根据当前的位置执行运动的属性，例如当前位置是left：100px,则可以使用+=或-=的方式实现,实现累加累减的效果   */
+		
+		/*如需对位置进行操作，要记得首先把元素的 CSS position 属性设置为 relative、fixed 或 absolute！*/
+		$(function(){
+			$("button").click(function(){
+				
+				$("div").animate({
+					 //left:'+=20px',//点击一次向右移动20px
+					 //top:'+=20px',//点击一次向下移动20px
+					 height:'+=10px',//点击一次 高度增加10px
+					 width:'+=10px'//点击一次宽度增加10px
+				});
+				
+				
+				
+         });
+               
+		});
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button>点击测试</button>
+	</body>
+</html>

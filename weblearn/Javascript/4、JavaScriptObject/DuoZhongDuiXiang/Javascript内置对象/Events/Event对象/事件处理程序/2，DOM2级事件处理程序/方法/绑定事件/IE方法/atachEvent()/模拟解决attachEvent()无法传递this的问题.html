@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript">
+//		IE浏览器的attachEvent()方法中传递的事件函数中的this指的是window对象
+ var btn=document.getElementById("btn");
+ btn.attachEvent('onclick',
+                 function(){
+                 	var that=window.event;
+                 	alert(that.srcElement);
+                 	alert(that.srcElement===btn)
+                 	})
+
+//在W3C浏览器使用过程中，事件函数中的this指的就是绑定 这个事件函数的元素或对象，尔IE浏览器中的this指的是window对象，IE浏览器事件函数中的事件对象，也有一个属性srcElement这个属性就是指绑定事件函数的那个元素或者对象，所以只需用它代替this即可
+
+
+  
+	</script>
+</html>

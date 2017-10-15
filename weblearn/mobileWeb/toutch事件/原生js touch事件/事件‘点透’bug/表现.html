@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv,#dv1{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			margin: 10px;
+			float: left;
+			z-index: 3;
+		}
+		#dv2{
+			position: absolute;
+			width: 800px;
+			height: 800px;
+			background-color: black;
+			opacity: 0.5;
+			float: left;
+			z-index: 2;
+			color: white;
+			text-align: center;
+			line-height: 400px;
+			font-size: xx-large;
+			font-weight: 800;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<div id="dv1">111</div>
+		<div id="dv2">
+			点击消失
+		</div>
+	</body>
+	<script type="text/javascript"src="../../zepto.js/zepto库/zepto.min.js" >
+		
+	</script>
+	<script type="text/javascript">
+		  $('#dv').on('tap',function(){
+		  	alert('点到#dv了')
+		  })
+		    $('#dv1').on('tap',function(){
+		  	alert('点到#dv1了')
+		  })
+		  $('#dv2').on('tap',function(){
+		  	$(this).hide()
+		  })
+		  
+		  
+		  </script>
+</html>

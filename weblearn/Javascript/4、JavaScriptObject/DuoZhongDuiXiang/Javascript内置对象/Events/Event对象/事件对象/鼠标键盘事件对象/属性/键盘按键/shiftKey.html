@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		/*
+		 定义和用法
+        shiftKey 事件属性可返回一个布尔值，指示当事件发生时，"SHIFT" 键是否被按下并保持住。
+                       语法:
+       event.shiftKey=true|false|1|0
+ */
+		window.onload=function(){
+			var sd=document.getElementById("text1");
+			var  de=document.getElementById("p1");
+			sd.onmousedown=function(ev){//测试按下鼠标的时候的事件函数
+				if(ev.shiftKey==true){ //这里要注意是两个等号不是一个等号，注意条件与测试结果
+					alert("你按下了shift按键")
+				}
+				else{alert("你没有按下shift按键")}
+				
+			}
+			
+		}
+	</script>
+	<body>
+		<input type="text" name="" id="text1" value="" />
+		<p id="p1"></p>
+	</body>
+</html>

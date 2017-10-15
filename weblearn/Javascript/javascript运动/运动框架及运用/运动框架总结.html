@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+		}
+	</style>
+	<script type="text/javascript" >
+		
+	</script>
+	
+	<body>
+		<button id="btn" onclick="startMove()">点击运动</button>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		
+		
+		var timer=null;
+		function startMove(){
+			var dv=document.getElementById("dv")
+			var speed=7
+			clearInterval(timer); //清除定时器
+			timer=setInterval(function(){//启用定时器
+				if(dv.offsetLeft>=300){
+					clearInterval(timer) //达到条件后清除定时器
+				}else{
+					dv.style.left=dv.offsetLeft+speed+'px'
+//					执行运动效果
+				}
+			},30)
+			
+		}
+	     
+	     
+//	     运动执行步骤:
+//	     1,初始化一个变量作为定时器timer=null;
+//	     2,创建函数;
+//	     3,函数内部获取元素;
+//	     4.设置运动的速度speed;
+//	     5,清除当前正在执行的定时器;
+//	     6,设置定时器,定时器内部设置条件,如果达到某个值则清除清时期,否则执行运动的样式效果
+	     
+	     
+	</script>
+</html>

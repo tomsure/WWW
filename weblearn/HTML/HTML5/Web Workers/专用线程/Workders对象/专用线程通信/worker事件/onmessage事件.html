@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		var work=new Worker('worker.js')
+		work.onmessage=function(e){
+			dv.innerHTML='我收到了来自服务器的数据，他是：'+e.data
+		}
+	</script>
+	
+	<!--onmessage事件是当页面收到worder对象worder文件中postMessage()方法发送的消息后触发的事件-->
+	
+	<!--onmessage事件是运行在前端的js里面的事件-->
+</html>

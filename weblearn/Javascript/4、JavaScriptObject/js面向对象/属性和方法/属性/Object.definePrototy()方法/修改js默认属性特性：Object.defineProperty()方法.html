@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//Object.defineProperty()方法可以用来修改js引擎的数据属性,来规定对象的属性是否可以修改或删除；
+		
+//这个方法接收三个参数: 属性所在的对象,属性名称和描述符对象,描述符对象里面的属性包括configurable,enumerable,writeable和value	,可以一次设置一个或多个js 引擎属性来修改对象的属性特性;例如:
+
+     var  obj =  {};//使用字面量方式创建对象
+		Object.defineProperty(obj,'name',{//注意，属性名称使用引号
+			configurable:false,//设置不能删除对象的属性；
+			writeable:false,//设置不能修改属性值；
+			value:'tom'//定义对象aa的
+		})
+		alert(obj.name)//tom;
+		obj.name='tomsure';
+		alert(obj.name)//还是弹出tom，说明上面已经设置writeable=false（不能修改属性值），所以后面设置了obj.name='tomsure';属性的值不变；
+		delete obj.name; //删除name属性；
+		alert(obj.name)//还是可以弹出name属性，因为前面已经设置了configurable:false，属性不可被删除，所以这里还是可以弹出
+		
+		
+		
+		
+	</script>
+</html>

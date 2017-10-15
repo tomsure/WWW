@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	
+		div{width:100px ;height:100px ;background-color:red ;display: none;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/老版本/jquery-2.0.3/jquery-2.0.3.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//如果您希望在一个涉及动画的函数之后来执行语句，请使用 callback 函数。
+		/*由于 JavaScript 语句（指令）是逐一执行的 - 按照次序，动画之后的语句可能会产生错误或页面冲突，因为动画还没有完成。
+为了避免这个情况，您可以以参数的形式添加 Callback 函数。*/
+		$(function(){
+			$("button").click(function(){
+				$("div").show(1000,function(){
+					alert("div显示了完成")
+					//在动画方法里面放一个匿名函数可以执行其他语句或动作
+				})
+			})
+		})
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button>点击测试</button>
+	</body>
+</html>

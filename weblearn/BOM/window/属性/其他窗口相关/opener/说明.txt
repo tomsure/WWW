@@ -1,0 +1,2 @@
+opener用于在window.open的页面引用执行该window.open方法的的页面的对象。例如：A页面通过window.open()方
+法弹出了B页面，在B页面中就可以通过opener来引用A页面，这样就可以通过这个对象来对A页面进行操作。 

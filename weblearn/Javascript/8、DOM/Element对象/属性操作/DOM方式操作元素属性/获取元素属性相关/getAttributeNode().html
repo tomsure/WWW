@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//getAttribute() 方法是返回指定属性名的属性值，返回的是一个Attr对象。
+//提示：如果您只需要返回属性值，请使用 getAttribute。
+		window.onload=function(){
+			var w=document.getElementById("tpu");
+			alert(w.getAttributeNode("value"))//弹出Object Attr，说明返回 的是一个Attr对象；
+			 alert(w.getAttributeNode("value").value)//弹出的是点击跳转。是input的属性value的值，在这里value是一个属性对象;
+		}
+		</script>
+	<body>
+		<input type="button" name="" id="tpu" value="点击跳转"  />
+	</body>
+</html>

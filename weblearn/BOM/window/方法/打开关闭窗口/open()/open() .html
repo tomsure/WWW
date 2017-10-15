@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//window.open("http://wwww.baidu.com")//这里会打开一个新窗口要用其他 浏览器测试
+window.onload=function(){
+	var btn=document.getElementById("btn");
+	var btn1=document.getElementById("btn1");
+	var btn2=document.getElementById("btn2");
+	var btn3=document.getElementById("btn3");
+btn.onclick=function(){
+	window.open('../close().html',' _bank','width=200px,height=200px')
+}
+//open方法打开的页面有四个选项，每个选项根据需要写或者不写，每个选项要用引号引起来，并用逗号隔开，每个选项的多个参数在引号内部也用逗号隔开
+
+btn1.onclick=function(){
+	window.open('../../close().html',' _bank','width=200px,height=200px')
+}
+
+
+btn2.onclick=function(){
+	window.open('../close().html',' _bank','width=200px,height=200px')
+}
+
+
+btn3.onclick=function(){
+	window.open('../close().html',' _bank','width=200px,height=200px')
+}
+}
+		</script>
+	</head>
+	<body>
+	<input type="button" name="" id="btn" value="点击打开"/>
+	<input type="button" name="" id="btn1" value="点击打开"/>
+	<input type="button" name="" id="btn2" value="点击打开"/>
+	<input type="button" name="" id="btn3" value="点击打开"/>
+	
+	</body>
+</html>

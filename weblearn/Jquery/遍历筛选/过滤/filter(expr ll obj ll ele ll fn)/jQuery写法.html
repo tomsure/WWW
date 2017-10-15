@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*filter() 方法返回符合一定条件的元素。
+该方法让您规定一个条件。不符合条件的元素将从选择中移除，符合条件的元素将被返回。
+该方法通常用于缩小在被选元素组合中搜索元素的范围。
+提示：filter() 方法是与 not() 方法相对的。*/
+    $(function(){
+    	$("p").css({background:"red",border:"1px solid red" })
+    	$("p").filter(".p1").text("你好") //给匹配条件的p元素设置文本内容
+    })
+	</script>
+	<body>
+		<div id="">
+			<p></p>
+			<p></p>
+			<p class="p1"></p>
+			<p></p>
+			<p class="p1"></p>
+			
+		</div>
+	</body>
+</html>

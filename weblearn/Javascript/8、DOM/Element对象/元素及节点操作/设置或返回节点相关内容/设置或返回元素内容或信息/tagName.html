@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//返回元素 的标签名称
+		window.onload=function(){
+			var d=document.getElementById("dv");
+			alert(d.childNodes.length)//弹出3
+			alert(d.children.length);
+			alert(d.children[0].tagName)//弹出div，因为dv的子节点的标签名称是div
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<div id="dv1">
+				
+			</div>
+		</div>
+	</body>
+</html>

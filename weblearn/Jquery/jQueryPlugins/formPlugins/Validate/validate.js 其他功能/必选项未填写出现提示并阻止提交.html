@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>用户名: <input type="text" class="required" name="user" id="user" value="" />(必填)</p>
+			<p>邮箱: <input type="text" class="required" name="e-mail" id="e-mail" value="" />(必填)</p>
+			<!--必填项后面添加上class="required"-->
+			<p>URL: <input type="text" name="url" id="url" value="" /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('form').validate()//加载validate.js插件；
+			//如果有必填项则给相关的变单元素控件添加class=“required”，这样的话当提交的时候如果必填项没填的话就会组织表单提交，并提示一段英文；如果输入内容后英文就会自动消失。
+			//提示的英文信息可以使用其他方法自定义
+		})
+	</script>
+</html>

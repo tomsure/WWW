@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<input type="number" name="num" id="num" step=3  value="" />
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript" >
+		var num=document.getElementById("num");
+		
+		btn=document.getElementById("btn")
+		btn.onclick=function(){
+		if(num.validity.rangeOverflow){ //此时num.validity.tooLong的值为true
+				
+				alert(num.validationMessage)
+			}
+		 if(num.validity.stepMismatch){
+		 	num.setCustomValidity("请输入3的倍数的数字")
+		 	alert(num.validationMessage)
+		 }
+		}
+		 
+          
+//      setCustomValidity()方法用于自定义设置错误信息，当验证到错误信息后，执行setCustomValidity()方法，此时num.validationMessage的默认值就会改变，然后再输出num.validationMessage，就可以看到自定义的错误提示消息
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+</html>

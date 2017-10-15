@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+<!--------------------------带下拉菜单的水平导航栏-------------------------------->
+		<ul class="nav nav-tabs "><!--这里添加nav-stacked类即可实现垂直导航-->
+			<li class="active"><a href="">首页</a></li>
+			<li><a href="">新闻资讯</a></li>
+			<li><a href="">导航选项</a></li>
+			<li><a href="">产品介绍</a></li>
+			<li class="dropdown"><!--下拉菜单开始-->
+				<!--下拉菜单放在导航栏里面，需要将下拉菜单最外层的div替换成li-->
+				<a href="" class="dropdown-toggle  " data-toggle="dropdown">
+					<!--点击按钮这里 使用a标签，设置一个dropdown-toggle即可-->
+					下拉菜单
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="">1</a></li>
+					<li><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+				</ul>
+			</li><!--下拉菜单结束-->
+		</ul>
+		<br /><br />
+<!--------------------------下拉菜单的胶囊导航栏----------------------------->	
+                    <ul class="nav nav-pills">
+                    	<li class="active"><a href="">首页</a></li>
+                    	<li><a href="">新闻</a></li>
+                    	<li><a href="">图片</a></li>
+                    	<li><a href="">视频</a></li>
+                    	<li class="dropdown">
+                  <a href=""class="dropdown-toggle" data-toggle="dropdown">
+                  	下拉菜单
+                  	<span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                  	<li><a href="">1</a></li>
+                  	<li><a href="">2</a></li>
+                  	<li><a href="">3</a></li>
+                  	<li><a href="">4</a></li>
+                  </ul>
+                    	</li>
+                    </ul>
+<br />
+<br />
+<br />
+<!--------------------------垂直的胶囊导航菜单 ------------------------->
+           <ul class="nav nav-pills nav-stacked">
+                    	<li class="active"><a href="">首页</a></li>
+                    	<li><a href="">新闻</a></li>
+                    	<li><a href="">图片</a></li>
+                    	<li><a href="">视频</a></li>
+                    	<li class="dropdown">
+                  <a href=""class="dropdown-toggle" data-toggle="dropdown">
+                  	下拉菜单
+                  	<span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                  	<li><a href="">1</a></li>
+                  	<li><a href="">2</a></li>
+                  	<li><a href="">3</a></li>
+                  	<li><a href="">4</a></li>
+                  </ul>
+                    	</li>
+                    </ul>
+
+
+
+
+	</body>
+	<script type="text/javascript" src="../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../bootstrap库/Bootstrap源码/dist/js/bootstrap.min.js">
+		
+	</script>
+</html>

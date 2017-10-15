@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		<div class="dropdown" id="dr">
+			<button class="btn btn-default" data-toggle="dropdown" ><!--通过data-toggle属性调用dwopdown插件-->
+			下拉菜单
+			<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a href="">1</a></li>
+				<li><a href="">2</a></li>
+				<li><a href="">3</a></li>
+				<li><a href="">4</a></li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.js">
+		
+	</script>
+	
+	
+	<script type="text/javascript">
+		$('#dr').on("show.bs.dropdown",function(){
+			alert('打开下拉菜单时触发')
+		})
+			$('#dr').on("shown.bs.dropdown",function(){
+			alert('打开 下拉菜单后')
+		})
+				$('#dr').on("hide.bs.dropdown",function(){
+			alert('关闭下拉菜单时触发')
+		})
+					$('#dr').on("hidden.bs.dropdown",function(){
+			alert('关闭下拉菜单后触发')
+		})
+	</script>
+	<!--下拉菜单绑定事件，需要将一个id号给最外层的dropdown,再给这个div绑定事件，可以绑定所需函数-->
+</html>

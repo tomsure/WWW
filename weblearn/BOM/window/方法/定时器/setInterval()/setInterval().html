@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	window.onload=function(){
+	
+	    var dd=document.getElementById("btn");
+		
+		var pp=document.getElementById("p1")
+		var ss=window.setInterval(function(){pp.innerHTML=new Date()},1000)//每秒钟会执行一次,
+			dd.onclick=function(){
+				clearInterval(ss)  //点击之后会清除添加的定时器，时间停止
+			}
+	};
+			
+	
+		
+	
+	</script>
+	<style type="text/css">
+		#dv{width: 100px;
+		height: 100px;
+		background-color: #7FFF00;
+		position: relative;
+		left: 0px;
+		display: none;
+		}
+		
+	</style>
+	<body>
+		<p id="p1"></p>
+		<button id="btn">点击测试</button>
+		
+	
+	</body>
+</html>

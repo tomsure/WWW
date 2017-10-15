@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var str='dad12 ad12 afs34 q445';
+		var reg=new RegExp('\\d+','g');
+		document.write(str.match(reg))
+		//查找出字符串里面的所有的数字的步骤：
+//		  1,需设置正则表达式中代表查找数字的元字符'\d',在构造函数创建的时候需要多谢一个转义反斜杠\;
+//		  2,在\d后面添加一个量词'+'符号,代表进行多次匹配;
+//		  3,设置修饰符g进行全局匹配
+		
+	</script>
+</html>

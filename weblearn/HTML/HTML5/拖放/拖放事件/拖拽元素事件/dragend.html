@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv1{
+			width: 100px;height: 100px;background-color: red;
+		}
+		.dv2{
+			width: 300px;
+			height: 300px;
+			border: 3px solid black;
+		}
+	</style>
+	<body>
+		<div class="dv1" id="dv1" draggable="true">
+			
+		</div>
+		<div class="dv2" id="dv2">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv1=document.getElementById("dv1");
+		dv1.ondragstart=function(){
+			this.style.background='green'
+		}
+		//开始拖动后背景颜色变成绿色
+         dv1.ondragend=function(){
+         	this.style.backgroundColor='red'
+         }//结束拖动后背景颜色又变成红色
+         
+//       ondragend事件是当拖动元素结束的时候（也就是抬起鼠标的时候）触发的事件,这个例子中先设置元素拖动的时候触发ondragstart事件背景变成绿色,再设置odragend事件,设置当拖动结束后背景颜色又变成红色
+	</script>
+	
+</html>

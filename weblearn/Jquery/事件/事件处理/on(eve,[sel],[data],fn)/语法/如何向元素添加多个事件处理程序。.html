@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width:100px ;height:100px ;background-color:red ;
+		}
+	</style>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$("div").on("click mouseover",function(){
+				alert("hh")
+				//当鼠标移入div和点击div的时候都会弹出这个内容
+				//注意这里同时绑定多个事件执行同一个函数的时候，多个事件名称用引号包起来，空格隔开
+				
+			})
+		})
+	</script>
+	<body>
+		<div id="">
+		
+		</div>
+	</body>
+</html>

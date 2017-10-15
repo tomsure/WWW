@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>用户名: <input type="text" class="required" name="user" id="user" value="" />(必填)</p>
+			<p>邮箱: <input type="text"  name="e-mail" id="e-mail" value="" minlength=3 />(必填)</p><!--minlength=3 表示最少输入3个字-->
+			<!--必填项后面添加上class="required"
+				
+				使用控件属性的方式就是在input表单控件中添加 相关的属性和值，例如必填项就输入class="required"或者required="required"表示必填选项  minlength=5表示最少输入5个字段 。然后在js中使用validate()方法加载插件即可，如果必填项未输入，递交表单的时候就会阻止提交，并出现提示。
+				此时html中会动态的创建一个label元素，提示就在里面，这样的话可以给这个动态的元素设置样式
+			-->
+			<p>URL: <input type="text" name="url" id="url"  value="" url='true' /></p><!--url='true'表示必须输入正确的网址-->
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('form').validate()//加载validate.js插件；
+			
+		})
+		
+		//这种使用控件属性方式就是将验证方式放入input元素中作为属性，书写的时候属性值（有值的话）需要加引号数字可以不用
+	</script>
+</html>

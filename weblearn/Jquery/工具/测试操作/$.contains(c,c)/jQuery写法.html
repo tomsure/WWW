@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+	//测试一个DOM节点是否包含另外一个指定的DOM元素，注意参数是DOM对象，而不是jquery对象
+		$(function(){
+			var dv=document.getElementById("dv");
+			p1=document.getElementById("p1")
+		var ss=$.contains(dv,p1);  //测试dv是否包含p1
+		console.log(ss)
+		})
+	</script>
+	<body>
+		<div id="dv">
+			<p id="p1"></p>
+			l
+			<a href=""></a>
+		</div>
+		
+	</body>
+</html>

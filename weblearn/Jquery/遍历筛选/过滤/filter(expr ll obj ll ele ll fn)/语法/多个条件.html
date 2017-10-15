@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta  charset="utf-8"/>
+	</head>
+	<style type="text/css">
+		p{ border: 1px solid red;height: 20px;;}
+	</style>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.1/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	    //选择多个条件符合匹配元素
+		$(function(){
+		 $("p").filter(" .p1 ,#pp ").text("哈哈")	 //只要符合filter()条件的就被选中
+		 $("a").filter(":nth-child(2),#aa").css("background","red")
+		   //注意子元素选择器的索引号
+		 
+		})
+	</script>
+	
+	<body>
+		<p  id="pp"></p>
+		<p class="p1"></p>
+		<p class="p1"></p>
+		<p title="ss"></p>
+		<div id="">
+			<a href="">sssssssssss</a>
+		<a href="">ddddddddddddd</a>
+			<a href="" id="aa">ssssssss</a>
+		</div>
+	</body>
+</html>

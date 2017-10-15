@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+</head>
+<style type="text/css">
+	
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var oul=document.getElementById("oul")
+		var lis=oul.getElementsByTagName("li")
+//		for(var i=0;i<lis.length;i++){
+//			lis[i].onmouseover=function(){
+//				this.style.background="red";
+//			};
+//			lis[i].onmouseleave=function(){
+//				this.style.background="white"
+//			}
+//		}
+        //以上是使用for循环实现为每个元素绑定事件函数来改变样式，但是如果元素过多，则会影响网页性能；
+   
+       
+		oul.onmouseover=function(ev){
+			var ev=ev||window.event;
+			var target=ev.target||ev.srcElement;  //兼容事件源（就是触发事件的对象）
+		//	console.log(target.innerHTML) // 获取元素的文本内容，但是由于是获取的事件源对象的innerHTML，所以如果当鼠标移动到li元素上的时候会打印li元素的内容，但是可能会移动到ul标签上，所以也会显示ul的innerHTML内容，不希望这么显示，所以可以进行一个判断：
+			if(target.nodeName=="LI"){ //如果事件源是LI标签，也就是当鼠标放到li标签上时候执行括号里的语句
+				console.log(target.innerHTML)
+				 target.style.background="red";
+               }
+		}
+		
+		oul.onmouseout=function(ev){
+			var ev=ev||window.event;
+			var target=ev.target||ev.srcElement; 
+		
+				if(target.nodeName=="LI"){ //如果事件源是LI标签，也就是当鼠标放到li标签上时候执行括号里的语句
+			
+				 target.style.background="white";
+               }
+		
+			
+			
+		}
+		
+		
+		
+	}
+</script>
+<body>
+	<ul id="oul">
+		<li>111111111111</li>
+		<li>222222222222</li>
+		<li>3333333333333</li>
+		<li>4444444444444</li>
+	</ul>
+</body>
+</html>
+ 

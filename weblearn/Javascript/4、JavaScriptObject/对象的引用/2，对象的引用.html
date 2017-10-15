@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var a=[1,2,3];
+		var b=a;//把a赋值给b
+		document.write(a+'</br>')
+		document.write(a+'</br>')//b引用a的值，得到这个数组
+		b.push(4);//给b通过push（）方法在最后面追加一个元素
+		document.write(b+'</br>');//
+		//b这个数组增加了一个元素
+		document.write(a+'</br>')
+		//a也增加了一个元素；
+		
+	//因为在数据引用的时候，如果引用的是引用类型的数据，此时，a和b之间会共同指向一个对象，如果b发生了变化，实际上是这个共同引用的对象发生了变化，则被引用的数据a也会发生改变	
+		
+		
+		
+		
+	</script>
+</html>

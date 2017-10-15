@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+		//绘制线条的粗细
+		window.onload=function(){
+			var  ss=document.getElementById("myCanvas");
+			dd=ss.getContext("2d"); 
+			dd.lineWidth=3//注意这里直接写数字，还要注意书写顺序，这里是给绘制矩形创建条件
+			              //这里就是定义矩形的边框线条宽度，所以要写在绘制矩形之前
+			
+			dd.fillStyle="#006400"  //这里也是绘制矩形之前的条件，也要写在会址举行之前；
+			dd.strokeRect(20,20,100,100)// 绘制矩形
+			
+			
+			
+			
+		}
+		
+		
+		
+	</script>
+	<body>
+	<canvas id="myCanvas" width="200" height="200"></canvas>
+	</body>
+</html>

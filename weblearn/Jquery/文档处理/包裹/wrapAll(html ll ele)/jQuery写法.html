@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{height: 100px; background: red;width: auto;
+		}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+	//把所有元素用指定元素或内容包裹起来,注意设置的用来包裹元素的元素宽和高要大于被包裹的元素，否则会溢出
+	//它与wrap()的区别是同时用一个元素包裹所有被包裹的元素，而wrap()是分别用每个设置用来包裹的元素来包裹被包裹的元素
+	$(function(){
+		$("#btn").click(function(){
+			$("p").wrapAll("<div></div>")
+		})
+	})
+		
+	</script>
+	<body>
+		<p>美国</p>
+		<p>中国</p>
+	    <p>日本</p>
+	    <input type="button" name="btn" id="btn" value="点击测试" />
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		isNaN()用法用来检测数据类型是否是一个非数字值,参数被检测的数据,值是布尔值,如果是NaN,undefined等非数字值,则返回true,如果是数字值,则返回false
+
+      document.write(isNaN(1234)+'</br>')
+      //数字:false
+      document.write(isNaN(undefined))
+  //  undefined:true  
+      document.write(isNaN())
+  //  空:true，空值不是数字  
+        document.write(isNaN(Object))
+ //   Object:true，Object不是数字     
+  document.write(isNaN(NaN))
+//   NaN:true，NaN不是数字
+  document.write(isNaN(false))
+   //false：false，布尔值通过数据转换false是数字0
+  document.write(isNaN(true))
+  //true:true，布尔值通过数据转换true是数字
+  
+   document.write(isNaN(Math))
+//Math:true,Math是一个对象，非数字
+
+
+
+		
+		
+		
+		
+	</script>
+</html>

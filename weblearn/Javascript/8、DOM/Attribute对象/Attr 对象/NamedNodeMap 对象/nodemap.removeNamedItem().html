@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.div1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript">
+
+		window.onload=function(){
+			var dd=document.getElementById("dv");
+			
+		
+
+
+       var btn=document.getElementById("btn")
+           btn.onclick=function(){
+           	dv.attributes.removeNamedItem('class')
+           }
+          
+//        removeNamedItem()方法用于删除DOM元素属性集合中的指定属性,参数是属性名称
+          
+          
+		var btn1=document.getElementById("btn1");
+		btn1.onclick=function(){
+		    alert(dv.attributes.length)	
+		    //查询属性长度返回1，说明class已经被删除
+		}
+		}
+	</script>
+	<body>
+		<div id="dv" class="div1">
+			
+		</div>
+		<button id="btn">删除属性</button>
+		<button id="btn1">查询属性</button>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	  var person=new Object();
+	     person.name='tom';
+	     function aa(aq){
+	     	aq.name='www'
+	     	aq=new Object();
+	     	aq.name='bom'
+	     }
+	     aa(person)
+	    alert(person.name) //'www'属性已经被修改，其实是修改的共同引用的那个 对象的属性，修改后，person的属性值也会修改
+ 		//函数是按值传递的，它和外部对象引用的不是同一个对象，所以里面的对象的属性值不会传递到外部对象；而且是一个局部变量，函数执行完毕后就销毁
+		
+		
+	</script>
+</html>

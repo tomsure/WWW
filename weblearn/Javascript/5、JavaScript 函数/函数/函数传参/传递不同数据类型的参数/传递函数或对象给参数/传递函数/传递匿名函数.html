@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		function a(fn){ //函数a的参数fn
+			
+			fn()//执行传递的匿名函数
+			
+		}
+		
+	a(function(){
+		alert(1)
+	})
+//执行函数a的时候a()的括号里面可以添加匿名函数作为参数传递给a(fn);传递之后fn就接收到了这个匿名函数,此时,局部变量fn就是这个匿名函数,可以在函数里面执行,执行的时候直接给fn加上括号即可
+
+//给匿名函数添加参数：
+
+
+    function s(fn){
+    	
+    	fn(199)//给匿名函数传参并执行
+    	         }
+
+    s(function(a){//传递有参数的匿名函数
+    	alert(a)
+    })
+
+
+
+		
+		
+	</script>
+</html>

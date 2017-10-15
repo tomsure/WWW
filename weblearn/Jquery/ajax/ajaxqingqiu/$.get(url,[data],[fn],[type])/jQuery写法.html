@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+		
+	<style type="text/css">
+		div { width: 300px;height: 300px;border: 1px solid red;}
+	</style>
+	<body>
+		<button id="btn">点击验证</button>
+		<input type="text" name="username" id="username" value="" />
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+	//.get()是jquery的方法写的时候表示为：$.get()	
+	  $('#btn').click(function(){
+	  	var url='index.php?date='+Math.random();//将url声明为变量
+	  	var sendData={'username':$('#username').val()};//将发送的数据声明为变量
+	  	$.get(url,sendData,function(data){
+	  		
+	  		if(data=='false'){//通过条件语句判断data的返回值，从而给用户返回相应的信息
+	  			$('#dv').html('用户名不可以注册');//将 提示信息添加到页面
+	  		}else{
+	  			$('#dv').html('用户名可以注册')
+	  		}
+	  	})
+	  })
+	  
+	  //实际开发中注册页面并不是使用$.get()方法,这里只适用于学习，
+	  /*
+	    在绑定元素的事件函数内直接使用$.get()方法，然后添加参数，参数包括url（服务器文件路径），发送的数据（发送的数据需要json格式）、发送成功后的回调函数
+	   * 
+	   * 
+	   * 
+	   * 
+	   * 
+	   * 
+	   * */
+	</script>
+	
+</html>

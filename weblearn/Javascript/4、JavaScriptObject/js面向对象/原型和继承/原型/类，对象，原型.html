@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	function a(w){
+		
+		this.w=w;
+		this.play=function(){
+			alert("haaha")
+		}
+		
+	}
+	 var s=new a("ddd")
+	 s.com=function(){
+	 	alert("哈哈")
+	 }
+	 s.com()
+	alert(a instanceof Object)//弹出 true  说明a是基类Object的实例
+	alert(s instanceof a)  //弹出  true     说明s是a类的实例
+	alert(s.__proto__==a.prototype)  //弹出：true  说明实例对象s的原型对象是a的prototype属性(它也是一个对象，这里就是s的原型对象)，而s的_proto_属性就是指向s的原型对象===>>a.prototype   
+	alert(typeof a.prototype)   // 弹出Object  说明 prototype也是一个对象
+	
+	
+	
+	
+         		
+		
+	</script>
+	<body>
+	</body>
+</html>

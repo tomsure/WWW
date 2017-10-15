@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		span{
+			display: inline-block;
+			color: red;
+		}
+	</style>
+	<body>
+		<input type="number"  name="" id="num1" value="" required="required" max="100"/><span id="sp1"></span>
+		<br />
+		<input type="email" name="" id="email1" value="" required="required" />  <!--输入类型必须为email且必须输入-->
+		<span id="sp2">
+			
+		</span>
+		<br />
+		<button id="btn">点击验证</button>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn")
+		var sp1=document.getElementById("sp1")
+		var sp2=document.getElementById("sp2")
+		 btn.onclick=function(){
+		 	var num1=document.getElementById("num1")
+		 	var email=document.getElementById("email1");
+		 	if(!num1.checkValidity()){
+		 		sp1.innerHTML="你输入的数据有误，请输入小于等于100的数字！"
+		 	}else{
+		 		sp1.innerHTML=""
+		 	}
+		 	
+		 	if(!email.checkValidity()){
+		 		sp2.innerHTML="你输入的数据有误,请输入正确的邮箱！"
+		 	}else{
+		 		sp2.innerHTML=""
+		 	}
+		 	
+		 	
+		 }
+		 
+//		 checkValidity()方法是input元素的属性,用于检测输入的值是否正确,如果正确则返回true,如果输入不正确则返回false;是否正确取决于元素设置的条件,例如这里,第一个input设置了max=100且类型位数字,且设置了required,则元素输入的内容必须满足这三项;
+        
+         
+          
+	</script>
+</html>

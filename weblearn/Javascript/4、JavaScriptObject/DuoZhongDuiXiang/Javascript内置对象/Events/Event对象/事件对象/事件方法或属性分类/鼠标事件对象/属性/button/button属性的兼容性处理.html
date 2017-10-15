@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		由于W3C的鼠标对象的button属性和IE的鼠标对象的button属性的值不相同,所以需要对这个属性的值做兼容，兼容的话button属性的值需要以W3C的值为准
+
+        function getButton(evt){
+        	var ev=evt||window.event;
+        		
+        	if(evt){
+        	return 	ev.button;//如果支持第一个参数是事件对象，就直接返回事件对象的button属性
+        	 
+        	}else if(window.event){//如果是IE浏览器
+        			
+        
+        		switch(ev.button){
+        			case 1:return 0;//如果ev.button的值是1，则返回0，
+        			case 4:return 1;//如果ev.button的值是4，则返回1，
+        			case 2:return 2;//如果ev.button的值是2，则返回2，                             
+        			case 0:return 2;//如果ev.button的值是0，则返回2，这里为了兼容360浏览器按下左键返回0的问题
+        		                 }
+        	                      }
+        	 }
+//以上是封装兼容性函数，在使用的时候，需要调用这个函数，函数调用的时候，就会返回兼容后的button属性的值；
+ 
+        document.onmouseup=function(evt){
+        	
+        	if (getButton(evt) == 0) {
+			alert('按下了左键！');
+		} else if (getButton(evt) == 1) {
+			alert('按下了中键！');
+		} else if (getButton(evt) == 2) {
+			alert('按下了右键！' );
+		}//调用兼容性函数
+
+        }
+
+		
+	</script>
+</html>

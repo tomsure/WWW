@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="get" id="form1">
+			<select name="aa">
+				<option value="中国">中国</option>
+			</select>
+			<input type="submit" value="提交"/>
+		</form>
+		
+		<select name="bb" form="form1">
+			<option value="美国">美国</option>
+		</select>
+		<!--form属性可以设置select元素所属的表单，他的值就是form元素的id，当设置了某个form元素的id，这个元素就属于某个form，当这个form提交的时候就会把这个select提交到服务器，如果属于多个form元素，就设置多个form元素的id，用空格隔开-->
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<style type="text/css">
+	#dv{
+		margin-bottom: 20px;
+		width: 100px;
+		height: 100px;
+		background-color:red;
+		position: relative;
+		left: 0px;
+		border-radius: 100px;
+		animation: divC 5s ;
+		-webkit-animation: divC 5s;
+		-webkit-animation-delay: 3s;
+		-webkit-animation-fill-mode:both ;
+		/*取值为both的时候，动画开始前等待 那段时间的样式会显示为动画开始的时候第一帧的样式，动画结束后会保持最后一帧的样式，实际上就是综合使用了backwards和forwards的属性*/
+	}
+	
+	@-webkit-keyframes divC{
+		from{left: 0px;background:blue;}
+		to{left: 800px;background: #FFFF00;}
+	}
+</style>
+<script type="text/javascript">
+	
+</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		
+	</body>
+</html>

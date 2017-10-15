@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:200px ;height:200px ;background-color: red;}
+	</style>
+	<link rel="stylesheet" type="text/css" href="../../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	
+	<body>
+		<div class="visible-xs-block">
+			1
+		</div>
+		<div class="visible-xs-inline">
+			2   当元素设置为visible-*-inline的时候是无法设置狂傲的它的display的值是inline
+		</div>
+		<div class="visible-xs-inline-block">
+			3
+		</div>
+		<!--当元素设置类名为visible-xs-*的时候只有屏幕小于768px的时候才会显示-->
+	</body>
+		<!--适应情况
+超小屏幕    手机 (<768px)      可见 
+	
+小屏幕           平板 (≥768px)     隐藏
+
+中等屏幕       桌面 (≥992px)     隐藏
+
+大屏幕         桌面 (≥1200px)		隐藏 	-->
+</html>

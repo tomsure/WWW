@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+			
+	var regx=/user\d/g;// 这里的user\d只的是正则表达式匹配字符串,\d是指0到9的数字
+	var str='user18duser2duser3sc';
+var rs=regx.exec(str);//此时rs的值为{user1} 
+alert(rs);
+ var rs1=regx.exec(str);//此时rs的值为{user2} 
+ alert(rs1);
+ var rs2=regx.exec(str);//此时rs的值为{user3} 
+ alert(rs2)
+// exec（）方法使用g修饰符，指的是全局匹配，但是他并不是一次使用exec()方法就返回所有的匹配字符，而是同一个正则表达式和匹配字符串每执行一次返回一个，第一次执行返回第一个，第二次执行返回第二个，以此类推；
+
+//例如这里:  字符串str中有user1/user2/user3三个匹配的字符串,只有执行三次才会返回所有匹配的字符串,且每次按顺序返回匹配的字符串，第一次返回user1，第二次执行返回user2，第三次返回user3
+ 
+ 
+ 
+	</script>
+</html>

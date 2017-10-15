@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	/*
+	 *  onreadystatechange 事件是监听事件
+	 在使用ajax异步调用的时候需要使用xhr对象的onreadyStatechange事件，xhr对象还有一个readyState属性，它可以返回从异步请求到收到响应完成的状态，readState属性有五个值就是：0、1、2、3、4；
+	 在实际运用中可以通过onreadyStatechange事件，并在事件函数中通过if语句判断readyState的值来执行不同的语句
+	
+	 
+	 */
+	 if(window.XMLHttpRequest){
+			XHR=new XMLHttpRequest()//如果浏览器支持XMLHttpRequest对则创建XMLHttpRequest
+		}else{
+			XHR=new ActiveXObject('Microsoft.XMLHTTP')//如果不支持则创建ActiveXObject对象
+		}
+		document.onclick=function(){
+			XHR.onreadystatechange=function(){
+				if(XHR.status==200){
+					if(XHR.readyState==4){
+						alert('接收到全部响应')
+					}
+				}
+			}
+			XHR.open('GET','../liziURL/demo.php',false);
+			
+         XHR.send()
+			
+		
+		}
+	//onreadystatechange语句需要放在xhr.open()方法 之前执行	
+	</script>
+</html>

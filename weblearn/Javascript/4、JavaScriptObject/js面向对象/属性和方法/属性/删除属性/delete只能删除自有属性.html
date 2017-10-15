@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(){}
+		Person.prototype.name='tom';
+		Person.prototype.age=26;
+		var person1=new Person()
+		   person1.play=function(){
+		   	alert('打篮球')
+		   }
+		
+		document.write(person1.name+'</br>')
+		//显示tom，继承自原型的方法；
+		person1.play()//弹出打篮球
+		delete person1.play;
+		delete person1.name;
+		
+		document.write(person1.name)//输出tom，没有被删除，因为name是原型对象的方法，而不是peron1的方法，删除不了
+		person1.play()//报错，因为play是person1自己的方法已经被删除
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

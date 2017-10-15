@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+	/*设置绘制的图形旋转，rotate() 方法旋转当前的绘图。
+注意：旋转只会影响到旋转完成后的绘图。*/
+  
+   /*参数值:旋转角度，以弧度计。
+                       如需将角度转换为弧度，请使用 degrees*Math.PI/180 公式进行计算。
+                       实例：如需旋转 5 度，可规定下面的公式：5*Math.PI/180。*/
+	
+		window.onload=function(){
+			var ss=document.getElementById("myCanvas").getContext("2d");
+			ss.rotate(20*Math.PI/180);
+			ss.fillStyle="#8B4513";
+			ss.fillRect(30,30,100,100)  //绘制矩形
+			ss.moveTo(30,30)
+			ss.lineTo(150,00);  
+			ss.stroke() //绘制线条；
+			//以上绘制之后都会根据最开始设置的roate的设置进行旋转
+			
+			
+			
+			
+			
+		}
+	</script>
+	<body>
+	<canvas id="myCanvas" width="400" height="400"></canvas>
+	</body>
+</html>

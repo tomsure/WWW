@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*这个属性是设置动画完成的时间，,这里没有完全考虑兼容性，实际案例要考虑兼容性*/
+	#myDIV{
+		width: 200px;
+		height: 200px;
+		background-color: forestgreen;
+		
+	
+		-webkit-animation-name: divC;
+		
+		-webkit-animation-duration: 5s;/*动画时间属性*/
+		
+		/*animation-duration属性用于设置完成动画花费的时间,默认是0*/
+	}
+	@-webkit-keyframes divC{
+		from{background-color: forestgreen;
+		   border-radius: 0px;
+		  }
+		to{background-color: #F08080;
+		   border-radius: 100px;
+		}
+	      
+	}
+	
+	}
+	</style>
+	<body>
+		<div id="myDIV">
+			
+		</div>
+	</body>
+</html>

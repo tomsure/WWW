@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<audio src="../音视频资源文件/johann_sebastian_bach_air.mp3" controls="controls" ></audio>
+		
+	   <video  controls="controls"  id="vod">
+	   	<source src="../音视频资源文件/Intermission-Walk-in_512kb.mp4"></source>
+	   	<source src="../音视频资源文件/johann_sebastian_bach_air.ogg"></source>
+	   </video>
+	   
+	 <!--autoplay属性用于设置音视频再打开页面后自动播放-->
+	</body>
+	<script type="text/javascript">
+		var vod=document.getElementById("vod");
+		   vod.autobuffer=true
+//		   autobuffer属性用于设置音视频在页面加载的时候时候是否开始缓冲视频,值是true或者false，只有autoplay属性不设置的时候这个属性才会生效
+	</script>
+</html>

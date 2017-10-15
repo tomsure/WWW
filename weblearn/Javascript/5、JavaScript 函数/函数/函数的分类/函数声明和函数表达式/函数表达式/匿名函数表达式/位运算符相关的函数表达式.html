@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*匿名函数简单理解就是自己调用自己
+			简单的理解就是定义完成函数之后立即执行。
+比较常见的三种写法：*/
+// Crockford's preference - parens on the inside
+(function() {
+  console.log('Welcome to the Internet. Please follow me.');
+}());
+
+(function() {
+  console.log('Welcome to the Internet. Please follow me.');
+})();
+
+!function() {
+  console.log('Welcome to the Internet. Please follow me.');
+}();
+//如果对于其返回值没有特别的要求的话，我们还可以这样写：
+!function(){}();  // => true
+~function(){}(); // => -1
++function(){}(); // => NaN
+-function(){}();  // => NaN
+//或者也可以这样：
+~(function(){})();
+void function(){}();
+true && function(){ /* code */ }();
+15.0, function(){ /* code */ }();
+//甚至，还可以这样写：
+new function(){ /* code */ }
+new function(){ /* code */ }() //如果没有参数，最后的()就不需要了
+
+/*作者：令狐葱
+链接：https://www.zhihu.com/question/20249179/answer/26184191
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。*/
+		</script>
+	</head>
+	<body>
+		<a href="http://hunankeda110.iteye.com/blog/1668914">点击查看匿名函数使用方法</a>
+	</body>
+</html>

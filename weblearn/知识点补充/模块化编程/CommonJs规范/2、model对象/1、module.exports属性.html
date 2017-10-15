@@ -1,0 +1,15 @@
+moudel对象代表当前模块，exports变量是moudel对象的属性，这个属性是这个外部环境访问当前模块的接口，用法如下：
+   例如有一个test.js文件，内容如下：
+   
+     var x=1；
+     function playGame(){
+     	alert(x)
+     }
+     
+    modudle.exports.a=x;
+    modudle.exports.b=playGame;
+    
+    当在nodejs中使用require()方法加载test.js的时候，加载完毕后，就可以调用这个模块里面的方法，加载后调用test.js里面的方法或者属性实际上访问的是module.exports属性，例如：
+       var aa=require('./test.js');
+         console.log(aa.a);
+         aa.b()

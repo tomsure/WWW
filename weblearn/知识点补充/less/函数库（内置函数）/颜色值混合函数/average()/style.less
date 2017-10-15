@@ -1,0 +1,18 @@
+
+@a:rgb(255,200,255);
+@b:rgb(100,255,200);
+
+
+div{
+    width: 100px;
+    height: 100px;
+    background-color:@a;
+}
+
+div:hover{
+//  background-color:average(@a,@b);  编译结果为#b2e4e4
+}
+
+
+//average()函数用于将两个颜色的rgb中的红绿蓝分别相加再除以二得到平均值，形成一个新的颜色值
+//例如上面     average(@a,@b)的运算过程是rgb((255+200)/2,(200+255),(255+200))=rgb(178,228,228)=#b2e4e4

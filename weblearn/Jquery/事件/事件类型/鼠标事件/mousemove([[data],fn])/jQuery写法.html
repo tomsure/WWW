@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{ width:100px ;height:100px ;background-color:red ;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*当鼠标指针在指定的元素中移动时，就会发生 mousemove 事件。
+mousemove() 方法触发 mousemove 事件，或添加当发生 mousemove 事件时运行的函数。
+注意：用户把鼠标移动一个像素，就会发生一次 mousemove 事件。处理所有 mousemove 事件会耗费系统资源。请谨慎使用该事件。*/
+    $(function(){
+    	$("div").mousemove(function(){
+    		alert("鼠标在div上移动")
+    	})
+    })
+	</script>
+	<body>
+		<div id="">
+			
+		</div>
+	</body>
+</html>

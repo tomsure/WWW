@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*这个选择器选择的是属性值已某字符串开头而且字符串必须是整个单词或者匹配的字符后面跟的是连字符形成的属性值*/
+		p[class|=cl]{color: red;}
+	</style>
+	<body>
+		<p class="cl">中国</p>
+			<p class="cla">中国</p>
+				<p class="clas">中国</p>
+				
+					<p class="cl">中国</p>
+						<p class="cl-ass">中国</p>	<p></p>
+						
+	</body>
+</html>

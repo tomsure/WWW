@@ -1,0 +1,9 @@
+/*@charset "utf-8";用于设置外部CSS文件的字符编码*/
+body{
+	background: red;
+}
+
+
+/*@charset
+定义字符集。字符设置据说会被HTTP头覆盖。
+某些软件，例如Dreamweaver新建CSS文件时候，自动会带有下面所示代码，但实际开发时候，作用不大，因为meta中已经有所设置(<meta charset="utf-8">)，会覆盖，所以我都是直接删掉的。*/

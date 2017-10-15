@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		/*支持该事件的 HTML 标签：
+       <input type="text">, <select>, <textarea>
+                     支持该事件的 JavaScript 对象：
+       fileUpload, select, text, textarea
+       此事件指的是当输入域的内容改变并失去焦点的时候
+       */
+	window.onload=function(){
+		var sd=document.getElementById("fname");
+		sd.onchange=function(){
+			alert("我的内容被你改变了哦")
+		}
+	}
+</script>
+
+<body>
+
+输入您的姓名：
+<input type="text" id="fname"  />
+
+</body>
+</html>

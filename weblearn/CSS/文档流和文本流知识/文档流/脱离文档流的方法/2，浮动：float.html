@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		span{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<span id="sp">
+			你好
+		</span>
+	</body>
+	<script type="text/javascript">
+		var sp=document.getElementById("sp")
+		sp.onclick=function(){
+			this.style.float='left'
+		}
+//		点击元素就会给他设置float,随之就会将元素变为block块级元素
+	</script>
+</html>

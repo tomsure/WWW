@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 500px;
+			height: 350px;
+			background-color: red;
+			margin: 1000px auto 0 auto;
+		}
+		@-webkit-keyframes fadeIn{
+			0%{
+				opacity: 0;
+				-webkit-transform: translate3d(-100%,0,0);
+				transform: translate3d(-100%,0,0);
+			}
+			100%{
+				opacity: 1;
+				-webkit-transform:none; 
+				transform: none;
+			}
+		}
+		.fadeIn{
+			animation-name: fadeIn;
+			-webkit-animation-name:fadeIn ;
+			animation-duration: 2s;
+			-webkit-animation-duration: 2s;
+		}
+	</style>
+	<body>
+		<div id="">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function(){  //使用scroll()方法
+				var ks_area=$(window).height();  //获取到浏览器可视区域的高度                                //1000
+    			var scrollHeight=$(window).scrollTop() //获取到浏览器滚动到距离顶部的位置      //100
+				var divtop=$('div').offset().top  //获取到div元素距离顶部的距离
+				if(ks_area+scrollHeight>=divtop){
+			
+					$('div').addClass('fadeIn')
+					
+				}
+				
+			})
+		
+		})
+//		      可视区域加载的原理分析:
+//		        当浏览器可视区域的高度[$(window).height()]+向下滚动额的距离顶部的距离[$(window).scrollTop()]大于或者等于需要加载的元素距离稳定顶部的距离(offset().top)的时候,指定的元素已经在可视范围内显示,此时通过给这个元素添加提前设置好的动画类名,则达到动画加载效果;
+//		        实现步骤如下:
+//		     1,在CSS中设置好元素的margin,在不可视范围,并设置好有动画的类名;
+//		     2,用jquery的$(window).scroll()方法,在scroll()方法中设置一个函数,在函数中分别用变量声明浏览器的可视范围 ,滚动的距离和被加载 元素距离文档顶部的距离;
+//		     3,使用条件语句,设置条件当可视区域的高度[$(window).height()]+向下滚动额的距离顶部的距离[$(window).scrollTop()]大于或者等于需要加载的元素距离稳定顶部的距离(offset().top)的时候,将动画类名添加到这个元素上
+	</script>
+</html>

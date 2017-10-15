@@ -1,0 +1,43 @@
+实例变量和函数
+
+在面向对象编程中除了一些库函数我们还是希望在对象定义的时候同时定义一些属性和方法，实例化后可以访问，js也能做到这样
+<script type="text/javascript">
+          function Box(){
+                this.a=[]; //实例变量
+                this.fn=function(){ //实例方法
+                    
+                }
+            }
+            
+            console.log(typeof Box.a); //undefined
+            console.log(typeof Box.fn); //undefined
+            
+            var box=new Box();
+            console.log(typeof box.a); //object
+            console.log(typeof box.fn); //function
+</script>
+
+
+为实例变量和方法添加新的方法和属性
+<script type="text/javascript">
+function Box(){
+                this.a=[]; //实例变量
+                this.fn=function(){ //实例方法
+                    
+                }
+            }
+            
+            var box1=new Box();
+            box1.a.push(1);
+            box1.fn={};
+            console.log(box1.a); //[1]
+            console.log(typeof box1.fn); //object
+
+            var box2=new Box();
+            console.log(box2.a); //[]
+            console.log(typeof box2.fn); //function
+</script>
+
+在box1中修改了a和fn，而在box2中没有改变，由于数组和函数都是对象，是引用类型，这就说明box1中的属性和方法与box2中的属性与方法虽然同名但却不是一个引用，而是对Box对象定义的属性和方法的一个复制。
+
+这个对属性来说没有什么问题，但是对于方法来说问题就很大了，因为方法都是在做完全一样的功能，但是却又两份复制，如果一个函数对象有上千和实例方法，那么它的每个实例都要保持一份上千个方法的复制，这显然是不科学的，这可肿么办呢，prototype应运而生。

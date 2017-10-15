@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{width:150px ;height:150px ;background-color:red ;}
+		#dv1{width:80px ;height:80px ;background-color: #006400;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		//event.target 属性返回哪个 DOM 元素触发了事件。
+		$(function(){
+			$("#dv").on("click",function(e){
+				alert(e.target.id)
+				//点击#dv的时候弹出#dv的id,点击#dv1的时候，弹出#dv1的id，tagget返回的是触发事件的DOM元素                
+				//这里绑定的元素是#dv，但是触发事件的元素是点击的那个元素，谁出发就返回谁，不论绑定的是谁，但是前提是能够这样绑定，例如这里可以使用on方法绑定
+			})
+		})
+	</script>
+	<body>
+		
+		<div id="dv">
+			<div id="dv1">
+				
+			</div>
+		</div>
+	</body>
+</html>

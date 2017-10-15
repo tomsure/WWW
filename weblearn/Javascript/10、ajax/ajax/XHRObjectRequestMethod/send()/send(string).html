@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var XHR;
+		if(window.XMLHttpRequest){
+			XHR=new XMLHttpRequest()//如果浏览器支持XMLHttpRequest对则创建XMLHttpRequest
+		}else{
+			XHR=new ActiveXObject('Microsoft.XMLHTTP')//如果不支持则创建ActiveXObject对象
+		}
+		XHR.open('GET','../liziURL/demo.php',false);
+         XHR.send(null)
+		alert(XHR.status)
+		//send()方法用于xhr对象发送请求，使用ajax发送请求的时候，必须使用send()方法，否则数据不会被发送到服务器，而且此时xhr对象的status会返回0，表示send()方法未执行，如果使用POST方式发送请求，send()括号中可以添加字符串参数，使用GET方法的时候则括号里面需要写一个null，例如 xhr.send(null);
+		
+	</script>
+</html>

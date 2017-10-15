@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<li>1</li>
+		<li id="li1">2</li>
+		<a href=""></a>
+		<li>4</li>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-1.7.2/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('li').filter(function(index,l){
+				alert(index)
+			    alert(l)
+			}).css('color','red')
+		})
+	</script>
+</html>

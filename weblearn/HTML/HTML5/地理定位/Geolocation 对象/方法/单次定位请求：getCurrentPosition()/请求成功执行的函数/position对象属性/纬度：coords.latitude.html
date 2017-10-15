@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击获取</button>
+		<textarea name="" id="ta" rows="20" cols="20"></textarea>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		var ta=document.getElementById("ta");
+		btn.onclick=function(){
+			
+			navigator.geolocation.getCurrentPosition(function(position){
+			ta.value='纬度：'+position.coords.latitude;
+//		     获取当前设备的纬度
+		
+			
+		})
+		}
+
+
+	</script>
+</html>

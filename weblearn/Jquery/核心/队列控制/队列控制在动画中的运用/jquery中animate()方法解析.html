@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('div').click(function(){
+				$(this).animate({
+					width:'300px'
+				},2000)
+				$(this).animate({
+					height:'300px'
+				},2000)
+				$(this).animate({
+					left:'300px'
+				},2000)
+			});
+		})
+//	 animate()方法实现动画的原理是	animate()方法每执行一次,就会执行一次js的setInterval()方法,但如果只用是setInterval()方法，在执行多个动画的时候，多个动画会同时执行setInterval()，这样动画就没有先后顺序，所以在执行animate()方法的时候，会执行queue()方法依次把多个动画定时器函数放到一个数组中，然后再执行dequeue()方法把放到数组中的定时器函数依次取出队列并执行，这样的话就会按顺序的执行动画;
+//由于动画队列中第一个animate()方法需要执行，所以源码中第一个动画就会自动调用dequeue()方法将队列中第一个队列函数取出来进行执行
+		
+	</script>
+</html>

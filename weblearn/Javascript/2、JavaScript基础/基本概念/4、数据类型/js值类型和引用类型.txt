@@ -1,0 +1,42 @@
+1，值类型：数值、布尔值、null、undefined。 
+2：对象、数组、函数。 
+
+
+基本类型和引用类型 
+　　JS不同于JAVA、C这些语言，在变量申明时并不需要声明变量的存储空间。变量中所存储的数据可以分为两类：基本类型和引用类型。
+     其中数值、布尔值、null和undefined属于基本类型，对象、数组和函数属于引用类型。 
+　　基本类型在内存中具有固定的内存大小。例如：数值型在内存中占有八个字节，布尔值只占有一个字节。对于引用型数据，他们可以 
+    具有任意长度，因此他们的内存大小是不定的，因此变量中存储的实际上是对此数据的引用，通常是内存地址或者指针，通过它们我们可以找到这个数据。 
+　　引用类型和基本类型在使用行为上也有不同之处：
+
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript"> 
+//定义一个输出函数 
+function outPut(s){ 
+document.writeln(s) 
+} 
+var a = 3; 
+var b = a; 
+outPut(b); 
+//3 
+a = 4; 
+outPut(a); 
+//4 
+outPut(b); 
+//3 
+</SCRIPT> 
+　　对基本类型b进行赋值时，实际上是又开辟了一块内存空间，因此改变变量a的值对变量b没有任何影响。
+
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript"> 
+//定义一个输出函数 
+function outPut(s){ 
+document.writeln(s) 
+} 
+var a_array = [1,2,3]; 
+var b_array = a_array; 
+outPut(b_array); //1,2,3 
+a_array[3] = 4; 
+outPut(b_array);//1,2,3,4 
+</SCRIPT>
+
+　　上面是对引用类型的变量赋值，实际上他们传递的是对内存地址的引用，因此对a_array和b_array的存取，实际上都是操作的同一块内存区域
+   。如果希望重新分配内存空间存储引用型变量，那么我就需要使用克隆方法或者自定义方法来复制引用变量的数据。

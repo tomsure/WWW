@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<p>点击按钮查看输入的对话框。</p>
+
+<button onclick="myFunction()">点我</button>
+
+<p id="demo"></p>
+
+<script>
+//有两个输入选项，一个是提示给用户的字符，一个是用户输入的内容，用户输入框可以输入一个字符串作为默认值
+/*功能：显示一个输入框，在输入框内显示提示字符串，在输入文本框显示缺省文 
+
+本，并等待用户输入，当用户单击“确定”按钮时，返回用户输入的字符串，当 
+
+单击“取消”按钮时，返回null值。*/ 
+
+function myFunction()
+{
+	var x;
+
+	var person=prompt("请输入你的名字","Harry Potter");
+	if (person!=null && person!="")
+	{
+	    x="你好 " + person + "! 今天感觉如何?";
+	    document.getElementById("demo").innerHTML=x;
+	}
+}
+</script>
+
+</body>
+</html>

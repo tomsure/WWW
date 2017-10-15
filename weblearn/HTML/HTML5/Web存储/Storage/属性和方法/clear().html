@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">设置</button>
+		<button id="btn2">读取</button>
+		<button id="btn3">删除</button>
+		<input type="text" name="ipt" id="ipt" value="" />
+	</body>
+	<script type="text/javascript">
+		var btn1=document.getElementById("btn1");
+		var btn2=document.getElementById("btn2");
+		var btn3=document.getElementById("btn3");
+		var ip1=document.getElementById("ipt");
+		btn1.onclick=function(){
+			window.localStorage.setItem('name','tom');
+			window.localStorage.setItem('passwd','12345');
+			window.localStorage.setItem('age','12');
+            //设置多个stroge
+		}
+		btn2.onclick=function(){
+			alert(window.localStorage.getItem('name'))
+			alert(window.localStorage.getItem('passwd'))
+			alert(window.localStorage.getItem('age'))
+//			读取storge
+		}
+		btn3.onclick=function(){
+			window.localStorage.clear()
+            //删除所有stroge数据
+	 	}
+//		clear()方法用于删除所有的stroge数据,这里设置的时候,会有数据存储产生,当点击读取按钮的时候,就会弹出相应的数据值,点击删除按钮后再点击读取就只会弹出null,因为所有的stroge数据已被删除
+	</script>
+</html>

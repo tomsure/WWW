@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//此属性用来检测元素是否含有属性
+		window.onload=function(){
+			var s=document.getElementById("dv");
+			alert(s.hasAttribute("id"))//检测节点是否含有某属性，这里弹出true，因为div含有id这个属性;
+			alert(s.hasAttribute("name"))//弹出false，因为div没有name这个属性;
+		}
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+</html>

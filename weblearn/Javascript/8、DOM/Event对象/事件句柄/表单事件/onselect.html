@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+	//这个时间意思是说当用鼠标选取部分元素内容的时候发生的事情
+			var  ipt=document.getElementById("input");
+			ipt.onselect=function(){
+				alert("你选择了输入框的内容")
+			   
+			}
+		}
+	</script>
+	<body>
+		<form action="" method="post">
+			
+			<input type="text" name="ipt" id="input" value="中华人民共和国" />
+		</form>
+	</body>
+</html>

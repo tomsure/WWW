@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	document.onclick=function(){
+			alert(1)
+		};
+		
+		if(typeof document.onclick=='function'){
+			var saved=null;//保存上一个对象
+			saved=document.onclick;
+		}
+		
+	//saved就是document.onclick;所以saved()就等于document.onclick(),但是	document.onclick()是没办法执行的，所以saved()就相当于
+//	function(){
+//		alert(1)
+//	},就是第一个事件函数,所以在第二个函数中再执行saved()就执行了第一个函数
+		document.onclick=function(){
+			if(saved){
+				saved()//执行第一个事件函数
+			}//这里必须使用一个if语句来判断，否则如果第一个onclick事件函数不存在就会报错，后面的语句就不会执行
+			alert(2)
+		}
+		
+	</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width:100px;
+			height: 100px;
+			background-color: blue;
+			font-size: x-large;
+			
+		}
+	</style>
+	<body>
+		<div id="dv">
+			你好
+		</div>
+		<li>1</li>
+		<li id="li1">2</li>
+		<li>3</li>
+	     
+	     <p>1111</p>
+	     <p id="p2">222</p>
+	     <p>333</p>
+		<button>点击添加</button>
+		<button> 点击添加</button>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').eq(0).on('click',function(){
+				$('div').add('li').css('color','red')
+				
+			})
+			$('button').eq(1).on('click',function(){
+				$('div').add('p').css('backgroundColor','darkmagenta')
+				
+			})
+			
+//			add()方法用于将元素添加到已有的jquery集合对象中,这里jquery对象请参考jquery的add()方法
+        })
+   
+	</script>
+</html>

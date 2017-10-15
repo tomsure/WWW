@@ -1,0 +1,54 @@
+.style{
+    
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    
+}
+#dv{
+    background-color: red;
+    .style;
+}
+#dv1{
+    background: blue;
+    .style;
+}
+
+//编译结果：
+//.style {
+//width: 100px;
+//height: 100px;
+//margin: 10px;
+//}    这是混合内容
+//#dv {
+//background-color: red;
+//width: 100px;
+//height: 100px;
+//margin: 10px;
+//}
+//#dv1 {
+//background: blue;
+//width: 100px;
+//height: 100px;
+//margin: 10px;
+//}
+//通过查看编译结果可以看到，编译结果中会带着混合的内容（也就是这里的.style{}里面的内容）一起输出到css中，这样的话，就没必要，会造成资源浪费
+
+//不带输出的混合：
+// 如果不需要讲混合的内容输出达到编译后的css中，则需要在定义混合的时候在混合类名后加一个()符号就可以，例如上面的例子可以写成如下；
+
+   .style(){
+    
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    
+}
+#dv{
+    background-color: red;
+    .style;
+}
+#dv1{
+    background: blue;
+    .style;
+}

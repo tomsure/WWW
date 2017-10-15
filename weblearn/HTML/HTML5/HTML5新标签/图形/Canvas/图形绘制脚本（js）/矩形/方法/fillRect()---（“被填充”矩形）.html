@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//绘制以填充的矩形；
+		/*fillRect() 方法绘制"已填充"的矩形。默认的填充颜色是黑色。
+提示：请使用 fillStyle 属性来设置用于填充绘图的颜色、渐变或模式。*/
+  window.onload=function(){
+  	var ss=document.getElementById("myCanvas");
+  	   var dd=ss.getContext("2d");
+  	   dd.fillRect(10,10,100,100);
+  	   /*它有四个值（x，y，width，height），分别代表：x：矩形左上角的 x 坐标。
+			                                    y:矩形左上角的 y 坐标。
+			                                    width:矩形的宽度，以像素计。
+                                                height:矩形的高度，以像素计。*/
+                                               
+                                               
+       //fillRect默认颜色是黑色,如果需要修改颜色则用fillStyle修改；                           
+                                                
+                                                
+  	
+  	
+  }
+	</script>
+	<body>
+		<canvas id="myCanvas" width="200" height="200"></canvas>
+		
+	</body>
+</html>

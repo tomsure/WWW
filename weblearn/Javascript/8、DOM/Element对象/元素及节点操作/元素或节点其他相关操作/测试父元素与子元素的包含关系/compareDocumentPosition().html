@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//ompareDocumentPosition() 方法按照文档顺序，比较当前节点与指定节点的文档位置。	
+	</script>
+	<body>
+		
+		<div id="dv">
+			<p id="p1">你好</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		var p=document.getElementById("p1")
+		
+	  alert(dv.compareDocumentPosition(p))//弹出20，这个方法返回的是一个包含关系的掩码表，20表示的是4+16，
+	  alert(p.compareDocumentPosition(dv))//10
+//	  具体可以查询掩码表解释
+	  
+//	  只有火狐就版本浏览器支持这个方法
+	</script>
+</html>

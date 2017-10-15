@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width:100px;
+			height: 1000px;
+			border: 1px solid red;
+			margin-top: 1000px;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$(window).scroll(function(){
+			var	ks_area=$(window).height();
+			var	wholeHeight=$(document).height();
+			var	scrolltop=$(window).scrollTop()
+				if(ks_area+scrolltop>=wholeHeight){
+					alert('滚动到底部了')
+				}
+				if(scrolltop==0){
+					alert('滚动到头部了')
+				}
+			})
+		})
+	</script>
+</html>

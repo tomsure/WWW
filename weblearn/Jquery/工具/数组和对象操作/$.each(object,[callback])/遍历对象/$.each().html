@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+		
+	<body>
+	<div id="dv">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+			
+			
+		</script>
+		<script type="text/javascript">
+		//当$.each()用于遍历对象的时候，$.each()小括号里面的参数第一个是被遍历的对象名称，第二个是一个函数，这个函数有两个参数，第一个参数是这个对象的属性或方法的名称，第二个参数是属性或方法的值。
+		$.each($.ajax(),function(attr,fn){
+			document.write(attr+'</br>');//遍历返回$.ajax()返回的对象的属性名称
+			
+			
+		})
+		</script>
+</html>

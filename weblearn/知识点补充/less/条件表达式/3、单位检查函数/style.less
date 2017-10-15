@@ -1,0 +1,20 @@
+.style(@a)when(ispixel(@a)){ //如果单位是像素则执行一下代码
+    width:100px;
+    height: 100px;
+    background-color: red;
+    
+    
+}
+
+.style(@a)when(ispercentage(@a)){  //如果单位是百分比则执行一下代码
+    width: 120px;
+    height: 120px;
+    background-color: blue;
+}
+
+div{
+    .style(95%)
+}
+
+
+//单位检查函数是用于检测调用混合的时候，传入的参数是什么单位，根据传入的参数的单位，决定会否执行混合的样式，常用的单位检查函数有ispixel()、ispercentage()等等

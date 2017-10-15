@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		<div class="dropdown" id="dw">
+			<ul class="dropdown-menu">
+				<li><a href="">1</a></li>
+				<li><a href="">2</a> </li>
+				<li><a href="">3</a></li>
+				<li><a href="">4</a></li>
+			</ul>
+		</div>
+		<button class="btn	btn-default" data-toggle="dropdown" data-target="#dw">
+			下拉菜单 
+			<span  class="caret">
+				
+			</span>
+		</button>
+	</body>
+	<script type="text/javascript" src="../../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.js">
+		
+	</script>
+	
+	<!--如果按钮在容器外部，可以通过data-target 进行绑定。-->
+	<!--如果按钮在容器外部,需要通过CSS额外设置下拉选项和按钮的位置，并且要给容器添加id，再给button按钮添加data-target属性：指向容器id-->
+</html>

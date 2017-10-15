@@ -1,0 +1,21 @@
+<meta charset="UTF-8"/>
+网页可见区域宽： document.body.clientWidth; 
+网页可见区域高： document.body.clientHeight; 
+网页可见区域宽： document.body.offsetWidth (包括边线和滚动条的宽); 
+网页可见区域高： document.body.offsetHeight (包括边线的宽); 
+网页正文全文宽： document.body.scrollWidth; 
+网页正文全文高： document.body.scrollHeight; 
+网页被卷去的高(ff)：document.body.scrollTop; 
+网页被卷去的高(ie): document.documentElement.scrollTop; 
+网页被卷去的左：document.body.scrollLeft; 
+网页正文部分上：window.screenTop; 
+网页正文部分左：window.screenLeft; 
+某个元素的宽度：obj.offsetWidth;
+某个元素的高度：obj.offsetHeight;
+某个元素的上边界到body最顶部的距离：obj.offsetTop;（在元素的包含元素不含滚动条的情况下）
+某个元素的左边界到body最左边的距离：obj.offsetLeft;（在元素的包含元素不含滚动条的情况下）
+返回当前元素的上边界到它的包含元素的上边界的偏移量：obj.offsetTop（在元素的包含元素含滚动条的情况下）
+返回当前元素的左边界到它的包含元素的左边界的偏移量：obj.offsetLeft（在元素的包含元素含滚动条的情况下）
+
+scrollTop, scrollLeft
+设置或返回已经滚动到元素的左边界或上边界的像素数。只有在元素有滚动条的时候，例如，元素的 CSS overflow 属性设置为 auto 的时候，这些像素才有用。这些属性也只在文档的 <body> 或 <html> 标记上定义（这和浏览器有关），并且一起来制定滚动文档的位置。注意，这些属性并不会指定一个 <iframe> 标记的滚动量。这是非标准的但却得到很好支持的属性

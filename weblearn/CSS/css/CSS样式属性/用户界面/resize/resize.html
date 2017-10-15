@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*规定元素是否可由用户调整元素尺寸，注释：如果希望此属性生效，需要设置元素的 overflow 属性，值可以是 auto、hidden 或 scroll。*/
+		
+		
+		/*宽和高都可以调节*/
+		#dv1{ width: 100px ;height: 100px;background-color: red; resize: both; overflow: hidden;}
+		
+		
+		/*只可以调节宽度*/
+		#dv2{ width: 100px ;height: 100px; background-color: green;resize: horizontal;overflow: hidden;}
+		
+		
+		
+		/*只可以调节高度*/
+		#dv3{ width: 100px; height: 100px; background-color: darkmagenta; resize: vertical ;overflow: hidden;}
+		
+		
+		
+		/*不可调节宽高*/
+		#dv4{ width: 100px ;height: 100px; background-color: gray;resize: none;overflow: hidden;}
+	</style>
+	<body>
+		<div id="dv1">
+			
+		</div>
+		<br />
+		<div id="dv2">
+			
+		</div>
+		<br />
+		<div id="dv3">
+			
+		</div>
+		
+		<div id="dv4">
+			
+		</div>
+	</body>
+</html>

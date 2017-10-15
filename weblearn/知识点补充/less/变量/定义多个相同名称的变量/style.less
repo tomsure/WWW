@@ -1,0 +1,20 @@
+@div_width:100px;
+
+@bgcolor:red;
+#dv{
+    @bgcolor:blue;
+    width:@div_width;
+    height: 100px;
+    background-color:@bgcolor; //显示为蓝色
+   margin: 10px;
+}
+
+#dv1{
+    width: @div_width;
+    height: 100px;
+    background-color: @bgcolor; //显示为红色
+}
+
+// less的变量是有作用域的，一个变量在调用的时候，他的值是在自己同级作用域向上级作用域查找的，如果同级作用域没有找到，则向上级作用域查找，例如，上面例子中，#dv的样式用已经声明了一个@bgcolor变量，而外部还声明了一个，当#dv在设置background-color调用这个@bgcolor的时候，会调用到自己样式里面的这个@bgcolor:blue,而不是外面的；
+
+// #dv1这个元素在调用@bgcolor变量的时候，会调用外面的@bgcolor：red，因为自己里面没有声明，他不会调用#dv里面的同名变量@bgcolor，因为他们不是同级作用域，所以这个元素会显示为红色

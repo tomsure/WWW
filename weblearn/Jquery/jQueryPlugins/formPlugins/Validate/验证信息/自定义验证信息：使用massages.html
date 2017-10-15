@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>输入号码: <input type="text"  name="num" id="num" value="" />(必填)</p>
+			<p>邮箱: <input type="text"  name="email" id="email" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../Validate/库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('form').validate({
+				
+						
+			rules:{
+				num:{//input元素
+				
+					range:[5,10]
+					//必须输入大于等于5，小于等于10的数字
+				},
+				
+				  email:{
+			     	email:true
+			     }
+			        },
+			   
+			 messages:{
+			 	num:{
+			 		range:"必须输入大于等于5小于等于10的数字"
+			 		},
+			 	
+			 	email:{
+			 		email:"请输入正确的邮箱格式！"
+			 	}
+			 }
+				
+			})//加载validate.js插件；
+			
+		})
+     
+//   messages可以自定义的设置验证规则的内容 ,但是表达的意思必须和默认 验证规则一致,而且messages的中括号内的input元素必须和rules内的元素一一对应,例如这里message中说请输入正确的邮箱格式,则在rules中必须有相同的email的规则,否则不会显示自定义的提示信息
+      
+	</script>
+</html>

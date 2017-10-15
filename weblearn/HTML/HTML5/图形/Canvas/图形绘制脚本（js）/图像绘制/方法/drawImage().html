@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red; margin: 0;padding: 0;}
+	</style>
+	<script type="text/javascript">
+	//在画布上绘制图片或者视频；
+	/*参数	描述
+      img	规定要使用的图像、画布或视频。	 
+      sx	可选。开始剪切的 x 坐标位置。
+      sy	可选。开始剪切的 y 坐标位置。
+      swidth	可选。被剪切图像的宽度。
+      sheight	可选。被剪切图像的高度。
+      x	在画布上放置图像的 x 坐标位置。
+      y	在画布上放置图像的 y 坐标位置。
+      width	可选。要使用的图像的宽度（伸展或缩小图像）。
+      height	可选。要使用的图像的高度（伸展或缩小图像）*/ 
+		
+		window.onload=function(){
+		var ss=document.getElementById("myCanvas").getContext("2d"); //创建绘图对象
+		 var dd=document.getElementById("img"); //获取图片
+		 ss.drawImage(  
+		 	          dd, //被裁减的图片
+		 	          50,//以原图片的左上角为(0,0)位起始坐标 ，设置裁剪图片X轴的坐标
+		 	          50,//以原图片的左上角为(0,0)位起始坐标 ，设置裁剪图片Y轴的坐标
+		 	          50,//设置被裁减图片的宽度
+		 	          60,//设置被裁减图片的高度
+		 	          100,//图片本身不变，图片的位置位于canvas最左边的距离，必选
+		 	          100,//图片本身不变，图片的位置位于canvas最顶部的距离，必选
+		 	          100,//图片左上角坐标不变，这里设置裁剪后(或未裁剪)图片的宽度；可选值
+		 	          100//图片左上角坐标不变，这里设置裁剪(或未裁剪)后图片的高度 ；可选值
+		              )
+				
+		//注意，canvas内部显示的是裁剪完成后的图片(设置了裁剪参数)或未裁剪的整张图片	
+			
+		}
+		
+	</script>
+	<body>
+		
+		<canvas id="myCanvas" width="300" height="300"></canvas>
+		<img  src="../../像素操作/图片素材/girl.jpg" id="img"/>
+	</body>
+</html>

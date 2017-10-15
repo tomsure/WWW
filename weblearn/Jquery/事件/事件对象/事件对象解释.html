@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	    div{margin:10px ;}
+		#dv{width:100px ;height:100px ;background-color:red ;}
+		#dv1{width:100px ;height:100px ;background-color:green;}
+		#dv2{width:100px ;height:100px ;background-color:black }
+	</style>
+	<script type="text/javascript" src="../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$("#dv").click(function(){
+				alert()
+				//点击div的时候弹出空内容
+			})
+			
+			$("#dv1").click(function(e){
+				alert(e)
+			})
+			//当事件发生的时候会自动产生一个事件对象，这个事件对象可以放在函数的括号里，它本没有具体的名字，可以任意写一个字符串作为事件对象的名称
+			//这里输入alert(e),弹出object说明e就是事件对象，事件对象有多个属性
+		})
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<div id="dv1">
+			
+		</div>
+		<div id="dv2">
+			
+		</div>
+	</body>
+</html>

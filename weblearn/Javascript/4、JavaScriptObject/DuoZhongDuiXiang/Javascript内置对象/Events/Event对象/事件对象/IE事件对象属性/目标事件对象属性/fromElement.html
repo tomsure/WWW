@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+
+	//这个属性是能用在onmouseover和onmouseout上面，其他都用不了
+	window.onload=function(){
+		var dv=document.getElementById("dv");
+		
+		dv.onmouseover=function(evt){//
+			var ev=window.event;
+			
+			var de=document.getElementById("demo");
+		
+			de.innerHTML= "你是从"+ev.fromElement+"上移到这里来的"
+			
+		}
+		//在onmouseover事件中，fromElemen属性指的是鼠标指针从哪个节点移入到绑定事件的那个元素，例如元素dv绑定了onmouseover事件，当鼠标从dv1移动到dv上的时候，此时事件对象的fromElemen属性指的就是dv1
+		
+		
+		
+	}
+		
+	
+	</script>
+	<style type="text/css">
+		#dv{
+			width: 200px;
+			height: 200px;
+			background-color: darkmagenta;
+			
+		}
+		#dv1{
+			width: 150px;
+			height: 150px;
+			background-color: #0000FF;
+			
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<div id="dv1">
+			
+		</div>
+		
+		<p id="demo"></p>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px ;height:100px ;background-color:red ;}
+	</style>
+	
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button>点击测试</button>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-1.7.2/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('button').click(function(){
+			$('#dv').delay('fast').animate({
+				width:'300px',
+				
+			},2000).delay(2000).animate({
+				height:'300px'
+			}).delay('slow').fadeOut()
+		})
+//   第一个参数duration是用来设置延迟的时间,有三种写法,第一种是直接的毫秒数,第二种是固定的'fast',表示200毫秒,第三种是'slow',表示600毫秒
+	</script>
+</html>

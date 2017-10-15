@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		/*克隆cloneNode() 方法可创建指定的节点的精确拷贝。
+cloneNode() 方法 拷贝所有属性和值。
+该方法将复制并返回调用它的节点的副本。如果传递给它的参数是 true，它还将递归复制当前节点的所有子孙节点。否则，它只复制当前节点。*/
+        
+
+
+	</script>
+	<body>
+		<ul id="ul1" style="border: 1px solid red; margin: 10px;">
+			<li>1</li>
+			<li>1</li>
+		</ul>
+		<ul id="ul2" style="border: 1px solid red; margin: 10px;"></ul>
+		<button id="btn" >点击克隆</button>
+	</body>
+	<script type="text/javascript">
+		var li=document.getElementById("ul1").firstElementChild.cloneNode(true)
+		var btn=document.getElementById("btn")
+		var ul2=document.getElementById("ul2")
+		btn.onclick=function(){
+			ul2.appendChild(li)
+		}
+	</script>
+</html>

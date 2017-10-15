@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">设置</button>
+		<button id="btn2">读取</button>
+		
+		<input type="text" name="ipt" id="ipt" value="" />
+	</body>
+	<script type="text/javascript">
+		var btn1=document.getElementById("btn1");
+		var btn2=document.getElementById("btn2");
+		
+		var ip1=document.getElementById("ipt");
+		btn1.onclick=function(){
+			window.sessionStorage.setItem('name',ip1.value)
+
+		}
+		btn2.onclick=function(){
+			alert(window.sessionStorage.getItem('name'))
+		//	读取storge
+		}
+//		此页面用于设置sessionStroge然后尝试在另一个页面读取这里设置的stroge数据
+
+	</script>
+</html>

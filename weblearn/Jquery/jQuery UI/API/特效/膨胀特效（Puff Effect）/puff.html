@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		div { width: 100px; height: 100px;background-color: red;}
+	</style>
+	
+	<body>
+		<button>点击测试</button>
+		
+		<div class="">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('button').click(function(){
+			$('div').effect('puff',{percent:450})//消失时候膨胀到450% 
+		})
+		
+//		膨胀特效就是元素在元素消失的时候呈现变大变淡的效果，显示的时候会从大到正常元素尺寸
+//		膨胀特效只需给元素的特效方法添加puff值即可；
+//      可选参数:percent,用来设置消失的时候元素膨胀的百分比，默认值是150
+	</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	
+	<body>
+		<input type="text" name="text" id="text" value="" />
+		<p id="p1"></p>
+	
+	
+	<script type="text/javascript">
+		window.onload=function(){
+			var  ss=document.getElementById("text");
+			ss.onkeydown=function(ev){
+				var  ee=ev.location||event.location;//注意：location在代码里首字母要小写
+		document.getElementById("p1").innerHTML="你按下的那个键的位置是："+ee
+				
+			}
+		}
+	</script>
+	</body>
+	
+</html>

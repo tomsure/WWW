@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>日期: <input type="text"  name="num" id="num" value="" />(必填)</p>
+			<p>邮箱: <input type="text"  name="email" id="email" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../Validate/库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('form').validate({
+				
+						
+			rules:{
+				num:{//input元素
+				
+					dateISO:true
+					//表示必须输入正确的日期格式，例如：2009-06-23，1998/01/22。只验证格式，不验证有效性。
+				}
+			}
+				
+			})//加载validate.js插件；
+			
+		})
+     
+     
+      
+	</script>
+</html>

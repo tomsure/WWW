@@ -1,0 +1,25 @@
+//  .style{
+//    width: @width;
+//  
+//   }
+
+// 上面的写法会报错，因为变量没有定义
+  
+   @import "style1";  //引入外部less文件
+
+   .style{
+       height: @height;
+       width:@width;
+       background-color: red;
+   }
+
+
+div{
+    .style()
+}
+
+//在less普通写法中，变量在代码中调用是需要声明的，如果不声明，会报错，在less中，有一个引入的概念，这个概念是，可以在本地less文件中，引入外部less，调用外部less中的数据，外部less就是另一个less文件。
+// 引入的使用方式是，使用“@import”字符，后面接着写引入的less文件，可以不写'.less'后缀，名称用引号包裹
+//  上面的例子中，.style这个混合类中使用了未声明的变量，但是它引入了style.less文件，这个文件中声明了这里需要的变量，所以这里可以使用
+
+   

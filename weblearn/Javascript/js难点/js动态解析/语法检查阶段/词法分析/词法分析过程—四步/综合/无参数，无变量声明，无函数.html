@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		var a=1;
+		function fn(){
+			alert(a)
+		}
+		fn()
+		//这种无参数，内部无局部变量的函数，执行的时候如果执行的是函数内部没有的变量，则会根据作用域向上寻找，找到之后则则执行输出；这里函数内部没有变量a但是向上查找，找到全局作用域中一个全局变量a，符合条件，则输出
+		function b(){
+			alert(c)
+		}
+		b()
+		//这里从内向外寻找都没有找到相应的变量c所以报错,
+		
+//这种函数无参数，内部无变量，无函数的函数，的解析过程：
+/*
+     1，形成活动对象：AO={}，
+     2，
+ * 
+ * 
+ * */
+
+
+	</script>
+	<body>
+	</body>
+</html>

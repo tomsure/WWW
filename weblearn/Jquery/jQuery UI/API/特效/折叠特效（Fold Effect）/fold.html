@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.css"/>
+	<style type="text/css">
+		div { width: 200px;height: 200px;background-color: darkred;}
+	</style>
+	
+	<body>
+		<button>点击测试</button>
+		<div id="">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../jqueryUI插件/jquery-ui-1.11.4/jquery-ui.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	   $('button').click(function(){
+	   		$('div').toggle('fold',{size:40,horizFirst:true})
+	   })
+	</script>
+	<!--折叠特效就是通过折叠效果达到元素的折叠-->
+	<!--折叠特效使用方法(通常会绑定事件实现)：
+		给元素的特效方法添加fold参数即可实现;
+		可选参数：size:被折叠元素的高度尺寸，就是当元素折叠的时候水平/垂直折叠到指定尺寸后开始垂直/水平折叠
+		         horizFirst:布尔值，当折叠时是否先进行水平方向的折叠。请记得，显示的时候与隐藏的时候顺序相反。默认值是flase，当设置为true的时候元素从右往左折叠，再从下往上折叠，不设置或设置为false的时候,从下往上折叠，再从右往左折叠
+	
+	
+	
+	
+	
+	-->
+	
+</html>

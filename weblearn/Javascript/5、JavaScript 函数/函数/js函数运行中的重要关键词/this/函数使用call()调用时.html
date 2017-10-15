@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//语法格式:函数.call(对象,参数1,参数2....)		
+		
+		function t(num){
+			alert(this.age)//当函数t作为对象obj的方法的时候，这个this指向obj对象，如果不作为对象obj的方法的话就指向window；
+			alert(num)
+		}//函数t
+		
+		var obj={
+		    name:'lisi',
+		    age:25
+		    }//创建对象obj；
+		obj.t=t;//将函数t赋值为对象obj的方法；
+		obj.t(30)
+		
+//	接下来,可以不把t赋给obj作为他的方法,同样将this指向obj：
+      var ren={
+      	name:'bom',
+      	age:34
+      	
+      }
+      t.call(ren,5)
+	
+	//解析：  call格式：t.call(对象名，参数1，参数2...)；
+//	运行如下:
+//	1,fn函数中的this指向对象;
+//	2,运行函数fn(参数1,参数2,...参数n)
+
+//用上面的例子讲:就是使用固定格式给函数t添加call()方法,里面的 参数第一个是对象ren,第二个参数就是给函数t的参数赋的值5（有多个参数可以传多个参数,没有可以不传），表示起来就是：  t.call(ren,5)，这样运行的时候，将函数t内的this指向对象ren，这样就可以达到不用讲函数绑定为对象的方法，这种方式叫做对象冒充。
+
+//再写一个一样的完整例子:
+
+    function fn(ss){
+    	alert('他的名字叫:'+this.name);
+    	alert('他的年龄是:'+this.age)
+    	alert('我比他大'+ss+',所以我的年龄是:'+(this.age + ss))
+    }
+    var dom={
+    	name:'小明',
+    	age:12
+    }
+    fn.call(dom,10)
+    
+   //call()方法的作用就是改变this的指向，在普通函数中，this指的是window，通过绑定call()方法，this就可以指定为某一个对象 
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	</script>
+</html>

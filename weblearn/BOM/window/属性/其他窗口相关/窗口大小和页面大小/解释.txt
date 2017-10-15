@@ -1,0 +1,4 @@
+alert(innerWidth); //页面长度
+alert(innerHeight); //页面高度
+alert(outerWidth); //页面长度+边框
+alert(outerHeight); //页面高度+边框

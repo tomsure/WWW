@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		
+		span{display: none;height:40px ;width:40px ;background-color: #A52A2A;margin:10px ;border-radius: 100px;text-align: center;line-height:40px ;}
+	</style>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	//使用递归的方法实现队列动画；
+	//队列动画就是指多个相同的元素通过一次事件执行，使多个元素一次执行动画
+		$(function(){
+			
+			$("#btn1").click(function(){//绑定点击事件
+               $("span").first().show("fast",function ss(){
+               	
+               	$(this).next().show(500,ss)//后面显示的元素都按这个速度
+               	/*绑定队列动画的元素，现给第一个元素绑定show()方法，show()括号内部第一个参数设置动画时间（可以不设），第二个参数写一个带名称的函数，函数内部写$(this).next.show(时间，函数名称)*/
+               	//这个就是使用递归函数执行的动画
+               	
+               })
+               })
+			
+			
+			$("#btn2").click(function(){//绑定点击事件
+               $("span").last().hide("fast",function ss(){
+               	//从最后一个开始隐藏，也可以设置从第一个开会隐藏
+               	$(this).prev().hide(500,ss)//
+               	//队列隐藏效果与队列显示效果原理相同都是用递归函数的方法
+               	//如果是从最后一个开始隐藏，隐藏的第一个就是用last()第二个就必须使用prev()方法
+               	
+               	
+               })
+               
+               
+		})
+		})
+	</script>
+	<body>
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span>4</span>
+		<span>5</span>
+		<button id="btn1">点击显示</button>
+		<button id="btn2">点击隐藏</button>
+	</body>
+</html>

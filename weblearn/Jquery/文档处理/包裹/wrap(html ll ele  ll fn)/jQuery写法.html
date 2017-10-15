@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{height:30px;background-color: red;width: auto;margin: 10px;}
+	</style>
+	
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+	//wrap() 方法把每个被选元素放置在指定的 HTML 内容或元素中。
+	/*参数	描述
+wrapper	
+必需。规定包裹被选元素的内容。
+可能的值:
+HTML 代码 - 比如 ("<div></div>")
+新元素 - 比如 (document.createElement("div"))
+已存在的元素 - 比如 ($(".div1"))
+已存在的元素不会被移动，只会被复制，并包裹被选元素。
+*/
+$(function(){
+	$("#btn").click(function(){
+		$("p").wrap("<div><div>")
+	})
+	
+})
+
+	</script>
+	<body>
+		<p>中华人民共和国</p>
+		<p>中国</p>
+		<button id="btn">点击测试</button>
+	</body>
+</html>

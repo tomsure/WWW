@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">读取</button>
+		
+	</body>
+	<script type="text/javascript">
+		var btn1=document.getElementById("btn1");
+		
+		btn1.onclick=function(){
+			alert(window.sessionStorage.getItem('name'))
+			//尝试读取storge
+		}
+		
+//    在index.html设置了sessionStroge后在那个页面读取可以读取到storge的值,但是这个页面就无法读取到,这个软件自带的浏览器有问题,会读取到index1.html设置的数据,所以需要使用外部浏览器测试
+	</script>
+</html>

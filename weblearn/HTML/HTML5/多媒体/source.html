@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<video width="800" height="" controls="controls">
+		<source src="HTML5 DOM/音视频资源文件/Intermission-Walk-in_512kb.mp4"></source>
+		<source src="HTML5 DOM/音视频资源文件/johann_sebastian_bach_air.ogg"></source>
+		</video>
+		
+	</body>
+	
+	  在各个浏览器中，可实现兼容的视频格式不相同，有的支持mp4，有的支持ogg，等等，为了在同一个页面实现跨浏览器显示视频文件，就可以使用source标签，
+	  使用方法：设置video标签后设置一个controls和其他属性，src不用设置，然后在video标签里面设置多个source标签，每个这个标签设置一个src属性，值就是每个不同格式的视频的url地址，这样就可以实现多浏览器兼容，当然要保证不同格式的视频，内容都是一样的；
+	  如果浏览器不支持HTML5视频格式，就只能在video标签中使用object标签，再来嵌入flash视频
+</html>

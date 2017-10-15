@@ -1,0 +1,61 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
+<title>iScroll demo: simple</title>  
+  
+<script type="text/javascript" src="build/iscroll.js"></script>  
+  
+<script type="text/javascript">  
+var myScroll = null;  
+var generatedCount = 0;  
+function pullUpAction () {  
+        var el, li, i;  
+        el = document.getElementById('thelist');  
+        for (i=0; i<3; i++) {  
+            li = document.createElement('li');  
+            li.innerText = 'Generated row ' + (++generatedCount);  
+            el.appendChild(li, el.childNodes[0]);  
+        }  
+        myScroll.refresh();     // Remember to refresh when contents are loaded (ie: on ajax completion)!  
+}  
+  
+window.onload = function() {  
+    myScroll = new iScroll('wrapper', {  
+        onScrollEnd: function () {  
+            //如果滑动到底部，则加载更多数据（距离最底部10px高度）  
+            if ((this.y - this.maxScrollY) > 10) {             
+                pullUpAction();  
+            }  
+        }  
+    });  
+    for (var n=0; n<10; n++) {  
+        pullUpAction();  
+    }  
+}  
+  
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);  
+</script>  
+  
+<style type="text/css" media="all">  
+#wrapper1 {  
+    height:300px;  
+}  
+  
+  
+#scroller1 li {  
+    height:40px;  
+    line-height:40px;  
+}  
+  
+</style>  
+</head>  
+<body>  
+<div id="wrapper">  
+    <div id="scroller">  
+        <ul id="thelist">  
+        </ul>  
+    </div>  
+</div>  
+</body>  
+</html>  

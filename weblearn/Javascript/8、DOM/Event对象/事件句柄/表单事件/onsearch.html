@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//onsearch 事件在用户按下"ENTER（回车）" 按键或点击 type="search" 的 <input> 元素的 "x(搜索)" 按钮时触发。
+		window.onload=function(){
+			var sd=document.getElementById("ipt");
+			sd.onsearch=function(){
+				alert(sd.value)//这样设置就是当按下回车键开始搜索的术后输入的内容就会弹数来
+			}
+		}
+	</script>
+	<body>
+		<input type="search" name="" id="ipt" value="请搜索" />
+	</body>
+</html>

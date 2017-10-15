@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">中华人民共和国</div>
+		<button id="btn">点击插入</button>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		btn=document.getElementById("btn")
+	btn.onclick=function(){
+		alert(dv.childNodes[0].substringData(1,2))
+	}
+	
+//	substringData()方法用于输出选取的文本内容,两个参数,表示选取文本的起始位置下标
+	</script>
+</html>

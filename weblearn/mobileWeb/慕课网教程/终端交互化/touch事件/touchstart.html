@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 1920px;
+			height: 1080px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+           dv.addEventListener('touchstart',function(){
+           	alert('触摸开始事件')
+           })
+        
+	</script>
+	<!--touchstart事件是手指触摸到触摸屏的时候触发的事件，如果已经有手指触摸到屏的话则不会触发-->
+	<!--注意：移动设备touch事件需要使用DOM3.0级事件处理程序，否则无法触发-->
+</html>

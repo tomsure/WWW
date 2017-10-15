@@ -1,0 +1,1 @@
+ 当你手上没有源代码的时候，你需要从repository checkout一份

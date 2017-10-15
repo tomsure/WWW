@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<div id="">
+			
+		</div>
+		<button>点击添加</button>
+	</body>
+	<script type="text/javascript" src="../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').on('click',function(){
+				console.log($('div').length)
+				a=$('div').add('<p>我是动态添加的元素</p>')
+				console.log(a.length)
+				a.appendTo($('body'))
+			})
+			
+		})
+//		动态创建的html标签元素需要使用appendTo()方法追加才会显示,可以追加到任意位置
+	</script>
+</html>

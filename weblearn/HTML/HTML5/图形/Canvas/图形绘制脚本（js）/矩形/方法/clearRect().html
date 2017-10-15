@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ margin: 0;padding: 0; border: 1px solid red;}
+		
+	</style>
+	<script type="text/javascript">
+		//在给定的矩形内清除指定的像素
+		window.onload=function(){
+			var ss=document.getElementById("myCanvas");
+			var dd=ss.getContext("2d");
+			dd.fillRect( 20,20,200,200);  //绘制矩形；
+			dd.clearRect( 30,30,80,40);// 在绘制的矩形内清除指定像素
+			/*四个值代表的含义x	要清除的矩形左上角的 x 坐标。
+                             y	要清除的矩形左上角的 y 坐标。
+                             width	要清除的矩形的宽度，以像素计。
+                             height	要清除的矩形的高度，以像素计。*/
+			
+			
+			
+			
+		}
+	</script>
+	<body>
+		<canvas id="myCanvas" width="300" height="300"></canvas>
+	</body>
+</html>

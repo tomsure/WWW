@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	#myCanvas{ border: 1px solid red;}	
+	</style>
+	<script type="text/javascript">
+	//measureText()方法返回一个对象，该对象包含以像素计的指定字体宽度。
+	//意思是说将指定的文本打包成一个对象,而这个对象自带的只有宽度属性；
+	//所以可以使用  measureText(指定文本).width  方法来获取文本宽度，获取由于没有其他属性，获取其他属性将返回undefined
+	window.onload=function(){
+			var  ss=document.getElementById("myCanvas").getContext("2d");
+			ss.font="30px 宋体";
+			var ds="你好"
+			ss.strokeText("width:"+ss.measureText(ds).width,20,50);
+			ss.strokeText(ds,100,100)
+			
+			
+			
+			
+		}
+		
+	</script>
+	<body>
+		<canvas id="myCanvas" width="400" height="400"></canvas>
+	</body>
+</html>

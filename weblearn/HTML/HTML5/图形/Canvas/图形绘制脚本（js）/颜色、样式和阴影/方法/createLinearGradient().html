@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+	/* createLinearGradient() 方法创建线性的渐变对象。
+渐变可用于填充矩形、圆形、线条、文本等等。
+提示：请使用该对象作为 strokeStyle 或 fillStyle 属性的值。
+提示：请使用 addColorStop() 方法规定不同的颜色，以及在 gradient 对象中的何处定位颜色。*/
+
+
+/*参数值
+参数	描述
+x0	渐变开始点的 x 坐标
+y0	渐变开始点的 y 坐标
+x1	渐变结束点的 x 坐标
+y1	渐变结束点的 y 坐标*/
+		window.onload=function(){
+		
+		var c=document.getElementById("myCanvas");
+		var ctx=c.getContext("2d");
+		var my_gradient=ctx.createLinearGradient(0,100,90,10);  //创建渐变对象，只要绘制渐变图形都要创建此对象  
+		//前两个参数是线性渐变起始点坐标，后两个参数是线性渐变的结束点坐标
+		my_gradient.addColorStop(0,"red"); //设置图形渐变的值（0到1）和渐变的颜色
+		my_gradient.addColorStop(0.2,"green");
+		my_gradient.addColorStop(0.4,"yellow");
+		my_gradient.addColorStop(0.6,"red");
+		my_gradient.addColorStop(0.8,"blue");
+		my_gradient.addColorStop(1,"DarkMagenta");
+		ctx.fillStyle=my_gradient;
+		ctx.fillRect(0,40,500,500);
+		
+		
+		
+
+
+
+
+
+			
+			
+			
+			
+			
+		}
+	</script>
+	<body>
+	<canvas id="myCanvas" width="800" height="800"></canvas>
+	</body>
+</html>

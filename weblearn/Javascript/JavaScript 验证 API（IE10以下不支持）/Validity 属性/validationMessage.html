@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<input type="number" name="num" id="num" step=3  value="" />
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript" >
+		var num=document.getElementById("num");
+		
+		btn=document.getElementById("btn")
+		btn.onclick=function(){
+//		if(num.validity.rangeOverflow){ //此时num.validity.tooLong的值为true
+//				
+//				alert(num.validationMessage)
+//			}
+		 if(num.validity.stepMismatch){
+		 
+		 	alert(num.validationMessage)
+		 }
+		}
+		 
+          
+//      validationMessage值是当发生错误信息后的提示信息，他的内容由setCustomValidity()方法设置
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+</html>

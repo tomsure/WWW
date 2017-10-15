@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		xhr提供了2个用来获取响应头部的方法：getAllResponseHeaders和getResponseHeader。前者是获取 response 中的所有header 字段，后者只是获取某个指定 header 字段的值。另外，getResponseHeader(header)的header参数不区分大小写。
+//
+//DOMString getAllResponseHeaders();
+//DOMString getResponseHeader(DOMString header);
+//这2个方法看起来简单，但却处处是坑儿。
+//
+//你是否遇到过下面的坑儿?——反正我是遇到了。。。
+//
+//使用getAllResponseHeaders()看到的所有response header与实际在控制台 Network 中看到的 response header 不一样
+//使用getResponseHeader()获取某个 header 的值时，浏览器抛错Refused to get unsafe header "XXX"
+//经过一番寻找最终在 Stack Overflow找到了答案。
+//
+//原因1：W3C的 xhr 标准中做了限制，规定客户端无法获取 response 中的 Set-Cookie、Set-Cookie2这2个字段，无论是同域还是跨域请求；
+//原因2：W3C 的 cors 标准对于跨域请求也做了限制，规定对于跨域请求，客户端允许获取的response header字段只限于“simple response header”和“Access-Control-Expose-Headers” （两个名词的解释见下方）。
+//"simple response header"包括的 header 字段有：Cache-Control,Content-Language,Content-Type,Expires,Last-Modified,Pragma;
+//"Access-Control-Expose-Headers"：首先得注意是"Access-Control-Expose-Headers"进行跨域请求时响应头部中的一个字段，对于同域请求，响应头部是没有这个字段的。这个字段中列举的 header 字段就是服务器允许暴露给客户端访问的字段。
+//所以getAllResponseHeaders()只能拿到限制以外（即被视为safe）的header字段，而不是全部字段；而调用getResponseHeader(header)方法时，header参数必须是限制以外的header字段，否则调用就会报Refused to get unsafe header的错误。
+	</script>
+</html>

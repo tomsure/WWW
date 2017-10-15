@@ -1,0 +1,33 @@
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+	
+</head>
+<script>
+	var s=0;
+	var timeout=0;
+	status='点击按钮，开始计时';
+	function count(){
+		s++;
+		time1.value=s;
+		timeout=setTimeout('count();',100);
+	}
+	function onChange(){
+		if(timeout==0){
+			count();
+			time2.value='暂停计时';
+			status='点击按钮，暂停计时';
+		}else{
+			clearTimeout(timeout);
+			timeout=0;
+			time2.value='继续计时';
+			status='单击按钮，继续计时';
+		}
+	}
+
+  </script>
+ 
+ <body>
+  <input name='time1'/><br/>
+  <input type="button" name="time2" id="time2" value="开始计时" />
+ </body>

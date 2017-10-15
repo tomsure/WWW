@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{ width: 100px;height:100px ;background-color: red;}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		dv.attachEvent('onclick',function(){
+			alert(this==window)//true，说明事件函数中的this指的是window
+		    	
+		
+		});
+		//attachEvent()事件方法中的this指的是window
+	</script>
+</html>

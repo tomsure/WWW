@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$("#btn").click(function(){
+				$("#t1").focus()  //点击按钮的时候获取焦点
+			})
+			$("#btn1").click(function(){
+				$("#btn1").blur()//点击按钮的时候失去焦点
+			})
+		})
+	</script>
+	<body>
+		<input type="text" name="" id="t1" value="" />
+		<button id="btn">获取焦点</button>
+		<button id="btn1">失去焦点</button>
+	</body>
+</html>

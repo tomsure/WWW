@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	
+	<body>
+		<!--跨浏览器兼容性
+虽然 Bootstrap 会将这些样式应用到所有浏览器上，Internet Explorer 11 及以下浏览器中的 <fieldset> 元素并不完全支持 disabled 属性。因此建议在这些浏览器上通过 JavaScript 代码来禁用 <fieldset>。-->
+	<form action="">
+		<input type="checkbox" name="" id="" value="喜欢" disabled="disabled" />喜欢
+		<div class="checkbox disabled">
+			<label for=""><input type="checkbox" name="" id="" value="不喜欢" disabled="disabled"/>不喜欢</label>
+		</div>
+		<!--禁用input使用label包裹起来，在使用div再包裹起来 ，给div设置checkbox类名和disabled属性这样选择的 文字都会被显示禁用-->
+	</form>
+	</body>
+</html>

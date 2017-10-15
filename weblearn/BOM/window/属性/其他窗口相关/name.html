@@ -1,0 +1,27 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+	
+</head>
+<script>
+
+//name 功能：返回窗口名称，这个名称是由window.open()方法创建新窗口时给定的。 在javascript1.0版本中，这个属性只能用于读取窗口名称，而到了 javascript1.1版本时，可以用这个属性给一个不是用window.open()方法创建的 窗口指定一个名称。
+
+window.onload=function(){
+var dd=document.getElementById("btn");
+var ds //注意这里ds最好在时间函数外先声明，再在事件函数内部赋值给window.open,现在在事件函数里面这样写代表的是全局变量，但是有可能会造成其他影响，因为在函数外部也可以访问到，
+dd.onclick=function(){
+  ds=window.open('_bank','中国政府网','width=200px,height=200px');//这里设置了页面的名称属性;
+ds.document.write(ds.name)
+	
+}
+}
+</script>
+
+<body>
+
+<input type="button" name="" id="btn" value="点击打开新窗口" />
+
+</body>
+</html>

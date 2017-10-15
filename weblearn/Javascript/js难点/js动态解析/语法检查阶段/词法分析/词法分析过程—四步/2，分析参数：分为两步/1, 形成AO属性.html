@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	 //例如函数  function a(s){}
+		//将函数的参数赋给AO，作为AO的属性，值为unfefined；  即AO={a:undefined };
+		function t1(age){
+			
+			alert(age);
+		}
+		
+	
+		t1();    //undefined;
+	/*	词法分析过程：
+	 *  AO={};  生成活动对象；
+	 * AO={age:undefined};   形成属性，值为undefined；
+	 
+	 
+	 * 运行过程：
+		
+		t1(); //-----AO没有得到赋值，所以还是AO={ age：undefined }； // undefined 
+		*/
+	</script>
+	<body>
+	</body>
+</html>

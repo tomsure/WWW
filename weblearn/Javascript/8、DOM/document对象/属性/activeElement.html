@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//这个属性是返回获取焦点的那个元素上
+		window.onload=function(){
+			
+			var p1=document.getElementById("p1");
+			 document.onclick=function(){ p1.innerHTML=document.activeElement.id
+			}
+		}
+	</script>
+	<body>
+		<div id="dv" style="background-color: red;">
+			as
+		</div>
+		<p id="p1">dddd</p>
+		<input type="text" name="" id="text" value="" />
+		<button id="btn">点击测试</button>
+		
+	</body>
+</html>

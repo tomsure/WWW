@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*
+		 这个属性是设置动画的播放次数*/
+		#dv{
+			width: 100px;
+			height: 100px;
+			background: chocolate;
+			border-radius: 0px;
+			/*以下是设置动画名称属性*/
+			animation-name: divC  ;
+			-webkit-animation-name:  divC ;
+		
+			    /*以下是设置动画完成播放的时间*/
+			
+			-webkit-animation-duration: 5s;
+			/*  以下是设置动画的播放次数  */
+			-webkit-animation-iteration-count: 3;
+			/*当设置为数子的时候,就是设置动画循环播放的次数,达到次数后就停止播放*/
+			
+		}
+		
+		@-webkit-keyframes divC{
+			from{width: 100px;
+			height: 100px;
+			background: chocolate;
+			border-radius: 0px;
+			}
+			
+			to{
+				width: 200px;
+			height: 200px;
+			background: blue;
+			border-radius: 100px;
+			}
+		}
+		
+		
+	</style>
+	
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+</html>

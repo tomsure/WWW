@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(name,age,height){
+			this.name=name;
+			this.age=age;
+			this.height=height;
+			
+		}
+//		Person.prototype.sayName=function(){
+//			alert(this.name)
+//		}
+//		Person.prototype.sayAge=function(){
+//			alert(this.age)
+//		}
+//		原型方式可以使用json:
+// 
+     Person.prototype={
+     	sayName:function(){
+     		alert(this.name)
+     	},
+     	sayAge:function(){
+     		alert(this.age)
+     	}
+     	
+     }
+		
+		var person1=new Person('tom','22',170);
+		var person2=new Person('tosure','26','180')
+		document.write(person1.name)
+		document.write(person2.height)
+		alert( person1.age)
+//	组合方式创建对象具体步骤:
+//	1,使用构造函数创建对象,添加参数作为对象的属性;
+//	2,使用原型方式给对象添加方法;
+//	3,实例化对象,传递实参.
+
+		
+		
+	</script>
+</html>

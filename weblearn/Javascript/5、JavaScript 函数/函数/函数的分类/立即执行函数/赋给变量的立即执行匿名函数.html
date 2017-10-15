@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		
+	</script>
+	<body>
+	</body>
+	<script type="text/javascript">
+		   var a=function(x){
+		   	 console.log(x)
+		   	 
+		   }(2)
+		   
+		   console.log(a)  //undefined
+		   		  
+//		   匿名函数赋给一个变量的时候可以立即执行,用法就是在函数体后面写一对小括号表示立即执行
+             var b=function(y){
+             	console.log(y)
+             	return 4
+             }(3)
+                console.log(b) //4
+            
+//          赋给变量的立即执匿名函数如果函数内部有return,在函数执行完毕后,再来获得匿名函数的变量名,此时变量的值就是匿名函数内return的那个值,如果匿名函数内部没有return,则匿名函数自执行后,再来获取这个匿名函数的变量名,返回的就是undefined
+            
+	</script>
+</html>

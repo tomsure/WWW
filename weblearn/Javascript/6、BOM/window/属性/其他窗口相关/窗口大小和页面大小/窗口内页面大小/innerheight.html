@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//innerHeight=outerHeight；
+	
+	//window.innerHeight=数值 ;功能：返回或指定浏览器窗口中文档的像素高度，这个高度不包括任何工具栏和 组成窗口的页面修饰高度。 注：IE5.5不支持该属性。 
+	/*所有主流浏览器都支持 innerWidth 和 innerHeight 属性。
+注意：IE 8 及更早 IE版本不支持这两个属性。*/
+	
+	
+	//innerheight	返回窗口的文档显示区的高度。IE 不支持这些属性。它用 document.documentElement 或 document.body （与 IE 的版本相关）的 clientHeight 属性作为替代。
+	
+	//innerHeighet是指浏览器页面从导航栏最下面，也就是页面顶部到页面底部的可视区域，例如这个div的高度是500px，当把浏览器的高度调整至div的最底边上时候，可视区域的高度就是500px
+	//有兼容性
+		window.onload=function(){
+			var dd=document.getElementById("btn");
+			var dv=document.getElementById("dv");
+		dd.onclick=function(){
+			alert(innerHeight)
+		}
+		}
+	</script>
+	<style type="text/css">
+		*{margin: 0px;
+		padding: 0px;}
+		#dv{
+			margin: 0;
+			width: 500px;
+			height: 500px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			<button id="btn"> 点击查看</button>
+		</div>

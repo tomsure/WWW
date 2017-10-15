@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</body>
+	<script type="text/javascript" src="../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		   $(function(){
+		   	   
+		     var a=[1,2,3,4,5,6]
+		     $.each(a, function(index,value) {
+		     	   if(index==3){  //如果下标 等于3则
+		     	   	return false
+		     	   }
+		     	    console.log(index+':'+value)
+		     	 
+		     });
+		   })
+//		    return false可以终止循环
+	</script>
+</html>

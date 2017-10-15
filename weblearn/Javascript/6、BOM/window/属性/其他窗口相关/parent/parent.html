@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function openWin()
+{
+window.open( 'ziyemian.html' ,'_bank','width=200px,height=200px' );
+alert(window.parent.location);//弹出新建页面的父窗口的location
+}
+</script>
+</head>
+<body>
+
+<input type="button" value="Open window" onclick="openWin()">
+
+</body>
+</html>

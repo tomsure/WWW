@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap库/bootstrap-3.3.5-dist/css/bootstrap.min.css"/>
+	<body>
+		
+		<br />
+		<br />
+		<br />
+		<button title="aaaa" data-delay= '1000'>顶顶顶顶</button>
+		<!--delay属性用来设置提示框延时出现，以毫秒为单位，默认值为0，两种写法，一种是直接写延迟时间数字，这样的话就是出现和消失都是一样的时间-->
+		<button title="ddd"  id="s">ddd </button>
+		<!--这种方式需要使用js实现 -->
+	</body>
+	<script type="text/javascript" src="../../../../Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../bootstrap库/bootstrap-3.3.5-dist/js/bootstrap.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('button').tooltip()
+		$("#s").tooltip({show:5000,hide:100})
+	</script>
+	<!--delay属性用来设置提示框延迟出现-->
+	<!---默认值0，延迟触发tooltip(毫秒)，如果传数字则，
+表示show/hide 的毫秒数，如果传对象，结构为：{show:500,hide:100}-->
+</html>

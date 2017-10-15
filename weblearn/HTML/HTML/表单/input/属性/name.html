@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>name属性用来规定input表单的名称</p>
+		
+		<form action="" method="post">
+			<input type="text" name="inp" id="inp" value="" />
+			<input type="submit" value="点击提交"/>
+		</form>
+		
+		<!--input的name属性是表单中必须设置的属性，当表单提交的时候，input的name的值与用户输入的内容形成一个键值对发送到服务器，例如这里name的值是inp，当用户输入1的时候，则发送到服务器的数据就是inp=1，如果有多个input标签发送，则服务器收到的数据就会使用&符号隔开-->
+	</body>
+</html>

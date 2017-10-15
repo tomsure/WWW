@@ -1,0 +1,2 @@
+兼容情况：http://www.111cn.net/wy/js-ajax/36441.htm
+  兼容写法:http://www.justwinit.cn/post/7225/

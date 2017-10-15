@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width:30px;
+			height:30px ;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-1.7.2/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	
+		$(function(){
+			$(":button").click(function(){
+				$("div").animate({width:"300px"},{
+					duration:500,
+					queue:false
+				});
+				$("div").animate({height:"300px"},{
+					duration:2000,
+					queue:true
+				})
+				$("div").animate({width:"30px"},2000);
+				$("div").animate({height:"30px"},1000)
+//		queue可以设置当前动画是否在动画队列中,如果不设置或者设为true,则这个动画就在队列中,则所有动画按照先后顺序进行执行,如果设为false,则这个动画就不再动画队列中不按队列先后顺序执行,		
+				
+			})
+		})
+	</script>
+	<body>
+		<div id="">
+		
+	</div>
+	<input type="button" name="" id="" value="点击开始" />
+	</body>
+	
+</html>

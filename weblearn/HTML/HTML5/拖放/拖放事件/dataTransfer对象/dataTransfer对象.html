@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv1{
+			width: 100px;height: 100px;background-color: red;
+		}
+		.dv2{
+			width: 300px;
+			height: 300px;
+			border: 3px solid black;
+		}
+	</style>
+	<body>
+			<input type="text" name="t1" id="t1" value="" />
+		<div class="dv1" id="dv1" draggable="true">
+			
+		</div>
+		<div class="dv2" id="dv2">
+			
+		</div>
+	
+	</body>
+	<script type="text/javascript">
+		var dv1=document.getElementById("dv1");
+		var dv2=document.getElementById("dv2")
+		var t1=document.getElementById("t1")
+		dv1.ondragstart=function(ev){
+			var ev=ev||window.event;
+			
+			ev.dataTransfer.setData('name','hello');
+			
+//	在前面的方法中.如果在火狐浏览器下是不能达到拖拽效果的,如果想拖拽,就必须设置事件对象的一个属性对象dataTransfer,他也是一个对象有多个属性和方法		
+			this.style.background='green'
+		}
+		//开始拖动后背景颜色变成绿色
+         dv1.ondragend=function(ev){;
+         	var ev=ev||window.event;
+         	alert(ev.dataTransfer)
+         	this.style.backgroundColor='red'
+         	
+         }
+         
+        var i=0;
+         dv1.ondrag=function(){
+         	t1.value=i++;
+        
+         };
+         dv2.ondragenter=function(){
+         	this.style.background='blue'
+         }
+        
+	</script>
+	
+</html>

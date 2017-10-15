@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			font-size: 40px;
+		}
+		p{
+			font-size: 50%;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			你好
+			<p id="p1">你好</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		var dv=document.getElementById("p1")
+		console.log(window.getComputedStyle(dv,null).fontSize)
+		
+		
+//		通过js可以获取到p元素的字体,说明百分比的字体用于设置基于父元素字体大小的字体大小,例如这里dv是p元素的父元素,dv的字体大小是40px,设置p的大小为50%,获取后得到p的字体大小为20%,则说明了这一点
+	</script>
+</html>

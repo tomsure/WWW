@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		function fn(){
+			var age=12
+			return function(){
+			  return age
+			}
+			
+		}
+		alert(fn()())
+//	匿名函数没有名字,在这个函数中,第一个return是将这个函数返回,当调用fn的时候,函数fn就变成了这个匿名函数返回的函数,,在函数中,匿名函数内部还有一个return ,由于他在函数fn内部,所以可以访问age,当再把匿名函数返回的时候,就可以访问到age的值,由于函数内部只是返回匿名函数,所以返回出来还要调用,所以还要加一个括号,再加上前提是必须执行函数fn,所以就变成了两个括号	，此时函数内部的匿名函数和局部变量就形成了一个闭包
+		
+	</script>
+</html>

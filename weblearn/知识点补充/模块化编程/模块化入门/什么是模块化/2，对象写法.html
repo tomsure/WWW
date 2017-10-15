@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var a=new Object({
+			x:1,
+			y:function(){
+			alert(2)
+			},
+			z:function(){
+				alert(3)
+			}
+			
+			
+			
+		})
+		
+		
+		console.log(a.x)
+		a.y();
+		a.z()
+//		将方法和其他数据写在对象里面,这样可以避免变量冲突,调用的时候,直接调用对象的方法或者属性即可
+//		缺陷:内部数据可以被外部代码修改,例如
+        a.x=5;
+        alert(a.x)
+       //a.x被修改
+
+	</script>
+</html>

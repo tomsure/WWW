@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post" id="form">
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>邮箱: <input type="text"  name="email" id="email" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				submitHandler:function(form){
+					form.submit();
+				//这里使用的是DOM 对象的submit()方法提交，在submitHandler中执行的前提是表单验证已经通过，如果在里面在使用$('form').submit()提交，这是使用jquery对象的submit()方法提交，这样的话validate.js插件会再进行验证，而验证成功后又会回到这里，这样的话就会导致死循环，所以必须注意不能使用$('form').submit（）这个jquery方法在这里提交
+				},
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	}
+			    }
+			   
+		})
+		})
+//submitHandler方法指的是表单验证成功后执行的函数，当点击表单提交按钮的时候并且验证成功后会执行这个函数，并且会阻止表单提交功能
+	</script>
+</html>

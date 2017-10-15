@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+	
+	 #dv{width: 200px; height: 200px; background: red; position: absolute; top: 50px; left: 0;}
+	</style>
+	<script type="text/javascript" >
+		
+	</script>
+	<script type="text/javascript">
+		
+		
+		var timer=null
+		function startMove(){
+			
+		var dv=document.getElementById("dv")
+		     
+		    var speed=1;
+		   
+		    clearInterval(timer)
+		    timer=setInterval(function(){
+		         if(dv.offsetLeft >= 300)
+		         {
+		         	clearInterval(timer)
+		         }else{
+		         dv.style.left=dv.offsetLeft + speed + 'px'
+//		         把这句话放到else语句里面即可
+		         }
+		    }, 30)
+	
+		}
+       
+
+	</script>
+	<body>
+		<button id="btn" onclick="startMove()">点击测试</button>
+		<div id="dv">
+			11
+		</div>
+	</body>
+	<!--问题：
+	 在解决了停住之后再点击还会运动的问题后，又出现新的问题，就是当把speed的值调的很小的时候会发现，在开始运动后多次点击按钮，发现圆度运动的越来越快
+	 分析：
+	  原因是，每点击一次按钮，函数中都会开一个定时器，此时开一个定时器，offsetLeft就会+一个speed，当点击多次就会有多个定时器，就会+多个speed，所以就会看到连续点击后，速度会变快
+	  解决办法，在执行定时器上面一行添加clearIterval(timer),这样解决的思路是：上面的问题原因是多次点击后会开启多个定时器，这里加这句话就可以在点击按钮的时候，将已经开过的定时器都关掉，保证每次只有一个定时器在执行，就达到了多次点击不会影响速度的效果
+	 
+	 
+	 
+	 
+	 -->
+	 
+	
+	
+</html>

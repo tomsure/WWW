@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.0.3/jquery-2.0.3.min.js">
+		
+	</script>
+	<script type="text/javascript">
+
+//		function aa(){
+//			alert(1)
+//		}
+//		
+//		(function(){
+//			function bb(){
+//				alert(2)
+//			}
+//		
+//		}  
+//		)()
+//		aa()
+//		bb()
+//		
+
+	var cal=$.Callbacks();
+		function aa(){
+			alert(1)
+		}
+		
+//		cal.add(aa)
+		(function(){
+			function bb(){
+				alert(2)
+			}
+		  cal.add(bb)
+		}  
+		)()
+		
+
+		cal.fire()
+		
+	</script>
+</html>

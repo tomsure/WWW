@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		//result 属性包含由被指定事件触发的事件处理器返回的最后一个值，除非这个值未定义。
+		$(function(){
+			$("#bt").on("click",function(e){
+				return ("jjjjjj")
+			   //这里是初见处理器click事件返回的字符串
+			})
+		   $("#bt").on("click",function(e){
+			    alert(e.result)
+			  //这里输出click事件返回的字符串，必须要重新再写一遍函数，因为，函数内return之后无法再执语句 
+			})
+		})
+	</script>
+	<body>
+		<button id="bt">点击测试</button>
+		
+	</body>
+</html>

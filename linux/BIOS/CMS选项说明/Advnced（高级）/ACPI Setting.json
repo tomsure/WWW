@@ -1,0 +1,32 @@
+
+Enable ACPI Auto Configuration [Enable/Disable]
+启用ACPI自动配置   
+
+Enable Hibernation [Enable /Disable]
+  启用或禁止休眠
+  
+ ACPI Sleep State [S3 (Suspend to RAM)]
+这是设置ACPI的睡眠状态，设置项有Suspend Disabled（关闭睡眠），S1（CPU 时钟
+停止）。当设置为S1时，按睡眠钮，系统就进入睡眠。
+这个是待机模式的选项
+S1就是主机内所有设备进入低耗电状态 这种状态下CPU 内存 主板 照样在低耗电模式下工作
+S3就是主机内仅有内存工作 其他设备全部断电停止工作
+一般来说S3更省电 但是因为驱动或者系统原因 兼容性问题较多 比如不能正常进入S3 或者从S3不能正常唤醒等等
+
+lock Legacy Resources [enable/disable]
+ 是否锁定传统资源
+ 
+ 
+ S5 RTC Wake Settings ： 唤醒设置
+ 此选项提供您选择是否允许系统由关机状态下在特定的时间自动开机，或是由各种省电模式下唤醒，默认为disable
+ Wake system with Fixed Time————→唤醒系统固定的时间/启用/禁用
+ Wake system with Dynamic Tim———→唤醒系统动态时间/启用/禁用
+  
+ Trusted Computing 可信赖计算。这是一种硬件加密方法，主板需要配置加密模块。目前中国密码机构还没有对国外
+      厂商的加密模块认证，还不能使用。
+  Security Device Support [enable/disable]
+    是否启用安全设备支持，只有特种设备支持此选项
+    current status information 
+     当前撞题信息
+    
+  

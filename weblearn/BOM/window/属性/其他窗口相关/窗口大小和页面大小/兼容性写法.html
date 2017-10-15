@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+/*在IE 以及Firefox、Safari、Opera和Chrome中，document.documentElement.clientWidth
+和document.documentElement.clientHeight 中保存了页面窗口的信息。
+PS：在IE6 中，这些属性必须在标准模式下才有效；如果是怪异模式，就必须通过
+document.body.clientWidth 和document.body.clientHeight 取得相同的信息。*/
+//如果是Firefox 浏览器，直接使用innerWidth 和innerHeight
+var width = window.innerWidth; //这里要加window，因为IE 会无效
+var height = window.innerHeight;
+
+if (typeof width != 'number') { //如果是IE，就使用document
+	
+if (document.compatMode == 'CSS1Compat') {
+	
+   width = document.documentElement.clientWidth;
+
+   height = document.documentElement.clientHeight;
+
+} else {
+	
+   width = document.body.clientWidth; //非标准模式使用body
+   height = document.body.clientHeight;
+ }
+ }
+//PS：以上方法可以通过不同浏览器取得各自的浏览器窗口页面可视部分的大小。
+//document.compatMode 可以确定页面是否处于标准模式，如果返回CSS1Compat 即标准模式。
+	</script>
+	<body>
+	</body>
+</html>

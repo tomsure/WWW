@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>
+				用户名: <input type="text"  name="user" id="user" value="" />
+				<input type="button" name="btn" id="btn_check" value="点击验证" />
+			</p>
+			
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('form').validate({
+				
+			    rules:{
+			    	user:{
+			    		minlength:4,
+			    		required:true
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	}
+			    }
+			  
+       
+			   
+		});
+
+         $("#btn_check").click(function(){
+         	alert($("#user").valid() ? "填写正确":"填写错误")
+         })
+	//valid()方法用于检查表单或者某些元素是否有效，当输入一个输入框或者输入完整个表单的时候用户可以进行检查，这个方法根据验证规则判断输入是否有效，上面这句（46-49）的含义是检验表单是否有效 ，正确的弹出"填写正确"	,否则弹出填写错误，这里使用的是三元运算符，使用if语句同样可实现
+		
+		})
+		
+//valid()方法用于检查表单或者某些元素是否有效
+	</script>
+</html>

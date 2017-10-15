@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	<script>
+		//选择父级元素的第n个子元素
+		$(function(){
+			
+			$("li:nth-child(2)").css("background","#006400");
+			//选择父级元素的第二个li元素，所以2和6都变成绿色
+			
+			
+			$("li:nth-child(3)").css("color","red")
+			//这里选择的是父级元素的第三个子元素是li的元素，第一个li的父级元素下的第三个子元素是a标签，所以只有第二个 ul下的77777变成红色
+			
+		})
+		
+		
+	</script>
+	<body>
+		<ul>
+			<li>11111</li>
+			
+			<li>22222</li>
+				<a href="">dddddddd</a>
+			<li>33333</li>
+			<li>44444</li>
+		</ul>
+		<ul>
+			<li>55555</li>
+			<li>66666</li>
+			<li>77777</li>
+			<li>88888</li>
+		</ul>
+	</body>
+</html>

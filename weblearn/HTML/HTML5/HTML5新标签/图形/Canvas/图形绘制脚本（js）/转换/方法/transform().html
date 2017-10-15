@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+	//stransform()方法会对这个方法之后创建的图形按照此方法进行变换(缩放旋转，移动倾斜等等)
+	/*共有六个值可以设置：
+	 * 参数值：
+	 * 参数	描述
+       a	水平缩放绘图。
+       b	水平倾斜绘图。
+       c	垂直倾斜绘图。
+       d	垂直缩放绘图。
+       e	水平移动绘图。
+       f	垂直移动绘图。
+	 * 
+	 * 
+	 * */
+		window.onload=function(){
+			var ss=document.getElementById("myCanvas").getContext("2d");
+			ss.fillStyle="#006400";
+			ss.fillRect(10,10,200,70)//正常绘图，无转换；
+			
+			ss.transform(1, 0,0,1,10,10);  //实际上可以理解为这里设置好转换的倍数后面绘制的图形的坐标及宽高与这里所设置的参数进行计算再显示在页面上 ；
+			         /*六个值必须按顺序填写:
+			          *    第一个是水平缩放大比例，实际显示的是 后面绘制的图形乘以这个倍数的积；
+			                              第二个是水平倾斜的数值；
+			                              第三个是垂直倾斜的数值；
+			                              第四个是垂直 缩放的比例，实际显示的是 后面绘制的图形乘以这个倍数的积；
+			                              第五个是水平移动的像素距离，实际距离是这里设置的距离加上后面绘制图形的水平坐标    
+			                              第六个是垂直移动的像素距离，实际距离是这里设置的距离加上后面绘制图形的垂直坐标           
+			              
+			                                            */
+			ss.fillStyle="#8B008B";
+			ss.fillRect(10,10,100,70);
+			
+			ss.transform(1,0,0,1,40,40);
+			ss.fillStyle="#7FFF00";
+			ss.fillRect(20,20,100,70);
+			
+			
+			
+			
+			
+			
+		}
+	</script>
+	<body>
+	<canvas id="myCanvas" width="400" height="400"></canvas>
+	
+	</body>
+</html>

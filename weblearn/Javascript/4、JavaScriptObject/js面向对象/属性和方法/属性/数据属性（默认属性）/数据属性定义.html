@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		数据属性是js引擎内部属性,不能直接使用,js数据属性如下:
+//	[Configurable]:表示是否可以使用delete删除属性而定义新属性;能否修改属性的特性,或能否把属性修改为访问器属性;默认为:true
+//	[Enumerable]:表示能否通过for-in循环返回属性,默认为true;	
+//	[Writrable]	:表示能否修改属性的值;
+	
+//	[Value]:包含这个属性的数据值,读取属性值的时候,从这个位置度;写入属性值的时候,把新属性保存在这个位置,这个属性默认值为undefined;	
+//		例如:
+		var person={
+			name:'tom',
+			age:26,
+			job:worker,
+		}
+//		此时,对象person对象的属性就是name,age,job,他们的值默认是undefined,创建对象的时候定义的属性值,实际上就是把js数据属性的[Value]属性设置为实际创建对象的属性值;也就是'tom',26,'worker';
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

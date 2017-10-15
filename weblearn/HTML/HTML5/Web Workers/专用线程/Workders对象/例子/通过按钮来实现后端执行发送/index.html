@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击发送</button>
+		<div id="dv">
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+	var dv=document.getElementById("dv")
+		var btn=document.getElementById("btn")
+			
+		
+		var btn=document.getElementById("btn")
+		  btn.onclick=function(){
+		  	var work=new Worker('worker1.js')
+		  	work.postMessage(';')
+		  		work.onmessage=function(e){
+			dv.innerHTML=e.data
+			work.postMessage(e.data)
+			}  //当收到后台发送的数据后就会弹出这个数据
+		  }
+
+	 
+	  	
+		  
+		
+	
+	</script>
+</html>

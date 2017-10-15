@@ -1,0 +1,14 @@
+.bgcolor(@color:red){
+    &:hover{
+        background-color:@color ;
+    }
+}
+div{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    .bgcolor()
+//  .bgcolor(yellow) 如果传参数，则就会变成这里参数设置的颜色
+}
+
+//在定义混合的时候可以在混合名的后面的括号里的参数后面设置一个默认值，这样调用的时候，如果不传参数，就会使用默认的值，而且不会报错，例如这里混合用来设置鼠标划入的时候，背景颜色变成蓝色，当调用这个混合的时候，不传参数的话就会使用默认的颜色红色，如果传了参数则就会使用传的参数

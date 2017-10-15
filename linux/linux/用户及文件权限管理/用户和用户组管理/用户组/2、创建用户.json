@@ -1,0 +1,34 @@
+
+
+
+       adduser和adduser命令用于创建用户，需要具有超级权限，如果是root用户可以直接使用
+    如果是普通用户，这个用户必须属于sudo用户组，如果这个属于sudo用户组，则
+    使用  sudo adduser +用户名来创建用户
+    
+      adduser和useradd都可以用来创建用户，centOS系统下两个命令没区别；
+      
+      在ubuntu下有以下区别：
+      1、useradd在使用该命令创建用户是不会在/home下自动创建与用户名同名的用户目录，而且不会自动选择shell版本，也没有设置密码，那么这个用户是不能登录的，需要使用passwd命令修改密码。
+
+      2、adduser在使用该命令创建用户是会在/home下自动创建与用户名同名的用户目录，系统shell版本，会在创建时会提示输入密码，更加友好。
+      
+      
+      
+      参数：
+      useradd 用户名 -g 组名–G 组名-d Home 目录名-p 密码
+
+      其中：
+      -g 指定该用户的首要组
+
+      -G 指定该用户的次要组
+
+      -d 指定该用户的Home 目录
+
+      -p 指定该用户的密码
+
+      如输入以下命令：
+
+      useradd oracle –g oinstall –G dba –d /home/oracle –p ora123
+      系统将创建一个用户 oracle oracle 用户的首要组为oinstall ，次要组为dba，Home 目录为/home/oracle ，密码为ora123。
+
+       

@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title></title>
+		<meta name="" content=""  charset="utf-8"/>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	    <body>
+		<p><a href="<p><a href="http://www.runoob.com/tags/canvas-font.html">查看font属性值和介绍</a></p>
+		 <canvas id="myCanvas" width="200" height="200" ></canvas>
+		
+         </body>
+	<script type="text/javascript">
+		   /*font 属性设置或返回画布上文本内容的当前字体属性。font 属性使用的语法与 CSS font 属性 相同。*/
+		var dd=document.getElementById("myCanvas");
+		var ss=dd.getContext("2d");
+		   ss.font="30px Arial";//设置 文本字体；
+		   ss.fillText("Hello World",10,50);  //设置文本内容 
+	</script>
+</html>

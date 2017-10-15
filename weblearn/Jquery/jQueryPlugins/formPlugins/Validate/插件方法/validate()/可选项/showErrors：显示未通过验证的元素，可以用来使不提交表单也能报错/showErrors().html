@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post" id="form">
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>密码: <input type="text"  name="password" id="password" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			
+		
+			$('#form').validate({
+				
+			    rules:{
+			    	user:{
+			    		required:true,
+			    		minlength:4
+			    	},
+			    	password:{
+			    		required:true
+			    	}
+			    },
+			    messages:{
+			    	user:{
+			    		required:"请输入用户名",
+			    		minlength:"输入不得少于4位"
+			    	},
+			    	password:{
+			    		required:"密码不得为空"
+			    	}
+			    },
+			
+			   showErrors:function(errorMap,errorList){
+			   	$.each(errorMap, function(index,value) {
+			   		alert(index+":"+value)
+			   	});
+			   	alert(errorMap.user)
+			   	 //由于errorMap返回的是一个对象，所以返回的错误元素和它对应的错误信息组成了键值对，所以就可以使用 这种方式得到其中一个元素的错误信息。
+			   }
+			   //showErrors方法用于返回错误信息的一个函数，函数中errorMap指的是错误信息的集合，使用$.each()方法遍历可以得到有错误的表单元素的name值和它对应的错误信息，$each()中的函数参数的index就代表表单元素，value就代表错误信息的值，由于是在$each()中所以会返回每一条错误元素和错误信息。
+			  
+		})
+		})
+
+	</script>
+</html>

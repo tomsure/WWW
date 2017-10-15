@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			//这里表示当按键松开的时候发生的事件，如果只按下不松开就不会有这个事件
+		var s=document.getElementById("tText");
+		s.onkeyup=function(){
+			alert("你在输入框按了一个键然后又松开了")
+		}
+		}
+	</script>
+	<body>
+		<input type="text" name="" id="tText" value="" />
+	</body>
+</html>

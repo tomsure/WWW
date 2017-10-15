@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 400px;
+			height: 400px;
+			display: flex;
+			background-color: deeppink;
+			
+		}
+		#dv1{
+			
+			height: 100px;
+			background-color: darksalmon;
+			flex: 1 2 auto;
+		}
+		#dv2{
+			
+			height: 100px;
+			background-color: darkblue;
+			flex:none;
+		}
+		#dv3{
+			width: 100px;
+			height: 100px;
+			background-color:forestgreen;
+		}
+		
+	</style>
+	<body>
+		<div id="dv">
+		
+			<div id="dv1">1</div>
+			<div id="dv2">2</div>
+			<div id="dv3">3</div>
+			
+		</div>
+	</body>
+</html>
+  如果flex的值设置为none的时候，则他的flex-grow、flex-shrink、flex-basis的值分别为0 0 auto
+

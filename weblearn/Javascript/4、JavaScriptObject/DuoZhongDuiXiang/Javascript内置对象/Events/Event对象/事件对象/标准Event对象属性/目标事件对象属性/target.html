@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<p id="p1" onmousedown="ss(ev)">1111111111111111111111111</p>
+		<p id="p2" onmousedown="ss(ev)">22222222222222222222222222</p>
+	</body>
+	<script type="text/javascript">
+	 
+	 
+	  		function ss(ev){
+	  	   x=event.target;
+	  	   alert(x.id)
+	  	}
+	
+	//ev.target属性指的是触发事件的元素  ，当某个元素触发一个事件后，事件对象的target属性就指的是触发该事件的元素
+	//此属性是W3C标准，IE浏览器起作用的属性指的是event.srcElement
+	</script>
+</html>

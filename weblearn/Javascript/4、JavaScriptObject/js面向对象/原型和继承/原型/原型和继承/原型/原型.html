@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		创建函数之后会自动获得一个prototype属性,构造函数也一样，这个prototype属性指的就是构造函数的原型对象，而prototype这个原型对象还会获得一个constructor属性，这个属性又指向构造函数本身，例如：
+
+    function Person(){
+    	
+    }
+		document.write((Person.prototype.constructor==Person)+'</br>')//true；
+		//返回true，说明（构造）函数的原型对象属性prototype的constructor指的就是Person这个函本身；而且他的其他方法是从Object继承的；
+//		当实例化这个构造函数,构造出一个对象实例后,这个实例会自动产生一个属性指向构造函数的原型对象属性prototype,这个属性通常叫做__proto__，例如：
+     var person1=new Person();
+     document.write(person1.__proto__==Person.prototype)//true
+       //返回true
+
+
+
+		
+		
+		
+	</script>
+</html>

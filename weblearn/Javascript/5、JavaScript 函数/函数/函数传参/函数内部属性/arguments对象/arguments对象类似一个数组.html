@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function aa(){
+		var	s=arguments[1]  //声明 变量s=arguments的0...n属性,这里0...n是1;
+			return s  //返回 s 即  返回函数传递进来的第[1]个参数
+		}
+	var dd=aa(2,4)  //将函数赋值给一个变量
+	  document.write(dd)//输出这个变量
+	  
+//	  1,函数内部的arguments对象是该函数的属性;
+//	  2,agruments是一个对象,也类似一个数组 ,它的下标,与它所属的函数所传递参数(数组)的下标的值相同,例如上面例子中:
+//	   函数内部有一个arguments[1],表示数组的下标;
+//	  函数传的参数 aa(2,4)形成一个数组,2对应下标0,4对应下标1;
+//	  所以argumrnts[1],对应的就是参数数组的下标1,也就是4,所以最后会输出4；
+	</script>
+</html>

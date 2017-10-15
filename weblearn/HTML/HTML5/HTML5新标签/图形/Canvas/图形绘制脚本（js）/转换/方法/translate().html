@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var ss=document.getElementById("myCanvas").getContext("2d");
+			ss.fillStyle="#006400";
+		    	ss.strokeRect(10,10,150,50);
+			ss.translate(30,30)//重新规定画布上坐标（0,0）的位置，后面创建的图形会叠加 这个设置的坐标位置
+			 //例如这里前面第一个图形的最初始左上角坐标是（0,0），这里定义了ss.stranslate(30,30),则在这个ss.stranslate(30,30)这个坐标就变成了新的启示坐标（0,0）则后面绘制图钉的坐标会加上这个坐标变成实际的坐标
+			 
+			ss.fillRect(20,20,100,100) //由于前面定义了新的起始坐标（30,30）,这里定义新的图形的左上角坐标是（20,20），所以实际新图形左上角坐标会变成（30+20,30+20）=(50,50)
+			
+			
+			
+			
+			
+			
+			
+			
+		}
+	</script>
+	<body>
+	<canvas id="myCanvas" width="200" height="200"></canvas>
+	</body>
+</html>

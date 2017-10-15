@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//在函数内部定义的变量和函数，如果不对外提供接口，外部是无法访问到的，也就是该函数的私有的变量和函数。
+    function Box(){
+        var color = "blue";//私有变量
+        var fn = function() //私有函数
+        {
+            
+        }
+    }
+    //这样在函数对象Box外部无法访问变量color和fn，他们就变成私有的了：
+    var obj = new Box();
+    alert(obj.color);//弹出 undefined
+    alert(obj.fn);//同上
+
+</script>
+
+	<body>
+	</body>
+</html>

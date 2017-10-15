@@ -1,0 +1,103 @@
+js的作用域与作用域链 (2014-06-28 18:59:00)转载▼
+标签： 作用域 作用域链 闭包 js 	分类： Javascript
+1.引言
+先上一段代码：
+ for(var i=1;i<4;i++){         
+       var b=document.getElementByTagName("a"); 
+       b[i].addEventListener("click",function(){ alert(i);},false);     
+ }
+在页面中有三个a元素
+1
+2
+3
+我们期望的是点击第一个a,alert 1,点击第二个a,alert 2......但是非常不幸的是结果都是4，这就涉及到作用域问题。
+ 
+2.js作用域
+核心思想：
+   (1)js的作用域是有函数划分的，而不是块儿
+  (2)所有属于全局作用域的变量都是window对象的属性
+例1：
+      if(true){
+          var color="blue";
+      }
+     alert(color);
+其结果为blue,如果在C++或者JAVA中，color会在if预计结果后销毁，但是在js中，if语句中的变量声明会将变量添加到当前的执行环境。
+例2：
+     for(var i=0;i<10;i++){
+         dosomething(i);
+      }
+    alert(i);
+i在for结束后仍然存在，所以alert 10.
+例3：
+var scope="global"; 
+   function t(){ 
+       console.log(scope); 
+       var scope="local" 
+       console.log(scope); 
+  } 
+  t(); 
+第一句输出的是： "undefined"，而不是 "global"
+第二讲输出的是："local"
+我们需要注意的是：由于函数作用域的特性，局部变量在整个函数体始终是由定义的，我们可以将变量声明”提前“到函数体顶部，同时变量初始化还在原来位置。
+所以上面的代码相当于：
+var scope="global"; 
+   function t(){ 
+       var scope; 
+       console.log(scope);  
+       scope="local" 
+       console.log(scope); 
+  } 
+  t(); 
+例4：
+     function test(){
+        a="hello";
+    }
+    alert(a);
+这题的结果是怎样的呢？会不会这样想a在函数test(）中，所以alert(a)肯定是undefined。在js中的不带var的变量默认为全局变量，所以alert hello.
+ 
+3.js作用域链
+每个函数都有自己的执行环境，当代码在一个环境中执行的时候，会创建一个作用域链。作用域链的作用是保证对执行环境有权访问的所有变量和函数的有序访问，作用域链的前端，始终是当前执行的代码所在环境的变量对象，作用域链的最后端是全局执行环境。
+例5：
+name="a"; 
+function test(){ 
+       var name="b"; 
+       function local1(){ 
+        var name="c"; 
+        console.log(name); 
+    } 
+    function local2(){ 
+        console.log(name); 
+    }  
+    local1();  
+    local2(); 
+ } 
+ test(); 
+当执行local1()时，将创建函数local1的执行环境(调用对象),并将该对象置于作用域链开头，然后将函数test的调用对象链接在之后，最后是全局对象。然后从链开头寻找变量name,
+很明显作用域链是： local1()->test()->window,所以name是"a"
+但执行local2()时，作用域链是： local2()->test()->window,所以name是"b"
+ 
+ 
+作用域链的延长：主要有两种情况
+(1)try-catch语句的catch块
+(2)with语句
+这两个语句都会在作用域链的前端添加一个变量对象
+ 
+例6：
+  function buildURL(){
+    var qs="?debug=true";
+   with(location){
+      var url=href+qs;
+   }
+  return url;
+}
+with语句接受了location对象，所以location对象的所有属性和方法被添加到作用域链的前端。href实际上相当于location.href。
+ 
+4.总结
+回到引言中的问题，现在我们不难发现错误的根源。那解决方法呢？闭包
+var aLinks=document.getElementsByTagName_r('a');
+for(var i=0,l= aLinks.length;i
+{
+   aLinks[i].onclick=(function(a){
+      return function(a){alert(a);}
+      })(i);
+}

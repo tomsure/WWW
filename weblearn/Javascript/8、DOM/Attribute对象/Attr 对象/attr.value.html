@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//设置或者返回属性值
+		window.onload=function(){
+			var dd=document.getElementById("dv");
+			document.write(dd.attributes[0].nodeName);
+			
+			alert(dd.attributes[0].value);//返回的是属性的值；
+			dd.setAttribute("class","")//创建一个class属性设一个空值
+			alert(dd.attributes[1].value);//弹出class属性值为空
+			dd.attributes[1].value="ss" //在这里设置属性的值为ss
+     alert(dd.attributes[1].value)			//弹出属性的值为ss
+		
+			
+			
+		}
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+</html>

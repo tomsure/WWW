@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+//凡是使用typeof测试类型为Object的数据,都可以自定义添加属性和方法,比如自定义对象,Object,Array类型或者Number类型,都可以自定义添加		
+		var arr=new Array();
+		Array.prototype.play=function(){
+			alert('蓝旗')
+		}
+		arr.play()
+		
+		
+	</script>
+</html>

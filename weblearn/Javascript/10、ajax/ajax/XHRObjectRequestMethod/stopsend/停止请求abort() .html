@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击发送请求服务器</button>
+		<button id="btn1">点击停止请求</button>
+	</body>
+	<script type="text/javascript">
+		function createXHR(){ //创建xhr对象(封装函数)
+			var xhr;
+			if(window.XMLHttpRequest){
+				xhr=new XMLHttpRequest()
+			}else{
+				xhr=new ActiveXObject('Microsoft.XMLHTTP')
+			}
+			return xhr
+		}
+		 var btn=document.getElementById("btn");
+		 var btn1=document.getElementById("btn1");
+		 btn.onclick=function(){
+		 	var xhr=createXHR()
+		 xhr.open('GET','index.php',false)
+		 xhr.onreadystatechange=function(){
+		 	if(xhr.readyState==4){
+		 		if(xhr.status==200){
+		 			alert(xhr.responseText)
+		 		}
+		 	}
+		 }
+		 xhr.send()
+		 btn1.onclick=function(){
+		 	xhr.abort()
+		 }
+		 }	
+		//此方法暂未搞清楚
+		
+		 	
+
+		 
+		 	
+		 	
+		
+		</script>
+</html>

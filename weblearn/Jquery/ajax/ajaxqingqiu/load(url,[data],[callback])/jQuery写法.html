@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{width: 300px;height: 300px;background-color: green;}
+	</style>
+	<body>
+		<button id="load">点击加载</button>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<!--//.load()方法用于远程加载元素，从服务器载入数据并且将返回的 HTML 代码并插入至 匹配的元素 中。此方法需要绑定在元素或者节点上-->
+	
+	
+	
+	<script type="text/javascript">
+		$('#load').click(function(){
+			$('#dv').load('远程数据.html')
+		})
+		
+	//在点击button按钮的时候，就会读取到远程文件的内容，并且添加到dv这个元素里
+	//注意：如果是需要设置样式的文件，需要给添加元素和远程文件添加唯一的id，因为当加载文件之后，加载到的文件中的css会影响到当前的页面样式，当前页面设置的css样式也会影响到远程加载到的元素，所以尽量设置唯一id，以免出错，不好排查
+	
+	</script>
+</html>

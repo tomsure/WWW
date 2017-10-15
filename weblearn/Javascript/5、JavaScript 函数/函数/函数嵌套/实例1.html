@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		// 全局变量，在此例中和下面的所有 a 都没有关系
+var a = 1;
+     
+// 自动执行
+(function f(a) {
+    // 第一层没有参数传入，此处 a 为 undefined
+    // alert(a);
+     
+    // 声明第一层匿名函数内部变量
+    var a = 2;
+     
+    (function() {
+        // 第二层没有参数传入，此处 a 为 undefined
+        // alert(a);
+     
+        // 声明第二层匿名函数内部变量
+        var a = 3;
+     
+        (function() {
+            // 第三层没有参数传入，此处 a 为 undefined
+            // alert(a);
+     
+            // 声明第三层匿名函数内部变量
+            var a = 4;
+     
+            // 输出第三层匿名函数内部变量 a，4
+            alert(a);
+     
+        })(); // <--- 此处没有参数传入
+     
+    })(); // <--- 此处没有参数传入
+     
+})(); // <--- 此处没有参数传入
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

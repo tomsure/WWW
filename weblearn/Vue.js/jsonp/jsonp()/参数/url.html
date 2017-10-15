@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button @click='get'>点击测试</button>
+	</body>
+	<script type="text/javascript" src="../../../dist/vue.min.js"> 
+		
+	</script>
+	<script type="text/javascript" src="../../../dist/vue-resource.js">
+		
+	</script>
+	<script type="text/javascript">
+		new Vue({
+			el:'body',
+			data:{
+				
+			},
+			methods:{
+				get:function(){
+					this.$http.jsonp('https://sug.so.360.cn/suggest?callback=suggest_so',{
+//						   这里的引号里面带的https字符串是跨域请求的url地址,就是从本地访问别的网站的url
+//                        请求的url分为两部分,地址部分和callback部分,例如这里"https://sug.so.360.cn/suggest?"就属于地址部分,callback=suggest_so就数据callback部分
+						
+						word:'liudehua'
+					},
+					{
+						emulateJSON:true
+					}
+				).then(function(res){
+					console.log(this.$http.options)
+				},function(){
+					alert(res.data)
+				})
+				}
+			}
+		})
+		 
+	</script>
+</html>

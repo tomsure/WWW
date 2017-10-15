@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+		}
+		
+		#dv1{
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+		}
+	</style>
+	<body>
+		  <div id="dv">
+		  	1
+		  </div>
+		  <p  class="p">1</p>
+		  <div id="">
+		  	
+		  </div>
+		  <p class="p">3</p>
+		  <button>点击测试</button>
+		  <button>点击测试</button>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+		     $('button').eq(0).on('click',function(){
+		     	$('#dv').next().css('backgroundColor','red')
+		     	
+		     }) //点击只会匹配#dv的下一个元素
+		      $('button').eq(1).on('click',function(){
+		     	$('div').next().css('backgroundColor','red')
+		     	
+		     }) //点击的时候会匹配div下每个元素的下一个元素
+		})
+//		   next()方法用于匹配当前zepto集合中每个元素的下一个元素，如果只有一个元素，就只会匹配一个元素的下一个，如果有多个元素，则多个元素各自的下一个会被匹配
+	</script>
+</html>
+

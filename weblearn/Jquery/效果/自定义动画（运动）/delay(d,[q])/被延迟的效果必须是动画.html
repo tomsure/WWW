@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px ;height:100px ;background-color:red ;}
+	</style>
+	
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button>点击测试</button>
+	</body>
+	<script type="text/javascript" src="../../../jQuery库/jquery-1.7.2/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$('button').click(function(){
+			$('#dv').delay(2000).animate({
+				width:'300px',
+				
+			},2000).delay(2000).animate({
+				height:'300px'
+			}).delay(2000).hide(1000)
+		})
+    
+//   被延迟的效果,也就是delay()方法后面执行的效果方法必须是动画效果,如果不是动画效果则就不会产生延迟效果,例如hide()或者show()这种知只是立即变化,没有动画效果,所以delay()不会生效,必须给这种效果添加动画时间,例如hide(2000),这样delay()也才会生效
+	</script>
+</html>

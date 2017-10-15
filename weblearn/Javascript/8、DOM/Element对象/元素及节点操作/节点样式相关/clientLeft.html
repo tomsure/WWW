@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 90px;
+			height: 80px;
+			border-top:2px solid red ;
+			border-left:4px solid blue ;
+			background-color: black;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		alert(dv.clientTop)//2
+		alert(dv.clientLeft)//4
+	</script>
+	<!--只读属性clientLeft指的是元素左边边框的宽度（厚度），如果元素左边没有边框则就是undefined-->
+	<!--如果元素的文本方向是从右向左（RTL, right-to-left），并且由于内容溢出导致左边出现了一个垂直滚动条，则该属性包括滚动条的宽度-->
+	
+	所以clientLeft=borderLeftWidth
+</html>

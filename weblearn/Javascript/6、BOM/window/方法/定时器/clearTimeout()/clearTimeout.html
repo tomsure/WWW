@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+<style type="text/css">
+	
+	
+</style>
+<script type="text/javascript">
+window.onload=function(){
+	var dd=document.getElementById("btn");
+	var pp=document.getElementById("p1");
+	function de(){
+		pp.innerHTML="你好"
+	}
+	var rm=setTimeout(de,3000)//这里设置一个定时器设置3秒后执行
+	clearTimeout(rm)//添加这个方法后，添加的定时器就被清除
+}
+</script>
+<body>
+<div id="dv">
+	
+</div>
+<p id="p1"></p>
+<button id="btn" >点击测试</button>
+</body>
+</html>

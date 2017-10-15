@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	
+	<style type="text/css">
+		#dv{
+			width: 200px;
+			height: 200px;
+			background-color: darkmagenta;
+			
+		}
+		#dv1{
+			width: 150px;
+			height: 150px;
+			background-color: #0000FF;
+			
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<div id="dv1">
+			
+		</div>
+		
+		<p id="demo"></p>
+	</body>
+	<script type="text/javascript">
+	       /********************封装兼容性函数************************/
+	  function getTarget(evt){
+	  	var ev=evt||window.event;
+	  	if(ev.srcElement){//srcElement是IE浏览器事件对象的属性，以此来判断是IE浏览器
+	  	   if(ev.type=='mouseover'){//
+	  		return ev.fromElement;
+	  	     }else if(ev.type=='mouseout'){
+	  		return ev.toElement;
+	      	}
+	  		//如果是mouseover事件则返回ev.fromElement;，如果是mouseout事件则返回ev.toElement，以此来判断鼠标是移入还是移出。
+	  	}else if(ev.target){//target是W3C标砖事件对象的属性，以此来判断是支持W3C的浏览器
+	  		
+	  		return ev.relatedTarget//则返回这个属性
+	  		//W3C一个属性可以返回两种事件的属性代表的元素
+	  	}
+	  	
+	  }
+		
+		 /**********************调用（需要使用的时候 调用）******************/
+		
+		 var dv=document.getElementById("dv");
+		var  dv1=document.getElementById("dv1");
+		var pp=document.getElementById("demo");
+		 
+		 dv.onmouseover=function(evt){  //鼠标移入的时候
+		 	pp.innerHTML='鼠标是从:'+getTarget(evt)+'上移入到这里的'
+		 	
+		 }
+		
+		
+		 dv.onmouseout=function(evt){  //鼠标移入的时候
+		 	pp.innerHTML='鼠标从这里移出后进入到:'+getTarget(evt)+'上'
+		 	
+		 }
+		
+	//调用的时候就是执行封装的那个兼容性函数，它执行的时候返回的是一个节点，所以在使用的时候必须加括号，必须加参数evt	
+		
+		
+		
+	</script>
+</html>

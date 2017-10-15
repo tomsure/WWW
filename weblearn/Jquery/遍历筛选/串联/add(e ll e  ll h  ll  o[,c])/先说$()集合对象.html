@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<div id="">
+			
+		</div>
+		<div id="">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('div').css('width','100px').css('height','100px').css('background','red').css('margin','10px')
+			
+			alert($('div').length)
+			console.log($('div'))  
+			//通过控制台可以打印出这个jquery集合对象的信息其中有两个带下标的div，表示这个集合中有两个div
+		})
+//		使用$()方法获取的html元素是一个jquery对象是一个集合,当一次使用$()方法添加html元素后,就形成一个集合就已经确定,例如$('div'),里面就只包含所有的div,根据选择器不同,集合中的元素个数也不相同,但是,此时集合已经确定，可以用过控制台打印出这两个元素
+//    如果还需要在这个集合中添加其他元素,就需要用到add()方法
+	</script>
+</html>

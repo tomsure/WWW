@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	
+	   <video  controls="controls"  id="vod">
+	   	<source src="../../../../../../素材/video/webwxgetvideo.mp4"></source>
+	   	<source src="../../音视频资源文件/johann_sebastian_bach_air.ogg"></source>
+	   </video>
+	   <button id="btn">测试是否暂停</button>
+	   <button id="btn1">重新加载视频</button>
+	</body>
+	<script type="text/javascript">
+		var vod=document.getElementById("vod");
+		var btn1=document.getElementById("btn1");
+		   btn1.onclick=function(){
+		   	  vod.load()
+		   }
+		   var btn=document.getElementById("btn");
+		   btn.onclick=function(){
+		   	alert(vod.readyState);
+		   	alert(vod.duration)
+		   }
+		  
+		  
+        
+        
+        
+// 返回值:是一个数字   表示音频/视频（audio/video）元素的就绪状态：
+//0 = HAVE_NOTHING - 没有关于音频/视频是否就绪的信息
+//1 = HAVE_METADATA - 关于音频/视频就绪的元数据；当值为1的时候，才可以获取媒体的总时长
+//2 = HAVE_CURRENT_DATA - 关于当前播放位置的数据是可用的，但没有足够的数据来播放下一帧/毫秒
+//3 = HAVE_FUTURE_DATA - 当前及至少下一帧的数据是可用的
+//4 = HAVE_ENOUGH_DATA - 可用数据足以开始播放
+	</script>
+</html>

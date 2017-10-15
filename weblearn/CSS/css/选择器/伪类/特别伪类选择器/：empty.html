@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*:empty 选择器匹配没有子元素（包括文本节点）的每个元素。*/
+		
+		
+		div,p:empty{background-color: brown;border: 1px solid #0000FF;width: 100px;height: 100px;}
+		
+		/*这里因为没有给p元素设置高度所以显示成一条线，很多空元素需要设置了边框或者宽高才会显示设置的其他样式*/
+		
+		/*这里显示的其实是一个div元素和一个p元素只不过是两个元素设置了相同的样式*/
+	</style>
+	<body>
+		<p></p>
+		<div id="">
+			
+		</div>
+		<span id="">
+			
+		</span>
+		<p>ninin</p>
+		<a href=""></a>
+	</body>
+</html>

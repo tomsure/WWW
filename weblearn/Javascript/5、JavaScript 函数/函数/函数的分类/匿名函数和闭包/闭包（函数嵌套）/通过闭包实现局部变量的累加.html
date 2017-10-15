@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		由于局部变量无法直接在函数中累加
+		function fn(){
+			var a=1;
+			a++;
+			alert(a)
+		}
+		fn()//2
+		fn()//2
+		//无法实现累加，因为没执行一次函数，里面的变量就被初始化了；
+		
+    /**********************************************/
+     function fn1(){
+			var b=100;
+			return function(){
+				return b++
+			}
+		}
+		var fnn=fn1()//执行函数fn并赋值给变量，此时匿名函数就是这个变量，因为调用的时候匿名函数返回，
+		document.write(fnn()+'</br>')
+		document.write(fnn()+'</br>')
+		document.write(fnn()+'</br>')
+		document.write(fnn()+'</br>')
+	//此时给变量fnn添加括号就是调用匿名函数，每次调用就可以实现累加	
+	//document.write(b)//报错
+		fnn=null;//销毁闭包
+		document.write(fnn())//报错此时fnn已经是null，闭包无法执行
+	//在闭包用完之后需要执行这一步，避免浪费内存；
+	
+	
+	//于闭包里作用域返回的局部变量资源不会被立刻销毁回收，所以可能会占用更
+//多的内存。过度使用闭包会导致性能下降，建议在非常有必要的时候才使用闭包
+	
+	
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

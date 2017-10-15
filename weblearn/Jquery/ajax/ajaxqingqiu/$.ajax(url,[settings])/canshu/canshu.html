@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击发送</button>
+		<input type="text" name="username" id="username" value="" />
+		<p></p>
+	</body>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	 $('#btn').click(function(){
+	 	var url='index.php';
+	 	var sendData={'username':$('#username').val()};//注意表单数据需要使用json格式
+	 	$.ajax({
+	 		url:url,//远程服务器文件路径
+	 		data:sendData,//发送的表单数据
+	 		success:function(data){//回调函数
+	 			if(data=='false'){
+	 				$('p').html('用户名不能使用admin')
+	 			}else{
+	 				$('p').html('用户名可以使用')
+	 			}
+	 		}
+	 		
+	 	})
+	 	 })
+	 //$.ajax()方法可以实现所有的功能，它里面需要使用jaon格式。
+	 
+	 
+	</script>
+
+	
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*这个属性指的是动画播放的等待时间，事件可以是正值也可以是负值，正值指的是等待设置的时间后开始播放动画，负值是指动画立即执行，但是跳过指定时间点要播放的那段动画*/
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			-webkit-animation-name: dv ;
+		    -webkit-animation-duration: 2s; 
+			-webkit-animation-delay: 3s;
+			/*animation-delay属性用于设置动画开始前等待的时间;*/
+		}
+		@-webkit-keyframes dv{
+			from{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+			to{
+				width: 150px;
+				height: 150px;
+				background-color:  #003300;
+			}
+		}
+	</style>
+	<body>
+		<div id="">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+	window.onload=function(){
+			var s=document.getElementById("btn");
+			function dd(){
+				alert("哈哈")}
+			s.addEventListener("click",dd,false);//注意这的写法函数名称不要括号
+			//这样点击 后就会弹出函数内的内容
+			s.removeEventListener("click",dd,false);//添加这个方法后就会删除绑定的click事件，现在是弹不出来的
+			}
+		</script>
+	<body>
+	<button id="btn">点击跳转 </button>
+		
+		
+	</body>
+	
+</html>

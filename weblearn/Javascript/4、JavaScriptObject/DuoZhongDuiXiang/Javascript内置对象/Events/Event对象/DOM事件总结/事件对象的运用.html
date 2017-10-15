@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//当时间触发时候，系统自动将事件对象传递给事件函数，作为时间函数的第一个参数
+		window.onload=function(){
+			var dd=document.getElementById("btn");
+			dd.onclick=function(de){
+				alert(de)//弹出一个事件节点对象名称
+				alert(de.clientX+"px")//弹出41，说明这个时候鼠标里屏幕左边41像素
+			}
+		}
+	</script>
+	<body>
+		<input type="button" name="btn" id="btn" value="点击测试" />
+	</body>
+</html>

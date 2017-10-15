@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<audio src="../音视频资源文件/johann_sebastian_bach_air.mp3" controls="controls"></audio>
+		
+	   <video src="../音视频资源文件/Intermission-Walk-in_512kb.mp4" ></video>
+	   
+	   <!--controls属性用于设置音频和视频的播放控件，设置此属性后，音视频界面就会显示一个播放操作的控件图标；
+	   当在音频标签中的时候，音频控件会显示播放，调节音量和下载图标，点击的时候，就会起相互的作用；
+	   当在视频标签 的时候，还会有一个全屏播放的标志，点击的时候视频可以显示全屏
+	   
+	   控件在不同的浏览器下或者操作系统下控件的显示形状可能不同-->
+	</body>
+	<script type="text/javascript">
+		var vod=document.getElementsByTagName('video')[0];
+		vod.controls=true
+//		controls属性用于设置音视频控件是否显示,值是布尔值
+	</script>
+</html>

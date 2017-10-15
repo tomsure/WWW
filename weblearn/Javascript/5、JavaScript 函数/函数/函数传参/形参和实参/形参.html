@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		形参指的是函数声明的时候括号里面的参数，这个参数是函数内部声明的局部变量，例如：
+     function aa(m,n,w){ //这里的m和n是函数内声明的局部变量，也就是形参
+     	
+     	document.write(m,n)
+     	
+     	alert(aa.length);  //形参的长度
+     	alert(aa.arguments.callee.length)//形参的长度
+     }
+        aa(1,3)
+        
+//   形参的长度使用 函数对象的length属性或者arguments.length属性
+        
+	</script>
+	
+	
+	
+</html>

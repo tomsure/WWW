@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>邮箱: <input type="text"  name="email" id="email" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('form').validate({
+				rules : {//rules表示验证规则
+					user:{//user表示input元素的name属性值，这里是指示例，以实际开发的属性值为准
+						required:true,//必填字段；注意，因为是json格式，所以每个键值对后面必须用逗号隔开，最后一个就不用
+						minlength:2//表示最少输入两个字，当输入的时候还未输入够字数的时候就会自动提示，输入够字数后，提示自动消失
+						
+						
+					},
+					email:{
+						email:true//必须使用正确的邮箱格式
+					},
+					url:"required"//必填字段，name值可以一个name值单独写一个规则，也可以使用json格式写多个属性值
+				}
+				
+//				上面rules里面的user和email指的是input元素的name属性值,每个input元素的name值可以一个name值单独写一个规则，也可以使用json格式写多个属性值，单独写一个的时候格式和控件属性方式格式相同，规则名称要使用引号。
+				
+				
+				
+			})//加载validate.js插件；
+			
+		})
+		
+//	使用键值对传参的方式就是在validata()方法的括号里面写json格式的键值对,里面可以写默认验证规则rules;和自定义验证规则message等等内容	
+	</script>
+</html>

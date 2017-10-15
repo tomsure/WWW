@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{ width:100px ; height:100px ; background-color: red;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		/*has() 方法返回拥有匹配指定选择器的一个或多个元素在其内的所有元素。
+提示：如需选取拥有多个元素在其内的元素，请使用逗号分隔（参见下面的实例）。*/
+$(function(){
+	$("div").has("p").css({background:"green"})  //获取两个具有p元素的div设置他的背景颜色
+})
+	</script>
+	<body>
+		<div id="">
+			
+		</div>
+		<div id="">
+			<p></p>
+		</div>
+		<div id="">
+			<p></p>
+		</div>
+	</body>
+</html>

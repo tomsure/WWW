@@ -1,0 +1,1 @@
+location既是window对象的子对象属性，又是document对象的属性

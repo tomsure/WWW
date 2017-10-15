@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		// 目前只有 Firefox ，IE9及以上版本支持  key 属性。
+		window.onload=function(){
+			var ss=document.getElementById("text");
+		ss.onkeydown=function (ev){//绑定键盘按下的事件
+				var ee=ev.Key||event.Key||ev.keyCode||event.keycode||ev.which||event.which//兼容性设置
+				document.getElementById("p1").innerHTML=ee//设置输出
+			}
+		}
+	</script>
+	<style type="text/css">
+		
+	</style>
+	<body>
+		
+			<input type="text" name="" id="text" value="" />
+		   <p id="p1"></p>
+	</body>
+</html>

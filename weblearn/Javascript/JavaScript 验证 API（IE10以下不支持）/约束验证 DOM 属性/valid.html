@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<input type="number" name="num" id="num" max="100"  value="" /> <!--//step=2-->
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript" >
+		var num=document.getElementById("num");
+		btn=document.getElementById("btn")
+		btn.onclick=function(){
+                 if(num.validity.valid) {  
+				alert("恭喜你输入正确！")
+			}else{
+				alert("输入有误，请重新输入！")
+			}
+		}
+		 
+//        valid表示当输入内容合法的时候,返回值为true
+
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+</html>

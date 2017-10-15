@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript" src="../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../插件/carhartl-jquery-cookie-92b7715/jquery.cookie.js">
+		
+	</script>
+	<script type="text/javascript">
+	    $.cookie.raw=true;
+	    
+//	    $.cookie.raw用于设置是否对cookie进行编解码设置,默认为false,这时候如果设置中文的时候有可能会造成乱码,这样的话就可以设置$.cookie.raw=true;这样显示的就是正确的中文
+        
+		$.cookie('姓名','汤旭');
+		alert(document.cookie)
+	</script>
+</html>

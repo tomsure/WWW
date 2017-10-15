@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	/*onwheel 事件在鼠标滚轮在元素上下滚动时触发。
+onwheel 事件同样可以在触摸板上滚动或放大缩小区域时触发（如笔记本上的触摸板）。*/
+
+//  火狐浏览器使用 DOMMouseScroll事件
+window.onload=function(){
+	var dv=document.getElementById("dv");
+	dv.onwheel=function(){
+		dv.style.fontSize="35px";
+		dv.style.background="#ff0000";
+	}
+}
+	</script>
+	<style type="text/css">
+		#dv{
+			border: 1px solid #7FFF00;
+		}
+	</style>
+	<body>
+	<div id="dv">
+	你好
+	</div>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+
+	//这个属性是能用在onmouseover和onmouseout上面，其他都用不了
+	window.onload=function(){
+		var dv=document.getElementById("dv");
+		
+		
+		dv.onmouseout=function(evt){
+			var ev=evt||window.event;
+		
+			var de=document.getElementById("demo");
+		
+			de.innerHTML='鼠标指针现在移动到了:'+ev.toElement+'上面'
+			
+		}
+    //当元素绑定onmouseout事件后，此时的事件对象的toElemen属性指的是鼠标指针移动到的那个节点，例如：元素dv绑定了onmouseout事件，当鼠标移动到div1上之后，此时事件对象的toElement指的就是dv1。
+//老版本IE浏览器返回的是object,新版本返回的是具体的什么类型的元素
+	}
+		
+	
+	</script>
+	<style type="text/css">
+		#dv{
+			width: 200px;
+			height: 200px;
+			background-color: darkmagenta;
+			
+		}
+		#dv1{
+			width: 150px;
+			height: 150px;
+			background-color: #0000FF;
+			
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<div id="dv1">
+			
+		</div>
+		
+		<p id="demo"></p>
+	</body>
+</html>

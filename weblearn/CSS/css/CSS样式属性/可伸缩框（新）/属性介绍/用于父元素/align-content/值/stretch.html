@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	*{margin: 0px;padding: 0px;}
+		#dv{
+			width: 400px;
+			height: 400px;
+			background-color: #1DAFE7;
+			display: flex;
+			flex-wrap: wrap;
+			-webkit-align-content: stretch;
+		}
+		#dv1{
+			width: 100px;
+		    height: 100px;
+			background-color: deeppink;
+		}
+		#dv2{
+			width: 100px;
+			height: 100px;
+			background-color:sandybrown;
+		}
+		#dv3{
+			width: 100px;
+		    height: 100px;
+			background-color: lawngreen;
+		}
+		#dv4{
+			width: 100px;
+			height: 200px;
+			background-color:sandybrown;
+		}
+		#dv5{
+			width: 100px;
+			height: 100px;
+			background-color: lawngreen;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			<div id="dv1">
+				1
+			</div>
+			<div id="dv2">
+				2
+			</div>
+			<div id="dv3">
+				3
+			</div>
+			<div id="dv4">
+				4
+			</div>
+			<div id="dv5">
+				5
+			</div>
+		</div>
+	</body>
+	如果值为stretch的时候：
+	 如果子元素没有设置高度，当换行的时候，每行的子元素的高度相同，总高度就是父元素的高度；
+	 当子元素设置了高度的时候，如果子元素的高度相同，则换行的子元素上下的行间距相等；如果某一个子元素的高度不相等，且高度超过同一行的其他元素高度，则超过的高度会占据下一行子元素上下的行间距，下一行的子元素的上下行间距都会重新计算
+	 
+	 
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var str='abjkossnns';
+		var reg=/[a-z]/;
+		document.write(str.replace(reg,'1')+'</br>');
+		var reg1=/[a-z]/g;
+		document.write(str.replace(reg1,'2')+'</br>');
+		var reg2=/[a-z]+/;
+		document.write(str.replace(reg2,'3')+'</br>')//使用加号的时候，只会返回被匹配的字符串；
+		var reg3=/[a-z]+/g;
+		document.write(str.replace(reg3,'4'));
+		
+	</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			//通过元素绑定的事件的函数传递数据，data作为事件对象e的属性,传递的数据就是event。data的值
+			$("input").on("click" ,123,function(e){
+				alert(e.data)
+				//通过元素绑定的事件的函数传递数据，data作为事件对象e的属性，将括号内的数据传递进来
+				//这里是传递数字
+			})
+			$("button").bind("click", "sss",function(a){
+				alert(a.data)
+				//此时a.data的值就是sss
+			})
+		})
+	</script>
+	<body>
+	<input type="button" name="" id="" value="点击测试" />
+	<button>	点击测试</button>
+	
+	</body>
+</html>

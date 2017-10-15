@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+/*
+ 参数
+参数 pattern 是一个字符串，指定了正则表达式的模式或其他正则表达式。
+参数 attributes 是一个可选的字符串，包含属性 "g"、"i" 和 "m"，分别用于指定全局匹配、区分大小写的匹配和多行匹配。ECMAScript 标准化之前，不支持 m 属性。如果 pattern 是正则表达式，而不是字符串，则必须省略该参数。
+ 
+ * */
+      var pt=/i/ //正则表达式对象
+      document.write(pt.test('abcdegf')+'</br>')//测试字符串'abcdegf'是否含有i字符串，这没有返回false
+      document.write(pt.test('height')+'</br>')//测试字符串height'是否含有i
+//正则表达式是一个用来与其他字符串进行匹配的规则(是一个正则对象)
+
+//字面量方式创建字符串就是用两根斜杠中间写匹配的字符串或其他规则，赋给一个自定义的变量
+
+//例如上面一个例子匹配两个字符串中是否有指定规则(正则表达式定义的规则)中的字符,第一个里面没有,则返回flase,第二个里面有,则返回true		
+	</script>
+</html>

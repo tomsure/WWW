@@ -1,0 +1,55 @@
+写法1：  var a="sdcfrvgtyuuj";
+  
+  
+        var  mode=/[a-z]/,
+		var  s=new RegExp(mode)
+		
+写法2：	var patt1=new RegExp("e");
+         document.write(patt1.test("The best things in life are free"));
+		 
+		 
+		 
+写法3：/\d\d\d/.test("123");
+
+
+		 
+写法4：new RegExp("boss").test("hi,boss");
+      
+	 写成： var s="hi,boss";
+	        var f=/boss/
+            var a=new RegExp(f);
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+
+写法5：		 /pattern/attributes
+             new RegExp(pattern, attributes);
+			 
+			 
+			 总结：正则表达式的参数
+			       1，如果不加元字符的话例如：var a=/e/;代表的是匹配“e”；
+                      例如：var w="dedsdrtfc";
+                            var s=/d/;
+                            var e=new RegExp(s);
+                            alert(e.test(w));//这里弹出true，表示的是在字符串w中查找是否含有“d”这个字符串；
+                    当正则表达式的参数不是一个字母的时候，匹配的时候正则表达式参数必须与所要匹配的字符串完全相同或其中一段相同，包括顺序不能错；
+                       例如：var w="desdrtfc";
+                            var s=/de/;
+                            var e=new RegExp(s);
+                            alert(e.test(w))	;这里弹出的是true，但是如果正则表达式var s=/ed/,则弹出的结果就是false，因为顺序不同则不匹配			
+					   
+					   
+					   
+					   var s="sedrfctg";
+					   var  a=/s/i;正则表达式直接字面量写法(这里的i表示添加的修饰符);//也可以用构造函数的方法写：var a=new RegExp("s","i"),//这里的i表示添加的修饰符，需要加引号；
+					   alert(a.test(s))
+					   
+					   
+					   
+					   
+					   
+					   

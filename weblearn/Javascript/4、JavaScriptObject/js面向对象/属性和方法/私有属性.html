@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Girl(name,bf){
+			 var secret=bf
+			this.name=name;
+		   
+			this.showlove=function(){
+				return secret
+			}
+			
+			this.movelove=function(){
+			return	secret='薛潘'
+			}
+		}
+		
+		var girl=new Girl('林黛玉','贾宝玉');
+		alert(girl.name+'喜欢'+girl.showlove());
+		alert(girl.movelove())//undefined
+     alert(girl.name+'喜欢'+girl.showlove());
+//  在构造函数中,使用var声明的变量是 构造函数的私有属性,实例对象无法直接访问到,可以在构造函数中,将私有属性放到实例对象可以访问的方法中返回,就可以达到外部对象访问私有属性的目的;
+    //上面例子中，构造函数声明后，实例化对象girl无法通过传递参数给bf直接访问bf，因为此时bf已经被赋值给私有变量secret，此时直接返回girl.bf会返回undefined，此时可以在构造函数中添加外部实例对象可以访问的方法this.showlove(),这个方法将私有变量返回，再通过实例对象访问这个方法就可以访问到私有变量secret，从而访问到bf；
+    
+    
+//  而在构造函数中还可以添加另外一个和第一个方法相同的方法,此时如果直接给私有变量赋值（例如这里的secret='薛潘')然后返回,这个方法放在第一个方法showlove()之后,当实例对象调用这个方法后,私有 变量的值secret=bf就会被覆盖,而变成此时的值'薛潘',所以再执行第一个方法的时候,就会返回薛潘,而实例对象传递给bf的参数也不起作用
+    
+    
+    
+    
+    function A(name){
+    	var ss=name;
+    	this.sayName=function(){
+    		return ss
+    	}
+    	
+    }
+    var a=new A('tom')
+    alert(a.name)//undefined
+     alert(a.sayName())
+     
+//   外部对象访问私有属性使用过闭包来实现的
+	</script>
+</html>

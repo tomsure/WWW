@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	/*globalAlpha 属性设置或返回绘图的当前透明值（alpha 或 transparency）。
+globalAlpha 属性值必须是介于 0.0（完全透明） 与 1.0（不透明） 之间的数字。*/
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+	var ss=document.getElementById("myCanvas").getContext("2d")
+	
+             ss.fillStyle="#A52A2A";
+             ss.fillRect(20,20,100,50);
+             
+             ss.globalAlpha="0.2";  //透明值在0到1之间
+             ss.fillStyle="#006400";
+             ss.fillRect(30,30,100,50)
+             
+             ss.globalAlpha="0.4";
+             ss.fillStyle="#006400";
+             ss.fillRect(40,40,100,50)
+             
+             ss.globalAlpha="0.6";
+             ss.fillStyle="#006400";
+             ss.fillRect(50,50,100,50)
+             
+             ss.globalAlpha="0.8";
+             ss.fillStyle="#006400";
+             ss.fillRect(60,60,100,50)
+             
+             ss.globalAlpha="1";
+             ss.fillStyle="#006400";
+             ss.fillRect(70,70,100,50)
+             
+             
+			
+			
+			
+		}
+	</script>
+	<body>
+	<canvas id="myCanvas" width="200" height="200"></canvas>
+	</body>
+</html>

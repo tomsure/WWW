@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			
+			background-color: red;
+			
+		}
+	</style>
+	<body>
+		<div id="dv" style="width: 100px;height: 100px;">
+			
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		alert(dv.style.width)
+		
+		dv.onclick=function(){
+			this.style.width='200px';
+			this.style.height='200px'
+		}
+	</script>
+	
+	<!--原生js中如果在CSS中设置width或者height，无法通过js的style.width和style.height，除非把元素的宽高设置在元素标签中，内嵌设置，才能通过js获取到-->
+	<!--如果没有设置元素宽高或者想通过原生js获取到元素的宽高可以通过offsetwidth和offsetHeight获取，offsetWidth指的是元素宽度+padding宽度+border宽度的和，offsetHeight也是一样
+	-->
+	<!--style.width和style.height还可以用来设置元素的宽高-->
+	<!--还可以通过jquery中的width()和height()方法获取元素的宽高，但是这两个方法获取的值不包括padding和border，只是元素的width的值-->
+</html>

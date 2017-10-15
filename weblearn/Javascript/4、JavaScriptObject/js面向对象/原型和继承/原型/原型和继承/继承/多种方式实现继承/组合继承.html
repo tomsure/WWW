@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(name,age,height){
+			this.name=name;
+			this.age=age;
+			this.height=height;
+			
+		}
+		Person.prototype.sayName=function(){
+			alert(this.name)
+		}
+		
+		var person1=new Person('tom',23,190);
+		person1.sayName();
+//		组合式继承就是创建对象的时候属性使用构造函数添加,方法通过原型添加
+		
+	</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		函数的作用域取决于声明时,而不取决于调用时
+function closure() { ///声明一个函数
+
+var sister = '大桃花'; //定义私有属性
+
+var mysister = function() {
+        return sister;
+    }
+
+return mysister;   // 这个函数出生时,有一个sister 叫大桃花
+
+}
+ 
+ 
+   
+
+
+function place() {  // 大清宫殿内
+
+var sister = '大福晋';
+var mysister = closure(); // 
+
+alert(mysister());
+}
+
+place(); // 清宫戏开始;
+//  打印"大福晋",还是打印"大桃花"?
+
+
+// 对的,"大桃花",闭包就这么简单,你已经悟了.
+
+
+
+		
+		
+		
+		
+		
+	</script>
+</html>

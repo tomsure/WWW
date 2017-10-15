@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<video  id="vod" controls="controls">
+			<source id="so1" src="../HTML5 DOM/音视频资源文件/Intermission-Walk-in_512kb.mp4"></source>
+			<source id="so1" src="../HTML5 DOM/音视频资源文件/johann_sebastian_bach_air.ogg"></source>
+		</video>
+		<button id="btn1">播放/暂停</button>
+		 <input type="button" value="静音" id="btn2" />
+		  <button id="btn3">全屏</button>
+	</body>
+	<script type="text/javascript">
+		var btn1=document.getElementById("btn1")
+		var btn2=document.getElementById("btn2")
+		var btn3=document.getElementById("btn3")
+		var btn4=document.getElementById("btn4")
+		var vod=document.getElementById("vod");
+		  btn1.onclick=function(){
+		  	if(vod.paused){ //如果视频暂停，则点击的时候开始播放
+		  		vod.play()
+		  	}else{
+		  		vod.pause()//设置正在播放，则点击的时候暂停
+		  	} 
+//		  	使用if语句设置同一个按钮播放和暂停，还可以设置播放和暂停的时候的图标时候
+		  }
+		     
+		   btn2.onclick=function(){
+		     if(vod.muted){ //当静音的时候点击按钮，
+		     	vod.volume=1;      //设置音量为1
+		     	this.value='静音';  //静音按钮的字为“静音”
+		     	vod.muted=false     //当不是静音的时候就不静音
+		     }
+		     else{ //当不是静音的时候点击
+		     	vod.volume=0; // 音量变为0
+		     	this.value='取消静音'; //静音按钮的字变成"取消 静音"
+		     	vod.muted=true    //muted的值变为静音，表示设置当前状态静音
+		     }
+		 
+		   }
+		   btn3.onclick=function(){
+		   	  vod.mozRequestFullScreen()
+		   	  //点击之后全屏播放，这里这个方法只适合在火狐浏览器全屏播放，每个浏览器的方法不相同，可以进行查询和封装兼容性方法，还可以设置点击全屏按钮的时候video的宽和高等于浏览器可视区域的宽和高
+		   }
+	</script>
+</html>

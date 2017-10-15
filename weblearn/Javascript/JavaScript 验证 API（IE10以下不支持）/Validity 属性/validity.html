@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="number"  name="" id="num1" value="" required="required"/>
+		<button id="btn">点击验证</button>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn")
+		 btn.onclick=function(){
+		 	var num1=document.getElementById("num1")
+		 	 console.log(num1.validity) //通过chrome调试工具可以看到具体属性名
+		 	   
+		 	 
+//		 	 validaty属性返回一个对象,这个对象包含了多种验证信息属性,这些验证信息属性包括:customError	设置为 true, 如果设置了自定义的 validity 信息。
+//patternMismatch	设置为 true, 如果元素的值不匹配它的模式属性。
+//rangeOverflow	设置为 true, 如果元素的值大于设置的最大值。
+//rangeUnderflow	设置为 true, 如果元素的值小于它的最小值。
+//stepMismatch	设置为 true, 如果元素的值不是按照规定的 step 属性设置。
+//tooLong	设置为 true, 如果元素的值超过了 maxLength 属性设置的长度。
+//typeMismatch	设置为 true, 如果元素的值不是预期相匹配的类型。
+//valueMissing	设置为 true，如果元素 (required 属性) 没有值。
+//valid	设置为 true，如果元素的值是合法的。
+//
+//  所以如果要获取具体验证信息,可以通过"validaty.属性名"的形式获取;
+		 	
+		 	 for(var i in num1.validity){   //通过遍历来获取所有属性的值
+		 	    	console.log(num1.validity[i])
+
+		 	    }
+		 }
+	</script>
+</html>

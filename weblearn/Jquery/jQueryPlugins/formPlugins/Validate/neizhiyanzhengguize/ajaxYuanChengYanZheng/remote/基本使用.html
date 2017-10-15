@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>输入密码: <input type="password"  name="num" id="num" value="" />(必填)</p>
+			<p>确认密码: <input type="password"  name="repassword" id="" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../../../Validate/库文件/dist/jquery.validate.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('form').validate({
+				
+						
+			rules:{
+				num:{//input元素
+				
+					remote:"remote.php"
+				//remote方法也是validate的验证规则的方法，该方法用于ajax远程验证，使用的时侯把这个方法放进input元素的大括号内作为规则使用，和其他规则格式相同，他的值是一个远程文件，可以是服务器程序如php，asp等等，这种方式是异步的将输入的表单数据提交到服务器进行验证，服务器会进行各种验证，并返回true或者false，表示验证成功或验证失败，当鼠标焦点离开input输入框的时候就会开始验证，并返回验证提示信息。
+				}
+			},
+			messages:{
+				num:{
+					remote:"请请输入正确的密码"
+					//remote方法也可以自定义验证提示信息，默认提示的是英文，在这里可以设置自定义的中文提示
+				}
+			}
+				
+			})
+			
+		})
+     
+     
+      
+	</script>
+</html>

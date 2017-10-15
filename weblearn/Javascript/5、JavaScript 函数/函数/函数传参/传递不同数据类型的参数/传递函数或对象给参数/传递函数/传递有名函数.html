@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	var test2=function(a) //或者写成 function test2(a)
+      {
+       alert(a);  
+      }
+   //这里声明一个函数，它同时也是一个变量
+	function test1(Func)  //声明一个函数test1，添加参数Func;
+    {
+     Func(100); //此时这里已经是对函数test2的执行，100就是执行test2的传参
+     }
+    
+test1(test2);
+//执行test1的时候要给test1传参,这时候将test2作为参数传递(变量复制)给test1的参数Func;这时候,函数test1(Func)则变成test1(test2)，注意：函数作为参数传递时候不需要加括号；
+//  函数(例如这里test2)作为参数传递给另外一个函数(test1),可以在另外一个函数(test1)里面直接执行,或者 其他更复杂的操作,如果当做参数被传递的函数(test1),在另外一个函数(test1)内执行的时候,直接给那个函数的参数加上括号,就是对被传递函数(test2)的执行,括号里的参数就是传递的参数(test2的参数)
+
+  
+     
+     
+	 	
+	</script>
+</html>

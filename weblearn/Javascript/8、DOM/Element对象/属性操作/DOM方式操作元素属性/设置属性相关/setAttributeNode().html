@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.div1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript">
+	//setAttributeNode() 方法向元素中添加指定的属性节点。
+//如果这个指定的属性已存在，则此方法会替换它。
+window.onload=function(){
+	var d=document.getElementById("dv");
+     var s=document.createAttribute("class")
+       s.value='div1';
+       d.setAttributeNode(s)
+}
+//		setAttributeNode()方法用于给元素设置新的属性节点,如果元素中已经存在指定名称的属性，那么该属性将被新属性替代。如果新属性替代了已有的属性，则返回被替代的属性，否则返回 NULL。
+
+		
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+</html>

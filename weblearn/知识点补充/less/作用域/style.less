@@ -1,0 +1,32 @@
+@width:100px;
+
+#dv{
+    @width:150px;
+    width: @width;
+    height: 150px;
+    background-color: red;
+}
+
+编译结果：
+   #dv{
+       width: 150px;
+       height: 150px;
+       background-color: red;
+   }
+// 上面例子中，#dv1的样式外层定义了变量@width，内部也定义了@width；所以编译后，取的变量值是内部的变量@width的值
+
+
+@height:100px;
+#dv1{
+    width: 100px;
+    height: @height;
+    background-color: black;
+}
+@height:150px;
+
+//上面例子中，@height的最终取值是150px，因为同及作用域下的同名变量，前面的会覆盖后面的;
+
+
+
+
+// less中的作用域和js中的作用域大致相同，也现在是在代码块内部查找，找不到后在向外部查找

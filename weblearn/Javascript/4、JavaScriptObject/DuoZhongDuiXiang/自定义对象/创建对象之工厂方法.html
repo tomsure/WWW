@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var lev=function(){  
+  
+   return "啊打";  
+};  
+function Parent(){  
+       var  Child = new Object();  
+       Child.name="李小龙";  
+       Child.age="30";  
+       Child.lev=lev;  
+     return Child;  
+};  
+  
+var  x = Parent();  
+alert(x.name);  
+alert(x.lev());  
+/*说明：
+1.在函数中定义对象,并定义对象的各种属性，,虽然属性可以为方法，但是建议将属性为方法的属性定义到函数之外，这样可以避免重复创建该方法
+
+2.引用该对象的时候，这里使用的是 var x = Parent()而不是 var x = new Parent();因为后者会可能出现很多问题（前者也成为工厂经典方式,后者称之为混合工厂方式），不推荐使用new的方式使用该对象
+
+3.在函数的最后返回该对象
+
+4.不推荐使用这种方式创建对象，但应该了解*/
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="fmsubmit.php" method="post" target='_blank' onsubmit="return fmsubmit()">
+			<p>名称：<input type="text" name="username" id="fmname" value="" /></p>
+			<p>性别：<input type="text" name="usersex" id="sex" value="" /></p>
+			<p>地址：<input type="text" name="" id="userjob" value="" /></p>
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+	<!--在提交表单的时候，当前的页面会跳转到form元素action属性设置的页面上去，在实际开发中，需要屏蔽掉这一动作-->
+	<script type="text/javascript">
+	   
+		function createXHR(){ //创建xhr对象(封装函数)
+			var xhr;
+			if(window.XMLHttpRequest){
+				xhr=new XMLHttpRequest()
+			}else{
+				xhr=new ActiveXObject('Microsoft.XMLHTTP')
+			}
+			return xhr
+		}
+		function fmsubmit(){
+			/*
+			 * 提交表单需要如写步骤：
+			 * 0：制造xhr；
+			 * 1，收集表单数据；
+			 * 2，打开与服务器的链接（open()方法，使用POST连接，）
+			 * 3,设置合适的头信息：xhr.setRequestHeader()
+			 * 4，发送数据，send()；
+			 * 5，监听请求和响应状态：onreadstatechange
+			 * 
+			 * 
+			 */
+			
+		//开始：
+		   //0：创建ajax；
+			var xhr=createXHR()
+			//1：打开POST连接
+			xhr.open('POST','fmsubmit.php',true);
+			
+			//5,监听，回调
+	       xhr.onreadystatechange=function(){
+		   	if(xhr.readyState==4){
+		   		if(xhr.status==200){
+		   			alert('发送成功！'+xhr.responseText)//这里做实验，所以读一下响应，实际开发中，是由PHP响应合适的内容回来，js再在这里做下一步操作，例如：弹出注册成功或者提示表单输入错误等等
+		   		}
+		   	}else{
+		    //这里可以做一些表单提交后收到响应前的一些效果
+		   	}
+		   }
+			
+			//2：收集表单数据；
+			var fmname=document.getElementById("fmname").value
+			var fmsex=document.getElementById("sex").value
+			
+			//3,设置头信息
+		xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded')	
+			//4：发送表达数据；
+			
+			xhr.send('username='+fmname+'&usersex='+fmsex)//
+			/*在发送表单数据的时候要注意send()括号中参数的写法：发送表单数据的时候，括号中的参数就是提交到服务器的数据，由于send()方法发送的数据，传送到服务器里面必须是一个数组，所以，必须send()括号里的参数是一定的格式，xhr.send(Key1=value1&key2=value2&...&keyN=valueN)；
+			在这里key的值是按照数据库中的名称来写的，例如，服务器数据库中的kye的值是username，则这里要使用引号"username',由于是键/值对,所以还有value，value写的就是获取的表单数据，这里已经声明成了变量（写起来更简单，也能提高性能），因为需要拼接成键值对，所以完整的写法就是【"数据库中的名称="+获取的表单数据(变量名)】
+			实例:  xhr.send('username='+fmname+'&usersex='+fmsex)，username就是数据库的表格名称，fmname就是用户输入的值
+                       如果提交多条表单数据，就使用加号和 &来连接，&放在引号里面；*/
+            return false
+		}
+		  
+		
+		
+		
+	</script>
+	
+</html>

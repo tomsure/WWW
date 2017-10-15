@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript">
+//		IE浏览器的attachEvent()方法中传递的事件函数中的this指的是window对象
+ var btn=document.getElementById("btn");
+ btn.attachEvent('onclick',
+                 function(){
+                 	alert(this);
+                 	alert(this===window)
+                 	})
+
+
+//可以看出this指的是window对象
+
+  
+	</script>
+</html>

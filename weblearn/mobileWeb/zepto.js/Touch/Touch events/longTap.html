@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../zepto库/zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('#dv').on('longTap',function(){
+				alert('这是长按屏幕事件')
+			})
+		})
+//		  当按住屏幕超过750毫秒的时候会触发此事件
+
+		
+
+	</script>
+</html>

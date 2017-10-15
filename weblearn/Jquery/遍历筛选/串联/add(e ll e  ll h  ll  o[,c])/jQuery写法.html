@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px;height:100px;background:red;margin:10px}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			document.onclick=function(){
+				console.log($('div').length) //5 ，表示集合中有5个元素
+				var newObj=$("div").add('p');
+				   newObj.css('backgroundColor','green')
+				   //给新的jquery集合对象设置样式
+				   console.log(newObj)
+				   console.log(newObj.length)//6,现在变成6个
+				
+			}
+		})
+	</script>
+	<body>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<p>事实上</p>
+	</body>
+	   <!--add()方法用于将新的元素添加到jquery集合对象中，返回一个新的jquery集合对象，原本$()方法添加的元素就只包含这几个元素，如果还想添加到这个集合中就需要使用add()方法-->
+	
+</html>

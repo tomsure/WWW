@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<input type="number" name="num" id="num" max="100" step="2" value="" /> <!--//step=2-->
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript" >
+		var num=document.getElementById("num");
+		btn=document.getElementById("btn")
+		btn.onclick=function(){
+                 if(num.validity.stepMismatch) {  //如果num.validity.stepMismatch的值为true
+				alert("请按照2的整数倍数进行输入，谢谢!")
+			}
+		}
+		 
+         
+//    num.validity.stepMismatch属性用于检测input框输入的值是否是step的值的倍数，如果不是，则返回true，否则返回false，step的值是数字用于设置，输入数值增加或减小的幅度值
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+</html>

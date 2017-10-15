@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post">
+			用户名<input type="text" name="user" id="p1" value="" />
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../jquery.js">
+		
+	</script>
+	<script type="text/javascript" src="../插件/carhartl-jquery-cookie-92b7715/jquery.cookie.js">
+		
+	</script>
+	<script type="text/javascript">
+		$.cookie('user','tom'); //使用$.cookie()方法设置cookie，如果不设置期限的话只需两个字符串作为参数，第一个参数是设置cookie的名称，第二个参数是cookie的值；
+		alert(document.cookie)
+		document.getElementById("p1").value=$.cookie('user')
+	</script>
+</html>

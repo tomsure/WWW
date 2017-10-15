@@ -1,0 +1,1 @@
+placeholder 属性适用于以下的 <input> 类型：text, search, url, telephone, email 以及 password。

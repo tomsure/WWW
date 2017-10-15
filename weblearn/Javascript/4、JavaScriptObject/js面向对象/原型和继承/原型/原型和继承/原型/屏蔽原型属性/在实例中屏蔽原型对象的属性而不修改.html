@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Person(){};
+		Person.prototype.name='tom';
+		Person.prototype.job='doctor';
+		Person.sayName=function(){
+			alert('my name is：'+this.name)
+		}//创建对象
+		
+		var person1=new Person();
+		 var person2=new Person();
+		document.write((person1.name+'tom')+'</br>');
+		 person1.name='bom';//给实例对象重新设置name属性
+		 document.write(person1.name+'</br>')//bom
+		document.write(Person.prototype.name+'</br>')//tom
+		//在实例化对象后，给实例化对象person1重新设置了name属性，输出后是重新设置的name的值，但是再输出原型对象的name属性时候，还是原来的值，说明给实例对象person1设置的值只会在实例对象上更新，而不会修改原型对象上的值，再例如：
+		
+		document.write(person2.name)//tom
+		//person2也是Person的实例对象，在person1上设置了同名属性的值，输出person1的name属性 的时候发生了改变，但是person2的属性没有变；
+		
+		
+		
+	//在创建对象后，对象 实例如果设置了和原型对象同名的值，会覆盖（屏蔽）从原型对象上继承的值，使用新设置的属性值，但是原型对象的属性值不会改变；	
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

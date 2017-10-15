@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//	splice()方法用于删除数组指定位置开始指定数量的元素（删除一段数组）,并可以在删除的位置添加新元素,返回被删除的元素组成的数组，原始数组会被改变	
+
+var arr=['a','b','c','d','e']
+
+
+   var b=arr.splice(1,2,'dd') //  第一个参数是删除数组中的第一个元素的下标，第二个参数是删除的数组元素的个数，第三个参数是删除后添加到删除位置的元素；例如这里第一个参数是1表示，从数组中下标为1的缘元素位置开始删除，也就是‘b’，删除两个元素，就从‘b’开始向后数两个就是“b”，“c”。第三个参数“dd”就是添加到删除了“b”“c”后的位置那里。
+    
+   console.log(b); //输出b,c,说明返回的是被删除的元素b,c
+   
+   console.log(b instanceof Array)//true，说明返回的被删除的元素是一个数组
+   console.log(arr)//输出arr说明数组已被改变
+
+
+
+		
+		
+		
+		
+		
+	</script>
+	
+</html>

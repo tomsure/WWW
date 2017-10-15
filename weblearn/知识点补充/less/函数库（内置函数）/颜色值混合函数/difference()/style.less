@@ -1,0 +1,16 @@
+
+
+@a:rgb(200,250,130);
+@b:rgb(150,200,40);
+
+div{
+    width:100px;
+    height:100px;
+    background-color:@a;
+}
+
+div:hover{
+    background-color:difference(@a,@b); //相减后为rgb(50,50,90) 
+  }
+
+//difference()的用法是用两个颜色值得rgb中的红绿蓝分别相减，用第一个参数的颜色值减去第二个参数颜色值，得到一个新的值返回新的颜色,这样得到的颜色会更深

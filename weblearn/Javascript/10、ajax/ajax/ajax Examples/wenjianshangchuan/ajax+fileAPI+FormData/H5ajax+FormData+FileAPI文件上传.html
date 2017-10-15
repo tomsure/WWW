@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<input type="file" name="pic" id="fileup" value="" />
+	</body>
+	<script type="text/javascript">
+
+	 var fp=document.getElementById("fileup")//获取input file元素
+		fp.onchange=function(){
+			
+			var fd=new FormData()//创建FormData对象
+			var pic=fp.files[0]//获取文件对象
+		//	alert(pic);
+		fd.append('pic',pic)	//把文件内容追加到表单数据里，这里的键值对一个是pic.name,一个是pic
+		
+		
+		var xhr=new XMLHttpRequest();
+		xhr.open('POST','unload.php',true);
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4){
+				
+			document.getElementById("dv").innerHTML=this.responseText//此时从服务器获取的响应文本会显示文件的相关信息，因为PHP已经打印了这个文件
+				
+			}
+			
+		}
+		xhr.send(fd)//发送带有表单数据（文件信息）的请求
+	/*当用户点击选择文件之后，页面就会显示出一个PHP格式的数组，而且是多维数组，显示如下信息：
+	Array (
+		
+		 [键] 
+		 =>
+		  Array ( 
+		  	[name（文件名称）] => 备注.txt [type（文件类型）] => text/plain [tmp_name] => C:\Windows\Temp\php82F.tmp [error（错误）] => 0 [size（文件大小）] => 46
+		  	)
+		
+		
+		)
+	此时说明已经上传成功，为了了解得更清晰，可以使用PHP语言中的move_uploaded_file将文件移至一个文件夹	,就可以看到上传的文件了
+		
+		* */
+	
+	
+		}
+		
+	
+	
+	</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+		}
+	</style>
+	<body>
+		   <input type="text" name="" id="" value="" />
+		<button>点击获取</button>
+	     <button>点击设置</button>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+				$('button').eq(0).on('click',function(){
+				alert($('input').val())
+			})
+			$('button').eq(1).on('click',function(){
+				$('input').val('你好')
+			})
+           
+			
+		})
+//		  val()方法用于设置或返回元素的value属性值，没有参数的时候就可以获取，有参数时候就可以设置，参数是函数的时候就可以进行复杂的计算返回或设置value
+		   
+	</script>
+</html>

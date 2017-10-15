@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<script type="text/javascript">
+	//1，在函数中不使用var声明的变量也是全局变量；
+	//2，根据js的作用域链js引擎会就近查找变量，在函数中从内向外查找；
+	
+	
+	window.str=1;  //定义一个全局变量，此时他也是window的属性；
+	function ss(){
+		
+		
+		function dd(){
+			str=2 //声明一个变量,此时他也是全局变量，如果这里不使用var声明，就会导致这个str变成全局变量，也就成了window的属性，所以就会覆盖函数外边设置的str=1这个变量
+			alert(str)
+		}
+		dd()
+	}
+	ss(window.str)
+	//这就会污染全局，，这就是var的重要性
+</script>
+	
+	
+	<body>
+		
+		
+	</body>
+</html>

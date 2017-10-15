@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	
+	   <video  controls="controls"  id="vod">
+	   	<source src="../音视频资源文件/Intermission-Walk-in_512kb.mp4" id="so1"></source>
+	   	<source src="../音视频资源文件/johann_sebastian_bach_air.ogg"></source>
+	   </video>
+	   <button id="btn">点击修改视频源</button>
+	   <button id="btn1">点击重新加载</button>
+	
+	</body>
+	<script type="text/javascript">
+		var vod=document.getElementById("vod");
+		   var btn=document.getElementById("btn");
+		   var btn1=document.getElementById("btn1");
+		   var so1=document.getElementById("so1") 
+		   btn.onclick=function(){
+		       so1.src='xxxx.avi';
+		       
+		   }//点击修改视频源
+		    btn1.onclick=function(){
+		    	vod.load()
+		    }//重新加载视频
+		    
+		    
+//         load()方法用于重新加载视频，相当于刷新视频信息进行加载，如果视频源信息发生了改变其他设置后对音频/视频元素进行更新，点击重新加载的话，就会播放新的视频源的视频，如果新的视频源无效，就无法播放
+		  
+	</script>
+</html>

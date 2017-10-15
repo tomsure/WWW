@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px ;height:100px ;background-color:red ;}
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('#btn').click(function(){
+				$('#dv').animate({
+					width:'300px',
+					
+				},2000).animate({
+					height:'300px'
+					
+				},2000)
+			});
+			$('#btn1').click(function(){
+				$('div').finish()
+           
+			})
+		})
+	</script>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<button id="btn">点击开始</button>
+		<button id="btn1">点击完成</button>
+	</body>
+	<!--finish()方法用于使元素立即完成所有的运动-->
+</html>

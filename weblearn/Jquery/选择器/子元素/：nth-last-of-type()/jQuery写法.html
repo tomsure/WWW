@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	</style>
+<script type="text/javascript"src="../../../jQuery库/jquery-2.1.4/jquery.js"></script>
+	<script>
+	//选择父级元素的倒数第n个指定的子元素，不一定是倒数第n个子元素
+	/*参数	描述
+n	要匹配的每个子元素的索引。必须是一个数字。第一个元素的索引号是 1。
+even	选取每个偶数子元素。
+odd	选取每个奇数子元素。
+formula	规定哪个子元素需通过公式 (an + b) 来选取。 实例：p:nth-last-child(3n+2) 选取每个第三段，从倒数第二段开始。
+*/
+	$(function(){
+		$("a:nth-last-of-type(2)").css("color","red")
+		//选择父级元素的倒数第二个a标签
+	})
+		
+	</script>
+	<body>
+		<ul>
+			<li>1</li>
+			<span id="">
+				www
+			</span><br />
+			<li>2</li>
+			<a href="">rrrrrr</a><br />
+			<a href="">ddddd</a><br />
+			<a href="">ss</a>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<ul>
+			<li>5</li>
+			<a href="">fersd</a>
+			<li>6</li>
+			<a href="">wqwqw</a>
+			<li>7</li>
+			<a href="">szasw</a>
+			<li>8</li>
+		</ul>
+	</body>
+</html>

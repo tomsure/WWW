@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">点击测试同步</button>
+		<button id="btn2">点击测试异步</button>
+			
+	</body>
+	<script type="text/javascript">
+	var btn1=document.getElementById("btn1");
+	var btn2=document.getElementById("btn2")
+		var xhr;
+		if(window.XMLHttpRequest){
+			xhr=new XMLHttpRequest()
+		}else{
+			xhr=window.ActiveXObject('Microsoft.XMLHTTP')
+		}
+		btn1.onclick=function(){
+			xhr.open('GET','../liziURL/demo.php',false)
+		    xhr.send(null)
+		    alert(xhr.responseText)
+		}
+		btn2.onclick=function(){
+			
+		   xhr.onreadystatechange=function(){
+				
+					
+					alert(xhr.readyState)
+			
+			}
+			xhr.open('GET','../liziURL/demo.php',true)
+			
+			 xhr.send(null)
+		    
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

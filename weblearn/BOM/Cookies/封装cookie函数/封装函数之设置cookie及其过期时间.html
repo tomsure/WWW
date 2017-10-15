@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function setCookie(name,value,iday){//给函数添加三个形参当调用函数的时候，传递的实参就表示cookie的值和过期时间
+			var odate=new Date();
+			odate.setDate(odate.getDate()+iday);
+			document.cookie=name+'='+value+';expires='+odate;
+			//注意写法
+		}
+		
+		setCookie('name','youyou',10)//注意参数里面前两个是cookie的名/值对表示的值
+		
+		alert(document.cookie)
+	</script>
+</html>

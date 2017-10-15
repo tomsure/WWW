@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		alert(typeof Node)  //火狐弹出函数，chrome弹出object，IE弹出undefined
+		//如果想获取节点的类型,就可以用nodeType属性,而IE浏览器不支持Node节点对象;
+	//	所以可以给IE创建 一个Node对象
+	   if(typeof Node=='undefined'){//通过判断支不支持Node来确定是不是IE
+	   	window.Node={
+	   		 ELEMENT_NODE:1,
+	         ATTRIBUTE_NODE:2,
+	         TEXT_NODE:3,
+	         CDATA_SECTION_NODE:4,
+	         ENTITY_REFERENCE_NODE:5,
+	         ENTITY_NODE:6,
+ 	         PROCESSING_INSTRUCTION_NODE:7,
+         	COMMENT_NODE:8,
+	        DOCUMENT_NODE:9,
+	        DOCUMENT_TYPE_NODE:10,
+	        DOCUMENT_FRAGMENT_NODE:11,
+	        NOTATION_NODE:12
+	   	}
+	   }
+		
+		alert(window.Node.ATTRIBUTE_NODE)
+		
+//		IE浏览器不支持Node对象,由于对象都是window的属性,所以可以给window创建这个属性,从而使IE支持Node对象,达到IE和W3C兼容
+	</script>
+</html>

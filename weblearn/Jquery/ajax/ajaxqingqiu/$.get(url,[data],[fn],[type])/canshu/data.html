@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击发送</button>
+		<input type="text" name="username" id="username" value="" />
+		<p></p>
+	</body>
+	<script type="text/javascript" src="../../../../jquery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//data指的是提交表单的视时候发送的表单数据，例如表单中的input元素的name属性值、和input的value
+		//注意：data必须使用json格式
+		$('#btn').click(function(){
+			var url='index.php';
+			var sendData={'username':$('#username').val()};
+			//json格式的data数据，这里的username就是input元素的name属性值，$('#username').val()指的是用户输入的数据
+			
+			$.get(url,sendData,function(data){//这里的data指的是服务器返回的数据，相当于原生ajax中的redponseText
+				if(data=='true'){//通过判断后端返回的数据前端开使输出可以给用户查看的信息
+					$('p').html('可以注册')
+					
+				}else{
+					$('p').html('不可以注册')
+				}
+			})
+		})
+		
+	
+//	如果只是请求数据的话就不需要使用data属性
+	</script>
+</html>

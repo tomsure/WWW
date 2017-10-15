@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.content-box{
+          -webkit-box-sizing:content-box;
+        -moz-box-sizing:content-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #E6A43F;
+        background: blue;
+    }
+    .padding-box{
+          -webkit-box-sizing:padding-box;
+        -moz-box-sizing:padding-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #186645;
+        background: red;                
+    }
+    .border-box{
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid #3DA3EF;
+        background: yellow;
+    }
+		
+		/*box-sizing的用法是,用于设置边框和内边距是否包含在元素的总宽度,例如一个div的宽度为100px,如果设置为content-box,则表示元素总宽度需要用元素宽度+边框和内边距的宽度,如果设置为border-box的话,则元素的总宽度就是元素的width属性的值*/
+	</style>
+	<body>
+		<div class="content-box" id="dv1">
+			ssssssssssssssssssss
+		</div>
+		<div class="padding-box" id="dv2">
+			
+		</div>
+		<div class="border-box" id="dv3">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+//		var dv1=document.getElementsByClassName('content-box')[0]
+//		var dv2=document.getElementsByClassName('padding-box')[1]
+//		var dv3=document.getElementsByClassName('border-box')[2]
+         var dv1=document.getElementById("dv1"),
+          dv2=document.getElementById("dv2"),
+          dv3=document.getElementById("dv3")
+         
+        
+		console.log(dv1.style.width)
+		console.log(dv2.style.width)
+		console.log(dv3.style.width)
+	</script>
+</html>

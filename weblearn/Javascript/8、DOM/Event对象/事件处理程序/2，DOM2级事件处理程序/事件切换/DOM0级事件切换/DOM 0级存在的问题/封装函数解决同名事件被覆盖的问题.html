@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function addEvent(obj,type,fn){
+		//添加事件函数，obj就是绑定的DOM对象，type就是事件类型名称，fn就是事件函数      
+		var saved=null; //用于保存上一个事件
+		if(typeof obj['on'+type]=='function'){//判断事件是否存在
+			saved=obj['on'+type];//如果这个对象存在这个事件，就保存上一个事件
+		}
+		
+		obj['on'+type]=function(){//执行事件
+			
+			if(saved){
+				saved()
+			}//如果保存的上一个事件存在，则执行上一个事件函数
+			fn.call(this)//指定this的指向
+		}
+		
+		}
+		
+		addEvent(document,'click',function(){
+			alert(1)
+		})
+		addEvent(document,'click',function(){
+			alert(1)
+		})
+		//这样就解决了被覆盖的问提
+		
+	</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">设置</button>
+		<button id="btn2">读取</button>
+		<button id="btn3">删除</button>
+		<input type="text" name="ipt" id="ipt" value="" />
+	</body>
+	<script type="text/javascript">
+		var btn1=document.getElementById("btn1");
+		var btn2=document.getElementById("btn2");
+		var btn3=document.getElementById("btn3");
+		var ip1=document.getElementById("ipt");
+		btn1.onclick=function(){
+			window.localStorage.setItem('name',ip1.value)
+//			setIetm()方法用于设置storage数据,格式个设置cookie相同,第一个参数是storage的key,第二个参数是storge的value
+//			这里只是使用localStorge做实验,这个方法两种storge都可以使用
+		}
+		btn2.onclick=function(){
+			alert(window.localStorage.getItem('name'))
+//			读取storge
+		}
+	</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			/*width: 400px;*/
+			height: 400px;
+			display: flex;
+			background-color: deeppink;
+			
+		}
+		#dv1{
+			
+			height: 100px;
+			background-color: darksalmon;
+			flex: 1;
+		}
+		#dv2{
+			
+			height: 100px;
+			background-color:seagreen;
+			flex: 2;
+		}
+		#dv3{
+			flex: 1;
+			height: 100px;
+			background-color:forestgreen;
+		}
+		#dv4{
+			flex: 1;
+			height: 100px;
+			background-color:darkred;
+		}
+	</style>
+	<body>
+		<div id="dv">
+		
+			<div id="dv1">1</div>
+			<div id="dv2">2</div>
+			<div id="dv3">3</div>
+			<div id="dv4">4</div>
+		</div>
+	</body>
+</html>
+  flex属性的第一个值就是设置flex-grow，定义弹性盒子元素的扩展比率，这个值没有单位，是数字，用于设置子元素在水平排列或者垂直排列的时候每个子元素在父元素中占有的空间比例；
+  例如，水平排列的时候，则如果所有的元素这个值都为1，则每个子元素的宽度就相等，如果其中一个元素设置为2，则这个元素的宽度就是其他元素的两倍，以这种比例的方式进行划分子元素的空间。
+   如果某一个子元素设置了固定的宽度或者高度，则不受这些的影响，其他设置了这个值得元素则等比划分剩余的空间

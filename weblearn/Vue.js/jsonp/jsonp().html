@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button @click='get'>点击测试</button>
+	</body>
+	<script type="text/javascript" src="../dist/vue.min.js"> 
+		
+	</script>
+	<script type="text/javascript" src="../dist/vue-resource.js">
+		
+	</script>
+	<script type="text/javascript">
+		new Vue({
+			el:'body',
+			data:{
+				
+			},
+			methods:{
+				get:function(){
+					this.$http.jsonp('https://sug.so.360.cn/suggest?callback=suggest_so',{
+						word:'niuniure'
+					},
+					{
+						emulateJSON:true
+					}
+				).then(function(res){
+					document.write(res.data.s)
+				},function(){
+					alert(res.data)
+				})
+				}
+			}
+		})
+		 
+	</script>
+</html>

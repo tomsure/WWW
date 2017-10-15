@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">读取storge </button>
+	</body>
+	<script type="text/javascript">
+	var btn=document.getElementById("btn");
+	btn.onclick=function(){
+		alert(window.localStorage.getItem('userName'))
+	}
+		
+//		设置页面设置了localStorage数据,这个页面可以读取到
+	</script>
+</html>

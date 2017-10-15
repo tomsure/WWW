@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	        <!--传统方式加载文件的方式-->
+	   <link rel="stylesheet" type="text/css" href="1.css"/>
+	   <link rel="stylesheet" type="text/css" href="2.css"/>
+	<script type="text/javascript" src="1.js"></script>
+	<script type="text/javascript" src="2.js"></script>
+	<script type="text/javascript" src="3.js"></script>
+	<script type="text/javascript" src="4.js"></script>
+	
+	<body>
+	</body>
+	<script type="text/javascript">
+//		  上面是传统加载外部js文件的方式,这样的缺陷有很多,例如:
+//		  首先，加载的时候，浏览器会停止网页渲染，会从上往下加载，等加载完引入的文件后擦会渲染页面，网页失去响应的时间就会越长；
+//		  其次，由于js文件之间存在依赖关系，因此必须严格保证加载顺序（比如上例的1.js要在2.js的前面），依赖性最大的模块一定要放到最后加载,如bootstrap依赖jquery  当依赖关系很复杂的时候，代码的编写和维护都会变得困难。
+      
+//  require.js的诞生，就是为了解决这两个问题：
+	</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="123.html" method="post">
+			<p>用户名: <input type="text"  name="user" id="user" value="" />(必填)</p>
+			<p>密码: <input type="password"  name="password" id="password" value="" />(必填)</p>
+			<p>URL: <input type="text" name="url" id="url"  value=""  /></p>
+			<input type="submit" value="点击提交"/>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript"  src="../../库文件/dist/jquery.validate.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('form').validate({
+				
+			    rules:{
+			    	user:{
+			    	
+			    		minlength:4,
+			    		required:{
+			    			depends:function(element){
+			    		      return $('#password').is(":filled")
+			    	
+			    		           }
+			    		}
+			    	},
+			    	password:{
+			    		required:true
+			    	}
+			    		
+			    	
+			    	
+			    },
+			    messages:{
+			    	user:{
+			    		required:"用户名必须填写",
+			    		minlength:"输入不得少于4位"
+			 
+			    	  },
+			    	  password:"密码必须填写"
+			    	
+			    	
+			    }
+			   
+		})
+		})
+   //rules里面有一个隐藏的depends属性，当前面表单元素的required或者其他规则里使用了depends函数而不使用true的时候，后面的元素设置了qureired：true。则提交表单的时候不会验证前面的这个表单元素，只有后面的表单元素验证通过后才会验证前面这个表单元素。
+	</script>
+</html>

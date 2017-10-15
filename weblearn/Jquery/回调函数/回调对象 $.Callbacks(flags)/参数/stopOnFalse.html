@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		var cal=$.Callbacks('stopOnFalse');
+		 function aa(){
+		 	alert(1)
+		 	return false
+		 }
+		 
+		 function bb(){
+		 	alert(2)
+		 	
+		 }
+		 cal.add(aa);
+		 cal.add(bb);
+		 cal.fire()
+	</script>
+	<body>
+		<!--当添加参数stopOnFalse的时候，如果先添加执行的函数里面如果写了return false，则这个函数后面的函数就不会在执行了，因为fire()方法是循环数组的方式去执行函数，当添加这个参数且满足函数内部添加了return false的时候，回调对象的数组就立即跳出循环，所有后面的函数就不会再执行-->
+	</body>
+</html>

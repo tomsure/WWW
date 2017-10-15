@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	
+		#myCanvas{ border: 1px solid red;}
+	</style>
+	<script type="text/javascript">
+	
+	//arcTo()用来创建两条切线之间的弧线
+	//arcTo()共五个值：
+	/* x1	弧的起点的 x 坐标。
+       y1	弧的起点的 y 坐标。
+       x2	弧的终点的 x 坐标。
+       y2	弧的终点的 y 坐标。
+       r	弧的半径。*/
+	
+		window.onload=function(){
+			var dd=document.getElementById("myCanvas").getContext("2d");
+			
+			dd.moveTo(20,20);//定义绘图起始点
+			
+		
+			dd.arcTo(40,100,100,200,30)  //定义
+			
+			dd.stroke();
+			
+			
+			
+		}
+	</script>
+	<body>
+		<p>arcTo()指的是话一条弧线，而这条弧线是紧接着上面一个绘图点的坐标为起点</p>
+	
+		<canvas id="myCanvas" width="200" height="200"></canvas>
+	</body>
+</html>

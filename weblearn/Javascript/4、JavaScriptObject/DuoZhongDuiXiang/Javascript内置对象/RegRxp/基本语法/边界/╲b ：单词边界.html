@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//单词边界指的是一个单词的开头作者结尾；
+		var str='this is a boy';
+		var reg=/\Bis/g;//匹配this中的is
+		var reg1=/\bis/g //匹配单独的is
+		var reg2=/is\B/g//匹配is右边是非单词边界；
+		var reg3=/is\b/g//匹配is由边是单词边界
+		document.write(str.match(reg)+'</br>')//返回is，这个is是this中的is，因为this中的is是匹配的非单词边界中的this；
+		document.write(str.match(reg1)+'</br>');
+		document.write(str.replace(reg,'X')+'</br>');
+		document.write(str.replace(reg1,'X')+'</br>')
+		
+		//两次匹配的都是is，但是一个是匹配的非单词边界，一个是单词边界；
+		
+		//单词边界需要看\b是在reg中匹配的字符的左边还是在右边，如果在左边，就是匹配这个左边是单词边界，如果\b在reg中的匹配字符的右边，则就是匹配右边是单词边界
+		
+		
+		
+		document.write(str.replace(reg2,'Y')+'</br>');//str中is两个is右边都没有非单词边界，所以没有被替换
+		document.write(str.replace(reg3,'Y')+'</br>')//str中is右边是单词边界，没有其他字符串，所以就可以匹配，可以被替换
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+	</script>
+</html>

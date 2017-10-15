@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+			<div id="dv">中华人民共和国</div>
+		<button id="btn">点击插入</button>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		  var btn=document.getElementById("btn");
+		  btn.onclick=function(){
+		  	dv.childNodes[0].replaceData(0,7,'美利坚合众国')
+		  }
+//      replaceData()方法用于替换文本节点,三个参数,前两个是被替换的字符的起始位置下标,第三个是替换进去的新内容
+	</script>
+</html>

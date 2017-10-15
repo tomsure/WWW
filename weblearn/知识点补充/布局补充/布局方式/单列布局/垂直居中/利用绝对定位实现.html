@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv{
+			width: 300px;
+			height: 400px;
+			background-color:darksalmon;
+			position: relative;
+			
+		}
+		#dv1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+            position: absolute;
+            top: 50%;
+           -webkit-transform: translate(0,-50%);
+		}
+		
+		/*使用方法步骤: 1,设置父元素为相对定位,子元素为绝对定位;
+		                2,设置垂直偏移top为50%,也就是相对父元素的高度,向下偏于50%的高度;
+		               3,在利用transform属性设置相对于自己的高度直偏移50%.*/
+	
+	 
+	</style>
+	<body>
+		<div class="dv">
+			<div id="dv1">
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//改变函数中this的指向
+		$(function(){
+			function show(){
+				alert(this)
+			}
+			show()
+			//当前的this指的是window
+			function ss(){
+				alert(this)
+			}
+			
+			
+		})
+	</script>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:200px ;height:200px ;background-color:red ;}
+		span{width:100px ;height:100px ;background-color:green ;display: block;}
+	</style>
+	<script type="text/javascript" src="../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//事件冒泡的现象，指的是在重叠的元素中，每个元素 都绑定了相同的事件，当事件发生相同的时候，事件先从触发元素哪里开始执行函数，在到触发事件元素的父级元素，再到上一层，一直到document，这样的现象叫做事件冒泡现象
+		  $(function(){
+		  	$("span").click(function(){
+		  		alert("input点击事件")
+		  	})
+		  	$("div").click(function(){
+		  		alert("div点击事件")
+		  	})
+		  	$(document).click(function(){
+		  		alert("document点击事件")
+		  	})
+		  	
+		  	//点击span的时候同时也点击了div也点击了document所以所有的事件都会触发
+		  })
+	</script>
+	<body>
+		<div id="">
+			<span id="">
+				
+			</span>
+		</div>
+		
+	</body>
+</html>

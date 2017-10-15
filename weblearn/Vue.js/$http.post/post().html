@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button @click='post()'>点击测试</button>
+	</body>
+	<script type="text/javascript" src="../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../dist/vue-resource.js">
+		
+	</script>
+	<script type="text/javascript">
+		new Vue({
+			el:'body',
+			data:{
+				post:function(){
+					this.$http.post('post.php',{
+						a:1,
+						b:20
+					},
+					{emulateJSON:true}//post()方法的第三个参数
+				 
+                     ).then(function(res){
+						alert(res.status)
+						//请求成功后弹出php的数据
+					},function(res){
+						alert(res.status)
+					})
+				}
+			}
+		})
+		
+//		 post()方法是$http使用post发送数据的方法,post()方法里面有三个参数,第一个参数是请求的php文件,第二个是发送给服务器php进行计算的数据,以json格式写,第三个是固定的一个json格式参数{emulateJSON:true},必须写第三个参数,否则无法执行
+	</script>
+</html>

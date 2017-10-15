@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		
+		
+		
+/***************声明在执行之前*************************************/
+             var a;
+			 alert(a);  //弹出undefined；
+			 
+/*******************声明在执行只后***********************************/
+            alert(b);
+ 		     var b   //弹出undefined；
+		     
+/*********************在执行之前声明并并赋值********************************/
+          var c=1;
+		    alert(c);// 弹出1；
+		    
+/*********************在执行之后声明并赋值**************************************/		    
+		    alert(d)
+		    var d=1; //弹出undefined；	//这里 js分析的是变量声明，而不是变量赋值，所以只会弹出undefined
+	
+	
+	</script>
+	<body>
+		<p><a href="http://www.cnblogs.com/wangfupeng1988/p/3986420.html">js上下文（上篇）</a></p>
+		<p><a href="http://www.cnblogs.com/wangfupeng1988/p/3987563.html">js上下文（下篇）</a></p>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		var Odate=new Date();
+		
+		alert(Odate.getFullYear()+'-'+(Odate.getMonth()+1)+'-'+Odate.getDate())
+		//弹出现在的时间，注意获取当前时间是使用Date对象的年、月、日三个方法，但是月份需要加1，因为外国人一月份是从十二个月的开始计算
+		
+		var Ndate=new Date();
+		Ndate.setDate(32)
+		//date.setDate()方法用于设置当前日期，但是当设置的当前日期数字超过当前月份的时候，超过的数字会跳到下个月的天数，而月份也会增加，例如，setDate(32)，由于6月份只有30天，则多余的两天会变成下个月的日期，而月份则增加一个月
+		
+	alert(Ndate.getFullYear()+'-'+(Ndate.getMonth()+1)+'-'+Ndate.getDate())
+	
+	var sDate=new Date();
+	sDate.setDate(sDate.getDate()+5)
+	//通过sDate.setDate()方法里面设置获取的当前日期（sDate.getDate()）加上指定的天数，就可以设置从今天到设置的天数之后的日期
+	alert(sDate.getFullYear()+'-'+(sDate.getMonth()+1)+'-'+sDate.getDate())
+		
+	</script>
+	<body>
+	</body>
+</html>

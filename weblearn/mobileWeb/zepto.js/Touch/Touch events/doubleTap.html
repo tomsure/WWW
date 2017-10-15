@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../zepto库/zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('#dv').on('doubleTap',function(){
+				alert('这是双击击事件')
+			})
+		})
+		
+//		 doubbleTap事件是双击事件,当短时间内连续点击屏幕两次则会触发此事件,默认此事件会将元素放大，再次双击的时候会还原
+		
+
+	</script>
+</html>

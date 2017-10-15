@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		当变量给自己的引用类型值复制给两外一个变量的时候,新的变量也会得到第一个变量的值,例如:
+		var a=new Object();
+		 a.name='ss'
+		var b=a;
+		 alert(b.name)  //把变量a,赋给变量b，变量b也变成了new object()对象；
+		 
+//但是,复制到新变量的这个引用类型值只是一个指针,指向的是这个引用类型存储在堆中的一个对象,两个变量都引用同一个值,如果改变其中一个变量,另一个变量也会受到影响,例如:
+    var a=new Object();
+		 a.name='ss'
+		var b=a;
+		 alert(b.name) ;//ss
+//	这里	 创建一个变量a,值是一个对象的实例,然后再将a的值复制给b,这个时候,a和b同时引用堆中的
+//	new Object()对象,如果任意改变a或者b的值,这两个变量都会改变，例如：
+//   再引用一下上面一个例子下面接着写:
+        b.name='vv';
+      alert(a.name)  //这里将b的name属性改变后，测试a的name属性也改变了
+      
+
+	</script>
+</html>

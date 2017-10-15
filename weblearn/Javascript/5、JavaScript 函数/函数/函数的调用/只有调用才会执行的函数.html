@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		          
+/***********************************************************************************/
+	//以下是正确写法：
+	function a(){
+				var s=1;
+				alert(s)
+				function b(){
+					var d=2;
+					alert(d)
+					
+				}
+				b()//这里要注意调用
+				
+				
+			}
+			a()//注意调用。
+			
+/*************************************************************************************/			
+	//以下写法有误，不会弹出效果
+	function aa(){
+				var ss=1;
+				
+				function bb(){
+					var ss=2;
+					alert(ss)
+					
+				}
+				//这里没有调用函数bb();
+				
+				
+			}
+			aa()//虽然这里调用了函数，但是内部函数bb()没有在里面调用，所以内部的函数bb()内的alert(ss)不会生效
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+	/*当 textarea 或文本类型的 input 元素中的文本被选择（标记）时，会发生 select 事件。
+select() 方法触发 select 事件，或规定当发生 select 事件时运行的函数。
+*/       $(function(){
+	      $("input").select(function(){
+	      	alert("你选中了文本")
+	      	//当文本被选中的时候执行的函数
+	      })
+	       
+	        $("button").click(function(){
+	        	$("input").select()
+	        	//点击使文本被选中
+	        })
+	      
+})
+
+ 	</script>
+	<body>
+		<input type="text" value="呵呵呵" />
+		<button >点击</button>
+	</body>
+</html>

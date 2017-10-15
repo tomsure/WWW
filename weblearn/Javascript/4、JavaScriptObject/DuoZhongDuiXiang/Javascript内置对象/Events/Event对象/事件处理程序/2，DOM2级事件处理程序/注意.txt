@@ -1,0 +1,2 @@
+这里要注意兼容性和domready
+注意通过addEeventListener添加的事件必须通过removeEventener去删除

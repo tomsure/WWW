@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		Object.getPrototypeOf()方法用来返回对象实例的__proto__属性,而对象实例的__proto__属性本来就指的是实例对象的原型prototype;所以可以通过这个方法来判断,例如:
+
+      function Person(){
+     };
+     Person.prototype.name='tom'
+     
+      var person1=new Person();
+      document.write(Object.getPrototypeOf(person1)+'</br>')//Object
+      document.write((Object.getPrototypeOf(person1)==Person.prototype)+'</br>')//true
+		
+	//返回true，说明实例对象person1的属性__proto__指的就是这个实例对象的构造函数的原型对象属性prototype；
+	  
+	var person2=new Person()
+	
+	document.write(Object.getPrototypeOf(person2).name)//tom;
+	//由于Object.getPrototypeOf()方法获得的就是这个实例对象的原型对象，前面已经声明原型对象prototype的neme属性，所以这里就相当于是再返回一次原型对象的name属性，所以会输出tom；
+	
+	
+		
+		
+	</script>
+</html>

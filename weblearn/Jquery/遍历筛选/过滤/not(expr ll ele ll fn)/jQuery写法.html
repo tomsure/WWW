@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	//除去选中的元素选择其他匹配的元素
+		$(function(){
+			$("p").not("#p1").css("color","red")
+			//选择除#p1元以外的所有元素
+		})
+	</script>
+	<body>
+		<p>1</p>
+		<p id="p1">2</p>
+		<p>3</p>
+		<p>4</p>
+	</body>
+</html>

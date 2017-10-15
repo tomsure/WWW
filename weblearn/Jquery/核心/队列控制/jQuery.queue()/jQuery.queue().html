@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function (){
+			function aa(){
+				alert(1)
+			}
+			function bb(){
+				alert(2)
+			}
+			$.queue(document,'q1',aa)
+			$.queue(document,'q1',bb)
+			$.queue(document,'q1',aa)
+//		$.queue()方法有三个参数,第一个是要添加队列的元素,第二个参数是带引号的队列名称,是自定义到的字符串,第三个是一个函数,就是队列执行的函数	
+
+        
+           
+			console.log( $.queue(document,'q1') instanceof Array) //打印可以看出两次添加到$.queue()下面的数据形成一个数组,$.queue()如果只加前两个参数就是返回添加到这个元素的队列里面的数组
+			
+		   console.log($.queue(document,'q1')[1])
+//     $.queue()方法 用于给元素创建队列，每执行一次并添加一个函数就是在这个方法执行的时候创建的数组的末尾添加一个数组元素，每个数组元素都是一个函数，这个有点类似于原生js中的push()方法，在数组的末尾追加元素；
+
+//        所以$.queue()方法追加队列函数还可以直接使用数组的方式,例如:
+
+          $.queue(document,'q2',[aa,bb]) //使用数组一次性添加多个队列函数
+
+			
+		})
+	</script>
+	<body>
+		
+	</body>
+</html>

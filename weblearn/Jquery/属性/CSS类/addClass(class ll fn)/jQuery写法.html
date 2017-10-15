@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{width:100px ;height:100px ;border: 1px solid red;}
+		.dv{background: red;}
+		.dv1{ border-bottom: 10px dotted green; }
+	</style>
+	<script type="text/javascript" src="../../../jQuery库/jquery-2.1.1/jquery.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		//向已选元素添加多个类名
+		$(function(){
+			$("#btn").click(function(){
+				$("div").addClass("dv dv1")  //给div添加两个类名。
+				//注意，addclass()括号里面多个类名用 空格隔开。
+				
+			})
+		})
+	</script>
+	<body>
+		<div >
+			
+		</div>
+		<input type="button" name="btn" id="btn" value="点击变化" />
+	</body>
+</html>

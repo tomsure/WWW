@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//目前只有 Chrome, Safari 6+, 和 Opera 15+ 浏览器支持 details 元素和 ontoggle 属性。	
+	window.onload=function(){
+		var de=document.getElementById("dtl");
+	de.ontoggle=function(){
+		alert("看到了面的详细信息了吧")
+	}
+	}
+	</script>
+	<body>
+		<details id="dtl">看到我了么</details><!--z这个html元素标签有兼容性-->
+	</body>
+</html>

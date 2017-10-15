@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var bn=document.getElementById("btn");
+			bn.onclick=function(){
+				history.back()//点击后会跳转到历史记录的上一个URL
+			}
+		}
+	</script>
+	<body>
+		<p> 我是第二个页面</p>
+		<a href="forward().html"></a>
+		<button id="btn">点击后退</button>
+	</body>
+</html>

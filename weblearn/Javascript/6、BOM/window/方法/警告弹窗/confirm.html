@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//返回的是一个布尔值，如果是选择了确定则返回true，如果选择了取消，则返回false
+		window.onload=function(){
+			var bn=document.getElementById("btn");
+			var p1=document.getElementById("p1")
+			btn.onclick=function(){
+				var r=confirm("请确认窗口")
+				if(r==true){
+					p1.innerHTML="你点击了确认"
+				}
+				else if(r==false){
+					p1.innerHTML="你点击了取消"
+				}
+			}
+		}
+	</script>
+	<body>
+		<button id="btn">点击测试</button>
+		<p id="p1"> 	</p>
+	</body>
+</html>

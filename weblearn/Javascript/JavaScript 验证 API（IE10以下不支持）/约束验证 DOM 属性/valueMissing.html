@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<input type="number" name="num" id="num" max="100"  required="required" value="" /> <!--//step=2-->
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript" >
+		var num=document.getElementById("num");
+		btn=document.getElementById("btn")
+		btn.onclick=function(){
+                 if(num.validity.valueMissing) {  //如果num.validity.stepMismatch的值为true
+				alert("您的输入值为空")
+			}
+		}
+		 
+         
+         // valueMissing指的是,如果input元素设置了required="required",且元素没有输入任何内容,则valueMissing的值为true,可以在此时进行错误提示
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+</html>

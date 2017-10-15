@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var xhr;
+		if(window.XMLHttpRequest){
+			xhr=new XMLHttpRequest()
+		}else{
+			xhr=new ActiveXObject('Microsoft.XMLHTTP')
+		}
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4){
+				if(xhr.status==200){
+					alert(xhr.responseText)
+				}
+			}
+		}
+		xhr.open('GET','../缓存/缓存.txt?now='+new Date().getTime(),true)
+		xhr.send(null)
+	//在客户端请求数据的时候，可能会由于缓存的原因，数据得不到更新，由于服务器响应数据是根据客户端的url来响应的，所以在请求数据的时候可以在url后面添加随机数，保证每次发送的url都不相同（服务器只会真实的url，后面添加的会忽略，但是实际上发送过去的时候却和之前不同 ）。这样就可以保证收到的响应都是最新数据
+	</script>
+</html>

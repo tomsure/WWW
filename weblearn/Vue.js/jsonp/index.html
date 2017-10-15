@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button @click='get'>点击测试</button>
+	</body>
+	<script type="text/javascript" src="../dist/vue.min.js"> 
+		
+	</script>
+	<script type="text/javascript" src="../dist/vue-resource.js">
+		
+	</script>
+	<script type="text/javascript">
+		new Vue({
+			el:'body',
+			data:{
+				get:function(){
+					console.log(this)
+					}
+				}
+					
+			
+		})
+		 
+	</script>
+</html>

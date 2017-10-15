@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv1{
+			width: 100px;height: 100px;background-color: red;
+		}
+		.dv2{
+			width: 300px;
+			height: 300px;
+			border: 3px solid black;
+		}
+	</style>
+	<body>
+			<input type="text" name="t1" id="t1" value="" />
+		<div class="dv1" id="dv1" draggable="true">
+			
+		</div>
+		<div class="dv2" id="dv2">
+			
+		</div>
+	
+	</body>
+	<script type="text/javascript">
+		var dv1=document.getElementById("dv1");
+		var dv2=document.getElementById("dv2")
+		var t1=document.getElementById("t1")
+		dv1.ondragstart=function(ev){
+			var ev=ev||window.event;
+			
+			ev.dataTransfer.setData('name','hello');
+			ev.dataTransfer.setData('user','nihao ')
+
+			this.style.background='green'
+		}
+		//开始拖动后背景颜色变成绿色
+         dv1.ondragend=function(ev){;
+         	var ev=ev||window.event;
+           
+         	this.style.backgroundColor='red'
+         	
+         }
+         
+        var i=0;
+         dv1.ondrag=function(ev){
+         	t1.value=i++;
+       
+         };
+         dv2.ondragenter=function(ev){
+         	this.style.background='blue'
+         	 
+         }
+         dv2.ondragover=function(ev){
+         	ev.preventDefault()
+         }
+         dv2.ondrop=function(ev){
+         	 console.log(ev.dataTransfer.types);
+//       	 types属性是包含setData()方法设置的一组数据中的key值,是一个数组
+         	 alert( ev.dataTransfer.types instanceof Array)//可以通过数下标的方式获得这个，这里确定他是一个数组
+         }
+         
+//         注意：1. IE5~9下没有该属性
+//
+//　　　　   2. 仅能在dragenter，dragover和drop中获取该属性
+        
+	</script>
+	
+</html>

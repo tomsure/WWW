@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	div{ width:100px ; height:100px ;background-color: red;}
+	</style>
+<script type="text/javascript" src="../../../jQuery库/老版本/jquery-2.0.3/jquery-2.0.3.min.js"></script>
+	<script>
+	//注意获取或者设置HTML元素自有的属性
+	/*attr() 方法设置或返回被【选标签 元素】的属性和值。
+            当该方法用于返回属性值，则返回第一个匹配元素的值。
+            当该方法用于设置属性值，则为匹配元素设置一个或多个属性/值对。*/
+	$(function(){
+		
+    /******************获取元素属性***************************************/		
+		//注意：！！！！！！！只能获取标签元素的属性，不能获取元素的CSS属性
+		$("#btn").click(function(){
+		alert($("div").attr("width")) 
+		//弹出undefined因为这个方法只能获取标签元素的属性，这里div标签元素没有设置width这个属性,所以弹出undefined,如果想获取width等可以直接设置在元素标签中
+		})
+		$("#btn1").click(function(){
+			    alert($("div").attr("id")) //因为元素设置了id属性所以这里弹出"dv"
+		})
+		
+		
+		
+    /***********************设置元素属性**********************/
+            //
+	})
+	</script>
+	 
+	<body>
+		<div id="dv" a="s">
+			
+		</div>
+		<button id="btn">点击查看</button>
+		<button id="btn1">点击查看</button>
+	</body>
+</html>

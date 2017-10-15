@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function Class1() 
+{ 
+    this.name = "class1"; 
+
+    this.showNam = function() 
+    { 
+        alert(this.name); 
+    } 
+} 
+
+function Class2() 
+{ 
+    this.name = "class2"; 
+} 
+
+var c1 = new Class1(); 
+var c2 = new Class2(); 
+
+c1.showNam.call(c2); 
+
+
+
+
+
+
+
+		
+		
+		
+		
+	</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table border="1" width="300">
+			<thead>
+			<tr><td>姓名</td><td>年龄</td><td>性别</td></tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>张明</td>
+					<td>25</td>
+					<td>男</td>
+				</tr>
+				<tr>
+					<td>王柳</td>
+					<td>24</td>
+					<td>男</td>
+				</tr>
+				<tr>
+					<td>李麻子</td>
+					<td>35</td>
+					<td>男</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				
+			</tfoot>
+		</table>
+	</body>
+	<script>
+	var table=document.createElement('table')
+		table.width=300;
+		table.border=1;
+		var caption=document.createElement('caption')
+		var captionText=document.createTextNode('人员表')
+		var thead=document.createElement('thead')
+		var tr=document.createElement('tr')
+		var td=document.createElement('td')
+		 var td1=document.createElement('td')
+		  tdText=document.createTextNode('姓名')
+		   tdText1=document.createTextNode('年龄')
+		  td.appendChild(tdText)
+		  td1.appendChild(tdText1)
+		   tr.appendChild(td)
+		   tr.appendChild(td1)
+		 thead.appendChild(tr)
+		 table.appendChild(thead)
+		caption.appendChild(captionText)
+		table.appendChild(caption)
+		document.body.appendChild(table)
+	  
+	  //通过DOM的方式创建表格，过程繁琐，代码量大
+	  
+	  
+	  
+	  
+//	  这种方式获取表格的方式也很繁琐,所以可以使用HTML DOM 元素中自带的方法和属性来创建和获取表格元素
+	  
+	
+	</script>
+	
+</html>

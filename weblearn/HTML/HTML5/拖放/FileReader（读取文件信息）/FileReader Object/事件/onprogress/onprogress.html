@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv");
+		dv.ondragenter=function(){
+			this.innerHTML='可以释放鼠标了'
+		}
+		dv.ondragover=function(ev){
+			ev.preventDefault()//这里阻止默认事件，才能触发drop事件函数
+			
+		}
+		dv.ondragleave=function(ev){
+			this.innerHTML='将文件托至此区域'
+		}
+		dv.ondrop=function(ev){
+			ev.preventDefault()
+			ev.stopPropagation()
+	       var fs=ev.dataTransfer.files;
+	       var fd=new FileReader();
+	       
+	          fd.readAsText(fs[0],'UTF-8');
+               fd.onloadstart=function(){
+//               dv.innerHTML='开始读取'
+                alert('开始读取文件数据')
+         
+               }
+               fd.onprogress=function(){
+//             	   dv.innerHTML='正在读取数据'
+               alert("正在读取文件数据")
+                //
+               }
+//      onprogress事件是当文件开始读取过程中执行的函数，可以在这个事件函数中做一个类似“正在读取文件”的效果
+//,如果读取的文件比较小,所以看不出来效果,所以一般读取大文件的时候可以使用这个事件作出效果         
+         
+	          fd.onload=function(){//读取成功后触发
+	          	dv.innerHTML=this.result
+	          }
+            
+		}
+		
+	</script>
+</html>

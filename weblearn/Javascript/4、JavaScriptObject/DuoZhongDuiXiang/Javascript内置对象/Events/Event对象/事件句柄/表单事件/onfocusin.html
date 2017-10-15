@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			//这个事件好像只能在IE下起作用
+			var ss=document.getElementById("text");
+			ss.onfocusin=function(){
+				alert("你的鼠标获得了我的焦点")
+			}
+		}
+	</script>
+	<body>
+		<input type="text" name="" id="text" value="" />
+	</body>
+</html>

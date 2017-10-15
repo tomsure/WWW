@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#myCanvas{ border: 1px solid red;}
+		
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var dd=document.getElementById("myCanvas").getContext("2d");
+			dd.beginPath();//开始一条路径；
+			dd.strokeStyle="#00008B"
+			dd.lineWidth=5
+			dd.moveTo(20,20);
+			dd.lineTo(150,150);
+			dd.stroke();
+			
+			dd.beginPath();
+			dd.strokeStyle="#8B008B";
+			dd.lineWidth=4;
+			dd.moveTo(20,150);
+			dd.lineTo(150,50);
+			dd.stroke();//
+			
+			
+			
+		}
+	</script>
+	<body>
+	<canvas id="myCanvas" width="200" height="200"></canvas>
+	</body>
+</html>

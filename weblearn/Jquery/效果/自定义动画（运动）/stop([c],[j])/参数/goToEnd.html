@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div {
+			width: 30px;
+			height: 30px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-1.7.2/jquery.min.js">
+	</script>
+	<script type="text/javascript">
+		$(function() {
+			$(":button").click(function() {
+				$("div").animate({
+					width: "300px"
+				}, 2000).animate({
+					height: "300px"
+				}, 1000);
+				
+			})
+			$('#btn').click(function() {
+				$('div').stop(true,true)
+			})
+		})
+
+	</script>
+
+	<body>
+		<div id="">
+
+		</div>
+		<input type="button" name="" id="" value="点击开始" />
+		<button id="btn">点击停止</button>
+
+	</body>
+<!--stop()第二个参数true用于立即完成动画，要达到这个效果，必须要有第一个参数true；
+	但是有前两个参数的时候，只能立即完成当前的运动，而其他的运动会被阻止；
+	如果当前的运动的回调函数中有运动，则这个回调函数里的运动只会正常完成运动，不会被阻止，也不会立即完成；
+-->
+</html>

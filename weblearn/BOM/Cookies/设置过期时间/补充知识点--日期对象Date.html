@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var odate=new Date();
+		    odate.setDate(odate.getDate()+1)
+		    //Date对象的setDate()方法用于设置日期对象一个月中的某一天
+		    //getDate()方法用于返回当前月份的某一天；
+		    //所以可以通过getDate()方法获取当前本地时间和其他换算方法得来的值来作为setDate()的参数，从而设置月份中的指定某一天
+		    //这里的odate.getDate()+1就可以理解为一天以后，也就是明天；
+		    //odate.setDate(odate.getDate()+1)的目的就是为了得到一天后的时间是几号，因为在实际开发中如果日期很大是很难换算到具体时期的
+		alert(odate.getFullYear()+'-'+(odate.getMonth()+1)+'-'+odate.getDate())
+		//注意月份要加1；
+		//由于上一步已将时间设置为一天以后，所以现在返回的时间就是一天以后的时间，
+		//实际上使用了两次odate.getDate()，第一次是系统自动识别的时间，第二次是通过setDate()方法设置过的时间
+		
+		
+		
+	</script>
+</html>

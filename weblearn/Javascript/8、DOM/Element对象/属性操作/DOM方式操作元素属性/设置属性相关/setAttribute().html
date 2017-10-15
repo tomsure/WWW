@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			var d=document.getElementById("dv");//获取节点
+			d.setAttribute("class","div1");//设置节点的属性，括号里面写属性名称和属性值
+			alert(d.className)//弹出div1，因上面已经给他设置了div1这个属性
+	     var e=document.getElementById("dv1");
+	     e.setAttribute("class","tom");
+	     alert(e.className)//这里弹出tom，因为dv1之前已经设好了className，这里再设置就是修改className
+		}
+		
+		
+	</script>
+	<body>
+		<div id="dv" >
+			
+		</div>
+		<div id="dv1" class="dom">
+			
+		</div>
+		
+	</body>
+</html>

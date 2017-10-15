@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		/*这个选择器可以选择属性值包含指定词汇(单词)的元素*/
+		p[title~="cd"]{color: darkred; font-size: xx-large;}
+	</style>
+	<body>
+		<p title="a cd c">ok</p>
+		<p title="ab cd ss">ok</p>
+		<p title="cd">ok</p>
+		<p title="bc dd">ok</p>
+	
+	</body>
+</html>

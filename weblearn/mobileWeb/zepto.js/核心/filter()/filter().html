@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<div id="">
+			<p id="p1">  1</p>
+		    <p id="p2">2</p>
+		    <p id="p3">3</p>
+		    
+		    <li>1</li>
+		    <li>2</li>
+		    <li>3</li>
+		    <li>4</li>
+		</div>
+	</body>
+	<script type="text/javascript" src="zepto.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		$(function(){
+			$('p').filter('#p2').css('backgroundColor','red')
+			
+		})
+//		  filter()方法用于筛选匹配里面设置的参数元素,和not相反,例如这里要选择#p2这个元素选择器匹配的元素,选择后设置样式,就只有#p2才会生效
+         
+
+	</script>
+</html>

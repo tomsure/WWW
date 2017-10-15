@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击获取</button>
+		<textarea name="" id="ta" rows="20" cols="20"></textarea>
+	</body>
+	<script type="text/javascript">
+		var btn=document.getElementById("btn");
+		var ta=document.getElementById("ta");
+		btn.onclick=function(){
+			
+			navigator.geolocation.getCurrentPosition(function(position){
+			ta.value='经度：'+position.coords.longitude;
+			//获取精度
+			alert(position)
+			
+		})
+		}
+         
+//  getCurrentPosition()方法是用于单次请求地理位置信息,他的第一个参数是请求地理位置请求成功后执行的函数,这个函数有一个参数,可以随便命名,上面这个例子命名为position，当然也可以命名为a，函数执行成功后会返回一个Position对象，函数里面的第一个参数指的就是这个Position对象，这里可以通过弹出第一个参数证明
+// 这个对象可以获取到当前设备的地理位置信息，包括精度，纬度，海拔，速度等等，
+//  position对象有一个coords属性,这个属性又带有多个属性指的就是精度，纬度，海拔，速度等等，所以描述为 position.coords.longitude的就是当前设备的精度
+
+	</script>
+</html>

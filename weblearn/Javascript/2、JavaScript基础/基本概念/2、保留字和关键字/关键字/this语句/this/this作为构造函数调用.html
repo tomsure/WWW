@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	//因为js没有类的概念，创建对象是用构造函数或json格式创建
+	 function Person(name,age){
+	 	this.name=name;
+	 	this.age=age;
+	 	this.sayName=function(){
+	 		alert(this.name)
+	 	}
+	 }
+		var person1=new Person('gom',23);
+		person1.sayName()
+//	js在执行构造函数创建实例化对象(var person1=new Person())的时候,经历以下几个步骤:
+//	1,创建空对象{},空对象的constructor指向构造函数(上面的例子就是Perosn),
+//  2,把this指向空对象，此时空对象的原型指的是构造函数的prototype,例如:
+	function Dog(){
+		alert(this);//Object,此时this是一个空对象
+		alert(this.__proto__==Dog.prototype)//true
+		this.name='dd';
+		this.play=function(){
+			alert(this.name)
+		}
+	}
+	
+	 //	3,执行该函数(就是空对象添加属性和方法)
+     //	4,返回给空对象添加了属性(方法)的新对象；
+    var dog=new Dog();//此时新对象已经指向dog
+    dog.play()
+		
+		
+	
+		
+		
+		
+	</script>
+</html>

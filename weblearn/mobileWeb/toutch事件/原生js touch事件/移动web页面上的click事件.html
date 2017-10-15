@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+			#dv{
+				width: 200px;
+				height:200px ;
+				background-color: red;
+			}
+		</style>
+	<body>
+		<div id="dv"></div>
+	</body>
+	<script type="text/javascript" >
+		
+	</script>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		  dv.onclick=function(){
+		  	alert('点击事件 ，会延迟')
+		  }
+	</script>
+	   <!--当使用谷歌开发者工具调试的时候发现，点击这个div的时候，会延迟一下才弹出信息，这是click事件在web页面上的特性，所以在移动端就使用toutch事件代替click，就没有这个bug-->
+</html>

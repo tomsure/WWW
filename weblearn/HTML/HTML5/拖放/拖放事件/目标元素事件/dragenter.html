@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv1{
+			width: 100px;height: 100px;background-color: red;
+		}
+		.dv2{
+			width: 300px;
+			height: 300px;
+			border: 3px solid black;
+		}
+	</style>
+	<body>
+		<div class="dv1" id="dv1" draggable="true">
+			
+		</div>
+		<div class="dv2" id="dv2">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv1=document.getElementById("dv1");
+		var dv2=document.getElementById("dv2")
+		dv1.ondragstart=function(){
+			this.style.background='green'
+		}
+		//开始拖动后背景颜色变成绿色
+         dv1.ondragend=function(){
+         	this.style.backgroundColor='red'
+         }//结束拖动后背景颜色又变成红色
+         dv2.ondragenter=function(){
+         	this.style.backgroundColor='blue'
+         }
+//     ondragenter事件表示当拖拽的元素进入到本元素后触发的事件,类似于鼠标事件的onmouseover
+	</script>
+	
+</html>

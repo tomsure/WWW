@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+	//childNodes表示子节点的集合，是一个数组,其中元素节点两边的空格也是节点属于文本节点;
+	window.onload=function(){
+		var s=document.getElementById("form");
+		alert(s.childNodes.length)//弹出的是数字7，代表它的子节点是有7格。因为包含了两边的空格；
+		alert(s.children.length)//弹出的是3，这里表示的是除去空格，他的实际子节点的个数
+	}
+	
+	</script>
+	<body>
+	<form action="" method="post" id="form">
+		
+		<input type="submit" value="" id="ipt1"/>
+		<input type="submit" value="" id="ipt2"/>
+		<input type="submit" value="" id="ipt3"/>
+	</form>
+	</body>
+</html>

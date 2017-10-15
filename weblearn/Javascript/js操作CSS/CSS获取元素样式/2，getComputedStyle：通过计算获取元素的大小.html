@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			你好
+		</div>
+	</body>
+	<script type="text/javascript">
+		var dv=document.getElementById("dv")
+		 var styleDiv=window.getComputedStyle?window.getComputedStyle(dv,null):dv.currentStyle
+//	这里申明一个变量，如果window支持window.getComputedStyle()方法,则用这个方法作为变量的值,在除IE外其他浏览器都支持这个方法,如果不支持则说明是IE浏览器,则使用obj.currentStyle属性作为变量的值,
+// 这个变量返回一个CSSStyleDeclaration对象，这个对象包含了元素所有的计算后的CSS样式，例如这里要获取div的宽度，则可以使用
+        alert(styleDiv.width)
+		//来计算
+		
+		
+//		通过计算获取元素的大小，无关你是否是行内、内联或者链接，它经过计算后得
+//到的结果返回出来。如果本身设置大小，它会返回元素的大小，如果本身没有设置，非 IE
+//浏览器会返回默认的大小，IE 浏览器返回 auto。
+	</script>
+</html>

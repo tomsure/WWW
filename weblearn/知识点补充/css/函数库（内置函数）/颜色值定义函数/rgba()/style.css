@@ -1,0 +1,8 @@
+body {
+  background: rgba(255, 0, 255, 0.2);
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(51, 77, 179, 0.5);
+}
