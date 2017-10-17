@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>layui在线调试</title>
+    <link rel="stylesheet" href="css/layui.css">
+    <!--<script src="js/jquery-1.11.3.min.js"></script>-->
+    <!--<script src="//res.layui.com/layui/build/layui.js"></script>-->
+    <!--<script src="js/layui.js"></script>-->
+    <script src="js/layui.all.js"></script>
+    <script>
+        layui.use(['layer', 'element'], function(){
+            var element = layui.element();
+            var layer = layui.layer;
+        });
+
+    </script>
+</head>
+<body>
+
+<div class="layui-tab layui-tab-card">
+    <ul class="layui-tab-title">
+        <li class="layui-this">学员信息区</li>
+        <li>短信/邮件历史记录区</li>
+        <li>信息上载区</li>
+    </ul>
+    <div class="layui-tab-content" style="height: 100px;">
+        <div class="layui-tab-item layui-show">
+                <form id="uploadtrainfileandteacherinfo" name="uploadform" action="savetrainfileandteacherinfo.do" method="post" enctype="multipart/form-data">
+                    <div>工作文件上载区</div>
+                    <div style="">
+                        <div style="margin:5px;">
+
+                            <table width="100%" border="0" cellspacing="0">
+                                <tr id="uploadfile"><tr>
+                                <input type="hidden" name="actId" value="207"/>
+                                <input type="hidden" name="type" value="0"/>
+                                <tr><td><input type="button" value="添加" onclick="addMore();"/></td></tr>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div style="margin-top:5px;">授课老师信息上载区</div>
+                    <div style="">
+                        <div style="margin:5px;">
+                            <table width="100%" border="0" cellspacing="0">
+
+                                <tr>
+                                    <div id="teacherButton"></div>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div style="margin-top:5px;">
+                        <input type="submit" value="提交" />
+                        <input type="button" value="返回" onclick="returnButton();" />
+                        <input type="hidden" value="1" id="backpage"/>
+                    </div>
+                </form>
+        </div>
+        <div class="layui-tab-item">
+            <div id="actbutton">
+            </div>
+            <div>
+                <div id="search-panel" style="border:1px solid #CCC;margin-bottom:10px;">
+                    <form action="" id="search" name="frm">
+                        <input type="hidden" name="ids" value="" />
+                        学号:<input type="text"  name="student.sid" value=""/>
+                        姓名:<input type="text" name="student.sname" value=""/>
+                        手机号码:<input type="text" name="student.sphone" value=""/>
+                        <!--2017-07-07 新增选取标志查询-->
+                        选取标示:<input id="zhaungt" name="student.zhaungt" style="padding:5px"/>
+                        <!--<select name="student.zhaungt">
+                                      <option value="">全部 </option>
+                                      <option value="0">前台报名</option>
+                                      <option value="1">排队中</option>
+                                      <option value="2">已发送参会通知</option>
+                                      <option value="3">已确认参会</option>
+                                      <option value="4">已报到</option>
+                                    </select>-->
+                        报名状态:<select name="student.status">
+                        <option value="报名成功"  selected="selected">报名成功</option>
+                        <option value="已经退报名">退报名</option>
+                    </select></br>
+
+
+                        分类:<select name="student.stuSort">
+                        <option value="">不限</option>
+                        <option value="600">非常重要</option>
+                        <option value="500">重要</option>
+                        <option value="400">普通</option>
+                        <option value="300">未确认三次以上</option>
+                        <option value="200">审核未通过</option>
+                        <option value="700">拉黑</option>
+                    </select>
+                        是否报到:<select name="student.arriveStatus">
+                        <option value="">全部 </option>
+                        <option value="是">是</option>
+                        <option value="否">否</option>
+                    </select>
+                        每页条数:<input  name="limit" id="pagenum" style="width:60px;" value="10"></input>
+                        是否上市公司:
+                        <select class="select" name="student.islistedCompany">
+                            <option value="">不限</option>
+                            <option value="上市公司">上市公司</option>
+                            <option value="拟上市公司">拟上市公司</option>
+                        </select>
+
+                        <input type="hidden" id="stuNames" name="student.stuNames" value="">
+                        <input type="hidden" id="stuPhones" name="student.stuPhones" value="">
+                        <input type="submit" value="搜索"/><br/>
+
+
+
+
+                    </form>
+                </div>
+                <div align="left" style="float:left;margin-bottom:10px;"><input type="button" class="addStudentInfo" id="addStudent" value="新增" />
+                    <input type="button" id="delStudent" value="删除" />
+                    <input type="button" id="refreshStudent" value="刷新" onclick="javascript:$('#grid').omGrid('reload')"/>
+                </div>
+                <div class="clearfix" style="clear:both;"></div>
+                <div align="left" class="btnBox" style="text-align:right;margin-right:10px;">
+                    <input id="saveStudent" type="button" value="保存" />
+                    <input type="button" value="返回" onclick="returnButton();" />
+                    <input id="generateButton" type="button" value="生成学号"/>
+                    <input id="sendtrainingsms" type="button" value="发送群短信"/>
+                    <input id="sendtrainingemail" type="button" value="发送群邮件"/>
+                    <input id="sendrepayegisterinfo" type="button" value="发送补报名信息"/>
+                    <input id='fasongtz' type='button' value='发送通知' />
+                    <div style="clear:both;margin-bottom:10px;"></div>
+                    <input type="button" value="下载学员信息" onclick="downloadStudentInfo(207,'报名成功')"/>
+                    <input type="button" value="下载选中学员信息" id="downloadStudentInfos">
+                    <input type="button" value="下载搜索学员信息" onclick="downloadSearch(207)">
+                    <input type="button" value="下载学员报到信息" onclick="downloadStudentArriveInfo(207,'success')"/>
+                    <input type="button" value="下载退报名学员信息" onclick="downloadStudentInfo(207,'已经退报名')"/>
+                    <input type="button" value="下载删除学员信息" onclick="downloadStudentInfo(207,'已经被删除')"/>
+                    <input type="button" value="生成学员信息模板" onclick="createTemplate(207)"/>
+                    <input type="button" value="生成通讯录" onclick="createContactsExcel(207)"/>
+                    <div style="clear:both;margin-bottom:5px;"></div>
+                    <form name="downloadStatusForm" id="downloadStatusForm" action="">
+                        <input type="hidden" value="" name="student.status" />
+                    </form>
+                    <form name="searchStudentform" id="searchStudentform"
+                          action="./searchStudent.do" method="post" enctype="multipart/form-data">
+                        <input type="hidden" value="207" name="activityVo.actId"/>
+                        <input type="file" value="上传查找名单" id="uploadSearchFile" name="searchFile"/>
+                        <input type="submit" value="上传查找名单"/>
+                    </form>
+
+                    <form name="saveStudentform" id="saveStudentform"
+                          action="./saveStudent.do" method="post" enctype="multipart/form-data">
+                        <input type="hidden" value="207" name="activityVo.actId"/>
+                        <input type="file" value="上载学员信息" id="uploadStudentFile" name="studentFile"/>
+                        <input type="submit" value="上载学员信息"/>
+                    </form>
+                    <form name="saveArriveform" id="saveArriveform"
+                          action="./saveArrive.do" method="post" enctype="multipart/form-data">
+                        <input type="hidden" value="207" name="activityVo.actId"/>
+                        <input type="file" value="上载学员报到信息" id="uploadArriveFile" name="arriveFile"/>
+                        <input type="submit" value="上载学员报到信息"/>
+                    </form>
+                    <div style="clear:both;margin-bottom:5px;"></div>
+                </div>
+            </div>
+            <div>
+                <table id="grid">
+                </table>
+            </div>
+        </div>
+        <div class="layui-tab-item">
+            <div>
+                <div align="right" style="margin-right:30px;">
+                    <div id="logButton" style="border-top:none;"></div>
+                </div>
+                <table id="historyGrid">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+
+
+</script>
+</body>
+</html>
