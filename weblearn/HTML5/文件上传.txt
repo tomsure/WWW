@@ -1,0 +1,4 @@
+﻿
+  使用H5:  form必须以post方法提交，form里面必须设置ecctype=multipart/form-data 删除的话，可以将input 放在一个div里面，将div删除，input就删除了，以这个思路
+
+ 
