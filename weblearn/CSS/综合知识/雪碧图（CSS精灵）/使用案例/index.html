@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		
+		.wrap{
+			
+		}
+		.icon1{
+			display: inline-block; /* 首先设置元素为内联块级元素*/
+			background: url("sprite.jpg"); /*设置这个元素的背景图*/
+			border: 1px solid red;
+			width: 50px; /*必须设置宽度和高度，否则不会显示*/
+			height: 50px;
+			background-position: 80px 4px;  /*设置图片偏移,使需要显示的图标显示在制定元素区域内*/
+		}
+		
+		.icon2{
+			display: inline-block;
+			height: 30px;
+			width: 30px;
+			border: 1px solid red;
+			margin-left: 400px;
+			background: url("sprite.jpg");
+			background-position: 30px -40px;
+		}
+	</style>
+	<body>
+		 <div class="wrap">
+		 	<i class="icon1"></i><span>功能设置</span>
+		 </div>
+		 
+		 <div class="wrap">
+		 	<i class="icon2"></i>
+		 </div>
+	</body>
+</html>
