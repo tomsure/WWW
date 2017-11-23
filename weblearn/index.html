@@ -1,27 +1,118 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-	</head>
-	<body>
-		
-	</body>
-	<script type="text/javascript" src="Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
-		
-	</script>
-	<script type="text/javascript">
-		$.extend({
-			aa:function(){
-				alert(1)
-			}
-		})
-		
-		
-		
-		
-	   $('body').aa()
-	</script>
-	
-	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>javascript添加行demo</title>
+ <script type="text/javascript"> 
+ /**验证表单复选框是否有选择*/
+ function isValidChkSelect(frm){ 
+  var chk = frm.chked; 
+  if(chk == undefined){ 
+  return; 
+  } 
+  var len = frm.chked.length; 
+  if(chk.length == undefined){ 
+  // 只有一个checkbox 
+  if (chk.checked == true) { 
+   return true; 
+  } 
+  } else { 
+  for(var i = 0; i < chk.length; i++) { 
+   if (chk[i].checked == true) { 
+   return true; 
+   } 
+  } 
+  } 
+  return false; 
+ } 
+ /**选择所有文本框*/
+ function selectAll(frm){ 
+  for (var i = 0; i < frm.elements.length; i++){ 
+  var e = frm.elements[i]; 
+  if (e.name != 'chkall' && e.type == 'checkbox') 
+   e.checked = frm.chkall.checked; 
+  } 
+ } 
+ /**添加新行*/
+ function addNew(){ 
+  var objMyTable = document.getElementById("tbl"); 
+  var index = objMyTable.rows.length - 1; 
+  var nextRow = objMyTable.insertRow(index);// 插入新行 
+  var objCel_0 = nextRow.insertCell(0);// 添加单元格 
+  objCel_0.innerHTML = "<input type='checkbox' name='chked' value='' />"; 
+  var objCel_1 = nextRow.insertCell(1); 
+  // nextRow.rowIndex -- 行索引 
+  objCel_1.innerHTML = "<input type='text' name='newRow"+nextRow.rowIndex+"' /> <a href='#' onclick='delRow(this)'>删除</a>"; 
+ } 
+ /**删除行对象*/
+ function delRow(obj){ 
+  //obj.parentNode.parentNode.removeNode(true); // Firefox不兼容 
+  var new_tr = obj.parentNode.parentNode; 
+  var tmp = new_tr.parentNode; 
+  tmp.removeChild(new_tr); // 删除子节点 
+ } 
+ /**将文本框值赋给同一行对应的复选框*/
+ function setValue(obj, obj_chk){ 
+  obj_chk.value = obj.value; 
+ } 
+ function doSubmit(frm){ 
+  if(isValidChkSelect(frm) == false){ 
+  alert("选择不能少于一项"); 
+  return false; 
+  } 
+  for(var i = 0; i < document.getElementsByTagName("input").length; i++) { 
+  var obj = document.getElementsByTagName("input")[i]; 
+  if(obj.type == "text" && obj.name.substring(0, 6) == "newRow"){ 
+   var obj_chk = obj.parentNode.parentNode.childNodes[0].childNodes[0];// 复选框对象 
+   if(valid(obj, obj_chk)){ 
+   setValue(obj, obj_chk);// 同一行的文本框值 赋值给 复选框 
+   continue; 
+   } else { 
+   return false; 
+   } 
+  } 
+  } 
+  return true; 
+ } 
+ function valid(obj, obj_chk){ 
+  if(obj_chk.checked){ 
+  var patrn = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/; 
+  if(obj.value == ""){ 
+   alert("添加的地址不能为空！"); 
+   return false; 
+  } 
+  if(!patrn.test(obj.value)){ 
+   alert("请输入正确的邮件地址！"); 
+   return false; 
+  } 
+  } 
+  return true; 
+ } 
+ </script> 
+</head> 
+<body> 
+ <form method="post" action="" onsubmit="return doSubmit(this)"> 
+ <table id="tbl" border="1" cellpadding="4" style="border-collapse: collapse" width="100%"> 
+  <tr> 
+  <td><input type="checkbox" name='chkall' onclick="selectAll(this.form)"/>全部选择</td> 
+  <td> 
+   允许发送地址 
+   <a href="#" onclick="addNew()">添加新地址</a> 
+  </td> 
+  </tr> 
+  <tr> 
+  <td> 
+   <input type="checkbox" name="chked" value="mailfrom@gmail.com"> 
+  </td> 
+  <td>mailfrom@gmail.com</td> 
+  </tr> 
+  <tr> 
+  <td colspan="2"> 
+   <input type="submit" value="提交" name="B1"> 
+  </td> 
+  </tr> 
+ </table> 
+ </form> 
+</body> 
 </html>

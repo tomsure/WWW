@@ -2,7 +2,7 @@ module.exports={
 	entry:'./js/main.js',  //这里填写打包的入口文件，如果是多个入口文件则写成对象额形式
 	
 	output:{
-path:'C:\\AppServ\www\weblearn\知识点补充\web项目构建部署\webpack\\4、webpack配置文件（快速打包）demo\build' ,
+path:'E:\\AppServ\www\weblearn\知识点补充\web项目构建部署\webpack\\4、webpack配置文件（快速打包）demo\build' ,
 		//打包到当前目录的build目录下面，这里设置打包后文件的位置，需要写绝对路径
 //		 目前windows环境下测试未成功,linux下测试成功
 		filename:'build.js'  //打包后的文件名称
