@@ -13,8 +13,12 @@
 	<script type="text/javascript">
 		$(function(){
 			 $('#btn').click(function(){
-			 	$(document).ajax({
-			 		
+			 	$.ajax({
+			 		url:'index.json',
+			 		type:'post',
+			 		success:function(data){
+			 			alert(data)
+			 		}
 			 	})
 			 })
 		})
