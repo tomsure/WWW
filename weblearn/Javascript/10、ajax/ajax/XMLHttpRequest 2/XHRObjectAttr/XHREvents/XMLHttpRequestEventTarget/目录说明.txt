@@ -1,1 +1,0 @@
-本目录XMLHttpRequestEventTarget是目标事件
