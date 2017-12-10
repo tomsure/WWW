@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+ 这里讲json 数据输出到页面
+操作步骤：
+   一、创建项目
+   
+  二、
+     1、打开项目目录综中的routes 目录中的index.js 文件,如下如：
+     
+          <img src="../../images/index.js.png"/>
+     2、复制这个文件中：
+           router.get('/', function(req, res, next) {
+           res.render('index', { title: '你好' });
+           });
+              这段函数代码，再放到这个方法下面：如图；
+          
+            <img src="../../images/1index.png"/>
+      3、在mockjs 官网使用说明中nodejs 部分，代码内容是：
+	     var Mock = require('mockjs');
+	    var data = Mock.mock({
+	    'list|1-10': [{
+	        'id|+1': 1
+	    }]
+	   });
+	  console.log(JSON.stringify(data, null, 4))
+          将这部分代码复制到第2步的：
+             router.get('/', function(req, res, next) {
+           res.render('index', { title: '你好' });
+           });
+           这段函数的router.get（）方法里  res.render('index', { title: '你好' });上面
+            复制之后如图所示：
+              <img src="../../images/index2.png"/>
+              
+        4、在复制后的代码中的console.log(JSON.stringify(data, null, 4)) 上面一句话声明一个变量，将JSON.stringify(data, null, 4) 设为变量:
+           ret=JSON.stringify(data, null, 4),
+            然后   console.log(ret)
+            并将res.render()方法中的title的值也设为ret,
+            如下图所示：
+             <img src="../../images/index3.png"/>
+ 
+  三、安装mockjs 到项目中： npm install mockjs --save
+  
+  四、 启动项目： 输入命令 supervior ./bin/www  此时会有json格式的数据输出到页面
+  
+  
+       导出时运行命令：
+   1、进入目录E:\gitHub\examples\nodejs\nodeServer\mockjs\2.express+supersvisor+mockjs
+       2、执行启动：supervior ./bin/www
+       
+       
+       此时只会把数据输出为页面，所以还需要进一步处理
+       
+       
+
+	</body>
+</html>
