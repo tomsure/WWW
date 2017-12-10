@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form id="iform" action="" method="post">
+			
+			用户名：<input type="text" name="username" value=""/></br>
+			年龄：<input type="text" name="age" value=""/></br>
+			工作：<input type="text" name="job" value=""/></br>
+			e-mail:<input type="text" name="e-mail" value=""/></br>
+			<input type="button" name="" id="" value="ajax发送" onclick="fmSend()" />
+		</form>
+		<div id="dv">
+			<!--存放服务器读取到的表单数据-->
+		</div>
+	</body>
+	<script type="text/javascript">
+//		formData 表单数据对象,是HTML5中的API,它能以表单对象作参数,自动的把表单的数据打包,当ajax发送数据时候,发送这些FormData,达到发送表单数据的目的;		
+		
+		function fmSend(){
+			var fm=document.getElementById("iform");//获取表单DOM对象
+			var fd=new FormData(fm);//创建FormDate对象
+			
+			var xhr=new XMLHttpRequest()
+			  xhr.open('POST','formdata.php',true)
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4){
+					if(xhr.status==200){
+					document.getElementById("dv").innerHTML=xhr.responseText
+					}
+				}
+					
+			}
+			xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded;')
+			xhr.send(fd)//将FormDate对象填写进open()方法，即可将表单数据打包发送
+		}
+	/*	使用 FormData对象打包表单数据方式提交表单步骤:
+		前提:绑定一个提交表单的事件函数,例如 button的onclick,这里是使用onclick绑   定          
+		1,获取 form表单对象,并赋值给一个变量;
+		2,创建 FormData对象: new FormData(),并将获取的表单对象填写进FormDate()的括号里,将这个 new FormData()赋值给变量,如: var fd=new FormData(fm);
+		3,创建ajax对象执行异步请求(表单提交要使用POST方式);
+		4,发送表单数据:执行open方法后,将创建的FormDte对象填写在open()的括号里面       */
+		
+ 	</script>
+</html>

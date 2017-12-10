@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var xhr;
+		if(window.XMLHttpRequest){
+			xhr=new XMLHttpRequest()
+		}else{
+			xhr=new ActiveXObject('Microsoft.XMLHTTP')
+		}
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4){
+				if(xhr.status==200){
+					alert(xhr.responseText)
+					alert(typeof xhr.responseText)//返回 string 都到的服务器响应数据都是字符串
+					alert(eval(xhr.responseText));
+//					js全局函数eval可以将字符串解析成js各种语句,具体解析语句要看解析的字符串的写法（格式),例如如果写成[1,2,3,4,5],则会被解析成一个数组
+//这里可以利用eval()方法解析服务器文件中的字符串内容
+                   alert(eval(xhr.responseText) instanceof Array)//返回true，说明解析后变成了一个数组
+				}
+			}
+		}
+		xhr.open('GET','动态读取数据.txt',true)
+		xhr.send(null)
+		
+//		eval()方法可以读取服务器返回的响应数据,将相应数据解析成数组,json等等数据
+	</script>
+</html>

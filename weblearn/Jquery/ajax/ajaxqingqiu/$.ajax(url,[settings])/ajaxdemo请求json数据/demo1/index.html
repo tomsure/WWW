@@ -1,0 +1,37 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>ajax请求本地json文件</title>  
+</head>  
+<body>  
+	<button id="btn">点击测试</button>
+<div id="test"></div>  
+<script  src="../jquery-2.1.4/jquery.min.js"></script>  
+<script>  
+    $(function(){  
+          $('#btn').click(function(){
+          	$.ajax({  
+            //请求方式  
+            type:"GET",  
+            //文件位置  
+            url:"index.json",  
+            //返回数据格式为json,也可以是其他格式如  
+            dataType: "json",  
+            //请求成功后要执行的函数，拼接html  
+            success: function(data){  
+//              var str="<ul>";  
+//              $.each(data.list[0].manage,function(i,n){  
+//                  str+="<li>"+n.tool+"</li>";  
+//              });  
+//              str+="</ul>";  
+//              $("div").append(str);  
+                console.log(data.list[0].a)
+            }  
+        });  
+          	
+          })
+    });  
+</script>  
+</body>  
+</html>  

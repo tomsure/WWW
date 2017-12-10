@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var XHR;
+		if(window.XMLHttpRequest){
+			XHR=new XMLHttpRequest()//如果浏览器支持XMLHttpRequest对则创建XMLHttpRequest
+		}else{
+			XHR=new ActiveXObject('Microsoft.XMLHTTP')//如果不支持则创建ActiveXObject对象
+		}
+		XHR.open('GET','../liziURL/demo.php',false);
+         XHR.send()
+		alert(XHR.statusText)
+		//statusText表示返回服务器响应的状态码的说明，由于各个浏览器状态码说明可能不一致，所以尽量少用该属性，一般使用status就够了
+		
+	</script>
+</html>

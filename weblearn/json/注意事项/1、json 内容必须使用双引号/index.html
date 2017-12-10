@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../weblearn/Jquery/jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<body>
+		<button id="btn">点击测试</button>
+	</body>
+	<script type="text/javascript">
+		 $(function(){
+		 	$('#btn').click(function(){
+		 		$.ajax({
+		 			url:'index.json',
+		 			type:"GET",
+		 			dataType:'json',
+		 			success:function(data){
+		 				console.log(data.tangxu.职业)
+		 			}
+		 		})
+		 	})
+		 })
+	</script>
+</html>

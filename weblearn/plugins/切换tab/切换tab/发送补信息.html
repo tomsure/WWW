@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table tr td{
+            font-size: 12px;
+        }
+        table tr td input{
+            font-size: 12px;
+        }
+        .table_mar{
+            margin-top: 18px;
+        }
+    </style>
+</head>
+<body>
+<table width="550px" border="0" class="grid_layout table_mar" cellspacing="0">
+
+    <form name="saveStudentform" id="saveuseStudent"
+          action="./../../training/maintain/saveuseStudent.do" method="post" enctype="multipart/form-data">
+        <tr>
+            <td width="175px" align="right">上载补报名学员信息:</td>
+            <td width="">
+                <input type="hidden" value="196" name="activityVo.actId"/>
+                <input type="file" value="上载补报名学员信息" id="uploadStudentFile" name="studentFile" style="width: 172px;"/></td>
+            <td width="243px"><input type="submit" value="上载补报名学员信息" style="margin:0;"/></td>
+        </tr>
+    </form>
+</table>
+<table width="550px" border="0" class="grid_layout" cellspacing="0" style="margin-top:10px;">
+    <tr >
+        <td width="66px" align="right" valign="center"><span class="color_red">*</span>邮件地址:</td>
+        <td width="166px">
+            <input type="text" name="actStudentList[0].semail" value="" class="input_text" style="width: 150px;"/>
+            <span class="errorMsg"></span></td>
+        <td width="66px" align="right" valign="center"><span class="color_red">*</span>手机号:</td>
+        <td width="120px">
+            <input type="text" name="actStudentList[0].sphone" value="" class="input_text" style="width: 90px;"/>
+            <span class="errorMsg"></span></td>
+        <td ><input type="button" name="addmorebutton" value="+"/></td>
+        <td ><input type="button" name="delmorebutton" value="-"/></td>
+    </tr>
+    <tr id="repayegisterinfoFormtr">
+        <td colspan="6">
+            <input type="submit" value="确定" style="margin-top:10px;padding:3px 6px"/>
+            <input type="button" value="取消" onclick="$('#repayegisterinfo').omDialog('close');"/>
+        </td>
+    </tr>
+</table>
+
+
+
+<div id="repayegisterinfo" class="om-dialog-content om-widget-content" scrolltop="0" scrollleft="0" style="width: auto; min-height: 71px; height: auto;">
+    
+    <table width="550px" border="0" class="grid_layout" cellspacing="0">
+        
+	    <form name="saveStudentform" id="saveuseStudent" action="./../../training/maintain/saveuseStudent.do" method="post" enctype="multipart/form-data"></form>
+	    <tbody>
+      <tr>
+            <td width="175px" align="right">上载补报名学员信息:</td>
+            <td width="">
+                <input type="hidden" value="196" name="activityVo.actId">
+                <input type="file" value="上载补报名学员信息" id="uploadStudentFile" name="studentFile" style="width: 174px;"></td>
+            <td width="243px"><input type="submit" value="上载补报名学员信息" style="margin:0;"></td>
+        </tr>
+	   </tbody></table>
+    
+    
+        <form name="sendrepayegisterinfo" action="./sendrepayegisterinfo.do" method="post" id="repayegisterinfoForm">
+        <input type="hidden" name="activityVo.actId" value="196">
+        <table width="550px" border="0" class="grid_layout" cellspacing="0" style="
+    margin-top: 10px;
+">
+        <tbody>
+    <tr>
+        <td width="66px" align="right" valign="center"><span class="color_red">*</span>邮件地址:</td>
+        <td width="166px">
+            <input type="text" name="actStudentList[0].semail" value="" class="input_text valid" style="width: 150px;">
+            <span class="errorMsg"></span></td>
+        <td width="66px" align="right" valign="center"><span class="color_red">*</span>手机号:</td>
+        <td width="120px">
+            <input type="text" name="actStudentList[0].sphone" value="" class="input_text valid" style="width: 90px;">
+            <span class="errorMsg"></span></td>
+        <td><input type="button" name="addmorebutton" value="+"></td>
+        <td><input type="button" name="delmorebutton" value="-"></td>
+    </tr>
+    <tr id="repayegisterinfoFormtr">
+        <td colspan="6">
+            <input type="submit" value="确定" class="table_mar" style="
+    padding: 3px 6px;
+    margin-top: 16px;
+">
+            <input type="button" value="取消" onclick="$('#repayegisterinfo').omDialog('close');">
+        </td>
+    </tr>
+        
+	   </tbody></table>
+	   </form> 
+    </div>
+
+</body>
+</html>

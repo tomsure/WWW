@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="file"  name="input" id="aa" value="" />
+		
+	</body>
+	<script type="text/javascript">
+	
+   var dd=document.getElementById("aa");
+
+     dd.onchange=function(){
+     	alert(dd.files[0].name)
+     }
+  
+	//file对象的name属性可以返回选择要上传文件的名称，例如选择图片文件，则返回图片文件的名称(包括文件后缀)
+	</script>
+</html>

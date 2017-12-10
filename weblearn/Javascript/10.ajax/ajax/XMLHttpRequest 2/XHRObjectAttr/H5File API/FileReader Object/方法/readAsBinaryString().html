@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+	<body>
+		<div id="dv">
+			
+		</div>
+		<input type="file" name="file1" id="file1" value="" />
+	</body>
+	<script type="text/javascript">
+		var file1=document.getElementById("file1").files[0];
+		var reader=new FileReader();
+		reader.readAsBinaryString(file1)
+		
+	</script>
+</html>

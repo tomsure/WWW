@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		
+		
+		
+//		从上面介绍的事件中，可以知道若xhr请求成功，就会触发xhr.onreadystatechange和xhr.onload两个事件。 那么我们到底要将成功回调注册在哪个事件中呢？我倾向于 xhr.onload事件，因为xhr.onreadystatechange是每次xhr.readyState变化时都会触发，而不是xhr.readyState=4时才触发。
+
+xhr.onload = function () {
+    //如果请求成功
+    if(xhr.status == 200){
+      //do successCallback
+    }
+  }
+//上面的示例代码是很常见的写法：先判断http状态码是否是200，如果是，则认为请求是成功的，接着执行成功回调。这样的判断是有坑儿的，比如当返回的http状态码不是200，而是201时，请求虽然也是成功的，但并没有执行成功回调逻辑。所以更靠谱的判断方法应该是：当http状态码为2xx或304时才认为成功。
+
+  xhr.onload = function () {
+    //如果请求成功
+    if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
+      //do successCallback
+    }
+  }
+结语
+	</script>
+	
+</html>

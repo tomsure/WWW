@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var xhr;
+		if(window.XMLHttpRequest){
+			xhr=new XMLHttpRequest()
+		}else{
+			xhr=new ActiveXObject('Microsoft.XMLHTTP')
+		}
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4){
+				if(xhr.status==200){
+					alert(xhr.responseText)
+				}
+			}
+		}
+		xhr.open('GET','../缓存/缓存.txt',true)
+		xhr.send(null)
+	//一些老版本浏览器(例如老版本IE)在读取静态文件的时候会发生缓存，就是原本一个文件读取内容会显示这些内容当文件的内容发生变化的时候再读取，发现读取的文件的内容没变，这就是缓存的原因	
+	</script>
+</html>

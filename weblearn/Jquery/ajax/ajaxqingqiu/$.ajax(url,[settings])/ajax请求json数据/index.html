@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../jQuery库/jquery-2.1.4/jquery.min.js">
+		
+	</script>
+	<body>
+		<button id="btn">点击请求数据</button>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$('#btn').click(function(){
+				$.ajax({
+					url:'index.json',
+					type:'GET',
+					dataType:'json',
+					success:function(data){
+					
+						console.log(data.aaa[0])
+					
+						
+					}
+				})
+			})
+		})
+	</script>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">点击测试异步</button>
+		<button id="btn2">点击测试异步</button>
+			
+	</body>
+	<script type="text/javascript">
+	/*
+	 在使用ajax异步调用的时候需要使用xhr对象的onreadyStatechange事件，xhr对象还有一个readyState属性，它可以返回从异步请求到收到响应完成的状态，readState属性有五个值就是：0、1、2、3、4；
+	 在实际运用中可以通过onreadyStatechange事件，并在事件函数中通过if语句判断readyState的值来执行不同的语句
+	
+	 
+	 */
+	 if(window.XMLHttpRequest){
+			XHR=new XMLHttpRequest()//如果浏览器支持XMLHttpRequest对则创建XMLHttpRequest
+		}else{
+			XHR=new ActiveXObject('Microsoft.XMLHTTP')//如果不支持则创建ActiveXObject对象
+		}
+       
+        
+        
+		var btn1=document.getElementById("btn1");
+		btn1.onclick=function(){
+			
+		   XHR.onreadystatechange=function(){
+				
+					
+					alert(XHR.readyState)
+					
+//			xhr.readyState有四个状态,所以这里会弹出四个值
+			}
+			XHR.open('GET','../liziURL/demo.php',true)
+			
+			 XHR.send(null)
+		    
+		}
+		
+		
+		
+		
+	/*readState属性可以记录返回从异步请求到收到响应完成的状态，readState属性有五个值就是：0、1、2、3、4，这五个值分别代表含义如下：
+	0: 请求未初始化 意思就是未调用open()方法(未建立请求连接)
+	1: 已经调用 open()方法，但尚未调用 send()方法 
+	2:发送的请求服务器已接收，已经调用 send()方法，但尚未接受服务器的响应 
+	3:请求处理中 （已经接受到部分响应数据 ，但未完全接受）
+	4:请求已完成，且已可以访问和使用服务器响应的数据
+	*/
+	
+//	readyState属性指的是xhr对象的状态,当这个状态发生变化的时候就会触发onreadystatechange事件,所以,如果给xhr对象绑定了onreadystatechange事件,在事件函数中,可以通过if语句判断readyState和status的值来进行执行想要的语句,从而达到异步请求,通常会使用readyState==4和status（响应完成),为条件来执行语句
+
+
+        var btn2=document.getElementById("btn2");
+		btn2.onclick=function(){
+			
+		   XHR.onreadystatechange=function(){
+ 				
+             if(XHR.readyState==4){//判断响应完成的时候执行语句
+             	alert('响应完成')
+             }
+             
+             
+			}
+			XHR.open('GET','../liziURL/demo.php',true)
+			
+			 XHR.send(null)
+		    
+		}
+        
+   
+	</script>
+</html>

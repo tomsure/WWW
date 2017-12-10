@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var xhr;
+		if(window.XMLHttpRequest){
+			xhr=new XMLHttpRequest()
+		}else{
+			xhr=new ActiveXObject('Microsoft.XMLHTTP')
+		}
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4){
+				if(xhr.status==200){
+					document.write(xhr.getAllResponseHeaders()+'</br></br>')//获取所有头信息
+					document.write('响应的头信息的类型是：'+xhr.getResponseHeader('Content-Type')) //获取头信息的类型
+				}
+			}
+		}
+		xhr.open('GET','动态读取数据.txt',true)
+		xhr.send(null)
+    
+    //getResponseHeader()方法可以获取响应数据中某一个响应头信息，括号中加引号写头信息的名称
+
+	</script>
+</html>

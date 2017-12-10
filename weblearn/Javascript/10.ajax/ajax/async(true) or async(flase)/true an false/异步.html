@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv{
+			
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var xhr;
+			if(window.XMLHttpRequest){
+				xhr=new XMLHttpRequest()
+			}else{
+				xhr=new ActiveXObject('Misrosoft.HTTP')
+			}
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4){
+					if(xhr.status==200){
+						alert(xhr.responseText)
+					}
+				}
+			}
+			xhr.open('GET','index.php',true)
+			xhr.send();//send()方法执行之后，xhr开始获取响应，send()后面的语句和html DOM继续渲染，如果是同步的话，后面的语句不会执行，只有等待响应接收完毕后才会执行
+		}
+		
+		
+		
+		
+	</script>
+	<body>
+		<div class="dv" style="width:100px;height: 100px;background: red;">
+			
+		</div>
+	</body>
+	<!--此页面结构：js(包括ajax，使用ajax异步请求)在上，body里面一个 div在下；有一个php文件让他延迟响应10秒来 模拟网络延迟，使用ajax xhr发送请求访问php文件，
+	此页面现象：打开页面的时候，div立即显示在页面上，十秒过后，弹出xhr.responseText;
+	此现象分析：
+	 js正常执行规则：js语句从上往下执行，html（或者DOM）从上往下执行渲染；
+	  由于使用ajax异步技术，当页面打开的时候网页开始加载，语句从上往下执行；
+	  在上面的语句中，有ajax向服务器发送请求，请求读取index.php这个文件，这个php文件会十秒钟之后会响应，按正常情况下（语句从上往下执行），页面当加载到ajax请求服务器的时候，会等待接收服务器的响应，此时页面还没有渲染到下面的html元素，所以页面不会显示div，当响应完成之后才会显示，但是，这里使用了ajax异步技术，当js执行的时候，ajax开始向服务器发送请求，并等待响应，同时，页面会继续往下加载，所以立即就会显示div这个元素，当ajax的xhr接收响应完成之后，就会执行onreadystatechange事件函数中的语句，此时再继续执行页面剩余的队列，这是异步的原理；
+	  
+	  js队列知识：
+	    js从上往下执行，例如：
+	       执行语句1；
+	       执行语句2；
+	       执行语句3；
+	       执行语句4；
+	       。。。。
+	      执行语句...
+	  
+	  ajax 执行异步的时候js的队列：
+	      执行语句1；
+	       执行语句2，ajax发情请求，开始等待响应...
+	       执行语句3；
+	       执行语句4；
+	    ajax xhr接收到响应，执行onreadystatechange事件函数中的语句
+	       执行语句5；
+	       。。。。
+	    
+	      执行语句...
+	  -->
+	
+	
+	
+	
+	
+</html>

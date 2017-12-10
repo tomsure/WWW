@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		img {width: 300px;height: 300px;}
+	</style>
+	<body>
+		<input type="file" name="upfile" id="fileup" value="" />
+		<div id="dv">
+			
+		</div>
+	
+	</body>
+	<script type="text/javascript">
+		var fp=document.getElementById("fileup")
+		var dv=document.getElementById("dv")
+	
+	
+		fp.onchange=function(){//这里一定要注意，onchange事件是绑定给input元素而不是绑定给file对象
+					var ftp=fp.files[0] //获取文件对象
+					
+//			alert(fpt) //可以测试一下文件对象
+			var tmpimg=document.createElement('img')//动态创建img标签；
+
+		  tmpimg.src=window.URL.createObjectURL(ftp)//将文件对象设置为图片的src地址
+		 document.getElementsByTagName('body')[0].appendChild(tmpimg);//将动态创建的img标签追加到body；
+		 dv.innerHTML='文件名称：'+ ftp.name+'</br>'+'文件名称：'+ftp.size
+		 //显示文件信息
+		}
+		//这样还可以给预览的图片添加样式
+		//URL.createObjectURL()方法会根据传入的参数创建一个指向该参数对象的URL. 这个URL的生命仅存在于它被创建的这个文档里. 新的对象URL指向执行的File对象或者是Blob对象.
+	</script>
+
+</html>

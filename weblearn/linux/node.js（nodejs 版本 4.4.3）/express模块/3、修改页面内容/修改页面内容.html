@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		 基本项目启动后手动创建的页面页面会显示“helll word！”内容
+		   修改内容的话可以如下操作：
+		   1、修改页面内容
+		        手动创建的页面会显示“helll word！”，可以再手动创建的js 文件中修改
+		        app.get('/', function (req, res) {
+			  res.send('hahaha');
+			});
+			  这段函数中send()方法中的内容
+		2、修改title：	  
+	       使用生成器的页面，可以修改routes 目录下的index 文件中的：
+	       router.get('/', function(req, res, next) {
+            res.render('index', { title: '哈哈哈' });
+          });
+                  这段函数中的title的值
+          
+	       
+	</body>
+</html>

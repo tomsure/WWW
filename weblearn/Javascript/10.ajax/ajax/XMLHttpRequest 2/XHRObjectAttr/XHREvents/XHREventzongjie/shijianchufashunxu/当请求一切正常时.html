@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击加载</button>
+		<img src="" alt="" />
+	</body>
+	<script type="text/javascript">
+	/*	触发xhr.onreadystatechange(之后每次readyState变化时，都会触发一次)
+触发xhr.onloadstart
+//上传阶段开始：
+触发xhr.upload.onloadstart
+触发xhr.upload.onprogress
+触发xhr.upload.onload
+触发xhr.upload.onloadend
+//上传结束，下载阶段开始：
+触发xhr.onprogress
+触发xhr.onload
+触发xhr.onloadend*/
+
+var btn=document.getElementById("btn");
+	var img=document.getElementsByTagName('img')[0]    	
+		var xhr=new XMLHttpRequest();
+		
+		
+		xhr.onload=function(){
+			img.src=''
+			alert('加载完成！')
+		}
+		xhr.open('GET','timeout.php',true);
+		
+	btn.onclick=function(){	
+		xhr.send();
+	}
+		xhr.onloadstart=function(){
+			
+		img.src='http://tuyiyi.qiniudn.com/images/2013/1-130G00P4440-L.gif'
+		}
+	</script>
+</html>

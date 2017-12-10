@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		在项目根目录下新建一个js 文件例如 demo.js;
+		   从mock.js 官网复制使用说明代码到js 文件中：
+		     var Mock = require('mockjs');  
+             var data = Mock.mock({
+             'list|1-10': [{
+              'id|+1': 1
+               }]
+			});
+		console.log(JSON.stringify(data, null, 4))
+		  
+		     如图：
+		     <img src="../images/基本使用.png" alt="" />
+		
+		
+		
+		     上述代码解释：
+		     var Mock = require('mockjs');  <!--引入mockjs;-->
+             var data = Mock.mock({      <!--   设置数据-->
+             'list|1-10': [{
+              'id|+1': 1
+               }]
+			});
+		console.log(JSON.stringify(data, null, 4))  <!--  打印经过json处理过得数据-->
+		     
+	</body>
+</html>

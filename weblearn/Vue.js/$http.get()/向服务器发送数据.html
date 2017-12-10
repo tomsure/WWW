@@ -21,12 +21,11 @@
 			data:{
 				get:function(){
 					
-					this.$http.get('get().php',{
+					this.$http.get('../get().php',{
 						a:1,
 						b:2
 //				$http对象get()方法有两个参数,第一个参数是向服务器请求的获取文件,第二个参数是一个json数据,里面是发送到服务器文件中的数据，例如这里，json中有a和b两个数据，发送到服务器的get()。php文件中，服务器收到后，这个php文件会对收到的数据进行计算，然后js这边可以通过后面的then方法获得计算后的结果		
-						
-					}).then(function(res){
+                       }).then(function(res){
 						alert(res.data)
 					},function(res){
 						alert(1)

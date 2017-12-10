@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var xhr;
+		if(window.XMLHttpRequest){
+			xhr=new XMLHttpRequest()
+		}else{
+			xhr=new ActiveXObject('Microsoft.XMLHTTP')
+		}
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4){
+				if(xhr.status==200){
+					alert(xhr.responseText)
+				}
+			}
+		}
+		xhr.open('GET','../缓存/字符集编码.txt',true)
+		xhr.send(null)
+		//读取txt静态文件需要设置合适的字符集编码各式，例如中文的要设置格式为UTF-8，否则通过ajax请求读取的时候会显示乱码
+	</script>
+</html>

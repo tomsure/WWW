@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var XHR;
+		if(window.XMLHttpRequest){
+			XHR=new XMLHttpRequest()//如果浏览器支持XMLHttpRequest对则创建XMLHttpRequest
+		}else{
+			XHR=new ActiveXObject('Microsoft.XMLHTTP')//如果不支持则创建ActiveXObject对象
+		}
+		XHR.open('GET','../liziURL/demo.php',false);
+         XHR.send()
+		alert(XHR.status)
+		//status属性返回XHR获取到服务器响应的http状态码，例如 200 404等等，代表不同的HTTP状态
+	</script>
+</html>

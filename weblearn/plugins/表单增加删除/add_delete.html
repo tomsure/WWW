@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript"src="js/jquery1.7.js"></script>
+<script type="text/javascript">
+$(function($){//$-jquery
+$("#bt1").click(function(){
+$(this).after("<div><input type='file'><input type='button' value='add' class='bt'><input type='button' value='delete' class='delete'></div>");
+$(".bt").off("click");
+$(".bt").on("click",function(){
+$(this).parent().after($(this).parent().clone(true));//克隆this的父节点div
+});
+$(".delete").on("click",function(){
+$(this).parent().remove();//删除this的父节点div
+});
+});
+});
+</script>
+</head>
+<body>
+<input type="file"><input type="button" value="add" id="bt1">
+</body>
+</html>
