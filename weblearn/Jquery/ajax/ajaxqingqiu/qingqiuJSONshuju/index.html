@@ -16,8 +16,10 @@
 			 	$.ajax({
 			 		url:'index.json',
 			 		type:'post',
+			 		dataType:'text',
 			 		success:function(data){
-			 			alert(data)
+			 			alert(1)
+			 			alert(data.aa[0].aa)
 			 		}
 			 	})
 			 })
