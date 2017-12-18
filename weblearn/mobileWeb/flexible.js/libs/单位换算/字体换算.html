@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="libs/flexible_css.js"></script>
+		<script src="libs/flexible.js"></script>
+	</head>
+	<style type="text/css">
+		/*首先拿到设计稿，假如设计稿是按照Iphone6设计，也就是750的宽度设计的，所以此时html的font-size就是75px,此时测量到的字体大小，如果是24px，由于iphone6的dpr是2，也就是普通屏幕的2倍，由于有很多种dpr的宽度，所以需要根据当前的字体算出dpr=1时候的字体大小，例如此时dpr=2时候字体是24px，所以dpr=1的时候font-size就是24/2=12px,所以当dpr为3的时候，就可以使用12*3=36px来设置，设置不同dpr的字体方式如下：
+        
+           例如设置div的font-siz：*/
+                      div{
+
+                             font-size:12px;
+                                   }
+
+                      [data-dpr="2"] div{      /* dpr=2的时候*/
+                                       font-size:24px;
+                                        }
+                      [data-dpr="3"] div{      /*  dpr=3的时候*/
+                                        font-size:36px;
+                                        }
+	</style>
+	<body>
+	</body>
+</html>

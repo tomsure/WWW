@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>订单列表</title>
+     
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/flexible.js/libs/flexible_css.js"></script>
+  <script type="text/javascript" src="js/flexible.js/libs/flexible.js"></script>
+</head>
+
+<style type="text/css">
+    html, body {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        /*font-size: 50px;*/
+    }
+    .xl-tab {
+        position: relative;
+        width: 100%;
+        
+    }
+    .xl-tab-head {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: .7rem;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: .7rem;
+        font-size: 0;
+    }
+    .xl-tab-head-title {
+        display: inline-block;
+        box-sizing: border-box;
+        font-size: .24rem;
+        border-right: 1px solid #f3f3f3;
+        border-bottom: 1px solid #f3f3f3;
+    }
+    .xl-tab-head-title-active {
+        border-bottom: 1px solid #fc7831;
+    }
+    .xl-tab-head-title-1 {
+        width: 20%;
+    }
+    .xl-tab-head-title-2 {
+        width: 20%;
+    }
+    .xl-tab-head-title-3 {
+        width: 20%;
+    }
+    .xl-tab-head-title-4 {
+        width: 20%;
+    }
+    .xl-tab-head-title-5 {
+        width: 20%;
+    }
+    .xl-tab-content {
+        position: absolute;
+        top: .7rem;
+        width: 100%;
+        height: 100%;
+        font-size: .24rem;
+        text-align: center;
+        line-height: 2;
+    }
+    .xl-tab-content-1 {
+        margin-left: 0px;
+    }
+    .xl-tab-content-2 {
+        margin-left: 100%;
+    }
+    .xl-tab-content-3 {
+        margin-left: 200%;
+    }
+    .xl-tab-content-4 {
+        margin-left: 300%;
+    }
+    .xl-tab-content-5 {
+        margin-left: 400%;
+    }
+        .xl-tab-title-transition {
+        -webkit-transition: background .3s ease;
+        -moz-transition: background .3s ease;
+        transition: background .3s ease;
+    }
+    .transition {
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+</style>
+<script>
+        (function () {
+            document.addEventListener('DOMContentLoaded', function () {
+                var html = document.documentElement;
+                var windowWidth = html.clientWidth;
+                html.style.fontSize = windowWidth / 6.4 + 'px';
+                 // 等价于html.style.fontSize = windowWidth / 640 * 100 + 'px';
+            }, false);
+        })();
+</script>
+<body>
+    <div class="xl-tab">
+        <div class="xl-tab-head">
+            <span class="xl-tab-head-title xl-tab-head-title-3 xl-tab-head-title-active xl-tab-title-transition" id='xl-tab-head-title-1'>全部</span>
+            <span class="xl-tab-head-title xl-tab-head-title-3 xl-tab-title-transition" id='xl-tab-head-title-2'>待支付</span>
+            <span class="xl-tab-head-title xl-tab-head-title-3 xl-tab-title-transition" id='xl-tab-head-title-3'>待发货</span>
+              <span class="xl-tab-head-title xl-tab-head-title-3 xl-tab-title-transition" id='xl-tab-head-title-3'>待签收</span>
+                <span class="xl-tab-head-title xl-tab-head-title-3 xl-tab-title-transition" id='xl-tab-head-title-3'>已完成</span>
+        </div>
+        <div class="xl-tab-content xl-tab-content-1 transition">1</div>
+        <div class="xl-tab-content xl-tab-content-2 transition">2</div>
+        <div class="xl-tab-content xl-tab-content-3 transition">3</div>
+         <div class="xl-tab-content xl-tab-content-2 transition">4</div>
+        <div class="xl-tab-content xl-tab-content-3 transition">5</div>
+        
+    </div>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.xl-tab-head-title').click(function() {
+            var id = $(this).attr('id');
+            var index = id.substr(id.length - 1);
+            var contentClass = 'xl-tab-content-' + index;
+
+            var preActive = $('.xl-tab-head-title-active:first').attr('id');
+            var preIndex = preActive.substr(preActive.length - 1);
+            var len = index - preIndex;
+            $('.xl-tab-content').each(function() {
+                var marginLeft = $(this).css('margin-left');
+                console.log(len)
+                var contentWidth = $('.xl-tab-content').width();
+                marginLeft = marginLeft.substr(0, marginLeft.length - 2) - len * contentWidth;
+                $(this).css({'margin-left': marginLeft + 'px'});
+            });
+            $('.xl-tab-head-title-active').removeClass('xl-tab-head-title-active');
+            $(this).addClass('xl-tab-head-title-active');
+        });
+    });
+</script>
+
+</html>
