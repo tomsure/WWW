@@ -1,4 +1,4 @@
-var oclick=function(){
+var onclick1=function(){
 	
      	document.onclick=function(){
      		this.body.style.background='blue'
@@ -7,4 +7,4 @@ var oclick=function(){
 
 }
 
-module.exports.bg=oclick;
+module.exports.bg=onclick1;
