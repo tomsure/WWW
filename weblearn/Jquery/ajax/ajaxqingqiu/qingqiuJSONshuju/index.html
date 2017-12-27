@@ -13,16 +13,25 @@
 	<script type="text/javascript">
 		$(function(){
 			 $('#btn').click(function(){
-			 	$.ajax({
+                  $.ajax({
 			 		url:'index.json',
 			 		type:'post',
-			 		dataType:'text',
+			 		dataType:'json',  //请求的诗句类型是json，所以返回的是一个json数据也是一个对象
 			 		success:function(data){
-			 			alert(1)
-			 			alert(data.aa[0].aa)
-			 		}
-			 	})
+                            console.log(data) //返回object，是一个对象
+			 			    console.log(data.aa[0].aaa) //读取对象中具体内容
+			 			/*请求的数据是一下这段内容  
+			 	      		   {
+                             "aa":[
+                                   {"aaa":"bbb"}
+                                  ]
+                 			 		}
+                 			 		由于是一个json格式数据，也是一个对象，所以要获取里面的内容，就要通过对象的形式获取，具体方式是，success的回调函数方法里的第一个参数就是返回的数据，通常写为data，json中的内容就是这个对象的属性
+                 			 		
+                 			 		*/
+			 	                }
 			 })
+		})
 		})
 	</script>
 </html>
