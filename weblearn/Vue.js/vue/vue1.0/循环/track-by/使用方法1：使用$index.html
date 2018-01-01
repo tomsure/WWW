@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					items: [
+ { _uid: '111111', message: '111' },
+ { _uid: '222222', message: '222' },
+ { _uid: '333333', message: '333' },
+ { _uid: '444444', message: '444' },
+ { _uid: '555555', message: '555' }
+]
+
+
+		},
+		methods:{
+			modify: function () {
+ this.items = [
+ { _uid: '111111', message: '111' },
+ { _uid: '666666', message: '222' },
+ { _uid: '333333', message: '3333' },
+ { _uid: '888888', message: '4444' },
+ { _uid: '999999', message: '5555' }
+               ]
+                   },
+                   reduct: function () {
+			this.items = [
+				{ _uid: '111111', message: '111' },
+				{ _uid: '222222', message: '222' },
+				{ _uid: '333333', message: '333' },
+				{ _uid: '444444', message: '444' },
+				{ _uid: '555555', message: '555' }
+			]
+		}
+		}
+				})
+			
+			
+		}
+	</script>
+	<body>
+		<div id="dv">
+			
+ <p v-for="item in items" track-by='$index' >
+ {{item.message}} <br />{{item._uid}}
+ </p>
+ <input type="button" value="修改" @click="modify"/>
+ <input type="button" value="还原" @click="reduct"/>
+
+
+
+
+
+		</div>
+	</body>
+	
+	
+</html>

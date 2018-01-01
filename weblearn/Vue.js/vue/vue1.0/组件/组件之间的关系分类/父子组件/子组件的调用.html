@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script src="../../../../dist/vue.min.js"></script>
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<div id="dv">
+			<aaa></aaa>
+			<mmm></mmm>
+		</div>
+		<script>
+			var vm = new Vue({
+				el: '#dv',
+				data: {
+					a: 'aaa',
+					m: 'mmm'
+				},
+				components: {
+					'aaa': { //根组件下的aaa组件
+
+						template: '<h3>我是根组件下的aaa组件</h3><bbb></bbb>',
+//						bbb是aaa的子组件,组件bbb的名称必须写在aaa的模板中的尾部才会显示在页面上,而不是直接写在vue绑定的html元素中，例如这里就不是写在#dv中
+						components: {
+							'bbb': { //aaa下面的组件bbb
+								template: '<h3 >你好，我是aaa的子组件bbb</h3>'
+							}
+						}
+
+					},
+					'mmm': {
+						template: '<h3>我是根组件下的mmm组件</h3>',
+					}
+
+				}
+			});
+//			在父组件下的子组件,如果要要调用模板,需要将子组件的模板写在自己父组件的模板中才会显示
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../../../../dist/vue-resource.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var vm=new Vue({
+				 el:'body',
+				 data:{
+				 	
+				 },
+				 methods:{
+				 	show:function(){
+				 	this.$http.get('../../../a.txt').then(function(da){
+				 		alert(da.data)//如果成功则弹出
+				 		
+				 	},function(){
+				 		alert('获取失败')
+				 	})//如果获取失败则弹出
+				 		
+				 	}
+
+				 }
+			})
+		}
+	</script>
+	<body >
+		<div id="dv" >
+			<button @click='show()'>点击弹出</button>
+		</div>
+	</body>
+	<!--get()方法用于获取远程数据，括号里面的参数是远程数据的路径-->
+</html>

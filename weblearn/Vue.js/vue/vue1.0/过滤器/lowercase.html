@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript"src="../../dist/vue.min.js" >
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					
+				}
+			})
+		}
+	</script>
+	   
+	<body>
+		 <div id="dv">
+		  <div id="">
+		  	  {{'HELLO WORLD!'|lowercase}}
+		  	  <br />
+		 lowercase可以将模板中的文本转换成大写，写法是模板中的字符串需要加引号，然后加一条| 后面写lowercase 	  
+		  </div>
+		</div>
+	</body>
+</html>

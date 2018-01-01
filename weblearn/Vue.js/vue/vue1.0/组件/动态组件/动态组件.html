@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					'a':'cc' //设置默认组件
+				},
+				components:{
+					'aa':{
+						template:'<strong>我是组件A</strong>',
+						
+					},
+					'bb':{
+						template:'<strong>我是组件B</strong>',
+						
+						
+					},
+					'cc':{
+						template:'<strong>我是组件C</strong>',
+						
+						
+					}
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<button @click="a='aa'">组件a</button> <!-- 点击这个按钮就显示aa组件-->
+			<button @click="a='bb'">组件b</button><br /> <!--点击这个按钮就显示bb组件-->
+			<component :is='a'></component>
+		</div>
+	</body>
+	 <!--动态组件就是使用js和html5的component标签动态修改组件的显示，创建步骤如下：
+	 1，在vue绑定作用域的元素下创建component标签 ;
+	 2,在new Vue()中设置data数据a:'aa'这里的a指的是Vue对象的属性，也是数据，'aa'是在cpmponens:{}里面创建的组件测名称设置这个的话，就可以设置一个默认显示的组件，如果不设置则不显示；
+	 3，在components{}中创建组件；
+	 4，将data数据中的数据a设置为component元素的v-bind:is的指令的值：
+	               简写为    :is='a';
+	 5,将按钮绑定click事件，值就设置为a='组件名称'，这一步就是动态修改组件              -->
+	
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	
+	<script type="text/javascript" src="../../dist/vue.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					bSion:true
+//					设置v-show=true让div显示
+				},
+				methods:{
+					toggle:function(){
+						this.bSion=!this.bSion
+						//使用这种写法使this.bSbin与自己的值相反
+					}
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<input type="button" name="" id="" value="按钮"  @click='toggle' />
+			<div id="dv1" v-show='bSion'>
+				
+			</div>
+		
+		</div>
+	</body>
+	
+	
+</html>

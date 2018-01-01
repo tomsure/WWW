@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{},
+				methods:{
+					show1:function(ev){
+						alert(1)
+						ev.preventDefault();
+						
+					},
+					show2:function(){
+						alert(2)
+					}
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<button >点击测试</button>
+			<!--点击右键，菜单栏会弹出来，这是默认事件-->
+			<button @contextmenu='show1($event)'>点击测试</button>
+		<!--使用js原生方法，阻止默认事件,需要传输事件对象；-->	
+			
+			<button @contextmenu.prevent='show2()'> 点击测试</button>
+	   <!--使用vue阻止默认行为，在事件名称后面连着写一个.prevent就可以阻止-->		
+			
+		</div>
+	</body>
+</html>

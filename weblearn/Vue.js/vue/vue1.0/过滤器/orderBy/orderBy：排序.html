@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript"  src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					arr:[1,2,3,4,5],
+					arr1:['a','b','c','d','e','f']
+				}
+			})
+		}
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+	<body>
+		<div id="dv">
+			<li v-for='val in arr| orderBy 1'>{{val}}</li><br />
+			<li v-for='val in arr1|orderBy -1 '>{{val}}</li>
+			<!--orderBy用于给返回的数组进行排序，可以进行正序，倒序，或者自定义排序-->
+			 
+		</div>
+	</body>
+</html>

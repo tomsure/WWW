@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js" >
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					arr:['tom','bom','joy','lili','luci'],
+					
+				}
+			})
+		}
+		
+	</script>
+	<body>
+		<div id="dv">
+		 
+		<ul>
+			<li v-for="vue in arr| filterBy 'o'">{{vue}}</li>
+			   <!--这里只返回包含字符串‘o’的li-->
+			
+			
+			<!--filterBy用于过滤返回包含某个条件的数组元素,当filter后面的参数中设置了某个字符串，则循环后只返回包含这个字符串的数组元素-->
+		</ul>
+		</div>
+	</body>
+</html>

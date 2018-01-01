@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../../../../../dist/vue.min.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+		var vm=new Vue({
+				el:'#dv',
+				data:{
+					a:1,
+					
+				},
+				computed:{
+					b:{
+						get:function(){
+							
+						     return this.a+2  
+//						     计算后产生新的属性b的值
+						},
+						set:function(vel){
+						     vel=200
+							 this.a=vel //可以通过计算属性改变普通属性的值                                          
+						}
+					}
+				}
+			})
+                  document.onclick=function(){
+                  	vm.b=200
+                  }
+		}
+	</script>
+	<body>
+		<div id="dv">
+			{{a}} <br />
+			{{b}}
+		</div>
+	</body>
+	<!--computed的计算属性还有一个set方法，由于get返回的是计算出基于普通属性或者其他数据计算而返回的值，这样只能相当于只能获取而不能改变普通属性的值，而set方法则可以通过计算后来改变普通属性的值-->
+	
+	<!--computed设置的属性如果设置了set方法，则会执行set方法，如果不设置set方法，则会默认执行get方法-->
+	
+	
+	
+	
+</html>

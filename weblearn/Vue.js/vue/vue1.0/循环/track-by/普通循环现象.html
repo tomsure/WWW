@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					arr:[1,2,3,4,5]
+				},
+				methods:{
+					add:function(){
+						this.arr.push('你好')
+					}
+				}
+				
+			})
+		}
+	</script>
+	<body >
+		<div id="dv">
+			<ul>
+				<li v-for=' aa in arr' >{{aa}}</li>
+			</ul>
+			<button @click='add'>添加</button>
+		</div>
+	</body>
+	<!--在给button绑定了事件后，希望点击一次循环的数组最后面添加一条，但是这里不会生效，只会执行一次添加，而且会有警告信息，提示使用track-by='$index' 或者使用data中设置的或者动态设置的data数据中的key值（也就是index）-->
+	
+	<!--通过循环修改数据，如果不使用track-by进行设置，在修改数据的时候，所有数据都的DOM都会被渲染，重新加载，如果使用了track-by的话，就只会重新渲染修改了数据的部分-->
+	
+	
+</html>

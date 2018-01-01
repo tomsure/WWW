@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					arr:['tom','joy','lili','luci'] //数组
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<ul>
+			<li v-for='livalue in arr'>{{livalue}}</li>
+			在li元素中添加属性v-for就可以实现遍历列表中li的功能，使用的时候，需要将v-for的值设为“xx in xArr”的格式，就是表示li的值在某一个数据中，这个例子就表示：
+			li的value值在arr中进行遍历，
+			同时，li的内容需要设置为{{li的value}}，这个value就要放在li属性v-for的值中
+			
+			
+		</ul>
+		</div>
+	</body>
+</html>

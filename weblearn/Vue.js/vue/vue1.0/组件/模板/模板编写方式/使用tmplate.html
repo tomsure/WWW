@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../dist/vue.min.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				components:{
+					'aaa':{
+						data:function(){
+							return {
+								msg:'哈哈'
+							}
+						},
+						template:'<h1>{{msg}}<h1>'
+//						一种形式是在这里写模板内容
+						
+					}
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<aaa></aaa>
+		</div>
+	</body>
+	
+	
+</html>

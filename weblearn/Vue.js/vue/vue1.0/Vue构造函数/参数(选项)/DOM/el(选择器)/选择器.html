@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	   window.onload=function(){
+	   		new Vue({
+			el:'#dv',  //选择器
+			data:{
+				msg:'hel'
+			}
+		})
+	   }
+	</script>
+	
+	<body>
+		<div id="dv">
+			<input type="" name="" id="" v-model="msg" />
+			{{msg}}
+		</div>
+	</body>
+	 vue构造函数中el用于绑定元素的选择器，可以使各种元素选择器
+</html>

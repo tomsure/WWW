@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					arr:['aa','bb','cc','dd']
+				},
+				methods:{
+					alert:function(){
+						alert(this.arr)
+						console.log(this)
+					}
+				}
+			})
+			
+//		vue构造函数使用new关键字实例化以后,返回的是一个vue对象,在构造函数中,this指的就是vue对象,构造函数中的data是给实例对象添加的属性,methods是给实例对象添加的方法	
+		}
+	</script>
+	<body>
+		<div id="dv">
+		<button v-on:click='alert()'>点击测试</button>	
+		</div>
+	</body>
+</html>

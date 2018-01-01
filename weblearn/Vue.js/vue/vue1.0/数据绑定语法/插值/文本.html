@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'body',
+				data:{
+					aa:'你好'
+				},
+				
+				
+			})
+		}
+	</script>
+	
+	<body >
+		<input type="text" name="" id=""  v-model='aa' />
+		{{* aa}}
+	<!--在绑定文本的时候，在{{}}内第一个字符添加一个*号，当其他地方msg的值改变的时候，本地就可以不改变；-->	
+		
+	</body>
+</html>

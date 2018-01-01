@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					
+				},
+				methods:{  //方法
+					show:function(){  
+						alert(1)
+					}
+				}
+			})
+		}
+	</script>
+	<body>
+	    <div id="dv">
+	    	<button v-on:click="show">点击弹出</button>
+	    	<!--v-on指的是给元素绑定事件的属性，事件类型就是dom中的事件-->
+	    </div>
+	</body>
+</html>

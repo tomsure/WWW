@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../dist/vue.min.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var Aaa=Vue.extend({
+//				组件名称:
+            template:'<h3>我是标题3</h3>'
+			});
+			 Vue.component('aaa',Aaa)
+			 	
+//			由于这种方式注册组件的时候是注册在Vue对象下面的,所以这种方式注册的组件叫全局组件
+			new Vue({
+				el:'#dv',
+				data:{
+					
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<aaa></aaa>
+			
+		</div>
+          
+		    
+		    
+		    
+		    
+		
+	</body>
+	
+	
+</html>

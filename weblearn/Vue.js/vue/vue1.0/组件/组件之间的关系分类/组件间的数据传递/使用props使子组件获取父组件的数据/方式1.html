@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script src="../../../../../dist/vue.min.js"></script>
+		<style>
+
+		</style>
+	</head>
+      
+	<body>
+		<template id="tem">
+			<h2>组件====>>aaa{{msg}}-----{{msg2}}</h2>
+			<bbb :mm='msg' :my-msg='msg2'></bbb>
+			   <!--注意：如果这里设置的自定义指令带有横杠，则在props和子组件调用数据的时候，需要些驼峰的格式-->
+		</template>
+		<div id="dv">
+			<aaa></aaa>
+			
+		</div>
+		<script>
+			var vm = new Vue({
+				el:'#dv',
+				data:{
+					a:'aaa'
+				},
+				components:{
+					'aaa':{
+						template:'#tem',
+						data:function(){
+							return {
+								'msg':'我是父组件aaa的数据',
+								'msg2':'我是父组件的另一个数据'
+							}
+						},
+						components:{
+							'bbb':{
+					template:'<div>组件bbb-----{{mm}} </br></br>{{myMsg}}</div>',
+					props:['mm','myMsg'],
+//					    注意这里第二个数据需要写成驼峰的格式
+								
+								
+							}
+						}
+					}
+				}
+			});
+//			如果子组件想获取父组件的数据,需要以下步骤:
+//			1,在父组件的模板里写子组件的名称的时候,给子组件标签添加自定义属性:
+//			   如<bbb :mm='msg'></bbb>
+//			   这里bbb是在父组件模板中调用的子组件的标签名,使用v-bind指令:后面自定义名称,给这个指令赋一个值,值就是父组件的 data数据的key值,可以定义多个,也就是说子组件可以使用多个父组件的数据;
+//			2,在父组件的components选项中,设置一个json选项属性props,这个选项里面的数字就写父组件模板中调用的子组件标签(绑定过父组件数据)设置的自定义指令,例如:
+//			   <template>
+//			      <h2></h2>
+//			      <bbb :mm='msg'></bbb>	
+//			   </template>
+//			   上面是子组件绑定的父组件的数据;
+//			   props:['mm']
+//			 props的值需要使用json或者数组的格式;
+//			 
+//			 3,在子组件的模板中使用{{}}插值的方式调用props设置的值;
+//			 
+//			 以上步骤就可以得到子组件获取父组件数据的目的
+
+		</script>
+	</body>
+
+</html>

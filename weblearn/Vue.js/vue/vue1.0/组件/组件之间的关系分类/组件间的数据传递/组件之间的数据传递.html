@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script src="../../../../dist/vue.min.js"></script>
+		<style>
+
+		</style>
+	</head>
+      
+	<body>
+		<template id="tem">
+			<h2>组件====>>aaa{{msg}}</h2> <!--//组件aaa使用自己的数据-->
+			<bbb>{{msg}}</bbb><!--//子组件bbb直接调用无效-->
+		</template>
+		<div id="dv">
+			<aaa></aaa>
+			
+		</div>
+		<script>
+			var vm = new Vue({
+				el:'#dv',
+				data:{
+					a:'aaa'
+				},
+				components:{
+					'aaa':{
+						template:'#tem',
+						data:function(){
+							return {
+								msg:'我是父组件aaa的数据'
+							}
+						},
+						components:{
+							'bbb':{
+								template:'<li>组件bbb</li>'
+							}
+						}
+					}
+				}
+			});
+			
+			
+//			在原生js中,子元素对象可以继承父元素对象的属性和方法,而在vue组件中,子元素无法直接继承父元素的数据
+
+		</script>
+	</body>
+
+</html>

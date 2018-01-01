@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script src="../../../../dist/vue.js "></script>
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<div id="dv">
+			<aaa></aaa>
+			<mmm></mmm>
+		</div>
+		<script>
+			var vm = new Vue({
+				el: '#dv',
+				data: {
+					a: 'aaa',
+					m: 'mmm'
+				},
+				components: {
+					'aaa': { //根组件下的aaa组件
+
+						template: '<h3>我是根组件下的aaa组件</h3><bbb></bbb>',
+						components: {
+							'bbb': { //aaa下面的组件bbb
+								template: '<h3 >你好，我是aaa的子组件bbb</h3>'
+							}
+						}
+
+					},
+					'mmm': {
+						template: '<h3>我是根组件下的mmm组件</h3>',
+					}
+
+				}
+			});
+			//   在vue中new vue()返回的是根组件是最大的组件,在他里面可以写组件,组件下面又可以写组件，这样组件之间就构成了父子组件关系
+		</script>
+	</body>
+
+</html>

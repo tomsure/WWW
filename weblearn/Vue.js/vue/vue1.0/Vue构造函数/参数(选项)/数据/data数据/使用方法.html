@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../../dist/vue.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					msg:'hello vue！'
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<input type="" name="" id="" v-model="msg" />
+			{{msg}}
+		</div>
+	</body>
+	   <!--首先： Vue是一个构造函数，这个构造函数中的参数是一个json格式代码块，所以实例化vue的时候就是：
+	    new Vue({})
+	  在这个json数据代码块中，有多条json数据，data就是其中一个数据，而data也是一个json格式的数据代码块，里面的数据就是键值对形式，这里的数据就可以绑定在元素html上面，而且必须是绑定在选择器指定额元素上 
+	  当使用的时候，给input元素设置v-model属性，值就是data中其中一个data数据的键，页面上就会显示出html元素的value值
+	  
+	  
+	   -->
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../../dist/vue-resource.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var vm=new Vue({
+				 el:'body',
+				 data:{
+				 	
+				 },
+				 methods:{
+				 	show:function(){
+				 	this.$http.get('a.txt').then(function(da){
+				 		alert(da.data)//如果成功则弹出
+				 	},function(){
+				 		alert('获取失败')
+				 	})//如果获取失败则弹出
+				 		
+				 	}
+//		这里的then()方法指的是ES6中的方法		 	
+
+//在引入vue-resource.js后,vue对象会多了一个$http属性,也是一个对象,这个对象有get(),post()等方法,类似于是一个ajax对象,用于和后端交互
+				 }
+			})
+		}
+	</script>
+	<body >
+		<div id="dv" >
+			<button @click='show()'>点击弹出</button>
+		</div>
+	</body>
+</html>

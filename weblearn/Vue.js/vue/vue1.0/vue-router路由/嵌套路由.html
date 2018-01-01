@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+		<script type="text/javascript" src="vue.js">
+		
+	</script>
+	<script type="text/javascript" src="vue-router.js">
+		
+	</script>
+	</head>
+	
+	<body>
+		<template id="home">
+			<h2>我是主页<h2>
+				  
+					<ul>
+						<li><a v-link="{path:'/home/login'}">登录</a></li>
+						<li><a v-link="{path:'/home/reg'}">注册</a></li>
+					</ul>
+		          
+		         
+				
+					<router-view></router-view>
+					
+				<!--组件home嵌套-->
+		</template>
+		<template id="news">
+			<h2>我是新闻<h2>
+		</template>
+		<div id="dv">
+			<ul>
+				<li><a v-link="{path:'/home'}">主页</a></li>
+				<li><a v-link="{path:'/news'}">新闻</a></li>
+			</ul>
+			
+			<div>
+			<router-view></router-view>
+		    </div> 
+		    <!--注意，这个div需要放在根组件里面-->
+		</div>
+			
+		
+	</body>
+	<script type="text/javascript">
+		
+	//1. 准备一个根组件
+		var App=Vue.extend();
+	//2.创建两个组件： Home News组件都准备
+		var Home=Vue.extend({
+			template:'#home'
+		});
+		var News=Vue.extend({
+			template:'#news'
+		})
+		
+		//3，创建路由
+		var router=new VueRouter();
+		
+		//4.设置 关联
+		 router.map({
+			'home':{
+				component:Home,
+				subRoutes:{
+					'login':{
+						component:{
+							template:'<p>我是登录信息</p>'
+						}
+					},
+					'reg':{
+						component:{
+							template:'<p>我是注册信息</p>'
+						}
+					}
+				}
+            
+
+			},
+			'news':{
+				component:News
+			}
+		})
+		 //5，启动路由
+		 router.start(App,'#dv')
+		 
+		 //6，设置启动时候显示的内容
+         router.redirect({
+         	'/':'/home'
+         })
+//		嵌套路由实现步骤:
+//		什么是嵌套路由:嵌套路由就是一个组件嵌套使用类似于页面内容的跳转，只是vue中是在本页，某一个区域的跳转，有点像ajax效果或者tab选项卡，
+//            例如 一个组件A中的模板里面包含一个a标签,a标签的herf属性被v-link代替,当点击这个a标签的时候,则会跳转显示这个组件A下的一个组件B里面;
+//		执行步骤:
+//		1,在组件A的模板中放置一个a标签，将这个a标签的href属性设置为v-link,值就是组件B的路径；设置为：      v-link="{path:/A/B}"，在A模板中再设置一个router-view标签用于显示点击进入A组件模板中的a标签跳转后显示的内容
+ 
+	</script>

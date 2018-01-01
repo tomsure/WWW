@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+		    	{{a}} <br />
+		    	{{b}}   <br />
+		    	{{c}}
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		new Vue({
+			el:'#dv',
+			data:{
+				a:1,
+				b:2
+			},
+			computed:{
+				c:function(){
+					
+						return this.a+100
+					
+				}
+			
+			}
+			
+			
+
+		})
+	</script>
+	
+	
+</html>

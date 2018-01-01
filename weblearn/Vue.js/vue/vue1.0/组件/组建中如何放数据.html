@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../dist/vue.min.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var Aaa=Vue.extend({
+             data:function(){//data数据必须是函数形式
+             	return {
+             		msg:'你好'
+             	}
+//           	函数形式的data数据中必须以return的形式返回,并且返回的数据必须是json格式
+             },
+             
+            template:'<h3>{{msg}}</h3>'
+			});
+			 Vue.component('aaa',Aaa)
+			 	
+
+			new Vue({
+				el:'#dv',
+				data:{
+					
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<aaa></aaa>
+			
+		</div>
+          <!--在注册的组件中也是可以绑定数据的，绑定数据需要以下几个条件：
+           1，data选项写在extend()方法里面和tempate同级别；
+           2，data的数据必须是函数的形式，例如：
+              data：function(){
+              	 
+              }
+              
+		    3，data内的数据除了是函数格式外必须以return返回，返回的数据必须是json格式，例如：
+		   data：function(){
+		   	    return {
+		   	    	msg:'你好'
+		   	    }
+		   }-->
+		    
+		    
+		    
+		
+	</body>
+	
+	
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script src="../../../../dist/vue.js "></script>
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<template id="aaa">
+			<h2>这是aaa组件模板</h2> <!--//aaa组件 模板-->
+			<bbb></bbb>   <!--bbb组件-->
+			<!--由于vue可以将模板写在temlate标签中，而子组件名称需要写在父组件的模板中，所以可以这样调用父组件和子组件-->
+		</template>
+		
+		<div id="dv">
+			<aaa></aaa>
+			
+		</div>
+		<script>
+			var vm = new Vue({
+				el: '#dv',
+				data: {
+					a: 'aaa',
+					
+				},
+				components: {
+					'aaa': { //根组件下的aaa组件
+
+						template: '#aaa',
+
+						components: {
+							'bbb': { 
+								template: '<h3 >你好，我是aaa的子组件bbb</h3>'
+							}
+						}
+
+					},
+					'mmm': {
+						template: '<h3>我是根组件下的mmm组件</h3>',
+					}
+
+				}
+			});
+
+		</script>
+	</body>
+    如果使用template调用父组件的模板的话，也需要将子组件写在template模板中，父组件模板的后面
+</html>s

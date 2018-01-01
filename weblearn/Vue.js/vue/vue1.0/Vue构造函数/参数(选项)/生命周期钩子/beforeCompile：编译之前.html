@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			{{msg}}
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		new Vue({
+			el:'#dv',
+			data:{
+				msg:'你好'
+			},
+			created:function(){
+				alert('Vue实例创建完成')
+			},
+			beforeCompile:function(){
+			     alert('这是编译之前阶段')
+			}
+//		在vue实例创建完成之后,再到页面上显示data数据,由{{...}}显示为正常的数据,会有一个编译的过程,beforeCompile就是编译之前执行的函数
+			
+			
+			
+		})
+	</script>
+	
+	
+</html>
+

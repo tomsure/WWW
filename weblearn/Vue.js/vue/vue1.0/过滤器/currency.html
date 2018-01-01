@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript"src="../../dist/vue.min.js" >
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					
+				}
+			})
+		}
+	</script>
+	   
+	<body>
+		 <div id="dv">
+		  <div id="">
+		  	  {{12|currency}}
+		  	 <!--//将数字变成美元格式-->
+		  	 
+		  	 <br />
+		  	 {{12|currency '￥'}}
+		  	 <!--将数字转换成人民币格式-->
+		  	 
+		  	 <br />
+		  	 {{20|currency 'd'}}
+		  	 
+		<!--currency可以将数组转换成美元，还可以用过传参的方式将页面上显示的数字前面的符号任意修改，只需要在currency空一格再加一个字符串即可-->  	 
+		  	 
+		 	  
+		  </div>
+		</div>
+	</body>
+</html>

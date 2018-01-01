@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+			data:{
+				json:{
+					a:'tom',
+					b:'bom',
+					c:'jom',
+					d:'yom'
+				}
+			}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv" >
+			<ul>
+				<li v-for='(k,v) in json'>
+					{{k}}  <!--获取key值，<br />-->
+					{{v}}  <!--获取value-->
+					
+			<!--循环json数据的时候，可以在 v-for的值中写成‘（k,v）in json’的形式来循环，这样可以获取到json数据的key和value的值		-->
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					
+				},
+				methods:{
+					show:function(ev){
+					alert(ev.keyCode)	
+					//获取键盘码
+					},
+					show1:function(){
+						alert('你按了回车键')
+					},
+					show2:function(){
+						alert(11)
+					}
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<input type="text" name="" id="" @keydown="show($event)" />
+			<!--使用原生js获取键码，使用事件对象获取，但是在有时候需要使用if语句做判断-->
+			
+			<input type="text" name="" id="" @keydown.13='show1()' />
+	<!--在vue中第一种方法，秩序将键码连在@keydown后面再写函数，如果按了对应的键，即可执行相关的函数-->		
+			<input type="text" name="" id="" value="" @keydown.up='show2()'  />
+	<!--第二种方式就是连着@keydown连这写按键的名称，例如上键：up，回车：enter，下键：down，等等，这样也可以触发对应的函数-->		
+		</div>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript"  src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+		  Vue.filter('tom',function(bb){
+		  	 return bb+','+'哈哈'
+		  }),
+		  new Vue({
+		  	el:'#dv',
+		  	data:{
+		  		a:[1,2,3,4,5]
+		  	}
+		  })
+			
+			
+		}
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+	<body>
+		
+		<div id="dv">
+			<li>{{a|tom}}</li>
+		</div>
+	</body>
+	
+</html>

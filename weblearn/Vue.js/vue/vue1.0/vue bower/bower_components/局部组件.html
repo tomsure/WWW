@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="vue/dist/vue.min.js"></script>
+	
+	<style>
+	</style>
+</head>
+<body>
+	<div id="dv">
+		<aaa></aaa>
+	</div>
+
+	
+</body>
+<script>
+		
+			var Aaa=Vue.extend({
+			template:'<h1>{{msg}}</h1>',
+			     data:function(){
+						return {
+							msg:'哈哈'
+						}
+					}
+		});
+//		var vm=new vue({
+//			el:'#dv',
+//			components:{
+//				'aaa':Aaa
+//			}
+//		})
+   var vm=new Vue({
+			el:'#dv',
+			
+			components:{ //局部组件
+				aaa:Aaa
+			}
+		});
+		
+			
+	</script>
+</html>

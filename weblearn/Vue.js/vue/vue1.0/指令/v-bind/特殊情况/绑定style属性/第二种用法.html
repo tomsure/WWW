@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../../dist/vue.min.js">
+		
+	</script>
+	<style type="text/css">
+	
+		
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+				
+					b:{backgroundColor:'blue',height:'100px',width:'100px'},
+					c:{ color:'red',borderRadius:'100px'}
+					
+				},
+//			   这种方式是在data中设置元素的CSS样式,可以设置多条,然后在将json的key值以数组的形式填写在html元素的style属性上,也可以直接在html标签上填写json数据,设置多个样式
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			
+			<div id="" v-bind:style="[b,c]">
+				
+				
+			hello
+			</div>
+		</div>
+	</body>
+</html>

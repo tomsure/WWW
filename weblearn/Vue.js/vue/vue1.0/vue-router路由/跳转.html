@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../../dist/vue.js"></script>
+	<script src="../vue bower/bower_components/vue-router/dist/vue-router.min.js"></script>
+	<style>
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li>
+				<a v-link="{path:'/home'}">主页</a>
+			</li>
+			<li>
+				<a v-link="{path:'/news'}">新闻</a>
+			</li>
+		</ul>
+		<div>
+			<router-view></router-view>
+		</div>	
+	</div>
+
+	<script>
+		//1. 准备一个根组件
+		var App=Vue.extend();
+
+		//2. Home News组件都准备
+		var Home=Vue.extend({
+			template:'<h3>我是主页</h3>'
+		});
+
+		var News=Vue.extend({
+			template:'<h3>我是新闻</h3>'
+		});
+
+		//3. 准备路由
+		var router=new VueRouter();
+
+		//4. 关联
+		router.map({
+			'home':{
+				component:Home
+			},
+			'news':{
+				component:News
+			}
+		});
+
+		//5. 启动路由
+		router.start(App,'#box');
+		router.redirect({
+    '/': '/news'
+})
+//      router.redirect()方法用与设置页面打开的时候页面默认显示的组件内容,在不使用这个方法的时候,页面首次打开的时候,不会显示组件的内容,通过设置这个方法,绑定指令的路径,可以设置在页面打开的时候默认显示一个组件内容在页面,这个方法里面的格式就是json格式,数据的格式内容是
+//      key:value
+// 这个数据的意思是,页面打开的时候,访问key的时候,跳转到显示value的内容
+
+
+// 这里展示的是两个知识点:
+//    1,内容的跳转;
+//    2,页面打开显示的默认内容
+	</script>
+</body>
+</html>

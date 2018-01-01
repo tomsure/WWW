@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../dist/vue.min.js">
+		
+	</script>
+	
+	<script type='text/template' id="tem">
+	  <aaa>{{msg}}</aaa>
+	
+	
+
+	</script>
+	<!--//	这种方式是将模板内容写在script标签中,其中script type属性修改为text/template,设置一个id,将这个id设置为nuw Vue()里面的components里面的template的值-->
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				components:{
+					'aaa':{
+						data:function(){
+							return {
+								msg:'哈哈'
+							}
+						},
+						template:'#tem'
+
+					}
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<aaa></aaa>
+		</div>
+	</body>
+	
+	
+</html>

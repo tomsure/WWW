@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var Aaa=Vue.extend({
+             data:function(){//data数据必须是函数形式
+             	return {
+             		msg:'你好'
+             	}
+             	
+
+             },
+             methods:{ //方法写在extend()方法里面，和data同级别
+             		change:function(){
+             		   this.msg='哈哈'
+             		   this.$el.style.color='red'
+             		   console.log(this.msg)
+             		}
+             
+             },
+            template:'<h3 @click=change>{{msg}}</h3>'
+                 //注意这里写事件函数不需要加引号
+			});
+			 Vue.component('aaa',Aaa)
+			 	
+
+			new Vue({
+				el:'#dv',
+				data:{
+					
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<aaa></aaa>
+			<aaa></aaa>
+			
+		</div>
+          
+		   
+		    <!--使用Vue.extend()方法注测的组件，在整个extend()方法范围内，包括data数据中，methods方法中this都指向vue组件对象的实例，他是一个对象，包含了这个组件对象的各个属性，
+		    	
+这里的this就和new vue()实例对象是类似的对象，例如在普通使用vue实例的时候
+         var vm=new vue()
+         组件对象中的this就是实例化的组件对象，就和这个 vm类似同等级
+
+
+  -->
+		    
+		
+	</body>
+	
+	
+</html>

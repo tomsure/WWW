@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					items: [//原始数据
+ { _uid: '111111', message: '111' },
+ { _uid: '222222', message: '222' },
+ { _uid: '333333', message: '333' },
+ { _uid: '444444', message: '444' },
+ { _uid: '555555', message: '555' }
+]
+
+
+		},
+		methods:{
+			modify: function () { //方法绑定到事件修改数据
+ this.items = [
+ { _uid: '111111', message: '111' },
+ { _uid: '666666', message: '222' },
+ { _uid: '333333', message: '3333' },
+ { _uid: '888888', message: '4444' },
+ { _uid: '999999', message: '5555' }
+               ]
+                   },
+            reduct: function () {//方法绑定到事件修改数据，只不过这里是修改到显示和原始数据相同
+			this.items = [
+				{ _uid: '111111', message: '111' },
+				{ _uid: '222222', message: '222' },
+				{ _uid: '333333', message: '333' },
+				{ _uid: '444444', message: '444' },
+				{ _uid: '555555', message: '555' }
+			]
+		}
+		}
+				})
+			
+			
+		}
+	</script>
+	<body>
+		<div id="dv">
+			
+ <p v-for="item in items" >
+ 	  <!--这里的_uid是data数据中items数据里面的key值_uid,也可以写message，效果是相同-->
+ {{item.message}}
+ <!--//这里只写了item.meaasge的数据，所以修改和还原的时候，只会显示有message的数据，如果再写一个{{item._uid}}的话，页面上也会显示data中_uid数据的变化-->
+ 
+ </p>
+ <input type="button" value="修改" @click="modify"/>
+ <input type="button" value="还原" @click="reduct"/>
+
+
+<!--使用数据中的某一个索引名称作为track-by的值保证修改数据的时候不改变的数据所在的DOM不会渲染-->
+
+
+		</div>
+	</body>
+	
+	
+</html>

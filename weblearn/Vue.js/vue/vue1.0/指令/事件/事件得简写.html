@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					
+				},
+				methods:{
+					show:function(){
+						alert(1)
+					}
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv" >
+			<button @click='show'>点击弹出</button>
+			<!--事件的写法是v-on:事件名称，这里可以使用@代替v-on:-->
+			
+		</div>
+	</body>
+</html>

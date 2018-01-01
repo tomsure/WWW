@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../vue bower/animate.css"/>
+	<style type="text/css">
+		#dv1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin: 0 auto;
+		}
+	</style>
+	<script type="text/javascript" src=' ../../vue bower/bower_components/vue/dist/vue.min.js'>
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var vm=new Vue({
+				el:'#dv',
+				data:{
+					show:true,
+					
+				},
+				methods:{
+					toggle:function(){
+						this.show=!this.show
+					}
+				},
+				transitions:{
+					aa:{
+					  enterClass:'zoomInLeft',
+					  leaveClass:'zoomOutRight'
+					}
+				}
+				
+			})
+			console.log(vm)
+			
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<button @click='toggle'>点击</button>
+			<div id="dv1" v-show='show' class="animated" transition='aa'>
+				
+			</div>
+		</div>
+	</body>
+	
+	<!--使用transition组合animate.css实现动画步骤：
+	1，给html元素设置transition属性，值是任意字符串例如aa
+	2，在new Vue()中设置teansition属性，将html元素的transition的自定义值设置为这里的一个json数据的key例如：
+	 transition：{
+	 	aa：{
+	 		enterClass:
+	 		leaveClass
+	 	}
+	 }
+	3,aa作为json的名称，大括号里面分别设置两个json键值对，分别是enterClass和leaveClass，这两个值分别是元素显示和进入时候的animate.css中的效果名称-->
+</html>

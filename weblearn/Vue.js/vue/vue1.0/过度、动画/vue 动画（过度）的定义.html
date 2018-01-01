@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			
+			
+		}
+		
+		.fade-transition {
+			transition: 1s all ease;	
+		}
+		.fade-enter{
+			opacity: 0;
+			
+		}
+		.fade-leave{
+			opacity: 0;
+			-webkit-opacity: 0;
+				-webkit-transform: translateX(200px);
+		}
+	
+	</style>
+	
+<script type="text/javascript" src="../../dist/vue.min.js">
+	</script>
+	<script type="text/javascript">
+		
+	
+
+		window.onload=function(){
+		vm=new Vue({
+				el:'#dv',
+				data:{
+					bSign:true
+//					设置v-show=true让div显示
+				},
+				methods:{
+					toggle:function(){
+						this.bSign=!this.bSign
+						//使用这种写法使this.bSbin与自己的值相反
+					}
+				}
+			})
+			console.log(vm.$el)
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<input type="button" name="" id="btn" value="按钮"  @click='toggle' />
+			<div id="dv1" v-show='bSign' transition="fade">
+				<!--给div元素添加tranition属性，值就是动画名称,此时元素会自动 的加上一个class值：'fade-transition'-->
+			
+				
+			</div>
+		
+		</div>
+	</body>
+	<!--使用vue做动画需要以下几步：
+	 1，给需要动画的元素设置transition属性，值为动画名称，如果是fade动画就写fade-->
+	 <!--2，在CSS中使用绑定的类名，设动画变化前和变化后的样式-->
+	
+	
+</html>

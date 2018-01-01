@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="../../vue bower/animate.css"/>
+	<style type="text/css">
+		#dv1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin: 0 auto;
+		}
+	</style>
+	<script type="text/javascript" src=' ../../vue bower/bower_components/vue/dist/vue.min.js'>
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var vm=new Vue({
+				el:'#dv',
+				data:{
+					show:true,
+					
+				},
+				methods:{
+					toggle:function(){
+						this.show=!this.show
+					}
+				},
+				transitions:{
+					aa:{
+					  enterClass:'zoomInLeft',
+					  leaveClass:'zoomOutRight'
+					}
+				}
+				
+			})
+			console.log(vm)
+			
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<button @click='toggle'>点击</button>
+			<div id="dv1" v-show='show' class="animated" transition='aa'>
+				
+			</div>
+		</div>
+	</body>
+	
+	
+</html>

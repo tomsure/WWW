@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../../../../dist/vue.min.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					a:1,
+					
+				},
+				computed:{
+					b:{
+						get:function(){
+							return this.a+100
+						}
+						
+					}
+				}
+			})
+		}
+		
+//		get方法是computed计算属性默认会自动调用的方法,可以通过这个方法,进行属性相关的逻辑运算;
+//		computed设置的计算属性默认调用的就是get方法,所以不需要直接设置计算属性的时候,就直接在计算属性名称后面写函数即可例如:
+		
+//		computed:{
+//			aa:function(){
+//				return this.a+1  //设置计算属性的值就是普通属性a再加一个1
+//			}
+//		}
+//		
+	</script>
+	<body>
+		<div id="dv">
+			{{a}} <br />
+			{{b}}
+			
+		</div>
+	</body>
+	
+	
+</html>

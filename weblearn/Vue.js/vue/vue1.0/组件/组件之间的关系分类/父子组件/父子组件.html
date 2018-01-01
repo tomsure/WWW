@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../dist/vue.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					'a':'cc' //设置默认组件
+				},
+				components:{
+					'aa':{
+						template:'<strong>我是组件A</strong>',
+						
+					},
+					'bb':{
+						template:'<strong>我是组件B</strong>',
+						
+						
+					},
+					'cc':{
+						template:'<strong>我是组件C</strong>',
+						
+						
+					}
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<button @click="a='aa'">组件a</button> <!-- 点击这个按钮就显示aa组件-->
+			<button @click="a='bb'">组件b</button><br /> <!--点击这个按钮就显示bb组件-->
+			<component :is='a'></component>
+		</div>
+	</body>
+	<!--通过vue-devtools工具中可以看到显示有一个Root，root下面显示了aa、bb、cc三个内容，这就是这里创建的三个组件，而root就是跟组件，也就是这三个组件的父组件-->
+	
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript"  src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					arr:[1,2,3,4,5],
+					arr1:['a','b','c','d','e','f']
+				}
+			})
+		}
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+	<body>
+		<div id="dv">
+			<li v-for='val in arr| orderBy -1'>{{val}}</li><br />
+			<li v-for="val in arr1|orderBy  -1">{{val}}</li>
+		<!--倒序就是按照数组元素中数字或者第一个字符串按照adcd相反的顺序排列，参数是-1，其他负数也可以，写-1比较标准-->
+			 
+		</div>
+	</body>
+</html>

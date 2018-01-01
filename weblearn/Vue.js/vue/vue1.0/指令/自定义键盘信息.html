@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<div id="dv">
+			<input type="text" name="" id="" value="" @keydown='show' />
+			<input type="text" name="" id="" value="" @keydown.ctrl='show1' />
+		</div>
+	</body>
+	<script type="text/javascript" src="../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		Vue.directive('on').keyCodes.ctrl=17;
+		
+//		vue中键盘简写方式绑定的键盘指令只有少数几个,可以根据键盘码自定义的方式编写键盘信息
+		
+//		Vue对象的directive('on').keyCodes用于设置键盘信息，设置后可以在事件中绑定键盘事件
+		new Vue({
+			el:'#dv',
+			data:{
+				
+			},
+			methods:{
+				show:function(){
+					alert('你按了"crtl键"')
+				},
+				show1:function(){
+					alert('你按了ctrl键')
+				}
+			}
+		})
+	</script>
+</html>

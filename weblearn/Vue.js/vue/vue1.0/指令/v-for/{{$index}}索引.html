@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+			el:'#dv',
+			data:{
+				arr:['第一行','第二行','第三行','第四行','第五行']
+			}
+		})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<ul>
+				
+				<li v-for='value in arr'>{{value}} {{$index}}</li>
+		<!--v-for循环有一个功能叫{{$index}},这个功能可以获取元素的索引号-->		
+				<li v-for='ss in arr'>{{$index}}</li>
+				
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../dist/vue.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					msg:"hello world"
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<input type="text" name="" id="" v-model="msg" />
+			{{msg}}
+		</div>
+	</body>
+	<!--v-model属性一般用于表单元素中中，大多数是input元素，这个属性类似于input的value属性，但是v-model的值不是普通的值，而是Vue构造函数中data中的msg；
+	
+	v-model属性具有双向绑定数据的特性，当给多个input绑定多个个这个属性后，或者html元素直接输出了msg，则在一处input修改value值，多处的值都会改变。-->
+	
+	<!--注意： input元素使用v-model不能使用value-->
+	
+</html>

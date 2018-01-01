@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			1
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	var 	vm=new Vue({
+			el:'#dv',
+			data:{
+				
+			}
+			
+		})
+		  console.log(vm.$el.id)
+		  vm.$el.style.width='100px';
+		  vm.$el.style.height='100px'
+		  vm.$el.style.backgroundColor='red'
+	</script>
+	
+	
+</html>

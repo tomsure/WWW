@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../dist/vue.min.js" >
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				methods:{
+					show:function(){
+						alert(1)
+					}
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<input type="text" name="" id=""  @click='show() | debounce 2000'/>
+			
+	<!--debounce过滤器用于函数的延迟执行，用法就是可以将debounce写在事件的值中，如上，后面空格再加上延迟的毫秒数-->		
+		</div>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var Aaa=Vue.extend({
+//				组件名称:
+            template:'<h3>我是标题3</h3>'
+			});
+			 Vue.component('aaa',Aaa)
+			 	
+			
+			new Vue({
+				el:'#dv',
+				data:{
+					
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<aaa></aaa>
+			 <!--这里的aaa就是注册组件时候 Vue.component('aaa', constructor)中的'aaa'-->
+		</div>
+            <!--注册组件，分为三个步骤：
+            	
+         **************************1，创建组件构造器*********************
+		1，创建组件构造器：使用Vue的extent()方法定义组件，里面放json数据，形式就是：
+		  var Aaa=Vue.extend({
+		    	tempate: '渲染的html内容'
+		    	这里面的选项就是tempate，就是模板，他的值就是渲染的html元素，例如这里编写一个'<h1>你好</h1>'，在注册并挂载后页面上就会显示h3格式的‘你好’
+		    })
+		   Vue.extend({})返回的是一个组件构造器对象， 这里将Vue.extend({})作为一个变量Aaa的值，所以Aaa就是一个对象
+		   
+		   
+		 *************************2，将构造器注册为组件************************
+		   
+		 2，调用Vue.component()方法把创建的构造器注册为组件：
+		    Vue.component(tag, constructor)
+		         其中第一个参数tag就是在html中编写的自定义标签名称，例如要创建一个自定义标签aaa，那么这里tag就写成‘aaa’，注意有引号；
+		    第二个参数就是Vue.extend()方法创建的构造器，例如这里Vue.extend({})赋给了变量Aaa，所以这里第二个参数就是构造器Aaa；  
+		    
+		    
+		    
+		    *************************3,创建挂载点**************************
+		 3,创建根实例，在Vue实例的作用范围内使用组件：
+		    new vue({
+		    	el:'#dv'
+		    })
+		    在创建完组件构造器并注册组件后，需要将注册的组件挂载到作用范围的父元素下，然后在使用组件的时候，将创建好的组件 写在挂载的元素里面就会显示出来
+		    
+		    
+		    
+		    
+		    
+		 使用组件：
+		    将注册组件时候 Vue.component(tag, constructor)方法第一个参数作为自定义的html元素写在挂载的父元素下面，html上就会有显示相应的内容
+		    -->
+		    
+	</body>
+	
+	
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<template id="tems">
+			<h2>你好</h2>
+			<slot>默认情况为空</slot>
+			<slot></slot>
+			<slot></slot>
+		</template>
+		<div id="dv">
+			<aa></aa>
+			<aa>
+				<ul>
+					<li>插入到组件中的html元素</li>
+					<li>插入到组件中的html元素</li>
+				</ul>
+			</aa>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		new Vue({
+			el:'#dv',
+			data:{
+				a:'aa'
+			},
+			components:{
+				'aa':{
+					template:'#tems'
+				}
+			},
+			
+			
+		})
+	</script>
+	<!--组件的模板中如果使用了slot标签，而且组件中插入了html元素，那么，如果模板中使用了几个slot，则组件中就会显示几个相同的html元素-->
+</html>

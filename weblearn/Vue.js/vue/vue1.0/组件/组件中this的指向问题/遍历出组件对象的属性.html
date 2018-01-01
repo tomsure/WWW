@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var Aaa=Vue.extend({
+             data:function(){//data数据必须是函数形式
+             	return {
+             		msg:'你好'
+             	}
+             	
+
+             },
+             methods:{ //方法写在extend()方法里面，和data同级别
+             		change:function(){
+             		   this.msg='哈哈'
+             		   this.$el.style.color='red'
+             		   console.log(this)
+             		}
+             
+             },
+            template:'<h3 @click=change>{{msg}}</h3>'
+                 //注意这里写事件函数不需要加引号
+			});
+			 Vue.component('aaa',Aaa)
+			 	
+
+			new Vue({
+				el:'#dv',
+				data:{
+					
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<aaa></aaa>
+			<aaa></aaa>
+			
+		</div>
+          
+		   
+		    
+		
+	</body>
+	
+	
+</html>

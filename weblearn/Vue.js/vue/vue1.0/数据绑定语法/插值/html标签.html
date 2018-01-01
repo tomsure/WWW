@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	    <script type="text/javascript" src="../../../dist/vue.min.js">
+	    	
+	    </script>
+	    <script type="text/javascript">
+	    	window.onload=function(){
+	    		new Vue({
+	    		     el:'#dv',
+	    		     data:{
+	    		     	msg:'你好'
+	    		     }
+	    		})
+	    	}
+	    </script>
+	    
+	<body>
+		<div id="dv">
+			<input type="text" name="" id=""  v-model='msg' />
+			{{msg}}
+			<!--双向绑定，解析成字符串-->
+			{{{msg}}}
+			<!--//解析成html元素-->
+		</div>
+	</body>
+</html>

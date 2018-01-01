@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../../dist/vue.min.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var vm=new Vue({
+				el:'#dv',
+				data:{
+					a:1 ,
+					b:2
+				}
+			})
+			document.onclick=function(){
+				vm.a=3
+				//这里的vm指的是new vue()，也就是vue的实例对象，而这里的a也就是data中的a，所以在全局环境下data中的数据就是Vue实例对象的属性；
+			}
+		}
+	</script>
+	<body>
+		<div id="dv">
+			{{a}} <br />
+			{{b}}
+		</div>
+	</body>
+	
+	
+</html>

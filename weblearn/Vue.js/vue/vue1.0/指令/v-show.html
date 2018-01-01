@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../dist/vue.min.js">
+		
+	</script>
+	<style type="text/css">
+		#dv1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+				a:true
+				},
+				
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<div id="dv1" v-show='a' >
+	   <!--v-show指令用于设置元素显示还是隐藏，值是true/false,所以如果给元素设置v-show=false的时候就会隐藏，v-show的时候，就会显示；
+	  这里现在data数据中设置一个数据a，值为true，将dv1的值设置为a，所以默认情况下v-show的值就是true；
+	  可以设置当点击按钮的时候，#dv1的v-show属性值变成false使元素隐藏，此时只需要设置a=false即可：
+	  v-on:cliak='a=false'
+	  此时v-show就变成了false，从而使元素隐藏-->
+			</div>
+			<button v-on:click="a=false">点击隐藏</button>
+		</div>
+		
+	</body>
+</html>

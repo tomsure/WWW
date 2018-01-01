@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript"  src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			 Vue.filter('zidingyi',function(out){
+			return	out<10?'0'+out:''+out;
+//             如果data中的a小于10则返回0+a的这个值,如果大于10,则直接返回这个值，这个是自定义设置的条件
+			});
+			new Vue({
+				el:'#dv',
+				data:{
+				 a:9	
+				},
+			
+			
+			})
+		}
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+	<body>
+		<div id="dv">
+		   {{a|zidingyi}}
+			 
+		</div>
+		
+	</body>
+	<!--自定义过滤器使用方法：
+	 1，使用Vue对象的filter()方法；
+	 2，filter()方法中传入两个参数，第一个参数是自定义过滤器的名称，假如是a，第二个参数是一个函数，这个函数中方一个参数，假如是b；此时要自定义编写过滤器的写法就是：
+	  Vue.filter('a',function(b))
+	3,这里的字符串'a'表示的是自定义过滤器的名称，b指的是data数据中传入的数据，filter()第二个函数参数的函数体内就写自定义的语句；
+	4，使用过滤器的时候，在管道符号后面写自定义过滤器的名称，不需要哦加引号；-->
+	  
+</html>

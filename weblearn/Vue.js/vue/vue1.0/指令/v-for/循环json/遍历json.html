@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+			el:'#dv',
+			data:{
+				vjson:{
+					a:'tom',
+					b:'joy',
+					c:'luci',
+					d:'hanmei'
+				}
+			}
+		})
+		}
+	</script>
+	<body>
+		<div id="dv"  >
+			<ul>
+				<li v-for='value in vjson'>
+			
+			{{value}}&nbsp;{{$index}}
+			<!--获取json的值-->
+				</li>
+			</ul>
+			<ul>
+				<li v-for='value in vjson'>
+					{{$key}}
+					<!--获取key值-->
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

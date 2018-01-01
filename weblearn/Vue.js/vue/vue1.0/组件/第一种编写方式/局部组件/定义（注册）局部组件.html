@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../dist/vue.min.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var Aaa=Vue.extend({
+
+            template:'<h3>我是标题3</h3>'
+			});
+			
+			 	
+
+			new Vue({
+				el:'#dv',
+				
+				components:{
+					'aaa':Aaa
+//				aaa指的是自定义的html标签,Aaa指的是组件构造器	
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<aaa></aaa>
+			
+		</div>
+          
+		    <!--局部组件是可以放在某一个组件里面的组件，注册局部组件方法如下：
+		 1，创建构造器，和全局方法相同，都是使用Vue.extend()方法
+		 2，注册组件的时候需要在new vue()中使用components选项，格式是json格式，例如：
+		   components:{
+		   	aaa:Aaa
+		   }-->
+		   <!--这里'aaa'指的是渲染的自定义的html标签名称，注意需要加引号，也就是组件名称，Aaa就是组件构造器名称--> 
+		    
+		    
+		
+	</body>
+	
+	
+</html>

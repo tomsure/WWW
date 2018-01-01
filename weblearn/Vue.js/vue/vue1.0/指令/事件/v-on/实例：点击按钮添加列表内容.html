@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					arr:['tom','bom','joy','som']
+				},
+				methods:{
+					add:function(){
+						this.arr.push('bom') //给数组末尾追加一个字符串‘bom
+					}
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<ul><li v-for="value in arr">{{value}}</li></ul>
+			<!--将li遍历显示在页面上-->
+			<button v-on:click='add()'>点击添加</button>
+			<!--当点击button的时候，列表追加一个内容-->
+			
+		</div>
+	</body>
+</html>

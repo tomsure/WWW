@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				methods:{
+					show:function(){
+						alert(1)
+					}
+						
+					
+				}
+				
+//		methods是vue构造函数中的一个参数,这个参数的值是json格式的数据,里面可以编写各种函数,可以在指定的条件下执行		
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<button v-on:click='show()'>点击弹出</button>
+			<!--给button按钮绑定click事件，点击的时候弹出1-->
+		</div>
+	</body>
+</html>

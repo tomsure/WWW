@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					dstring:'你好啊', //字符串类型
+					dnumber:24 ,//nubmer类型，
+					darr:['吃饭','睡觉','打豆豆'],
+					dobj:{
+						name:'tom',
+						age:24,
+						sex:'men'
+					}    //Object类型
+				}
+			
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<input type="" name="" id="" v-model="dstring" />
+			<input type="" name="" id="" v-model="dnumber" />
+			{{darr}}
+			{{dobj}}
+		</div>
+	</body>
+	  <!--data数据中可以绑定多种类型的数据-->
+	
+</html>

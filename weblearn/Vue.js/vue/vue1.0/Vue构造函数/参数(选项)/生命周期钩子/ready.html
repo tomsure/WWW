@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			{{msg}}
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		new Vue({
+			el:'#dv',
+			data:{
+				msg:'你好'
+			},
+			created:function(){
+				alert('Vue实例创建完成')
+			},
+			beforeCompile:function(){
+			     alert('这是DOM 编译编译之前阶段')
+			},
+            compiled:function(){
+            	alert('DOM 编译编译完成之后')
+            },
+            ready:function(){
+            	alert('数据插入到文档中')
+            }
+//         read是在编译完成之后,当数据插入都DOM文档中之后执行的函数，类似于window.onload
+			
+			
+		})
+	</script>
+	
+	
+</html>
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../../dist/vue.min.js">
+		
+	</script>
+	<style type="text/css">
+		.font{
+			color: red;
+		};
+		.bg{
+			background-color: green;
+			width: 100px;
+			height: 100px;
+		}
+		
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					a:{color:"red",backgroundColor:'green'},
+					b:{width:'100px',height:'100px'},
+					c:{borderRidus:'100px',backgroungColor:'gray'}
+					
+				},
+				
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<div id="dv1" v-bind:style='[a]'>
+				你好
+			</div>
+			<div id="" v-bind:style="{color:'blue'}">
+				你也好
+			</div>
+			 <!--这种方式是设置一个样式，是在data数据里面设置，然后在将data数据添加到style的值上-->
+		</div>
+	</body>
+</html>

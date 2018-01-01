@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		vm=new Vue({
+			aa:'1' , //自定义属性
+			bb:function(){
+				
+				alert('自定义属性')
+			},
+			el:'#dv',
+			data:{
+				
+			}
+			
+		})
+		alert(vm.$options.aa) //调用属性
+		  vm.$options.bb() //调用方法
+		
+//		$option属性用于调用自定义属性和方法,调用方法需要加括号;
+//		vue可以自定义属性和方法,然后通过vm.$option属性调用
+		
+	</script>
+	
+	
+</html>

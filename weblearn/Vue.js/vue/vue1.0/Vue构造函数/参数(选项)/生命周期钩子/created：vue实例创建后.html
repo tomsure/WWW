@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			{{a}}
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		new Vue({
+			el:'#dv',
+			data:{
+				a:'你好'
+				
+			},
+			created:function(){
+				alert(1)
+			}
+//			created表示vue实例创建完成后执行的方法，这意味着已建立：数据绑定，计算属性，方法，watcher/事件回调。但是还没有开始 DOM 编译，$el 还不存在。
+
+		})
+	</script>
+	
+	
+</html>

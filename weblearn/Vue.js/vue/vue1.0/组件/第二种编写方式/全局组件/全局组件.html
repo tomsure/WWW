@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../dist/vue.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			Vue.component('my-component',{
+				template:'<strong>{{msg}}</strong>',
+				data:function(){
+					return {
+						msg:'哈哈'
+					}
+				}
+				
+			})
+			
+			new Vue({
+				el:'#dv',
+				
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<my-component></my-component>
+		</div>
+	</body>
+	   <!--另一种方式创建全局组件方式：
+	    直接调用Vue的component()方法，传两个参数，第一个参数是组件名称，也就是自定义标签名称，第二个参数是一个json数据，里面可以设置data、methods等等内容-->
+	
+</html>

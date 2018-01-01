@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+				  tom:['第一行','第二行','第三行','第四行']
+				}
+			})
+			
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<ul>
+				<li v-for='value in tom'>{{value}}</li>
+				 <!--v-for='name in arr'-->
+				 <!--name表示li的值，arr表示data中的arr数组-->
+			</ul>
+			
+			<!--v-for属性类似于js中for循环的中遍历数组的用法，在for循环遍历数组的时候，就会用到'for(var i in arr)'-->
+		</div>
+	</body>
+</html>

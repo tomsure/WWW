@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			{{a}}
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		vm=new Vue({
+			
+			data:{
+				a:'vue 你好'
+			}
+			
+		}).$mount('#dv')
+		
+//		vm.$mount('#dv')
+	</script>
+	
+	   <!--$mount()方法用于绑定HTML元素，又叫挂载，vue的方法有两种书写方式，一种是直接写vm.方法，另一种是链式写法-->
+</html>

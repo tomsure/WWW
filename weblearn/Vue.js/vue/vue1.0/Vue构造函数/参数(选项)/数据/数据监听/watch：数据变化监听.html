@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			{{a}} <br />
+			{{b}}
+			<button  @click='fn'>点击弹出</button>
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	var    vm=new Vue({
+			el:'#dv',
+			data:{
+				a:1,
+				b:2
+			},
+			methods:{
+				fn:function(){
+					vm.a=111;
+					vm.b=222
+				}
+			}
+			
+			
+		})
+	</script>
+	
+	
+</html>

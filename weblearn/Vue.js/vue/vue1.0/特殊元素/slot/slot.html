@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<template id="tems">
+			<h2>你好</h2>
+			<slot>默认情况为空</slot>
+		</template>
+		<div id="dv">
+			<aa></aa>
+			<aa>
+				<ul>
+					<li>插入到组件中的html元素</li>
+					<li>插入到组件中的html元素</li>
+				</ul>
+			</aa>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		new Vue({
+			el:'#dv',
+			data:{
+				a:'aa'
+			},
+			components:{
+				'aa':{
+					template:'#tems'
+				}
+			},
+			
+			
+		})
+	</script>
+	  <!--slot可以使在创建的组件中插入html标签，在默认情况下，跟组件下放置的组件只会显示当前组件设置的模板的内容，在在组件中放其他东西都不会显示，但是如果为了在组建中放置html元素，可以在当前组件的模板中放置一个slot标签，写为<slot><slot>，此时，这个标签相当于一个插槽一样，可以达到向组建中插入html标签而覆盖模板内容的作用-->
+	
+</html>

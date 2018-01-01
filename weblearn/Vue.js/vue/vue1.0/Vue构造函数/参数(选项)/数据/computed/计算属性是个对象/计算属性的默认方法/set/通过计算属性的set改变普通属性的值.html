@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../../../../../dist/vue.min.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+		var vm=new Vue({
+				el:'#dv',
+				data:{
+					a:1,
+					
+				},
+				computed:{
+					b:{
+						get:function(){
+							
+						     return this.a+2  
+		     
+						},
+						set:function(vel){
+						     vel=200
+							 this.a=vel//将普通属性的值设置为set的参数，可以通过计算属性改变普通属性的值           
+//							 a会变成200
+						}
+					}
+				}
+			})
+                  document.onclick=function(){
+                  	vm.b=true
+                  	
+                  }
+		}
+	</script>
+	<body>
+		<div id="dv">
+			{{a}} <br />
+			{{b}}
+		</div>
+	</body>
+	<!--改变普通属性的值
+	
+	1，在set中设置普通属性的值等于set函数的参数（还可以加一些逻辑运算），然后在外面设置vm的实例属性的值，此时，普通属性的值就会变成计算 属性的值或进行过相关运算的值
+	2，设置计算属性=true，在set函数中给参数赋值，再将参数设置为普通属性的值，则普通属性的值就会变成这个参数的值-->
+	
+	
+	
+	
+</html>

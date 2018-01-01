@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <style>
+        .color{
+            color: red;
+        }
+        .back{
+        	background: blue;
+        	width: 100px;
+        	height: 100px;
+        	display: block;
+        	
+        }
+    </style>
+    <script src="../../../../../dist/vue.min.js"></script>
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:'#dv',
+                data:{
+                   r:"color",  //这里的'color'指的是style里面的.color选择器           
+                   b:'back'   //这里的back指的是style里面.back选择器
+                },
+                methods:{
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <div id="dv">
+    	<strong :class="[r,b]">你好</strong>
+    	 <!--这里[red]，指的是data数据里面的red这条键值对的key；-->
+    	
+    <!--第二种用法是：在new Vue()这个构造函数中，data数据中添加多条json数据，key值自定义，key值 对应的value值就是css style标签中的class选择器名称，style中多个类就在data中写多个，然后在html元素中以数组的形式填写，数组里面的值就是data中的key值-->
+    	
+    	<!--这种写法是将css数据引入js，再将js数据引入html-->
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

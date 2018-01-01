@@ -1,0 +1,16 @@
+﻿创建vue项目失败
+ vue init webpack myproject //创建项目
+
+ 提示： /usr/local/lib/node_modules/vue-cli/bin/vue-init:65
+  console.log(`> Use cached template at ${chalk.yellow(tildify(tmp))}`)
+              ^
+SyntaxError: Unexpected token ILLEGAL
+    at Module._compile (module.js:439:25)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+    at Function.Module.runMain (module.js:497:10)
+    at startup (node.js:119:16)
+    at node.js:902:3
+
+  解决办法：  现升级npm，安装n模块，升级nodejs到稳定版本：n stable

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					
+				},
+				methods:{
+					show:function(ev,a){
+						alert(1)
+						
+					},
+					show2:function(){
+						alert(2)
+					},
+					show3:function(){
+						alert(11)
+					}
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<div id="dv1" @click='show2()'>
+				
+				<button @click='show($event,12)'>点击弹出</button>
+			<!--  点击这个div的时候，由于事件冒泡，事件会传到外层的父元素dv1上，由于dv1绑定了事件函数，，所以点击这个的时候，dv1也会执行事件函数	-->
+			 <button @click.stop='show3()'>点击只弹出自己</button>
+			 
+			 <!--要想阻止事件冒泡，在原生js中，需要获取事件对象，然后设置事件对象的cancelBabbel=true；
+			vue中可以在@click后连写一个.stop然后再写事件函数，这样就可以直接阻止事件冒泡-->
+			 
+			 
+			 
+			 
+			</div>
+			
+			
+	
+		</div>
+	</body>
+</html>

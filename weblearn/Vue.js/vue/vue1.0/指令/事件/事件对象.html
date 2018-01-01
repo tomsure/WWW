@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					
+				},
+				methods:{
+					show:function(ev,a){
+						alert(ev); //事件对象
+						alert(ev.target) //事件对象属性
+						alert(a) //返回a
+						
+					}
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<button @click='show($event,12)'>点击弹出</button>
+			
+			
+			<!--在vue中，事件事件对象可以通过在执行事件函数的时候将$event作为第一个参数传给函数，就可以在函数内获取到事件对象，在$event后面传的参数就可以做其他参数使用-->
+		</div>
+	</body>
+</html>

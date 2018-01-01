@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+        	background: blue;
+        }
+    </style>
+    <script src="../../../../../dist/vue.min.js"></script>
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:'#dv',
+                data:{
+                   
+                },
+                methods:{
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <div id="dv">
+    	<strong :class="{red:true,blue:true}">你好</strong>
+    	
+    	<!--使用v-bind给元素绑定class的第一种方式是：
+    	   v-bind:class='{class1：true,class2：true....}'，或者  :class='{class1：true,class2：true....}'
+    	class的值使用json格式，每个class的值为true或者false，true表示添加这个class，false表示不添加 -->
+    	
+    	
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

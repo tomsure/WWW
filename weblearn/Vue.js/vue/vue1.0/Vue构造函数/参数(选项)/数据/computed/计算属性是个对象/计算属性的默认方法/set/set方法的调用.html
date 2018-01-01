@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../../../../../dist/vue.min.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+		var vm=new Vue({
+				el:'#dv',
+				data:{
+					a:1,
+					
+				},
+				computed:{
+					b:{
+						get:function(){
+							
+						     return this.a+2  
+//						     计算后产生新的属性b的值
+						},
+						set:function(vel){
+						     vel=200
+							 this.a=vel //可以通过计算属性改变普通属性的值                                          
+						}
+					}
+				}
+			})
+                  document.onclick=function(){
+                  	vm.b=200
+                  }
+		}
+	</script>
+	<body>
+		<div id="dv">
+			{{a}} <br />
+			{{b}}
+		</div>
+	</body>
+	
+	<!--set方法调用的条件是，如果使用Vue实例vm手动设置了computed中设置的计算属性，且计算属性设置了set方法，则此时就会调用set方法-->
+	
+	
+</html>

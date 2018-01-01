@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		 .box {
+ 	width: 100px;
+ 	height: 100px;
+ 	border: 1px solid red;
+ 	display: inline-block;
+ }
+ /*这个定义动画情况，以及存在时的样式，这个样式会覆盖class里的样式*/
+ 
+ .mytran-transition {
+ 	transition: all 0.3s ease;
+ 	background-color: greenyellow;
+ }
+
+ 
+ .mytran-enter,
+ .mytran-leave {
+ 	height: 0;
+ 	width: 0;
+ }</style> 
+	<body>
+		<div id="app"> 
+<button @click="change">点击</button> 
+<br/> 
+<div class="box" v-if="box_1" transition="mytran">1</div> 
+
+</div> 
+	</body>
+	
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+
+<script>var vm = new Vue({
+	el: '#app',
+	data: {
+		
+	},
+	methods: {
+		
+	}
+})
+
+
+</script>
+</html>

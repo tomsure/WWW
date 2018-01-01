@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+		
+	</script>
+	<script type="text/javascript">
+		
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					url:'http://tupian.enterdesk.com/2012/0606/gha/10/11285966_1334673509285.jpg'
+				},
+				methods:{
+					
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<img v-bind:src='url'/> 
+			<img :src="url"/>
+			v-bind用于绑定元素的属性，可以简写为“：”
+			<!--vue是以数据为核心的框架，所以页面大多数效果需要放在vue构造函数的data中，元素的属性也是要设置在data数据中，在html上再以v-bind指令获取，从而渲染元素。-->
+		</div>
+	</body>
+</html>

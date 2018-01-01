@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script src="../../../../../dist/vue.min.js"></script>
+		<style>
+          #ss{
+          	width: 200px;
+          	height: 200px;
+          	border: 1px solid red;
+          }
+		</style>
+	</head>
+      
+	<body>
+		<template id="parent">
+			<h4>父组件aaa====>>{{msg}}</h4>
+			<bbb @childmsg='get'></bbb>
+			 <!--子组件绑定的自定义指令-->
+		</template>
+		<template id="child">
+			<p>aa</p>
+			<button id="btn" @click='send'>发送数据</button>
+		</template>
+		<div id="dv">
+			<aaa></aaa>
+			
+		</div>
+		<script>
+			var vm = new Vue({
+				el:'#dv',
+				data:{
+					a:'aaa'
+				},
+				components:{
+					'aaa':{
+						template:'#parent',
+						data:function(){
+							return {
+								'msg':'我是父组件aaa的数据',
+								
+							}
+						},
+						methods:{
+							get:function(msg1){//这个msg1就是从子组件传递过来的数据
+								this.msg=msg1  //将父组件的msg设置为msg1，也就是子组件的数据
+                                alert(msg1)
+								
+							}
+						},
+						components:{
+							'bbb':{
+					            template:'#child',
+					            data:function(){
+						          return {
+							           child:'我是子组件的数据'
+						                 }
+					                           },
+					            methods:{
+					            	send:function(){
+					            		this.$emit('childmsg',this.child)
+					            		
+					            	}
+					                    }
+					            
+					
+								
+							}
+						}
+					}
+				}
+			});
+//      父组件获取子组件数据的原理是:将子组件的数据发送给父组件
+//       实现步骤如下:
+//       1,给子组件设置一个方法用于发送数据send,
+//       2,给父组件设置一个方法用于接收数据get,
+//       3,给父组件模板中调用的子组件绑定一个自定义指令,这个指令绑定的值就是父组件中用于获取数据的方法get,
+//       4,给子组件的模板中的元素绑定一个事件,事件函数就是子组件中的send方法
+//       5,在子组件的函数中,使用this.$emit()方法将参数传递给父组件,第一个参数是在子组件上面绑定的自定义指令名称,第二个参数就是父组件需要获取或者子组件需要发送给组组件的数据
+//       6,父组件的get方法中有一个参数,这个参数,就是子组件传递过来的数据,此时可以将父组件的data中的某一个数据的值设置为这个参数即可
+
+		</script>
+	</body>
+
+</html>

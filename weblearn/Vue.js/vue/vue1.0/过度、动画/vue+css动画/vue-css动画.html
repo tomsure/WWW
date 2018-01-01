@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		
+		#dv1{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			
+		}
+		.a-transition{
+			transition: 1s width ease;
+	         width: 200px;
+	         height: 100px;
+	         padding: 10px;
+
+  
+  
+		}
+		.a-enter{
+			opacity: 0;
+			
+			
+		}
+		.a-leave{
+			opacity: 0;
+			
+			
+			
+		}
+	</style>
+	<body>
+		<div id="dv">
+			<button @click='toggle'>点击切换</button>
+			 <div id="dv1" transition='a' v-show='show'>
+			 	
+			 </div>
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../vue bower/bower_components/vue/dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		new Vue({
+			el:'#dv',
+			data:{
+				show:true
+			},
+			methods:{
+				toggle:function(){
+					this.show=!this.show
+				}
+			}
+		})
+	</script>
+	<!--过度基本用法：
+	1，给需要过度效果的html元素添加transition属性，值是自定义的任意字符串，最好带语义，这个值就是定义的动画名称；
+	2，添加transition属性后，在DOM中html元素会自动添加一个class属性，值是以transition设置的值开头再带一个transition的class值，例如：
+	     <div id="dv1" transition='a' >
+       这里给div添加一个transition='a'的属性，此时这个div会自动的多一个class类名，可以通过调试器看到class的值为'a-transition';
+    
+    3,在style中设置动画名称对应的三个CSS 类选择器，html元素也会多出这三个类，分别是：
+              a-transition:用于设置过度元素的CSS的transition属性，包括需要过度的元素的样式名称transition-property（如宽度，高度等）、过度效果完成的时间：transition-duration、过度效果的速度曲线:transition-timing-function、过度效果开始延迟的时间：transition-delay
+              a-enter:元素进入时候的样式
+              a-leve:元素离开时候的样式-->
+</html>

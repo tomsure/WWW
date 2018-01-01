@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+		    	{{a}} <br />
+		    	{{b}}   <br />
+		    	{{c}}
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		new Vue({
+			el:'#dv',
+			data:{
+				a:1,
+				b:2
+			},
+			computed:{
+				c:function(){
+					return '你好'
+				}
+				//这里的c也是vue实例的属性，但是这里的c是 以函数的形式来写的，可以通过各种函数逻辑进行各种逻辑计算
+			}
+			
+			
+//			computed用于设置Vue实例的计算属性,所谓计算属性,就是可以通过各种逻辑语句进行计算的属性,和data中的根本类型相同,都是Vue实例对象的属性,computed中的每个json格式数据都是一个属性,他的value值是函数，computed的函数里面需要使用return 返回计算的结果
+		})
+	</script>
+	
+	
+</html>

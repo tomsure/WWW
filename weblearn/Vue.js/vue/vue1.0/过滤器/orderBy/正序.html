@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript"  src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					arr:[1,2,3,4,5],
+					arr1:['a','b','c','d','e','f']
+				}
+			})
+		}
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+	<body>
+		<div id="dv">
+			<li v-for='val in arr| orderBy 1'>{{val}}</li><br />
+			<li v-for="val in arr1|orderBy  ">{{val}}</li>
+			<!--正序，就是按照数字的大小，或者数组元素中第一个字符串按照abcd的顺序排列，-->
+			<!--正序排列的时候，参数是1，或者不填写参数，默认参数就是1-->
+			 
+		</div>
+	</body>
+</html>

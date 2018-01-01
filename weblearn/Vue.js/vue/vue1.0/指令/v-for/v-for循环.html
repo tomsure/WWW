@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+				  tom:['第一行','第二行','第三行','第四行']
+				}
+			})
+			
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<ul>
+				<li v-for='value in tom'>{{value}}tom</li>
+				<!--在li中除了添加{{内容外}}，添加任何一个数据，都可以把内容添加到每个li元素中-->
+				
+			<!--这里的 value就相当于是for循环中的i-->
+			</ul>
+			
+		
+		</div>
+	</body>
+</html>

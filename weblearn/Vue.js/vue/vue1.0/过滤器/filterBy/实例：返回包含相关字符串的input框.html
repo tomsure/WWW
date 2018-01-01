@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					arr:['tom','bom','joy','lili','luci'],
+					a:''   //空字符串
+				},
+				
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<input type="text" name="" id="" v-model='a' />
+			<!--使li与data数据中的a进行双向数据绑定-->
+			
+			
+			<ul>
+				<li v-for='a in arr| filterBy a' >{{a}}</li>
+				<!--li的内容是表达式{{a}}，表示与data数据a进行了双向绑定，所有绑定了a的元素，当一个里面的数修改，所有的都会修改-->
+		    <!--li又使用了v-for循环遍历，在不改变a的值的话，li遍历后，所有li会遍历显示出来，由于a是在arr中遍历，所以，所有li的值就是对应的arr的元素值	-->	
+		    <!--当在input中输入一个字符串的时候，表示data中的a的值发生改变，也就表示只返回数组中包含这个字符串的li元素被包含到，所以只返回包含这个字符串的li元素-->
+				
+				
+			</ul>
+			  
+		</div>
+	</body>
+</html>

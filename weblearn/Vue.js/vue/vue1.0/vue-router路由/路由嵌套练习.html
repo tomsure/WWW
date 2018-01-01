@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<template id="tm-home">
+			<p>主页</p>
+		</template>
+		<template id="tm-news">
+			新闻
+		</template>
+		<template id="tm-about">
+			关于
+		</template>
+		<div id="dv">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript" src="../vue bower/bower_components/vue-router/dist/vue-router.js">
+		
+	</script>
+	<script type="text/javascript">
+		var a=Vue.extend();
+		var Home=Vue.extend({
+			component:{
+				template:'#tm-home'
+			}
+		})
+		var News=Vue.extend({
+			component:{
+				template:'#tm-news'
+			}
+		})
+		var About=Vue.extend({
+			component:{
+				template:'#tm-about'
+			}
+		});
+		var router=new VueRouter()
+		     router.map({
+		     	'home':{
+		     		component:Home,
+		     	},
+		     	'news':{
+		     		component:News
+		     	},
+		     	'about':{
+		     		component:About
+		     	}
+		     	
+		     })
+		  router.start(a,'#dv')
+	</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<template id="tems">
+			<h2>你好</h2>
+			<slot>默认情况为空</slot>
+			<slot name='sl-ul'></slot>
+			<slot name='sl-ul'></slot>
+			<slot name='sl-ol'></slot>
+		</template>
+		<div id="dv">
+			<aa></aa>
+			<aa>
+				<ul  slot='sl-ul'>
+					<li>无序列表</li>
+					<li>无序列表</li>
+				</ul>
+				<ol slot='sl-ol'>
+					<li>有序列表</li>
+					<li>有序列表</li>
+					
+				</ol>
+			</aa>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		new Vue({
+			el:'#dv',
+			data:{
+				a:'aa'
+			},
+			components:{
+				'aa':{
+					template:'#tems'
+				}
+			},
+			
+			
+		})
+	</script>
+	   <!--有时候需要在组建中插入多个不同的html元素，则可以在组件模板中使用slot标签，然后slot标签设置name属性，组建中的元素设置slot属性，元素中slot属性的值设置为对应的slot的name的值，这样，就可以对应插入指定重复的html元素了-->
+</html>

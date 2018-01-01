@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					arr:[1,2,3,4,5],
+					
+				},
+				methods:{
+					add:function(){
+						this.arr.push('你好')
+					},
+				
+					
+				}
+				
+			})
+		}
+	</script>
+	<body >
+		<div id="dv">
+			<ul>
+				<li v-for=' aa in arr' >{{aa}}</li>
+				<!--这里不设置track-by就只会执行一次追加-->
+				<button @click='add'>添加</button>
+				
+			</ul>
+			
+			
+		</div>
+	</body>
+	
+	<!--track-by可以实现循环执行某项操作-->
+	 <!--如果通过循环修改重复数据的话需要使用track-by-->
+	 
+	 
+	
+</html>

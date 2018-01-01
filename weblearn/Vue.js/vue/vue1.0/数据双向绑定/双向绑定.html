@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../dist/vue.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					tom:'hello vue!'
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<input type="" name="" id="" v-model="tom" />
+			<input type="" name="" id="" v-model="tom" />
+			{{tom}}
+			{{* tom}}
+		</div>
+	</body>
+	  <!--数据双向绑定就是在Vue构造函数中元素选择器绑定了指定元素后，元素内的子元素如果v-model的值是同一个vue构造函数中data数据中的某个值的话，当某一个input的值改变的时候，所有使用这个v-model值的元素的值都会改变-->
+	  
+	  
+		
+	<!--在绑定文本的时候，在{{}}内第一个字符添加一个*号，当其他地方msg的值改变的时候，本地就可以不改变；-->	
+		  
+	  
+	
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js" >
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					arr:[1,2,3,4,5,6,7,8,9,10]
+				}
+			})
+		}
+		
+	</script>
+	<body>
+		<div id="dv">
+		 
+			
+			<!--limitBy用于设置对v-for返回的数组元素的限制，两种方式:-->
+			<!--第一种方式是imityBy后面跟一个数字参数:-->
+			<li v-for='value in arr|limitBy 3'>{{value}}</li><br />
+			<!--如果是后面跟一个数字参数，就表示获取返回的数组元素的前几个；-->
+			
+			
+	<!--***************************************-->
+			<!--第二种方式是limitBy后面跟两个数字参数：-->
+			<li v-for='value in arr|limitBy 6 4'>{{value}}</li>
+         <!--如果是后面跟两个数字参数,第一个参数表示取几个，第二个参数表示要开始取得元素的下标，例如这里表示要取6个，从下标4开始-->			
+		</div>
+	</body>
+</html>

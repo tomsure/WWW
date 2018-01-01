@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.js">
+		
+	</script>
+	<script type='text/javascript'>
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					msg:'汤旭'
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv" v-text='msg'>
+			<!--v-text可以解析元素绑定的data中的文本内容数据，显示在页面上，功能类似于{{}}-->
+		</div>
+	</body>
+	
+	
+</html>

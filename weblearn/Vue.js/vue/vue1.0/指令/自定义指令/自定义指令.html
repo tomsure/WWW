@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv" v-red >
+		你好
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		Vue.directive('red', function(){
+//			this.el.style.color='red' //设置文字颜色为红色
+				
+		})
+		new Vue({
+			el:'#dv',
+			data:{}
+		})
+		
+//		自定义指令可以按照需求自定义的设置指定,使用Vue的directive()方法;
+//		第一个参数是指令名称,不加v字符,第二个参数是函数,函数中可以设置执行绑定当前元素的语句,例如设置当前元素的样式,注意:在这个函数中,tihs.el表示的就是vue实例化函数中el绑定的元素
+	</script>
+</html>

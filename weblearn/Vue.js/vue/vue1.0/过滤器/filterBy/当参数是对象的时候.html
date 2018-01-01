@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					tom:{
+						name:'',
+						age:22,
+						job:'worker',
+						address:'深圳'
+						
+					}
+				},
+				
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<input type="text" v-model='tom' />
+			
+		</div>
+	</body>
+</html>

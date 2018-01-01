@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../dist/vue.min.js">
+		
+	</script>
+	<template id="tem" >
+		<h1>{{msg}}</h1>
+		
+	</template>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				components:{
+		         'aaa':{
+		         	template:'#tem',
+		         	data:function(){
+		         		return {
+		         			msg:'你好'
+		         		}
+		         	}
+		         	
+		         }
+				}
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<aaa></aaa>
+		</div>
+		
+		<!--这种方式是使用html5的template模板标签，将模板放在这个标签里面，再将id绑定到Vue()里的components选项里的template标签-->
+		<!--子组件的模板也可以单独直接写在template标签中，然后使id调用-->
+	</body>
+	
+	
+</html>

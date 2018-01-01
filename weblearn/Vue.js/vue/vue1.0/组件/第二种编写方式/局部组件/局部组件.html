@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../../../../dist/vue.min.js"></script>
+	<style>
+	</style>
+</head>
+<body>
+	<div id="dv">
+		<aaa></aaa>
+	</div>
+
+
+</body>
+	<script>
+		 
+		 var vm=new Vue({
+		 	el:'#dv',
+		 	components:{
+		 		'aaa':{
+		 			template:'<h2>{{msg}}</h2>',
+		 			data:function(){
+		 				return {
+		 					msg:'哈哈'
+		 				}
+		 			}
+		 		}
+		 	}
+		 })
+
+	</script>
+	
+	  <!--局部组件是创建在组件里面的组件，创建步骤如下：
+	  	1，直接在new Vue()里面编写，el表示挂载到的父元素；
+	  	2，使用components选项，以json格式编写组件，kye值是组件名称，需要加引号，value是大括号json格式，里面编写模板，data数据等等
+	   
+	    
+</html>

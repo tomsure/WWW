@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="../../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#dv',
+				data:{
+					tom:'你好啊',
+					merry:"哈哈",
+					luci:['小明','小李','张伟']
+				}
+			
+			})
+		}
+	</script>
+	<body>
+		<div id="dv">
+			<input type="" name="" id="" v-model="tom" />
+			<input type="" name="" id="" v-model="merry" />
+			<input type="" name="" id="" v-model="luci" />
+		</div>
+	</body>
+	<!--在实例化的vue中，绑定一个元素，这个元素内的所有子元素包括自己，可以绑定多条多种类型的数据-->
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			{{a}} <br />
+			{{b}}
+			<button  @click='fn'>点击弹出</button>
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	var    vm=new Vue({
+			el:'#dv',
+			data:{
+				a:1,
+				b:2
+			},
+			methods:{
+				fn:function(){
+					vm.a=111; //数据a作为vm的属性
+					
+				}
+			},
+
+			
+	});
+	  vm.$watch('a',function(){
+				
+				alert('数据a发生变化了')
+				
+				vm.b=3333333333 //数据a变化后执行任意语句，这里是数据a变化后数据b变化
+			})
+//		Vue的实例方法$watch()用于监听data数据的变化,第一个参数是监听的数据,第二个参数是数据变化后执行的函数	
+	</script>
+	
+	
+</html>

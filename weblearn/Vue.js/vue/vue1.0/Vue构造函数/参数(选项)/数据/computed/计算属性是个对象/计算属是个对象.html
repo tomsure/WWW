@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+		    	{{a}} <br />
+		    	{{b}}   <br />
+		    	{{c}}
+		</div>
+	</body>
+	<script type="text/javascript" src="../../../../../../dist/vue.min.js">
+		
+	</script>
+	<script type="text/javascript">
+	var vm=new Vue({
+			el:'#dv',
+			data:{
+				a:1,
+			     
+			},
+			computed:{
+				
+				 c: { 
+				   	    get:function(){  //默认调用
+				   	    return this.a+3
+				                   },
+				                   
+					    set:function(val){
+					    	 this.a=val
+					    }
+			        }
+					
+				
+			
+			}
+			
+			
+
+		})
+		document.onclick=function(){
+			vm.c=10  //手动设置计算属性，此时调用c的set方法
+		}
+		
+//		computed中每个计算属性都是一个对象,他有get方法,set方法chche方法,其中get方法是computed默认的计算属性方法,在刚学computed的时候,通常是直接写属性名和一个函数,例如:
+//		computed:{
+//			a:function(){
+//				
+//			}
+//		}
+//	此时a的这个function实际上是调用的get这个function;
+//	而a是不止这一个方法的,他还有一个set方法,当在全局中通过事件或者其他方法去设置计算属性(前提是设置的是计算属性,也就是这个属性是在computed中写过的)的时候,此时调用的就是set方法
+	</script>
+	
+	
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script src="../../../../../dist/vue.min.js"></script>
+		<style>
+
+		</style>
+	</head>
+      
+	<body>
+		<template id="tem">
+			<h2>组件====>>aaa{{msg}}-----{{msg2}}</h2>
+			<bbb :mm='msg' :my-msg='msg2'></bbb>
+			   <!--注意：如果这里设置的自定义指令带有横杠，则在props和子组件调用数据的时候，需要些驼峰的格式-->
+		</template>
+		<div id="dv">
+			<aaa></aaa>
+			
+		</div>
+		<script>
+			var vm = new Vue({
+				el:'#dv',
+				data:{
+					a:'aaa'
+				},
+				components:{
+					'aaa':{
+						template:'#tem',
+						data:function(){
+							return {
+								'msg':'我是父组件aaa的数据',
+								'msg2':123456789
+							}
+						},
+						components:{
+							'bbb':{
+					template:'<div>组件bbb-----{{mm}} </br></br>{{myMsg}}</div>',
+					props:{
+						'mm':String, //string类型
+						'myMsg':Number //number类型
+					}
+								
+//					第二种方式是props书写的方式不同,是以json格式书写,里面的key值就是父组件模板中的子组件中自定义指令的名称,value值就是父组件data数据的数据类型名称			
+							}
+						}
+					}
+				}
+			});
+
+
+		</script>
+	</body>
+
+</html>
