@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<script src="../../../../../dist/vue/dist/vue.min.js"></script>
+	<body>
+		<div id="dv"  v-if="true">
+			
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:'#dv',
+			
+		})
+    
+//       v-if指的是当它的值true的时候,才会在页面进行渲染这个元素,如果是false则不渲染,也就是页面上没有这个元元素,它与v-show的区别是v-show的值为true的时候,元素会显示,false的时候多一个display:nonez这样的css属性,但是元素会在html页面上渲染，这一点可以通过控制台查看
+	</script>
+</html>

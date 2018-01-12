@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<script src="../../../../../../dist/vue/dist/vue.min.js"></script>
+	<body>
+		<div id="dv"  v-if="aaa>1000">  <!--条件不成立，所以不渲染-->
+			    {{aaa}}
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:'#dv',
+			data:{
+			    aaa:100
+			}
+			
+		})
+
+
+	</script>
+</html>

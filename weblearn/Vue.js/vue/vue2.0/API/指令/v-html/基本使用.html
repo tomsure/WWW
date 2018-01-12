@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<script src="../../../../../dist/vue/dist/vue.min.js"></script>
+	<body>
+		<div id="dv"  v-html="msg">
+			
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:'#dv',
+			data:{
+				msg:'<div class="dv">12345</div>'
+			}
+		})
+//   v-html用于将data中的数据作为html元素插入到html中作为绑定元素的子元素,用法是使用v-html写在元素中,值就是data中设置的数据的key值
+	</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="../../../../../dist/vue/dist/vue.min.js"></script>
+	<body>
+		<div id="dv"  v-text="msg">
+			
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:'#dv',
+			data:{
+				msg:'11111'
+			}
+		})
+//		   v-text用于将文本内容插入到元素中,用法是这个v-text作为属性的形式,设置到元素中,他的值就是data中的数据的key值
+	</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<script src="../../../../../dist/vue/dist/vue.min.js"></script>
+	<body>
+		<div id="dv"  v-html="msg" v-show="false">
+			
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:'#dv',
+			
+		})
+// v-show用于设置元素的显示或者隐藏,值时true或者false,true的时候会显示,false的时候会隐藏
+	</script>
+</html>

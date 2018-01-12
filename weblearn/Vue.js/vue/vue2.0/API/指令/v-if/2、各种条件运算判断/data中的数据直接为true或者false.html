@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#dv{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<script src="../../../../../../dist/vue/dist/vue.min.js"></script>
+	<body>
+		<div id="dv"  v-if="YorNot">
+			
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:'#dv',
+			data:{
+				YorNot:false
+//				YorNot:true
+			}
+			
+		})
+//          v-if的值是从data中引入的时候.如果引入的data数据为true或者false,则会影响元素是否渲染到页面,也就是是否会显示
+
+	</script>
+</html>
