@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="../jquery.js"></script>
+	<body>
+		<button>
+			点击加载
+		</button>
+		<select name="" id="a1" style="width: 100px;">
+			<option value=""></option>
+		</select>
+		<select name="" id="a2" style="width: 100px;">
+			<option value=""></option>
+		</select>
+	</body>
+	<script>
+		$('button').click(function(){
+			
+			$.ajax({
+				type:'GET',
+				url:'./data.json',
+				dataType:'text',
+				success:function(d){
+					$.each(eval(d).aa,function(i,v){
+						  html += "<option value='" + v + "' + "'>" + "</option>";
+						
+					})
+				},
+				error:function(e){
+					console.log(e.statusText)
+				}
+			})
+			
+		})
+		
+	</script>
+</html>
