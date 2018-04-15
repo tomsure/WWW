@@ -1,0 +1,18 @@
+<template>
+	<nviews cachemaxage="86400">
+		
+	</nviews>
+</template>
+<script>
+	module.exports = {
+		data: {
+			//默认数据
+		},
+		init: function(url) {
+			//动态初始化数据
+		},
+		methods: {
+			//方法
+		}
+	};
+</script>
