@@ -8,5 +8,8 @@
 	</body>
 	<script type="text/javascript">
 		var work=new SharedWorker('worker.js')
+		work.onmessage=function(e){
+			dv.innerHTML='我收到了来自服务器的数据，他是：'+e.data
+		}
 	</script>
 </html>

@@ -7,7 +7,7 @@
 	if($_FILES['pic']['error']!=0){//如果选取的文件（file对象）的'error'不为零
 		exit('fail');//则返回，此时说明上传失败
 };
-  move_uploaded_file($_FILES['pic']['tmp_name'],'fileroom/'.$_FILES['pic']['name'] );
+  move_uploaded_file($_FILES['pic']['tmp_name'],'../fileroom/'.$_FILES['pic']['name'] );
   //移动文件 move_uploaded_file()中两个参数，第一个是移动文件的路径和名称，第二个是移动到的位置和移动后文件的名称
  
  

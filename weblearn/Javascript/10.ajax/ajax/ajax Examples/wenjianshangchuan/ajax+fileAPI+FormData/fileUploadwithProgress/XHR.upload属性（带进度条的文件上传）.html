@@ -24,7 +24,7 @@
 			var fd=new FormData()//创建FormData
 			fd.append('nfile',ftp)//追加
 			var xhr=new XMLHttpRequest();
-			xhr.open('POST','upload.php',true)
+			xhr.open('POST','unload.php',true)
 			xhr.onreadystatechange=function(){
 				if(xhr.readyState==4&&xhr.status==200){
 					document.getElementById("dv1").innerHTML=xhr.responseText
