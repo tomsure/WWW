@@ -4,13 +4,44 @@
 		<meta charset="UTF-8">
 		<title></title>
 	</head>
-	<script type="text/javascript" src="../../../jQuery库/jquery-2.0.3/jquery-2.0.3.js">
+	<script type="text/javascript" src="../../jquery.js">
 		
 	</script>
 	<script type="text/javascript">
+		$(function(){
+			 $('#a1').click(function(){
+			 	   $('#aa').nextAll('p').css('color','red')
+			 })
+			
+			
+			
+			  $('#a2').click(function(){   //刷新页面后重试
+			  	 $('#aa').nextAll('p').andSelf().css('color','red')
+			  })
+		})
 		
+		
+//		ansSelf()方法表示选取其他元素并包含自己
 	</script>
+	
+	
 	<body>
+		<p>1111111111111111111111</p>
+		<p>1111111111111111111111</p>
+		<p>1111111111111111111111</p>
+		<p id="aa">2222222222222222222222</p>
+		<p>1111111111111111111111</p>
+		<p>1111111111111111111111</p>
+		<p>1111111111111111111111</p>
+		
+		<p>1111111111111111111111</p>
+		<p>1111111111111111111111</p>
+		<p>1111111111111111111111</p>
+		<p>1111111111111111111111</p>
+		
+		
+		 <button id="a1">点击获取自己以后的同胞</button>
+		 <button id="a2">点击获取自己以后的同胞并包含自己</button>
 		
 	</body>
 </html>
