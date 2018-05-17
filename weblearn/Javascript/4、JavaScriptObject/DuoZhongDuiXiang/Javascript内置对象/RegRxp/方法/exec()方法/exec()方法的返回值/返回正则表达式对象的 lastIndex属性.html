@@ -12,17 +12,17 @@
 	var regx=/n\d/g;// 这里的user\d只的是正则表达式匹配字符串,\d是指0到9的数字
 	var str='k i k sxhn1i cai an2gdyaud n3adn4a';
 var a=regx.exec(str);//此时rs的值为{user1} 
-document.write(a+'</br>')
-document.write(regx.lastIndex+'</br>')
+console.log(a)
+console.log(regx.lastIndex)
  var   b=regx.exec(str)
-   document.write(a+'</br>') 
-    document.write(regx.lastIndex+'</br>')
+   console.log(a) 
+    console.log(regx.lastIndex)
  var   c=regx.exec(str) 
- document.write(a+'</br>')
-document.write(regx.lastIndex+'</br>')
+ console.log(a)
+console.log(regx.lastIndex)
  var   d=regx.exec(str)
- document.write(a+'</br>')
-  document.write(regx.lastIndex+'</br>')
+ console.log(a)
+  console.log(regx.lastIndex)
   
     
 
@@ -30,6 +30,5 @@ document.write(regx.lastIndex+'</br>')
 </html>
 
 		
-		
-	</script>
-</html>
+
+

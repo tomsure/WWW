@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+//		global属性返回正则表达式是否已设置全局匹配 g 符号；
+    var reg=/ss/;
+    var reg1=/dd/g;
+       document.write(reg.global+'</br>');//没有设置全集匹配
+       document.write(reg1.global) //设置了全局匹配 
+       
+//      global属性可以直接设置,设置之后就可以进行全局匹配
+       var a=/java/
+          console.log(a.test('j'))  //false
+          console.log(a.test('java')) //true
+          console.log(a.test('javascript')) //true
+          console.log(a.test('javascript javascript'))  //true
+          console.log(a.test('java java')) //true
+          
+          var str="java JavaScript java";
+var reg=/JavaScript/;
+console.log(reg.test(str));  
+console.log(reg.test(str))
+  //
+  
+
+	</script>
+</html>

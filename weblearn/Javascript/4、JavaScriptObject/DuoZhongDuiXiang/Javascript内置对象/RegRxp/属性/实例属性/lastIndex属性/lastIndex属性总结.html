@@ -8,5 +8,15 @@
 	</body>
 	<script type="text/javascript">
 		//在非全局匹配的时候IE浏览器有兼容性偏差问题
+		
+		var str='java java java'
+		    var reg=/java/g
+//		 用于检测当前匹配到的字符串的最后一个字符在整个字符串中的位置
+     console.log(reg.test(str))
+        console.log(reg.lastIndex)  //4
+      console.log(reg.test(str))
+       console.log(reg.lastIndex)   //9
+       console.log(reg.test(str))
+        console.log(reg.lastIndex)  //14
 	</script>
 </html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		  
+	</body>
+	<script>
+		
+		
+		 var str='this is box,that is box'
+		   var reg=/box/   //不全局匹配
+		   console.log(str.replace(reg,'tom'))   //返回"this is tom,that is box",只匹配了一个
+		   
+		   var reg1=/box/g
+		   console.log(str.replace(reg1,'tom'))  //打印this is tom,that is tom ，两个都匹配了
+		   
+//		   字符串方法replace可以使用正则进行匹配
+	</script>
+</html>

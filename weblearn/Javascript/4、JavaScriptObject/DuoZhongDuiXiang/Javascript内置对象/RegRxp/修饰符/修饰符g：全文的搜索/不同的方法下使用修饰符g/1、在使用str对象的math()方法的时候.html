@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		  var reg=/box/   //不开启全局
+		     var str='ifjqwi boxfhwioh box'
+		     alert(str.match(reg))  //弹出的只有一个box
+		     
+		     var reg1=/box/g  //开启全局匹配
+		       alert(str.match(reg1))  // 弹出的有两个box 说明匹配了str中所有的box
+		       alert(str.match(reg1)[0])  //说明是一个数组
+		       
+//		        match()方法是字符串的方法,当把正则方法方法中作为参数的时候,如果有匹配的字符串在,则返回一个数组
+//              此例证明g 是用于进行全局匹配的
+	</script>
+</html>

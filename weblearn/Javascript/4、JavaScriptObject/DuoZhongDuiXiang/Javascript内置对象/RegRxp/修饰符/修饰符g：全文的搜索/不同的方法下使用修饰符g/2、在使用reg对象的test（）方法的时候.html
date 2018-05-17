@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		
+//		 不开启全局
+		  var str='ehfaa deaa iwfjttaa'
+		   var reg=/aa/
+		     alert(reg.test(str))   //true
+		       alert(reg.lastIndex)   //0
+		     alert(reg.test(str))   //true
+		      alert(reg.lastIndex)   //0
+		      alert(reg.test(str))  //true
+		       alert(reg.lastIndex)  //0
+		     
+//		     从上面的例子中可以看出如果不进行全局匹配,正则中的规则只会与被匹配的字符串进行一次匹配,即使有多个相同的字符串,都只会在第一次匹配后停止匹配,所有后面每次执行test方法都会返回true,而且lastIndex属性值一直都是0
+		     
+		     
+//		    开启全局
+           
+          var reg1=/aa/g
+		     alert(reg1.test(str))        //true
+		       alert(reg1.lastIndex)     //5
+		     alert(reg1.test(str))       //true
+		      alert(reg1.lastIndex)      //10
+		      alert(reg1.test(str))      //true
+		       alert(reg1.lastIndex)     //19
+		       alert(reg1.test(str))    //false
+		       alert(reg1.lastIndex)    //0 没有可以匹配的了所以变成0
+//		       设置全局匹配后,正则内容会对字符串进行全局查找,找到后则返回true,如果进行多次执行text()方法,则进行多次匹配,字符串中有n个可以与正则匹配的字符串,则执行n此test()方法的时候都会返回true,此时每匹配到一个的时候,reg对象的lastIndex属性就会变成在字符串中匹配到的字符串的最后一个的下标,当到不到匹配的内容后,再执行test()方法进行匹配,则会返回false,此时再输出reg对象的lastIndex属性的时候,则会输出0
+		       
+		       
+	</script>
+</html>
