@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.min.css"/>
+	<body>
+		<table class="table" id="table1"></table>
+	</body>
+	<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+	<script>
+		$('#table1').bootstrapTable({
+			url:"../../table.json",
+			columns:[
+			 {
+			 	field:"name",
+			 	title:"Name",
+			 	
+			 	
+			 },
+			 {
+			 	field:'age',
+			 	title:'Age'
+			 },
+			 
+			 {
+			 	field:'job',
+			 	title:'Job'
+			 },
+			 {
+			 	field:'age',
+			 	title:'Age'
+			 },
+			 
+			]
+//			data:
+		})
+	</script>
+</html>
+     <!--设置url 选项即可设置从远程服务器加载数据，但是条件是远程服务器的数据必须是数组-->

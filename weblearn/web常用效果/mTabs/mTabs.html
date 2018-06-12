@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+	<meta name="format-detection"content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>touch tabs</title>
+<style>
+body,div,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,iframe,input,textarea,select,label,article,aside,footer,header,menu,nav,section,time,audio,video{margin:0;padding:0;}
+ol,ul,li{list-style: none;}
+body{font-size: 100%; font-family: Helvetica,STHeiti,Droid Sans Fallback;}
+
+.mtabs{width: 100%;overflow: hidden;margin:15px 0;}
+.mhead{
+    height: 38px; border-top: 2px solid #9ac7ed;
+    background: #ECF2F6;
+     -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.mhead li{
+	position: relative;
+    font-size: 1.125em;
+    text-align: center;
+    float: left; width: 64px; 
+    height: 38px; line-height: 38px;
+    color: #2a70be;
+}
+.mhead li.current {
+    border-top: 2px solid #2a70be;
+    margin-top: -2px;
+    background: #FFF;
+    color: #c14545;
+}
+.mcontent{
+	width: 100%;
+	overflow: hidden;
+}	
+.mcontent ul{
+	width: 100%;
+	float: left;
+}
+.mcontent li{
+	height: 35px;
+	line-height: 35px;
+	font-size: 1.125em;
+	padding: 0 10px;
+}
+</style>
+<script type="text/javascript" src="mTabs.min.js"></script>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded',function(){
+		new mTabs({
+			mtab: '#tabs',
+			mhead: '#tabs .mhead',
+			mcontent: '#tabs .mcontent'
+		});
+		new mTabs({
+			mtab: '#tabs2',
+			mhead: '#tabs2 .mhead',
+			mcontent: '#tabs2 .mcontent',
+			index: 2
+		});
+		new mTabs({
+			mtab: '#tabs3',
+			mhead: '#tabs3 .mhead',
+			mcontent: '#tabs3 .mcontent'
+		});
+	},false);
+</script>
+</head>
+<body>
+	<div class="mtabs" id="tabs">
+		<ul class="mhead">
+			<li class="current">科技</li>
+			<li>房产</li>
+			<li>娱乐</li>
+			<li>愉快</li>
+		</ul>
+		<div class="mcontent">
+			<ul>
+				<li>沈阳全运村入住率几近为零</li>
+				<li>沈阳全运村入住率几近为零</li>
+				<li>沈阳全运村入住率几近为零</li>
+				<li>沈阳全运村入住率几近为零</li>
+				<li>沈阳全运村入住率几近为零</li>
+			</ul>
+			<ul class='aa'>
+				<li>中国女囚数量为何大幅增加</li>
+				<li>中国女囚数量为何大幅增加</li>
+				<li>中国女囚数量为何大幅增加</li>
+				<li>中国女囚数量为何大幅增加</li>
+				<li>中国女囚数量为何大幅增加</li>
+			</ul>
+			<ul>
+				<li>北上广深会永远上涨</li>
+				<li>北上广深会永远上涨</li>
+				<li>北上广深会永远上涨</li>
+				<li>北上广深会永远上涨</li>
+				<li>北上广深会永远上涨</li>
+			</ul>
+			<ul>
+				<li>蜘蛛侠徒手登顶望京SOHO</li>
+				<li>蜘蛛侠徒手登顶望京SOHO</li>
+				<li>蜘蛛侠徒手登顶望京SOHO</li>
+				<li>蜘蛛侠徒手登顶望京SOHO</li>
+				<li>蜘蛛侠徒手登顶望京SOHO</li>
+			</ul>
+		</div>
+	</div><!-- End mtabs -->
+
+	<div class="mtabs" id="tabs2">
+		<ul class="mhead">
+			<li>科技</li>
+			<li>房产</li>
+			<li>娱乐</li>
+		</ul>
+		<div class="mcontent">
+			<ul>
+				<li>沈阳全运村入住率几近为零</li>
+				<li>沈阳全运村入住率几近为零</li>
+				<li>沈阳全运村入住率几近为零</li>
+				<li>沈阳全运村入住率几近为零</li>
+				<li>沈阳全运村入住率几近为零</li>
+			</ul>
+			<ul>
+				<li>北上广深会永远上涨</li>
+				<li>北上广深会永远上涨</li>
+				<li>北上广深会永远上涨</li>
+				<li>北上广深会永远上涨</li>
+				<li>北上广深会永远上涨</li>
+			</ul>
+			<ul>
+				<li>蜘蛛侠徒手登顶望京SOHO</li>
+				<li>蜘蛛侠徒手登顶望京SOHO</li>
+				<li>蜘蛛侠徒手登顶望京SOHO</li>
+				<li>蜘蛛侠徒手登顶望京SOHO</li>
+				<li>蜘蛛侠徒手登顶望京SOHO</li>
+			</ul>
+		</div>
+	</div><!-- End mtabs -->
+
+	<div class="mtabs" id="tabs3">
+		<ul class="mhead">
+			<li>科技</li>
+		</ul>
+		<div class="mcontent">
+			<ul>
+				<li>沈阳全运村入住率几近为零</li>
+				<li>沈阳全运村入住率几近为零</li>
+				<li>沈阳全运村入住率几近为零</li>
+				<li>沈阳全运村入住率几近为零</li>
+				<li>沈阳全运村入住率几近为零</li>
+			</ul>
+		</div>
+	</div><!-- End mtabs -->
+</body>
+</html>

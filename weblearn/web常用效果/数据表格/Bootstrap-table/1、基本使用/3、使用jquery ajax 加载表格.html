@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.min.css"/>
+	<body>
+		<table class="table" id="table1"></table>
+	</body>
+	<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+	<script>
+		$(function(){
+			$.ajax({
+				url:'../../table.json',
+				type:'get',
+				success:function(d){
+					$('#table1').bootstrapTable({
+			
+			columns:[
+			 {
+			 	field:"name",
+			 	title:"Name",
+			 	
+			 	
+			 },
+			 {
+			 	field:'age',
+			 	title:'Age'
+			 },
+			 
+			 {
+			 	field:'job',
+			 	title:'Job'
+			 },
+			 {
+			 	field:'age',
+			 	title:'Age'
+			 },
+			 
+			],
+			data:d
+		})
+				}
+			})
+		})
+		
+		
+	</script>
+</html>
+    <!--使用ajax 加载表格的话，是在ajax 加载成功后行插件方法，并在bootstrapTable({})方法中设置data 选项,值就是收到的相关数据-->
