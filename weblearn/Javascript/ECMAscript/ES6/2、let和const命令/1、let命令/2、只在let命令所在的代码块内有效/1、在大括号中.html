@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		下载兼容包：
+		  
+	</body>
+	
+<script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+<script src="https://google.github.io/traceur-compiler/bin/BrowserSystem.js"></script>
+<!--<script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>-->
+<script type="traceur">
+        traceur.options.experimental = true;
+</script>
+
+
+<script type="module">
+	    {
+	    	var a=100;
+	    	let b=200
+	    	console.log(a)    <!-- 100-->
+            console.log(b)    <!-- 200-->
+	    }
+        
+        console.log(a)       <!-- 100-->
+        console.log(b)        <!--报错: b is not defined-->
+        
+      <!--在上面的例子中，前三个console.log都打印出相应的变量值，最后一个没有打印出来；
+       
+               原因是 var 声明的变量如果是在函数代码块中，的话，函数外边无法访问，但是其他区域都可以访问，因为它没有块级作用域
+           let 只能在代码块内执行，是有块级作用域的，这里由于第二个console.log(b)（打印的第一个console.log(b)）是在代码块内，所以打印成功,而最后一个    console.log(b)，没有在当前作用域声明，所以报错-->
+               
+        
+        
+   
+</script>
+
+     
+</html>

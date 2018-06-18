@@ -11,10 +11,11 @@
 	    
 		function ss(){
 			 
-			 alert(a);//这里会弹出undefined；
+			 console.log(a);//这里会弹出undefined；如果下面没有写 vara=2,则会报错
+			 
 			  var  a=2;   
 			
-			alert(a); //这里会弹出2；
+			console.log(a); //这里会弹出2；
 			
 		 }
 		ss()  //第一次弹出undefined是因为变量声明提升的时候，将 var a=2分成了两部分：变量声明和变量赋值；而变量赋值会被提前到函数的最顶端，而变量声明提前后第一个alert（a）前面只有变量声明；却没有赋值，所以会弹出undefined；而第二个alert(a)前面有变量声明和变量赋值，所以会弹出2；
@@ -25,10 +26,10 @@
     //js解析器是这样 解析的，所以一下写法以上面是相同效果；
 		function ss(){
 			 var a;    //最前面变量声明
-			 alert(a);//这里会弹出undefined；
+			 console.log(a);//这里会弹出undefined；
 			   a=2;   //变量赋值
 			
-			alert(a); //这里会弹出2；
+			console.log(a); //这里会弹出2；
 			
 		 }
 		ss()
@@ -38,9 +39,9 @@
       var  a=1;
       function  s(){
       	
-      	alert(a);
+      	console.log(a);
       	var a=2;
-      	alert(a)
+      	console.log(a)
       	
        }
       s()
@@ -49,9 +50,9 @@
 	var  a=1;
       function  s(){
       	var a;
-      	alert(a);//undefined
+      	console.log(a);//undefined
       	 a=2;
-      	alert(a)//2
+      	console.log(a)//2
       	
        }
       s();

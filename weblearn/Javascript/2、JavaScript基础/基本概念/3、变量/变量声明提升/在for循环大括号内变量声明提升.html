@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var arr=[1,2,3,4,5,6,7,8,9,10]
+		   for(var i=0;i<arr.length;i++){
+
+		   	  arr[i]=function(){
+		   	      	console.log(i)
+		   	                   }
+                                   	   }
+		   
+		   arr[2]()  //10
+		   arr[3]()  //10
+		   arr[4]()  //10
+		   arr[5]()  //10
+		   arr[6]()  //10
+//		   在for循环中,如果打印i的值,只会打印最后跳出循环的那个i的值,所以这里每次只会打印10.
+
+
+
+//         变量声明提升:
+             for(var j=0;j<arr.length;j++){
+             	 var c=j
+             	  arr[j]=function(){
+		   	      	console.log(c)
+		   	                   }
+             }
+
+		   arr[2]()  //9
+		   arr[3]()  //9
+		   arr[4]()  //9
+		   arr[5]()  //9
+		   arr[6]()  //9
+		   
+		   
+	</script>
+</html>

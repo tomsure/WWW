@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		下载兼容包：
+		  
+	</body>
+	<!--引用兼容包：-->
+	
+	<!-- 加载Traceur编译器 -->
+<script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+
+<!-- 将Traceur编译器用于网页 -->
+<script src="https://google.github.io/traceur-compiler/bin/BrowserSystem.js"></script>
+<script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+
+  <!-- 打开实验选项，否则有些特性可能编译不成功 -->
+<script type="traceur">
+        traceur.options.experimental = true;
+</script>
+
+ 	<!--引用兼容包-->
+
+ 
+
+<script type="module">
+	    var a=100     <!--//声明变量-->
+        let b=200;  <!-- //声明变量-->
+        
+        console.log(a)
+        console.log(b)
+        
+        
+        <!--ES6的 let和 var 的作用都是用于声明变量，但是他们也有不同之处，可以查看后续知识点--> 
+</script>
+
+      <!--编写ES6代码需要将script 标签的type 属性设置为“module”-->
+</html>

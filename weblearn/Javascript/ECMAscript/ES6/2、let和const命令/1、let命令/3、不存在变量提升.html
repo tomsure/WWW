@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		下载兼容包：
+		  
+	</body>
+	
+<script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+<script src="https://google.github.io/traceur-compiler/bin/BrowserSystem.js"></script>
+<script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+<script type="traceur">
+        traceur.options.experimental = true;
+</script>
+
+<script >
+//	   es5下的变量声明提升：
+	      var a=1;
+	      function aa(){
+	      	console.log(a)
+	      	var a=2
+	      	console.log(2)
+	      }
+	      
+	      aa()
+//	      js 有函数变量声明提升,所以上面的代码执行的时候与下面是相同的:
+	         var a=1;
+	      function aa(){
+	      	 var a    //声明变量
+	      	console.log(a)  //由于上面的a 声明了没有赋值，所以就会打印undefined
+	      	 a=2
+	      	console.log(2)
+	      }
+	      
+	      aa()
+	      
+//	      js 变量声明提示的表现是,如果函数内任何位置有使用var 声明的变量,会将var 声明这一动作方法哦函数内的顶端第一局执行
+	      
+</script>
+<script type="text/traceur">
+	
+	    var b=1
+	    function bb(){
+	    	console.log(b)    <!--打印出1-->
+	    	let c=2;
+	    	console.log(c)    <!--打印出2-->
+	    }
+	    
+        bb()
+      <!--函数执行后分别打印出了b和c的值，由于ES6 没有变量声明提升，所以在函数内，不会把使用let声明的变量放到作用域的顶端，所以没有上面函数 aa 那样的效果-->
+</script>
+
+     
+</html>
