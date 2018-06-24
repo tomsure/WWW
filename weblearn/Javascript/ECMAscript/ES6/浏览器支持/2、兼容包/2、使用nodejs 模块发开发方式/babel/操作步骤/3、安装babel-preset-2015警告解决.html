@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		安装过程中提示：
+		  deprecate babel-preset-es2015@* ????  Thanks for using Babel: we recommend using babel-preset-env now: please read babeljs.io/env to update!
+		  
+		  解决方案：
+		   npm uninstall --save-dev babel-preset-es2015
+		   
+		   同时将.babelrc 文件中“es2015”修改“env”：
+
+			{
+			  "presets": [
+			    ["latest", {
+			      "env": { "modules": false }
+			    }]
+			  ]
+			}
+			
+			
+			<!--以上只是警告，建议使用新的方式-->
+	</body>
+</html>
