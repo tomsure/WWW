@@ -1,4 +1,4 @@
-
-	import ss from './zzz';
+ import ss from './zzz';
  document.getElementById("dv").textContent=ss
      
+    
