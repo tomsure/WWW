@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../dist/node_modules/babel-core/browser.js"></script>
+	<script type="text/babel">
+		let [a,[[b],c]]=[1,[[2],3]]
+		console.log(a)  //11
+		console.log(b)  //22
+		console.log(c)  //33
+		
+//		嵌套数组也可以进行解构赋值,只要等号左右两边数组位置相匹配,就可以给左边数组元素赋予右边的对应的值
+
+       let [,,third]=['aa','bb','cc']
+           console.log(third)  //cc
+           
+	   let [x,,y]=[1,2,3]
+	       console.log(x) //1
+	       console.log(y) //3
+		
+	    let [head,...tail]=[1,2,3,4]	
+	    console.log(head)
+	      console.log(tail)
+	</script>
+</html>

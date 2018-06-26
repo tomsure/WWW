@@ -6,4 +6,15 @@
 	</head>
 	<body>
 	</body>
+	<script src="../../dist/node_modules/babel-core/browser.js"></script>
+	<script type="text/babel">
+		
+		var bb=1;
+		  console.log(bb)  //1
+		
+       let aa=100;
+        
+         console.log(window.aa)  //undefind
+//      上面声明了全局变量aa后打印,打印window.aa返回undefined，因为aa不是顶层对象window的属性  
+	</script>
 </html>

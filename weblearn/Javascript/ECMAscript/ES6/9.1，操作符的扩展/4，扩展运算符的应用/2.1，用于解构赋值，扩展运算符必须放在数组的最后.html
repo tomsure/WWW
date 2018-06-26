@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+		
+//	const [...arr,last] = [1, 2, 3, 4, 5];  
+//  报错,扩展操作符...不在数组的最后一位  
+
+//   console.log(last)
+
+//  let [first,...arr,aaa]=[1,2,3,4,5]
+     //报错 ，扩展操作符不在数组的最后一位
+        
+     let [a,b,...arr]=[1,2,3,4,5]
+       console.log(a)  //1
+       console.log(b)  //2
+       console.log(arr) //3,
+//      正常打印,因为扩展操作符...在数组最后一位
+	</script> 
+</html>

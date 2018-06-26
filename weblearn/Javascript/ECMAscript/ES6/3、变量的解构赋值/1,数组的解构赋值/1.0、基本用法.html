@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../dist/node_modules/babel-core/browser.js"></script>
+	<script type="text/babel">
+//		以前变量声明的方式是直接指定值:
+		  var a=1;
+		  var b=2;
+		  var c=3;
+		  
+//	ES6可以这样写:  
+    let [d,e,f]=[100,200,300]
+    console.log(d); //100
+    console.log(e); //200
+    console.log(f)  //300
+//  这种写法的过程是,使用let,以声明变量的方式,在等号左边设置一个数组,数组里面元素是变量名,等号右边也设置一个数组,数组内部的每个元素和左边数组中的元素一一对应,这样,就相当于是对左边数组中每个元素座位变量进行赋值了;
+	</script>
+</html>
