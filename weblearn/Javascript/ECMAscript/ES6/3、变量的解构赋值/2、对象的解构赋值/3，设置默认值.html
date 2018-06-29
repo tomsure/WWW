@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+		let {aa='aaa'}={}
+		  console.log(aa)  //aaa
+		  
+		  let {bb='bbb'}={undefined}
+		  console.log(bb)  //bb
+//		   对象解构也可以设置也可以设置默认值,具体方法和数组解构设置默认值相同,在等号左边的大括号里设给变量赋值,右边的大括号内容设置为空或者undefined
+//  如果不满足以上条件,等号左边大括号里面的变量的值就是等号右边的大括号里值   
+//      例如上面的例子,等号右边的大括号里面的内容必须为undefined或者为空,只有这样bb的默认值才会是'bbb',否则就会是等号左边大括号中的值
+	</script>
+</html>

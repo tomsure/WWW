@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+		function move({x=1,y=2}={}){
+			return [x,y]
+		}
+		console.log(move({x:10,y:20}))  //10,20
+       console.log( move({x:10,y:20}) instanceof Array)  //数组
+	</script>
+</html>

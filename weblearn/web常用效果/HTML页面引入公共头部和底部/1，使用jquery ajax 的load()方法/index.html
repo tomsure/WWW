@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<body>
+		<header id="header"></header>
+		dddd
+		<footer id="footer"></footer>
+	</body>
+	<script src="../jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('#header').load('header.html').click(function(){
+				alert(111)
+			})
+			$('#footer').load('footer.html').click(function(){
+				alert(222)
+			})
+			
+		})
+	</script>
+</html>

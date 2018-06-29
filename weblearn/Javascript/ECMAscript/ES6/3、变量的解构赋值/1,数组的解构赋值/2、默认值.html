@@ -6,4 +6,18 @@
 	</head>
 	<body>
 	</body>
+	<script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+	    let [aa=123]=[]
+	      console.log(aa) //123
+	      
+//	        在解构赋值中,可以对左边数组元素使用等号进行赋值操作,这个过程叫做设置默认值,当设置默认值的时候,等号右边的对应的值必须是undefined,而且是===undeinef,这时候默认值才会生效
+      let [x=1]=[undefined]
+		  console.log(x) //1
+		  
+//		  如果设置默认值的时候,等号右边的值不是===undefined,则默认值不会生效,左边数组中的元素的值就是等号右边数组中对应元素的值
+	  let [y=1]=[null]
+	      console.log(y)  //null
+//		   因为null不等于undefined ，所以默认值无效，所以y=null
+	</script>
 </html>

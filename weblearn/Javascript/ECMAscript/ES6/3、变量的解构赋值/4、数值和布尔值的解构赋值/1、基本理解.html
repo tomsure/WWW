@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+//	let   {toString:s}=123;
+//		  console.log(s===Number.prototype.toString) 
+  let {a:s}={a:123}
+     console.log(s)  //123
+  let {toString:t}=123;
+    console.log(123.toString())  //"123"  
+	</script>
+</html>

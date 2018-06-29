@@ -6,10 +6,10 @@
 	</head>
 	<body>
 	</body>
-	<script type="text/javascript">
-		var arr=[1,2,3,4]
-		  arr.map(function(a,b,c){
-		  	console.log(c)
-		  })
+	<script>
+	var arr=[1,2,3,4,5]
+	  arr.map(function(currentValue,index,arr1){
+	  	console.log(this)
+	  },thisValue)
 	</script>
 </html>

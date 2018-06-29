@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<!--<script src="../../dist/browser.js"></script>-->
+	<script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+<!-- 将Traceur编译器用于网页 -->
+<script src="https://google.github.io/traceur-compiler/bin/BrowserSystem.js"></script>
+<script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+<!-- 打开实验选项，否则有些特性可能编译不成功 -->
+<script type="traceur">
+traceur.options.experimental = true;
+</script>
+	<script type="module">
+	let [a,b,c,d,e]='hello'
+	    console.log(a)  //h
+	    console.log(b)  //e
+	    console.log(c)  //l
+	    console.log(d)  //l
+	    console.log(e)  //o
+//	 字符串解构赋值,指的是等号左边使用数组形式声明变量,等号右边编写一个字符串,长度和等号左边的数组中的变量长度相同,此时,数组中每个元素的值,就等号右边字符串中对应的每个字符
+//	  这种方式实际上是将等号右边的字符串转换成了一个数组,将其对应的付给等号左边的数组元素
+	    
+	</script>
+</html>
