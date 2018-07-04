@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../dist/browser.js"></script>
+	<script type="text/babel">
+		// 全部报错
+({ p: a }) = { p: 42 };
+([a]) = [5];
+
+//  解构赋值的时候,模式也不能使用圆括号包裹，等号左边的内容就是模式，不能直接全部永远括号包裹
+	</script>
+</html>

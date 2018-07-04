@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../dist/browser.js"></script>
+	<script type="text/babel">
+// 报错
+function f([(z)]) { return z; }
+// 报错
+function f([z,(x)]) { return x; }
+// 因为变量声明不能使用圆括号,而函数的参数也是属于变量,所以也不能使用园括号
+	</script>
+</html>

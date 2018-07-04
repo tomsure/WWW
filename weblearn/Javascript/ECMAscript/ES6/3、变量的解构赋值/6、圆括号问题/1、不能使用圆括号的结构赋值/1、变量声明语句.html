@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../dist/browser.js"></script>
+	<script type="text/babel">
+// 全部报错
+let [(a)] = [1];
+
+let {x: (c)} = {};
+let ({x: c}) = {};
+let {(x: c)} = {};
+let {(x): c} = {};
+
+let { o: ({ p: p }) } = { o: { p: 2 } };
+//   声明变量的时候,不能使用圆括号包裹数据
+	</script>
+</html>
