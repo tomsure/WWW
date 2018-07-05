@@ -8,6 +8,17 @@
 	</body>
 	<script src="../../dist/browser.js"></script>
 	<script type="text/babel">
+         let obj={
+         	name:'111',
+         	sex:'男',
+         	job:'worker'
+         }
 
+         let {name,sex,job:ooo}=obj
+            console.log(name)
+         	console.log(sex)
+
+         	console.log(ooo)
+//       通过对象的解构赋值可以很容易的提取json数据
 	</script>
 </html>

@@ -8,6 +8,27 @@
 	</body>
 	<script src="../../dist/browser.js"></script>
 	<script type="text/babel">
+		在函数中解构赋值可以方便的将参数与变量名对应起来
 
+//		1,当参数是数组的时候,此时形参和实参的格式必须一一对应
+        function fn([x,y,z]){
+        	console.log(x)
+        	console.log(y)
+        	console.log(z)
+        }
+
+        fn([1,2,3])
+//        当使用数组进行结构赋值的时候,将数组作为函数的参数进行编写,当函数执行的时候,传递的实参按照数组的形式传递,这样,实参和形参就会一一对应
+
+
+
+//      2,当参数是对象的时候,形参和实参可以不用一一对应,顺序可以打乱
+         function fn1({a,b,c}){
+         	console.log(a)
+         	console.log(b)
+
+         	console.log(c)
+         }
+           fn1({a:1,c:4,b:5})
 	</script>
 </html>
