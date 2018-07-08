@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="module">
+		import {default as fn} from './fn2.js'
+		   fn() //123
+
+		   <!--第二种写法，在引入模块的时候，使用 {default as 新变量名 } 的方式 引入，意思是将默认的变量赋给新的变量名，此时可以直接使用新的变量名进行执行-->
+	</script>
+</html>

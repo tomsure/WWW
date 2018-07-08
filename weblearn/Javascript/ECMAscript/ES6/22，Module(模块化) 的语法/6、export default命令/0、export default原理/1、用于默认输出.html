@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="module">
+       import ccc from './1fn.js'
+           ccc() //123
+
+            //这里引入的时候，import 后面随便写了一个变量名作为引入的名称，最后却可以作为函数执行，是因为，它是取的default对应的变量或者函数，而由于1fn.js中将default设置为了aa这个函数，所以这里执行就会打印出123，相当于是执行了aa这个函数
+	</script>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="module">
+       import * as aaa from './fn.js'
+          console.log(aaa.aa)  //100
+          aaa.fn()             //123
+
+          <!--当一个js文件导出多个变量，在其他位置引入这个导出多个变量的模块的时候，可以一次性引入整个模块，具体方法是，使用as 关键字，as左边使用 * 右边写一个新的变量名 ，此时代表引入了js文件中的整个模块及所有变量，此时新的变量名就是一个对象，js文件中导出的变量或者函数就是他的属性或者方法-->
+	</script>
+</html>

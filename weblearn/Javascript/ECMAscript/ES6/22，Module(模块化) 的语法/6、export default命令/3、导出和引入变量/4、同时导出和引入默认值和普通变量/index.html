@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="module">
+		import fun,{a} from './fn.js'
+
+
+            fun()  //123,默认变量
+             console.log(a)  //1，普通变量
+
+        //如果同时导出普通变量和默认变量，引入的时候，需要将默认变量名放在前面，普通变量名放在后面，并使用{}包裹，并将新的默认变量名和普通变量名用逗号隔开
+	</script>
+</html>
