@@ -7,5 +7,10 @@
 	<body>
 	</body>
 	<script src="../dist/browser.js"></script>
-	<script type="text/babel"></script>
+	<script type="text/babel">
+		 console.log("\u0061")  //a
+//		 由于js 采用\uxxx形式表示一个Unicode字符,其中xxx表示Unicode码点,\u 表示js 语言表示的Unicode字符
+//      各种语言有不同表示方式,例如HTML使用&#xxx表示十进制,&#xxxx(多了个x)表示十六进制,css使用\反斜杠转义
+        console.log("\u{20BB7}")
+	</script>
 </html>
