@@ -6,6 +6,36 @@
 	</head>
 	<body>
 	</body>
-	<script src="../dist/browser.js"></script>
-	<script type="text/babel"></script>
+	<script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+
+//		  repeat(n)方法用于将字符串重复n次后返回
+        var a='q'
+           console.log(a.repeat(2)) //qq
+
+
+          console.log( 'q'.repeat(3)) //qqq
+
+
+
+      var b='b'
+
+//    当参数为0-1的小数时候,参数都会取0,且参数为0的时候，会返回空字符串
+        console.log(b.repeat(0.1))
+        console.log(b.repeat(0.7))
+//      当参数为大于1的小数的时候,会将参数去掉小数取证
+        console.log(b.repeat(2.8))  //bb
+        console.log(b.repeat(2.1))  //bb
+
+
+
+//      当参数为0到-1之间的时候则会转换为0再计算,所以返回都为""
+          var w='0.1'
+          console.log(w.repeat(-0.9))  //''
+          var s='sss'
+          console.log(s.repeat(0))  //''
+//           console.log('aa'.repeat(NAN)) //''
+
+
+	</script>
 </html>
