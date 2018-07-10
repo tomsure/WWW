@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.dv{
+			width: 300px;
+			height: 200px;
+			background-color: red;
+			text-align: center;
+		}
+		#dv1{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+           display: inline-block;
+		}
+	  /*1、原理: 先将子框由块级元素改变为行内块元素，再通过设置行内块元素居中以达到水平居中。
+	    2、用法: 父元素设置text-align:center,子元素设置display:inline-block;
+	    3、优缺点：
+	              优点：兼容性好，甚至可以兼容ie6、ie7；
+	              缺点：child里的文字也会水平居中，可以在.child添加text-align:left;还原
+	         
+	  */
+	 
+	 
+	</style>
+	<body>
+		<div class="dv">
+			<div id="dv1">
+				少时诵诗
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
