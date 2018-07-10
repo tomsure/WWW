@@ -12,15 +12,15 @@
 
 //          ES6定义类:
              class Msn{
-//           	send(x,y){
-//           		this.x=x;
-//           		this.y=y
-//           	}
-             	get(m,n){
-             		return this.m+this.n
+
+             	constructor(m,n){  //constructor就是构造函数，调用new 自动执行
+             	 console.log(m+n)
              	}
              }
-             let nsn=new Msn()
-              console.log(nsn.get(1,2))
+             let nsn=new Msn(1,2)
+
+//             es6定义类的时候使用class 关键字,后面使用一个名称,然后跟着一对大括号{},内部使用constructor关键字使用普通函数的格式进行编写,这样编写的就是构造函数,这个构造函数在使用new关键字实例化以后就会自动调用执行；
+//            使用class定义类之后,使用new关键字自动执行,内部的构造函数constructor就会自动执行,使用new调用的时候可以在class定义的名称后面加括号给构造函数传参
+
 	</script>
 </html>

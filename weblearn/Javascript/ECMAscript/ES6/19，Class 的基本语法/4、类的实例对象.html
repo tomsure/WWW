@@ -7,5 +7,18 @@
 	<body>
 	</body>
 	<script src="../dist/browser.js"></script>
-	<script type="text/babel"></script>
+	<script type="text/babel">
+		    class Fn{
+		    	constructor(aa){
+		    		this.aa=aa
+		    	}
+		    	getStr(){
+		    		console.log(this.aa)
+		    	}
+		    }
+		    let newFn=new Fn(123)  //实例化
+		       newFn.getStr()
+
+//		        class定义的类可以使用new关键字进行实例化,用法和ES5中实例化构造函数相同,实例化之后就是一个对象了,类里面定义的属性和方法就可以进行使用
+	</script>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+          class Person{
+          	constructor(name,age){
+          		this.name=name
+          		this.age=age
+          	}
+
+          }
+          var person=new Person('tom',19)
+             console.log(person.name)  //输出属性
+             console.log(person.age)   //输出属性
+//          es6通过class定义的类（也就是对象)里面给对象设置属性的时候,需要给constructor构造函数设置参数并在函数里面使用“this.参数名=参数名”的方式,这样就可以给类定义属性,当使用new关键字实例化这个类并传参的时候,可以获得这个类的属性,并进行使用
+	</script>
+</html>

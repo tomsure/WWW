@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../dist/browser.js"></script>
+	<script type="text/babel">
+		 class Person{
+		 	constructor(m,n){
+		 		this.m=m;
+		 		this.n=n
+		 	}
+		 }
+		 var per=new Person(1,3)
+		 var per1=new Person(4,5)
+		    console.log(per.__proto__==per1.__proto__)  //true
+            console.log(per.__proto__==Person.prototype) //true
+            console.log(per1.__proto__==Person.prototype) //true
+//		    和ES5相同,所有类的实例对象都享有同一个原型
+
+//         注意:__proto__是实例对象的原型的指针,但是没有形成标准,所以不能使用
+	</script>
+</html>

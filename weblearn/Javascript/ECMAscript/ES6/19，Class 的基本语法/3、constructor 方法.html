@@ -7,5 +7,24 @@
 	<body>
 	</body>
 	<script src="../dist/browser.js"></script>
-	<script type="text/babel"></script>
+	<script type="text/babel">
+		class Point{
+			constructor(m,n){
+				this.m=m;
+				this.n=n
+			}
+		}
+		var obj=new Point(1,2)
+//		    class定义类的时候,必须在定义类的代码块最顶部使用constructor()方法,使用这个方法才能定义属性和方法,如果没有设置constructor函数,则JS引擎会自动设置这个方法,例如:
+//		      class Aa{
+//
+//		      }
+//		      这段代码就等同于:
+//		       class Aa{
+//		       	 constructor(){
+//
+//		       	 }
+//		       }
+//      当new关键字实例化类以后就会自动执行里面设置的constructor方法
+	</script>
 </html>
