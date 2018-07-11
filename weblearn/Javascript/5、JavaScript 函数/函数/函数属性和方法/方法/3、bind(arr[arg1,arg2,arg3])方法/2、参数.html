@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		 this.name='tom'   //这里不能使用var,因为this是window,window对象是已存在的，所以不需要声明
+
+         var demo={
+         	name:'bom',
+         	getName:function(){
+         		return this.name
+         	}
+         }
+         console.log(demo.getName()) //bom
+
+
+
+	</script>
+</html>
