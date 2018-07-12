@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+       var xw={
+       	name:'小王',
+       	gender:'男',
+       	age:18,
+       	say:function(m,n){
+       		console.log("m的值是："+ m +","+ "n的值是："+ n)
+       		console.log(this.name+','+this.gender+ ','+ this.age)
+       	}
+       }
+       var xh={
+       	name:'小红',
+       	gender:'女',
+       	age:20
+       }
+                xw.say(10,20) //小王,男,18
+                xw.say.call(xh)  //小红,女,20
+                xw.say.apply(xh) //
+                xw.say.bind(xh)()  //这里需要在最后面多加一对括号才会执行
+
+//            call(),apply()的使用方法相同,直接将需要改变this指向的新的环境的对象名作为第一个参数,用来改变this指向，就会自动执行方法，但是bind()方法，需要在使用bind()方法之后，再加一对小括号才行
+	</script>
+</html>

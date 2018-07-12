@@ -7,12 +7,32 @@
 	<body>
 	</body>
 	<script>
-		
+
 	</script>
 	<script>
-		var a={
-			
-	          }
-		
+		var obj={
+			a:1,
+			b:2,
+			getCount:function(c,d){
+				return this.a+this.b+c+d
+			}
+		}
+
+		window.a=0;
+		window.b=0;
+		console.log(obj.getCount(3,4)) //10
+        var fnc=obj.getCount
+             console.log(fnc(3,4)) //7
+//           上面的两次执行方法传递相同的参数,但是得到的结果却不相同,原因是,getCount()方法中有this,但是两次方法执行的时候,this的指向不同,因为this的指向是根据所处的函数所在的环境决定的,this就指向当前所在函数所在的环境,上面例子中,第一次执行,getCount()是在obj对象中,所以this值的就是obj对象,第二次执行,fuc是在全局环境下,所以this就指向window
+
+
+//         解决以上问题,可以使用call()方法或者apply方法,但是这里使用ES5最新的bind方法:
+           var fn=obj.getCount.bind(obj)
+                 console.log(fn(3,4))  //10
+
+//                这次使用函数的bind()方法使getCount()函数中的this指向obj,所以执行fn()的时候打印了10
+
+
+//      注意:使用bind()方法时候,在给函数绑定了bind()方法后需要再加一个()函数再回执行,这样,函数才会执行
 	</script>
 </html>
