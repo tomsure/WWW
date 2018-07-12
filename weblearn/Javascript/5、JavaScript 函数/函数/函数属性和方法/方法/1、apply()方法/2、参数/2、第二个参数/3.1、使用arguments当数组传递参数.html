@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var obj={
+			name:'tom',
+			age:29,
+			getInfo:function(m,n){
+				console.log(this.name)
+				console.log(this.age)
+//				console.log(m)
+//				console.log(n)
+			}
+		}
+		
+		var obj1={
+			name:'bom',
+			age:22
+			
+		}
+		  obj.getInfo.call(obj1)
+		
+	</script>
+	
+</html>

@@ -12,8 +12,8 @@
 //语法格式:函数.call(对象,参数1,参数2....)		
 		
 		function t(num){
-			alert(this.age)//当函数t作为对象obj的方法的时候，这个this指向obj对象，如果不作为对象obj的方法的话就指向window；
-			alert(num)
+			console.log(this.age)//当函数t作为对象obj的方法的时候，这个this指向obj对象，如果不作为对象obj的方法的话就指向window；
+			console.log(num)
 		}//函数t
 		
 		var obj={
@@ -41,9 +41,9 @@
 //再写一个一样的完整例子:
 
     function fn(ss){
-    	alert('他的名字叫:'+this.name);
-    	alert('他的年龄是:'+this.age)
-    	alert('我比他大'+ss+',所以我的年龄是:'+(this.age + ss))
+    	console.log('他的名字叫:'+this.name);
+    	console.log('他的年龄是:'+this.age)
+    	console.log('我比他大'+ss+',所以我的年龄是:'+(this.age + ss))
     }
     var dom={
     	name:'小明',

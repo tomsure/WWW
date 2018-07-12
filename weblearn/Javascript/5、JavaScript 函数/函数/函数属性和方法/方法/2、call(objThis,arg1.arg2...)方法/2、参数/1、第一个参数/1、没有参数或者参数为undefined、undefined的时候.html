@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	 <script>
+	 	var obj={
+	 		name:'tom',
+	 		age:18,
+	 		getinfo:function(name,age){
+	 			console.log(this.name)
+	 			console.log(this.age)
+	 		}
+	 		
+	 		
+	 	}
+	 	
+	 		var	name="bom";
+	 		var	age=20
+	 		
+	 		
+	 		obj.getinfo()  
+	 		obj.getinfo.call()  //bom 20 
+	 		obj.getinfo.call(null) //bom 20
+	 		obj.getinfo.call(undefined) // bom 20
+//	 		当call()方法不带参数或参数为null或者undefined的时候，函数中的this指向window,因为此时name和age是全局变量，所以打印出他们的值
+	 		
+	 </script>
+</html>

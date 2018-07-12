@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var obj={
+			name:'tom',
+			age:20,
+			getName:function(){
+//				console.log(this.name)
+//				console.log(this.age)
+				console.log(this)
+			}
+		}
+		
+		obj.getName()              // object
+		obj.getName.call(1)       // Number
+		obj.getName.call('qwe')  //String
+		obj.getName('')         //Object
+		obj.getName(true)      // Object
+		
+//		当call方法传递的是基本包装类型的数据的时候,函数中的this指的是这些基本包装类型数据的类型名称
+	</script>
+</html>

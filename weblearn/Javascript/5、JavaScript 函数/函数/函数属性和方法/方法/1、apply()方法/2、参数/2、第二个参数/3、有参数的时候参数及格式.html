@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	     var obj={
+	     	name:'tom',
+	     	age:28,
+	     	getInfo:function(m,n){
+	     		console.log(this.name)
+	     		console.log(this.age)
+	     		console.log(m)
+	     		console.log(n)
+	     	}
+	     }
+	    
+	    var  obj1={
+	    	name:'bom',
+	    	age:18
+	    }
+	 
+	     obj.getInfo() //this原本指向obj
+	     obj.getInfo.apply(obj1,[100,200]) //改变getinfo运行环境，此时this指向obj1所以打印出bom和18
+	     
+//	     apply的作用和call()方法相同,都是改变函数的运行环境,这个方法的参数和call有区别,他有两个参数第一个是改变的新的运行环境,第二个参数是一个数组,里面是传递到函数中执行的实参,和call()方法的区别就是实参是用数组的形式表示的
+	     
+	 
+	     
+	     
+	     
+	</script>
+</html>

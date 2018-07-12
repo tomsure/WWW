@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var obj={
+			foo:function(){
+				console.log(123)
+			} //给对象编写一个方法
+		}
+		var fn=obj.foo  //将对象的方法foo赋给变量fn
+		    fn() //执行fn，实际上就是执行的obj.foo()方法，打印出123
+		    obj.foo() //直接执行obj.foo()方法，也打印出123
+		
+//		以上例子中执行fn()和执行obj.foo()方法都获得了相同的结果,但是,当函数foo中如果存在this的时候,可能就会有不一样的结果
+       
+        var obj1={
+        	foo1:function(){
+        		 console.log(this.bar)
+        	},
+        	bar:100
+        }
+		var bar=2
+		    
+		    obj1.foo1() //100
+		var fn1=obj1.foo1 
+          	fn1()  //2
+ 
+//      上面例子中,obj1.foo1()方法和fn1()方法运行的时候,打印了不同的结果,原因是,他们执行的相同的方法foo里面包含了this关键字,而this指向的是它所在的函数运行时候所在的环境,上面例子中:
+//          obj1.foo1():这个foo1()方法运行时候,实在obj1对象下面的,所以此时this就只想obj1这个对象,所以就会打印出obj1的属性bar的值100;
+//          fn1():fn1的值是obj1.foo1,但是fn1执行的时候,实在全局环境下执行的,所以此时里面的this就指向window,所以就会打印出全局变量2
+
+// 问题:
+//    为什么会有上面的情况,函数的运行环境到底怎么决定?
+
+
+    
+         
+          	
+          	
+		
+		
+	</script>
+</html>

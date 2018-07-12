@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	 <script>
+	 	var obj={
+	 		name:'tom',
+	 		age:18,
+	 		getinfo:function(name,age){
+	 			console.log(this.name)
+	 			console.log(this.age)
+	 		}
+	 		
+	 		
+	 	}
+	 	var obj1={
+	 			name:"bom",
+	 			age:20
+	 		}
+	 		
+	 		obj.getinfo()  //不使用call(), tom,18
+	 		obj.getinfo.call(obj1) // 使用call,改变getinfo运行环境，此时this指向obj1, 所以打印出bom,20
+	 		
+//	 		当call()方法的参数传递一个对象的时候,函数中的this指向这个对象
+	 		
+	 </script>
+</html>

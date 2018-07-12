@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	 <script>
+	 	var obj={
+	 		name:'tom',
+	 		
+	 		getinfo:function(name,age){
+	 			console.log(this.name)
+	 			console.log(this)
+	 		}
+	 		
+	 		
+	 	}
+	 	var obj1={
+	 			name:"bom",
+	 			
+	 		}
+	 		
+	 		
+	 		obj.getinfo.apply() 
+//	 		  当apply()方法没有参数的时候,调用apply()方法的函数中的this指向window
+	 		
+	 		
+	 </script>
+</html>

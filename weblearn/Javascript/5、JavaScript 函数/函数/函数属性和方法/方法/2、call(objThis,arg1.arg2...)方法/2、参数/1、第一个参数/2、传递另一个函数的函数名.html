@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+	     var obj={
+	     	name:'tom',
+	     
+	     	getInfo:function(m,n){
+	     		console.log(this.name)
+	     		console.log(this)
+	     		
+	     	}
+	     }
+	    
+	     function fn(){
+	     	console.log(123)
+	     }
+	     
+	    
+	     
+	     obj.getInfo.call(fn)
+	     
+	     obj.getInfo.call(fn1)
+	    
+//	     当call()方法传递的参数是某一个函数名的时候,调用call()方法的这个函数中的this指向就是作为参数的这函数代码块
+	 
+	     
+	
+	     
+	</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var obj={
+			name:'tom',
+		    getName:function(m,n){
+				console.log(this.name)
+				console.log(m)
+				console.log(n)
+		                       	}
+		       }
+		  obj1={ 
+		  	name:'bom'
+		  }
+		  obj.getName.call(obj1,1,2)
+		  
+//		  第一个参数后面的参数是传递给函数执行的实参
+	</script>
+</html>

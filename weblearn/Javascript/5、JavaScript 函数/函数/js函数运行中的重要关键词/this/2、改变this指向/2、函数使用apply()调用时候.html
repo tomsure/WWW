@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function fn(name,age){
+			console.log(this.name)
+			console.log(this.age)
+		}
+		var name='tom'
+		var age=28;
+		    obj={
+		    	name:'Bom',
+		    	age:18
+		    }
+		    
+		    fn(name,age)
+		    
+		    fn.apply(obj) //使用call方法改变运行环境  
+		    
+//		   函数里的this指的是当前函数的运行环境， apply()方法用于改变函数的运行环境,第一个参数就是新的运行环境,后面的参数值传递的值
+		
+	</script>
+</html>
