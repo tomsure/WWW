@@ -5,5 +5,21 @@
 		<title></title>
 	</head>
 	<body>
+		<button id="btn">123</button>
+		<button id="btn1">456</button>
+		<div id="dv"></div>
 	</body>
+	<script>
+      var btn=document.getElementById("btn")
+         btn.onclick=function(){
+         	console.log(this.id)
+         }
+            //点击btn返回当前按钮的id
+         var dv=document.getElementById("dv")
+         var  btn1=document.getElementById("btn1")
+             btn1.onclick=function(){
+             	  console.log(this.id)
+             }.bind(dv)  // 点击btn1 返回的不是当前元素的id而是bind()方法里面的对象的id
+
+	</script>
 </html>

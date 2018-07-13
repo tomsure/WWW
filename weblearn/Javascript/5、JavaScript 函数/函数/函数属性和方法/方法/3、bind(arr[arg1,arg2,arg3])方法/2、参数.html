@@ -11,11 +11,23 @@
 
          var demo={
          	name:'bom',
-         	getName:function(){
-         		return this.name
+         	getName:function(m,n){
+         		console.log(this.name)
+         		console.log(m)
+         		console.log(n)
+
          	}
          }
          console.log(demo.getName()) //bom
+//         这里调用demo对象的getName()方法,此时getName()方法里面的this指向demo对象
+
+              var   fn=demo.getName
+                    fn(10,20)  //tom,10,20
+            var fn1=demo.getName.bind(demo,10,20)
+                    fn1() //bom,10,20,这里多加一对()括号
+
+//                  bind()方法参数用法比call和apply要多一对括号
+
 
 
 
