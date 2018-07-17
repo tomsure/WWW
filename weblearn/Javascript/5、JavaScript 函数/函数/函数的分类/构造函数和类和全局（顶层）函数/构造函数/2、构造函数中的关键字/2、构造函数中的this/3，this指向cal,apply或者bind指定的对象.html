@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	   <script>
+	   	 window.name='bbb'
+	   	 function Person(){
+	   	 	 console.log(this.name)
+
+	   	 }
+
+        var obj={
+        	name:'tom'
+        }
+          var obj1=Person.call(obj) //tom
+//         此时使用call()方法将函数Person中的this指向了obj对象，所以此时this.name就是tom
+
+
+
+	   </script>
+</html>

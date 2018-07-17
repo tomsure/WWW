@@ -10,16 +10,22 @@
 		<div id="dv"></div>
 	</body>
 	<script>
-      var btn=document.getElementById("btn")
-         btn.onclick=function(){
-         	console.log(this.id)
-         }
-            //点击btn返回当前按钮的id
-         var dv=document.getElementById("dv")
-         var  btn1=document.getElementById("btn1")
-             btn1.onclick=function(){
-             	  console.log(this.id)
-             }.bind(dv)  // 点击btn1 返回的不是当前元素的id而是bind()方法里面的对象的id
+		 this.name='bom'
+        obj={
+        	name:'tom',
+        	getName:function(){
+        		return this.name
+        	}
+        }
 
-	</script>
+         console.log(obj.name) //tom
+         var gname=obj.getName
+              console.log(gname()) //bom 此时this指向window，所以打印bom,
+//            为了解决以上问题,可以使用bind()方法解决
+
+
+         var gname1=obj.getName.bind(obj)
+              console.log(gname1())  //tom  此时使用bind()方法将函数里面的this指向了obj所以此时name就是tom
+
+       </script>
 </html>

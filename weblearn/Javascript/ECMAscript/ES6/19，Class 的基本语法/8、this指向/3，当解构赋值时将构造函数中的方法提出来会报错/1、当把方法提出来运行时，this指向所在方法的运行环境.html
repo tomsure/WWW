@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+
+	<script src="../../../dist/browser.js"></script>
+	<script type="text/babel">
+
+		window.m='tom'
+
+         class Person{
+         	constructor(){
+         	  this.m=1
+
+         	}
+         	getM(){
+         		return this.m
+         	}
+         }
+         var person=new Person()
+             let {getM}=person
+             console.log(getM())  //"Uncaught ReferenceError: getM is not defined" 报错，因为getM方法没找到
+
+	</script>
+</html>

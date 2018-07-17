@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+
+	<script src="../../../dist/browser.js"></script>
+	<script type="text/babel">
+
+		window.m='tom'
+
+         class Person{
+         	constructor(){
+         		this.getM=this.getM.bind(this)
+         	  this.m=1
+
+         	}
+         	getM(){
+         		return this.m
+         	}
+         }
+         var person=new Person()
+             let {getM}=person
+             console.log(getM()) //
+
+//          解构赋值后,直接运行提取出来的方法会报错,因为getM方法是实例对象的方法,所以此时可以在constructor方法中将这个方法的this指向当前运行的环境,直接在bind()中输入this,此时this就指向构造函数的实例对象person,所以此时就可以正常执行getM方法
+
+
+	</script>
+</html>

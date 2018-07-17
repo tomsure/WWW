@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+       class Person{
+       	constructor(){
+
+
+       	}
+       	set aaa(val){
+       		console.log( val)
+       	}
+       	get aaa(){
+            console.log('aaa的属性')
+       	}
+       }
+       let per=new Person()
+           per.aaa=123
+             per.aaa //这行代码同时执行get和set,且不要括号
+
+//           set和get方法是同时使用的，当使用构造函数创建的对象实例化以后，可以给实例化对象设置属性，由于这个是动态增加设置的，所以可以提前在构造函数中设置set和get方法，set()和get()方法的名称等必须和实例化对象设置的属性名相同，set()方法有一个参数，指的就是实例对象新设的属性的值，get方法没有参数，当通过实例化对象将属性名作为实例化的方法进行执行的时候，就可以执行set和get方法里面的语句，此时方法不需要加括号
+	</script>
+</html>

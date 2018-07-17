@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+    function fn(){
+    this.num = 1;
+}
+var a = new fn();
+console.log(a.num); //1
+
+//   函数中的this默认指向window,当使用new关键字实例化这个对象后,此时函数已经变成了构造函数,此时this就指向了这个构造函数的实例对象
+	</script>
+</html>
