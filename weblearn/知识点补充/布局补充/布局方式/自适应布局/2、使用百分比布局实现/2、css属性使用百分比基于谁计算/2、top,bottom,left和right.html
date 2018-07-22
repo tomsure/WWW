@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+       .dv{
+       	 float: left;
+           width: 200px;
+           height: 200px;
+           background-color: red;
+           position: relative;
+           top: 100px;
+       }
+       .dv1{
+    width: 100px;
+    height: 100px;
+    background: blue;
+    position: relative;
+    top: 10%;
+       }
+
+
+
+       .box{
+       	float: left;
+
+           width: 200px;
+           height: 200px;
+           background-color:black;
+
+       }
+       .box1{
+            width: 100px;
+           height: 100px;
+           background-color: green;
+
+           top:100%;
+       }
+
+	</style>
+	<body>
+		<div class="dv">
+			<div class="dv1">
+
+			</div>
+		</div>
+		<div class="box">
+			<div class="box1">
+
+			</div>
+		</div>
+	</body>
+	  <!--1、 top,bottom,left,right是在设置了非静态定位，也就是position设置了fiexd/relative或者absolute属性之后才会生效；
+
+	   2、上面例子中dv设置了position属性为relative,top值为100px;dv1设置了position的属性也为relative，所以此时，设置top/bottom/left/right属性时候就会生效，
+	  3、由于子元素的top/bottom/left/right的属性值在计算百分比的时候是根据父元素的宽度或者高度计算的，所以上面例子中，dv的高度是200px,dv1的top设置为10%，所以top的具体值就是20px;
+	     4、上面例子中，因为box1和box没有设置，则默认position值为static,所以top/bottom/left/right属性不生效；-->
+
+</html>
