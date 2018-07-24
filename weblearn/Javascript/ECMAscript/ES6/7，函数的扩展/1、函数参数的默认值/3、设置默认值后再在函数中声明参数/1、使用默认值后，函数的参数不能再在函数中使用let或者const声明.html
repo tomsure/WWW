@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+   <script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+       function fn(a=1,b=2,c=3){
+
+       	let b=200
+       	const c=300
+       	  console.log(a)
+       	  console.log(b)
+       	  console.log(c)
+       }
+
+          fn()
+//       上面的函数会报错,因为ES6规定,函数参数设置了默认值之后,不能再在函数内部使用let或者const声明这个参数
+
+
+		</script>
+</html>

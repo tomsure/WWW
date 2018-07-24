@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+   <script src="../../../dist/browser.js"></script>
+	<script type="text/babel">
+       function fn(a=1,b=2,c=3){
+
+       	var a=100;
+       	var b=200;
+       	var c=300;
+       	  console.log(a)
+       	  console.log(b)
+       	  console.log(c)
+       }
+
+          fn()
+//       上面函数运行正常,因为函数的参数是函数内的局部变量,当在函数内部,再通过var 声明这个参数后,当函数运行后,函数的默认值会被var声明的局部变量覆盖
+
+		</script>
+</html>

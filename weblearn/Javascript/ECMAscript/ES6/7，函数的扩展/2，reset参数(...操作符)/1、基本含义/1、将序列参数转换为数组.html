@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+</head>
+<body>
+
+</body>
+<script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+
+
+
+
+
+          function fn(a){
+          	  console.log(a)
+          }
+
+           fn(1,2,3)  //z只会打印出1
+//         上面的例子中,函数fn有一个参数a,在实行的时候,传进了三个值,但是只打印了第一个,因为传递的是一个参数序列,只能传一个到函数中
+
+            function fn1(...b){
+            	console.log(b)
+            }
+            fn1(1,2,3)
+
+//          上面例子中,由于将b前面加了...符号,此时,传递到函数的参数被转换成了数组,所以打印出来的b就是一个数组：
+
+
+
+//          ...操作符的一个作用就是可以将序列参数转换为数组
+	</script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+	</body>
+   <script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+       function fn(a=1,b=2){
+       	  console.log(a)
+       	  console.log(b)
+       }
+
+          fn()
+          fn(100,200)
+
+//         上面例子中,第一次执行fn()打印出1,2.第二次打印出100,200,解析如下:
+//             在函数编写的时候,在括号里给参数设置了默认参数,a=1,b=2,默认参数的作用就是当函数调用的时候有传实参的时候,就使用传递的实参,没有实参的时候,就是用默认值;
+//             上面例子中,第一次执行的时候,没有传递参数,所以就使用默认值,所以就打印出1,2,第二次执行的时候因为传递了参数100,200,所以打印出传递的参数100,200
+		</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+      function show(a,b){
+      	var a=a|| 'tom';  //如果参数a有传值，则a为参数a的传进的参数，如果没有传则a的值为‘tom
+      	var b=b||'tom11' //与上面相同
+
+      	console.log(a)
+      	console.log(b)
+      }
+      show()  //tom,tom11
+
+//     在es5中,如果函数有形参,而没有实参的话,如果需要在执行函数的时候,需要使用这个参数,但是没有传递,则可以在函数内部通过||符号设置参数的值为参数本身或者自定义设置的值,这种方式里面设置的自定义的值叫做参数的默认值,当调用函数的时候,即使不传参,也会获取到里面的默认值
+
+	</script>
+</html>

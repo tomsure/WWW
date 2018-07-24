@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+</head>
+<body>
+
+</body>
+<script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+      function fn(a,b,...c){
+      	console.log(a)
+      	console.log(b)
+      	console.log(c)
+      }
+
+        fn(1,2,3,4,5,6)
+//         第一次打印出1,第二次打印出2,第三次打印出3,4,5,6
+//      当使用..运算符进行传参的时候, ...符号放在最后一个参数的前面,当传递参数的时候,传递的参数序列前面的会一一对应的传递,剩余的数据则作为一个整体传递给最后一个形参
+//剩余运算符必须放在随后
+
+	</script>
+</html>
