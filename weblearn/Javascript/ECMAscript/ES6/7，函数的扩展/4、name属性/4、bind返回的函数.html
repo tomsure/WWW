@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../dist/browser.js"></script>
+
+	<script type="text/babel">
+        function foo(){}
+          console.log( (foo.bind()).name )
+
+      console.log(  (function(){}).bind({}).name) // "bound "
+//      bind返回的函数，name属性值会加上bound前缀。
+
+	</script>
+</html>

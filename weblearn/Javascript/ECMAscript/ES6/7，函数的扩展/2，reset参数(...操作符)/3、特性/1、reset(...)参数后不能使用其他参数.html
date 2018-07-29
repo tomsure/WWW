@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
-	<script src="../dist/browser.js"></script>
-	<script type="text/babel"></script>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+</head>
+<body>
+
+</body>
+<script src="../../../dist/browser.js"></script>
+	<script type="text/babel">
+      function fn(a,b,...c,d){
+      	console.log(a)
+      	console.log(b)
+      	console.log(c)
+      }
+
+        fn(1,2,3,4,5,6)
+//    上面例子中,在参数c前面使用了...函数,后面加了参数d,此时函数运行会报错,因为使用了...操作符后的参数后面不能再设置其他参数
+
+	</script>
 </html>

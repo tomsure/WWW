@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../dist/browser.js"></script>
+	<script type="text/babel">
+		var arr=[1,2,3,4,5]
+          console.log(arr)
+        var arr2=arr
+//         通过引用进行复制的数组,无法进行修改
+         console.log(arr2)
+		var arr3=[...arr]
+
+		console.log(arr3)
+//       通过...操作符复制的数据可以进行修改
+
+
+	</script>
+</html>

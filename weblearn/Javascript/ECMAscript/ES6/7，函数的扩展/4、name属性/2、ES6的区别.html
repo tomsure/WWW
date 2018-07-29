@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../dist/browser.js"></script>
+	<script>
+		var fn=function (){
+
+		}
+		console.log(fn.name)  //返回空字符串""
+	</script>
+	<script type="text/babel">
+         var fn=function (){
+
+		}
+		console.log(fn.name)  //返回fn
+
+//       上面例子中,将匿名函数赋给了变量fn,在ES5中会返回空字符串,ES6中会返回这个变量名
+
+
+
+	</script>
+</html>
