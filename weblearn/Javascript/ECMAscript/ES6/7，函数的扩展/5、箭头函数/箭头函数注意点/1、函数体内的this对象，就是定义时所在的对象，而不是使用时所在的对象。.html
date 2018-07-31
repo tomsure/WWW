@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../dist/browser.js"></script>
+	<script type="text/babel">
+		var id=1;
+         let fn=()=>{
+         	console.log(this.id)
+         }
+         fn.call({id:12})
+
+
+	</script>
+</html>

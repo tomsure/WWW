@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../../dist/browser.js"></script>
+	<script type="text/babel">
+//		不需要参数的时候:
+           let fn=()=>123
+
+            console.log(fn())
+//          当函数不需要传参的时候,直接在箭头左边写()符号,上面的例子等同于:
+//           function fn(){
+//           	return 123
+//           }
+//           console.log(fn())
+
+//           需要传递多个参数的时候:
+
+               let fn1=(a,b)=>a+b
+
+                   console.log(fn1(100,200))
+
+//                 当函数有多个参数的时候,则在箭头的左边的括号中写多个参数,用逗号隔开,箭头右边表示返回的参数,上面的例子等同于:
+                   var   fnn=function aa(m,n){
+                   	    return m+n
+                   }
+                     console.log(fnn(10,20))
+	</script>
+</html>

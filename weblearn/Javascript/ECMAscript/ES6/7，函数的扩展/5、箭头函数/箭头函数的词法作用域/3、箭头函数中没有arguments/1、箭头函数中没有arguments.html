@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../../dist/browser.js"></script>
+	<script type="text/babel">
+       function fn(a,b,c){
+       	 console.log(arguments.length)
+       }
+       fn(1,2,3)
+//     在ES5中,函数中有一个arguments属性,这个属性指的是函数实参组成的类数组对象
+
+       let show=()=>{
+       	 console.log(arguments)
+       }
+        show(1,2,3) //报错
+//       在ES6中国,函数没有arguments,函数代码块中使用arguments使用会报错
+	</script>
+</html>
