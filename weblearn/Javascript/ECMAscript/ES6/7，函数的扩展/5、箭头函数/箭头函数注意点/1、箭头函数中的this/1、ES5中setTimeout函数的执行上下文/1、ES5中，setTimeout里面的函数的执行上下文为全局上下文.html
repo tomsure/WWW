@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../../../dist/browser.js"></script>
+	<script>
+     var obj11={
+        		name:100,
+        		fn1:function(){
+        			console.log(this)
+        		}
+        	}
+
+        	obj11.fn1()  //obj11 这里的this指向当前对象
+
+
+
+		function log1(){
+			setTimeout(function(){
+				console.log(this)
+			},1000)
+		}
+        	log1()   //widnow
+
+
+
+
+		var obj={
+			name:123,
+			fn:function(){
+				setTimeout(function(){
+                      console.log(this)
+				},2000)
+			}
+		}
+
+	      obj.fn()  //这里的this指向window
+
+//	      ES5中,setTimeout中的函数中的this指向全局上下文,也就是window,上面例子中,obj对象的方法fn内部有一个settimeout,里面的函数打印this,返回的this指向window
+//	      obj11的方法fn中的函数内的this则指向这个函数当前的运行环境,也就是obj这个对象
+	  </script>
+	  <script >
+		var name='bom'
+	    var obj={
+	    	name:'tom',
+	    	returnName:function(){
+	    		console.log(this.name)
+	    		setTimeout(function(){
+	    			console.log(this.name)
+	    		},100)
+	    	}
+	    }
+
+          obj.returnName()  //tom,bom
+//         上面例子中,第一次执行console.log的时候,里面的this指向当前对象obj,第二次因为是在settimeout里面执行所以this指向window,所以打印出了全局变量name的值bom
+
+
+	</script>
+</html>
