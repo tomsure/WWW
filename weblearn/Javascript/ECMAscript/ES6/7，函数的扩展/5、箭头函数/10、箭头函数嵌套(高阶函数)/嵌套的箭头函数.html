@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+//		普通函数嵌套:
+//     function fn(a,b,c){
+//     	  return  fn1=function(b){
+//     	  	   return function fn2(c){
+//                       console.log(a+b+c)
+//     	  	   }
+//     	  }
+//     }
+//
+//      fn(1,2,3)(2)(3)
+
+//       ES6函数嵌套:
+            let fn=(a,b,c)=>fn1=(b)=>fn2=(c)=>console.log(a+b+c)
+               fn(1,2,3)(2)(3)
+	</script>
+</html>

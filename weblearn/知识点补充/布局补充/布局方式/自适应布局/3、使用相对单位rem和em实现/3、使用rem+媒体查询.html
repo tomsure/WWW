@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		 /*1、拿到设计稿后，设计稿会有一个标准尺寸，例如:1920x1080
+	    2,使用测量工具测量出设计稿上所有元素的尺寸样式；
+	    3、使用 @media 相关属性来设置不同屏幕下html的font-size属性：
+	       1、设置设计稿标准尺寸下html的font-size为16px：*/
+	       @media only screen and (max-width: 1920px) {
+	       	  html{
+	       	  	font-size: 16px;
+	       	  }
+	       }
+	       /*这样标准尺寸的html的font-size设置后,再计算其他元素的尺寸计算为rem后的值,写在@media相关尺寸外面积可*/
+
+	        /*2,设计需要适配的几种经典屏幕（具体要根据实际情况增加尺寸）也使用@media属性进行设置,里面的html设置各自屏幕下的font-size大小,根据屏幕尺寸和标准尺寸的比例进行计算*/
+
+	       /*设置最大或者最小宽度,保证样式在某一尺寸下不变形*/
+	</style>
+	<body>
+	</body>
+
+
+</html>

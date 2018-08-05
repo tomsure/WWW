@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		箭头函数中的this
+		https://blog.csdn.net/liwusen/article/details/70257837
+	</body>
+	<script>
+		function foo() {
+  setTimeout(() => {
+    console.log('id:', this.id);
+  }, 100);
+}
+
+var id = 21;
+foo()
+foo.call({ id: 42 });
+	</script>
+</html>

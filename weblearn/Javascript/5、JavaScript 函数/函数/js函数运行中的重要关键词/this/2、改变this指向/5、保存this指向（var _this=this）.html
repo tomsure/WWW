@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+			var obj={
+				foo:function(){
+
+					var that=this
+					return function(){
+						console.log('当前this指向'+ this) //window
+						console.log("当前this指向"+ that) //obj
+					}
+				}
+
+			}
+//			var foo=obj.foo()
+//			    foo()
+
+			  obj.foo()()
+//			    上面例子中,第一个函数由于是匿名函数中的this指向window,所以可以在外面使用that变量保存this的值,由于外部函数foo中的this执行对象obj,再在函数中使用that,此时就可以使this指向当前对象obj
+	</script>
+</html>

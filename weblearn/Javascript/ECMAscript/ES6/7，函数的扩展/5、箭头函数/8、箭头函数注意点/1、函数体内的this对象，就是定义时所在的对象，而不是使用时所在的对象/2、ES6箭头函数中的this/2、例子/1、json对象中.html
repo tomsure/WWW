@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+
+<script  type="module">
+ var obj={
+ 	id:123,
+ 	fn:function(){
+ 		console.log(this==obj)
+ 	},
+ 	fn1:()=>{
+ 		console.log(this) //window
+ 	}
+
+ }
+   obj.fn()
+   obj.fn1()
+</script>
+</html>

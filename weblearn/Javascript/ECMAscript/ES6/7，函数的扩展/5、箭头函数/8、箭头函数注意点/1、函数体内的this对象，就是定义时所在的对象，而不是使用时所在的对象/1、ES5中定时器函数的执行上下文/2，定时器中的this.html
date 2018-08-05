@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		 var obj={
+		 	name:1,
+		 	fn:function(){
+		 		console.log(this.name)
+		 	},
+		 	fnc:function(){
+		 		setTimeout(function(){
+		 			console.log(this)
+		 		},1)
+		 	}
+		 }
+		 obj.fnc()  //window
+
+//         这里fnc方法执行的时候打印出this为window,因为settimeout中的this指向window
+
+		  var obj1={
+		 	name1:1,
+		 	fn1:function(){
+		 		console.log(this.name)
+		 	},
+		 	fnc1:function(){
+		 		var that=this
+		 		setTimeout(function(){
+		 			console.log(that) //obj
+		 		},1)
+		 	}
+		 }
+		 obj1.fnc1()  //
+//		   这里打印出object,因为在函数中使用that定义了this,此时的that指向函数所在的对象obj所以打印出了oobect
+	</script>
+</html>

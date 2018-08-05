@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type='module'>
+       let obj={
+       	 fn:()=>{
+       	 	console.log(this)
+       	 },
+       	 fn1:function(){
+       	 	console.log(this)
+       	 }
+       }
+       obj.fn() //window
+       obj.fn1() //obj fn1是普通函数，他的this在这里就指向当前对象
+
+
+
+
+//       上面例子中: 函数fn()是一个箭头函数,执行大时候打印出了window,因为箭头函数中,this自己没有指向,他的指向是根据上一级的作用域中的this确定的,也就是说他的this就是上一级作用域中的this,在这个例子中,fn()这个箭头函数的上一级就是obj对象,obj是在全局作用域中的,所以此时的this就是window,所以fn这个箭头函数中this也就指向window
+
+
+
+            let obj1={
+            	id:123,
+            	fn2:function(){
+            		console.log(this)  //obj1
+            		let f=()=>{
+            			console.log(this)
+            			console.log(this.id) //123
+            		}
+            		f()
+            	}
+            }
+            obj1.fn2()
+
+//              上面例子中,第一次打印this指向obj,因为this所在的是在普通函数中此时this指向obj这个对象
+//              第二次打印是在箭头函数中,此时this指向他上一级的作用域中的this,而上一级作用域也就是fn2,这里的this指向obj,所以这里this也指向obj
+
+//    总结: 箭头函数中的this自己没有指向,他的指向要看上一级的作用域中的ths指向谁他就指向谁
+	</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+//		由于箭头函数中没有自己的this指向,所以就不能使用call ,apply,bind这灿哥方法改变this指向
+            var id=100
+          let a={
+          	 id:123,
+          	 fn:()=>{
+               	 	console.log(this.id)
+          	 }
+          }
+
+            a.fn()
+            a.fn.call(window)
+
+	</script>
+</html>

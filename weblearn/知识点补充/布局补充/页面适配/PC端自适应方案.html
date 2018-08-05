@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	做一个PC端的网页,设计图是1920X1080的. 要在常见屏上显示正常(比例正确可) 1280X720 1366X768 1440X900 1920X1080
+
+使用了以下几种方案
+1.内容在一屏内显示的,采用了(内容框)上下左右居中的办法,里面的内容绝对于这个内容框定位.这样一来,在不同大小屏中,内容总是在中间,看起来较正常
+2.长,宽,LEFT,TOP,RIGHT,BOTTOM都采用了REM,并且HTML的FONT-SIZE设置的是100PX一是觉得计算方便,二是如果设为10PX,谷歌会不兼容.此时BODY的FONT-SIZE设置为正常值,12PX.不然的话,其它的DOM都会继承HTML的100PX的FONT-SIZE,导致效果巨大.
+3.当浏览器窗口变化时,内容的大小以及相对位置也会相应变化,这个依靠JS修改HTML的FONT-SIZE值实现.如下:
+
+$(window).resize(function () // 绑定到窗口的这个事件中
+{
+  var whdef = 100/1920;// 表示1920的设计图,使用100PX的默认值
+  var wH = window.innerHeight;// 当前窗口的高度
+  var wW = window.innerWidth;// 当前窗口的宽度
+  var rem = wW * whdef;// 以默认比例值乘以当前窗口宽度,得到该宽度下的相应FONT-SIZE值
+  $('html').css('font-size', rem + "px");
+});
+
+
+计算font-size的逻辑是:
+当设计图是1920时,规定HTML的FONT-SIZE的值是100. 也就是,当浏览器窗口调整到1920PX时,1REM=100PX,如果要设定一个16PX(1920设计图时)的字体,那么REM设置值是0.16.
+
+ 当窗口调整到非设计图的宽度如winWidth时,HTML的FONT-SIZE值是:(100/1920)*winWidth.也就是说,1920下FONT-SIZE是100px.那么winWidth下,按比例计算.
+
+ 或者可以这样:窗口宽1920时,FONT-SIZE是100PX,那么winWidth时,相当于窗口变化为1920时的 (winWidth / 1920).根据比例公式,winWidth时的FONT-SIZE就是 (winWidth/1920)*100
+  winWidth / 1920 = FONT-SIZE(PX) / 100
+  100 / 1920 = FONT-SIZE(PX) / winWidth 这个公式容易理解
+如果调整窗口大小,会发现HTML的FONT-SIZE值在变化,同时,使用REM设置的DOM也在变化.因为REM正是参考HTML的FONT-SIZE值来计算的
+</html>
