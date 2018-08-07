@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+        var arr=[1,'',2,'',3,'',4,'',5]
+           var arr1=Array.from(arr,function(x){
+               return x || 0
+           })
+           console.log(arr1)  // [1,0,2,0,3,0,4,0,5]
+//          使用||设置如果x为false,则将其转为0,例子中空字符串''是false,所以被转换成0
+	</script>
+</html>

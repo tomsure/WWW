@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>111</p>
+		<p>222</p>
+		<p>333</p>
+
+	</body>
+	<script>
+		 var list=document.querySelectorAll('p')
+		     var arr=Array.from(list,function(x){
+                    return x.textContent
+		     })
+		     console.log(arr)
+
+//		     上面例子中,使用querySelectorAll()方法获取到的p是一个类数组,通过from()方法转换为数组,并使用第二个函数参数的参数,将数组元素中的值设置为这个参数对象的文本属性,返回新的数组中就有了文本
+	</script>
+</html>

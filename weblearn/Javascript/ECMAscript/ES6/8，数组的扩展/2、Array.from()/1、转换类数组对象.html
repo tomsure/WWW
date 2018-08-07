@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+	<script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+//		  用于将两类对象转为真正的数组:
+
+//		     1,类数组对象
+
+              var dv=document.getElementsByTagName('div')  //dv是一个类数组
+                  console.log(dv.length)  //有长度
+
+
+
+               console.log( dv instanceof Array )  //false  转换前不是数组
+               let arr=Array.from(dv)
+               console.log(arr instanceof Array )  //true    转换后就是数组
+
+               //          getElementsByName()和getElementsByTagName()都返回NodeList对象，而类似document.images和document.forms的属性为HTMLCollection对象,这种对象都属于类数组对象,他们只能读不能写,可以使用Array.form()方法将类数组转换成数组
+
+                var obj = {
+                	'0':'1',
+                	'1':'2',
+                	'2':'3',
+                	length: 3
+                       }
+                var arr1=Array.from(obj)
+                   console.log(arr1) //['1','2','3']
+
+
+	</script>
+</html>
