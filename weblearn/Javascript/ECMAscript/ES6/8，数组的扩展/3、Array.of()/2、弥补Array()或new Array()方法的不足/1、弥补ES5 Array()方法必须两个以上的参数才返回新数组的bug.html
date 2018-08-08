@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../dist/browser.js"></script>
+	<script type="text/babel">
+         var arr=Array(1,2,3)
+         console.log(arr) //[1,2,3]
+
+         var arr2=new Array(4,5,6)
+             console.log(arr2)  //[4,5,6]
+
+           var arr1=Array(3)
+               console.log(arr1)  //[]
+               console.log(arr1.length)  //3
+
+               var arr3=Array(4)
+                  console.log(arr3)  //[]
+                  console.log(arr3.length) //4
+
+
+
+//                ES5中,使用Array()方法和new Array()方法生成参数组成的数组必须参数大于等于2个,如果参数只有一个就表示设置数组的长度,而数组元素为空,不会把参数作为数组元素生成新数组
+                 var arr4=Array.of(4)
+                  console.log(arr4)
+
+//                  Array.of()方法可以在只有一个参数的时候实现生成新数组,数组元素就是参数
+
+
+	</script>
+</html>
