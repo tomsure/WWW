@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+
+	<script type="">
+
+         function f(m){
+         	console.log(this.age>m)  //this指的就是person
+         }
+         var person={
+         	name:'tom',
+         	age:25
+         }
+         var arr=[1,2,3,4,5]
+
+           arr.find(function(v){
+           console.log(this.age < v)
+         },person)
+
+
+           arr.findIndex(f,person)
+//         find()和findIndex()方法都有第二个参数,第二个参数是一个对象名，对象中的属性值可以在find()或者findIndex()的回调函数中进行匹配和计算，此时方法中第一个参数(回调函数的)中的this就指向第二个参数也就是这个对象
+
+
+
+	</script>
+</html>

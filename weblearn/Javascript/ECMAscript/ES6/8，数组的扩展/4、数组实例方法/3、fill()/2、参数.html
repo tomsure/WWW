@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../dist/browser.js"></script>
+	<script type="text/babel">
+        var arr=['a','b','c']
+
+
+             console.log(arr.fill(8,0,2))
+
+//           如果fill()方法的时候,第一个参数表示用来替换数组元素的新值,第二个参数和第三个元素是设置被数组中被替换元素的起始位置,第二个参数只数组中被替换元素开始的下标位置,第三个参数设置被替换元素的结束下标(不包括这个下标,例如这里第三个参数是2,表示替换数组到数组的第三位，也就是"c"这个位置，但是不包含这个元素，所以打印结果为[8,8,'c'])
+
+            console.log(arr.fill(8,0,3))  //[8,8,8]
+//             如果想这样替换全部元素,可以将第三个参数设置为数组最后一位下标+1
+
+
+
+	</script>
+</html>

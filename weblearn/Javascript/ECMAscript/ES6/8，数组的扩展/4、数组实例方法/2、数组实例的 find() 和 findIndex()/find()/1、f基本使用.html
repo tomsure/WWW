@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../../dist/browser.js"></script>
+	<script type="text/babel">
+            var arr=[1,2,3,4,5]
+              arr.find(function(n){
+              	console.log(n)
+              	console.log(n==3)
+              	console.log(n>100)
+
+              })
+
+//            find()方法用于查找数组中第一个复合条件的数组元素,参数是一个回调函数,在函数内会进行循环计算,使用参数与每一个数组元素进行对比及相关运算,函数内的语句会多次执行,执行次数就是数组的长度,复合运算条件的返回true,不符合的返回false
+//      上面例子中,find()方法中的回调函数内有一个参数n,这个n就是每次执行的后被对比的数组元素,在函数内打印n==3,结果第三次返回true,其他四次都返回false,这个工程中,函数内的代码执行五次,每次与数组元素进行对比:
+//          第一次和第二次:n是1和2,所以打印n==3返回false;
+//          第三次:n是3,所以打印n==3返回true;
+//          第四次和第五次:n是4和5,所以打印n==3返回false
+
+              arr.find(function(m){
+              	console.log(m-10)
+              })  //进行相关计算
+	</script>
+</html>
