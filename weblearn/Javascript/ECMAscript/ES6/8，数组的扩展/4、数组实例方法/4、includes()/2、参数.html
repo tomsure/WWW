@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+       console.log([1,2,3,4,5].includes(1,2))  //fakse
+
+//     includes()方法有两个参数,第一个参数是设置用于检测数组中是否有这个值,第二个参数是设置在数组中开始检测的位置,上面例子中设置第一个参数为1,数组中有这个值,但是,设置的开始位置是2,表示从3,开始检测,所以返回false
+
+
+         console.log([1,2,3,4,5,6].includes(6,-1))  //true
+//        如果第二个参数是负数,表示从数组位置中倒数检测,上面例子中,检测是否含有6,第二个参数是-1,表示按照数组的顺序倒序检测，由于最后一个元素是6，所以返回true
+
+	</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../dist/browser.js"></script>
+	<script type="text/babel">
+		   let obj={
+		   	 fn(){
+		   	 	console.log(100)
+		   	 }
+		   }
+		    obj.fn()
+
+
+//		     ES6中对象的方法也可以简写,直接在json格式大括号中使用函数名+(){}的方式编写,上面的例子等同于:
+
+            let obj1={
+            	fn:function(){
+            		console.log(100)
+            	}
+            }
+
+            obj1.fn()
+	</script>
+</html>

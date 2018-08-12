@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+     let obj1={
+     	name1:'tom'
+     }
+     let obj2={
+     	name2:'bom'
+     }
+     let obj3={
+     	name3:'gom'
+     }
+     var newObj=Object.assign(obj1,obj2,obj3)
+      console.log(newObj)  //{name1: "tom", name2: "bom", name3: "gom"}
+      console.log(obj1)    //{name1: "tom", name2: "bom", name3: "gom"}
+      console.log(obj2)  //{name2: "bom"}
+//      Object.assign()方法用于将多个对象的属性合并到一个对象中,方法有多个参数,第一个参数是被合并的对象，合并后其他对象属性会合并到这个对象中，第二个及以后的参数是用于合并属性到第一个对象中的对象，合并后这些对象不变
+
+
+	</script>
+</html>

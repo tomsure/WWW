@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		let obj={
+			name:'tom',
+			job:'worker'
+		}
+		console.log(Object.getOwnPropertyDescriptor(obj,'name'))
+
+//    每个对象的属性都有一个描述对象,这个对象使用Object.getOwnPropertyDescriptor()方法获取,这个对象返回被描述对象属性的一些信息，例如上面的例子会返回以下信息：
+//   {value: "tom", writable: true, enumerable: true, configurable: true}
+//    Object.getOwnPropertyDescriptor()方法返回一个描述对象,用于描述对象属性的一些信息,方法第一个参数是被描述属性的对象名,第二个参数是对象中被描述的属性,例如上面的例子,表示描述obj对象的name属性,返回一个Descriptor对象,这个对象返回一下信息:
+//             enumerable:表示是否可枚举
+//             value: 表示被检测描述的属性名
+//             writable:表示是否可写
+//             onfigurable:表示是否可配置
+
+//   enumerable属性，称为”可枚举性“，如果该属性为false，就表示某些操作会忽略当前属性。
+
+
+	</script>
+</html>

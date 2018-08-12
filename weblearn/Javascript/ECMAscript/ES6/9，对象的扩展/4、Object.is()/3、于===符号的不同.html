@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+
+
+//     1,Object.is()方法中0与-0不相等,返回false,===表示0和-0相等,返回true
+        console.log(0===-0)  //true
+       console.log(Object.is(0,-0)) //false
+
+//     2,NaN===NaN 返回false,Object.is(NaN,NaN) 返回true
+           console.log(NaN===NaN)  //false
+           console.log(Object.is(NaN,NaN))  //true
+	</script>
+</html>

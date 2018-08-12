@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+    function aa(){
+    	 let x=1;
+    	 let y=2
+    	 return {x,y}  //返回一个对象
+
+//  	 上面等同于:
+//       return {
+//       	x:x,
+//       	y:y
+//       }
+    }
+      var bb=aa(1,2)
+          console.log(bb.x)  //1
+          console.log(bb.y)  //2
+
+//        在函数中由于声明可两个变量,返回了一个简写的对象,可以在执行函数后获取到函数里面的变量
+
+	</script>
+</html>

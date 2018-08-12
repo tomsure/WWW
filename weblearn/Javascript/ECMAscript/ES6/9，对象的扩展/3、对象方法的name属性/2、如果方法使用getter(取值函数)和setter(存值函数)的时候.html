@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+
+	<script type="">
+       let obj={
+       	 name:'name',
+       	 set fn(val){
+            console.log(val)
+       	 },
+       	 get fn(){
+              console.log(100)
+       	 }
+       }
+         obj.fn='200'
+         obj.fn
+//        如果使用了存值函数和取值函数的话,方法需要从方法的属性的描述对象上获取,不能直接获取
+
+//       console.log(obj.fn.name)  //报错无法从此获取方法name的属性值
+
+         console.log(Object.getOwnPropertyDescriptor(obj,'fn').set.name)   //set fn
+         console.log(Object.getOwnPropertyDescriptor(obj,'fn').get.name)   //get fn
+
+	</script>
+</html>

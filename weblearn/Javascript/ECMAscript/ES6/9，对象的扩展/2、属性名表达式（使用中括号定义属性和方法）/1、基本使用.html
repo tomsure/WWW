@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+       var obj={}
+         obj['ab']=123
+         console.log(obj.ab)
+//       在ES5中其他方式定义对象的时候,可以使用[]符号定义对象的属性,里面可以放数字,字符串或者关键字和保留字,但是通过定义字面量对象的方式没在大括号里面必须使用标识符的方式定义属性名：
+//      var oo={
+//      	name:'value'
+//      }
+
+//在ES6中，可以使用中括号来定义字面量对象的属性
+      let obj1={
+      	 ['name']:'tom'
+
+      }
+         console.log(obj1.name)  //es5报错，ES6打印出tom
+	</script>
+</html>

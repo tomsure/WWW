@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+        let obj1={
+     	name:'tom'
+     }
+     let obj2={
+     	name:'bom'
+     }
+
+      console.log(Object.assign(obj1,obj2).name)  //bom
+//   如果多个对象里面有同名属性,Object.assign(),方法中后面参数对象中的属性会覆盖前面参数对象的属性,例如这里,obj1和obj2有相同的属性name,合并后obj1的name属性变成bom,因为被后面对象的name属性覆盖
+
+	</script>
+</html>

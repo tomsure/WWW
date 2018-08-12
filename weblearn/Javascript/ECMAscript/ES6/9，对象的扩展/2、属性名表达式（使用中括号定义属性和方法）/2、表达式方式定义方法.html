@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var obj={
+			name:'tom',
+			['sayName'](){
+				console.log(123)
+			}
+		}
+		console.log(obj.name) //tom
+		obj.sayName() //123
+//		 在json中使用属性名表达式（中括号)定义方法的时候,可以不使用json的格式直接使用中括号里面写方法名，后面+(){}来写内容
+	</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../dist/browser.js"></script>
+	<script type="text/babel">
+		  let name='tom'  //声明变量
+		  let setNum=function(){
+		  	console.log(123)
+		  }
+		  let person={name,setNum}  //设置对象,并设置对象的属性为一个变量和一个函数作为属性和方法
+    console.log(person.name)
+    //‘tom'
+        person.setNum()
+
+//       上面的例子相当于:
+//          let person={
+//          	name:'tom'
+//              setNum:function(){
+//              	console.log(123)
+//              }
+//          }
+
+//      ES6声明json对象的时候,可以将声明好的变量名和函数名作为属性和方法直接写道大括号中,多个一逗号隔开
+
+
+	</script>
+</html>
