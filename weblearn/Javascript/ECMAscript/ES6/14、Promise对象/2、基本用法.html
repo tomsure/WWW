@@ -7,5 +7,28 @@
 	<body>
 	</body>
 	<script src="../dist/browser.js"></script>
-	<script type="text/babel"></script>
+	<script type="text/babel">
+		 let a=1
+		  let pro=new Promise(function(resolve,reject){
+              if(a==1){
+              	resolve('成功')
+              }else{
+              	reject('失败')
+              }
+		  })
+
+		  pro.then(function(res){
+		  	console.log(res)
+		  },function(rej){
+             console.log(rej)
+		  })
+
+//		  Promise异步对象的使用方法分以下步骤:
+//		      1,使用new 实例化一个异步对象Promise,在Promise()构造函数中油;两个参数:
+//		           resolve:表示异步操作成功后
+//		           reject:表示异步操作失败后
+//		      2,实例化对象后使用then()方法来执行异步成功后者异步失败后的语句,then()方法有两个参数是两个函数:
+//		          第一个参数(是一个函数)表示异步成功后执行的函数,里面
+//		            第二个参数表示异步失败后执行的函数
+	</script>
 </html>

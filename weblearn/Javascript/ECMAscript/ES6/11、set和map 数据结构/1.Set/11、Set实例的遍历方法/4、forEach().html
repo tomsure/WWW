@@ -6,4 +6,17 @@
 	</head>
 	<body>
 	</body>
+	<script type="text/javascript">
+       var arr=['a','b','c','d','e']
+           let arrSet=new Set(arr)
+            arrSet.forEach(function(value,key,Set){
+            	console.log(key+':'+value)
+            	console.log(Set)
+            })
+//          forEach()方法是Set数据实例上的方法(和数组的forEach()方法不是一回事),用于遍历Set数据中的每个值,这个方法的参数是一个函数，这个函数有三个参数,第一个参数是Set数据的名值,第二个参数是键值,第三个参数是Set数据本身;
+//           由于Set数据中键值和名值就是同一个值,所以而这相同,永远都是一样的,所以遍历第一个console.log()打印出来的数据分别是:
+//               a:a,b:b,c:c,d:d,e:e
+
+
+	</script>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+       let pro=new Promise(function(resolve,reject){
+
+		})
+//		 console.log(pro)  此时Promise状态为'pending'
+
+
+//		  js 语句是从上往下执行的,当Promise对象初始化的时候,Promise对象的状态是'pending',并且Promise对象实例化返回的还是一个Promise对象,但是返回的状态不同了:
+//		      当异步操作成功后,Promise对象的状态由'pending'转换为'resolved':
+                 let pro1=new Promise(function(resolve,reject){
+		             if(1>0){
+		             	resolve('1>0是对的')
+		             }else{
+		             	reject('1小于0是错误的')
+		             }
+		                                      })
+		            console.log(pro1)   //此时状态是由pending转为‘resolved'
+
+
+//		      当异步操作失败后,Promise对象的状态由'pending'转为'rejected':
+             let pro2=new Promise(function(resolve,reject){
+             if(1<0){
+             	resolve('1>0是对的')
+             }else{
+             	reject('1小于0是错误的')
+             }
+		})
+		 console.log(pro2)   //此时Promise对象的状态是"rejected"
+
+	</script>
+</html>
