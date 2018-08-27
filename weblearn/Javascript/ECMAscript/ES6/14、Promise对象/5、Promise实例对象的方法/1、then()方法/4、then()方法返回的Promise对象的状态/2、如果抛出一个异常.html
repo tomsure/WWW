@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		let pro=new Promise(function(res,rej){
+           	    let a=1;
+           	    if(a!=1){
+           	    	res('成功')
+           	    }else{
+           	    	rej('失败')
+           	    }
+           })
+           pro.then(function(succ){
+               console.log(succ)
+           },function(err){
+               console.log(err)
+           })
+
+	</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+           let pro=new Promise(function(res,rej){
+           	    let a=1;
+           	    if(a==1){
+           	    	res('成功')
+           	    }else{
+           	    	rej('失败')
+           	    }
+           })
+           pro.then(function(succ){
+               console.log(succ)
+           },function(err){
+               console.log(err)
+           })
+
+//          then()方法是异步操作执行完毕之后执行的语句，方法有两个参数，都是两个函数，第一个函数是异步操作成功后执行的回调函数，有一个参数，这个参数是Promise对象实例化的时候Promise()构造函数中函数参数的第一个参数、第二个参数是异步操作失败后执行的回调函数，函数第一个参数是Promise()构造函数第二个参数
+
+
+	</script>
+</html>

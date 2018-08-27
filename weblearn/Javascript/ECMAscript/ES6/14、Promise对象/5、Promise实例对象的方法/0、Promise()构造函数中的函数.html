@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+           let pro=new Promise(function(res,rej){
+           	    let a=1;
+           	    if(a==1){
+           	    	res('成功')
+           	    }else{
+           	    	rej('失败')
+           	    }
+           })
+           pro.then(function(succ){
+               console.log(succ)  //这里的succ是从Promise对象实例化的时候当异步操作成功后传递过来的res
+           },function(err){
+               console.log(err) //这里的err就是异步操作失败后传递过来的res
+           })
+
+//          Promise()构造函数中有一个函数，他有两个参数，第一个参数是异步操作执行成功和失败的时候往外部传递的数据，第一个参数resolve,是异步成功后往外部传递的数据，第二个参数是异步失败后往外部传递的数据，在实例化后调用其他方法的时候可以对这两个数据进行调用，例如then()方法中两个函数的参数分别就是从Promise()构造函数中传递过来的
+
+
+	</script>
+</html>

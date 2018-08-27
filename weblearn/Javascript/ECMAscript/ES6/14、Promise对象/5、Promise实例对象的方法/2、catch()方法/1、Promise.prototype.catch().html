@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+
+	<script type="">
+      let pro=new Promise(function(res,rej){
+           	    let a=1;
+           	    if(a!=1){
+           	    	res('成功')
+           	    }else{
+           	    	rej('失败')
+           	    }
+           })
+           pro.then(function(succ){
+               console.log(succ)
+           })
+           pro.catch(function(err){
+           	  console.log('pro错误信息：'+err)
+           })
+
+//         catch()方法和then()方法中的第二个参数也就是异步失败的时候执行的回调函数使同样的效果,所以可以只在then()方法中写一部成功时候的回调函数,在catch()中写异步回调失败的函数
+//         catch()方法和异步操作失败回调函数用法相同,它里面有一个函数,函数的第一个参数就是实例化的时候Promise()构造函数中传递过来的数据
+//         如果使用catch(),不使用异步操作失败的函数的时候,浏览器会执行catch()方法中的回调函数,也会抛出一个错误,打印错误信息
+
+
+//         由于then()方法可以链式调用,所以可以吧catch()方法写在then()方法后面,这样浏览器不会抛出错误
+
+            let pro1=new Promise(function(res,rej){
+           	    let a=1;
+           	    if(a!=1){
+           	    	res('成功')
+           	    }else{
+           	    	rej('失败')
+           	    }
+           })
+           pro1.then(function(succ){
+               console.log(succ)
+           }).catch(function(err){
+           	  console.log('pro1错误信息：'+ err)
+           })
+
+
+//      由于是异步执行,所以会看到两次打印信息现出来,第一个例子的浏览器抛出的错误后出来
+
+
+	</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		let pro=new Promise(function(res,rej){
+           	    let a=1;
+           	    if(a==1){
+           	    	res('成功')
+           	    }else{
+           	    	rej('失败')
+           	    }
+           })
+           pro.then(function(succ){
+               console.log(succ)
+           },function(err){
+               console.log(err)
+           }).then(function(succ){
+           	    console.log(succ)
+           },function(err){
+           	  console.log(succ)
+           })
+
+//           Promise实例对象then()方法执行后还是返回的Promise对象,此时状态是不同的,当异步操作成功后新的Promise对象的状态是"resolved"
+	</script>
+</html>

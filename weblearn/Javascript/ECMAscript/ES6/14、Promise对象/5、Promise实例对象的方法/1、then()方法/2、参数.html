@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+          let pro=new Promise(function(res,rej){
+           	    let a=1;
+           	    if(a==1){
+           	    	res('成功')
+           	    }else{
+           	    	rej('失败')
+           	    }
+           })
+           pro.then(function(succ){
+               console.log(succ)
+           },function(err){
+               console.log(err)
+           })
+
+        // then()方法有两个参数,是两个回调函数,第一个回调函数是执行成功后执行的回调函数,第二个是执行失败的时候执行的回调函数:
+//          使用Promise对象的时候可以只使用第一个参数,也就是执行成功时候的回调函数,如果异步操作执行失败,则浏览器会自动报错,错误信息是Promise构造函数中那个函数的第二个参数中的值:
+                let pro1=new Promise(function(res,rej){
+           	    let a=1;
+           	    if(a==1){
+           	    	res('成功')
+           	    }else{
+           	    	rej('失败')
+           	    	 //如果异步操作失败则会浏览器报错,打印这里的信息
+           	    }
+           })
+           pro1.then(function(succ){
+               console.log(succ)
+           })
+           //此时值使用了第一个参数
+	</script>
+</html>
