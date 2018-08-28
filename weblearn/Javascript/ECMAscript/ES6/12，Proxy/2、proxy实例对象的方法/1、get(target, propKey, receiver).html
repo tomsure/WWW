@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var person={
+			name:'张三'
+		}
+		var proxy=new Proxy(person,{
+			get:function(target,property,pro){
+
+				console.log("对象： " + target)
+				console.log("属性 "+property)
+
+				console.log(pro)
+
+			}
+		})
+
+		console.log("获取："+ proxy.name)  //获取name属性
+
+
+//		  get 方法用于对对象的属性进行一些操作,get方法有三个参数：
+//                   第一个参数是被拦截的对象,
+//                 	 第二个参数是对象的属性,
+//                   第三个参数是Proxy,指向当前拦截的这个对象,通过打印可以看到打印出一个Proxy,里面包含了{name:"张三"}
+
+// proxy对象是用来拦截对象的操作,所以这里最后一句获取proxy.name的时候,会先执行 new Proxy()实例化的时候里面的方法
+	</script>
+</html>

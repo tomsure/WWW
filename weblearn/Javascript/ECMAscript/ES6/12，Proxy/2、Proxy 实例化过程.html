@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../dist/browser.js"></script>
+	<script type="text/babel">
+        var person={
+        	name:'tom'
+        }
+        var proxy=new Proxy(person,{
+             get:function(target,pro){
+
+             }
+        })
+//      proxy对象需要实例化之后进行使用,方法内有两个参数,第一个参数是被拦截的对象,第二个参数是执行操作的一些方法,这个参数是一个对象,里面的方法以json形式编写
+	</script>
+</html>

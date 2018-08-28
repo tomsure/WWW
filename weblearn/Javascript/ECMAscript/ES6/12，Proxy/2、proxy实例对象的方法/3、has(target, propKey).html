@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var person={
+			name:"tom",
+			age:"24"
+		}
+		var proxy=new Proxy(person,{
+			has:function(target,key){
+                target[key]='bom'
+                return kay in target
+			}
+
+		})
+
+		console.log(person.name)
+	</script>
+</html>
