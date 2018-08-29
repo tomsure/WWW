@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		let person={
+			name:'tom',
+			age:25,
+			sex:'male'
+		}
+        let person=new Proxy(pseron,{
+        	get:function(){
+
+        	},
+        	set:function(target,key,value){
+        		 if(key!='sex'){
+        		 	target[ket]=value
+        		 }
+        	}
+
+        })
+
+
+
+	</script>
+</html>
