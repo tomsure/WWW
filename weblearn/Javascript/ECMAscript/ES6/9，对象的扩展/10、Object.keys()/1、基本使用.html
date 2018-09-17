@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../dist/browser.js"></script>
+	<script type="text/babel">
+      var json={
+      	a:1,
+        b:2,
+        c :3}
+
+        console.log(Object.keys(json))  //['a','b','c']
+        var  obj=new Object()
+           obj.name='111'
+           obj.age=22
+
+
+              console.log(Object.keys(obj)) //['name','age']
+
+
+
+//             Object.keys()方法用于返对象中可遍历的属性和方法名,使用数组形式表示
+	</script>
+	<script>
+        var json1={
+      	a:1,
+        b:2,
+        c :function(){
+        	console.log(123)
+        }
+
+        }
+          console.log(Object.values(json1))
+
+//        Object.values()方法用于返回对象中可遍历的属性值和方法,用数组形式表示
+	</script>
+
+
+</html>

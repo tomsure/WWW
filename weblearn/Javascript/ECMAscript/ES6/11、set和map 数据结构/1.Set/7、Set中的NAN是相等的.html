@@ -7,6 +7,16 @@
 	<body>
 	</body>
 	<script>
+         console.log(NaN==NaN)
+
+          var set=new Set()
+          var a=NaN
+          var b=NaN
+          set.add(a) //添加一个NaN
+          set.add(b) // 再添加一个NaN
+             console.log(set)   //打印出长度只有1,因为相同的值会被过滤掉，所以这里表示NnN在这相等
+
+//           在ES5中NaN与NaN不相等,但Set数据中的NaN是相等的
 
 
 	</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../../dist/browser.js"></script>
+	<script>
+
+
+		var name='tom'
+     var obj={
+     	[name]:function(){
+     		console.log('tomsure')
+     	}
+     }
+      var obj1={
+      	['tom']:function(){
+      		console.log('1000000000000')
+      	}
+      }
+
+
+       obj[name]()   //调用定义的方法
+//       ES6可以使用属性表达式定义对象的方法,用法和定义属性相同,调用的时候,在对象[方法名]后面加()符号调用
+	</script>
+</html>

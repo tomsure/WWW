@@ -8,5 +8,38 @@
 	</body>
 	<script>
 
+      var obj={
+      	"name":'tom',
+
+      }
+       var person=new Proxy(obj,{
+       	set:function(target,prop,value){
+         console.log(target,prop,value) //这里的console.log()方法会执行两次，因为拦截了两次
+            if(prop=='age'){
+            	if(value>100){
+            		console.log('年龄不能大于100')
+            	}
+            }
+              if(prop=='sex'){
+              	 if(value!='男'){
+              	 	console.log('请设置为男性')
+
+              	 }
+              }
+
+              target[prop]=value
+
+       	}
+       })
+       person.age=101
+       person.sex='女'
+
+
+//     set方法也是用在Proxy()的第二个对象参数中,set方法有三个参数,三个参数每次指向操作对象属性的时候的相关数据， 第一个参数是一个指向被操作对象的Proxy对象，第二个参数指向被操作的属性，第三个参数指的是给对象属性赋的值；
+//    由于set()方法是每次设置对象属性的时候都会调用,所以三个参数每次第一个参数都指向被操作的对象,第二个和第三个都指向备操作的属性和值;
+//    set方法只有在操作设置了和prop参数相等的属性的时候才会执行
+
+
+
 	</script>
 </html>

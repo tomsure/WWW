@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+    function fn(){
+    	console.log('我是函数')
+    }
+    var newFn=new Proxy(fn,{
+
+    })
+    newFn()  //我是函数
+
+//  使用函数作为Proxy的参数的时候,执行实例化的Proxy对象可以作为新的函数执行,此时会执行原来的那个函数
+
+    function fn1(){
+    	console.log(100)
+    }
+
+    var newFn1= new Proxy(fn1,{
+    	apply(){
+    		console.log(1000)
+    	}
+    })
+
+      newFn1()  //1000
+
+//   apply()方法用于拦截设置的函数,当Proxy的第一个参数是一个函数的时候,在Proxy第二个参数对象中执行apply()方法,则会执行apply()里面的语句,不会执行原来的函数
+
+	</script>
+</html>

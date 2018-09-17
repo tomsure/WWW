@@ -6,4 +6,18 @@
 	</head>
 	<body>
 	</body>
+	<script>
+		var obj={
+			a:1,
+			b:2
+		}
+		var newObj=new Proxy(obj,{
+			deleteProperty(target,property){
+               console.log('您要删除属性')
+               delete target[property]
+			}
+		})
+		delete obj.a
+		console.log(obj)
+	</script>
 </html>

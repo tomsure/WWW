@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../../dist/browser.js"></script>
+	<script type="text/babel">
+		 var str='hello'
+		 var str1='world'
+		  var json={
+		  	[str+str1]:'111111111111111'
+		  }
+
+          console.log(json[str+str1])  //'111111111111111'
+           console.log(json['hello'+'world'])   //'111111111111111'
+		  console.log(json['helloworld']) //'111111111111111'
+
+
+//		   对象的属性可以使用+符号进行拼接设置.如果使用变量名拼接,则获取的时候可以使用变量名拼接和拼接后的字符串获取
+	</script>
+
+</html>

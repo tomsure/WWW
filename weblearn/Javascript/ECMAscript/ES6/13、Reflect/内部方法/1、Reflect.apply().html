@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+
+	<script >
+//      Reflect()方法用于函数调用
+         function fn(){
+         	console.log(this) //window
+         	console.log(arguments) //1,2,3,4
+         }
+
+   //       fn(1,2,3,4)  //this指向window,arguments指向参数组成的数组
+
+//     使用call或者apply改变this指向并传参：
+          fn.call('aaa',1,2,3,4,5)
+//        打印出的内容为:
+//        this:指向字符串aaa
+//        arguments:指向参数数组
+
+          fn.apply('aaa',[1,2,3,4,5])
+//          apply()方法作用和call()方法相同,只是参数填写有区别
+
+
+//     使用Reflect()方法:
+         Reflect.apply(fn,'tom',[1,2,3,4,5])
+
+//      使用Reflect.apply()可以达到相同的效果
+
+//       Reflect对象用于调用配合apply()方法调用函数
+	</script>
+</html>

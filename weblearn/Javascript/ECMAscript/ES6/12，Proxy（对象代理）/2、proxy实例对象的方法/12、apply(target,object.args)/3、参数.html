@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+    function sum(a,b){
+    	console.log(a+b)
+    }
+    var newSum=new Proxy(sum,{
+    	apply(target,context,args){
+      console.log(target,context,args)
+    	}
+    })
+     newSum(2,3)
+
+         target指向当前被操作的函数,context指向this,args指的是
+	</script>
+</html>

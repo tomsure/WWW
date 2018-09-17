@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="ul1"></ul>
+	</body>
+	<script>
+//使用变量
+		var data=[1,2,3,4,5,6,7,8]
+		var ul1=document.getElementById("ul1")
+
+
+          	for(var i=0;i<data.length;i++){
+		   	    var li1=`<li>${data[i]}</li>`  //使用变量
+
+
+		   	    	ul1.innerHTML+=li1
+
+		   }
+//     模板字符串中使用变量的时候使用${}符号,变量名写在中括号中间即可
+	</script>
+	<script>
+//   调用函数
+         function fn(){
+         	return '18岁'
+         }
+
+          var str=`年龄是:${fn()}`
+              console.log(str)   //年龄是18岁
+
+//              在使用模板字符串的时候,可以在里面调用函数,方法是在${}的中括号里写方法调用
+	</script>
+</html>

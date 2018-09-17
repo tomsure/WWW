@@ -6,4 +6,13 @@
 	</head>
 	<body>
 	</body>
+	<script>
+var  set=new Set()
+     set.add({})
+     console.log(set.size)
+     set.add({})
+     console.log(set.size)
+
+//    Set中的对象都是不相等的,上面例子中两次追加了两个空对象,但是打印的时候长度为2,因为Set中相等的数据会被过滤掉,只保留一个,所以表示Set中的对象不相等
+	</script>
 </html>

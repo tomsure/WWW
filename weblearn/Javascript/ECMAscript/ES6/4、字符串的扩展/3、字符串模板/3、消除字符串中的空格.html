@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+	<body>
+	</body>
+	<script>
+     var template=`
+              <div>    </div>
+
+
+              <div><div>
+     `
+
+         document.body.innerHTML=template
+            console.log(template)  //有空格
+//           模板字符串换行的时候会包含换行的空格,可以使用trim()方法去除空格：
+
+               var str=template.trim()
+                console.log(str)
+	</script>
+</html>

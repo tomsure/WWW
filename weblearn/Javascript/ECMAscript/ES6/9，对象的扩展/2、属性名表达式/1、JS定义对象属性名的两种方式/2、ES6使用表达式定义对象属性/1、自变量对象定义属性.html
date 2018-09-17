@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../../dist/browser.js"></script>
+	<script type="text/babel">
+
+
+// 1,在json代码块内定义属性:
+        var name='tom'
+          var obj1={
+          	   [name]:'tomsure'
+          }
+
+
+           console.log(obj1[name])  //调用
+           console.log(obj1['tom'])  //调用
+
+/////////////////////////在json外边定义属性，方式相同//////////////////////
+
+// 2,在json代码块外定义对象属性
+           var sex='man'
+            obj1[sex]='oldMan'
+            console.log(obj1[sex])
+            console.log(obj1['man'])
+
+//        ES6可以使用表达式定义自变量对象的属性，
+//       具体用法是：
+//         1,定义:将变量对象后面连一个[]符号，里面填写变量名
+//         2,使用: 直接在对象后面的[]符号中写变量名或者变量的值,都可以访问到属性的值
+
+
+//        上面例子1中定义了一个变量name='tom',和一个对象obj1,在设置对象属性的时候,使用对象名连接一个[]符号,里面填写变量的名字name,在访问的时候,无论在对象后面的[]符号中写前面定义的变量名或者变量的值,都可以获取到给对象设置的属性值
+
+	</script>
+</html>

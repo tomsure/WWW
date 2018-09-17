@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script src="../../../dist/browser.js"></script>
+	<script type="text/babel">
+        var str='ss'
+            console.log(str.padStart(5,'qw'))
+
+//           padStart()方法用于将字符串从头部补全到自定义的长度,第一个参数是补全后的长度,第二个参数是在被部全的字符串后进行补全追加的字符串,补全的时候,追加的字符串会按照设置的长度进行循环追加,直到长度达到设置的值
+
+//      如果补全后的字符串长度达不到psdStart()方法第一个参数设置的长度,则会使用方法中第二个参数字符串循环继续补全,直到长度达到设置的值
+// ,例如上面的例子:
+//        设置的长度为5,字符串str 长度为2,补全qw后总共为4,达不到长度5,所以就会继续按qw继续追加,当达到长度的时候停止追加,所以上面的例子打印出了"qwqss",其中qw是设置补全的,ss前面的q是长度不够继续循环qw追加的
+	</script>
+</html>
