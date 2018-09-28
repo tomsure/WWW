@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击测试</button>
+		<button id="btn1">点击测试传参</button>
+	</body>
+	<script>
+		  function * show(){
+		  	alert('qqq')
+		  	 var a= yield
+
+		  	  alert('www')
+		  	  alert(a)
+		  	  		  }
+
+   		  var fn=show()
+           var btn=document.getElementById("btn")
+              btn.onclick=function(){
+                      fn.next()
+
+              }
+              var btn1=document.getElementById("btn1")
+                btn1.onclick=function(){
+                	fn.next(100)
+                }
+
+//              yield 可以和next()方法配合来传参, 用法是在使用next()方法调用函数的时候，给next()方法传参，最后参数会赋值到yield身上，作为yield的值返回；
+//         上面例子中通过给button绑定事件函数,绑定了两个按钮,第一个按钮点击的时候执行第一个next()方法,所以此时会弹出函数中的alert('qqq'),在第一个弹窗弹出完毕后,到了yield的时候函数就会停止执行后面的语句,如果要执行就要再次调用next方法
+//          由于给btn1绑定的事件函数里就是执行next()方法所以就会执行yield后面的语句也就是弹出'www',由于这里执行的时候给next()传递了参数100,这个100就是给yield赋值,所以在函数内部使用变量a设置等于yield的时候,后面弹出a,就会弹出100
+
+	</script>
+
+</html>

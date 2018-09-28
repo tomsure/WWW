@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function  *fn(){
+			yield '100'
+			yield '200'
+			yield '300'
+			return 'aaaaa'
+		}
+
+		console.log(Array.from(fn()))  //[100,200,300]
+
+//		 可以通过Array.from()方法执行调用返回一对数组,里面包含的是yield阐述的数据
+	</script>
+</html>

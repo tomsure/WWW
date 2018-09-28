@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function * show(){
+			yield "111"
+			return 'sss'
+		}
+
+		  var fn=show()
+		      console.log( fn)  //object show
+
+//		      generator函数声明后如果使用普通函数相同的方法调用,函数不会执行,会返回一个对象,里面包含generator对象的相关信息
+	</script>
+</html>

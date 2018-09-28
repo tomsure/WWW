@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+	function * fn(){
+             yield 'hello'
+             yield 'world'
+
+             return 'hehehe '
+		}
+		var fun=fn()
+
+
+
+               console.log(fun.next())
+               console.log(fun.next())
+
+//            generator函数中可以使用多个yied设置产出数据，在执行调用的时候，需要多次调用next()方法才会多次返回包含设置的数据的对象；
+//         调用步骤:
+//           1,执行普通函数调用并赋值给变量: fn1=fn()
+//           2,多次执行next()方法  :  fn1.next()
+
+           </script>
+</html>

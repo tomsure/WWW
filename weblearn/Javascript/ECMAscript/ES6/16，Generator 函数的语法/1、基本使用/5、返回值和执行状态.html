@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function * fn(){
+			yield '111';
+			yield '222';
+			yield '333';
+			return '444';
+			yield '555';
+		}
+		   var fn1=fn()
+		       console.log(fn1.next())   //{value:‘111”，done:false}  遍历未结束
+		        console.log(fn1.next())  //{value:‘222”，done:false}  遍历未结束
+		         console.log(fn1.next()) //{value:‘333”，done:false}  遍历未结束
+		          console.log(fn1.next()) //{value:‘444”，done:false} 遍历未结束
+		           console.log(fn1.next()) //{value:undefined，done:true} 遍历已结束
+
+//		          generator函数内部包含了多个状态,他的函数代码块中是使用yield和return关键字组成的,在return关键字之前使用 yield 设置的数据；
+//    调用后js内部会对代码块内进行遍历，每次执行返回的值是一个对象,对象的结构为:
+//       {value:每次使用yield设置的数据,done:布尔值}
+//       这个对象包含了返回的数据以及遍历的状态:
+//    在调用的时候,返回的对象中包含value的值是yield设置的对应的值,done表示遍历未结束,所以返回false,在继续使用next()执行到return返回的数据的时候,返回的对象中done的值就是true,表示遍历已结束,当在继续执行next()的时候就会执行return 后面的数据的返回,此时返回的对象的value属性是undefined,done属性的值是true表示遍历已结束
+
+	</script>
+</html>

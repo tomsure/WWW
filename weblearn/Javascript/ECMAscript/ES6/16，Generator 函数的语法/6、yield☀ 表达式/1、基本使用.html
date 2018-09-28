@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+
+	<script >
+          function * fn(){
+          	yield '111'
+          	yield "222"
+          }
+          function * fun(){
+          	yield "aaa"
+          	yield "bbb"
+          	yield* fn()
+          }
+
+            for (var v of fun()){
+            	console.log(v)   // "111","222","aaa","bbb"
+            }
+
+//           yield *表达式用于在一个generator函数A内执行另一个genertaor函数B,当调用的时候,可以在函数A中同时获取到两个函数的数据
+	</script>
+</html>

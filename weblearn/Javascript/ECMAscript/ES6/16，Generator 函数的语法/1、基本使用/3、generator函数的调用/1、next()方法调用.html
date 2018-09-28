@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script >
+		//定义
+		function * fn(){
+             yield 'hello'
+             yield 'world'
+
+             return 'hehehe '
+		}
+		var fun=fn()
+
+
+            var fun1=fun.next()
+               console.log(fun1)
+
+//              调用generator函数需要在普通函数调用的时候使用的()后面再执行next()方法才会执行,并且不是直接执行,而是返回一个对象,对象中包含两组数据:
+//               value:指的是函数代码块内yied后面设置的数据
+//                done:
+//                上面的例子返回的值为{value:'hello',done:false}
+	</script>
+</html>

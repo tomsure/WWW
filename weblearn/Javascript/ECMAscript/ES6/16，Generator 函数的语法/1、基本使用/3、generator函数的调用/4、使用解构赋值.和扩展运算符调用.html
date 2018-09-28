@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function  *fn(){
+			yield '100'
+			yield '200'
+			yield '300'
+			return 'aaaaa'
+		}
+
+		   var [a,b,c,d]=fn()
+		    console.log(a,b,c,d)  //100,200,300,undefined
+
+//		    可以用过解构赋值的方式直接获取generator里面设置的 yield设置的数据，方式是一解构的方式用[]=后面写普通函数的调用方式，中括号里面写任意变量名，逗号隔开，这样就可以获取到函数里面的yield数据，这种方式不能获取return后面设置的数据，所以上面的例子打印a,b,c,d的值分别是100，,20,300，undefined
+
+//      还可以用过...作为剩余参数来获取里面的数据
+
+             var [q,...e]=fn()
+              console.log(q,e)
+	</script>
+	<script type="text/javascript">
+//		   通过扩展运算符:
+             console.log(...fn())  //100 200 300
+//             在   fn()符号前面加扩展运算符...可以直接获取里面的值
+	</script>
+
+</html>

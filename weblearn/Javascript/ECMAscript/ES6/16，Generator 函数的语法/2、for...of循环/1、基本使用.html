@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	 <script>
+	 	function * show(){
+            yield '111'
+            yield '222'
+            yield '333'
+            return '444'  //for...of语句调用时候这里的不会调用
+	 	}
+
+	 	    var fn=show()
+	 	       for( var item of fn){
+	 	       	console.log(item)  //这里会自动遍历
+	 	       }
+
+//       generator函数如果要获取里面的数据需要多次使用next()方法调用,但是如果数据量大的话就很麻烦,所以可以通过遍历的方式,这种方式会自动执行调用,并且必须使用for...of循环进行遍历
+
+//         注意:
+//           使用遍历调用的方式不会执行return 后面的数据的调用
+
+	 </script>
+</html>

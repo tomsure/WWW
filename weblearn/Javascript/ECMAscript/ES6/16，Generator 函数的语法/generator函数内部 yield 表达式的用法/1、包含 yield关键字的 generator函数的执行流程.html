@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+       <button id="btn">点击测试</button>
+	</body>
+	<script>
+		function * show(){
+
+			alert(100)
+			yield
+			alert(200)
+			yield
+			alert(300)
+
+		}
+
+            var fn=show()
+                fn.next()   //弹出100
+            var btn=document.getElementById("btn")
+              btn.onclick=function(){
+              	fn.next()  //点击之后弹出
+              }
+
+//          yield在generator函数内部运行的时候,如果是使用next()方法调用函数,函数内的代码块每遇到一个yield关键字,yield后面的代码都会暂停执行,只有运行了next()方法之后才会继续执行yield后面的语句,如果是多个yield则就要多次执行next()方法
+
+//          上面的函数中有两个yield 关键字,当使用普通方式函数的时候,执行了里面的第一个alert(),然后又直接调用了一下next()方法,所以页面打开的时候会弹出一次alert()，当再点击一次的时候，由于点击按钮的事件函数里面绑定了next()方法的执行，所以点击的时候会再弹出
+	</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		 <button id="btn">点击测试</button>
+	</body>
+	<script>
+//		第一个next()无法传参
+		 function * show(){
+		 console.log('aaa')
+		 	var  a=yield
+
+		 	console.log(a)
+		 }
+
+		   var fn=show()
+		      fn.next(100) // 弹出aaa,没有弹出100
+		      fn.next(200)  //弹出200
+
+ 	</script>
+ 	<script>
+// 		给第一次执行next()方法的时候传参:
+            function * show1(num1,num2){
+		 	console.log(num1,num2)
+		 	var  a=yield
+
+		 	console.log(a)
+		 }
+
+		   var fn1=show1(500,600)  //第一次调用next()方法执行的时候，在这里传参
+
+
+               var btn=document.getElementById("btn")
+                   btn.onclick=function(){
+                            fn1.next() //500,600
+		                    fn1.next('tomsure')  //弹出200
+                   }
+
+//                 由于generator函数的next()方法第一次执行的时候无法传参,所以如果要在第一次执行next()方法的时候传参可以直接在给函数名赋值给变量名调用的时候(也就是以普通函数调用的时候)传参
+ 	</script>
+</html>
