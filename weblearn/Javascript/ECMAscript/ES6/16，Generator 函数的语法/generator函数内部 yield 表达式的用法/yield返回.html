@@ -17,8 +17,11 @@
 		 }
 
            var fn=show(100)
-               fn.next(200)
-             console.log(  fn.next())
+
+             console.log(fn.next())  //这一步会打印两个值，因为fn.next()执行会执行函数内的第一个语句console.log(a),而这里又使用了console.log()，这一步返回的是一个对象，对象里面的value属性值就是函数中 yield后面 a+1的值
+                       fn.next(200)
+
+//         yield后面的值要通过打印 fn.next()这个方法的调用才能获取到
 
 	</script>
 </html>

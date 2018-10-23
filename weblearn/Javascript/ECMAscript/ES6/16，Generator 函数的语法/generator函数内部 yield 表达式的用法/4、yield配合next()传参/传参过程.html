@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function * show(a){
+			alert(a)
+			var b=yield
+
+			  console.log(b)
+		}
+
+		 var fn=show(100)
+		     fn.next()  //执行alert(a)
+		     fn.next(200)  //执行 console.log(b)
+
+
+	</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+
+    function * show(){
+    	 console.log(1)
+        var a= yield  11;  console.log(111)
+
+           console.log(a)
+    }
+
+     var fn=show()
+        fn.next()
+        fn.next(1)
+
+	</script>
+</html>
