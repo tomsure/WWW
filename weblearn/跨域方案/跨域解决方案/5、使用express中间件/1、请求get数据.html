@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+	</body>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			  $.ajax({
+			  	type:"get",
+//			  	dataType:'jsonp',
+			  	url:"http://192.168.1.103:5000/mockapi",  //这个地址在mockjs知识点中穿插的express知识中
+			  	async:true,
+			  	success:function(data){
+                  console.log(data)    //获取数据后打印
+			  	}
+			  });
+		})
+	</script>
+</html>

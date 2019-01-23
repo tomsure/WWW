@@ -10,34 +10,34 @@
 		<br />
 		<span id="name">女孩名称</span><span id="dataName"></span>
 		<br />
-		
+
 		<span id="boy">男孩名称</span><span id="boyName"></span>
 	</body>
 	<script type="text/javascript">
 //		  这个例子的后台服务器是在gitHub\examples\nodejs\nodeServer\1、跨域服务器\jsonpServer\jqueryAjaxserver这里,用的是express搭建,使用的时候启动即可
-		
+
 			$(function(){
 				$('button').click(function(){
 					$.ajax({
-						url:'http://192.168.1.102:3000/mockapi',
+						url:'http://192.168.1.103:7000/mockapi',
 						type:'GET',
 						dataType:'jsonp',  //设置获取数据类型为jsonp
 						success:function(data){
 							console.log(data)  //打印获取到的数据，由于是json格式，也是个对象，所以会返回object，所以，具体数据，就去取它的属性值
 							$('#dataName').html(":"+" "+data.name)
 							$('#boyName').html(":"+" "+data.boy)
-							  
+
 							//将获取到的数据设置为html元素的值
-							 
+
 						},
 						error:function(err){
-							console.log(err)
+//							console.log(err)
 						}
 					})
 				})
 			})
-			
-			
-			
+
+
+
 	</script>
 </html>
