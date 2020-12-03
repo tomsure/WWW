@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
-	<script>
 
-      var obj={
-      	"name":'tom',
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
 
-      }
-       var person=new Proxy(obj,{
-       	set:function(target,prop,value){
-         console.log(target,prop,value) //这里的console.log()方法会执行两次，因为拦截了两次
-            if(prop=='age'){
-            	if(value>100){
-            		console.log('年龄不能大于100')
-            	}
-            }
-              if(prop=='sex'){
-              	 if(value!='男'){
-              	 	console.log('请设置为男性')
+<body>
+</body>
+<script>
 
-              	 }
-              }
+	var obj = {
+		"name": 'tom',
 
-              target[prop]=value
+	}
+	var person = new Proxy(obj, {
+		set: function (target, prop, value) {
+			console.log(target, prop, value) //这里的console.log()方法会执行两次，因为拦截了两次
+			if (prop == 'age') {
+				if (value > 100) {
+					console.log('年龄不能大于1001111')
+				}
+			}
+			if (prop == 'sex') {
+				if (value != '男') {
+					console.log('请设置为男性11111111')
 
-       	}
-       })
-       person.age=101
-       person.sex='女'
+				}
+			}
+
+			target[prop] = value
+
+		}
+	})
+	person.age = 101
+	person.sex = '女'
 
 
 //     set方法也是用在Proxy()的第二个对象参数中,set方法有三个参数,三个参数每次指向操作对象属性的时候的相关数据， 第一个参数是一个指向被操作对象的Proxy对象，第二个参数指向被操作的属性，第三个参数指的是给对象属性赋的值；
@@ -41,5 +43,6 @@
 
 
 
-	</script>
+</script>
+
 </html>

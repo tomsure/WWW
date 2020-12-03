@@ -1,9 +1,43 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
+	<meta charset="UTF-8">
+<style>
+    table {
+        table-layout: fixed;
+        width: 100%;
+    }
+    table, th, td {
+        border: 1px solid #999;
+        padding: 5px;
+        text-align: left;
+    }
+    td.desc {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+</style>
+
+<table>
+　　<thead>
+　　　　<tr>
+　　　　　　<th class="desc">项目名</th>
+　　　　　　<th width='20%' class="desc">Url</th>
+　　　　　　<th width='40%' class="desc">描述</th>
+　　　　　　<th>语言</th>
+　　　　　　<th class="number desc">Stars</th>
+　　　　</tr>
+　　</thead>
+　　<tbody>
+　　{% for source in sources %}
+　　　　<tr>
+　　　　　　<td class="desc" title="{{ source.name }}">{{ source.name }}</td>
+　　　　　　<td class="desc" title="{{ source.url }}">{{ source.url }}</td>
+　　　　　　<td class="desc" title="{{ source.description }}">{{ source.description }}</td>
+　　　　　　<td class="desc" title="{{ source.primary_lang }}">{{ source.primary_lang }}</td>
+　　　　　　<td>{{ source.stars }}</td>
+　　　　</tr>
+　　{% endfor %}
+　　</tbody>
+</table>
 </html>
