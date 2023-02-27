@@ -1,0 +1,34 @@
+<html>
+	<meta charset="UTF-8"/>
+	<head >
+		<title></title>
+	</head>
+	<body>
+		1、开启Gzip
+		2、使用 Preload 插件
+		3、优化package
+		4、升级 HTTP2
+		5、使用 HTTP 缓存
+		6、Vue 批量渲染组件
+		7、Vue 异步组件
+		8、SVG优化
+		
+		本次性能优化关键点：
+
+Webpack方面：
+
+开启Gzip，直接收益比较大
+使用preload插件，预先声明要使用到的资源
+尽可能优化package，做到按需加载，减少打包体积
+
+ 网络方面：
+升级服务器为HTTP2，结合HTTPS是最佳实践
+使用 HTTP 缓存策略，最好的性能是不用请求
+  Vue实践方面：
+渲染组件时机，建议在全部接口请求返回后去批量渲染
+将不常用的特定场景下使用的组件写成异步组件
+资源方面：
+
+项目中使用较多SVG时，可以选择使用“SVG Sprite”技术管理
+	</body>
+</html>
